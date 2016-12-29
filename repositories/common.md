@@ -26,6 +26,7 @@ Table of Contents:
   * [rpg.js](#rpgjs)
   * [rts.js](#rtsjs)
   * [settings.js](#settingsjs)
+  * [sort.js](#sortjs)
   * [string.js](#stringjs)
   * [webgl.js](#webgljs)
 
@@ -369,6 +370,11 @@ Table of Contents:
 * [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
+
+---
+
+### sort.js
+* [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
 
 ---
 
