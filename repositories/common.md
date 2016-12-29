@@ -375,6 +375,7 @@ Table of Contents:
 
 ### sort.js
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
+* [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
 
 ---
 
