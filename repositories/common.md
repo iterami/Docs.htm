@@ -13,13 +13,13 @@ Table of Contents:
   * [music.css](#musiccss)
   * [writings.css](#writingscss)
 * JavaScript:
-  * [ajax.js](#ajaxjs)
   * [audio.js](#audiojs)
   * [bests.js](#bestsjs)
   * [canvas.js](#canvasjs)
   * [images.js](#imagesjs)
   * [input.js](#inputjs)
   * [math.js](#mathjs)
+  * [network.js](#networkjs)
   * [music.js](#musicjs)
   * [race.js](#racejs)
   * [random.js](#random.js)
@@ -136,11 +136,6 @@ Table of Contents:
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
 * [iterami/TF2-Guide.htm](https://github.com/iterami/TF2-Guide.htm)
 * [iterami/WoW-Guide.htm](https://github.com/iterami/WoW-Guide.htm)
-
----
-
-### ajax.js
-* [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
 
 ---
 
@@ -265,6 +260,11 @@ Table of Contents:
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
+
+---
+
+### network.js
+* [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
 
 ---
 
