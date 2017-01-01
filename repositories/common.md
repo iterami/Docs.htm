@@ -22,7 +22,7 @@ Table of Contents:
   * [network.js](#networkjs)
   * [music.js](#musicjs)
   * [race.js](#racejs)
-  * [random.js](#random.js)
+  * [random.js](#randomjs)
   * [rpg.js](#rpgjs)
   * [rts.js](#rtsjs)
   * [settings.js](#settingsjs)
