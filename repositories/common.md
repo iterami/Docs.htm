@@ -215,7 +215,6 @@ Table of Contents:
 * [iterami/ColorWaves.htm](https://github.com/iterami/ColorWaves.htm)
 * [iterami/Duel.htm](https://github.com/iterami/Duel.htm)
 * [iterami/ESP-Test.htm](https://github.com/iterami/ESP-Test.htm)
-* [iterami/ExperienceCalculator.htm](https://github.com/iterami/ExperienceCalculator.htm)
 * [iterami/Fireworks-2D.htm](https://github.com/iterami/Fireworks-2D.htm)
 * [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
 * [iterami/Guess.htm](https://github.com/iterami/Guess.htm)
