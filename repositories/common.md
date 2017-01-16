@@ -1,7 +1,7 @@
 [iterami/common](https://github.com/iterami/common)
 ---------------------------------------------------
 
-Common files used by iterami repositories to properly function. iterami repositories running on GitHub Pages and iterami repositories cloned via the `/iterami/fetch-iterami-repositories.sh` iterami/Scripts script will properly find the files they need.
+Common files used by iterami repositories to properly function. iterami repositories running on GitHub Pages and iterami repositories cloned via the `/iterami/fetch-iterami-repositories.sh` [iterami/Scripts](https://github.com/iterami/Scripts) script will properly find the files they need.
 
 ---
 
