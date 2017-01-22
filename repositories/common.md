@@ -14,18 +14,17 @@ Table of Contents:
   * [writings.css](#writingscss)
 * JavaScript:
   * [audio.js](#audiojs)
-  * [bests.js](#bestsjs)
   * [canvas.js](#canvasjs)
   * [images.js](#imagesjs)
   * [input.js](#inputjs)
   * [math.js](#mathjs)
-  * [network.js](#networkjs)
   * [music.js](#musicjs)
+  * [network.js](#networkjs)
   * [race.js](#racejs)
   * [random.js](#randomjs)
   * [rpg.js](#rpgjs)
   * [rts.js](#rtsjs)
-  * [settings.js](#settingsjs)
+  * [settings.js](#storagejs)
   * [sort.js](#sortjs)
   * [string.js](#stringjs)
   * [webgl.js](#webgljs)
@@ -154,14 +153,6 @@ Table of Contents:
 
 ---
 
-### bests.js
-* [iterami/Avoidance-2D.htm](https://github.com/iterami/Avoidance-2D.htm)
-* [iterami/FractalRunner-2D3D.htm](https://github.com/iterami/FractalRunner-2D3D.htm)
-* [iterami/Jetpack-2D.htm](https://github.com/iterami/Jetpack-2D.htm)
-* [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
-
----
-
 ### canvas.js
 * [iterami/9YG0E6r.htm](https://github.com/iterami/9YG0E6r.htm)
 * [iterami/Aquarium-2D.htm](https://github.com/iterami/Aquarium-2D.htm)
@@ -263,14 +254,14 @@ Table of Contents:
 
 ---
 
-### network.js
-* [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
-
----
-
 ### music.js
 * [iterami/Music-Local.htm](https://github.com/iterami/Music-Local.htm)
 * [iterami/Music-Server.htm](https://github.com/iterami/Music-Server.htm)
+
+---
+
+### network.js
+* [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
 
 ---
 
@@ -342,7 +333,13 @@ Table of Contents:
 
 ---
 
-### settings.js
+### sort.js
+* [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
+* [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
+
+---
+
+### storage.js
 * [iterami/Avoidance-2D.htm](https://github.com/iterami/Avoidance-2D.htm)
 * [iterami/Calculator.htm](https://github.com/iterami/Calculator.htm)
 * [iterami/ColorWaves.htm](https://github.com/iterami/ColorWaves.htm)
@@ -361,6 +358,7 @@ Table of Contents:
 * [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
 * [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
 * [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
+* [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
 * [iterami/RNG.htm](https://github.com/iterami/RNG.htm)
 * [iterami/RockPaperScissors.htm](https://github.com/iterami/RockPaperScissors.htm)
 * [iterami/RPG-Above.htm](https://github.com/iterami/RPG-Above.htm)
@@ -377,12 +375,6 @@ Table of Contents:
 * [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
-
----
-
-### sort.js
-* [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
-* [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
 
 ---
 
