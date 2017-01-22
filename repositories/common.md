@@ -24,7 +24,7 @@ Table of Contents:
   * [random.js](#randomjs)
   * [rpg.js](#rpgjs)
   * [rts.js](#rtsjs)
-  * [settings.js](#storagejs)
+  * [storage.js](#storagejs)
   * [sort.js](#sortjs)
   * [string.js](#stringjs)
   * [webgl.js](#webgljs)
