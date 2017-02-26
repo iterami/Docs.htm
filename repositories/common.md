@@ -27,6 +27,7 @@ Table of Contents:
   * [storage.js](#storagejs)
   * [sort.js](#sortjs)
   * [string.js](#stringjs)
+  * [time.js](#timejs)
   * [webgl.js](#webgljs)
 
 ---
@@ -380,6 +381,11 @@ Table of Contents:
 
 ### string.js
 * [iterami/PasswordGenerator.htm](https://github.com/iterami/PasswordGenerator.htm)
+
+---
+
+### time.js
+* [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 
 ---
 
