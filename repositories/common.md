@@ -388,6 +388,7 @@ Table of Contents:
 * [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 * [iterami/HS-Guide.htm](https://github.com/iterami/HS-Guide.htm)
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
+* [iterami/Time.htm](https://github.com/iterami/Time.htm)
 
 ---
 
