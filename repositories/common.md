@@ -387,6 +387,7 @@ Table of Contents:
 ### time.js
 * [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 * [iterami/HS-Guide.htm](https://github.com/iterami/HS-Guide.htm)
+* [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
 
 ---
 
