@@ -391,6 +391,7 @@ Table of Contents:
 * [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
+* [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 * [iterami/TimeColors.htm](https://github.com/iterami/TimeColors.htm)
 
 ---
