@@ -15,6 +15,7 @@ Table of Contents:
 * JavaScript:
   * [audio.js](#audiojs)
   * [canvas.js](#canvasjs)
+  * [entity.js](#entityjs)
   * [images.js](#imagesjs)
   * [input.js](#inputjs)
   * [math.js](#mathjs)
@@ -186,6 +187,16 @@ Table of Contents:
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
+
+---
+
+### entity.js
+* [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
+* [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
+* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
+* [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
+* [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
+* [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 
 ---
 
