@@ -251,6 +251,7 @@ Table of Contents:
 * [iterami/ArtEditor.htm](https://github.com/iterami/ArtEditor.htm)
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
+* [iterami/LayeredSnake-2D3D.htm](https://github.com/iterami/LayeredSnake-2D3D.htm)
 * [iterami/QjnyYap.htm](https://github.com/iterami/QjnyYap.htm)
 * [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
 * [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
