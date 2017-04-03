@@ -1,11 +1,6 @@
 iterami/Documentation.htm
 -------------------------
 
-Documentation for `iterami` repositories.
-
----
-
-Table of Contents:
 * Code:
   * [JavaScript](https://github.com/iterami/Documentation.htm/blob/gh-pages/code/javascript.js)
 * Repositories:
