@@ -15,6 +15,7 @@ Table of Contents:
 * JavaScript:
   * [audio.js](#audiojs)
   * [canvas.js](#canvasjs)
+  * [core.js](#corejs)
   * [entity.js](#entityjs)
   * [images.js](#imagesjs)
   * [input.js](#inputjs)
@@ -40,6 +41,7 @@ Table of Contents:
 * [iterami/ColorDrops.htm](https://github.com/iterami/ColorDrops.htm)
 * [iterami/ColorSteps.htm](https://github.com/iterami/ColorSteps.htm)
 * [iterami/D2LoD-ArcaneSanctuary.htm](https://github.com/iterami/D2LoD-ArcaneSanctuary.htm)
+* [iterami/EyeDotIllusion.htm](https://github.com/iterami/EyeDotIllusion.htm)
 * [iterami/Fireworks-2D.htm](https://github.com/iterami/Fireworks-2D.htm)
 * [iterami/FractalRunner-2D3D.htm](https://github.com/iterami/FractalRunner-2D3D.htm)
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
@@ -162,6 +164,7 @@ Table of Contents:
 * [iterami/ColorDrops.htm](https://github.com/iterami/ColorDrops.htm)
 * [iterami/ColorSteps.htm](https://github.com/iterami/ColorSteps.htm)
 * [iterami/D2LoD-ArcaneSanctuary.htm](https://github.com/iterami/D2LoD-ArcaneSanctuary.htm)
+* [iterami/EyeDotIllusion.htm](https://github.com/iterami/EyeDotIllusion.htm)
 * [iterami/Fireworks-2D.htm](https://github.com/iterami/Fireworks-2D.htm)
 * [iterami/FractalRunner-2D3D.htm](https://github.com/iterami/FractalRunner-2D3D.htm)
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
@@ -187,6 +190,11 @@ Table of Contents:
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
+
+---
+
+### core.js
+* All repositories that are listed as using `.js` files use `core.js`.
 
 ---
 
@@ -249,6 +257,7 @@ Table of Contents:
 * [iterami/9YG0E6r.htm](https://github.com/iterami/9YG0E6r.htm)
 * [iterami/Aquarium-2D.htm](https://github.com/iterami/Aquarium-2D.htm)
 * [iterami/ArtEditor.htm](https://github.com/iterami/ArtEditor.htm)
+* [iterami/EyeDotIllusion.htm](https://github.com/iterami/EyeDotIllusion.htm)
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
 * [iterami/LayeredSnake-2D3D.htm](https://github.com/iterami/LayeredSnake-2D3D.htm)
