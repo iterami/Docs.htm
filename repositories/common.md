@@ -68,7 +68,6 @@ Table of Contents:
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
-* [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
 
 ---
 
@@ -189,7 +188,6 @@ Table of Contents:
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
-* [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
 
 ---
 
@@ -249,7 +247,6 @@ Table of Contents:
 * [iterami/SpeedType.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/Terminal.htm](https://github.com/iterami/Terminal.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
-* [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
 
 ---
 
@@ -272,7 +269,6 @@ Table of Contents:
 * [iterami/SolarSystem-2D.htm](https://github.com/iterami/SolarSystem-2D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
-* [iterami/Zuzanka.htm](https://github.com/iterami/Zuzanka.htm)
 
 ---
 
