@@ -75,6 +75,7 @@ Table of Contents:
 * [iterami/Alarm.htm](https://github.com/iterami/Alarm.htm)
 * [iterami/BaseConverter.htm](https://github.com/iterami/BaseConverter.htm)
 * [iterami/BinaryDataEndecoder.htm](https://github.com/iterami/BinaryDataEndecoder.htm)
+* [iterami/Birthday.htm](https://github.com/iterami/Birthday.htm)
 * [iterami/Calculator.htm](https://github.com/iterami/Calculator.htm)
 * [iterami/Click.htm](https://github.com/iterami/Click.htm)
 * [iterami/ColorSelector.htm](https://github.com/iterami/ColorSelector.htm)
@@ -403,6 +404,7 @@ Table of Contents:
 
 ### time.js
 * [iterami/Alarm.htm](https://github.com/iterami/Alarm.htm)
+* [iterami/Birthday.htm](https://github.com/iterami/Birthday.htm)
 * [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 * [iterami/HS-Guide.htm](https://github.com/iterami/HS-Guide.htm)
 * [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
