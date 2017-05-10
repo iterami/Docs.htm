@@ -17,7 +17,6 @@ Table of Contents:
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
   * [entity.js](#entityjs)
-  * [images.js](#imagesjs)
   * [input.js](#inputjs)
   * [math.js](#mathjs)
   * [music.js](#musicjs)
@@ -210,18 +209,6 @@ Table of Contents:
 * [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
 * [iterami/Platform-3D.htm](https://github.com/iterami/Platform-3D.htm)
 * [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
-* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
-* [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
-* [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
-* [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
-* [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
-
----
-
-### images.js
-* [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
-* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
-* [iterami/Platform-3D.htm](https://github.com/iterami/Platform-3D.htm)
 * [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
 * [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
 * [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
