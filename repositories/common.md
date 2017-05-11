@@ -72,6 +72,7 @@ Table of Contents:
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 
 ---
@@ -213,6 +214,7 @@ Table of Contents:
 * [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 
 ---
 
@@ -255,6 +257,7 @@ Table of Contents:
 * [iterami/Terminal.htm](https://github.com/iterami/Terminal.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 
 ---
 
@@ -281,6 +284,7 @@ Table of Contents:
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 
 ---
 
@@ -384,3 +388,4 @@ Table of Contents:
 * [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
