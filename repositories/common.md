@@ -107,6 +107,7 @@ Table of Contents:
 * [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
 * [iterami/RNG.htm](https://github.com/iterami/RNG.htm)
 * [iterami/RockPaperScissors.htm](https://github.com/iterami/RockPaperScissors.htm)
+* [iterami/RomanNumerals.htm](https://github.com/iterami/RomanNumerals.htm)
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
 * [iterami/Slots.htm](https://github.com/iterami/Slots.htm)
 * [iterami/Snakish.htm](https://github.com/iterami/Snakish.htm)
