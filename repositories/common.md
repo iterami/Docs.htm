@@ -84,6 +84,7 @@ Table of Contents:
 * [iterami/Click.htm](https://github.com/iterami/Click.htm)
 * [iterami/ColorSelector.htm](https://github.com/iterami/ColorSelector.htm)
 * [iterami/ColorSquares.htm](https://github.com/iterami/ColorSquares.htm)
+* [iterami/ContactForm.htm](https://github.com/iterami/ContactForm.htm)
 * [iterami/Countdown.htm](https://github.com/iterami/Countdown.htm)
 * [iterami/D2LoD-Guide.htm](https://github.com/iterami/D2LoD-Guide.htm)
 * [iterami/Dropdown.htm](https://github.com/iterami/Dropdown.htm)
