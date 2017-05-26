@@ -82,6 +82,7 @@ Table of Contents:
 * [iterami/Birthday.htm](https://github.com/iterami/Birthday.htm)
 * [iterami/Calculator.htm](https://github.com/iterami/Calculator.htm)
 * [iterami/Click.htm](https://github.com/iterami/Click.htm)
+* [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 * [iterami/ColorSelector.htm](https://github.com/iterami/ColorSelector.htm)
 * [iterami/ColorSquares.htm](https://github.com/iterami/ColorSquares.htm)
 * [iterami/ContactForm.htm](https://github.com/iterami/ContactForm.htm)
