@@ -116,6 +116,7 @@ Table of Contents:
 * [iterami/SpeedText.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/SpeedType.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/Terminal.htm](https://github.com/iterami/Terminal.htm)
+* [iterami/TextEditor.htm](https://github.com/iterami/TextEditor.htm)
 * [iterami/TextInfo.htm](https://github.com/iterami/TextInfo.htm)
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
 * [iterami/TimeColors.htm](https://github.com/iterami/TimeColors.htm)
