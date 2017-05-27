@@ -103,6 +103,7 @@ Table of Contents:
 * [iterami/Match.htm](https://github.com/iterami/Match.htm)
 * [iterami/PasswordGenerator.htm](https://github.com/iterami/PasswordGenerator.htm)
 * [iterami/Percentages.htm](https://github.com/iterami/Percentages.htm)
+* [iterami/PixelEditor.htm](https://github.com/iterami/PixelEditor.htm)
 * [iterami/PlusPlus.htm](https://github.com/iterami/PlusPlus.htm)
 * [iterami/Poem.htm](https://github.com/iterami/Poem.htm)
 * [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
