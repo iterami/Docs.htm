@@ -115,6 +115,7 @@ Table of Contents:
 * [iterami/SpeedButton.htm](https://github.com/iterami/SpeedButton.htm)
 * [iterami/SpeedText.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/SpeedType.htm](https://github.com/iterami/SpeedType.htm)
+* [iterami/Sudoku.htm](https://github.com/iterami/Sudoku.htm)
 * [iterami/Terminal.htm](https://github.com/iterami/Terminal.htm)
 * [iterami/TextEditor.htm](https://github.com/iterami/TextEditor.htm)
 * [iterami/TextInfo.htm](https://github.com/iterami/TextInfo.htm)
