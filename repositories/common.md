@@ -84,7 +84,7 @@ Table of Contents:
 * [iterami/Click.htm](https://github.com/iterami/Click.htm)
 * [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
 * [iterami/ColorSelector.htm](https://github.com/iterami/ColorSelector.htm)
-* [iterami/ColorSquares.htm](https://github.com/iterami/ColorSquares.htm)tm)
+* [iterami/ColorSquares.htm](https://github.com/iterami/ColorSquares.htm)
 * [iterami/ColorWaves.htm](https://github.com/iterami/ColorWaves.htm)
 * [iterami/ContactForm.htm](https://github.com/iterami/ContactForm.htm)
 * [iterami/Countdown.htm](https://github.com/iterami/Countdown.htm)
@@ -209,7 +209,7 @@ Table of Contents:
 ---
 
 ### core.js
-* All repositories that are listed as using `.js` files use `core.js`.
+* All repositories listed as using `.js` files use `core.js`.
 
 ---
 
