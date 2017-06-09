@@ -10,7 +10,6 @@ Table of Contents:
   * [canvas.css](#canvascss)
   * [dom.css](#domcss)
   * [index.css](#indexcss)
-  * [music.css](#musiccss)
   * [writings.css](#writingscss)
 * JavaScript:
   * [audio.js](#audiojs)
@@ -18,7 +17,6 @@ Table of Contents:
   * [core.js](#corejs)
   * [entity.js](#entityjs)
   * [math.js](#mathjs)
-  * [music.js](#musicjs)
   * [network.js](#networkjs)
   * [race.js](#racejs)
   * [rpg.js](#rpgjs)
@@ -33,7 +31,6 @@ Table of Contents:
 ### canvas.css
 * [iterami/9YG0E6r.htm](https://github.com/iterami/9YG0E6r.htm)
 * [iterami/Aquarium-2D.htm](https://github.com/iterami/Aquarium-2D.htm)
-* [iterami/ArtEditor.htm](https://github.com/iterami/ArtEditor.htm)
 * [iterami/Avoidance-2D.htm](https://github.com/iterami/Avoidance-2D.htm)
 * [iterami/ColorDrops.htm](https://github.com/iterami/ColorDrops.htm)
 * [iterami/ColorSteps.htm](https://github.com/iterami/ColorSteps.htm)
@@ -125,19 +122,12 @@ Table of Contents:
 * [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 * [iterami/U1.htm](https://github.com/iterami/U1.htm)
 * [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
-* [iterami/UniverseConstructor.htm](https://github.com/iterami/UniverseConstructor.htm)
 * [iterami/WindowInfo.htm](https://github.com/iterami/WindowInfo.htm)
 
 ---
 
 ### index.css
 * [iterami/iterami.github.io](https://github.com/iterami/iterami.github.io)
-
----
-
-### music.css
-* [iterami/Music-Local.htm](https://github.com/iterami/Music-Local.htm)
-* [iterami/Music-Server.htm](https://github.com/iterami/Music-Server.htm)
 
 ---
 
@@ -229,7 +219,6 @@ Table of Contents:
 ### math.js
 * [iterami/9YG0E6r.htm](https://github.com/iterami/9YG0E6r.htm)
 * [iterami/Aquarium-2D.htm](https://github.com/iterami/Aquarium-2D.htm)
-* [iterami/ArtEditor.htm](https://github.com/iterami/ArtEditor.htm)
 * [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
 * [iterami/DotEyeIllusion.htm](https://github.com/iterami/DotEyeIllusion.htm)
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
@@ -250,12 +239,6 @@ Table of Contents:
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
-
----
-
-### music.js
-* [iterami/Music-Local.htm](https://github.com/iterami/Music-Local.htm)
-* [iterami/Music-Server.htm](https://github.com/iterami/Music-Server.htm)
 
 ---
 
