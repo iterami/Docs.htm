@@ -12,7 +12,6 @@ Table of Contents:
   * [index.css](#indexcss)
   * [writings.css](#writingscss)
 * JavaScript:
-  * [audio.js](#audiojs)
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
   * [entity.js](#entityjs)
@@ -144,21 +143,6 @@ Table of Contents:
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
 * [iterami/TF2-Guide.htm](https://github.com/iterami/TF2-Guide.htm)
 * [iterami/WoW-Guide.htm](https://github.com/iterami/WoW-Guide.htm)
-
----
-
-### audio.js
-* [iterami/Alarm.htm](https://github.com/iterami/Alarm.htm)
-* [iterami/Avoidance-2D.htm](https://github.com/iterami/Avoidance-2D.htm)
-* [iterami/Dropdown.htm](https://github.com/iterami/Dropdown.htm)
-* [iterami/Match.htm](https://github.com/iterami/Match.htm)
-* [iterami/Particleball-2D.htm](https://github.com/iterami/Particleball-2D.htm)
-* [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
-* [iterami/Snakish.htm](https://github.com/iterami/Snakish.htm)
-* [iterami/SpeedButton.htm](https://github.com/iterami/SpeedButton.htm)
-* [iterami/SpeedShape.htm](https://github.com/iterami/SpeedShape.htm)
-* [iterami/SpeedText.htm](https://github.com/iterami/SpeedText.htm)
-* [iterami/SpeedType.htm](https://github.com/iterami/SpeedType.htm)
 
 ---
 
