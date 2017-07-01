@@ -14,7 +14,6 @@ Table of Contents:
 * JavaScript:
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
-  * [entity.js](#entityjs)
   * [math.js](#mathjs)
   * [network.js](#networkjs)
   * [race.js](#racejs)
@@ -184,19 +183,6 @@ Table of Contents:
 
 ### core.js
 * All repositories listed as using `.js` files use `core.js`.
-
----
-
-### entity.js
-* [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
-* [iterami/Platform-3D.htm](https://github.com/iterami/Platform-3D.htm)
-* [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
-* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
-* [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
-* [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
-* [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
-* [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
-* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 
 ---
 
