@@ -155,6 +155,7 @@ ri                  | 里
 rin                 | 厘
 shaku               | 尺
 spat                | S
+story               |
 sun                 | 寸
 survey foot (India) |
 survey foot (US)    |
