@@ -189,8 +189,10 @@ Table of Contents:
 
 ### data.js
 * [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
+* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
 * [iterami/Platform-3D.htm](https://github.com/iterami/Platform-3D.htm)
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
+* [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 
 ---
