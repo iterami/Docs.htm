@@ -119,7 +119,6 @@ Table of Contents:
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
 * [iterami/TimeColors.htm](https://github.com/iterami/TimeColors.htm)
 * [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
-* [iterami/U1.htm](https://github.com/iterami/U1.htm)
 * [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
 * [iterami/WindowInfo.htm](https://github.com/iterami/WindowInfo.htm)
 
@@ -141,6 +140,8 @@ Table of Contents:
 * [iterami/HS-Guide.htm](https://github.com/iterami/HS-Guide.htm)
 * [iterami/PT-Guide.htm](https://github.com/iterami/PT-Guide.htm)
 * [iterami/RS-Guide.htm](https://github.com/iterami/RS-Guide.htm)
+* [iterami/SC-Guide.htm](https://github.com/iterami/SC-Guide.htm)
+* [iterami/SC-Maps.htm](https://github.com/iterami/SC-Maps.htm)
 * [iterami/TF2-Guide.htm](https://github.com/iterami/TF2-Guide.htm)
 * [iterami/WoW-Guide.htm](https://github.com/iterami/WoW-Guide.htm)
 
@@ -194,6 +195,7 @@ Table of Contents:
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
+* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 
 ---
 
@@ -205,9 +207,12 @@ Table of Contents:
 * [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
 * [iterami/LayeredSnake-2D3D.htm](https://github.com/iterami/LayeredSnake-2D3D.htm)
+* [iterami/ParticleRun-2D.htm](https://github.com/iterami/ParticleRun-2D.htm)
+* [iterami/Platform-3D.htm](https://github.com/iterami/ParticleRun-3D.htm)
 * [iterami/QjnyYap.htm](https://github.com/iterami/QjnyYap.htm)
 * [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
 * [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
+* [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
 * [iterami/RPG-Above.htm](https://github.com/iterami/RPG-Above.htm)
 * [iterami/RPG-Side.htm](https://github.com/iterami/RPG-Side.htm)
 * [iterami/RTS-2D.htm](https://github.com/iterami/RTS-2D.htm)
