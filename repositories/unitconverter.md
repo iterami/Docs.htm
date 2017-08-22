@@ -247,6 +247,12 @@ technical atmosphere                 | at
 torr                                 | Torr
 Vickers pyramid number               | HV
 
+Radiation           | Unit
+--------------------|-----
+gray                | Gy
+joules per kilogram | J/kg
+rad                 |
+
 Speed             | Unit
 ------------------|-----
 feet per second   | ft/s
