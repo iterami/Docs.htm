@@ -1,24 +1,9 @@
-[iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
--------------------------------------------------------------------------
-
-* https://github.com/iterami/UnitConverter.htm
-* http://iterami.com/UnitConverter.htm/
-
-Unit conversion tool that can convert units of various types to a specified power and number of decimal places.
-
----
-
-Acceleration                | Unit
-----------------------------|------
 foot per second squared     | ft/s²
 gal                         | Gal
 metre per hour squared      | m/h²
 metre per second squared    | m/s²
 miles per hour squared      | mph²
 standard gravity            | ɡₒ
-
-Angle     | Unit
-----------|-----
 arcminute | ′
 arcsecond | ″
 circle    |
@@ -31,9 +16,6 @@ radian    | rad
 sextant   |
 sign      |
 turn      |
-
-Area           | Unit
----------------|-----
 acre           | ac
 are            | a
 barn           | b
@@ -60,15 +42,9 @@ tan            | 段, 反
 township       |
 tsubo          | 坪
 yards squared  | yd²
-
-Density                     | Unit
-----------------------------|------
 grams per cubic metre       | g/m³
 grams per litre             | g/l
 metric tons per cubic metre | t/m³
-
-Energy                            | Unit
-----------------------------------|-------------------
 electron volt                     | eV
 erg                               |
 foot-pound                        | ft·lb
@@ -80,9 +56,6 @@ thermochemical BTU                | Btu<sub>th</sub>
 thermochemical calorie            | cal<sub>th</sub>
 ton of TNT                        |
 watt-hour                         | W·h
-
-Force       | Unit
-------------|-----
 dyne        | dyn
 gram-force  | gf
 kip         |
@@ -92,23 +65,14 @@ pond        |
 pound-force | lbf
 poundal     | pdl
 sthène      | sn
-
-Fuel                      | Unit
---------------------------|--------
 litres per 100 kilometres | l/100km
 metres per litre          | m/l
 miles per imperial gallon | MPG
 miles per US gallon       | MPG
-
-Illuminance | Unit
-------------|-----
 foot-candle | fc
 lux         | lx
 phot        | ph
 skot        | sk
-
-Length              | Unit
---------------------|-----
 ald                 |
 alen                |
 aln                 |
@@ -162,19 +126,10 @@ survey foot (US)    |
 thou                |
 unglie              |
 yard                | yd
-
-Level | Unit
-------|-----
 bel   | B
 neper | Np
-
-Magnetism | Unit
-----------|-----
 gauss     | G
 tesla     | T
-
-Mass               | Unit
--------------------|--------------
 abucco             |
 adowlie            |
 agiro              |
@@ -227,17 +182,11 @@ troy grain         | gr
 troy ounce         | oz t
 Whey (Essex)       |
 zolotnik           | zol.
-
-Power                 | Unit
-----------------------|-----
 mechanical horsepower | hp
 metric horsepower     | PS
 poncelet              | p
 ton of refrigeration  | TR
 watt                  | W
-
-Pressure                             | Unit
--------------------------------------|-----
 bar                                  |
 pascal                               | Pa
 pièze                                | pz
@@ -246,15 +195,9 @@ standard atmosphere                  | atm
 technical atmosphere                 | at
 torr                                 | Torr
 Vickers pyramid number               | HV
-
-Radiation           | Unit
---------------------|-----
 gray                | Gy
 joules per kilogram | J/kg
 rad                 |
-
-Speed             | Unit
-------------------|-----
 feet per second   | ft/s
 knots             |
 mach              | M
@@ -263,9 +206,6 @@ metres per second | m/s
 miles per hour    | mph
 miles per second  |
 speed of light    | c
-
-Temperature         | Unit
---------------------|-----
 Amonton             |
 Barnsdorf           |
 Beaumuir            |
@@ -319,9 +259,6 @@ Sagredo             |
 Sulzer              |
 Wedgwood (modern)   |
 Wedgwood (original) |
-
-Time                | Unit
---------------------|------
 atom                |
 century             | c.
 day                 | d
@@ -342,15 +279,9 @@ second              | s
 shake               |
 week                |
 year                | a
-
-Torque       | Unit
--------------|-------
 gram metre   | g·m
 newton metre | N·m
 pound-foot   | lb·ft
-
-Volume                  | Unit
-------------------------|------
 acetabulum              |
 acre-foot               |
 adowlie                 |
