@@ -5,7 +5,6 @@ Common files used by iterami repositories to properly function. iterami reposito
 
 ---
 
-Table of Contents:
 * CSS:
   * [canvas.css](#canvascss)
   * [core.css](#corecss)
