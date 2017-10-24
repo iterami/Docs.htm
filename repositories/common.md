@@ -17,13 +17,15 @@ Common files used by iterami repositories to properly function. iterami reposito
   * [data.js](#datajs)
   * [math.js](#mathjs)
   * [network.js](#networkjs)
-  * [race.js](#racejs)
-  * [rpg.js](#rpgjs)
-  * [rts.js](#rtsjs)
   * [sort.js](#sortjs)
   * [string.js](#stringjs)
   * [time.js](#timejs)
   * [webgl.js](#webgljs)
+  * `genre`:
+    * [platform.js](#genreplatformjs)
+    * [race.js](#genreracejs)
+    * [rpg.js](#genrerpgjs)
+    * [rts.js](#genrertsjs)
 
 ---
 
@@ -410,23 +412,6 @@ Common files used by iterami repositories to properly function. iterami reposito
 
 ---
 
-### race.js
-* [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
-* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
-
----
-
-### rpg.js
-* [iterami/RPG-Above.htm](https://github.com/iterami/RPG-Above.htm)
-* [iterami/RPG-Side.htm](https://github.com/iterami/RPG-Side.htm)
-
----
-
-### rts.js
-* [iterami/RTS-2D.htm](https://github.com/iterami/RTS-2D.htm)
-
----
-
 ### sort.js
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
 * [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
@@ -461,3 +446,26 @@ Common files used by iterami repositories to properly function. iterami reposito
 * [iterami/ThemePark-3D.htm](https://github.com/iterami/ThemePark-3D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
+
+---
+
+### genre/platform.js
+* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
+* [iterami/Platform-3D.htm](https://github.com/iterami/Platform-3D.htm)
+
+---
+
+### genre/race.js
+* [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
+* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
+
+---
+
+### genre/rpg.js
+* [iterami/RPG-Above.htm](https://github.com/iterami/RPG-Above.htm)
+* [iterami/RPG-Side.htm](https://github.com/iterami/RPG-Side.htm)
+
+---
+
+### genre/rts.js
+* [iterami/RTS-2D.htm](https://github.com/iterami/RTS-2D.htm)
