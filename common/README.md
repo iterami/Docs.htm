@@ -12,7 +12,6 @@ Files:
   * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
   * `core.css`
   * `dom.css`
-  * `index.css`
   * `writings.css`
 * `js`:
   * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvasjs.md): used for 2D canvas projects.

@@ -9,7 +9,6 @@
   * [canvas.css](#canvascss)
   * [core.css](#corecss)
   * [dom.css](#domcss)
-  * [index.css](#indexcss)
   * [writings.css](#writingscss)
 * JavaScript:
   * [canvas.js](#canvasjs)
@@ -215,11 +214,6 @@
 * [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 * [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
 * [iterami/WindowInfo.htm](https://github.com/iterami/WindowInfo.htm)
-
----
-
-### index.css
-* [iterami/iterami.github.io](https://github.com/iterami/iterami.github.io)
 
 ---
 
