@@ -1,6 +1,25 @@
 [iterami/common](https://github.com/iterami/common) Documentation
 -----------------------------------------------------------------
 
-Common files used by iterami repositories to properly function. iterami repositories running on GitHub Pages and iterami repositories cloned via the `/iterami/fetch-iterami-repositories.sh` [iterami/Scripts](https://github.com/iterami/Scripts) script will properly find the files they need.
+Files:
+* `css`:
+  * `canvas.css`: used for 2D and 3D canvas projects.
+  * `core.css`
+  * `dom.css`
+  * `index.css`
+  * `writings.css`
+* `js`:
+  * `canvas.js`: used for 2D canvas projects.
+  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md)
+  * `data.js`
+  * `math.js`
+  * `network.js`
+  * `sort.js`
+  * `string.js`
+  * `time.js`
+  * `webgl.js`: used for 3D canvas projects.
 
-* iterami repository common file usage information: (https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md)
+---
+
+Resources:
+* iterami repository common file usage information: https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md
