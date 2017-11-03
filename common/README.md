@@ -1,7 +1,8 @@
 [iterami/common](https://github.com/iterami/common) Documentation
 -----------------------------------------------------------------
 
-Guides:
+Guides and Resources:
+* iterami repository common file usage information: https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md
 * Making Your Project
 
 ---
@@ -23,8 +24,3 @@ Files:
   * [`string.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/stringjs.md)
   * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md)
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
-
----
-
-Resources:
-* iterami repository common file usage information: https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md
