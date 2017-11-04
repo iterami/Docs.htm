@@ -43,7 +43,7 @@
 * [`core_html_modify(args)`](#core_html_modifyargs)
 * [`core_image(args)`](#core_imageargs)
 * [`core_init()`](#core_init)
-* [`core_interval_animationFrame(args)`](#core_interval_animationFrameargs)
+* [`core_interval_animationFrame(args)`](#core_interval_animationframeargs)
 * [`core_interval_modify(args)`](#core_interval_modifyargs)
 * [`core_interval_pause(args)`](#core_interval_pauseargs)
 * [`core_interval_pause_all()`](#core_interval_pause_all)

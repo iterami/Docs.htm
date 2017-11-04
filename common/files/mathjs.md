@@ -1,7 +1,7 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/math.js
 --------------------------------------------------------------------------------------------------------
 
-* [`math_clamp(args)`](#math_clamp)
+* [`math_clamp(args)`](#math_clampargs)
 * [`math_degrees_to_radians(args)`](#math_degrees_to_radiansargs)
 * [`math_distance(args)`](#math_distanceargs)
 * [`math_fixed_length_line(args)`](#math_fixed_length_lineargs)
