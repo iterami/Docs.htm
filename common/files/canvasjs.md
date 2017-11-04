@@ -1,18 +1,18 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/canvas.js
 ----------------------------------------------------------------------------------------------------------
 
-* [`canvas_attach(args)`](#canvasattach)
-* [`canvas_draw()`](#canvasdraw)
-* [`canvas_drawloop()`](#canvasdrawloop)
-* [`canvas_draw_path(args)`](#canvasdrawpath)
-* [`canvas_gradient(args)`](#canvasgradient)
-* [`canvas_init(args)`](#canvasinit)
-* [`canvas_logicloop()`](#canvaslogicloop)
-* [`canvas_logicloop_handle_entity(entity)`](#canvaslogicloophandlentity)
-* [`canvas_resize()`](#canvasresize)
-* [`canvas_setmode(args)`](#canvassetmode)
-* [`canvas_setproperties(args)`](#canvassetproperties)
-* [`canvas_uri(args)`](#canvasuri)
+* [`canvas_attach(args)`](#canvas_attachargs)
+* [`canvas_draw()`](#canvas_draw)
+* [`canvas_drawloop()`](#canvas_drawloop)
+* [`canvas_draw_path(args)`](#canvas_draw_pathargs)
+* [`canvas_gradient(args)`](#canvas_gradientargs)
+* [`canvas_init(args)`](#canvas_initargs)
+* [`canvas_logicloop()`](#canvas_logicloop)
+* [`canvas_logicloop_handle_entity(entity)`](#canvas_logicloop_handle_entityentity)
+* [`canvas_resize()`](#canvas_resize)
+* [`canvas_setmode(args)`](#canvas_setmodeargs)
+* [`canvas_setproperties(args)`](#canvas_setpropertiesargs)
+* [`canvas_uri(args)`](#canvas_uriargs)
 
 ---
 
