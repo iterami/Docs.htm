@@ -2,8 +2,9 @@
 -----------------------------------------------------------------
 
 Guides and Resources:
-* iterami repository common file usage information: https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md
-* Making Your Project
+* [Using and Updating iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/using-common.md)
+* [Making Your Project](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/README.md)
+* [iterami repository common file usage information](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md)
 
 ---
 
