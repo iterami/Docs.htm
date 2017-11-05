@@ -1,7 +1,7 @@
 Making your [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md) Project
 -----------------------------------------------------------------------------------------------------------------
 
-1. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/using-common.md)
+1. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
 2. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files.md)
 
 ---
@@ -10,4 +10,4 @@ Making your [iterami/common](https://github.com/iterami/Documentation.htm/blob/g
 
 ---
 
-`iterami/common` functions typically use one argument object instead of multiple arguments.
+`iterami/common` functions use one argument object `args` instead of multiple arguments.
