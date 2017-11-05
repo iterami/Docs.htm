@@ -2,7 +2,7 @@ Making your [iterami/common](https://github.com/iterami/Documentation.htm/blob/g
 -----------------------------------------------------------------------------------------------------------------
 
 1. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
-2. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files.md)
+2. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/README.md)
 
 ---
 
