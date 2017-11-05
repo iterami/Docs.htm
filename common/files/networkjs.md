@@ -6,3 +6,4 @@
 ---
 
 ### `network_ajax(args)`
+* Initiates and handles AJAX requests.

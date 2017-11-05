@@ -11,23 +11,29 @@
 ---
 
 ### `time_date_to_timestamp(args)`
+* Converts a date object into a timestamp.
 
 ---
 
 ### `time_diff(args)`
+* Calculates the difference between two times.
 
 ---
 
 ### `time_format_date(args)`
+* Returns a date object formatted as a string.
 
 ---
 
 ### `time_from_inputs()`
+* Collects date information from specific HTML elements and returns a timestamp.
 
 ---
 
 ### `time_timestamp_to_date(args)`
+* Converts a timestamp to a date object.
 
 ---
 
 ### `time_two_digits(args)`
+* Handles display date information in a minimum of two digits.

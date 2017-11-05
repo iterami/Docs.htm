@@ -10,19 +10,25 @@
 ---
 
 ### `sort_custom(args)`
+* Sorts an array according to custom sorting rules.
+* Optionally reverses the array after sorting.
 
 ---
 
 ### `sort_numbers(args)`
+* Sorts numbers from smallest to biggest.
 
 ---
 
 ### `sort_random(args)`
+* Sorts an array randomly. Cannot be reversed.
 
 ---
 
 ### `sort_property(args)`
+* Sort an array based on some property.
 
 ---
 
 ### `sort_strings(args)`
+* Sort strings based on `localeCompare()`.
