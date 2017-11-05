@@ -1,8 +1,9 @@
 Making your [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md) Project
 -----------------------------------------------------------------------------------------------------------------
 
-1. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
-2. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/README.md)
+1. [Make sure you understand the Creative Commons Zero v1.0 Universal License used by `iterami/common`.](https://github.com/iterami/common/blob/gh-pages/LICENSE.md)
+2. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
+3. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/README.md)
 
 ---
 
