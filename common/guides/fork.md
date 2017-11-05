@@ -8,5 +8,5 @@ If your project is being hosted on GitHub Pages, you should use a fork of `itera
 ---
 
 If your project is being hosted on a different server, you should upload the `iterami/common` files:
-* Clone `iterami/common` to your local machine via git. Pull and upload any changed files to your server. You do not need to upload the `.git` directory.
+* Clone `iterami/common` to your local machine via `git`. Pull and upload any changed files to your server. You do not need to upload the `.git` directory.
 * Your `iterami/common` directory does not need to be in a particular location, as long as you make sure the paths in your `script` tags are correct.
