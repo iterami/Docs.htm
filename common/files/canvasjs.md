@@ -17,6 +17,12 @@
 ---
 
 ### `canvas_attach(args)`
+Arg      | Required? | Notes
+---------|-----------|-----------------------------------------
+base     | YES       | ID of the entity being attached to.
+entity   | YES       | ID of the entity that is being attached.
+offset-x | NO        | Number of pixels of x-axis offset.
+offset-y | NO        | Number of pixels of y-axis offset.
 
 ---
 

@@ -1,4 +1,13 @@
-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/guides/Making Your Project
-------------------------------------------------------------------------------------------------------------------------
+Making your [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md) Project
+-----------------------------------------------------------------------------------------------------------------
 
-* [Make sure iterami/common is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/using-common.md)
+1. [Make sure `iterami/common` is set up properly for your particular project hosting setup.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/using-common.md)
+2. [Familiarize yourself with `iterami/common` files, functions, and variables.](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files.md)
+
+---
+
+`iterami/common` is a code library. Once imported, your projects will have access to functions and variables designed to handle most aspects of project functionality in one standardized way, while also providing additional functionality over vanilla JavaScript.
+
+---
+
+`iterami/common` functions typically use one argument object instead of multiple arguments.
