@@ -21,7 +21,7 @@ When using `iterami/common`:
 
 ---
 
-Files:
+`iterami/common` Files:
 * `css`:
   * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
   * `core.css`
@@ -29,22 +29,21 @@ Files:
   * `writings.css`
 * `js`:
   * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvasjs.md): used for 2D canvas projects.
-  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md)
-  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datajs.md)
-  * [`math.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathjs.md)
-  * [`network.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/networkjs.md)
-  * [`sort.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/sortjs.md)
-  * [`string.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/stringjs.md)
-  * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md)
+  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md): used by every project.
+  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datajs.md): shortcuts for complex 2D and 3D entities.
+  * [`math.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathjs.md): math and matrix functions.
+  * [`network.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/networkjs.md): AJAX.
+  * [`sort.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/sortjs.md): functions for sorting arrays.
+  * [`string.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/stringjs.md): functions for string formatting and replace.
+  * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md): functions for handling time and date.
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
-* [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md)
 
 ---
 
-Recommended File Structure:
+Recommended `iterami/common` project file structure:
 * `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
-  * `main.js`: main project JavaScript file, which only contains functions defined by `iterami/common`.
+  * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
 * `index.htm`: the page on which your project resides.
 
 Optional Files:
