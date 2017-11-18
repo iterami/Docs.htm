@@ -21,9 +21,9 @@ When using `iterami/common`:
 ---
 
 Recommended File Structure:
-* `js`:
+* `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
-  * `main.js`: main project JavaScript file, which only contains common functions.
+  * `main.js`: main project JavaScript file, which only contains functions defined by `iterami/common`.
 * `index.htm`: the page on which your project resides.
 
 Optional Files:
