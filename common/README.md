@@ -15,7 +15,7 @@
 
 ---
 
-`iterami/common` Files:
+`iterami/common` files:
 * `css`:
   * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
   * `core.css`
@@ -38,9 +38,7 @@ Recommended `iterami/common` project file structure:
 * `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
   * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
-* `index.htm`: the page on which your project resides.
-
-Optional Files:
 * `404.htm`: handles 404 errors for GitHub Pages repositories.
+* `index.htm`: the page on which your project resides.
 * `LICENSE.md`: contains license information about your project.
 * `README.md`: contains information about your project.
