@@ -17,3 +17,4 @@ Files:
   * [`string.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/stringjs.md)
   * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md)
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
+* [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md)
