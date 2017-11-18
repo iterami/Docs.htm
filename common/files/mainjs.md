@@ -1,5 +1,5 @@
-Your-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)-Project/js/main.js
----------------------------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md) Project/js/main.js
+----------------------------------------------------------------------------------------------------------------
 
 * [`repo_escape()`](#repo_escape)
 * [`repo_init()`](#repo_init)
