@@ -144,7 +144,7 @@
 ### `core_escape()`
 * Pressing escape opens or closes the menu.
 * Pauses or resumes intervals depending on state.
-* Calls optional repository-specific `repo_escape()` function.
+* Calls optional repository-specific [`repo_escape()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md#repo_escape) function.
 
 ---
 
@@ -353,7 +353,7 @@
 ---
 
 ### `core_repo_init(args)`
-* Called by repository-specific `repo_init()` function.
+* Called by repository-specific [`repo_init()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md#repo_init) function.
 * Sets up various repository-specific things needed for project function.
 
 ---

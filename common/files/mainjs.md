@@ -1,7 +1,14 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/webgl.js
 ---------------------------------------------------------------------------------------------------------
 
+* [`repo_escape()`](#repo_escape)
 * [`repo_init()`](#repo_init)
+
+---
+
+### `repo_escape()`
+* Optional function to run additional code when [`core_escape()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md#core_escape) is called.
+
 
 ---
 
