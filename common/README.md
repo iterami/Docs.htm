@@ -14,7 +14,7 @@
 
 ---
 
-`iterami/common` files:
+### Files
 * `css`:
   * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
   * `core.css`
@@ -33,7 +33,7 @@
 
 ---
 
-Recommended `iterami/common` project file structure:
+### Recommended Project File Structure
 * `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
   * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
@@ -44,6 +44,7 @@ Recommended `iterami/common` project file structure:
 
 ---
 
+### Using and Updating
 If your project is being hosted on GitHub Pages, you should use a fork of `iterami/common`:
 * Instead of messy merging and pushing when `iterami/common` is updated, you can delete your fork and then refork `iterami/common`.
 * You may need to force the GitHub Pages of your fork to update after forking, which can be done via the [iterami/Scripts/git/force-fork-gh-pages.sh script](https://github.com/iterami/Scripts/blob/master/git/force-fork-gh-pages.sh).
