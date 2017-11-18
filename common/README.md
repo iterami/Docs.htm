@@ -1,7 +1,9 @@
 [iterami/common](https://github.com/iterami/common) Documentation
 -----------------------------------------------------------------
 
-`iterami/common` is a standalone library containing various JavaScript files. Once imported, your projects will have access to functions and variables designed to handle many aspects of front-end project functionality in one standardized way, while also providing additional functionality over vanilla JavaScript.
+`iterami/common` is a standalone library containing various JavaScript files. Once imported, your projects will have access to functions and variables designed to handle many aspects of front-end project functionality in one standardized way, while also providing additional functionality over vanilla JavaScript. Optional basic CSS files are also provided for each project type.
+
+---
 
 When using `iterami/common`:
 1. [Make sure you understand the Creative Commons Zero v1.0 Universal License used by `iterami/common`.](https://github.com/iterami/common/blob/gh-pages/LICENSE.md)
