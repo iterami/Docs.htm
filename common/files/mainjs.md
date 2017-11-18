@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/webgl.js
----------------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/main.js
+-----------------------------------------------------------------------------------------------------
 
 * [`repo_escape()`](#repo_escape)
 * [`repo_init()`](#repo_init)
