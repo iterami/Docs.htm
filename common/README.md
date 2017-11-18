@@ -6,12 +6,12 @@
 ---
 
 * [Creative Commons Zero v1.0 Universal License used by `iterami/common`](https://github.com/iterami/common/blob/gh-pages/LICENSE.md)
-* Flowchart of iterami/common Project Types:
+* Flowchart of `iterami/common` Project Types:
   * [Canvas](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-canvas.md)
   * [DOM](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-dom.md)
   * [WebGL](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-webgl.md)
-* [Information about iterami/common File Usage by iterami Repositories](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md)
-* [Using and Updating iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
+* [Information about `iterami/common` File Usage by iterami Repositories](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md)
+* [Using and Updating `iterami/common`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/fork.md)
 
 ---
 
