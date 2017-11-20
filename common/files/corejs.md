@@ -64,10 +64,10 @@
 * [`core_requestpointerlock(args)`](#core_requestpointerlockargs)
 * [`core_storage_add(args)`](#core_storage_addargs)
 * [`core_storage_element_property(args)`](#core_storage_element_propertyargs)
-* [`core_storage_reset(args)`](#core_storage_resetargs)
-* [`core_storage_save(args)`](#core_storage_saveargs)
+* [`core_storage_reset()`](#core_storage_reset)
+* [`core_storage_save()`](#core_storage_save)
 * [`core_storage_type_convert(args)`](#core_storage_type_convertargs)
-* [`core_storage_update(args)`](#core_storage_updateargs)
+* [`core_storage_update()`](#core_storage_update)
 * [`core_tab_create(args)`](#core_tab_createargs)
 * [`core_tab_switch(args)`](#core_tab_switchargs)
 * [`core_type(args)`](#core_typeargs)
@@ -81,63 +81,134 @@
 ### `core_args(args)`
 * Utility function for handling usage and default values of the one arguments object.
 
+Arg      | Required? | Notes
+---------|-----------|------
+args     | YES       |
+defaults | YES       |
+
 ---
 
 ### `core_audio_create(args)`
+
+Arg    | Required? | Notes
+-------|-----------|------
+audios | YES       |
 
 ---
 
 ### `core_audio_node_create(args)`
 
+Arg        | Required? | Notes
+-----------|-----------|------
+id         | NO        |
+properties | NO        |
+
 ---
 
 ### `core_audio_onended(args)`
+
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
 
 ---
 
 ### `core_audio_source_create(args)`
 
+Arg               | Required? | Notes
+------------------|-----------|------
+id                | YES       |
+volume-multiplier | NO        |
+
 ---
 
 ### `core_audio_start(args)`
+
+Arg               | Required? | Notes
+------------------|-----------|------
+id                | YES       |
+volume-multiplier | NO        |
 
 ---
 
 ### `core_audio_stop(args)`
 
+Arg  | Required? | Notes
+-----|-----------|------
+id   | YES       |
+when | NO        |
+
 ---
 
 ### `core_audio_stop_all(args)`
+
+Arg  | Required? | Notes
+-----|-----------|------
+when | NO        |
 
 ---
 
 ### `core_call(args)`
 * Calls a function if it exists. Used to prevent errors caused by undefined functions.
 
+Arg  | Required? | Notes
+-----|-----------|------
+args | NO        |
+todo | YES       |
+
 ---
 
 ### `core_entity_create(args)`
 * Creates an entity and provides it with additional properties based on entity defaults and functions.
+
+Arg        | Required? | Notes
+-----------|-----------|------
+id         | NO        |
+properties | NO        |
+types      | NO        |
 
 ---
 
 ### `core_entity_handle_default(args)`
 * Makes sure entity property defaults and groups are handled properly.
 
+Arg  | Required? | Notes
+-----|-----------|------
+id   | YES       |
+type | YES       |
+
 ---
 
 ### `core_entity_remove(args)`
 * Deletes an entity and removes it from groups.
+
+Arg          | Required? | Notes
+-------------|-----------|------
+delete-empty | NO        |
+entities     | YES       |
 
 ---
 
 ### `core_entity_remove_all(args)`
 * Deletes all entities within a specific group.
 
+Arg          | Required? | Notes
+-------------|-----------|------
+delete-empty | NO        |
+group        | NO        |
+
 ---
 
 ### `core_entity_set(args)`
 * Creates a new entity type that can then be created.
+
+Arg        | Required? | Notes
+-----------|-----------|------
+default    | NO        |
+groups     | NO        |
+properties | NO        |
+todo       | NO        |
+type       | YES       |
 
 ---
 
@@ -150,6 +221,15 @@
 
 ### `core_events_bind(args)`
 * Updates bindings to various events, including optional clearing.
+
+Arg          | Required? | Notes
+-------------|-----------|------
+beforeunload | NO        |
+clearkeys    | NO        |
+clearmouse   | NO        |
+elements     | NO        |
+keybinds     | NO        |
+mousebinds   | NO        |
 
 ---
 
@@ -170,25 +250,53 @@
 ### `core_group_add(args)`
 * Adds entities to a group and creates the group if it does not exist.
 
+Arg      | Required? | Notes
+---------|-----------|------
+entities | YES       |
+group    | YES       |
+
 ---
 
 ### `core_group_modify(args)`
 * Runs code that affects every entity within a group.
+
+Arg     | Required? | Notes
+--------|-----------|------
+pretodo | NO        |
+group   | YES       |
+todo    | YES       |
 
 ---
 
 ### `core_group_move(args)`
 * Removes an entity from a group and adds it to a different group.
 
+Arg      | Required? | Notes
+---------|-----------|------
+entities | YES       |
+from     | YES       |
+to       | YES       |
+
 ---
 
 ### `core_group_remove(args)`
 * Remove entities from one specific group.
 
+Arg          | Required? | Notes
+-------------|-----------|------
+delete-empty | NO        |
+entities     | YES       |
+group        | YES       |
+
 ---
 
 ### `core_group_remove_all(args)`
 * Removes entities fromm all groups.
+
+Arg          | Required? | Notes
+-------------|-----------|------
+delete-empty | NO        |
+entities     | YES       |
 
 ---
 
@@ -202,9 +310,23 @@
 
 ### `core_handle_defaults(args)`
 
+Arg     | Required? | Notes
+--------|-----------|------
+default | NO        |
+var     | NO        |
+
 ---
 
 ### `core_handle_event(args)`
+
+Arg    | Required? | Notes
+-------|-----------|------
+block  | NO        |
+event  | YES       |
+key    | YES       |
+object | YES       |
+state  | NO        |
+todo   | NO        |
 
 ---
 
@@ -247,20 +369,41 @@
 ### `core_hex_to_rgb(args)`
 * Converts a hexadecimal string of length six to red, green, and blue.
 
+Arg | Required? | Notes
+----|-----------|------
+hex | YES       |
+
 ---
 
 ### `core_html(args)`
 * Returns an HTML element and optionally adds it to a parent.
+
+Arg        | Required? | Notes
+-----------|-----------|------
+parent     | NO        |
+properties | NO        |
+type       | NO        |
 
 ---
 
 ### `core_html_modify(args)`
 * Assigns properties to an HTML element if it exists.
 
+Arg        | Required? | Notes
+-----------|-----------|------
+id         | YES       |
+properties | NO        |
+
 ---
 
 ### `core_image(args)`
 * Creates and loads an image.
+
+Arg  | Required? | Notes
+-----|-----------|------
+id   | YES       |
+src  | YES       |
+todo | NO        |
 
 ---
 
@@ -272,15 +415,33 @@
 ### `core_interval_animationFrame(args)`
 * Continues running animation frames.
 
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
+
 ---
 
 ### `core_interval_modify(args)`
 * Creates or modifies an animation frame, interval, or timeout.
 
+Arg            | Required? | Notes
+---------------|-----------|------
+todo           | YES       |
+animationFrame | NO        |
+clear          | NO        |
+id             | NO        |
+interval       | NO        |
+paused         | NO        |
+set            | NO        |
+
 ---
 
 ### `core_interval_pause(args)`
 * Pauses an animation frame, interval, or timeout.
+
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
 
 ---
 
@@ -292,6 +453,10 @@
 ### `core_interval_remove(args)`
 * Pauses and removes an animation frame, interval, or timeout.
 
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
+
 ---
 
 ### `core_interval_remove_all()`
@@ -302,6 +467,10 @@
 ### `core_interval_resume(args)`
 * Resumes an animation frame, interval, or timeout.
 
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
+
 ---
 
 ### `core_interval_resume_all()`
@@ -311,14 +480,27 @@
 
 ### `core_keys_updatebinds(args)`
 
+Arg      | Required? | Notes
+---------|-----------|------
+clear    | NO        |
+keybinds | YES       |
+
 ---
 
 ### `core_mouse_updatebinds(args)`
 
+Arg        | Required? | Notes
+-----------|-----------|------
+clear      | NO        |
+mousebinds | YES       |
 ---
 
 ### `core_random_boolean(args)`
 * Generates a random boolean with optional probability manipulation.
+
+Arg     | Required? | Notes
+--------|-----------|------
+chance  | NO        |
 
 ---
 
@@ -330,15 +512,28 @@
 ### `core_random_integer(args)`
 * Generates a random integer in a range.
 
+Arg  | Required? | Notes
+-----|-----------|------
+max  | NO        |
+todo | NO        |
+
 ---
 
 ### `core_random_key(args)`
 * Returns a random object key.
 
+Arg    | Required? | Notes
+-------|-----------|------
+object | YES       |
+
 ---
 
 ### `core_random_number(args)`
 * Generates a random number in a range.
+
+Arg        | Required? | Notes
+-----------|-----------|------
+multiplier | NO        |
 
 ---
 
@@ -350,44 +545,85 @@
 ### `core_random_string(args)`
 * Generates a random string from a string of available characters.
 
+Arg        | Required? | Notes
+-----------|-----------|------
+characters | NO        |
+length     | NO        |
+
 ---
 
 ### `core_repo_init(args)`
 * Called by repository-specific [`repo_init()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md#repo_init) function.
 * Sets up various repository-specific things needed for project function.
 
+Arg          | Required? | Notes
+-------------|-----------|------
+title        | YES       |
+audios       | NO        |
+beforeunload | NO        |
+entities     | NO        |
+github       | NO        |
+globals      | NO        |
+images       | NO        |
+info         | NO        |
+keybinds     | NO        |
+menu         | NO        |
+mousebinds   | NO        |
+storage      | NO        |
+storage-menu | NO        |
+ui           | NO        |
+
 ---
 
 ### `core_requestpointerlock(args)`
+
+Arg | Required? | Notes
+----|-----------|------
+id  | NO        |
 
 ---
 
 ### `core_storage_add(args)`
 * Adds information and defaults of a variable that should be stored in `window.localStorage`.
 
+Arg     | Required? | Notes
+--------|-----------|------
+prefix  | NO        |
+storage | YES       |
+
 ---
 
 ### `core_storage_element_property(args)`
 * Figures out what type of HTML element a storage value uses and how to modify it.
 
+Arg     | Required? | Notes
+--------|-----------|------
+element | YES       |
+key     | YES       |
+
 ---
 
-### `core_storage_reset(args)`
-* Resets certain types of storage values to their original defaults.
+### `core_storage_reset()`
+* Resets storage values to their original defaults.
 
 ---
 
-### `core_storage_save(args)`
-* Saves current settings input values as new storage values.
+### `core_storage_save()`
+* Saves current storage input values as new storage values.
 
 ---
 
 ### `core_storage_type_convert(args)`
 * Converts variable types depending on storage value type.
 
+Arg   | Required? | Notes
+------|-----------|------
+key   | YES       |
+value | YES       |
+
 ---
 
-### `core_storage_update(args)`
+### `core_storage_update()`
 * Updates settings inputs with current storage values.
 
 ---
@@ -395,15 +631,32 @@
 ### `core_tab_create(args)`
 * Creates an HTML tab div and button for selecting the tab.
 
+Arg     | Required? | Notes
+--------|-----------|------
+content | NO        |
+default | NO        |
+group   | YES       |
+id      | YES       |
+label   | NO        |
+
 ---
 
 ### `core_tab_switch(args)`
 * Switches to a created tab.
 
+Arg | Required? | Notes
+----|-----------|------
+id  | YES       |
+
 ---
 
 ### `core_type(args)`
 * Returns the type of a variable.
+
+Arg  | Required? | Notes
+-----|-----------|------
+type | NO        |
+var  | YES       |
 
 ---
 
@@ -420,7 +673,16 @@
 ### `core_ui_update(args)`
 * Updates HTML element values depending on type, but only if the value is new.
 
+Arg | Required? | Notes
+----|-----------|------
+ids | YES       |
+
 ---
 
 ### `core_vendor_prefix(args)`
 * Handles vendor prefixing for experimental features.
+
+Arg      | Required? | Notes
+---------|-----------|------
+property | YES       |
+var      | YES       |

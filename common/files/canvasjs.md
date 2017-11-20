@@ -43,15 +43,36 @@ offset-y | NO        | Number of pixels of y-axis offset.
 ### `canvas_draw_path(args)`
 * Draws interesting things with various properties, such as polygons and spheres.
 
+Arg        | Required? | Notes
+-----------|-----------|------
+properties | NO        |
+style      | NO        |
+type       | NO        |
+vertices   | YES       |
+x          | NO        |
+y          | NO        |
+
 ---
 
 ### `canvas_gradient(args)`
 * Returns a gradient that can be used as a `fillStyle`.
 
+Arg    | Required? | Notes
+-------|-----------|------
+height | NO        |
+stops  | YES       |
+width  | NO        |
+x      | NO        |
+y      | NO        |
+
 ---
 
 ### `canvas_init(args)`
 * Sets up various aspects of projects that use full screen canvases.
+
+Arg         | Required? | Notes
+------------|-----------|------
+contextmenu | NO        |
 
 ---
 
@@ -75,12 +96,27 @@ offset-y | NO        | Number of pixels of y-axis offset.
 ### `canvas_setmode(args)`
 * Mode reset and mode content loading function.
 
+Arg     | Required? | Notes
+--------|-----------|------
+mode    | NO        |
+newgame | NO        |
+
 ---
 
 ### `canvas_setproperties(args)`
 * Sets and stores canvas properties that can be found in `canvas_init()`.
 
+Arg        | Required? | Notes
+-----------|-----------|------
+properties | YES       |
+
 ---
 
 ### `canvas_uri(args)`
 * Returns the buffer converted to a data URI.
+
+Arg     | Required? | Notes
+--------|-----------|------
+id      | NO        |
+quality | NO        |
+type    | NO        |

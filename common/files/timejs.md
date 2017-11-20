@@ -13,15 +13,29 @@
 ### `time_date_to_timestamp(args)`
 * Converts a date object into a timestamp.
 
+Arg  | Required? | Notes
+-----|-----------|------
+date | NO        |
+
 ---
 
 ### `time_diff(args)`
 * Calculates the difference between two times.
 
+Arg    | Required? | Notes
+-------|-----------|------
+now    | NO        |
+target | YES       |
+
 ---
 
 ### `time_format_date(args)`
 * Returns a date object formatted as a string.
+
+Arg  | Required? | Notes
+-----|-----------|------
+date | NO        |
+diff | NO        |
 
 ---
 
@@ -33,7 +47,15 @@
 ### `time_timestamp_to_date(args)`
 * Converts a timestamp to a date object.
 
+Arg       | Required? | Notes
+----------|-----------|------
+timestamp | NO        |
+
 ---
 
 ### `time_two_digits(args)`
 * Handles display date information in a minimum of two digits.
+
+Arg    | Required? | Notes
+-------|-----------|------
+number | YES       |

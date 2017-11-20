@@ -9,7 +9,18 @@
 ### `string_format_html(args)`
 * Replaces characters in a string that may cause HTML errors.
 
+Arg    | Required? | Notes
+-------|-----------|------
+flags  | NO        |
+string | YES       |
+
 ---
 
 ### `string_replace_multiple(args)`
 * Improvement of general string `replace()` that allows multiple replacements.
+
+Arg      | Required? | Notes
+---------|-----------|------
+flags    | NO        |
+patterns | YES       |
+string   | YES       |

@@ -7,3 +7,10 @@
 
 ### `network_ajax(args)`
 * Initiates and handles AJAX requests.
+
+Arg  | Required? | Notes
+-----|-----------|------
+data | NO        |
+todo | YES       |
+type | NO        |
+url  | YES       |
