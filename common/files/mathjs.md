@@ -14,6 +14,7 @@
 * [`math_matrix_round(args)`](#math_matrix_roundargs)
 * [`math_matrix_translate(args)`](#math_matrix_translateargs)
 * [`math_move_2d(args)`](#math_move_2dargs)
+* [`math_move_2d_diagonal(args)`](#math_move_2d_diagonalargs)
 * [`math_move_3d(args)`](#math_move_3dargs)
 * [`math_point_angle(args)`](#math_point_angleargs)
 * [`math_radians_to_degrees(args)`](#math_radians_to_degreesargs)
@@ -157,6 +158,17 @@ x0         | YES       |
 x1         | YES       |
 y0         | YES       |
 y1         | YES       |
+
+---
+
+### `math_move_2d_diagonal(args)`
+* Handles reduction of movement speed when moving diagonally.
+
+Arg   | Required? | Notes
+------|-----------|------
+dx    | YES       |
+dy    | YES       |
+speed | YES       |
 
 ---
 
