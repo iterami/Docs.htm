@@ -15,7 +15,6 @@
   * [core.js](#corejs)
   * [data.js](#datajs)
   * [math.js](#mathjs)
-  * [network.js](#networkjs)
   * [time.js](#timejs)
   * [webgl.js](#webgljs)
   * `genre`:
@@ -391,11 +390,6 @@
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
-
----
-
-### network.js
-* [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
 
 ---
 

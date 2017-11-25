@@ -1,6 +1,7 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/core.js
 --------------------------------------------------------------------------------------------------------
 
+* [`core_ajax(args)`](#core_ajaxargs)
 * [`core_args(args)`](#core_argsargs)
 * [`core_audio_create(args)`](#core_audio_createargs)
 * [`core_audio_node_create(args)`](#core_audio_node_createargs)
@@ -82,6 +83,18 @@
 * [`core_uid_create()`](#core_uid_create)
 * [`core_ui_update(args)`](#core_ui_updateargs)
 * [`core_vendor_prefix(args)`](#core_vendor_prefixargs)
+
+---
+
+### `core_ajax(args)`
+* Initiates and handles AJAX requests.
+
+Arg  | Required? | Notes
+-----|-----------|------
+data | NO        |
+todo | YES       |
+type | NO        |
+url  | YES       |
 
 ---
 
