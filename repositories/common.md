@@ -69,6 +69,8 @@
 * [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
+* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
+* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 
 ---
 
@@ -161,6 +163,8 @@
 * [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
+* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
+* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 * [iterami/WindowInfo.htm](https://github.com/iterami/WindowInfo.htm)
 
 ---
@@ -255,6 +259,7 @@
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
+* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 
 ---
 
@@ -347,6 +352,8 @@
 * [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
+* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
+* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 
 ---
 
@@ -390,6 +397,8 @@
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
+* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
+* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 
 ---
 
@@ -416,6 +425,7 @@
 * [iterami/ThemePark-3D.htm](https://github.com/iterami/ThemePark-3D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
+* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 
 ---
 
