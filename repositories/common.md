@@ -16,7 +16,6 @@
   * [data.js](#datajs)
   * [math.js](#mathjs)
   * [network.js](#networkjs)
-  * [sort.js](#sortjs)
   * [time.js](#timejs)
   * [webgl.js](#webgljs)
   * `genre`:
@@ -397,12 +396,6 @@
 
 ### network.js
 * [iterami/GitHub-API.htm](https://github.com/iterami/GitHub-API.htm)
-
----
-
-### sort.js
-* [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
-* [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
 
 ---
 

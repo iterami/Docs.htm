@@ -26,7 +26,6 @@
   * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datajs.md): shortcuts for complex 2D and 3D entities.
   * [`math.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathjs.md): math and matrix functions.
   * [`network.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/networkjs.md): AJAX.
-  * [`sort.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/sortjs.md): functions for sorting arrays.
   * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md): functions for handling time and date.
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
 

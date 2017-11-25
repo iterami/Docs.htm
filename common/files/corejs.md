@@ -64,6 +64,11 @@
 * [`core_replace_multiple`](#core_replace_multipleargs)
 * [`core_repo_init(args)`](#core_repo_initargs)
 * [`core_requestpointerlock(args)`](#core_requestpointerlockargs)
+* [`core_sort_custom(args)`](#core_sort_customargs)
+* [`core_sort_numbers(args)`](#core_sort_numbersargs)
+* [`core_sort_random(args)`](#core_sort_randomargs)
+* [`core_sort_property(args)`](#core_sort_propertyargs)
+* [`core_sort_strings(args)`](#core_sort_stringsargs)
 * [`core_storage_add(args)`](#core_storage_addargs)
 * [`core_storage_element_property(args)`](#core_storage_element_propertyargs)
 * [`core_storage_reset()`](#core_storage_reset)
@@ -601,6 +606,58 @@ ui           | NO        |
 Arg | Required? | Notes
 ----|-----------|------
 id  | NO        |
+
+---
+
+### `core_sort_custom(args)`
+* Sorts an array according to custom sorting rules.
+* Optionally reverses the array after sorting.
+
+Arg     | Required? | Notes
+--------|-----------|------
+array   | YES       |
+reverse | NO        |
+todo    | YES       |
+
+---
+
+### `core_sort_numbers(args)`
+* Sorts numbers from smallest to biggest.
+
+Arg     | Required? | Notes
+--------|-----------|------
+array   | YES       |
+reverse | NO        |
+
+---
+
+### `core_sort_random(args)`
+* Sorts an array randomly. Cannot be reversed.
+
+Arg     | Required? | Notes
+--------|-----------|------
+array   | YES       |
+
+---
+
+### `core_sort_property(args)`
+* Sort an array based on some property.
+
+Arg      | Required? | Notes
+---------|-----------|------
+array    | YES       |
+reverse  | NO        |
+property | YES       |
+
+---
+
+### `core_sort_strings(args)`
+* Sort strings based on `localeCompare()`.
+
+Arg     | Required? | Notes
+--------|-----------|------
+array   | YES       |
+reverse | NO        |
 
 ---
 
