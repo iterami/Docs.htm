@@ -15,7 +15,6 @@
   * [core.js](#corejs)
   * [data.js](#datajs)
   * [math.js](#mathjs)
-  * [time.js](#timejs)
   * [webgl.js](#webgljs)
   * `genre`:
     * [platform.js](#genreplatformjs)
@@ -399,18 +398,6 @@
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
 * [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 * [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
-
----
-
-### time.js
-* [iterami/Alarm.htm](https://github.com/iterami/Alarm.htm)
-* [iterami/Birthday.htm](https://github.com/iterami/Birthday.htm)
-* [iterami/Clock.htm](https://github.com/iterami/Clock.htm)
-* [iterami/Guides.htm](https://github.com/iterami/Guides.htm)
-* [iterami/ReactionTest.htm](https://github.com/iterami/ReactionTest.htm)
-* [iterami/Time.htm](https://github.com/iterami/Time.htm)
-* [iterami/TimeColors.htm](https://github.com/iterami/TimeColors.htm)
-* [iterami/Timer.htm](https://github.com/iterami/Timer.htm)
 
 ---
 

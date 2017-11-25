@@ -8,13 +8,14 @@
 * [`core_audio_onended(args)`](#core_audio_onendedargs)
 * [`core_audio_source_create(args)`](#core_audio_source_createargs)
 * [`core_audio_start(args)`](#core_audio_startargs)
-* [`core_audio_stop(args)`](#core_audio_stopargs)
 * [`core_audio_stop_all(args)`](#core_audio_stop_allargs)
+* [`core_audio_stop(args)`](#core_audio_stopargs)
 * [`core_call(args)`](#core_callargs)
+* [`core_date_to_timestamp(args)`](#core_date_to_timestampargs)
 * [`core_entity_create(args)`](#core_entity_createargs)
 * [`core_entity_handle_default(args)`](#core_entity_handle_defaultargs)
-* [`core_entity_remove(args)`](#core_entity_removeargs)
 * [`core_entity_remove_all(args)`](#core_entity_remove_allargs)
+* [`core_entity_remove(args)`](#core_entity_removeargs)
 * [`core_entity_set(args)`](#core_entity_setargs)
 * [`core_escape()`](#core_escape)
 * [`core_events_bind(args)`](#core_events_bindargs)
@@ -24,8 +25,8 @@
 * [`core_group_add(args)`](#core_group_addargs)
 * [`core_group_modify(args)`](#core_group_modifyargs)
 * [`core_group_move(args)`](#core_group_moveargs)
-* [`core_group_remove(args)`](#core_group_removeargs)
 * [`core_group_remove_all(args)`](#core_group_remove_allargs)
+* [`core_group_remove(args)`](#core_group_removeargs)
 * [`core_handle_beforeunload(event)`](#core_handle_beforeunloadevent)
 * [`core_handle_contextmenu(event)`](#core_handle_contextmenuevent)
 * [`core_handle_defaults(args)`](#core_handle_defaultsargs)
@@ -40,19 +41,19 @@
 * [`core_handle_mousewheel(event)`](#core_handle_mousewheelevent)
 * [`core_handle_pointerlockchange(event)`](#core_handle_pointerlockchangeevent)
 * [`core_hex_to_rgb(args)`](#core_hex_to_rgbargs)
-* [`core_html(args)`](#core_htmlargs)
 * [`core_html_format(args)`](#core_html_formatargs)
 * [`core_html_modify(args)`](#core_html_modifyargs)
+* [`core_html(args)`](#core_htmlargs)
 * [`core_image(args)`](#core_imageargs)
 * [`core_init()`](#core_init)
 * [`core_interval_animationFrame(args)`](#core_interval_animationframeargs)
 * [`core_interval_modify(args)`](#core_interval_modifyargs)
-* [`core_interval_pause(args)`](#core_interval_pauseargs)
 * [`core_interval_pause_all()`](#core_interval_pause_all)
-* [`core_interval_remove(args)`](#core_interval_removeargs)
+* [`core_interval_pause(args)`](#core_interval_pauseargs)
 * [`core_interval_remove_all()`](#core_interval_remove_all)
-* [`core_interval_resume(args)`](#core_interval_resumeargs)
+* [`core_interval_remove(args)`](#core_interval_removeargs)
 * [`core_interval_resume_all()`](#core_interval_resume_all)
+* [`core_interval_resume(args)`](#core_interval_resumeargs)
 * [`core_keys_updatebinds(args)`](#core_keys_updatebindsargs)
 * [`core_mouse_updatebinds(args)`](#core_mouse_updatebindsargs)
 * [`core_random_boolean(args)`](#core_random_booleanargs)
@@ -67,8 +68,8 @@
 * [`core_requestpointerlock(args)`](#core_requestpointerlockargs)
 * [`core_sort_custom(args)`](#core_sort_customargs)
 * [`core_sort_numbers(args)`](#core_sort_numbersargs)
-* [`core_sort_random(args)`](#core_sort_randomargs)
 * [`core_sort_property(args)`](#core_sort_propertyargs)
+* [`core_sort_random(args)`](#core_sort_randomargs)
 * [`core_sort_strings(args)`](#core_sort_stringsargs)
 * [`core_storage_add(args)`](#core_storage_addargs)
 * [`core_storage_element_property(args)`](#core_storage_element_propertyargs)
@@ -78,10 +79,15 @@
 * [`core_storage_update()`](#core_storage_update)
 * [`core_tab_create(args)`](#core_tab_createargs)
 * [`core_tab_switch(args)`](#core_tab_switchargs)
+* [`core_time_diff(args)`](#core_time_diffargs)
+* [`core_time_format(args)`](#core_time_formatargs)
+* [`core_time_from_inputs()`](#core_time_from_inputs)
+* [`core_time_timestamp_to_date(args)`](#core_timestamp_to_dateargs)
+* [`core_time_two_digits(args)`](#core_two_digitsargs)
 * [`core_type(args)`](#core_typeargs)
-* [`core_uid()`](#core_uid)
-* [`core_uid_create()`](#core_uid_create)
 * [`core_ui_update(args)`](#core_ui_updateargs)
+* [`core_uid_create()`](#core_uid_create)
+* [`core_uid()`](#core_uid)
 * [`core_vendor_prefix(args)`](#core_vendor_prefixargs)
 
 ---
@@ -175,6 +181,15 @@ Arg  | Required? | Notes
 -----|-----------|------
 args | NO        |
 todo | YES       |
+
+---
+
+### `core_date_to_timestamp(args)`
+* Converts a date object into a timestamp.
+
+Arg  | Required? | Notes
+-----|-----------|------
+date | NO        |
 
 ---
 
@@ -738,6 +753,39 @@ label   | NO        |
 Arg | Required? | Notes
 ----|-----------|------
 id  | YES       |
+
+---
+
+### `core_time_format(args)`
+* Returns a date object formatted as a string.
+
+Arg  | Required? | Notes
+-----|-----------|------
+date | NO        |
+diff | NO        |
+
+---
+
+### `core_time_from_inputs()`
+* Collects date information from specific HTML elements and returns a timestamp.
+
+---
+
+### `core_timestamp_to_date(args)`
+* Converts a timestamp to a date object.
+
+Arg       | Required? | Notes
+----------|-----------|------
+timestamp | NO        |
+
+---
+
+### `core_two_digits(args)`
+* Adds a zero before a number of it only has one digit.
+
+Arg    | Required? | Notes
+-------|-----------|------
+number | YES       |
 
 ---
 
