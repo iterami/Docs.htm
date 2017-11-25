@@ -40,6 +40,7 @@
 * [`core_handle_pointerlockchange(event)`](#core_handle_pointerlockchangeevent)
 * [`core_hex_to_rgb(args)`](#core_hex_to_rgbargs)
 * [`core_html(args)`](#core_htmlargs)
+* [`core_html_format(args)`](#core_html_formatargs)
 * [`core_html_modify(args)`](#core_html_modifyargs)
 * [`core_image(args)`](#core_imageargs)
 * [`core_init()`](#core_init)
@@ -60,6 +61,7 @@
 * [`core_random_number(args)`](#core_random_numberargs)
 * [`core_random_rgb()`](#core_random_rgb)
 * [`core_random_string(args)`](#core_random_stringargs)
+* [`core_replace_multiple`](#core_replace_multipleargs)
 * [`core_repo_init(args)`](#core_repo_initargs)
 * [`core_requestpointerlock(args)`](#core_requestpointerlockargs)
 * [`core_storage_add(args)`](#core_storage_addargs)
@@ -386,6 +388,15 @@ type       | NO        |
 
 ---
 
+### `core_html_format(args)`
+* Replaces characters in a string that may cause HTML errors.
+
+Arg    | Required? | Notes
+-------|-----------|------
+string | YES       |
+
+---
+
 ### `core_html_modify(args)`
 * Assigns properties to an HTML element if it exists.
 
@@ -549,6 +560,16 @@ Arg        | Required? | Notes
 -----------|-----------|------
 characters | NO        |
 length     | NO        |
+
+---
+
+### `core_replace_multiple(args)`
+* Improvement of general string `replace()` that allows multiple replacements.
+
+Arg      | Required? | Notes
+---------|-----------|------
+patterns | YES       |
+string   | YES       |
 
 ---
 

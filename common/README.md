@@ -27,7 +27,6 @@
   * [`math.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathjs.md): math and matrix functions.
   * [`network.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/networkjs.md): AJAX.
   * [`sort.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/sortjs.md): functions for sorting arrays.
-  * [`string.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/stringjs.md): functions for string formatting and replace.
   * [`time.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/timejs.md): functions for handling time and date.
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
 

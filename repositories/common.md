@@ -17,7 +17,6 @@
   * [math.js](#mathjs)
   * [network.js](#networkjs)
   * [sort.js](#sortjs)
-  * [string.js](#stringjs)
   * [time.js](#timejs)
   * [webgl.js](#webgljs)
   * `genre`:
@@ -404,11 +403,6 @@
 ### sort.js
 * [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
 * [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
-
----
-
-### string.js
-* [iterami/PasswordGenerator.htm](https://github.com/iterami/PasswordGenerator.htm)
 
 ---
 
