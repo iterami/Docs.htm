@@ -14,7 +14,6 @@
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
   * [data.js](#datajs)
-  * [math.js](#mathjs)
   * [webgl.js](#webgljs)
   * `genre`:
     * [platform.js](#genreplatformjs)
@@ -365,39 +364,6 @@
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
 * [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
-
----
-
-### math.js
-* [iterami/9YG0E6r.htm](https://github.com/iterami/9YG0E6r.htm)
-* [iterami/Aquarium-2D.htm](https://github.com/iterami/Aquarium-2D.htm)
-* [iterami/CityMaze.htm](https://github.com/iterami/CityMaze.htm)
-* [iterami/DesertStreetMarket.htm](https://github.com/iterami/DesertStreetMarket.htm)
-* [iterami/DotEyeIllusion.htm](https://github.com/iterami/DotEyeIllusion.htm)
-* [iterami/Hallway-2D3D.htm](https://github.com/iterami/Hallway-2D3D.htm)
-* [iterami/Hexagons-2D.htm](https://github.com/iterami/Hexagons-2D.htm)
-* [iterami/LayeredSnake-2D3D.htm](https://github.com/iterami/LayeredSnake-2D3D.htm)
-* [iterami/ParticleRun-2D.htm](https://github.com/iterami/ParticleRun-2D.htm)
-* [iterami/Platform-3D.htm](https://github.com/iterami/ParticleRun-3D.htm)
-* [iterami/QjnyYap.htm](https://github.com/iterami/QjnyYap.htm)
-* [iterami/Race-2D.htm](https://github.com/iterami/Race-2D.htm)
-* [iterami/Race-3D.htm](https://github.com/iterami/Race-3D.htm)
-* [iterami/Rain-3D.htm](https://github.com/iterami/Rain-3D.htm)
-* [iterami/RPG-Above.htm](https://github.com/iterami/RPG-Above.htm)
-* [iterami/RPG-Side.htm](https://github.com/iterami/RPG-Side.htm)
-* [iterami/RTS-2D.htm](https://github.com/iterami/RTS-2D.htm)
-* [iterami/Shooter-2D.htm](https://github.com/iterami/Shooter-2D.htm)
-* [iterami/SnowyMountains.htm](https://github.com/iterami/SnowyMountains.htm)
-* [iterami/SolarSystem-2D.htm](https://github.com/iterami/SolarSystem-2D.htm)
-* [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
-* [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
-* [iterami/ThemePark-3D.htm](https://github.com/iterami/ThemePark-3D.htm)
-* [iterami/Trains-3D.htm](https://github.com/iterami/Trains-3D.htm)
-* [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
-* [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
-* [iterami/Vidce.htm](https://github.com/iterami/Vidce.htm)
-* [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
-* [iterami/WASD-3D.htm](https://github.com/iterami/WASD-3D.htm)
 
 ---
 

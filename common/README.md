@@ -24,7 +24,6 @@
   * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvasjs.md): used for 2D canvas projects.
   * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md): used by every project.
   * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datajs.md): shortcuts for complex 2D and 3D entities.
-  * [`math.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathjs.md): math and matrix functions.
   * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
 
 ---
