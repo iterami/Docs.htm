@@ -5,6 +5,6 @@
 2. Compile `c/texteditor.c`:
 
 ```
-gcc `pkg-config --cflags gtk+-3.0` -o texteditor texteditor.c `pkg-config --libs gtk+-3.0`
+gcc -o texteditor texteditor.c `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0`
 ```
 3. Run TextEditor.c by either `./texteditor` or running `c/texteditor` through your file browser.
