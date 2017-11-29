@@ -6,6 +6,7 @@
 Shortcut         | Notes
 -----------------|--------------------
 Ctrl + A         | Select All
+Ctrl + Backspace | Delete Word
 Ctrl + C         | Copy
 Ctrl + D         | Delete Line
 Ctrl + F         | Find...
