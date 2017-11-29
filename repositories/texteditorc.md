@@ -3,12 +3,18 @@
 
 ### Shortcuts
 
-Shortcut | Notes
----------|--------------
-Ctrl + A | Select All
-Ctrl + C | Copy Selected
-Ctrl + V | Paste
-Ctrl + X | Cut Selected
+Shortcut         | Notes
+-----------------|---------------------
+Ctrl + A         | Select All
+Ctrl + C         | Copy Selected
+Ctrl + N         | Create New Tab
+Ctrl + O         | Open File
+Ctrl + Q         | Quit
+Ctrl + S         | Save Current File
+Ctrl + Shift + S | Save Current File As
+Ctrl + V         | Paste
+Ctrl + W         | Close Current Tab
+Ctrl + X         | Cut Selected
 
 ---
 
