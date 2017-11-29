@@ -4,17 +4,24 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|---------------------
+-----------------|--------------------
 Ctrl + A         | Select All
-Ctrl + C         | Copy Selected
-Ctrl + N         | Create New Tab
-Ctrl + O         | Open File
+Ctrl + C         | Copy
+Ctrl + D         | Delete Line
+Ctrl + F         | Find...
+Ctrl + G         | Find Next
+Ctrl + H         | Find and Replace...
+Ctrl + L         | Goto Line...
+Ctrl + O         | Open...
 Ctrl + Q         | Quit
-Ctrl + S         | Save Current File
-Ctrl + Shift + S | Save Current File As
+Ctrl + R         | Sort Lines
+Ctrl + S         | Save
+Ctrl + Shift + G | Find Previous
+Ctrl + Shift + S | Save As...
+Ctrl + T         | New Tab
 Ctrl + V         | Paste
-Ctrl + W         | Close Current Tab
-Ctrl + X         | Cut Selected
+Ctrl + W         | Close Tab
+Ctrl + X         | Cut
 
 ---
 
