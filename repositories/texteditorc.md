@@ -4,11 +4,12 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|--------------------
+-----------------|---------------------
 Ctrl + A         | Select All
-Ctrl + Backspace | Delete Word
+Ctrl + Backspace | Delete Previous Word
 Ctrl + C         | Copy
 Ctrl + D         | Delete Line
+Ctrl + Delete    | Delete Next Word
 Ctrl + F         | Find...
 Ctrl + G         | Find Next
 Ctrl + H         | Find and Replace...
