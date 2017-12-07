@@ -170,6 +170,7 @@ neper | Np
 
 Magnetism | Unit
 ----------|-----
+gamma     | γ
 gauss     | G
 tesla     | T
 
