@@ -19,7 +19,7 @@ Ctrl + R         | Sort Lines
 Ctrl + S         | Save
 Ctrl + Shift + G | Find Previous
 Ctrl + Shift + S | Save As...
-Ctrl + Shift +   | Redo
+Ctrl + Shift + Z | Redo
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
