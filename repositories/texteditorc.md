@@ -19,10 +19,12 @@ Ctrl + R         | Sort Lines
 Ctrl + S         | Save
 Ctrl + Shift + G | Find Previous
 Ctrl + Shift + S | Save As...
+Ctrl + Shift +   | Redo
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
 Ctrl + X         | Cut
+Ctrl + Z         | Undo
 
 ---
 
