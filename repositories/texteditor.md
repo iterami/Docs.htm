@@ -32,4 +32,4 @@ Ctrl + Z         | Undo
 
 1. Install GTK+ 3: `sudo apt-get install libgtk-3-dev`
 2. Navigate to the `TextEditor.c` directory and `make` it.
-3. Run the compiled `texteditor`.
+3. Run the compiled `texteditor` located at `~/.iterami/texteditor`.
