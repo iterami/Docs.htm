@@ -1,5 +1,5 @@
-[iterami/FileBrowser.c](https://github.com/iterami/FileBrowser.c) Documentation
--------------------------------------------------------------------------------
+[iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk) Documentation
+-----------------------------------------------------------------------------------
 
 ### Shortcuts
 
@@ -12,7 +12,7 @@ Ctrl + Q         | Quit
 ### Installation
 
 1. Install GTK+ 3: `sudo apt-get install libgtk-3-dev`
-2. Use your terminal to navigate to the `FileBrowser.c` directory.
+2. Use your terminal to navigate to the `FileBrowser.gtk` directory.
 3. `make`
 4. Run the compiled `filebrowser` located at `~/.iterami/filebrowser`.
 
@@ -20,8 +20,8 @@ Ctrl + Q         | Quit
 
 ### Updating
 
-1. Close `FileBrowser.c`.
-2. Use your terminal to navigate to the `FileBrowser.c` directory.
+1. Close `FileBrowser.gtk`.
+2. Use your terminal to navigate to the `FileBrowser.gtk` directory.
 3. `git pull`
 4. `make`
 5. Run the compiled `filebrowser` located at `~/.iterami/filebrowser`.
@@ -30,7 +30,7 @@ Ctrl + Q         | Quit
 
 ### Uninstallation
 
-1. Use your terminal to navigate to the `FileBrowser.c` directory.
+1. Use your terminal to navigate to the `FileBrowser.gtk` directory.
 2. `make clean`
 3. If you have no other iterami GTK repositories installed, you can delete the `~/.iterami/` directory.
 4. Delete the cloned `TextEditor.c` directory.

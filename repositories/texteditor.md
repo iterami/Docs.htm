@@ -1,5 +1,5 @@
-[iterami/TextEditor.c](https://github.com/iterami/TextEditor.c) Documentation
------------------------------------------------------------------------------
+[iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk) Documentation
+---------------------------------------------------------------------------------
 
 ### Shortcuts
 
@@ -31,7 +31,7 @@ Ctrl + Z         | Undo
 ### Installation
 
 1. Install GTK+ 3: `sudo apt-get install libgtk-3-dev`
-2. Use your terminal to navigate to the `TextEditor.c` directory.
+2. Use your terminal to navigate to the `TextEditor.gtk` directory.
 3. `make`
 4. Run the compiled `texteditor` located at `~/.iterami/texteditor`.
 
@@ -39,8 +39,8 @@ Ctrl + Z         | Undo
 
 ### Updating
 
-1. Close `TextEditor.c`.
-2. Use your terminal to navigate to the `TextEditor.c` directory.
+1. Close `TextEditor.gtk`.
+2. Use your terminal to navigate to the `TextEditor.gtk` directory.
 3. `git pull`
 4. `make`
 5. Run the compiled `texteditor` located at `~/.iterami/texteditor`.
@@ -49,8 +49,8 @@ Ctrl + Z         | Undo
 
 ### Uninstallation
 
-1. Use your terminal to navigate to the `TextEditor.c` directory.
+1. Use your terminal to navigate to the `TextEditor.gtk` directory.
 2. `make clean`
 3. If you have no other iterami GTK repositories installed, you can delete the `~/.iterami/` directory.
-4. Delete the cloned `TextEditor.c` directory.
+4. Delete the cloned `TextEditor.gtk` directory.
 5. If you aren't using `libgtk-3-dev` anymore, you can `sudo apt-get remove libgtk-3-dev`.
