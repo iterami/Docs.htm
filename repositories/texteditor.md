@@ -5,6 +5,7 @@
 
 Shortcut         | Notes
 -----------------|-----------------------
+Backspace        | Backspace
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word
 Ctrl + C         | Copy
@@ -30,6 +31,7 @@ Delete           | Delete
 End              | Go to Bottom
 Escape           | Close Find and Replace
 Home             | Go to Top
+Insert           | Toggle Insertion
 
 ---
 
