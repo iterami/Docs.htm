@@ -4,7 +4,7 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|---------------------
+-----------------|-----------------------
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word
 Ctrl + C         | Copy
@@ -12,8 +12,9 @@ Ctrl + D         | Delete Line
 Ctrl + Delete    | Delete Next Word
 Ctrl + F         | Find and Replace...
 Ctrl + G         | Find Next
-Ctrl + L         | Goto Line...
+Ctrl + L         | Go to Line...
 Ctrl + O         | Open...
+Ctrl + P         | Print...
 Ctrl + Q         | Quit
 Ctrl + R         | Sort Lines
 Ctrl + S         | Save
@@ -25,6 +26,10 @@ Ctrl + V         | Paste
 Ctrl + W         | Close Tab
 Ctrl + X         | Cut
 Ctrl + Z         | Undo
+Delete           | Delete
+End              | Go to Bottom
+Escape           | Close Find and Replace
+Home             | Go to Top
 
 ---
 
