@@ -11,7 +11,7 @@ Ctrl + Backspace | Delete Previous Word
 Ctrl + C         | Copy
 Ctrl + D         | Delete Line
 Ctrl + Delete    | Delete Next Word
-Ctrl + F         | Find and Replace...
+Ctrl + F         | Find/Replace...
 Ctrl + G         | Find Next
 Ctrl + L         | Go to Line...
 Ctrl + O         | Open...
@@ -29,7 +29,7 @@ Ctrl + X         | Cut
 Ctrl + Z         | Undo
 Delete           | Delete
 End              | Go to Bottom
-Escape           | Close Find and Replace
+Escape           | Hide Find/Replace
 Home             | Go to Top
 Insert           | Toggle Insertion
 
