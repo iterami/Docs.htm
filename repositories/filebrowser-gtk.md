@@ -33,5 +33,5 @@ Ctrl + Q         | Quit
 1. Use your terminal to navigate to the `FileBrowser.gtk` directory.
 2. `make clean`
 3. If you have no other iterami GTK repositories installed, you can delete the `~/.iterami/` directory.
-4. Delete the cloned `TextEditor.c` directory.
+4. Delete the cloned `FileBrowser.gtk` directory.
 5. If you aren't using `libgtk-3-dev` anymore, you can `sudo apt-get remove libgtk-3-dev`.
