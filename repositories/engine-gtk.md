@@ -11,21 +11,19 @@ Ctrl + Q         | Quit
 
 ### Installation
 
-1. Install GTK+ 3: `sudo apt-get install libgtk-3-dev`
-2. Install GLEW: `sudo apt-get install libglew-dev`
-3. Use your terminal to navigate to the `Engine.gtk` directory.
-4. `make`
-5. Run the compiled `engine` located at `~/.iterami/engine`.
+1. `sudo apt-get install libglew-dev libgtk-3-dev`
+2. `git clone http://github.com/iterami/common.git` into the same directory as `Engine.gtk`.
+3. Use your terminal to navigate to the `Engine.gtk` directory and `make` it.
+4. Run the compiled `engine` located at `~/.iterami/engine`.
 
 ---
 
 ### Updating
 
 1. Close `Engine.gtk`.
-2. Use your terminal to navigate to the `Engine.gtk` directory.
-3. `git pull`
-4. `make`
-5. Run the compiled `engine` located at `~/.iterami/engine`.
+2. `git pull` the `common` and `Engine.gtk` repositories.
+3. Use your terminal to navigate to the `Engine.gtk` directory and `make` it.
+4. Run the compiled `engine` located at `~/.iterami/engine`.
 
 ---
 
@@ -35,5 +33,4 @@ Ctrl + Q         | Quit
 2. `make clean`
 3. If you have no other iterami GTK repositories installed, you can delete the `~/.iterami/` directory.
 4. Delete the cloned `Engine.gtk` directory.
-5. If you aren't using `libgtk-3-dev` anymore, you can `sudo apt-get remove libgtk-3-dev`.
-6. If you aren't using `libglew-dev` anymore, you can `sudo apt-get remove libglew-dev`.
+5. Optionally remove `common`, `libglew-dev`, and `libgtk-3-dev`.
