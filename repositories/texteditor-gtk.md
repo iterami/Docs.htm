@@ -26,6 +26,7 @@ Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
 Ctrl + X         | Cut
+Ctrl + Y         | Clear Undo/Redo
 Ctrl + Z         | Undo
 Delete           | Delete
 End              | Go to Bottom
