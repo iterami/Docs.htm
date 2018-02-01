@@ -30,7 +30,7 @@ Ctrl + Y         | Clear Undo/Redo
 Ctrl + Z         | Undo
 Delete           | Delete
 End              | Go to Bottom
-Escape           | Hide Find/Replace
+Escape           | Hide Windows
 Home             | Go to Top
 Insert           | Toggle Insertion
 
