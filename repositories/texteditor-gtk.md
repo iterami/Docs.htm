@@ -4,7 +4,7 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|-----------------------
+-----------------|---------------------
 Backspace        | Backspace
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word

@@ -4,7 +4,8 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|---------------------
+-----------------|-----------------
+Ctrl + H         | Return to Origin
 Ctrl + Q         | Quit
 
 ---
