@@ -4,9 +4,15 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|-----------------
+-----------------|--------------------
+A                | Move Camera Left
+C                | Move Camera Down
 Ctrl + H         | Return to Origin
 Ctrl + Q         | Quit
+D                | Move Camera Right
+S                | Move Camera Back
+Space            | Move Camera Up
+W                | Move Camera Forward
 
 ---
 
