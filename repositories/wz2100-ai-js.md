@@ -12,3 +12,4 @@
 
 1. `shift + backspace` to enable cheats.
 2. `ctrl + o` to change `Current Player` to the AI.
+3. `ctrl + +` to increase the game speed for quicker observation.
