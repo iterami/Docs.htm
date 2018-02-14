@@ -10,6 +10,7 @@
 
 ### Observing the AI
 
-1. `shift + backspace` to enable cheats.
-2. `ctrl + o` to change `Current Player` to the AI.
-3. `ctrl + +` to increase the game speed for quicker observation.
+1. `shift + backspace` to enable debug and cheats. Keep this mode active for the entire game.
+2. `ctrl + o` and change `Current Player` to the AI you wish to observe.
+3. `ctrl + g` to reveal the entire map.
+4. `ctrl + +` to increase the game speed for quicker observation.
