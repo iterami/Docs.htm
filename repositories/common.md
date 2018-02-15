@@ -219,7 +219,6 @@
 
 ### writings.css
 * [iterami/Documentation.htm](https://github.com/iterami/Documentation.htm)
-* [iterami/DrinkingGames.htm](https://github.com/iterami/DrinkingGames.htm)
 * [iterami/Guides.htm](https://github.com/iterami/Guides.htm)
 
 ---
