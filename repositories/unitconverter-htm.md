@@ -132,6 +132,7 @@ fathom              |
 foot                | ft
 furlong             |
 girah               |
+Gunter's chain      |
 Hammer unit         |
 hand                | h
 hiro                | 尋
@@ -152,6 +153,7 @@ nautical mile       | nmi
 parsec              | pc
 ri                  | 里
 rin                 | 厘
+shackle             |
 shaku               | 尺
 spat                | S
 story               |
