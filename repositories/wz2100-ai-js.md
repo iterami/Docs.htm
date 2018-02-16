@@ -1,6 +1,10 @@
 [iterami/WZ2100-AI.js](https://github.com/iterami/WZ2100-AI.js) Documentation
 -----------------------------------------------------------------------------
 
+* The AIs do not vary by difficulty and always follow the same build order that does not rely on cheats.
+
+---
+
 ### Installation
 
 1. `git clone https://github.com/iterami/WZ2100-AI.js`
