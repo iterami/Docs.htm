@@ -118,10 +118,12 @@ bu                  | 分
 astronomical unit   | au
 barleycorn          |
 bu                  | 分
+cable               |
 chain               | ch
 chi                 | 尺
 chō                 | 町
 cubit               |
+digit               |
 ell (Danish)        |
 ell (Flemish)       |
 ell (French)        |
@@ -141,6 +143,7 @@ jō                  | 丈
 jow                 |
 kanejaku            | 曲尺
 ken                 | 間
+league              |
 lightyear           | ly
 ligne               |
 link                | l.
@@ -148,14 +151,17 @@ metre               | m
 mil                 |
 mile                | mi
 mō                  | 毛, 毫
+nail                |
 nautical league     |
 nautical mile       | nmi
+palm                |
 parsec              | pc
 ri                  | 里
 rin                 | 厘
 shackle             |
 shaku               | 尺
 spat                | S
+stick               |
 story               |
 sun                 | 寸
 survey foot (India) |
