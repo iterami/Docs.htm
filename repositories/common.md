@@ -176,7 +176,6 @@
 * [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
 * [iterami/Sudoku.htm](https://github.com/iterami/Sudoku.htm)
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
-* [iterami/TextEditor.htm](https://github.com/iterami/TextEditor.htm)
 * [iterami/TextInfo.htm](https://github.com/iterami/TextInfo.htm)
 * [iterami/ThemePark-3D.htm](https://github.com/iterami/ThemePark-3D.htm)
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
@@ -237,7 +236,6 @@
 * [iterami/SpeedText.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/SpeedType.htm](https://github.com/iterami/SpeedType.htm)
 * [iterami/Sudoku.htm](https://github.com/iterami/Sudoku.htm)
-* [iterami/TextEditor.htm](https://github.com/iterami/TextEditor.htm)
 * [iterami/TextInfo.htm](https://github.com/iterami/TextInfo.htm)
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
 * [iterami/TimeColors.htm](https://github.com/iterami/TimeColors.htm)
@@ -248,6 +246,7 @@
 ---
 
 ### writings.css
+* [iterami/Bookmarklets.htm](https://github.com/iterami/Bookmarklets.htm)
 * [iterami/Documentation.htm](https://github.com/iterami/Documentation.htm)
 * [iterami/Guides.htm](https://github.com/iterami/Guides.htm)
 
@@ -367,7 +366,6 @@
 * [iterami/Starfield-3D.htm](https://github.com/iterami/Starfield-3D.htm)
 * [iterami/Sudoku.htm](https://github.com/iterami/Sudoku.htm)
 * [iterami/SurrealIntermission.htm](https://github.com/iterami/SurrealIntermission.htm)
-* [iterami/TextEditor.htm](https://github.com/iterami/TextEditor.htm)
 * [iterami/TextInfo.htm](https://github.com/iterami/TextInfo.htm)
 * [iterami/ThemePark-3D.htm](https://github.com/iterami/ThemePark-3D.htm)
 * [iterami/Time.htm](https://github.com/iterami/Time.htm)
