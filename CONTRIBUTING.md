@@ -11,6 +11,13 @@ Things needed, in order of priority:
 
 ---
 
+Issues:
+1. Issues can be made about anything.
+2. If your issue is about something handled by [iterami/common](https://github.com/iterami/common), it should be reported there instead of in a repository that uses `iterami/common`.
+3. Issues can either be labeled as `bug` or `enhancement`.
+
+---
+
 Pull Requests:
 1. Make sure your contribution complies with the license choice and code standards of the repository you wish you contribute to.
 2. Open a pull request for the repository you wish to contribute to.
