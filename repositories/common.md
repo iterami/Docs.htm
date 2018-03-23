@@ -6,9 +6,9 @@
 ---
 
 * C:
-  * [core.c](#corec) (includes core.h)
-  * [gtk.c](#gtkc) (includes gtk.h)
-  * [opengl.c](#openglc) (includes opengl.h)
+  * [core.c](#corec) + core.h
+  * [gtk.c](#gtkc) + gtk.h
+  * [opengl.c](#openglc) + opengl.h
 * CSS:
   * [canvas.css](#canvascss)
   * [core.css](#corecss)
