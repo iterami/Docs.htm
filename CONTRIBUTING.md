@@ -7,7 +7,7 @@ Things needed, in order of priority:
    1. [iterami/common](https://github.com/iterami/common) needs code additions and improvements.
    2. [iterami/Documentation.htm](https://github.com/iterami/https://github.com/iterami/Documentation.htm) needs additional and improved documentation for all repositories.
    3. [iterami/UnitConverter.htm](https://github.com/iterami/https://github.com/iterami/UnitConverter.htm) needs more units and current conversions to be verified.
-   4. All other repositories are currently tied.
+   4. All other repositories currently have identical priority.
 
 ---
 
