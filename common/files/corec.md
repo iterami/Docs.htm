@@ -1,8 +1,8 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/core.c
 ------------------------------------------------------------------------------------------------------
 
-* [`int core_get_int_length(gint integer)`](#)
-* [`gchar* core_iterami_path(gchar *file)`](#)
+* [`int core_get_int_length(gint integer)`](#int-core_get_int_lengthgint-integer)
+* [`gchar* core_iterami_path(gchar *file)`](#gchar-core_iterami_pathgchar-file)
 
 ---
 

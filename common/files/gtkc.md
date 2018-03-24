@@ -1,10 +1,10 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/gtk.c
 -----------------------------------------------------------------------------------------------------
 
-* [`GtkWidget * gtk_add_menuitem(GtkWidget *menu, gchar *label, GtkAccelGroup *accelgroup, guint key, GdkModifierType modifier)`](#)
-* [`void gtk_begin_frameclock(GtkWidget *_glarea)`](#)
-* [`struct nextvalue gtk_get_next_value(GtkTextBuffer *buffer, int line, int offset)`](#)
-* [`void gtk_init_gtk(GtkApplication* app, gchar *title)`](#)
+* [`GtkWidget * gtk_add_menuitem(GtkWidget *menu, gchar *label, GtkAccelGroup *accelgroup, guint key, GdkModifierType modifier)`](#gtkwidget--gtk_add_menuitemgtkwidget-menu-gchar-label-gtkaccelgroup-accelgroup-guint-key-gdkmodifiertype-modifier)
+* [`void gtk_begin_frameclock(GtkWidget *_glarea)`](#void-gtk_begin_frameclockgtkwidget-_glarea)
+* [`struct nextvalue gtk_get_next_value(GtkTextBuffer *buffer, int line, int offset)`](#struct-nextvalue-gtk_get_next_valuegtktextbuffer-buffer-int-line-int-offset)
+* [`void gtk_init_gtk(GtkApplication* app, gchar *title)`](#void-gtk_init_gtkgtkapplication-app-gchar-title)
 
 ---
 
