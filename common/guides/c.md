@@ -3,11 +3,11 @@
 
 ### Files Used
 * `c`:
-  * `core.c` and `core.h`: used by every C project.
-  * `gtk.c` and `gtk.h`: used by every GTK+ 3 project.
-  * `opengl.c` and `opengl.h`: used by every OpenGL project.
+  * [`core.c` and `core.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corec.md): used by every C project.
+  * [`gtk.c` and `gtk.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkc.md): used by every GTK+ 3 project.
+  * [`opengl.c` and `opengl.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/openglc.md): used by every OpenGL project.
 * `css`:
-  * `gtk.css`: contains CSS to standardize GTK appearance.
+  * [`gtk.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkcss.md): contains CSS to standardize GTK appearance.
 
 ---
 

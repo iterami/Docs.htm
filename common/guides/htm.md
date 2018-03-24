@@ -11,9 +11,9 @@
 ### Files Used
 * `css`:
   * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
-  * `core.css`: used by every HTM project.
-  * `dom.css`
-  * `writings.css`
+  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corecss.md): used by every HTM project.
+  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/domcss.md)
+  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/writingscss.md)
 * `js`:
   * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvasjs.md): used for 2D canvas projects.
   * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md): used by every HTM project.
