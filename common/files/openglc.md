@@ -24,6 +24,7 @@
 * [`void opengl_matrix_perspective(float *matrix, gint width, gint height)`](#void-opengl_matrix_perspectivefloat-matrix-gint-width-gint-height)
 * [`void opengl_matrix_rotate(float *matrix, float x, float y, float z)`](#void-opengl_matrix_rotatefloat-matrix-float-x-float-y-float-z)
 * [`void opengl_matrix_translate(float *matrix, float x, float y, float z)`](#void-opengl_matrix_translatefloat-matrix-float-x-float-y-float-z)
+* [`float opengl_radians_to_degrees(float radians)`](#float-opengl_radians_to_degreesfloat-radians)
 * [`void realize(GtkGLArea *area)`](#void-realizegtkglarea-area)
 * [`gboolean render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-rendergtkglarea-area-gdkglcontext-context)
 
@@ -255,6 +256,15 @@ matrix | float* |
 x      | float  |
 y      | float  |
 z      | float  |
+
+---
+
+### `float opengl_radians_to_degrees(float radians)`
+* Converts radians to degrees.
+
+Arg     | Type  | Notes
+--------|-------|------
+radians | float |
 
 ---
 
