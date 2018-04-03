@@ -8,6 +8,7 @@
 * C:
   * [core.c](#corec) + core.h
   * [gtk.c](#gtkc) + gtk.h
+  * [math.c](#mathc) + math.h
   * [opengl.c](#openglc) + opengl.h
 * CSS:
   * [canvas.css](#canvascss)
@@ -42,6 +43,12 @@
 * [iterami/EVETools.gtk](https://github.com/iterami/EVETools.gtk)
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
+* [iterami/Trains.gtk](https://github.com/iterami/Trains.gtk)
+
+---
+
+### math.c
+* [iterami/Engine.gtk](https://github.com/iterami/Engine.gtk)
 * [iterami/Trains.gtk](https://github.com/iterami/Trains.gtk)
 
 ---
