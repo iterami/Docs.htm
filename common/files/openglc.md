@@ -18,11 +18,6 @@
 * [`void opengl_entity_draw(int id)`](#void-opengl_entity_drawint-id)
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
 * [`void opengl_load_level(char *filename)`](#void-opengl_load_levelchar-filename)
-* [`void opengl_matrix_copy(float *from, float *to)`](#void-opengl_matrix_copyfloat-from-float-to)
-* [`void opengl_matrix_identity(float *matrix)`](#void-opengl_matrix_identityfloat-matrix)
-* [`void opengl_matrix_perspective(float *matrix, gint width, gint height)`](#void-opengl_matrix_perspectivefloat-matrix-gint-width-gint-height)
-* [`void opengl_matrix_rotate(float *matrix, float x, float y, float z)`](#void-opengl_matrix_rotatefloat-matrix-float-x-float-y-float-z)
-* [`void opengl_matrix_translate(float *matrix, float x, float y, float z)`](#void-opengl_matrix_translatefloat-matrix-float-x-float-y-float-z)
 * [`void realize(GtkGLArea *area)`](#void-realizegtkglarea-area)
 * [`gboolean render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-rendergtkglarea-area-gdkglcontext-context)
 
@@ -191,60 +186,6 @@ id  | int  |
 Arg  | Type  | Notes
 -----|-------|------
 char | char* |
-
----
-
-### `void opengl_matrix_copy(float *from, float *to)`
-* Copy the values in a matrix into another matrix.
-
-Arg  | Type   | Notes
------|--------|------
-from | float* |
-to   | float* |
-
----
-
-### `void opengl_matrix_identity(float *matrix)`
-* Reset values in a matrix to those of an identity matrix.
-
-Arg    | Type   | Notes
--------|--------|------
-matrix | float* |
-
----
-
-### `void opengl_matrix_perspective(float *matrix, gint width, gint height)`
-* Set up a perspective matrix based on window height and width.
-
-Arg    | Type   | Notes
--------|--------|------
-matrix | float* |
-width  | gint   |
-height | gint   |
-
----
-
-### `void opengl_matrix_rotate(float *matrix, float x, float y, float z)`
-* Rotate a matrix by a specific amount of degrees.
-
-Arg    | Type   | Notes
--------|--------|------
-matrix | float* |
-x      | float  |
-y      | float  |
-z      | float  |
-
----
-
-### `void opengl_matrix_translate(float *matrix, float x, float y, float z)`
-* Translate a matrix by a specific amount.
-
-Arg    | Type   | Notes
--------|--------|------
-matrix | float* |
-x      | float  |
-y      | float  |
-z      | float  |
 
 ---
 
