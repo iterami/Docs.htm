@@ -2,6 +2,7 @@
 ------------------------------------------------------------------------------------------------------
 
 * [`float math_degrees_to_radians(const float degrees)`](#float-math_degrees_to_radiansconst-float-degrees)
+* [`float math_distance_2d(const float x0, const float y0, const float x1, const float y1)`](#float-math_distance_2dconst-float-x0-const-float-y0-const-float-x1-const-float-y1)
 * [`void math_matrix_copy(float *from, float *to)`](#void-math_matrix_copyfloat-from-float-to)
 * [`void math_matrix_identity(float *matrix)`](#void-math_matrix_identityfloat-matrix)
 * [`void math_matrix_perspective(float *matrix, const int width, const int height)`](#void-math_matrix_perspectivefloat-matrix-const-int-width-const-int-height)
@@ -17,6 +18,18 @@
 Arg     | Type  | Notes
 --------|-------|------
 degrees | float |
+
+---
+
+### `float math_distance_2d(const float x0, const float y0, const float x1, const float y1)`
+* Returns the distance between two 2D points.
+
+Arg | Type  | Notes
+----|-------|------
+x0  | float |
+y0  | float |
+x1  | float |
+y1  | float |
 
 ---
 
