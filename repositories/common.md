@@ -10,6 +10,7 @@
   * [gtk.c](#gtkc) + gtk.h
   * [math.c](#mathc) + math.h
   * [opengl.c](#openglc) + opengl.h
+  * [random.c](#randomc) + random.h
 * CSS:
   * [canvas.css](#canvascss)
   * [core.css](#corecss)
@@ -56,6 +57,10 @@
 ### opengl.c
 * [iterami/Engine.gtk](https://github.com/iterami/Engine.gtk)
 * [iterami/Trains.gtk](https://github.com/iterami/Trains.gtk)
+
+---
+
+### random.c
 
 ---
 

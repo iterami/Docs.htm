@@ -7,6 +7,7 @@
   * [`gtk.c` and `gtk.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkc.md): used by every GTK+ 3 project.
   * [`math.c` and `math.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathc.md): used by every OpenGL project and some non-OpenGL projects.
   * [`opengl.c` and `opengl.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/openglc.md): used by every OpenGL project.
+  * [`random.c` and `random.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/randomc.md): used by projects that need randomness.
 * `css`:
   * [`gtk.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkcss.md): contains CSS to standardize GTK appearance.
 
