@@ -8,6 +8,7 @@
 * [`void math_matrix_perspective(float *matrix, const int width, const int height)`](#void-math_matrix_perspectivefloat-matrix-const-int-width-const-int-height)
 * [`void math_matrix_rotate(float *matrix, const float x, const float y, const float z)`](#void-math_matrix_rotatefloat-matrix-const-float-x-const-float-y-const-float-z)
 * [`void math_matrix_translate(float *matrix, const float x, const float y, const float z)`](#void-math_matrix_translatefloat-matrix-const-float-x-const-float-y-const-float-z)
+* [`float math_point_angle(const float x0, const float y0, const float x1, const float y1)`](#float-math_point_angleconst-float-x0-const-float-y0-const-float-x1-const-float-y1)
 * [`float math_radians_to_degrees(const float radians)`](#float-math_radians_to_degreesconst-float-radians)
 
 ---
@@ -84,6 +85,18 @@ matrix | float* |
 x      | float  |
 y      | float  |
 z      | float  |
+
+---
+
+### `float math_point_angle(const float x0, const float y0, const float x1, const float y1)`
+* Returns the angle between two points relative to the grid.
+
+Arg | Type  | Notes
+----|-------|------
+x0  | float |
+y0  | float |
+x1  | float |
+y1  | float |
 
 ---
 
