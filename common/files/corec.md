@@ -1,17 +1,17 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/core.c
 ------------------------------------------------------------------------------------------------------
 
-* [`int core_get_int_length(gint integer)`](#int-core_get_int_lengthgint-integer)
+* [`int core_get_int_length(int integer)`](#int-core_get_int_lengthint-integer)
 * [`gchar* core_iterami_path(gchar *file)`](#gchar-core_iterami_pathgchar-file)
 
 ---
 
-### `int core_get_int_length(gint integer)`
+### `int core_get_int_length(int integer)`
 * Returns the length of an integer converted into a string.
 
 Arg     | Type | Notes
 --------|------|----------------------------
-integer | gint | The integer value to check.
+integer | int  | The integer value to check.
 
 ---
 
