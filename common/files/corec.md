@@ -1,9 +1,22 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/core.c
 ------------------------------------------------------------------------------------------------------
 
+* ['float core_clamp_float(const float value, const float min, const float max, const int wrap)'](#float-core_clamp_floatconst-float-value-const-float-min-const-float-max-const-int-wrap)
 * ['int core_is_hexadecimal(const char character)`](#int-core_is_hexadecimalconst-char-character)
 * [`int core_get_int_length(const int integer)`](#int-core_get_int_lengthconst-int-integer)
 * [`gchar* core_iterami_path(const gchar *filename)`](#gchar-core_iterami_pathconst-gchar-filename)
+
+---
+
+### `float core_clamp_float(const float value, const float min, const float max, const int wrap)`
+* Clamps a numerical value between min and max, with optional wrapping.
+
+Arg   | Type  | Notes
+------|-------|----------------------------------------------------------------------------------------
+value | float | The value to clamp.
+min   | float | The minimum possible value.
+max   | float | The maximum possible value.
+wrap  | int   | If the value should wrap. Example: 450 clamped between 0 and 360 with wrap would be 90.
 
 ---
 
