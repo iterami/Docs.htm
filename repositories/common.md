@@ -12,6 +12,7 @@
   * [math.c](#mathc) + math.h
   * [opengl.c](#openglc) + opengl.h
   * [random.c](#randomc) + random.h
+  * [sort.c](#sortc) + sort.h
 * CSS:
   * [canvas.css](#canvascss)
   * [core.css](#corecss)
@@ -50,6 +51,7 @@
 ---
 
 ### json.c
+* [iterami/Engine.gtk](https://github.com/iterami/Engine.gtk)
 
 ---
 
@@ -66,6 +68,11 @@
 ---
 
 ### random.c
+
+---
+
+### sort.c
+* [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
 
 ---
 
