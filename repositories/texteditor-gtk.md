@@ -8,7 +8,7 @@ Shortcut         | Notes
 Backspace        | Backspace
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word
-Ctrl + C         | Copy
+Ctrl + C         | Copy Selected
 Ctrl + D         | Delete Line
 Ctrl + Delete    | Delete Next Word
 Ctrl + F         | Find/Replace...
@@ -17,7 +17,7 @@ Ctrl + H         | Replace All
 Ctrl + L         | Go to Line...
 Ctrl + O         | Open...
 Ctrl + Q         | Quit
-Ctrl + R         | Sort Lines
+Ctrl + R         | Sort Selected Lines
 Ctrl + S         | Save
 Ctrl + Shift + G | Find Previous
 Ctrl + Shift + S | Save As...
@@ -25,7 +25,7 @@ Ctrl + Shift + Z | Redo
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
-Ctrl + X         | Cut
+Ctrl + X         | Cut Selected
 Ctrl + Y         | Clear Undo/Redo
 Ctrl + Z         | Undo
 Delete           | Delete
