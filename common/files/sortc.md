@@ -11,8 +11,8 @@
 * Compares two integers.
 * Returns a value:
   * =0 = integers are equal
-  * <0 = a is less than b
-  * >0 = a is greater than b
+  * &lt;0 = a is less than b
+  * &gt;0 = a is greater than b
 
 Arg | Type  | Notes
 ----|-------|----------------------------
@@ -26,8 +26,8 @@ b   | void* |
 * Compares two strings.
 * Returns a value:
   * =0 = strings are equal
-  * <0 = a is earlier than b
-  * >0 = a is later than b
+  * &lt;0 = a is earlier than b
+  * &gt;0 = a is later than b
 
 Arg | Type  | Notes
 ----|-------|----------------------------
