@@ -4,7 +4,7 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|---------------------
+-----------------|-------------------------------
 Backspace        | Backspace
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word
@@ -17,9 +17,10 @@ Ctrl + H         | Replace All
 Ctrl + L         | Go to Line...
 Ctrl + O         | Open...
 Ctrl + Q         | Quit
-Ctrl + R         | Sort Selected Lines
+Ctrl + R         | Sort Selected Lines Ascending
 Ctrl + S         | Save
 Ctrl + Shift + G | Find Previous
+Ctrl + Shift + R | Sort Selected Lines Descending
 Ctrl + Shift + S | Save As...
 Ctrl + Shift + Z | Redo
 Ctrl + T         | New Tab
