@@ -1,6 +1,12 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/opengl.c
 --------------------------------------------------------------------------------------------------------
 
+### Includes
+* [`"json.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/jsonc.md)
+* [`"math.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathc.md)
+
+---
+
 * [`gboolean opengl_camera_free_keypress(GtkWidget *widget, GdkEventKey *event, gpointer data)`](#gboolean-opengl_camera_free_keypressgtkwidget-widget-gdkeventkey-event-gpointer-data)
 * [`gboolean opengl_camera_free_keyrelease(GtkWidget *widget, GdkEventKey *event, gpointer data)`](#gboolean-opengl_camera_free_keyreleasegtkwidget-widget-gdkeventkey-event-gpointer-data)
 * [`gboolean opengl_camera_free_mousemove(GtkWidget *widget, GdkEventMotion *event, gpointer data)`](#gboolean-opengl_camera_free_mousemovegtkwidget-widget-gdkeventmotion-event-gpointer-data)

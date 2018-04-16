@@ -1,6 +1,11 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/math.c
 ------------------------------------------------------------------------------------------------------
 
+### Includes
+* `<math.h>`
+
+---
+
 * [`float math_degrees_to_radians(const float degrees)`](#float-math_degrees_to_radiansconst-float-degrees)
 * [`float math_distance_2d(const float x0, const float y0, const float x1, const float y1)`](#float-math_distance_2dconst-float-x0-const-float-y0-const-float-x1-const-float-y1)
 * [`void math_matrix_copy(float *from, float *to)`](#void-math_matrix_copyfloat-from-float-to)

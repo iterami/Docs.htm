@@ -1,6 +1,11 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/random.c
 --------------------------------------------------------------------------------------------------------
 
+### Includes
+* `<time.h>`
+
+---
+
 * ['int random_integer(const int max)`](#int-random_integerconst-int-max)
 * ['void random_seed(void)`](#void-random_seedvoid)
 

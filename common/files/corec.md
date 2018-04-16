@@ -1,6 +1,11 @@
 [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/core.c
 ------------------------------------------------------------------------------------------------------
 
+### Includes
+* `<stdlib.h>`
+
+---
+
 * ['float core_clamp_float(const float value, const float min, const float max, const int wrap)'](#float-core_clamp_floatconst-float-value-const-float-min-const-float-max-const-int-wrap)
 * ['int core_is_hexadecimal(const char character)`](#int-core_is_hexadecimalconst-char-character)
 * [`int core_get_int_length(const int integer)`](#int-core_get_int_lengthconst-int-integer)
