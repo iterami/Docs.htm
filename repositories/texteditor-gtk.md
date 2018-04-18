@@ -33,7 +33,7 @@ Delete           | Delete
 End              | Go to Bottom
 Escape           | Hide Windows
 Home             | Go to Top
-Insert           | Toggle Insertion
+Insert           | Toggle Overwrite
 
 ---
 
