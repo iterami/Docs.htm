@@ -8,6 +8,7 @@
 
 ---
 
+* [`void opengl_billboard(const int id, gboolean x, gboolean y, gboolean z)`](#void-opengl_billboardconst-int-id-gboolean-x-gboolean-y-gboolean-z)
 * [`gboolean opengl_camera_free_keypress(GtkWidget *widget, GdkEventKey *event, gpointer data)`](#gboolean-opengl_camera_free_keypressgtkwidget-widget-gdkeventkey-event-gpointer-data)
 * [`gboolean opengl_camera_free_keyrelease(GtkWidget *widget, GdkEventKey *event, gpointer data)`](#gboolean-opengl_camera_free_keyreleasegtkwidget-widget-gdkeventkey-event-gpointer-data)
 * [`gboolean opengl_camera_free_mousemove(GtkWidget *widget, GdkEventMotion *event, gpointer data)`](#gboolean-opengl_camera_free_mousemovegtkwidget-widget-gdkeventmotion-event-gpointer-data)
@@ -28,6 +29,18 @@
 * [`int opengl_string_to_primitive(const gchar *string)`](#int-opengl_string_to_primitiveconst-gchar-string)
 * [`void realize(GtkGLArea *area)`](#void-realizegtkglarea-area)
 * [`gboolean render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-rendergtkglarea-area-gdkglcontext-context)
+
+---
+
+### `void opengl_billboard(const int id, gboolean x, gboolean y, gboolean z)`
+* Billboards an entity by making it face towards the camera on any of the three axes.
+
+Arg | Type     | Notes
+----|----------|------
+id  | int      |
+x   | gboolean |
+y   | gboolean |
+z   | gboolean |
 
 ---
 
