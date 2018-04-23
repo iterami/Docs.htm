@@ -7,6 +7,7 @@
 
 * C:
   * [core.c](#corec) + core.h
+  * [data.c](#datac) + data.h
   * [gtk.c](#gtkc) + gtk.h
   * [json.c](#jsonc)
   * [math.c](#mathc) + math.h
@@ -38,6 +39,10 @@
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
 * [iterami/Trains.gtk](https://github.com/iterami/Trains.gtk)
+
+---
+
+### data.c
 
 ---
 
