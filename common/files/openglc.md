@@ -22,6 +22,7 @@
 * [`void opengl_camera_set_rotation(const float x, const float y, const float z)`](#void-opengl_camera_set_rotationconst-float-x-const-float-y-const-float-z)
 * [`void opengl_camera_set_translation(const float x, const float y, const float z)`](#void-opengl_camera_set_translationconst-float-x-const-float-y-const-float-z)
 * [`void opengl_camera_translate(const float x, const float y, const float z)`](#void-opengl_camera_translateconst-float-x-const-float-y-const-float-z)
+* [`void opengl_clearcolor_set(const float red, const float green, const float blue, const float alpha)`](#void-opengl_clearcolor_setconst-float-red-const-float-green-const-float-blue-const-float-alpha)
 * [`void opengl_entity_bind(const int id)`](#void-opengl_entity_bindconst-int-id)
 * [`void opengl_entity_draw(const int id)`](#void-opengl_entity_drawconst-int-id)
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
@@ -165,6 +166,18 @@ Arg | Type  | Notes
 x   | float |
 y   | float |
 z   | float |
+
+---
+
+### `void opengl_clearcolor_set(const float red, const float green, const float blue, const float alpha)`
+* Sets the current clear color.
+
+Arg   | Type  | Notes
+------|-------|------
+red   | float |
+green | float |
+blue  | float |
+alpha | float |
 
 ---
 
