@@ -154,7 +154,6 @@ clear-alpha          | NO        |
 clear-blue           | NO        |
 clear-green          | NO        |
 clear_red            | NO        |
-cleardepth           | NO        |
 contextmenu          | NO        |
 fog                  | NO        |
 gravity-acceleration | NO        |
