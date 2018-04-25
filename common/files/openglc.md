@@ -27,6 +27,7 @@
 * [`void opengl_entity_draw(const int id)`](#void-opengl_entity_drawconst-int-id)
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
 * [`void opengl_load_level(const gchar *filename)`](#void-opengl_load_levelconst-char-filename)
+* [`void opengl_logicloop(void)`](#void-opengl_logicloopvoid)
 * [`int opengl_string_to_primitive(const gchar *string)`](#int-opengl_string_to_primitiveconst-gchar-string)
 * [`void realize(GtkGLArea *area)`](#void-realizegtkglarea-area)
 * [`gboolean render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-rendergtkglarea-area-gdkglcontext-context)
@@ -210,6 +211,11 @@ id  | int  |
 Arg  | Type   | Notes
 -----|--------|------
 char | gchar* |
+
+---
+
+### `void opengl_logicloop(void)`
+* Called by a `g_timeout_add()` within `realize()`.
 
 ---
 
