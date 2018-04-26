@@ -29,9 +29,10 @@
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
 * [`void opengl_load_level(const gchar *filename)`](#void-opengl_load_levelconst-char-filename)
 * [`void opengl_logicloop(void)`](#void-opengl_logicloopvoid)
+* [`void opengl_realize(GtkGLArea *area)`](#void-opengl_realizegtkglarea-area)
+* [`gboolean opengl_render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-opengl_rendergtkglarea-area-gdkglcontext-context)
+* [`void opengl_resize(GtkGLArea *_glarea, gint width, gint height, gpointer data)`](void-opengl_resizegtkglarea-_glarea-gint-width-gint-height-gpointer-data)
 * [`int opengl_string_to_primitive(const gchar *string)`](#int-opengl_string_to_primitiveconst-gchar-string)
-* [`void realize(GtkGLArea *area)`](#void-realizegtkglarea-area)
-* [`gboolean render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-rendergtkglarea-area-gdkglcontext-context)
 
 ---
 
@@ -229,16 +230,7 @@ char | gchar* |
 
 ---
 
-### `int opengl_string_to_primitive(const gchar *string)`
-* Return a defined constant for OpenGL primitive types based on the contents of a string.
-
-Arg    | Type   | Notes
--------|--------|------
-string | gchar* |
-
----
-
-### `void realize(GtkGLArea *area)`
+### `void opengl_realize(GtkGLArea *area)`
 * Function called when a GtkGLArea is created.
 
 Arg  | Type       | Notes
@@ -247,10 +239,31 @@ area | GtkGLArea* |
 
 ---
 
-### `gboolean render(GtkGLArea *area, GdkGLContext *context)`
+### `gboolean opengl_render(GtkGLArea *area, GdkGLContext *context)`
 * Function called when a GtkGLArea is drawn.
 
 Arg     | Type          | Notes
 --------|---------------|------
 area    | GtkGLArea*    |
 context | GdkGLContext* |
+
+---
+
+### `void opengl_resize(GtkGLArea *_glarea, gint width, gint height, gpointer data)`
+* Function called when a GtkGLArea is resized.
+
+Arg     | Type       | Notes
+--------|------------|------
+_glarea | GtkGLArea* |
+width   | gint       |
+height  | gint       |
+data    | gpointer   |
+
+---
+
+### `int opengl_string_to_primitive(const gchar *string)`
+* Return a defined constant for OpenGL primitive types based on the contents of a string.
+
+Arg    | Type   | Notes
+-------|--------|------
+string | gchar* |
