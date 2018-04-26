@@ -6,7 +6,7 @@
 ---
 
 * [C Documentation](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/c.md): includes C, GTK+ 3, and OpenGL.
-* [HTM Documentation](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/htm.md): includes CSS, HTM, and JavaScript.
+* [HTM Documentation](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/htm.md): includes CSS, HTM, JavaScript, and WebGL.
 
 ---
 
