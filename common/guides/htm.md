@@ -10,22 +10,22 @@
 
 ### Files Used
 * `css`:
-  * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvascss.md): used for 2D and 3D canvas projects.
-  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corecss.md): used by every HTM project.
-  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/domcss.md)
-  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/writingscss.md)
+  * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas projects.
+  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/core.md): used by every HTM project.
+  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/dom.md)
+  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/writings.md)
 * `js`:
-  * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/canvasjs.md): used for 2D canvas projects.
-  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corejs.md): used by every HTM project.
-  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datajs.md): shortcuts for complex 2D and 3D entities.
-  * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/webgljs.md): used for 3D canvas projects.
+  * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas projects.
+  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
+  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities.
+  * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas projects.
 
 ---
 
 ### Recommended Project File Structure
 * `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
-  * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mainjs.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
+  * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/main.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
 * `404.htm`: handles 404 errors for GitHub Pages repositories.
 * `index.htm`: the page on which your project resides.
 * `LICENSE.md`: contains license information about your project.

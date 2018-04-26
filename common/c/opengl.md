@@ -2,9 +2,9 @@
 --------------------------------------------------------------------------------------------------------
 
 ### Includes
-* [`"gtk.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkc.md)
-* [`"json.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/jsonc.md)
-* [`"math.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathc.md)
+* [`"gtk.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/gtk.md)
+* [`"json.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/json.md)
+* [`"math.c"`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/math.md)
 
 ---
 
