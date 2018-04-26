@@ -4,6 +4,8 @@
 ### Files Used
 * `c`:
   * [`core.c` and `core.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/corec.md): used by every C project.
+  * [`data.c` and `data.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/datac.md): used by projects that benefit from quicker complex entities and data.
+  * [`groups.c` and `groups.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/groupsc.md): used by projects that neeed to manage/modify groups of data.
   * [`gtk.c` and `gtk.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/gtkc.md): used by every GTK+ 3 project and every OpenGL project.
   * [`json.c`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/jsonc.md): used by every OpenGL project and by projects that require JSON parsing.
   * [`math.c` and `math.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/files/mathc.md): used by every OpenGL project and some non-OpenGL projects.
