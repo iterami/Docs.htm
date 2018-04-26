@@ -25,6 +25,7 @@
 * [`void opengl_clearcolor_set(const float red, const float green, const float blue, const float alpha)`](#void-opengl_clearcolor_setconst-float-red-const-float-green-const-float-blue-const-float-alpha)
 * [`void opengl_entity_bind(const int id)`](#void-opengl_entity_bindconst-int-id)
 * [`void opengl_entity_draw(const int id)`](#void-opengl_entity_drawconst-int-id)
+* [`void opengl_events_init(GtkWidget *_glarea)`](#void-opengl_events_initgtkwidget-_glarea)
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
 * [`void opengl_load_level(const gchar *filename)`](#void-opengl_load_levelconst-char-filename)
 * [`void opengl_logicloop(void)`](#void-opengl_logicloopvoid)
@@ -197,6 +198,15 @@ id  | int  |
 Arg | Type | Notes
 ----|------|------
 id  | int  |
+
+---
+
+### `void opengl_events_init(GtkWidget *_glarea)`
+* Sets up signals and events for the `_glarea`.
+
+Arg     | Type       | Notes
+--------|------------|------
+_glarea | GtkWidget* |
 
 ---
 
