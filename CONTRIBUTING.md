@@ -1,13 +1,20 @@
 Contributing to iterami Repositories
 ------------------------------------
 
-Things needed, in order of priority:
-1. Solutions for open issues. https://github.com/search?q=user%3Aiterami+is%3Aopen
-2. Code additions and improvements to all https://github.com/iterami repositories, in order of priority:
+Table of Contents:
+* [Priorities](#priorities)
+* [Issues](#issues)
+* [Pull Requests](#pull-requests)
+
+---
+
+### Priorities
+1. Discussions and pull requests to solve open issues. https://github.com/search?q=user%3Aiterami+is%3Aopen
+2. Code additions and improvements to core iterami repositories:
    1. [iterami/common](https://github.com/iterami/common) needs code additions and improvements.
    2. [iterami/Documentation.htm](https://github.com/iterami/https://github.com/iterami/Documentation.htm) needs additional and improved documentation for all repositories.
-   3. [iterami/UnitConverter.htm](https://github.com/iterami/https://github.com/iterami/UnitConverter.htm) needs more units and current conversions to be verified.
-   4. All other repositories currently have identical priority.
+3. Code additions and improvements to all other iterami repositories, all with equal priority:
+   1. [iterami/UnitConverter.htm](https://github.com/iterami/https://github.com/iterami/UnitConverter.htm) needs more units and current conversions to be verified.
 
 ---
 
