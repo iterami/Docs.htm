@@ -50,7 +50,7 @@ Table of Contents:
 Version with JSON-invalidating comments:
 ```
 {
-  // Array of numbers between 0 and 1 indicting the clear color.
+  // Optional array of numbers between 0 and 1 indicting the clear color.
   // Ordering is: red, green, blue, alpha
   "clearcolor": [
     0,
@@ -59,32 +59,32 @@ Version with JSON-invalidating comments:
     1
   ],
 
-  // Array of any number of entities.
+  // Required array of any number of entities.
   "entities": [
     {
-       // Global alpha value for all vertices.
+       // Optional global alpha value for all vertices.
       "alpha": 1,
 
-       // If rotate-y will change to make entity face camera.
+       // Optional. If rotate-y will change to make entity face camera.
       "billboard": false,
 
-      // If the entity should be drawn or not.
+      // Optional. If the entity should be drawn or not.
       "draw": true,
 
-      // How the vertices should be drawn.
+      // Optional. How the vertices should be drawn.
       "draw_type": "TRIANGLE_STRIP",
 
-      // Rotation of entity.
+      // Optional rotation of entity.
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
 
-      // Position of entity relative to `0, 0, 0`.
+      // Optional position of entity relative to `0, 0, 0`.
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
 
-      // Array of numbers between 0 and 1 indicating the color of each vertex.
+      // Required array of numbers between 0 and 1 indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
       "vertex_colors": [
         1, 0, 0, 1,
@@ -93,7 +93,7 @@ Version with JSON-invalidating comments:
         1, 1, 1, 1
       ],
 
-      // Array of numbers indicating the position of each vertex,
+      // Required array of numbers indicating the position of each vertex,
       // relative to the position of the entity.
       "vertices": [
         10, 0, -10, 1,
