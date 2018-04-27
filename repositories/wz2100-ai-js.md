@@ -1,7 +1,14 @@
 [iterami/WZ2100-AI.js](https://github.com/iterami/WZ2100-AI.js) Documentation
 -----------------------------------------------------------------------------
 
-* The AIs do not vary by difficulty and always follow the same build order that does not rely on cheats.
+* Each AI does not vary by difficulty and always follows the same build order.
+* Cheats are not used.
+
+---
+
+Table of Contents:
+* [Installation](#installation)
+* [Observing the AI](#observing the AI)
 
 ---
 

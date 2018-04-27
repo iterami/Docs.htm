@@ -1,6 +1,14 @@
 [iterami/Engine.gtk](https://github.com/iterami/Engine.gtk) Documentation
 -------------------------------------------------------------------------
 
+Table of Contents:
+* [Shortcuts](#shortcuts)
+* [Installation](#installation)
+* [Updating](#updating)
+* [Uninstallation](#uninstallation)
+
+---
+
 ### Shortcuts
 
 Shortcut         | Notes

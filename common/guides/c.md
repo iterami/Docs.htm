@@ -1,6 +1,12 @@
 [iterami/common](https://github.com/iterami/common) C Documentation
 -------------------------------------------------------------------
 
+Table of Contents:
+* [Files Used](#files-used)
+* [Recommended Project File Structure](#recommended-project-file-structure)
+
+---
+
 ### Files Used
 * `c`:
   * [`core.c` and `core.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/core.md): used by every C project.

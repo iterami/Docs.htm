@@ -1,6 +1,14 @@
 [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk) Documentation
 ---------------------------------------------------------------------------------
 
+Table of Contents:
+* [Shortcuts](#shortcuts)
+* [Installation](#installation)
+* [Updating](#updating)
+* [Uninstallation](#uninstallation)
+
+---
+
 ### Shortcuts
 
 Shortcut         | Notes
