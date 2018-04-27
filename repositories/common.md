@@ -8,6 +8,7 @@
 * C:
   * [core.c](#corec) + core.h
   * [data.c](#datac) + data.h
+  * [groups.c](#groupsc) + groups.h
   * [gtk.c](#gtkc) + gtk.h
   * [json.c](#jsonc)
   * [math.c](#mathc) + math.h
@@ -43,6 +44,10 @@
 ---
 
 ### data.c
+
+---
+
+### groups.c
 
 ---
 
