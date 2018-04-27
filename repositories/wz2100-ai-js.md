@@ -8,7 +8,7 @@
 
 Table of Contents:
 * [Installation](#installation)
-* [Observing the AI](#observing the AI)
+* [Observing the AI](#observing-the-ai)
 
 ---
 
