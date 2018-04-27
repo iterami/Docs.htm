@@ -18,14 +18,14 @@ Table of Contents:
 
 ---
 
-### Issues:
+### Issues
 * If your issue is about something handled by [iterami/common](https://github.com/iterami/common), it should be reported there instead of in a repository that only requires it.
 * Issues can be made about anything.
 * Issues can either be labeled as `bug` or `enhancement` and must not be assigned to anybody.
 
 ---
 
-### Pull Requests:
+### Pull Requests
 * Make sure your contribution complies with the license choice and code standards of the repository you wish you contribute to.
 * Open a pull request for the repository you wish to contribute to.
 * Pull requests can be made about anything.
