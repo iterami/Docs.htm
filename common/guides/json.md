@@ -8,6 +8,9 @@ Table of Contents:
 
 ### 3D JSON Level Format
 
+* Must be valid JSON.
+* Optional properties can be removed.
+
 ```json
 {
   "clearcolor": [
