@@ -1,8 +1,10 @@
 iterami/Documentation.htm
 -------------------------
 
-* Repositories:
+* Core Repositories:
   * [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)
+* Repositories:
+  * [iterami/chrome-iterami](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chrome-iterami.md)
   * [iterami/Engine.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/engine-gtk.md)
   * [iterami/EVETools.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/evetools-gtk.md)
   * [iterami/FileBrowser.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/filebrowser-gtk.md)
