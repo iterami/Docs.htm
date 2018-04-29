@@ -10,6 +10,7 @@ iterami/Documentation.htm
   * [iterami/eog-Plugin-MenuEnhancer](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/eog-plugin-menuenhancer.md)
   * [iterami/EVETools.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/evetools-gtk.md)
   * [iterami/FileBrowser.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/filebrowser-gtk.md)
+  * [iterami/gedit-Plugin-MenuEnhancer](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/gedit-plugin-menuenhancer.md)
   * [iterami/TextEditor.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/texteditor-gtk.md)
   * [iterami/Trains.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/trains-gtk.md)
   * [iterami/UnitConverter.htm](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/unitconverter-htm.md)

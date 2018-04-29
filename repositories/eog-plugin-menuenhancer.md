@@ -1,5 +1,5 @@
-[iterami/Chrome-iterami](https://github.com/iterami/Chrome-iterami) Documentation
----------------------------------------------------------------------------------
+[iterami/eog-Plugin-MenuEnhancer](eog-Plugin-MenuEnhancer) Documentation
+------------------------------------------------------------------------
 
 This plugin currently adds:
 
