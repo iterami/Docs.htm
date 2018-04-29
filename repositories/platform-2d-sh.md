@@ -1,5 +1,5 @@
 [iterami/Platform-2D.sh](https://github.com/iterami/Platform-2D.sh) Documentation
--------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 * Disable infinite terminal scrollback.
 * Use `bash platform-2d.sh` to play.

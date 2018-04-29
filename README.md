@@ -12,9 +12,13 @@ iterami/Documentation.htm
   * [iterami/FileBrowser.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/filebrowser-gtk.md)
   * [iterami/gedit-Plugin-MenuEnhancer](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/gedit-plugin-menuenhancer.md)
   * [iterami/Platform-2D.sh](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/platform-2d-sh.md)
+  * [iterami/TemplateEngine.php](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/templatengine-php.md)
+  * [iterami/TemplateEngine-Lite.php](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/templatengine-lite-php.md)
   * [iterami/TextEditor.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/texteditor-gtk.md)
   * [iterami/Trains.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/trains-gtk.md)
   * [iterami/UnitConverter.htm](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/unitconverter-htm.md)
+  * [iterami/WebScraper.py](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/webscraper-py.md)
+  * [iterami/WebServer.py](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/webserver-py.md)
   * [iterami/WZ2100-AI.js](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/wz2100-ai-js.md)
 * GitHub:
   * [Contributing to iterami Repositories](https://github.com/iterami/Documentation.htm/blob/gh-pages/CONTRIBUTING.md)
