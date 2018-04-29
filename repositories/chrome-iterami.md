@@ -1,4 +1,4 @@
-[iterami/chrome-iterami](https://github.com/iterami/chrome-iterami) Documentation
+[iterami/Chrome-iterami](https://github.com/iterami/Chrome-iterami) Documentation
 ---------------------------------------------------------------------------------
 
 * `Dark Theme`: Adds dark theme CSS to every visited webpage.
