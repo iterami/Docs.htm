@@ -248,19 +248,19 @@ entity | entitystruct* |
 ### `void opengl_group_modify(groupstruct *group)`
 * Not yet functional.
 
-Arg    | Type          | Notes
--------|---------------|------
-group  | groupstruct*  |
+Arg   | Type         | Notes
+------|--------------|------
+group | groupstruct* |
 
 ---
 
 ### `void opengl_group_move(groupstruct *oldgroup, entitystruct *entity, groupstruct *newgroup)`
 * Moves an entity from one group to another group.
 
-Arg       | Type         | Notes
-----------|--------------|------
-oldgroup  | groupstruct* |
-newgroup  | groupstruct* |
+Arg      | Type         | Notes
+---------|--------------|------
+oldgroup | groupstruct* |
+newgroup | groupstruct* |
 
 ---
 
@@ -288,17 +288,17 @@ entity | entitystruct* |
 ### `void opengl_group_remove_all(groupstruct *group)`
 * Removes all entities from a group.
 
-Arg    | Type          | Notes
--------|---------------|------
-group  | groupstruct*  |
+Arg   | Type         | Notes
+------|--------------|------
+group | groupstruct* |
 
 ---
 
 ### `void opengl_groups_create(gchar new_groups[], int count)`
 * Mallocs and populates an array of empty `groupstruct` structs.
 
-Arg        | Type          | Notes
------------|---------------|------
+Arg        | Type         | Notes
+-----------|--------------|------
 new_groups | groupstruct* |
 count      | int          |
 

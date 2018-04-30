@@ -6,7 +6,7 @@
 * ['int sort_compare_strings_asc(const void* a, const void* b)`](#int-sort_compare_strings_ascconst-void-a-const-void-b)
 * ['int sort_compare_strings_desc(const void* a, const void* b)`](#int-sort_compare_strings_ascconst-void-a-const-void-b)
 
----
+---w
 
 ### `int sort_compare_ints_asc(const void* a, const void* b)`
 * Compares two integers.
