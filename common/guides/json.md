@@ -8,6 +8,7 @@ Table of Contents:
 
 ### 3D JSON Level Format
 
+* Must follow the order of the example below.
 * Must be valid JSON.
 * Optional properties can be removed.
 
