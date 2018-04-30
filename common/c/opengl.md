@@ -29,11 +29,9 @@
 * [`void opengl_generate_all(void)`](#void-opengl_generate_allvoid)
 * [`void opengl_load_level(const gchar *filename)`](#void-opengl_load_levelconst-char-filename)
 * [`void opengl_group_add(groupstruct *group, entitystruct *entity)`](#void-opengl_group_addgroupstruct-group-entitystruct-entity)
-* [`entitystruct * opengl_group_add_realloc(groupstruct *group, entitystruct *entity)`](#entitystruct-opengl_group_add_reallocgroupstruct-group-entitystruct-entity)
 * [`void opengl_group_modify(groupstruct *group)`](#void-opengl_group_modifygroupstruct-group)
 * [`void opengl_group_move(groupstruct *oldgroup, entitystruct *entity, groupstruct *newgroup)`](#void-opengl_group_movegroupstruct-oldgroup-entitystruct-entity-groupstruct-newgroup)
 * [`void opengl_group_remove(groupstruct *group, entitystruct *entity)`](#void-opengl_group_removegroupstruct-group-entitystruct-entity)
-* [`entitystruct * opengl_group_remove_realloc(groupstruct *group, entitystruct *entity)`](#entitystruct-opengl_group_remove_reallocgroupstruct-group-entitystruct-entity)
 * [`void opengl_group_remove_all(groupstruct *group)`](#void-opengl_group_remove_allgroupstruct-group)
 * [`void opengl_groups_create(gchar new_groups[], int count)`](#void-opengl_groups_creategchar-new_groups-int-count)
 * [`void opengl_logicloop(void)`](#void-opengl_logicloopvoid)
@@ -234,17 +232,6 @@ entity | entitystruct* |
 
 ---
 
-### `void opengl_group_add_realloc(groupstruct *group, entitystruct *entity)`
-* Called by `opengl_group_add()`.
-* Modifies and reallocates the group array of pointers to entities.
-
-Arg    | Type          | Notes
--------|---------------|------
-group  | groupstruct*  |
-entity | entitystruct* |
-
----
-
 ### `void opengl_group_modify(groupstruct *group)`
 * Not yet functional.
 
@@ -266,17 +253,6 @@ newgroup | groupstruct* |
 
 ### `void opengl_group_remove(groupstruct *group, entitystruct *entity)`
 * Removes an entity from a group.
-
-Arg    | Type          | Notes
--------|---------------|------
-group  | groupstruct*  |
-entity | entitystruct* |
-
----
-
-### `void opengl_group_add_realloc(groupstruct *group, entitystruct *entity)`
-* Called by `opengl_group_remove()`.
-* Modifies and reallocates the group array of pointers to entities.
 
 Arg    | Type          | Notes
 -------|---------------|------
