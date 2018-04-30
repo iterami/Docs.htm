@@ -62,10 +62,10 @@ Version with JSON-invalidating comments:
   // Required array of any number of entities.
   "entities": [
     {
-       // Optional global alpha value for all vertices.
+      // Optional global alpha value for all vertices.
       "alpha": 1,
 
-       // Optional. If rotate-y will change to make entity face camera.
+      // Optional. If rotate-y will change to make entity face camera.
       "billboard": false,
 
       // Optional. If the entity should be drawn or not.
