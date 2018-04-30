@@ -24,14 +24,14 @@ Table of Contents:
       "alpha": 1,
       "billboard": false,
       "draw": true,
-      "draw_type": "TRIANGLE_STRIP",
+      "draw-type": "TRIANGLE_STRIP",
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
       "translate-x": 0,
       "translate-y": -1,
       "translate-z": 0,
-      "vertex_colors": [
+      "vertex-colors": [
         1, 0, 0, 1,
         0, 1, 0, 1,
         0, 0, 1, 1,
@@ -72,7 +72,7 @@ Version with JSON-invalidating comments:
       "draw": true,
 
       // Optional. How the vertices should be drawn.
-      "draw_type": "TRIANGLE_STRIP",
+      "draw-type": "TRIANGLE_STRIP",
 
       // Optional rotation of entity.
       "rotate-x": 0,
@@ -86,7 +86,7 @@ Version with JSON-invalidating comments:
 
       // Required array of numbers between 0 and 1 indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
-      "vertex_colors": [
+      "vertex-colors": [
         1, 0, 0, 1,
         0, 1, 0, 1,
         0, 0, 1, 1,
