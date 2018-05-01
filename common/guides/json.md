@@ -85,7 +85,7 @@ Version with JSON-invalidating comments:
       "rotate-y": 0,
       "rotate-z": 0,
 
-      // Optional position of entity relative to `0, 0, 0`.
+      // Optional translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
@@ -99,7 +99,7 @@ Version with JSON-invalidating comments:
         1, 1, 1, 1
       ],
 
-      // Required array of numbers indicating the position of each vertex,
+      // Required array of numbers indicating the translation of each vertex,
       //   relative to the entity translation.
       // Each row is: x, y, z, w
       "vertices": [
