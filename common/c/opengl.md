@@ -33,7 +33,7 @@
 * [`void opengl_group_move(groupstruct *oldgroup, entitystruct *entity, groupstruct *newgroup)`](#void-opengl_group_movegroupstruct-oldgroup-entitystruct-entity-groupstruct-newgroup)
 * [`void opengl_group_remove(groupstruct *group, entitystruct *entity)`](#void-opengl_group_removegroupstruct-group-entitystruct-entity)
 * [`void opengl_group_remove_all(groupstruct *group)`](#void-opengl_group_remove_allgroupstruct-group)
-* [`void opengl_groups_create(gchar new_groups[], int count)`](#void-opengl_groups_creategchar-new_groups-int-count)
+* [`void opengl_groups_create(const gchar *new_groups[], int count)`](#void-opengl_groups_createconst-gchar-new_groups-int-count)
 * [`void opengl_logicloop(void)`](#void-opengl_logicloopvoid)
 * [`void opengl_realize(GtkGLArea *area)`](#void-opengl_realizegtkglarea-area)
 * [`gboolean opengl_render(GtkGLArea *area, GdkGLContext *context)`](#gboolean-opengl_rendergtkglarea-area-gdkglcontext-context)
@@ -270,13 +270,13 @@ group | groupstruct* |
 
 ---
 
-### `void opengl_groups_create(gchar new_groups[], int count)`
+### `void opengl_groups_create(const gchar *new_groups[], int count)`
 * Mallocs and populates an array of empty `groupstruct` structs.
 
-Arg        | Type         | Notes
------------|--------------|------
-new_groups | groupstruct* |
-count      | int          |
+Arg        | Type   | Notes
+-----------|--------|------
+new_groups | gchar* |
+count      | int    |
 
 ---
 
