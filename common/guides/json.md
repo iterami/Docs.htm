@@ -62,7 +62,7 @@ Version with JSON-invalidating comments:
   // Optional clear color green value, between 0 and 1 inclusive.
   "clearcolor-green": 0,
 
-  // Optional clear red alpha value, between 0 and 1 inclusive.
+  // Optional clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
 
   // Required array of any number of entities.
