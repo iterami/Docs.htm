@@ -14,12 +14,10 @@ Table of Contents:
 
 ```json
 {
-  "clearcolor": [
-    0,
-    0,
-    0,
-    1
-  ],
+  "clearcolor-alpha": 1,
+  "clearcolor-blue": 0,
+  "clearcolor-green": 0,
+  "clearcolor-red": 0,
   "entities": [
     {
       "alpha": 1,
@@ -55,14 +53,17 @@ Table of Contents:
 Version with JSON-invalidating comments:
 ```
 {
-  // Optional array of numbers between 0 and 1 indicting the clear color.
-  // Ordering is: red, green, blue, alpha
-  "clearcolor": [
-    0,
-    0,
-    0,
-    1
-  ],
+  // Optional alpha value of the clear color. 0 to 1.
+  "clearcolor-alpha": 1,
+
+  // Optional blue value of the clear color. 0 to 1.
+  "clearcolor-blue": 0,
+
+  // Optional green value of the clear color. 0 to 1.
+  "clearcolor-green": 0,
+
+  // Optional red value of the clear color. 0 to 1.
+  "clearcolor-red": 0,
 
   // Required array of any number of entities.
   "entities": [
