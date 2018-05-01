@@ -53,25 +53,25 @@ Table of Contents:
 Version with JSON-invalidating comments:
 ```
 {
-  // Optional alpha value of the clear color. 0 to 1.
+  // Optional clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
 
-  // Optional blue value of the clear color. 0 to 1.
+  // Optional clear color blue value, between 0 and 1 inclusive.
   "clearcolor-blue": 0,
 
-  // Optional green value of the clear color. 0 to 1.
+  // Optional clear color green value, between 0 and 1 inclusive.
   "clearcolor-green": 0,
 
-  // Optional red value of the clear color. 0 to 1.
+  // Optional clear red alpha value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
 
   // Required array of any number of entities.
   "entities": [
     {
-      // Optional global alpha value for all vertices.
+      // Optional global vertex alpha value, between 0 and 1 inclusive.
       "alpha": 1,
 
-      // Optional. If rotate-y will change to make entity face camera.
+      // Optional. If rotate-y will change to make entity face the camera.
       "billboard": false,
 
       // Optional. If the entity should be drawn or not.
@@ -80,7 +80,7 @@ Version with JSON-invalidating comments:
       // Optional. How the vertices should be drawn.
       "draw-type": "TRIANGLE_STRIP",
 
-      // Optional rotation of entity.
+      // Optional rotation of entity in degrees between 0 inclusive and 360 exclusive.
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -90,7 +90,7 @@ Version with JSON-invalidating comments:
       "translate-y": 0,
       "translate-z": 0,
 
-      // Required array of numbers between 0 and 1 indicating the color of each vertex.
+      // Required array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
       "vertex-colors": [
         1, 0, 0, 1,
@@ -99,8 +99,8 @@ Version with JSON-invalidating comments:
         1, 1, 1, 1
       ],
 
-      // Required array of numbers indicating the position of each vertex,
-      // relative to the position of the entity.
+      // Required array of numbers indicating the position of each vertex, relative to the position of the entity.
+      // Each row is: x, y, z, w
       "vertices": [
         10, 0, -10, 1,
         -10, 0, -10, 1,
@@ -108,7 +108,7 @@ Version with JSON-invalidating comments:
         -10, 0, 10, 1
       ],
 
-      // Optional. Array of groups this entity should be added to.
+      // Optional. Array of groups this entity will be added to. Groups must exist.
       "groups": [
         "first-group",
         "second-group"
