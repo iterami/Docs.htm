@@ -26,10 +26,6 @@ Table of Contents:
       "billboard": false,
       "draw": true,
       "draw-type": "TRIANGLE_STRIP",
-      "groups": [
-        "first-group",
-        "second-group"
-      ],
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -47,6 +43,10 @@ Table of Contents:
         -10, 0, -10, 1,
         10, 0, 10, 1,
         -10, 0, 10, 1
+      ],
+      "groups": [
+        "first-group",
+        "second-group"
       ]
     }
   ]
@@ -79,12 +79,6 @@ Version with JSON-invalidating comments:
       // Optional. How the vertices should be drawn.
       "draw-type": "TRIANGLE_STRIP",
 
-      // Optional. Array of groups this entity should be added to.
-      "groups": [
-        "first-group",
-        "second-group"
-      ],
-
       // Optional rotation of entity.
       "rotate-x": 0,
       "rotate-y": 0,
@@ -111,6 +105,12 @@ Version with JSON-invalidating comments:
         -10, 0, -10, 1,
         10, 0, 10, 1,
         -10, 0, 10, 1
+      ],
+
+      // Optional. Array of groups this entity should be added to.
+      "groups": [
+        "first-group",
+        "second-group"
       ]
     }
   ]
