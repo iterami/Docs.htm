@@ -99,7 +99,8 @@ Version with JSON-invalidating comments:
         1, 1, 1, 1
       ],
 
-      // Required array of numbers indicating the position of each vertex, relative to the position of the entity.
+      // Required array of numbers indicating the position of each vertex,
+      //   relative to the position of the entity.
       // Each row is: x, y, z, w
       "vertices": [
         10, 0, -10, 1,
