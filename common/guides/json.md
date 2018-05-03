@@ -19,8 +19,8 @@ Table of Contents:
   "clearcolor-green": 0,
   "clearcolor-red": 0,
   "groups": [
-    "first-group",
-    "second-group"
+    "example-group-0",
+    "example-group-1"
   ],
   "entities": [
     {
@@ -47,8 +47,8 @@ Table of Contents:
         -10, 0, 10, 1
       ],
       "groups": [
-        "first-group",
-        "second-group"
+        "example-group-0",
+        "example-group-1"
       ]
     }
   ]
