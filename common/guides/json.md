@@ -72,8 +72,8 @@ Version with JSON-invalidating comments:
   // Optional array of groups to create.
   // Do not include automatically created groups, such as "_depthfalse".
   "groups": [
-    "first-group",
-    "second-group"
+    "example-group-0",
+    "example-group-1"
   ],
 
   // Required array of entities to create.
@@ -122,8 +122,8 @@ Version with JSON-invalidating comments:
 
       // Optional. Array of groups this entity will be added to. Groups must exist.
       "groups": [
-        "first-group",
-        "second-group"
+        "example-group-0",
+        "example-group-1"
       ]
     }
   ]
