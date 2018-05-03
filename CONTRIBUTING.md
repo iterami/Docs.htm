@@ -19,14 +19,14 @@ Table of Contents:
 ---
 
 ### Issues
-* If your issue is about something handled by [iterami/common](https://github.com/iterami/common), it should be reported there instead of in a repository that only requires it.
+* Read [iterami Issue Standards](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md).
 * Issues can be made about anything.
-* Issues can either be labeled as `bug` or `enhancement` and must not be assigned to anybody.
+* If your issue is about something handled by [iterami/common](https://github.com/iterami/common), it should be reported there instead of in a repository that only requires it.
 
 ---
 
 ### Pull Requests
+* Read [iterami Pull Request Standards](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md).
+* Pull requests can be made about anything.
 * Make sure your contribution complies with the license choice and code standards of the repository you wish you contribute to.
 * Open a pull request for the repository you wish to contribute to.
-* Pull requests can be made about anything.
-* Pull requests must not be labled or assigned to anybody.

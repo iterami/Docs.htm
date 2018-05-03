@@ -3,6 +3,10 @@ iterami/Documentation.htm
 
 * Core Repositories:
   * [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)
+* Standards:
+  * [Issues](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md)
+  * [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md)
+  * [Repositories](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/repositories.md)
 * Repositories:
   * [iterami/Chrome-iterami](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chrome-iterami.md)
   * [iterami/Drupal-callipepla](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/drupal-callipepla.md)
