@@ -18,6 +18,10 @@ Table of Contents:
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
+  "groups": [
+    "first-group",
+    "second-group"
+  ],
   "entities": [
     {
       "alpha": 1,
@@ -65,7 +69,14 @@ Version with JSON-invalidating comments:
   // Optional clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
 
-  // Required array of any number of entities.
+  // Optional array of groups to create.
+  // Do not include automatically created groups, such as "_depthfalse".
+  "groups": [
+    "first-group",
+    "second-group"
+  ],
+
+  // Required array of entities to create.
   "entities": [
     {
       // Optional global vertex alpha value, between 0 and 1 inclusive.
