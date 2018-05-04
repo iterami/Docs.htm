@@ -6,7 +6,7 @@ iterami GitHub Repository Standards
 * [Issues](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md) are enabled.
 * Projects are disabled.
 * [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md) are enabled.
-* Repositories should include prefixes and suffixes to indicate their project types:
+* Repository names should include prefixes and suffixes to indicate their project types:
   * Assembly repositories should use the `.asm` suffix.
   * C++ repositories should use the `.cpp` suffix.
   * Chrome extension repositories should use the `Chrome-` prefix.
