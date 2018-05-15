@@ -64,7 +64,6 @@ entity | YES       |
 Arg         | Required? | Notes
 ------------|-----------|------
 colorData   | YES       |
-indexData   | YES       |
 normalData  | YES       |
 textureData | YES       |
 vertexData  | YES       |
