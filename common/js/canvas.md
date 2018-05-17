@@ -12,7 +12,6 @@
 * [`canvas_resize()`](#canvas_resize)
 * [`canvas_setmode(args)`](#canvas_setmodeargs)
 * [`canvas_setproperties(args)`](#canvas_setpropertiesargs)
-* [`canvas_uri(args)`](#canvas_uriargs)
 
 ---
 
@@ -109,14 +108,3 @@ newgame | NO        |
 Arg        | Required? | Notes
 -----------|-----------|------
 properties | YES       |
-
----
-
-### `canvas_uri(args)`
-* Returns the buffer converted to a data URI.
-
-Arg     | Required? | Notes
---------|-----------|------
-id      | NO        |
-quality | NO        |
-type    | NO        |

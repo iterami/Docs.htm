@@ -107,6 +107,7 @@
 * [`core_ui_update(args)`](#core_ui_updateargs)
 * [`core_uid_create()`](#core_uid_create)
 * [`core_uid()`](#core_uid)
+* [`core_uri(args)`](#core_uriargs)
 * [`core_vendor_prefix(args)`](#core_vendor_prefixargs)
 
 ---
@@ -1045,6 +1046,17 @@ var  | YES       |
 Arg | Required? | Notes
 ----|-----------|------
 ids | YES       |
+
+---
+
+### `core_uri(args)`
+* Returns an element converted to a data URI.
+
+Arg     | Required? | Notes
+--------|-----------|------
+id      | NO        |
+quality | NO        |
+type    | NO        |
 
 ---
 

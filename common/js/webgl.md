@@ -28,7 +28,6 @@
 * [`webgl_skybox(args)`](#webgl_skyboxargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_texture_set_todo(args)`](#webgl_texture_set_todoargs)
-* [`webgl_uri(args)`](#webgl_uriargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
 
@@ -272,17 +271,6 @@ image    | NO        |
 ### `webgl_texture_set_todo(args)`
 * Used by `webgl_texture_set(args)` and not called directly.
 * Binds a texture once the image `src` is finished loading.
-
----
-
-### `webgl_uri(args)`
-* Returns the buffer converted to a data URI.
-
-Arg     | Required? | Notes
---------|-----------|------
-id      | NO        |
-quality | NO        |
-type    | NO        |
 
 ---
 
