@@ -14,6 +14,7 @@
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
+* [`webgl_load_level(args)`](#webgl_load_levelargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
@@ -157,6 +158,15 @@ fog                  | NO        |
 gravity-acceleration | NO        |
 gravity-max          | NO        |
 speed                | NO        |
+
+---
+
+### `webgl_load_level(args)`
+* Parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file and loads it.
+
+Arg  | Required? | Notes
+-----|-----------|------
+json | YES       |
 
 ---
 
