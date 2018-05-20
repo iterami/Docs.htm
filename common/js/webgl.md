@@ -7,6 +7,7 @@
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
 * [`webgl_camera_first()`](#webgl_camera_first)
 * [`webgl_camera_move(args)`](#webgl_camera_moveargs)
+* [`webgl_camera_reset()`](#webgl_camera_reset)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_draw()`](#webgl_draw)
@@ -93,6 +94,11 @@ Arg    | Required? | Notes
 speed  | NO        |
 strafe | NO        |
 y      | NO        |
+
+---
+
+### `webgl_camera_reset()`
+* Resets the rotation and translation of the `_webgl-camera` entity.
 
 ---
 
