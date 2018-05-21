@@ -14,10 +14,22 @@ Table of Contents:
 
 ```json
 {
+  "ambient-blue": 1,
+  "ambient-green": 1,
+  "ambient-red": 1,
+  "camera": "free",
   "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
+  "directional-blue": 1,
+  "directional-green": 1,
+  "directional-red": 1,
+  "directional-vector": false,
+  "fog": -0.0001,
+  "gravity-acceleration": -0.05,
+  "gravity-max": -1,
+  "speed": .1,
   "groups": [
     "example-group-0",
     "example-group-1"
@@ -57,6 +69,21 @@ Table of Contents:
 Version with JSON-invalidating comments:
 ```
 {
+  // Optional ambient light alpha value, between 0 and 1 inclusive.
+  "ambient-alpha": 1,
+
+  // Optional ambient light blue value, between 0 and 1 inclusive.
+  "ambient-blue": 1,
+
+  // Optional ambient light green value, between 0 and 1 inclusive.
+  "ambient-green": 1,
+
+  // Optional ambient light red value, between 0 and 1 inclusive.
+  "ambient-red": 1,
+
+  // Optional camera type.
+  "camera": "free",
+
   // Optional clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
 
@@ -68,6 +95,30 @@ Version with JSON-invalidating comments:
 
   // Optional clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
+
+  // Optional directional light alpha value, between 0 and 1 inclusive.
+  "directional-alpha": 1,
+
+  // Optional directional light blue value, between 0 and 1 inclusive.
+  "directional-blue": 1,
+
+  // Optional directional light green value, between 0 and 1 inclusive.
+  "directional-green": 1,
+
+  // Optional directional light red value, between 0 and 1 inclusive.
+  "directional-red": 1,
+
+  // Optional fog value.
+  "fog": -0.0001,
+
+  // Optional gravity acceleration value.
+  "gravity-acceleration": -0.05,
+
+  // Optional maxiumum downward terminal velocity.
+  "gravity-max": -0.05,
+
+  // Optional camera speed.
+  "speed": .1,
 
   // Optional array of groups to create.
   // Do not include automatically created groups, such as "_depthfalse".
