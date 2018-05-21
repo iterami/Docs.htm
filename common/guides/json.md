@@ -38,11 +38,20 @@ Table of Contents:
     {
       "alpha": 1,
       "billboard": false,
+      "collides": false,
+      "collision": false,
       "draw": true,
       "draw-type": "TRIANGLE_STRIP",
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "gravity": false,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
+      "scale-x": 1,
+      "scale-y": 1,
+      "scale-z": 1,
       "translate-x": 0,
       "translate-y": -1,
       "translate-z": 0,
@@ -136,16 +145,30 @@ Version with JSON-invalidating comments:
       // Optional. If rotate-y will change to make entity face the camera.
       "billboard": false,
 
+      // Optional. If this entity collides with other entities that have collision.
+      "collides": false,
+
+      // Optional. If this entity can be collided with by other entities that collide.
+      "collides": false,
+
       // Optional. If the entity should be drawn or not.
       "draw": true,
 
       // Optional. How the vertices should be drawn.
       "draw-type": "TRIANGLE_STRIP",
 
+      // Optional. If this entity is affected by gravity.
+      "gravity": false,
+
       // Optional rotation of entity in degrees between 0 inclusive and 360 exclusive.
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
+
+      // Optional scale of entity. `1 = 100%`.
+      "scale-x": 1,
+      "scale-y": 1,
+      "scale-z": 1,
 
       // Optional translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
