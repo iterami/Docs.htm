@@ -17,7 +17,8 @@ Table of Contents:
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
-  "camera": "free",
+  "camera-speed": 0.1,
+  "camera-type": "free",
   "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
@@ -29,7 +30,6 @@ Table of Contents:
   "fog": -0.0001,
   "gravity-acceleration": -0.05,
   "gravity-max": -1,
-  "speed": .1,
   "groups": [
     "example-group-0",
     "example-group-1"
@@ -90,8 +90,11 @@ Version with JSON-invalidating comments:
   // Optional ambient light red value, between 0 and 1 inclusive.
   "ambient-red": 1,
 
+  // Optional camera speed.
+  "camera-speed": 0.1,
+
   // Optional camera type.
-  "camera": "free",
+  "camera-type": "free",
 
   // Optional clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
@@ -125,9 +128,6 @@ Version with JSON-invalidating comments:
 
   // Optional maxiumum downward terminal velocity.
   "gravity-max": -0.05,
-
-  // Optional camera speed.
-  "speed": .1,
 
   // Optional array of groups to create.
   // Do not include automatically created groups, such as "_depthfalse".

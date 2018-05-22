@@ -23,7 +23,6 @@
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
 * [`webgl_resize()`](#webgl_resize)
-* [`webgl_setmode(args)`](#webgl_setmodeargs)
 * [`webgl_setcanvasproperties(args)`](#webgl_setcanvaspropertiesargs)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_update()`](#webgl_shader_update)
@@ -227,16 +226,6 @@ shaderlist | YES       |
 ### `webgl_resize()`
 * Handles resizing the canvas to current window proportions.
 * Resets canvas and WebGL properties that are lost upon resize, including resetting the perspective matrix.
-
----
-
-### `webgl_setmode(args)`
-* Mode reset and mode content loading function.
-
-Arg     | Required? | Notes
---------|-----------|------
-mode    | NO        |
-newgame | NO        |
 
 ---
 
