@@ -154,10 +154,10 @@ ambient-blue         | NO        |
 ambient-green        | NO        |
 ambient-red          | NO        |
 camera               | NO        |
-clear-alpha          | NO        |
-clear-blue           | NO        |
-clear-green          | NO        |
-clear_red            | NO        |
+clearcolor-alpha     | NO        |
+clearcolor-blue      | NO        |
+clearcolor-green     | NO        |
+clearcolor-red       | NO        |
 contextmenu          | NO        |
 fog                  | NO        |
 gravity-acceleration | NO        |
