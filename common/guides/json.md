@@ -3,12 +3,14 @@
 
 Table of Contents:
 * [3D JSON Level Format](#3d-json-level-format)
+  * [Commented Explanation](#commented-explanation)
+  * [Commented Character Properties](#commented-character-properties)
 
 ---
 
 ### 3D JSON Level Format
 
-* Must be valid JSON.
+* Must be valid JSON. Levels listed below with comments are not valid.
 * Must follow the order of the example below.
 * Optional properties can be removed.
 
@@ -17,8 +19,7 @@ Table of Contents:
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
-  "camera-speed": 0.1,
-  "camera-type": "free",
+  "character": false,
   "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
@@ -75,7 +76,9 @@ Table of Contents:
   ]
 }
 ```
-Version with JSON-invalidating comments:
+
+#### Commented Explanation
+
 ```
 {
   // Optional ambient light alpha value, between 0 and 1 inclusive.
@@ -90,11 +93,9 @@ Version with JSON-invalidating comments:
   // Optional ambient light red value, between 0 and 1 inclusive.
   "ambient-red": 1,
 
-  // Optional camera speed.
-  "camera-speed": 0.1,
-
-  // Optional camera type.
-  "camera-type": "free",
+  // Optional character properties, or false.
+  // The [Character Properties](#character-properties) section has more info.
+  "character": false,
 
   // Optional clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
@@ -160,7 +161,7 @@ Version with JSON-invalidating comments:
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
-      // Optional rotation of entity in degrees between 0 inclusive and 360 exclusive.
+      // Optional rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -202,4 +203,27 @@ Version with JSON-invalidating comments:
     }
   ]
 }
+```
+
+#### Commented Character Properties
+
+```
+  // Optional character properties that isn't false.
+  "character": {
+    // Optional rotation of camera in degrees between 0 and 359 inclusive.
+    "camera-rotate-x": 0,
+    "camera-rotate-y": 0,
+    "camera-rotate-z": 0,
+
+    // Optional camera movement speed.
+    "camera-speed": 0.1,
+
+    // Optional translation of camera relative to `0, 0, 0`.
+    "camera-translate-x": 0,
+    "camera-translate-y": 0,
+    "camera-translate-z": 0,
+
+    // Optional camera type.
+    "camera-type": "free",
+  },
 ```
