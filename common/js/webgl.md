@@ -36,12 +36,11 @@
 
 ### `webgl_attach(args)`
 * Used to attach one entity to another entity and share a position with optional offset.
-* Default entity is the camera.
 
 Arg      | Required? | Notes
 ---------|-----------|-----------------------------------------
 base     | YES       | ID of the entity being attached to.
-entity   | NO        | ID of the entity that is being attached.
+entity   | YES       | ID of the entity that is being attached.
 offset-x | NO        | Number of pixels of x-axis offset.
 offset-y | NO        | Number of pixels of y-axis offset.
 offset-z | NO        | Number of pixels of z-axis offset.
