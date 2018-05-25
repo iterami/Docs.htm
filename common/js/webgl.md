@@ -17,6 +17,7 @@
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_load_level(args)`](#webgl_load_levelargs)
+* [`webgl_load_level_init(args)`](#webgl_load_level_initargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
@@ -181,11 +182,22 @@ camera-type        | NO        |
 ---
 
 ### `webgl_load_level(args)`
-* Parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file and loads it.
+* Figures out how to parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
-Arg  | Required? | Notes
------|-----------|------
-json | YES       |
+Arg       | Required? | Notes
+----------|-----------|------
+character | NO        |
+json      | YES       |
+
+---
+
+### `webgl_load_level_init(args)`
+* Loads a parsed (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | YES       |
+json      | YES       |
 
 ---
 
