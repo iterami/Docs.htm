@@ -110,7 +110,7 @@ Table of Contents:
   "ambient-red": 1,
 
   // Optional character properties, or false.
-  // The [Character Properties](#character-properties) section has more info.
+  // The Character Properties section has more info.
   "character": false,
 
   // Optional clear color alpha value, between 0 and 1 inclusive.
