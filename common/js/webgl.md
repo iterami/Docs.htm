@@ -15,6 +15,7 @@
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
+* [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_load_level(args)`](#webgl_load_levelargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
@@ -145,14 +146,13 @@ color | YES       |
 ---
 
 ### `webgl_init(args)`
-* Sets up various aspects of projects that use full screen WebGL.
+* Sets up WebGL.
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
 ambient-blue         | NO        |
 ambient-green        | NO        |
 ambient-red          | NO        |
-camera               | NO        |
 clearcolor-alpha     | NO        |
 clearcolor-blue      | NO        |
 clearcolor-green     | NO        |
@@ -161,7 +161,22 @@ contextmenu          | NO        |
 fog                  | NO        |
 gravity-acceleration | NO        |
 gravity-max          | NO        |
-speed                | NO        |
+
+---
+
+### `webgl_init_character(args)`
+* Sets up the character and camera.
+
+Arg                | Required? | Notes
+-------------------|-----------|------
+camera-rotate-x    | NO        |
+camera-rotate-y    | NO        |
+camera-rotate-z    | NO        |
+camera-speed       | NO        |
+camera-translate-x | NO        |
+camera-translate-x | NO        |
+camera-translate-x | NO        |
+camera-type        | NO        |
 
 ---
 
