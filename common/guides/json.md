@@ -208,7 +208,7 @@ Table of Contents:
 #### Commented Character Properties
 
 ```
-  // Optional character properties that isn't false.
+  // Optional non-false `character` and its properties.
   "character": {
     // Optional rotation of camera in degrees between 0 and 359 inclusive.
     "camera-rotate-x": 0,
