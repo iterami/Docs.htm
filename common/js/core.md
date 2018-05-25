@@ -117,10 +117,10 @@
 
 Arg  | Required? | Notes
 -----|-----------|------
-data | NO        |
-todo | YES       |
-type | NO        |
-url  | YES       |
+data | false     |
+todo | true      |
+type | false     |
+url  | true      |
 
 ---
 
@@ -129,8 +129,8 @@ url  | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-args     | YES       |
-defaults | YES       |
+args     | true      |
+defaults | true      |
 
 ---
 
@@ -138,7 +138,7 @@ defaults | YES       |
 
 Arg    | Required? | Notes
 -------|-----------|------
-audios | YES       |
+audios | true      |
 
 ---
 
@@ -146,8 +146,8 @@ audios | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | NO        |
-properties | NO        |
+id         | false     |
+properties | false     |
 
 ---
 
@@ -155,7 +155,7 @@ properties | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -163,8 +163,8 @@ id  | YES       |
 
 Arg               | Required? | Notes
 ------------------|-----------|------
-id                | YES       |
-volume-multiplier | NO        |
+id                | true      |
+volume-multiplier | false     |
 
 ---
 
@@ -172,8 +172,8 @@ volume-multiplier | NO        |
 
 Arg               | Required? | Notes
 ------------------|-----------|------
-id                | YES       |
-volume-multiplier | NO        |
+id                | true      |
+volume-multiplier | false     |
 
 ---
 
@@ -181,8 +181,8 @@ volume-multiplier | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-id   | YES       |
-when | NO        |
+id   | true      |
+when | false     |
 
 ---
 
@@ -190,7 +190,7 @@ when | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-when | NO        |
+when | false     |
 
 ---
 
@@ -199,8 +199,8 @@ when | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-args | NO        |
-todo | YES       |
+args | false     |
+todo | true      |
 
 ---
 
@@ -210,11 +210,11 @@ todo | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-max      | YES       |
-min      | YES       |
-value    | YES       |
-wrap     | NO        |
+decimals | false     |
+max      | true      |
+min      | true      |
+value    | true      |
+wrap     | false     |
 
 ---
 
@@ -223,7 +223,7 @@ wrap     | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-date | NO        |
+date | false     |
 
 ---
 
@@ -232,8 +232,8 @@ date | NO        |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-degrees  | YES       |
+decimals | false     |
+degrees  | true      |
 
 ---
 
@@ -242,11 +242,11 @@ degrees  | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-x0       | YES       |
-x1       | YES       |
-y0       | YES       |
-y1       | YES       |
+decimals | false     |
+x0       | true      |
+x1       | true      |
+y0       | true      |
+y1       | true      |
 
 ---
 
@@ -255,9 +255,9 @@ y1       | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | NO        |
-properties | NO        |
-types      | NO        |
+id         | false     |
+properties | false     |
+types      | false     |
 
 ---
 
@@ -266,8 +266,8 @@ types      | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-id   | YES       |
-type | YES       |
+id   | true      |
+type | true      |
 
 ---
 
@@ -276,8 +276,8 @@ type | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-delete-empty | NO        |
-entities     | YES       |
+delete-empty | false     |
+entities     | true      |
 
 ---
 
@@ -286,8 +286,8 @@ entities     | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-delete-empty | NO        |
-group        | NO        |
+delete-empty | false     |
+group        | false     |
 
 ---
 
@@ -296,11 +296,11 @@ group        | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-default    | NO        |
-groups     | NO        |
-properties | NO        |
-todo       | NO        |
-type       | YES       |
+default    | false     |
+groups     | false     |
+properties | false     |
+todo       | false     |
+type       | true      |
 
 ---
 
@@ -316,12 +316,12 @@ type       | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-beforeunload | NO        |
-clearkeys    | NO        |
-clearmouse   | NO        |
-elements     | NO        |
-keybinds     | NO        |
-mousebinds   | NO        |
+beforeunload | false     |
+clearkeys    | false     |
+clearmouse   | false     |
+elements     | false     |
+keybinds     | false     |
+mousebinds   | false     |
 
 ---
 
@@ -344,12 +344,12 @@ mousebinds   | NO        |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-length   | YES       |
-x0       | YES       |
-x1       | YES       |
-y0       | YES       |
-y1       | YES       |
+decimals | false     |
+length   | true      |
+x0       | true      |
+x1       | true      |
+y0       | true      |
+y1       | true      |
 
 ---
 
@@ -358,8 +358,8 @@ y1       | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-entities | YES       |
-group    | YES       |
+entities | true      |
+group    | true      |
 
 ---
 
@@ -368,9 +368,9 @@ group    | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-pretodo | NO        |
-group   | YES       |
-todo    | YES       |
+pretodo | false     |
+group   | true      |
+todo    | true      |
 
 ---
 
@@ -379,9 +379,9 @@ todo    | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-entities | YES       |
-from     | YES       |
-to       | YES       |
+entities | true      |
+from     | true      |
+to       | true      |
 
 ---
 
@@ -390,9 +390,9 @@ to       | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-delete-empty | NO        |
-entities     | YES       |
-group        | YES       |
+delete-empty | false     |
+entities     | true      |
+group        | true      |
 
 ---
 
@@ -401,8 +401,8 @@ group        | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-delete-empty | NO        |
-entities     | YES       |
+delete-empty | false     |
+entities     | true      |
 
 ---
 
@@ -418,8 +418,8 @@ entities     | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-default | NO        |
-var     | NO        |
+default | false     |
+var     | false     |
 
 ---
 
@@ -427,12 +427,12 @@ var     | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-block  | NO        |
-event  | YES       |
-key    | YES       |
-object | YES       |
-state  | NO        |
-todo   | NO        |
+block  | false     |
+event  | true      |
+key    | true      |
+object | true      |
+state  | false     |
+todo   | false     |
 
 ---
 
@@ -477,7 +477,7 @@ todo   | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-hex | YES       |
+hex | true      |
 
 ---
 
@@ -486,9 +486,9 @@ hex | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-parent     | NO        |
-properties | NO        |
-type       | NO        |
+parent     | false     |
+properties | false     |
+type       | false     |
 
 ---
 
@@ -497,7 +497,7 @@ type       | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-string | YES       |
+string | true      |
 
 ---
 
@@ -506,8 +506,8 @@ string | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | YES       |
-properties | NO        |
+id         | true      |
+properties | false     |
 
 ---
 
@@ -516,9 +516,9 @@ properties | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-id   | YES       |
-src  | YES       |
-todo | NO        |
+id   | true      |
+src  | true      |
+todo | false     |
 
 ---
 
@@ -532,7 +532,7 @@ todo | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -541,13 +541,13 @@ id  | YES       |
 
 Arg            | Required? | Notes
 ---------------|-----------|------
-todo           | YES       |
-animationFrame | NO        |
-clear          | NO        |
-id             | NO        |
-interval       | NO        |
-paused         | NO        |
-set            | NO        |
+todo           | true      |
+animationFrame | false     |
+clear          | false     |
+id             | false     |
+interval       | false     |
+paused         | false     |
+set            | false     |
 
 ---
 
@@ -556,7 +556,7 @@ set            | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -570,7 +570,7 @@ id  | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -584,7 +584,7 @@ id  | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -597,8 +597,8 @@ id  | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-clear    | NO        |
-keybinds | YES       |
+clear    | false     |
+keybinds | true      |
 
 ---
 
@@ -607,8 +607,8 @@ keybinds | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
-to  | YES       |
+id  | true      |
+to  | true      |
 
 ---
 
@@ -617,8 +617,8 @@ to  | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
-to  | YES       |
+id  | true      |
+to  | true      |
 
 ---
 
@@ -632,7 +632,7 @@ to  | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-ids | YES       |
+ids | true      |
 
 ---
 
@@ -641,7 +641,7 @@ ids | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -650,8 +650,8 @@ id  | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-dimensions | YES       |
-id         | YES       |
+dimensions | true      |
+id         | true      |
 
 ---
 
@@ -660,8 +660,8 @@ id         | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-id       | YES       |
+decimals | false     |
+id       | true      |
 
 ---
 
@@ -670,8 +670,8 @@ id       | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-dimensions | YES       |
-id         | YES       |
+dimensions | true      |
+id         | true      |
 
 ---
 
@@ -679,8 +679,8 @@ id         | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-clear      | NO        |
-mousebinds | YES       |
+clear      | false     |
+mousebinds | true      |
 
 ---
 
@@ -689,12 +689,12 @@ mousebinds | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-decimals   | NO        |
-multiplier | NO        |
-x0         | YES       |
-x1         | YES       |
-y0         | YES       |
-y1         | YES       |
+decimals   | false     |
+multiplier | false     |
+x0         | true      |
+x1         | true      |
+y0         | true      |
+y1         | true      |
 
 ---
 
@@ -703,9 +703,9 @@ y1         | YES       |
 
 Arg   | Required? | Notes
 ------|-----------|------
-dx    | YES       |
-dy    | YES       |
-speed | YES       |
+dx    | true      |
+dy    | true      |
+speed | true      |
 
 ---
 
@@ -714,11 +714,11 @@ speed | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-angle      | YES       |
-decimals   | NO        |
-multiplier | NO        |
-speed      | NO        |
-strafe     | NO        |
+angle      | true      |
+decimals   | false     |
+multiplier | false     |
+speed      | false     |
+strafe     | false     |
 
 ---
 
@@ -727,10 +727,10 @@ strafe     | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-x0  | YES       |
-x1  | YES       |
-y0  | YES       |
-y1  | YES       |
+x0  | true      |
+x1  | true      |
+y0  | true      |
+y1  | true      |
 
 ---
 
@@ -739,8 +739,8 @@ y1  | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-radians  | YES       |
+decimals | false     |
+radians  | true      |
 
 ---
 
@@ -749,7 +749,7 @@ radians  | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-chance  | NO        |
+chance  | false     |
 
 ---
 
@@ -763,8 +763,8 @@ chance  | NO        |
 
 Arg  | Required? | Notes
 -----|-----------|------
-max  | NO        |
-todo | NO        |
+max  | false     |
+todo | false     |
 
 ---
 
@@ -773,7 +773,7 @@ todo | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-object | YES       |
+object | true      |
 
 ---
 
@@ -782,7 +782,7 @@ object | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-multiplier | NO        |
+multiplier | false     |
 
 ---
 
@@ -796,8 +796,8 @@ multiplier | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-characters | NO        |
-length     | NO        |
+characters | false     |
+length     | false     |
 
 ---
 
@@ -806,14 +806,14 @@ length     | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-h0  | YES       |
-h1  | YES       |
-w0  | YES       |
-w1  | YES       |
-x0  | YES       |
-x1  | YES       |
-y0  | YES       |
-y1  | YES       |
+h0  | true      |
+h1  | true      |
+w0  | true      |
+w1  | true      |
+x0  | true      |
+x1  | true      |
+y0  | true      |
+y1  | true      |
 
 ---
 
@@ -822,8 +822,8 @@ y1  | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-patterns | YES       |
-string   | YES       |
+patterns | true      |
+string   | true      |
 
 ---
 
@@ -833,20 +833,20 @@ string   | YES       |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-title        | YES       |
-audios       | NO        |
-beforeunload | NO        |
-entities     | NO        |
-github       | NO        |
-globals      | NO        |
-images       | NO        |
-info         | NO        |
-keybinds     | NO        |
-menu         | NO        |
-mousebinds   | NO        |
-storage      | NO        |
-storage-menu | NO        |
-ui           | NO        |
+title        | true      |
+audios       | false     |
+beforeunload | false     |
+entities     | false     |
+github       | false     |
+globals      | false     |
+images       | false     |
+info         | false     |
+keybinds     | false     |
+menu         | false     |
+mousebinds   | false     |
+storage      | false     |
+storage-menu | false     |
+ui           | false     |
 
 ---
 
@@ -854,7 +854,7 @@ ui           | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | NO        |
+id  | false     |
 
 ---
 
@@ -863,8 +863,8 @@ id  | NO        |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-decimals | NO        |
-number   | YES       |
+decimals | false     |
+number   | true      |
 
 ---
 
@@ -874,9 +874,9 @@ number   | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-array   | YES       |
-reverse | NO        |
-todo    | YES       |
+array   | true      |
+reverse | false     |
+todo    | true      |
 
 ---
 
@@ -885,8 +885,8 @@ todo    | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-array   | YES       |
-reverse | NO        |
+array   | true      |
+reverse | false     |
 
 ---
 
@@ -895,7 +895,7 @@ reverse | NO        |
 
 Arg     | Required? | Notes
 --------|-----------|------
-array   | YES       |
+array   | true      |
 
 ---
 
@@ -904,9 +904,9 @@ array   | YES       |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-array    | YES       |
-reverse  | NO        |
-property | YES       |
+array    | true      |
+reverse  | false     |
+property | true      |
 
 ---
 
@@ -915,8 +915,8 @@ property | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-array   | YES       |
-reverse | NO        |
+array   | true      |
+reverse | false     |
 
 ---
 
@@ -925,8 +925,8 @@ reverse | NO        |
 
 Arg     | Required? | Notes
 --------|-----------|------
-prefix  | NO        |
-storage | YES       |
+prefix  | false     |
+storage | true      |
 
 ---
 
@@ -935,8 +935,8 @@ storage | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-element | YES       |
-key     | YES       |
+element | true      |
+key     | true      |
 
 ---
 
@@ -955,8 +955,8 @@ key     | YES       |
 
 Arg   | Required? | Notes
 ------|-----------|------
-key   | YES       |
-value | YES       |
+key   | true      |
+value | true      |
 
 ---
 
@@ -970,11 +970,11 @@ value | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-content | NO        |
-default | NO        |
-group   | YES       |
-id      | YES       |
-label   | NO        |
+content | false     |
+default | false     |
+group   | true      |
+id      | true      |
+label   | false     |
 
 ---
 
@@ -983,7 +983,7 @@ label   | NO        |
 
 Arg | Required? | Notes
 ----|-----------|------
-id  | YES       |
+id  | true      |
 
 ---
 
@@ -992,8 +992,8 @@ id  | YES       |
 
 Arg  | Required? | Notes
 -----|-----------|------
-date | NO        |
-diff | NO        |
+date | false     |
+diff | false     |
 
 ---
 
@@ -1007,7 +1007,7 @@ diff | NO        |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-timestamp | NO        |
+timestamp | false     |
 
 ---
 
@@ -1016,7 +1016,7 @@ timestamp | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-number | YES       |
+number | true      |
 
 ---
 
@@ -1025,8 +1025,8 @@ number | YES       |
 
 Arg  | Required? | Notes
 -----|-----------|------
-type | NO        |
-var  | YES       |
+type | false     |
+var  | true      |
 
 ---
 
@@ -1045,7 +1045,7 @@ var  | YES       |
 
 Arg | Required? | Notes
 ----|-----------|------
-ids | YES       |
+ids | true      |
 
 ---
 
@@ -1054,9 +1054,9 @@ ids | YES       |
 
 Arg     | Required? | Notes
 --------|-----------|------
-id      | NO        |
-quality | NO        |
-type    | NO        |
+id      | false     |
+quality | false     |
+type    | false     |
 
 ---
 
@@ -1065,5 +1065,5 @@ type    | NO        |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-property | YES       |
-var      | YES       |
+property | true      |
+var      | true      |

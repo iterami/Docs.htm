@@ -14,12 +14,12 @@
 
 Arg         | Required? | Notes
 ------------|-----------|------
-color       | NO        |
-frequency   | NO        |
-id          | NO        |
-length-half | NO        |
-x           | NO        |
-y           | NO        |
+color       | false     |
+frequency   | false     |
+id          | false     |
+length-half | false     |
+x           | false     |
+y           | false     |
 
 ---
 
@@ -27,13 +27,13 @@ y           | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-color-base | NO        |
-color-leaf | NO        |
-half-base  | NO        |
-half-leaf  | NO        |
-id         | NO        |
-x          | NO        |
-y          | NO        |
+color-base | false     |
+color-leaf | false     |
+half-base  | false     |
+half-leaf  | false     |
+id         | false     |
+x          | false     |
+y          | false     |
 
 ---
 
@@ -41,17 +41,17 @@ y          | NO        |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-collision | NO        |
-color     | NO        |
-dx        | NO        |
-dy        | NO        |
-dz        | NO        |
-exclude   | NO        |
-id        | NO        |
-side      | NO        |
-x         | NO        |
-y         | NO        |
-z         | NO        |
+collision | false     |
+color     | false     |
+dx        | false     |
+dy        | false     |
+dz        | false     |
+exclude   | false     |
+id        | false     |
+side      | false     |
+x         | false     |
+y         | false     |
+z         | false     |
 
 ---
 
@@ -59,15 +59,15 @@ z         | NO        |
 
 Arg         | Required? | Notes
 ------------|-----------|------
-color       | NO        |
-id          | NO        |
-length      | NO        |
-length-step | NO        |
-width       | NO        |
-width-step  | NO        |
-x           | NO        |
-y           | NO        |
-z           | NO        |
+color       | false     |
+id          | false     |
+length      | false     |
+length-step | false     |
+width       | false     |
+width-step  | false     |
+x           | false     |
+y           | false     |
+z           | false     |
 
 ---
 
@@ -75,16 +75,16 @@ z           | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-billboard  | NO        |
-color-base | NO        |
-color-leaf | NO        |
-dx         | NO        |
-dy         | NO        |
-dz         | NO        |
-id         | NO        |
-x          | NO        |
-y          | NO        |
-z          | NO        |
+billboard  | false     |
+color-base | false     |
+color-leaf | false     |
+dx         | false     |
+dy         | false     |
+dz         | false     |
+id         | false     |
+x          | false     |
+y          | false     |
+z          | false     |
 
 ---
 
@@ -92,13 +92,13 @@ z          | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-collision  | NO        |
-color-base | NO        |
-color-leaf | NO        |
-dx         | NO        |
-dy         | NO        |
-dz         | NO        |
-id         | NO        |
-x          | NO        |
-y          | NO        |
-z          | NO        |
+collision  | false     |
+color-base | false     |
+color-leaf | false     |
+dx         | false     |
+dy         | false     |
+dz         | false     |
+id         | false     |
+x          | false     |
+y          | false     |
+z          | false     |

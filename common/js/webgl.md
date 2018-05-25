@@ -41,11 +41,11 @@
 
 Arg      | Required? | Notes
 ---------|-----------|-----------------------------------------
-base     | YES       | ID of the entity being attached to.
-entity   | YES       | ID of the entity that is being attached.
-offset-x | NO        | Number of pixels of x-axis offset.
-offset-y | NO        | Number of pixels of y-axis offset.
-offset-z | NO        | Number of pixels of z-axis offset.
+base     | true      | ID of the entity being attached to.
+entity   | true      | ID of the entity that is being attached.
+offset-x | false     | Number of pixels of x-axis offset.
+offset-y | false     | Number of pixels of y-axis offset.
+offset-z | false     | Number of pixels of z-axis offset.
 
 ---
 
@@ -54,8 +54,8 @@ offset-z | NO        | Number of pixels of z-axis offset.
 
 Arg    | Required? | Notes
 -------|-----------|------
-axes   | NO        |
-entity | YES       |
+axes   | false     |
+entity | true      |
 
 ---
 
@@ -64,10 +64,10 @@ entity | YES       |
 
 Arg         | Required? | Notes
 ------------|-----------|------
-colorData   | YES       |
-normalData  | YES       |
-textureData | YES       |
-vertexData  | YES       |
+colorData   | true      |
+normalData  | true      |
+textureData | true      |
+vertexData  | true      |
 
 ---
 
@@ -76,8 +76,8 @@ vertexData  | YES       |
 
 Arg  | Required? | Notes
 -----|-----------|------
-data | YES       |
-type | NO        |
+data | true      |
+type | false     |
 
 ---
 
@@ -91,9 +91,9 @@ type | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-speed  | NO        |
-strafe | NO        |
-y      | NO        |
+speed  | false     |
+strafe | false     |
+y      | false     |
 
 ---
 
@@ -107,10 +107,10 @@ y      | NO        |
 
 Arg   | Required? | Notes
 ------|-----------|------
-x     | NO        |
-xlock | NO        |
-y     | NO        |
-z     | NO        |
+x     | false     |
+xlock | false     |
+y     | false     |
+z     | false     |
 
 ---
 
@@ -119,7 +119,7 @@ z     | NO        |
 
 Arg   | Required? | Notes
 ------|-----------|------
-color | YES       |
+color | true      |
 
 ---
 
@@ -151,17 +151,17 @@ color | YES       |
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
-ambient-blue         | NO        |
-ambient-green        | NO        |
-ambient-red          | NO        |
-clearcolor-alpha     | NO        |
-clearcolor-blue      | NO        |
-clearcolor-green     | NO        |
-clearcolor-red       | NO        |
-contextmenu          | NO        |
-fog                  | NO        |
-gravity-acceleration | NO        |
-gravity-max          | NO        |
+ambient-blue         | false     |
+ambient-green        | false     |
+ambient-red          | false     |
+clearcolor-alpha     | false     |
+clearcolor-blue      | false     |
+clearcolor-green     | false     |
+clearcolor-red       | false     |
+contextmenu          | false     |
+fog                  | false     |
+gravity-acceleration | false     |
+gravity-max          | false     |
 
 ---
 
@@ -170,14 +170,14 @@ gravity-max          | NO        |
 
 Arg                | Required? | Notes
 -------------------|-----------|------
-camera-rotate-x    | NO        |
-camera-rotate-y    | NO        |
-camera-rotate-z    | NO        |
-camera-speed       | NO        |
-camera-translate-x | NO        |
-camera-translate-x | NO        |
-camera-translate-x | NO        |
-camera-type        | NO        |
+camera-rotate-x    | false     |
+camera-rotate-y    | false     |
+camera-rotate-z    | false     |
+camera-speed       | false     |
+camera-translate-x | false     |
+camera-translate-x | false     |
+camera-translate-x | false     |
+camera-type        | false     |
 
 ---
 
@@ -186,8 +186,8 @@ camera-type        | NO        |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-character | NO        |
-json      | YES       |
+character | false     |
+json      | true      |
 
 ---
 
@@ -196,8 +196,8 @@ json      | YES       |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-character | YES       |
-json      | YES       |
+character | true      |
+json      | true      |
 
 ---
 
@@ -218,9 +218,9 @@ json      | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-x-rotation | NO        |
-y-rotation | NO        |
-z-rotation | NO        |
+x-rotation | false     |
+y-rotation | false     |
+z-rotation | false     |
 
 ---
 
@@ -229,8 +229,8 @@ z-rotation | NO        |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-entity0id | YES       |
-entity1id | YES       |
+entity0id | true      |
+entity1id | true      |
 
 ---
 
@@ -244,8 +244,8 @@ entity1id | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | YES       |
-shaderlist | YES       |
+id         | true      |
+shaderlist | true      |
 
 ---
 
@@ -260,7 +260,7 @@ shaderlist | YES       |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-properties | YES       |
+properties | true      |
 
 ---
 
@@ -269,9 +269,9 @@ properties | YES       |
 
 Arg    | Required? | Notes
 -------|-----------|------
-id     | YES       |
-source | YES       |
-type   | YES       |
+id     | true      |
+source | true      |
+type   | true      |
 
 ---
 
@@ -285,7 +285,7 @@ type   | YES       |
 
 Arg   | Required? | Notes
 ------|-----------|------
-color | NO        |
+color | false     |
 
 ---
 
@@ -294,8 +294,8 @@ color | NO        |
 
 Arg      | Required? | Notes
 ---------|-----------|------
-entityid | YES       |
-image    | NO        |
+entityid | true      |
+image    | false     |
 
 ---
 
@@ -309,8 +309,8 @@ image    | NO        |
 
 Arg       | Required? | Notes
 ----------|-----------|------
-attribute | YES       |
-program   | YES       |
+attribute | true      |
+program   | true      |
 
 ---
 
@@ -319,5 +319,5 @@ program   | YES       |
 
 Arg         | Required? | Notes
 ------------|-----------|------
-rgbarray    | NO        |
-vertexcount | NO        |
+rgbarray    | false     |
+vertexcount | false     |

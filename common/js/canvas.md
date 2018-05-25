@@ -20,10 +20,10 @@
 
 Arg      | Required? | Notes
 ---------|-----------|-----------------------------------------
-base     | YES       | ID of the entity being attached to.
-entity   | YES       | ID of the entity that is being attached.
-offset-x | NO        | Number of pixels of x-axis offset.
-offset-y | NO        | Number of pixels of y-axis offset.
+base     | true      | ID of the entity being attached to.
+entity   | true      | ID of the entity that is being attached.
+offset-x | false     | Number of pixels of x-axis offset.
+offset-y | false     | Number of pixels of y-axis offset.
 
 ---
 
@@ -44,12 +44,12 @@ offset-y | NO        | Number of pixels of y-axis offset.
 
 Arg        | Required? | Notes
 -----------|-----------|------
-properties | NO        |
-style      | NO        |
-type       | NO        |
-vertices   | YES       |
-x          | NO        |
-y          | NO        |
+properties | false     |
+style      | false     |
+type       | false     |
+vertices   | true      |
+x          | false     |
+y          | false     |
 
 ---
 
@@ -58,11 +58,11 @@ y          | NO        |
 
 Arg    | Required? | Notes
 -------|-----------|------
-height | NO        |
-stops  | YES       |
-width  | NO        |
-x      | NO        |
-y      | NO        |
+height | false     |
+stops  | true      |
+width  | false     |
+x      | false     |
+y      | false     |
 
 ---
 
@@ -71,7 +71,7 @@ y      | NO        |
 
 Arg         | Required? | Notes
 ------------|-----------|------
-contextmenu | NO        |
+contextmenu | false     |
 
 ---
 
@@ -97,8 +97,8 @@ contextmenu | NO        |
 
 Arg     | Required? | Notes
 --------|-----------|------
-mode    | NO        |
-newgame | NO        |
+mode    | false     |
+newgame | false     |
 
 ---
 
@@ -107,4 +107,4 @@ newgame | NO        |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-properties | YES       |
+properties | true      |
