@@ -3,6 +3,7 @@
 
 Table of Contents:
 * [3D JSON Level Format](#3d-json-level-format)
+  * [Example Character Properties](#example-character-properties)
   * [Commented Explanation](#commented-explanation)
   * [Commented Character Properties](#commented-character-properties)
 
@@ -75,6 +76,21 @@ Table of Contents:
     }
   ]
 }
+```
+
+#### Example Character Properties
+
+```json
+  "character": {
+    "camera-rotate-x": 0,
+    "camera-rotate-y": 0,
+    "camera-rotate-z": 0,
+    "camera-speed": 0.1,
+    "camera-translate-x": 0,
+    "camera-translate-y": 0,
+    "camera-translate-z": 0,
+    "camera-type": "free",
+  },
 ```
 
 #### Commented Explanation
