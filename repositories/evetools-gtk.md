@@ -1,7 +1,6 @@
 [iterami/EVETools.gtk](https://github.com/iterami/EVETools.gtk) Documentation
 -----------------------------------------------------------------------------
 
-Table of Contents:
 * [Shortcuts](#shortcuts)
 * [Installation](#installation)
 * [Updating](#updating)

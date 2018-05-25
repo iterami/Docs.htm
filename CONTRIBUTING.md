@@ -1,7 +1,6 @@
 Contributing to iterami Repositories
 ------------------------------------
 
-Table of Contents:
 * [Priorities](#priorities)
 * [Issues](#issues)
 * [Pull Requests](#pull-requests)

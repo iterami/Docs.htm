@@ -1,7 +1,6 @@
 [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk) Documentation
 -----------------------------------------------------------------------------------
 
-Table of Contents:
 * [Shortcuts](#shortcuts)
 * [Installation](#installation)
 * [Updating](#updating)

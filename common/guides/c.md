@@ -1,7 +1,6 @@
 [iterami/common](https://github.com/iterami/common) C Documentation
 -------------------------------------------------------------------
 
-Table of Contents:
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)
 

@@ -1,7 +1,6 @@
 [iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk) Documentation
 ---------------------------------------------------------------------------------------------
 
-Table of Contents:
 * [Shortcuts](#shortcuts)
 * [Installation](#installation)
 * [Updating](#updating)

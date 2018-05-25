@@ -1,7 +1,6 @@
 [iterami/common](https://github.com/iterami/common) HTM Documentation
 ---------------------------------------------------------------------
 
-Table of Contents:
 * [Flowcharts](#flowcharts)
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)
