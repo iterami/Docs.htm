@@ -37,6 +37,7 @@
   ],
   "entities": [
     {
+      "id": "example-entity-0",
       "alpha": 1,
       "billboard": false,
       "collides": false,
@@ -155,6 +156,9 @@
   // Required array of entities to create.
   "entities": [
     {
+      // Optional ID.
+      "id": "example-entity-0",
+
       // Optional global vertex alpha value, between 0 and 1 inclusive.
       "alpha": 1,
 
