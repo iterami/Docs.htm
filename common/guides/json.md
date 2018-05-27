@@ -90,6 +90,8 @@
     "camera-translate-y": 0,
     "camera-translate-z": 0,
     "camera-type": "free",
+    "experience": 0,
+    "level": -1,
   },
 ```
 
@@ -244,5 +246,11 @@
 
     // Optional camera type.
     "camera-type": "free",
+
+    // Optional experience.
+    "experience": 0,
+
+    // Optional level. -1 means character is just a camera.
+    "level": -1,
   },
 ```
