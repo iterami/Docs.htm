@@ -116,8 +116,8 @@ z     | false     |
 ---
 
 ### `webgl_character_type()`
-* If character/camera doesn't exist yet, returns `false`.
-* If character/camera exists, returns level. -1 means character is just a camera.
+* If character/camera doesn't exist yet, returns `-2`.
+* If character/camera exists, returns level. `-1` means character is just a camera.
 
 ---
 
