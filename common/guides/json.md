@@ -58,16 +58,16 @@
       "translate-y": -1,
       "translate-z": 0,
       "vertex-colors": [
+        1, 1, 1, 1,
         1, 0, 0, 1,
         0, 1, 0, 1,
-        0, 0, 1, 1,
-        1, 1, 1, 1
+        0, 0, 1, 1
       ],
       "vertices": [
-        10, 0, -10, 1,
-        -10, 0, -10, 1,
-        10, 0, 10, 1,
-        -10, 0, 10, 1
+        10, -2, 10, 1,
+        10, -2, -10, 1,
+        -10, -2, -10, 1,
+        -10, -2, 10, 1
       ],
       "groups": [
         "example-group-0",
@@ -200,20 +200,20 @@
       // Required array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
       "vertex-colors": [
+        1, 1, 1, 1,
         1, 0, 0, 1,
         0, 1, 0, 1,
-        0, 0, 1, 1,
-        1, 1, 1, 1
+        0, 0, 1, 1
       ],
 
       // Required array of numbers indicating the translation of each vertex,
       //   relative to the entity translation.
       // Each row is: x, y, z, w
       "vertices": [
-        10, 0, -10, 1,
-        -10, 0, -10, 1,
-        10, 0, 10, 1,
-        -10, 0, 10, 1
+        10, -2, 10, 1,
+        10, -2, -10, 1,
+        -10, -2, -10, 1,
+        -10, -2, 10, 1
       ],
 
       // Optional. Array of groups this entity will be added to. Groups must exist.
