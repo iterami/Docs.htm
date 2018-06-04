@@ -9,7 +9,7 @@
 * [`webgl_camera_move(args)`](#webgl_camera_moveargs)
 * [`webgl_camera_reset()`](#webgl_camera_reset)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
-* [`webgl_character_type()`](#webgl_character_type)
+* [`webgl_character_level()`](#webgl_character_level)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_drawloop()`](#webgl_drawloop)
@@ -115,7 +115,7 @@ z     | false     |
 
 ---
 
-### `webgl_character_type()`
+### `webgl_character_level()`
 * If character/camera doesn't exist yet, returns `-2`.
 * If character/camera exists, returns level. `-1` means character is just a camera.
 
