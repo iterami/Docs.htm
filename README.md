@@ -2,7 +2,10 @@ iterami/Documentation.htm
 -------------------------
 
 * Core Repositories:
-  * [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)
+  * [iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md):
+    * [C](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/c.md)
+    * [HTM](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/htm.md)
+    * [JSON Level Format](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md)
 * Standards:
   * [Issues](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md)
   * [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md)
