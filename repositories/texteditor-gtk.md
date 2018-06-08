@@ -36,6 +36,8 @@ Ctrl + W         | Close Tab
 Ctrl + X         | Cut Selected
 Ctrl + Y         | Clear Undo/Redo
 Ctrl + Z         | Undo
+Ctrl + =         | Next Tab
+Ctrl + -         | Previous Tab
 Delete           | Delete
 End              | Go to Bottom
 Escape           | Hide Windows
