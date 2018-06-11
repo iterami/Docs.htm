@@ -176,16 +176,20 @@ gravity-max          | false     |
 ### `webgl_init_character(args)`
 * Sets up the character and camera.
 
-Arg                | Required? | Notes
--------------------|-----------|------
-camera-rotate-x    | false     |
-camera-rotate-y    | false     |
-camera-rotate-z    | false     |
-camera-speed       | false     |
-camera-translate-x | false     |
-camera-translate-x | false     |
-camera-translate-x | false     |
-camera-type        | false     |
+Arg                 | Required? | Notes
+--------------------|-----------|------
+camera-rotate-x     | false     |
+camera-rotate-y     | false     |
+camera-rotate-z     | false     |
+camera-speed        | false     |
+camera-translate-x  | false     |
+camera-translate-x  | false     |
+camera-translate-x  | false     |
+camera-type         | false     |
+camera-zoom-current | false     |
+camera-zoom-max     | false     |
+experience          | false     |
+level               | false     |
 
 ---
 
