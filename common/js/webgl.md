@@ -24,6 +24,7 @@
 * [`webgl_normals(args)`](#webgl_normalsargs)
 * [`webgl_normals_collision(args)`](#webgl_normals_collisionargs)
 * [`webgl_perspective()`](#webgl_perspective)
+* [`webgl_pick_color(args)`](#webgl_pick_colorargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
 * [`webgl_resize()`](#webgl_resize)
 * [`webgl_setcanvasproperties(args)`](#webgl_setcanvaspropertiesargs)
@@ -243,6 +244,16 @@ entity1id | true      |
 
 ### `webgl_perspective()`
 * Sets up the perspective matrix.
+
+---
+
+### `webgl_pick_color(args)`
+* Returns the RGBA value of the specified pixel.
+
+Arg | Required? | Notes
+----|-----------|------
+x   | true      |
+y   | true      |
 
 ---
 
