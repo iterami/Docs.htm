@@ -92,6 +92,7 @@
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
+    "entities": [],
     "experience": 0,
     "level": -1,
   },
@@ -252,6 +253,10 @@
     // Optional camera zoom current/max.
     "camera-zoom-current": 0,
     "camera-zoom-max": 0,
+
+    // Optional list of entities that should be loaded.
+    // Uses same format as level entities.
+    "entities": [],
 
     // Optional experience.
     "experience": 0,
