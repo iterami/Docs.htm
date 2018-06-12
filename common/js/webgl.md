@@ -5,7 +5,7 @@
 * [`webgl_billboard(args)`](#webgl_billboardargs)
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
-* [`webgl_camera_first()`](#webgl_camera_first)
+* [`webgl_camera_handle()`](#webgl_camera_handle)
 * [`webgl_camera_move(args)`](#webgl_camera_moveargs)
 * [`webgl_camera_reset()`](#webgl_camera_reset)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
@@ -83,8 +83,9 @@ type | false     |
 
 ---
 
-### `webgl_camera_first()`
-* Functon used as `mousemove` event by 3D projects that utilize a first-person camera.
+### `webgl_camera_handle()`
+* Functon used as `mousemove` event by 3D projects.
+* Handle first and third person cameras via the `camera-zoom-current` character property.
 
 ---
 
