@@ -9,6 +9,7 @@
 * [`webgl_camera_move(args)`](#webgl_camera_moveargs)
 * [`webgl_camera_reset()`](#webgl_camera_reset)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
+* [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_level()`](#webgl_character_level)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_draw()`](#webgl_draw)
@@ -114,6 +115,11 @@ x     | false     |
 xlock | false     |
 y     | false     |
 z     | false     |
+
+---
+
+### `webgl_camera_zoom()`
+* Functon called by bound `mousewheel` event within `mousebinds`.
 
 ---
 
