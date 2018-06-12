@@ -90,6 +90,8 @@
     "camera-translate-y": 0,
     "camera-translate-z": 0,
     "camera-type": "free",
+    "camera-zoom-current": 0,
+    "camera-zoom-max": 10,
     "experience": 0,
     "level": -1,
   },
@@ -246,6 +248,10 @@
 
     // Optional camera type.
     "camera-type": "free",
+
+    // Optional camera zoom current/max.
+    "camera-zoom-current": 0,
+    "camera-zoom-max": 0,
 
     // Optional experience.
     "experience": 0,
