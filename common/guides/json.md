@@ -167,7 +167,8 @@
       // Optional global vertex alpha value, between 0 and 1 inclusive.
       "alpha": 1,
 
-      // Optional. If rotate-y will change to make entity face the camera.
+      // Optional. If the entity will rotate based on camera rotation.
+      // Use "x", "y", or "z" to indicate which axis is used.
       "billboard": false,
 
       // Optional. If this entity collides with other entities that have collision.
