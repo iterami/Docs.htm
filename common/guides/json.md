@@ -153,7 +153,7 @@
   "gravity-max": -0.05,
 
   // Optional array of groups to create.
-  // Do not include automatically created groups, such as "_depthfalse".
+  // Do not include automatically created groups, such as "webgl".
   "groups": [
     "example-group-0",
     "example-group-1"

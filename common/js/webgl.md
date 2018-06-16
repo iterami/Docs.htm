@@ -31,7 +31,6 @@
 * [`webgl_setcanvasproperties(args)`](#webgl_setcanvaspropertiesargs)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_update()`](#webgl_shader_update)
-* [`webgl_skybox(args)`](#webgl_skyboxargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_texture_set_todo(args)`](#webgl_texture_set_todoargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
@@ -307,15 +306,6 @@ type   | true      |
 
 ### `webgl_shader_update()`
 * Recreate the shaders with updated customization values.
-
----
-
-### `webgl_skybox(args)`
-* Creates a cube around the camera that is drawn first to simulate a sky.
-
-Arg   | Required? | Notes
-------|-----------|------
-color | false     |
 
 ---
 

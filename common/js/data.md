@@ -4,6 +4,7 @@
 * [`data_canvas_fence_2d(args)`](#data_canvas_fence_2dargs)
 * [`data_canvas_tree_2d(args)`](#data_canvas_tree_2dargs)
 * [`data_webgl_cube_3d(args)`](#data_webgl_cube_3dargs)
+* [`data_webgl_skybox(args)`](#data_webgl_skyboxargs)
 * [`data_webgl_terrain_3d(args)`](#data_webgl_terrain_3dargs)
 * [`data_webgl_tree_2d(args)`](#data_webgl_tree_2dargs)
 * [`data_webgl_tree_3d(args)`](#data_webgl_tree_3dargs)
@@ -52,6 +53,15 @@ side      | false     |
 x         | false     |
 y         | false     |
 z         | false     |
+
+---
+
+### `data_webgl_skybox(args)`
+* Creates a cube around the camera that is drawn first to simulate a sky.
+
+Arg   | Required? | Notes
+------|-----------|------
+color | false     |
 
 ---
 
