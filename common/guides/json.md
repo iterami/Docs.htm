@@ -54,6 +54,7 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
+      "texture": "_default",
       "translate-x": 0,
       "translate-y": -1,
       "translate-z": 0,
@@ -195,6 +196,9 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
+
+      // Optional id of texture within webgl_textures.
+      "texture": "_default",
 
       // Optional translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
