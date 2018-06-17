@@ -170,7 +170,7 @@
       "alpha": 1,
 
       // Optional. If the entity will rotate based on camera rotation.
-      // Use "x", "y", or "z" to indicate which axis is used.
+      // Array of strings, including "x", "y", "z", or any combination.
       "billboard": false,
 
       // Optional. If this entity collides with other entities that have collision.
