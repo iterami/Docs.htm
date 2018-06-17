@@ -54,6 +54,7 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
+      "skybox": false,
       "texture": "_default",
       "translate-x": 0,
       "translate-y": -1,
@@ -196,6 +197,9 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
+
+      // Optional. If this entity should be moved from "foreground" group to "skybox" group.
+      "skybox": false,
 
       // Optional id of texture within webgl_textures.
       "texture": "_default",
