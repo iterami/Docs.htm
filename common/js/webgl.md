@@ -206,6 +206,9 @@ camera-translate-x  | false     |
 camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
+dx                  | false     |
+dy                  | false     |
+dz                  | false     |
 entities            | false     |
 experience          | false     |
 level               | false     |

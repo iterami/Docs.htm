@@ -94,6 +94,9 @@
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
+    "dx": 0,
+    "dy": 0,
+    "dz": 0,
     "entities": [],
     "experience": 0,
     "level": -1,
@@ -104,69 +107,71 @@
 
 ```
 {
-  // Optional ambient light alpha value, between 0 and 1 inclusive.
+  // Optional. Ambient light alpha value, between 0 and 1 inclusive.
   "ambient-alpha": 1,
 
-  // Optional ambient light blue value, between 0 and 1 inclusive.
+  // Optional. Ambient light blue value, between 0 and 1 inclusive.
   "ambient-blue": 1,
 
-  // Optional ambient light green value, between 0 and 1 inclusive.
+  // Optional. Ambient light green value, between 0 and 1 inclusive.
   "ambient-green": 1,
 
-  // Optional ambient light red value, between 0 and 1 inclusive.
+  // Optional. Ambient light red value, between 0 and 1 inclusive.
   "ambient-red": 1,
 
-  // Optional character properties, or false.
+  // Optional. Character properties, or false.
   // The `Commented Character Properties` section has more info.
   "character": false,
 
-  // Optional clear color alpha value, between 0 and 1 inclusive.
+  // Optional. Clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
 
-  // Optional clear color blue value, between 0 and 1 inclusive.
+  // Optional. Clear color blue value, between 0 and 1 inclusive.
   "clearcolor-blue": 0,
 
-  // Optional clear color green value, between 0 and 1 inclusive.
+  // Optional. Clear color green value, between 0 and 1 inclusive.
   "clearcolor-green": 0,
 
-  // Optional clear color red value, between 0 and 1 inclusive.
+  // Optional. Clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
 
-  // Optional directional light alpha value, between 0 and 1 inclusive.
+  // Optional. Directional light alpha value, between 0 and 1 inclusive.
   "directional-alpha": 1,
 
-  // Optional directional light blue value, between 0 and 1 inclusive.
+  // Optional. Directional light blue value, between 0 and 1 inclusive.
   "directional-blue": 1,
 
-  // Optional directional light green value, between 0 and 1 inclusive.
+  // Optional. Directional light green value, between 0 and 1 inclusive.
   "directional-green": 1,
 
-  // Optional directional light red value, between 0 and 1 inclusive.
+  // Optional. Directional light red value, between 0 and 1 inclusive.
   "directional-red": 1,
 
-  // Optional fog value.
+  // Optional. Fog value.
   "fog": -0.0001,
 
-  // Optional gravity acceleration value.
+  // Optional. Gravity acceleration value.
+  // Only affects entities with "gravity" property true.
   "gravity-acceleration": -0.05,
 
-  // Optional maxiumum downward terminal velocity.
+  // Optional. Maxiumum downward terminal velocity.
+  // Only affects entities with "gravity" property true.
   "gravity-max": -0.05,
 
-  // Optional array of groups to create.
-  // Do not include automatically created groups, such as "webgl".
+  // Optional. Array of groups to create.
+  // Do not include automatically created groups, such as "skybox".
   "groups": [
     "example-group-0",
     "example-group-1"
   ],
 
-  // Required array of entities to create.
+  // REQUIRED. Array of entities to create.
   "entities": [
     {
-      // Optional ID.
+      // Optional. Entity ID.
       "id": "example-entity-0",
 
-      // Optional global vertex alpha value, between 0 and 1 inclusive.
+      // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
       "alpha": 1,
 
       // Optional. If the entity will rotate based on camera rotation.
@@ -193,12 +198,12 @@
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
-      // Optional rotation of entity in degrees between 0 inclusive and 359 exclusive.
+      // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
 
-      // Optional scale of entity. `1 = 100%`.
+      // Optional. Scale of entity. `1 = 100%`.
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
@@ -206,15 +211,15 @@
       // Optional. If this entity should be moved from "foreground" group to "skybox" group.
       "skybox": false,
 
-      // Optional id of texture within webgl_textures.
+      // Optional. id of texture within webgl_textures.
       "texture": "_default",
 
-      // Optional translation of entity relative to `0, 0, 0`.
+      // Optional. Translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
 
-      // Required array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
+      // REQUIRED. Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
       "vertex-colors": [
         1, 1, 1, 1,
@@ -223,7 +228,7 @@
         0, 0, 1, 1
       ],
 
-      // Required array of numbers indicating the translation of each vertex,
+      // REQUIRED. Array of numbers indicating the translation of each vertex,
       //   relative to the entity translation.
       // Each row is: x, y, z, w
       "vertices": [
@@ -246,36 +251,44 @@
 #### Commented Character Properties
 
 ```
-  // Optional non-false `character` and its properties.
+  // Optional. "character" that isn't false.
   "character": {
-    // Optional rotation of camera in degrees between 0 and 359 inclusive.
+    // Optional. Rotation of camera in degrees between 0 and 359 inclusive.
     "camera-rotate-x": 0,
     "camera-rotate-y": 0,
     "camera-rotate-z": 0,
 
-    // Optional camera movement speed.
+    // Optional. Camera movement speed.
     "camera-speed": 0.1,
 
-    // Optional translation of camera relative to `0, 0, 0`.
+    // Optional. Translation of camera relative to `0, 0, 0`.
     "camera-translate-x": 0,
     "camera-translate-y": 0,
     "camera-translate-z": 0,
 
-    // Optional camera type.
+    // Optional. Camera type.
     "camera-type": "free",
 
-    // Optional camera zoom current/max.
+    // Optional. Camera zoom current and max.
+    // When current is 0, camera is in first person mode.
     "camera-zoom-current": 0,
     "camera-zoom-max": 0,
 
-    // Optional list of entities that should be loaded.
+    // Optional. Amount that is added to entity translation.
+    // Currently gets reset after every movement so players can stop.
+    "dx": 0,
+    "dy": 0,
+    "dz": 0,
+
+    // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
     // Uses same format as level entities.
     "entities": [],
 
-    // Optional experience.
+    // Optional. Current character experience.
     "experience": 0,
 
-    // Optional level. -1 means character is just a camera.
+    // Optional. Current character level.
+    // -1 means character is just a camera.
     "level": -1,
   },
 ```
