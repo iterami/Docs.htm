@@ -137,7 +137,7 @@ color | true      |
 
 ---
 
-### `webgl_normals_collision(args)`
+### `webgl_collision(args)`
 * Checks for collisions based on entity normals.
 
 Arg       | Required? | Notes
