@@ -219,7 +219,8 @@
       "translate-y": 0,
       "translate-z": 0,
 
-      // REQUIRED. Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
+      // REQUIRED if "draw" === true. Optional if "draw" === false.
+      // Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
       // Each row is: red, green, blue, alpha
       "vertex-colors": [
         1, 1, 1, 1,
