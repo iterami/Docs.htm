@@ -6,7 +6,6 @@
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
 * [`webgl_camera_handle()`](#webgl_camera_handle)
-* [`webgl_camera_move(args)`](#webgl_camera_moveargs)
 * [`webgl_camera_reset()`](#webgl_camera_reset)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
@@ -14,8 +13,9 @@
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_draw()`](#webgl_draw)
-* [`webgl_drawloop()`](#webgl_drawloop)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
+* [`webgl_drawloop()`](#webgl_drawloop)
+* [`webgl_entity_move(args)`](#webgl_entity_moveargs)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
@@ -89,17 +89,6 @@ type | false     |
 
 ---
 
-### `webgl_camera_move(args)`
-* Handles moving the camera in 3D space.
-
-Arg    | Required? | Notes
--------|-----------|------
-speed  | false     |
-strafe | false     |
-y      | false     |
-
----
-
 ### `webgl_camera_reset()`
 * Resets the rotation and translation of the `_webgl-camera` entity.
 
@@ -155,14 +144,26 @@ target    | true      |
 
 ---
 
+### `webgl_draw_entity(entity)`
+* Positions and draws an entity.
+
+---
+
 ### `webgl_drawloop()`
 * Calls `webgl_draw()` if the menu isn't open.
 * Handles animation frames via `core_interval_animationFrame()` usage.
 
 ---
 
-### `webgl_draw_entity(entity)`
-* Positions and draws an entity.
+### `webgl_entity_move(args)`
+* Handles moving an entity or the character within 3D space.
+* Maintains y position unless specifically changed.
+
+Arg    | Required? | Notes
+-------|-----------|------
+speed  | false     |
+strafe | false     |
+y      | false     |
 
 ---
 
