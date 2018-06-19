@@ -185,6 +185,11 @@
       // Optional. How the vertices should be drawn.
       "draw-type": "TRIANGLE_STRIP",
 
+      // Optional. Entity inertia that is added to entity translation.
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
