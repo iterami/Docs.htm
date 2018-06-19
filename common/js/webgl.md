@@ -12,6 +12,7 @@
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_level()`](#webgl_character_level)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
+* [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_drawloop()`](#webgl_drawloop)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
@@ -23,7 +24,6 @@
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
-* [`webgl_normals_collision(args)`](#webgl_normals_collisionargs)
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
@@ -137,6 +137,17 @@ color | true      |
 
 ---
 
+### `webgl_normals_collision(args)`
+* Checks for collisions based on entity normals.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+entity    | false     |
+target    | true      |
+
+---
+
 ### `webgl_draw()`
 * Handles canvas clearing and drawing the `buffer` onto the `canvas`.
 * Sets up matricies, sets up the camera, and draws all created entities in specific order.
@@ -240,16 +251,6 @@ Arg        | Required? | Notes
 x-rotation | false     |
 y-rotation | false     |
 z-rotation | false     |
-
----
-
-### `webgl_normals_collision(args)`
-* Checks for collisions based on entity normals.
-
-Arg       | Required? | Notes
-----------|-----------|------
-entity0id | true      |
-entity1id | true      |
 
 ---
 
