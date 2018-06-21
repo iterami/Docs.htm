@@ -427,7 +427,6 @@ var     | false     |
 
 Arg    | Required? | Notes
 -------|-----------|------
-block  | false     |
 event  | true      |
 key    | true      |
 object | true      |
