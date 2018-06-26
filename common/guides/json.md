@@ -39,6 +39,7 @@
     {
       "id": "example-entity-0",
       "alpha": 1,
+      "attach": false,
       "billboard": false,
       "collides": false,
       "collision": false,
@@ -173,6 +174,10 @@
 
       // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
       "alpha": 1,
+
+      // Optional. ID of entity that this entity is attached to, or false if not attached.
+      // Entity needs to already exist.
+      "attach": false,
 
       // Optional. If the entity will rotate based on camera rotation.
       // Array of strings, including "x", "y", "z", or any combination.
