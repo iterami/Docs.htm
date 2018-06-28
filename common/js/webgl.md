@@ -164,11 +164,12 @@ target    | true      |
 * Handles moving an entity or the character within 3D space.
 * Maintains y position unless specifically changed.
 
-Arg    | Required? | Notes
--------|-----------|------
-speed  | false     |
-strafe | false     |
-y      | false     |
+Arg         | Required? | Notes
+------------|-----------|------
+entity      | false     |
+multiplier  | false     |
+strafe      | false     |
+y           | false     |
 
 ---
 
@@ -204,7 +205,6 @@ Arg                 | Required? | Notes
 camera-rotate-x     | false     |
 camera-rotate-y     | false     |
 camera-rotate-z     | false     |
-camera-speed        | false     |
 camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
@@ -219,6 +219,7 @@ level               | false     |
 rotate-x            | false     |
 rotate-y            | false     |
 rotate-z            | false     |
+speed               | false     |
 translate-x         | false     |
 translate-y         | false     |
 translate-z         | false     |

@@ -57,6 +57,7 @@
       "scale-y": 1,
       "scale-z": 1,
       "skybox": false,
+      "speed": 0.2,
       "texture": "_default",
       "translate-x": 0,
       "translate-y": -1,
@@ -89,7 +90,6 @@
     "camera-rotate-x": 0,
     "camera-rotate-y": 0,
     "camera-rotate-z": 0,
-    "camera-speed": 0.1,
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
@@ -104,6 +104,7 @@
     "rotate-x": 0,
     "rotate-y": 0,
     "rotate-z": 0,
+    "speed": 0.2,
     "translate-x": 0,
     "translate-y": 0,
     "translate-z": 0,
@@ -222,6 +223,9 @@
       "scale-y": 1,
       "scale-z": 1,
 
+      // Optional. Entity movement speed.
+      "speed": 0.2,
+
       // Optional. If this entity should be moved from "foreground" group to "skybox" group.
       "skybox": false,
 
@@ -273,9 +277,6 @@
     "camera-rotate-y": 0,
     "camera-rotate-z": 0,
 
-    // Optional. Camera movement speed.
-    "camera-speed": 0.1,
-
     // Optional. Camera type.
     "camera-type": "free",
 
@@ -311,6 +312,9 @@
     "rotate-x": 0,
     "rotate-y": 0,
     "rotate-z": 0,
+
+    // Optional. Character movement speed.
+    "speed": 0.2,
 
     // Optional. Translation of character relative to `0, 0, 0`.
     "translate-x": 0,
