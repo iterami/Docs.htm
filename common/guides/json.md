@@ -89,9 +89,6 @@
     "camera-rotate-y": 0,
     "camera-rotate-z": 0,
     "camera-speed": 0.1,
-    "camera-translate-x": 0,
-    "camera-translate-y": 0,
-    "camera-translate-z": 0,
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
@@ -101,6 +98,12 @@
     "entities": [],
     "experience": 0,
     "level": -1,
+    "rotate-x": 0,
+    "rotate-y": 0,
+    "rotate-z": 0,
+    "translate-x": 0,
+    "translate-y": 0,
+    "translate-z": 0,
   },
 ```
 
@@ -267,11 +270,6 @@
     // Optional. Camera movement speed.
     "camera-speed": 0.1,
 
-    // Optional. Translation of camera relative to `0, 0, 0`.
-    "camera-translate-x": 0,
-    "camera-translate-y": 0,
-    "camera-translate-z": 0,
-
     // Optional. Camera type.
     "camera-type": "free",
 
@@ -296,5 +294,15 @@
     // Optional. Current character level.
     // -1 means character is just a camera.
     "level": -1,
+
+    // Optional. Rotation of character in degrees between 0 and 359 inclusive.
+    "rotate-x": 0,
+    "rotate-y": 0,
+    "rotate-z": 0,
+
+    // Optional. Translation of character relative to `0, 0, 0`.
+    "translate-x": 0,
+    "translate-y": 0,
+    "translate-z": 0,
   },
 ```

@@ -200,9 +200,6 @@ camera-rotate-x     | false     |
 camera-rotate-y     | false     |
 camera-rotate-z     | false     |
 camera-speed        | false     |
-camera-translate-x  | false     |
-camera-translate-x  | false     |
-camera-translate-x  | false     |
 camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
@@ -213,6 +210,12 @@ dz                  | false     |
 entities            | false     |
 experience          | false     |
 level               | false     |
+rotate-x            | false     |
+rotate-y            | false     |
+rotate-z            | false     |
+translate-x         | false     |
+translate-y         | false     |
+translate-z         | false     |
 
 ---
 
