@@ -208,6 +208,7 @@ camera-speed        | false     |
 camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
+collide-range       | false     |
 collides            | false     |
 dx                  | false     |
 dy                  | false     |

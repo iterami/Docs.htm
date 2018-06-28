@@ -41,6 +41,7 @@
       "alpha": 1,
       "attach": false,
       "billboard": false,
+      "collide-range": 2.5,
       "collides": false,
       "collision": false,
       "draw": true,
@@ -92,6 +93,8 @@
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
+    "collide-range": 2.5,
+    "collides": true,
     "dx": 0,
     "dy": 0,
     "dz": 0,
@@ -189,6 +192,9 @@
       // Optional. If this entity collides with other entities that have collision.
       "collides": false,
 
+      // Optional. If this entity collides, then this is the maximum distance before collision occurs.
+      "collide-range": 2.5,
+
       // Optional. If this entity can be collided with by other entities that collide.
       "collides": false,
 
@@ -277,6 +283,12 @@
     // When current is 0, camera is in first person mode.
     "camera-zoom-current": 0,
     "camera-zoom-max": 0,
+
+    // Optional. If the character collides, then this is the maximum distance before collision occurs.
+    "collide-range": 2.5,
+
+    // Optional. If the character collides with other entities that have collision.
+    "collides": true,
 
     // Optional. Amount that is added to entity translation.
     // Currently gets reset after every movement so players can stop.
