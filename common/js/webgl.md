@@ -124,7 +124,10 @@ z         | false     |
 
 Arg   | Required? | Notes
 ------|-----------|------
-color | true      |
+alpha | true      |
+blue  | true      |
+green | true      |
+red   | true      |
 
 ---
 
