@@ -99,6 +99,7 @@ type | false     |
 
 Arg       | Required? | Notes
 ----------|-----------|------
+camera    | false     |
 character | false     |
 x         | false     |
 xlock     | false     |
