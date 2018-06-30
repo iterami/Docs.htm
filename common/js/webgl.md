@@ -16,6 +16,7 @@
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_drawloop()`](#webgl_drawloop)
 * [`webgl_entity_move(args)`](#webgl_entity_moveargs)
+* [`webgl_entity_move_to(args)`](#webgl_entity_move_toargs)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
@@ -170,6 +171,18 @@ entity      | false     |
 multiplier  | false     |
 strafe      | false     |
 y           | false     |
+
+---
+
+### `webgl_entity_move_to(args)`
+* Moves an entity or the character to a specific point.
+
+Arg    | Required? | Notes
+-------|-----------|------
+entity | false     |
+x      | false     |
+y      | false     |
+z      | false     |
 
 ---
 
