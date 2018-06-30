@@ -1,17 +1,9 @@
 [iterami/common](https://github.com/iterami/common) HTM Documentation
 ---------------------------------------------------------------------
 
-* [Flowcharts](#flowcharts)
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)
 * [Using and Updating](#using-and-updating)
-
----
-
-### Flowcharts
-* [Canvas](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-canvas.md)
-* [DOM](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-dom.md)
-* [WebGL](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/flowchart-webgl.md)
 
 ---
 
