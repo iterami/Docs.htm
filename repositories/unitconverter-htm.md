@@ -5,14 +5,14 @@ Unit conversion tool that can convert units of various types to a specified powe
 
 ---
 
-Acceleration                | Unit
-----------------------------|------
-foot per second squared     | ft/s²
-gal                         | Gal
-metre per hour squared      | m/h²
-metre per second squared    | m/s²
-miles per hour squared      | mph²
-standard gravity            | ɡₒ
+Acceleration             | Unit
+-------------------------|------
+foot per second squared  | ft/s²
+gal                      | Gal
+metre per hour squared   | m/h²
+metre per second squared | m/s²
+miles per hour squared   | mph²
+standard gravity         | ɡₒ
 
 Angle     | Unit
 ----------|-----
