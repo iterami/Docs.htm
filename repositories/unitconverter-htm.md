@@ -10,7 +10,7 @@ Acceleration             | Unit  | Formula
 foot per second squared  | ft/s² |
 gal                      | Gal   |
 metre per hour squared   | m/h²  |
-metre per second squared | m/s²  |
+metre per second squared | m/s²  | DEFAULT
 miles per hour squared   | mph²  |
 standard gravity         | ɡₒ    |
 
@@ -24,7 +24,7 @@ gradian   | gon  |
 mil       |      |
 octant    |      |
 quadrant  |      |
-radian    | rad  |
+radian    | rad  | DEFAULT
 sextant   |      |
 sign      |      |
 turn      |      |
@@ -45,7 +45,7 @@ hectare        | ha   |
 inches squared | in²  |
 jō             | 畳    |
 marabba        |      |
-metres squared | m²   |
+metres squared | m²   | DEFAULT
 miles squared  | mi²  |
 plaza          |      |
 rood           |      |
@@ -59,7 +59,7 @@ yards squared  | yd²  |
 
 Density                     | Unit | Formula
 ----------------------------|------|--------
-grams per cubic metre       | g/m³ |
+grams per cubic metre       | g/m³ | DEFAULT
 grams per litre             | g/l  |
 metric tons per cubic metre | t/m³ |
 
@@ -69,7 +69,7 @@ electron volt                     | eV                 |
 erg                               |                    |
 foot-pound                        | ft·lb              |
 international steam table calorie | cal<sub>it</sub>   |
-joule                             | J                  |
+joule                             | J                  | DEFAULT
 mean BTU                          | Btu<sub>mean</sub> |
 mean calorie                      | cal<sub>mean</sub> |
 thermochemical BTU                | Btu<sub>th</sub>   |
@@ -82,7 +82,7 @@ Force       | Unit | Formula
 dyne        | dyn  |
 gram-force  | gf   |
 kip         |      |
-newton      | N    |
+newton      | N    | DEFAULT
 ounce-force | ozf  |
 pond        |      |
 pound-force | lbf  |
@@ -92,14 +92,14 @@ sthène      | sn   |
 Fuel                      | Unit    | Formula
 --------------------------|---------|--------
 litres per 100 kilometres | l/100km |
-metres per litre          | m/l     |
+metres per litre          | m/l     | DEFAULT
 miles per imperial gallon | MPG     |
 miles per US gallon       | MPG     |
 
 Illuminance | Unit | Formula
 ------------|------|--------
 foot-candle | fc   |
-lux         | lx   |
+lux         | lx   | DEFAULT
 phot        | ph   |
 skot        | sk   |
 
@@ -144,7 +144,7 @@ league              |      |
 lightyear           | ly   |
 ligne               |      |
 link                | l.   |
-metre               | m    |
+metre               | m    | DEFAULT
 mil                 |      |
 mile                | mi   |
 mō                  | 毛, 毫 |
@@ -169,14 +169,14 @@ yard                | yd   |
 
 Level | Unit | Formula
 ------|------|--------
-bel   | B    |
+bel   | B    | DEFAULT
 neper | Np   |
 
 Magnetism | Unit | Formula
 ----------|------|--------
 gamma     | γ    |
 gauss     | G    |
-tesla     | T    |
+tesla     | T    | DEFAULT
 
 Mass               | Unit          | Formula
 -------------------|---------------|--------
@@ -199,7 +199,7 @@ fun                | 分             |
 funt               | фунт          |
 garce              |               |
 grain              |               |
-gram               | g             |
+gram               | g             | DEFAULT
 heavy adowlie      |               |
 hyakume            | 百目            |
 kanme              | 貫目            |
@@ -239,12 +239,12 @@ mechanical horsepower | hp   |
 metric horsepower     | PS   |
 poncelet              | p    |
 ton of refrigeration  | TR   |
-watt                  | W    |
+watt                  | W    | DEFAULT
 
 Pressure                             | Unit | Formula
 -------------------------------------|------|--------
 bar                                  |      |
-pascal                               | Pa   |
+pascal                               | Pa   | DEFAULT
 pièze                                | pz   |
 pound-force per square inch absolute | psia |
 standard atmosphere                  | atm  |
@@ -254,7 +254,7 @@ Vickers pyramid number               | HV   |
 
 Radiation           | Unit | Formula
 --------------------|------|--------
-gray                | Gy   |
+gray                | Gy   | DEFAULT
 joules per kilogram | J/kg |
 rad                 |      |
 
@@ -264,7 +264,7 @@ feet per second   | ft/s |
 knots             |      |
 mach              | M    |
 metres per hour   | m/h  |
-metres per second | m/s  |
+metres per second | m/s  | DEFAULT
 miles per hour    | mph  |
 miles per second  |      |
 speed of light    | c    |
@@ -277,7 +277,7 @@ Beaumuir            |      |
 Bénart              |      |
 Bergen              |      |
 Brisson             |      |
-Celsius             | °C   |
+Celsius             | °C   | DEFAULT
 Cimento             |      |
 Cruquius            |      |
 Dalencé             |      |
@@ -343,7 +343,7 @@ month               |       |
 radar metre         |       |
 radar nautical mile |       |
 radar statute mile  |       |
-second              | s     |
+second              | s     | DEFAULT
 shake               |       |
 week                |       |
 year                | a     |
@@ -351,7 +351,7 @@ year                | a     |
 Torque       | Unit  | Formula
 -------------|-------|--------
 gram metre   | g·m   |
-newton metre | N·m   |
+newton metre | N·m   | DEFAULT
 pound-foot   | lb·ft |
 
 Volume                  | Unit  | Formula
@@ -403,7 +403,7 @@ kinderkin               |       |
 koku                    | 石     |
 lambda                  | λ     |
 ligula                  |       |
-litre                   | l     |
+litre                   | l     | DEFAULT
 log                     |       |
 maris                   |       |
 metretes                |       |
