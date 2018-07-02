@@ -3,7 +3,30 @@
 
 Unit conversion tool that can convert units of various types to a specified power and number of decimal places. Formula indicates how much equals 1 default unit.
 
+* [Acceleration](#acceleration)
+* [Angle](#acceleration)
+* [Area](#acceleration)
+* [Density](#acceleration)
+* [Energy](#acceleration)
+* [Force](#acceleration)
+* [Fuel](#acceleration)
+* [Illuminance](#illuminance)
+* [Length](#acceleration)
+* [Level](#acceleration)
+* [Magnetism](#acceleration)
+* [Mass](#acceleration)
+* [Power](#acceleration)
+* [Pressure](#acceleration)
+* [Radiation](#acceleration)
+* [Speed](#acceleration)
+* [Temperature](#acceleration)
+* [Time](#acceleration)
+* [Torque](#acceleration)
+* [Volume](#acceleration)
+
 ---
+
+### Acceleration
 
 Acceleration             | Unit  | Formula
 -------------------------|-------|-------------------
@@ -13,6 +36,10 @@ metre per hour squared   | m/h²  | 3600
 metre per second squared | m/s²  | DEFAULT
 miles per hour squared   | mph²  | 1 / (1.4 + 2 / 30)
 standard gravity         | ɡₒ    | 1 / 9.80665
+
+---
+
+### Angle
 
 Angle     | Unit | Formula
 ----------|------|--------------------
@@ -28,6 +55,10 @@ radian    | rad  | DEFAULT
 sextant   |      | 180 / Math.PI / 60
 sign      |      | 180 / Math.PI / 30
 turn      |      | .159154943
+
+---
+
+### Area
 
 Area           | Unit | Formula
 ---------------|------|------------------------------
@@ -58,11 +89,19 @@ township       |      | 1 / 93239571.972095996141
 tsubo          | 坪    | 1 / 3.306
 yards squared  | yd²  | .83612736
 
+---
+
+### Density
+
 Density                     | Unit | Formula
 ----------------------------|------|--------
 grams per cubic metre       | g/m³ | DEFAULT
 grams per litre             | g/l  | 1000
 metric tons per cubic metre | t/m³ | 1000000
+
+---
+
+### Energy
 
 Energy                            | Unit               | Formula
 ----------------------------------|--------------------|--------------------
@@ -78,6 +117,10 @@ thermochemical calorie            | cal<sub>th</sub>   | 1 / 4.184
 ton of TNT                        |                    | 1 / 4184000000
 watt-hour                         | W·h                | 1 / 3600
 
+---
+
+### Force
+
 Force       | Unit | Formula
 ------------|------|---------------------
 dyne        | dyn  | 100000
@@ -90,6 +133,10 @@ pound-force | lbf  | .224809
 poundal     | pdl  | 7.23301
 sthène      | sn   | .001
 
+---
+
+### Fuel
+
 Fuel                      | Unit    | Formula
 --------------------------|---------|----------
 litres per 100 kilometres | l/100km | 100000
@@ -97,12 +144,20 @@ metres per litre          | m/l     | DEFAULT
 miles per imperial gallon | MPG     | .00282481
 miles per US gallon       | MPG     | .00235215
 
+---
+
+### Illuminance
+
 Illuminance | Unit | Formula
 ------------|------|----------
 foot-candle | fc   | .09290304
 lux         | lx   | DEFAULT
 phot        | ph   | .0001
 skot        | sk   | 3141.69
+
+---
+
+### Length
 
 Length              | Unit | Formula
 --------------------|------|----------------------
@@ -167,16 +222,28 @@ thou                |      | 1 / .0000254
 unglie              |      | 1 / .01905
 yard                | yd   | 39.3701 / 36
 
+---
+
+### Level
+
 Level | Unit | Formula
 ------|------|------------
 bel   | B    | DEFAULT
 neper | Np   | 1 / .868589
+
+---
+
+### Magnetism
 
 Magnetism | Unit | Formula
 ----------|------|-----------
 gamma     | γ    | 1000000000
 gauss     | G    | 10000
 tesla     | T    | DEFAULT
+
+---
+
+### Mass
 
 Mass               | Unit          | Formula
 -------------------|---------------|---------------------
@@ -233,6 +300,10 @@ troy ounce         | oz t          | 1 / 31.1034768
 Whey (Essex)       |               | 1 / 107047.79932
 zolotnik           | zol.          | 1 / 4.2658
 
+---
+
+### Power
+
 Power                 | Unit | Formula
 ----------------------|------|--------------
 mechanical horsepower | hp   | 1 / 745.7
@@ -240,6 +311,10 @@ metric horsepower     | PS   | 1 / 735.49875
 poncelet              | p    | 1 / 980.665
 ton of refrigeration  | TR   | 1 / 3516.8525
 watt                  | W    | DEFAULT
+
+---
+
+### Pressure
 
 Pressure                             | Unit | Formula
 -------------------------------------|------|-------------
@@ -252,11 +327,19 @@ technical atmosphere                 | at   | 1 / 98066.5
 torr                                 | Torr | 760 / 101325
 Vickers pyramid number               | HV   | 1 / 9807000
 
+---
+
+### Radiation
+
 Radiation           | Unit | Formula
 --------------------|------|--------
 gray                | Gy   | DEFAULT
 joules per kilogram | J/kg | .01
 rad                 |      | 100
+
+---
+
+### Speed
 
 Speed             | Unit | Formula
 ------------------|------|--------------
@@ -268,6 +351,10 @@ metres per second | m/s  | DEFAULT
 miles per hour    | mph  | 1 / .44704
 miles per second  |      | 1 / 1609.344
 speed of light    | c    | 1 / 299792458
+
+---
+
+### Temperature
 
 Temperature         | Unit | Formula (Convert to °C)    | Formula (Convert From °C)
 --------------------|------|----------------------------|------------------------------
@@ -325,6 +412,10 @@ Sulzer              |      | value * .636637 + .684685  | value * 1.57075 - 1.07
 Wedgwood (modern)   |      | value * 24.8572 + 269      | value / 24.8571954 - 10.8218
 Wedgwood (original) |      | value * 72.2219 + 580.8    | value / 72.2219815 - 8.04188
 
+---
+
+### Time
+
 Time                | Unit  | Formula
 --------------------|-------|-----------------
 atom                |       | 1 / .15957446808
@@ -348,11 +439,19 @@ shake               |       | 100000000
 week                |       | 1 / 604800
 year                | a     | 1 / 31556908.8
 
+---
+
+### Torque
+
 Torque       | Unit  | Formula
 -------------|-------|-------------
 gram metre   | g·m   | 1 / 9806.65
 newton metre | N·m   | DEFAULT
 pound-foot   | lb·ft | 1 / 1.355818
+
+---
+
+### Volume
 
 Volume                  | Unit  | Formula
 ------------------------|-------|--------------------------
