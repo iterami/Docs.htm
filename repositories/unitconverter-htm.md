@@ -28,12 +28,12 @@ Unit conversion tool that can convert units of various types to a specified powe
 
 ### Acceleration
 
-Acceleration             | Unit  | Formula
--------------------------|-------|-------------------
+Acceleration             | Unit  | 1 metre per second squared =
+-------------------------|-------|-----------------------------
 foot per second squared  | ft/s² | 3.280839895
 gal                      | Gal   | 100
 metre per hour squared   | m/h²  | 3600
-metre per second squared | m/s²  | DEFAULT
+metre per second squared | m/s²  | 1
 miles per hour squared   | mph²  | 1 / (1.4 + 2 / 30)
 standard gravity         | ɡₒ    | 1 / 9.80665
 
@@ -41,7 +41,7 @@ standard gravity         | ɡₒ    | 1 / 9.80665
 
 ### Angle
 
-Angle     | Unit | Formula
+Angle     | Unit | 1 radian =
 ----------|------|--------------------
 arcminute | ′    | 3437.748
 arcsecond | ″    | 206264.88
@@ -51,7 +51,7 @@ gradian   | gon  | 63.662
 mil       |      | 6283.183
 octant    |      | 180 / Math.PI / 45
 quadrant  |      | 180 / Math.PI / 90
-radian    | rad  | DEFAULT
+radian    | rad  | 1
 sextant   |      | 180 / Math.PI / 60
 sign      |      | 180 / Math.PI / 30
 turn      |      | .159154943
@@ -60,7 +60,7 @@ turn      |      | .159154943
 
 ### Area
 
-Area           | Unit | Formula
+Area           | Unit | 1 metre squared =
 ---------------|------|------------------------------
 acre           | ac   | 1 / 4046.86
 are            | a    | .01
@@ -77,7 +77,7 @@ hectare        | ha   | .0001
 inches squared | in²  | 1550.0031
 jō             | 畳    | 1 / 1.653
 marabba        |      | 1 / 101171
-metres squared | m²   | DEFAULT
+metres squared | m²   | 1
 miles squared  | mi²  | 1 / 2589990
 plaza          |      | .00015625
 rood           |      | 1 / 1011.71
@@ -93,9 +93,9 @@ yards squared  | yd²  | .83612736
 
 ### Density
 
-Density                     | Unit | Formula
-----------------------------|------|--------
-grams per cubic metre       | g/m³ | DEFAULT
+Density                     | Unit | 1 gram per litre =
+----------------------------|------|-------------------
+grams per cubic metre       | g/m³ | 1
 grams per litre             | g/l  | 1000
 metric tons per cubic metre | t/m³ | 1000000
 
@@ -103,13 +103,13 @@ metric tons per cubic metre | t/m³ | 1000000
 
 ### Energy
 
-Energy                            | Unit               | Formula
+Energy                            | Unit               | 1 joule =
 ----------------------------------|--------------------|--------------------
 electron volt                     | eV                 | 6241509343300000000
 erg                               |                    | 10000000
 foot-pound                        | ft·lb              | 1 / 1.3558179483314
 international steam table calorie | cal<sub>it</sub>   | 1 / 4.1868
-joule                             | J                  | DEFAULT
+joule                             | J                  | 1
 mean BTU                          | Btu<sub>mean</sub> | 1 / 1055.87
 mean calorie                      | cal<sub>mean</sub> | 1 / 4.19002
 thermochemical BTU                | Btu<sub>th</sub>   | 1 / 1054.35026444
@@ -121,12 +121,12 @@ watt-hour                         | W·h                | 1 / 3600
 
 ### Force
 
-Force       | Unit | Formula
+Force       | Unit | 1 newton =
 ------------|------|---------------------
 dyne        | dyn  | 100000
 gram-force  | gf   | 1 / .00980665
 kip         |      | 1 / 4448.2216
-newton      | N    | DEFAULT
+newton      | N    | 1
 ounce-force | ozf  | 3.59694310194
 pond        |      | 1 / .009806649999788
 pound-force | lbf  | .224809
@@ -137,10 +137,10 @@ sthène      | sn   | .001
 
 ### Fuel
 
-Fuel                      | Unit    | Formula
---------------------------|---------|----------
+Fuel                      | Unit    | 1 metre per litre =
+--------------------------|---------|--------------------
 litres per 100 kilometres | l/100km | 100000
-metres per litre          | m/l     | DEFAULT
+metres per litre          | m/l     | 1
 miles per imperial gallon | MPG     | .00282481
 miles per US gallon       | MPG     | .00235215
 
@@ -148,10 +148,10 @@ miles per US gallon       | MPG     | .00235215
 
 ### Illuminance
 
-Illuminance | Unit | Formula
+Illuminance | Unit | 1 lux =
 ------------|------|----------
 foot-candle | fc   | .09290304
-lux         | lx   | DEFAULT
+lux         | lx   | 1
 phot        | ph   | .0001
 skot        | sk   | 3141.69
 
@@ -159,7 +159,7 @@ skot        | sk   | 3141.69
 
 ### Length
 
-Length              | Unit | Formula
+Length              | Unit | 1 metre =
 --------------------|------|----------------------
 ald                 |      | 1 / 1.6
 alen                |      | 1 / .6277
@@ -199,7 +199,7 @@ league              |      | 9.3701 / 216000
 lightyear           | ly   | 1 / 9460730472580800
 ligne               |      | 1 / .0022558291
 link                | l.   | 1 / .201168
-metre               | m    | DEFAULT
+metre               | m    | 1
 mil                 |      | 39370.1
 mile                | mi   | 39.3701 / 63360
 mō                  | 毛, 毫 | 33000
@@ -226,26 +226,26 @@ yard                | yd   | 39.3701 / 36
 
 ### Level
 
-Level | Unit | Formula
+Level | Unit | 1 bel =
 ------|------|------------
-bel   | B    | DEFAULT
+bel   | B    | 1
 neper | Np   | 1 / .868589
 
 ---
 
 ### Magnetism
 
-Magnetism | Unit | Formula
+Magnetism | Unit | 1 tesla =
 ----------|------|-----------
 gamma     | γ    | 1000000000
 gauss     | G    | 10000
-tesla     | T    | DEFAULT
+tesla     | T    | 1
 
 ---
 
 ### Mass
 
-Mass               | Unit          | Formula
+Mass               | Unit          | 1 gram =
 -------------------|---------------|---------------------
 abucco             |               | 1 / 196.44
 adowlie            |               | 1 / 1982
@@ -266,7 +266,7 @@ fun                | 分             | 4 / 1.5
 funt               | фунт          | 1 / 409.5
 garce              |               | 1 / 4198518
 grain              |               | 1 / .06479891
-gram               | g             | DEFAULT
+gram               | g             | 1
 heavy adowlie      |               | 1 / 2031
 hyakume            | 百目            | 1 / 375
 kanme              | 貫目            | 1 / 3750
@@ -304,22 +304,22 @@ zolotnik           | zol.          | 1 / 4.2658
 
 ### Power
 
-Power                 | Unit | Formula
+Power                 | Unit | 1 watt =
 ----------------------|------|--------------
 mechanical horsepower | hp   | 1 / 745.7
 metric horsepower     | PS   | 1 / 735.49875
 poncelet              | p    | 1 / 980.665
 ton of refrigeration  | TR   | 1 / 3516.8525
-watt                  | W    | DEFAULT
+watt                  | W    | 1
 
 ---
 
 ### Pressure
 
-Pressure                             | Unit | Formula
+Pressure                             | Unit | 1 pascal =
 -------------------------------------|------|-------------
 bar                                  |      | .00001
-pascal                               | Pa   | DEFAULT
+pascal                               | Pa   | 1
 pièze                                | pz   | .001
 pound-force per square inch absolute | psia | .000145038
 standard atmosphere                  | atm  | 1 / 101325
@@ -331,9 +331,9 @@ Vickers pyramid number               | HV   | 1 / 9807000
 
 ### Radiation
 
-Radiation           | Unit | Formula
---------------------|------|--------
-gray                | Gy   | DEFAULT
+Radiation           | Unit | 1 gray =
+--------------------|------|---------
+gray                | Gy   | 1
 joules per kilogram | J/kg | .01
 rad                 |      | 100
 
@@ -341,13 +341,13 @@ rad                 |      | 100
 
 ### Speed
 
-Speed             | Unit | Formula
-------------------|------|--------------
+Speed             | Unit | 1 metre per second =
+------------------|------|---------------------
 feet per second   | ft/s | 1 / .3048
 knots             |      | 1.94384
 mach              | M    | 1 / 340.29
 metres per hour   | m/h  | 3600
-metres per second | m/s  | DEFAULT
+metres per second | m/s  | 1
 miles per hour    | mph  | 1 / .44704
 miles per second  |      | 1 / 1609.344
 speed of light    | c    | 1 / 299792458
@@ -364,7 +364,7 @@ Beaumuir            |      | value * 1.23862            | value / 1.23862
 Bénart              |      | value * .79661 - .398305   | value * 1.25532 + .5
 Bergen              |      | value * .595238 - 3.57143  | value * 1.68 + 6
 Brisson             |      | value * 1.18519            | value / 1.18519
-Celsius             | °C   | DEFAULT                    | DEFAULT
+Celsius             | °C   | 1                          | 1
 Cimento             |      | value * 1.50376 - 20.3008  | value * .665 + 13.5
 Cruquius            |      | value * .22737 - 243.329   | value * 4.39811 + 1070.19
 Dalencé             |      | value * 1.5 + 15           | value * (2 / 3) - 10
@@ -416,7 +416,7 @@ Wedgwood (original) |      | value * 72.2219 + 580.8    | value / 72.2219815 - 8
 
 ### Time
 
-Time                | Unit  | Formula
+Time                | Unit  | 1 second =
 --------------------|-------|-----------------
 atom                |       | 1 / .15957446808
 century             | c.    | 1 / 3155690880
@@ -434,7 +434,7 @@ month               |       | 1 / 2592000
 radar metre         |       | 1 / .00000000666
 radar nautical mile |       | 1 / .000012355
 radar statute mile  |       | 1 / .00001075
-second              | s     | DEFAULT
+second              | s     | 1
 shake               |       | 100000000
 week                |       | 1 / 604800
 year                | a     | 1 / 31556908.8
@@ -443,17 +443,17 @@ year                | a     | 1 / 31556908.8
 
 ### Torque
 
-Torque       | Unit  | Formula
--------------|-------|-------------
+Torque       | Unit  | 1 newton metre =
+-------------|-------|-----------------
 gram metre   | g·m   | 1 / 9806.65
-newton metre | N·m   | DEFAULT
+newton metre | N·m   | 1
 pound-foot   | lb·ft | 1 / 1.355818
 
 ---
 
 ### Volume
 
-Volume                  | Unit  | Formula
+Volume                  | Unit  | 1 litre =
 ------------------------|-------|--------------------------
 acetabulum              |       | 1 / .068125
 acre-foot               |       | 1 / 1233480
@@ -502,7 +502,7 @@ kinderkin               |       | 1 / 81.82962
 koku                    | 石     | 1331 / 240100
 lambda                  | λ     | 1000000
 ligula                  |       | 1 / (3.27 / 288)
-litre                   | l     | DEFAULT
+litre                   | l     | 1
 log                     |       | 1 / .505
 maris                   |       | 1 / 30.3
 metretes                |       | 1 / 37.4
