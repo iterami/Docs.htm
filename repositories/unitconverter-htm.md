@@ -1,439 +1,439 @@
 [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
 -------------------------------------------------------------------------
 
-Unit conversion tool that can convert units of various types to a specified power and number of decimal places.
+Unit conversion tool that can convert units of various types to a specified power and number of decimal places. Formula indicates how much equals 1 default unit.
 
 ---
 
 Acceleration             | Unit  | Formula
--------------------------|-------|--------
-foot per second squared  | ft/s² |
-gal                      | Gal   |
-metre per hour squared   | m/h²  |
+-------------------------|-------|-------------------
+foot per second squared  | ft/s² | 3.280839895
+gal                      | Gal   | 100
+metre per hour squared   | m/h²  | 3600
 metre per second squared | m/s²  | DEFAULT
-miles per hour squared   | mph²  |
-standard gravity         | ɡₒ    |
+miles per hour squared   | mph²  | 1 / (1.4 + 2 / 30)
+standard gravity         | ɡₒ    | 1 / 9.80665
 
 Angle     | Unit | Formula
-----------|------|--------
-arcminute | ′    |
-arcsecond | ″    |
-circle    |      |
-degree    | °    |
-gradian   | gon  |
-mil       |      |
-octant    |      |
-quadrant  |      |
+----------|------|--------------------
+arcminute | ′    | 3437.748
+arcsecond | ″    | 206264.88
+circle    |      | 180 / Math.PI / 360
+degree    | °    | 180 / Math.PI
+gradian   | gon  | 63.662
+mil       |      | 6283.183
+octant    |      | 180 / Math.PI / 45
+quadrant  |      | 180 / Math.PI / 90
 radian    | rad  | DEFAULT
-sextant   |      |
-sign      |      |
-turn      |      |
+sextant   |      | 180 / Math.PI / 60
+sign      |      | 180 / Math.PI / 30
+turn      |      | .159154943
 
 Area           | Unit | Formula
----------------|------|--------
-acre           | ac   |
-barn           | b    |
-bu             | 歩    |
-cawnie         |      |
-chō            | 町    |
-cuerda         |      |
-decimal        |      |
-feet squared   | ft²  |
-gō             | 合    |
-ground         |      |
-hectare        | ha   |
-inches squared | in²  |
-jō             | 畳    |
-marabba        |      |
+---------------|------|------------------------------
+acre           | ac   | 1 / 4046.86
+are            | a    | .01
+barn           | b    | .0000000000000000000000000001
+bu             | 歩    | 1 / 3.306
+cawnie         |      | 1 / 5349
+chō            | 町    | 1 / 9917.36
+cuerda         |      | 1 / 3930.395625
+decimal        |      | 1 / 40.4686
+feet squared   | ft²  | 10.7639
+gō             | 合    | 1 / .3306
+ground         |      | 1 / 203
+hectare        | ha   | .0001
+inches squared | in²  | 1550.0031
+jō             | 畳    | 1 / 1.653
+marabba        |      | 1 / 101171
 metres squared | m²   | DEFAULT
-miles squared  | mi²  |
-plaza          |      |
-rood           |      |
-se             | 畝    |
-shaku          | 勺    |
-strema         |      |
-tan            | 段, 反 |
-township       |      |
-tsubo          | 坪    |
-yards squared  | yd²  |
+miles squared  | mi²  | 1 / 2589990
+plaza          |      | .00015625
+rood           |      | 1 / 1011.71
+se             | 畝    | 1 / 99.1736
+shaku          | 勺    | 1 / .03306
+strema         |      | .001
+tan            | 段, 反 | 1 / 991.736
+township       |      | 1 / 93239571.972095996141
+tsubo          | 坪    | 1 / 3.306
+yards squared  | yd²  | .83612736
 
 Density                     | Unit | Formula
 ----------------------------|------|--------
 grams per cubic metre       | g/m³ | DEFAULT
-grams per litre             | g/l  |
-metric tons per cubic metre | t/m³ |
+grams per litre             | g/l  | 1000
+metric tons per cubic metre | t/m³ | 1000000
 
 Energy                            | Unit               | Formula
-----------------------------------|--------------------|--------
-electron volt                     | eV                 |
-erg                               |                    |
-foot-pound                        | ft·lb              |
-international steam table calorie | cal<sub>it</sub>   |
+----------------------------------|--------------------|--------------------
+electron volt                     | eV                 | 6241509343300000000
+erg                               |                    | 10000000
+foot-pound                        | ft·lb              | 1 / 1.3558179483314
+international steam table calorie | cal<sub>it</sub>   | 1 / 4.1868
 joule                             | J                  | DEFAULT
-mean BTU                          | Btu<sub>mean</sub> |
-mean calorie                      | cal<sub>mean</sub> |
-thermochemical BTU                | Btu<sub>th</sub>   |
-thermochemical calorie            | cal<sub>th</sub>   |
-ton of TNT                        |                    |
-watt-hour                         | W·h                |
+mean BTU                          | Btu<sub>mean</sub> | 1 / 1055.87
+mean calorie                      | cal<sub>mean</sub> | 1 / 4.19002
+thermochemical BTU                | Btu<sub>th</sub>   | 1 / 1054.35026444
+thermochemical calorie            | cal<sub>th</sub>   | 1 / 4.184
+ton of TNT                        |                    | 1 / 4184000000
+watt-hour                         | W·h                | 1 / 3600
 
 Force       | Unit | Formula
-------------|------|--------
-dyne        | dyn  |
-gram-force  | gf   |
-kip         |      |
+------------|------|---------------------
+dyne        | dyn  | 100000
+gram-force  | gf   | 1 / .00980665
+kip         |      | 1 / 4448.2216
 newton      | N    | DEFAULT
-ounce-force | ozf  |
-pond        |      |
-pound-force | lbf  |
-poundal     | pdl  |
-sthène      | sn   |
+ounce-force | ozf  | 3.59694310194
+pond        |      | 1 / .009806649999788
+pound-force | lbf  | .224809
+poundal     | pdl  | 7.23301
+sthène      | sn   | .001
 
 Fuel                      | Unit    | Formula
---------------------------|---------|--------
-litres per 100 kilometres | l/100km |
+--------------------------|---------|----------
+litres per 100 kilometres | l/100km | 100000
 metres per litre          | m/l     | DEFAULT
-miles per imperial gallon | MPG     |
-miles per US gallon       | MPG     |
+miles per imperial gallon | MPG     | .00282481
+miles per US gallon       | MPG     | .00235215
 
 Illuminance | Unit | Formula
-------------|------|--------
-foot-candle | fc   |
+------------|------|----------
+foot-candle | fc   | .09290304
 lux         | lx   | DEFAULT
-phot        | ph   |
-skot        | sk   |
+phot        | ph   | .0001
+skot        | sk   | 3141.69
 
 Length              | Unit | Formula
---------------------|------|--------
-ald                 |      |
-alen                |      |
-aln                 |      |
-ångström            | Å    |
-Aṅgula              |      |
-arpent              |      |
-bu                  | 分    |
-astronomical Unit   | au   |
-barleycorn          |      |
-bu                  | 分    |
-cable               |      |
-chain               | ch   |
-chi                 | 尺    |
-chō                 | 町    |
-cubit               |      |
-digit               |      |
-ell (Danish)        |      |
-ell (Flemish)       |      |
-ell (French)        |      |
-ell (German)        |      |
-ell (Polish)        |      |
-ell (Scottish)      |      |
-fathom              |      |
-foot                | ft   |
-furlong             |      |
-girah               |      |
-Gunter's chain      |      |
-Hammer unit         |      |
-hand                | h    |
-hiro                | 尋    |
-inch                | in   |
-jō                  | 丈    |
-jow                 |      |
-kanejaku            | 曲尺   |
-ken                 | 間    |
-league              |      |
-lightyear           | ly   |
-ligne               |      |
-link                | l.   |
+--------------------|------|----------------------
+ald                 |      | 1 / 1.6
+alen                |      | 1 / .6277
+aln                 |      | 1 / .5938
+ångström            | Å    | 10000000000
+Aṅgula              |      | 1 / .01763
+arpent              |      | 1 / 58.47109
+astronomical Unit   | au   | 1 / 149597870700
+barleycorn          |      | 118.11
+bu                  | 分    | 330
+cable               |      | 39.3701 / 7200
+chain               | ch   | 1 / 20.1168
+chi                 | 尺    | 3
+chō                 | 町    | 3.3 / 360
+cubit               |      | 1 / .4572
+digit               |      | 39.3701 / .75
+ell (Danish)        |      | 1 / .941318
+ell (Flemish)       |      | 1 / .686
+ell (French)        |      | 1 / 1.372
+ell (German)        |      | 1 / .579
+ell (Polish)        |      | 1 / .787
+ell (Scottish)      |      | 1 / .635
+fathom              |      | 39.3701 / 72
+foot                | ft   | 39.3701 / 12
+furlong             |      | 39.3701 / 7920
+girah               |      | 1 / .05715
+Gunter's chain      |      | 39.3701 / 792
+Hammer unit         |      | 1 / .01905
+hand                | h    | 39.3701 / 4
+hiro                | 尋    | .55
+inch                | in   | 39.3701
+jō                  | 丈    | .33
+jow                 |      | 1 / .00635
+kanejaku            | 曲尺   | 3.3
+ken                 | 間    | .55
+league              |      | 9.3701 / 216000
+lightyear           | ly   | 1 / 9460730472580800
+ligne               |      | 1 / .0022558291
+link                | l.   | 1 / .201168
 metre               | m    | DEFAULT
-mil                 |      |
-mile                | mi   |
-mō                  | 毛, 毫 |
-nail                |      |
-nautical league     |      |
-nautical mile       | nmi  |
-palm                |      |
-parsec              | pc   |
-ri                  | 里    |
-rin                 | 厘    |
-shackle             |      |
-shaku               | 尺    |
-spat                | S    |
-stick               |      |
-story               |      |
-sun                 | 寸    |
-survey foot (India) |      |
-survey foot (US)    |      |
-thou                |      |
-unglie              |      |
-yard                | yd   |
+mil                 |      | 39370.1
+mile                | mi   | 39.3701 / 63360
+mō                  | 毛, 毫 | 33000
+nail                |      | 39.3701 / .25
+nautical league     |      | 1 / 5556
+nautical mile       | nmi  | 1 / 1852
+palm                |      | 39.3701 / 3
+parsec              | pc   | 1 / 30856775800000000
+ri                  | 里    | 3.3 / 12960
+rin                 | 厘    | 3300
+shackle             |      | 39.3701 / 1080
+shaku               | 尺    | 3.3
+spat                | S    | .00000001
+stick               |      | 39.3701 / 2
+story               |      | 1 / 3.3
+sun                 | 寸    | 33
+survey foot (India) |      | 1 / .3047996
+survey foot (US)    |      | 3937 / 1200
+thou                |      | 1 / .0000254
+unglie              |      | 1 / .01905
+yard                | yd   | 39.3701 / 36
 
 Level | Unit | Formula
-------|------|--------
+------|------|------------
 bel   | B    | DEFAULT
-neper | Np   |
+neper | Np   | 1 / .868589
 
 Magnetism | Unit | Formula
-----------|------|--------
-gamma     | γ    |
-gauss     | G    |
+----------|------|-----------
+gamma     | γ    | 1000000000
+gauss     | G    | 10000
 tesla     | T    | DEFAULT
 
 Mass               | Unit          | Formula
--------------------|---------------|--------
-abucco             |               |
-adowlie            |               |
-agiro              |               |
-atomic mass unit   | AMU           |
-bisauli            | बिसौलि           |
-biza               |               |
-boṛi               | बोड़ि            |
-caret              | ct            |
-cental             |               |
-cullingey          |               |
-dharni             | धार्नि           |
-dram               | dr            |
-dram apothecaries  | dr ap         |
-esterling          |               |
-firkin             |               |
-fun                | 分             |
-funt               | фунт          |
-garce              |               |
-grain              |               |
+-------------------|---------------|---------------------
+abucco             |               | 1 / 196.44
+adowlie            |               | 1 / 1982
+agiro              |               | 1 / 392.88
+atomic mass unit   | AMU           | 1 / 1.6605390402e-24
+bisauli            | बिसौलि           | 1 / 1166.25
+biza               |               | 1 / 1571.52
+boṛi               | बोड़ि            | 1 / 583.125
+caret              | ct            | 5
+cental             |               | .0220462262185
+cullingey          |               | 1 / 5.265
+dharni             | धार्नि           | 1 / 2332.5
+dram               | dr            | 1 / 1.7718451953125
+dram apothecaries  | dr ap         | 1 / 3.8879346
+esterling          |               | .70548
+firkin             |               | 1 / 40823.3133
+fun                | 分             | 4 / 1.5
+funt               | фунт          | 1 / 409.5
+garce              |               | 1 / 4198518
+grain              |               | 1 / .06479891
 gram               | g             | DEFAULT
-heavy adowlie      |               |
-hyakume            | 百目            |
-kanme              | 貫目            |
-keel               |               |
-kin                | 斤             |
-kula               |               |
-large sack         |               |
-long ton           |               |
-metric tonne       | t             |
-mina               |               |
-momme              | 匁             |
-munjandie          |               |
-ounce              | oz            |
-passeree           |               |
-pāu                | पाउ            |
-pennyweight        | dwt           |
-Planck mass        | m<sub>P</sub> |
-pood               | пуд           |
-pound              | lb            |
-room               |               |
-rotal              |               |
-seer (Afghanistan) |               |
-seer (India)       |               |
-ship load          |               |
-short ton          |               |
-slug               |               |
-stone              | st            |
-teccalis           |               |
-troy grain         | gr            |
-troy ounce         | oz t          |
-Whey (Essex)       |               |
-zolotnik           | zol.          |
+heavy adowlie      |               | 1 / 2031
+hyakume            | 百目            | 1 / 375
+kanme              | 貫目            | 1 / 3750
+keel               |               | 1 / 21540194.46656
+kin                | 斤             | 1 / 600
+kula               |               | 1 / 11165
+large sack         |               | 1 / 101604.69088
+long ton           |               | 1 / 1016046.08
+metric tonne       | t             | .00001
+mina               |               | 1 / 571
+momme              | 匁             | 1 / 3.75
+munjandie          |               | 1 / .25919564
+ounce              | oz            | .035274
+passeree           |               | 1 / 4665.5
+pāu                | पाउ            | 1 / 194.375
+pennyweight        | dwt           | 1 / 1.55517384
+Planck mass        | m<sub>P</sub> | 1 / .0000217645
+pood               | пуд           | 1 / 16380
+pound              | lb            | 1 / 453.59237
+room               |               | 1 / 7112328.360594
+rotal              |               | 1 / 507.5
+seer (Afghanistan) |               | 1 / 7066
+seer (India)       |               | 1 / 933.10
+ship load          |               | 1 / 430803889.3312
+short ton          |               | 1 / 907184
+slug               |               | 68.5217659
+stone              | st            | 1 / 6350.29318
+teccalis           |               | 1 / 15.7152
+troy grain         | gr            | 1 / .06479891
+troy ounce         | oz t          | 1 / 31.1034768
+Whey (Essex)       |               | 1 / 107047.79932
+zolotnik           | zol.          | 1 / 4.2658
 
 Power                 | Unit | Formula
-----------------------|------|--------
-mechanical horsepower | hp   |
-metric horsepower     | PS   |
-poncelet              | p    |
-ton of refrigeration  | TR   |
+----------------------|------|--------------
+mechanical horsepower | hp   | 1 / 745.7
+metric horsepower     | PS   | 1 / 735.49875
+poncelet              | p    | 1 / 980.665
+ton of refrigeration  | TR   | 1 / 3516.8525
 watt                  | W    | DEFAULT
 
 Pressure                             | Unit | Formula
--------------------------------------|------|--------
-bar                                  |      |
+-------------------------------------|------|-------------
+bar                                  |      | .00001
 pascal                               | Pa   | DEFAULT
-pièze                                | pz   |
-pound-force per square inch absolute | psia |
-standard atmosphere                  | atm  |
-technical atmosphere                 | at   |
-torr                                 | Torr |
-Vickers pyramid number               | HV   |
+pièze                                | pz   | .001
+pound-force per square inch absolute | psia | .000145038
+standard atmosphere                  | atm  | 1 / 101325
+technical atmosphere                 | at   | 1 / 98066.5
+torr                                 | Torr | 760 / 101325
+Vickers pyramid number               | HV   | 1 / 9807000
 
 Radiation           | Unit | Formula
 --------------------|------|--------
 gray                | Gy   | DEFAULT
-joules per kilogram | J/kg |
-rad                 |      |
+joules per kilogram | J/kg | .01
+rad                 |      | 100
 
 Speed             | Unit | Formula
-------------------|------|--------
-feet per second   | ft/s |
-knots             |      |
-mach              | M    |
-metres per hour   | m/h  |
+------------------|------|--------------
+feet per second   | ft/s | 1 / .3048
+knots             |      | 1.94384
+mach              | M    | 1 / 340.29
+metres per hour   | m/h  | 3600
 metres per second | m/s  | DEFAULT
-miles per hour    | mph  |
-miles per second  |      |
-speed of light    | c    |
+miles per hour    | mph  | 1 / .44704
+miles per second  |      | 1 / 1609.344
+speed of light    | c    | 1 / 299792458
 
-Temperature         | Unit | Formula
---------------------|------|--------
-Amonton             |      |
-Barnsdorf           |      |
-Beaumuir            |      |
-Bénart              |      |
-Bergen              |      |
-Brisson             |      |
-Celsius             | °C   | DEFAULT
-Cimento             |      |
-Cruquius            |      |
-Dalencé             |      |
-Daniell             |      |
-De la Hire          |      |
-De la Ville         |      |
-Delisle             | °D   |
-De Luc              |      |
-De Lyon             |      |
-de Revillas         |      |
-de Suede            |      |
-de Villeneuve       |      |
-Du Crest            |      |
-Edinburgh           |      |
-electron volts      |      |
-Fahrenheit          | °F   |
-Florentine Magnum   |      |
-Fowler              |      |
-Frick               |      |
-Gas Mark            | G    |
-Goubert             |      |
-Hales               |      |
-Hauksbee            |      |
-Jacobs-Holborn      |      |
-Kelvin              | K    |
-La Court            |      |
-Lambert             |      |
-Lange               |      |
-Leiden              |      |
-Ludolf              |      |
-Mariotte            |      |
-Miles               |      |
-Murray              |      |
-Newton              | °N   |
-Oertel              |      |
-Paris               |      |
-Poleni              |      |
-Rankine             | °Ra  |
-Réaumur             | °Ré  |
-Richter             |      |
-Rinaldini           |      |
-Rømer               | °Rø  |
-Sagredo             |      |
-Sulzer              |      |
-Wedgwood (modern)   |      |
-Wedgwood (original) |      |
+Temperature         | Unit | Formula (Convert to °C)    | Formula (Convert From °C)
+--------------------|------|----------------------------|------------------------------
+Amonton             |      | value * 4.65116 - 239.535  | value * .215 + 51.5
+Barnsdorf           |      | value * 3.80952 - 13.9683  | value * .2625 + 11 / 3
+Beaumuir            |      | value * 1.23862            | value / 1.23862
+Bénart              |      | value * .79661 - .398305   | value * 1.25532 + .5
+Bergen              |      | value * .595238 - 3.57143  | value * 1.68 + 6
+Brisson             |      | value * 1.18519            | value / 1.18519
+Celsius             | °C   | DEFAULT                    | DEFAULT
+Cimento             |      | value * 1.50376 - 20.3008  | value * .665 + 13.5
+Cruquius            |      | value * .22737 - 243.329   | value * 4.39811 + 1070.19
+Dalencé             |      | value * 1.5 + 15           | value * (2 / 3) - 10
+Daniell             |      | value * 4.03996 + 13.333   | value * .247527 - 3.30028
+De la Hire          |      | value * 1.01184 - 20.8133  | value * .988302 + 20.5698
+De la Ville         |      | value * .56369 - 14.125    | value * 1.77402 + 25.0581
+Delisle             | °D   | 100 - value / 1.5          | (100 - value) * 1.5
+De Luc              |      | value * 1.26984            | value / 1.26984
+De Lyon             |      | value * 1.01587            | value / 1.01587
+de Revillas         |      | value / -1.48453633 + 100  | value / -.673609334 + 148.454
+de Suede            |      | value * 1.00402 - .0401717 | value * .995999 + .040011
+de Villeneuve       |      | value * .75                | value * (4 / 3)
+Du Crest            |      | value * .853839 + 14.6     | value * 1.17118 - 17.0992
+Edinburgh           |      | value * 2.58589 - 21.3336  | value * .386714 + 8.25
+electron volts      |      | value * 11604.5 - 273.15   | value / 11604.9669 + .0235383
+Fahrenheit          | °F   | (value - 32) / 1.8         | value * 1.8 + 32
+Florentine Magnum   |      | value * .36875 + 9.5       | value * 2.71186 - 25.7627
+Fowler              |      | value * .355734 + 12.095   | value * 2.81109 - 34
+Frick               |      | value * .442674 + 14.741   | value * 2.259 - 33.3
+Gas Mark            | G    | value * 14 + 121           | (value - 121) / 14
+Goubert             |      | value / .9                 | value * .9
+Hales               |      | value / 1.5                | value * 1.5
+Hauksbee            |      | value / -2.5 + 31.2        | value / -.4 + 78
+Jacobs-Holborn      |      | value * .140845 - 47.4648  | value * 7.1 + 337
+Kelvin              | K    | value - 273.15             | value + 273.15
+La Court            |      | value * 1.31687 - 19.7531  | value * .759375 + 15
+Lambert             |      | value * .27027 - 270.27    | value * 3.7 + 1000
+Lange               |      | value * 2.07523 - 14.2499  | value * .481875 + (20.6 / 3)
+Leiden              |      | value - 253                | value + 253
+Ludolf              |      | value * .623782 - 19.961   | value * 1.60313 + 32
+Mariotte            |      | value * .389 - 9.5         | value * 2.57069 + 24.4216
+Miles               |      | value / 1.8                | value * 1.8
+Murray              |      | value * .403226 - 39.9194  | value * 2.48 + 99
+Newton              | °N   | value / .33                | value * .33
+Oertel              |      | value / .9 - 35.5556       | value * .9 + 32
+Paris               |      | value * .583333 - 16.3333  | value * 1.71429 + 28
+Poleni              |      | value * 6.58915 - 312.016  | value * .151765 + 47.3529
+Rankine             | °Ra  | (value - 491.67) / 1.8     | (value + 273.15) * 1.8
+Réaumur             | °Ré  | value * 1.25               | value / 1.25
+Richter             |      | value * 1.21766 - 21.9178  | value * .82125 + 18
+Rinaldini           |      | value / .12                | value * .12
+Rømer               | °Rø  | (value - 7.5) * 40 / 21    | value * 21 / 40 + 7.5
+Sagredo             |      | value * .211 - 21.1        | value * 4.73934 + 100
+Sulzer              |      | value * .636637 + .684685  | value * 1.57075 - 1.07547
+Wedgwood (modern)   |      | value * 24.8572 + 269      | value / 24.8571954 - 10.8218
+Wedgwood (original) |      | value * 72.2219 + 580.8    | value / 72.2219815 - 8.04188
 
 Time                | Unit  | Formula
---------------------|-------|--------
-atom                |       |
-century             | c.    |
-day                 | d     |
-decade              |       |
-fortnight           |       |
-helek               | hl    |
-hour                | h     |
-Internet Time       | .beat |
-lunar day           |       |
-Martian solar day   | sol   |
-momentum            |       |
-minute              | min   |
-month               |       |
-radar metre         |       |
-radar nautical mile |       |
-radar statute mile  |       |
+--------------------|-------|-----------------
+atom                |       | 1 / .15957446808
+century             | c.    | 1 / 3155690880
+day                 | d     | 1 / 86400
+decade              |       | 1 / 315569088
+fortnight           |       | 1 / 1209600
+helek               | hl    | .3
+hour                | h     | 1 / 3600
+Internet Time       | .beat | .01157
+lunar day           |       | 1 / 2360592
+Martian solar day   | sol   | 1 / 88775.2
+momentum            |       | 1 / 60
+minute              | min   | 1 / 90
+month               |       | 1 / 2592000
+radar metre         |       | 1 / .00000000666
+radar nautical mile |       | 1 / .000012355
+radar statute mile  |       | 1 / .00001075
 second              | s     | DEFAULT
-shake               |       |
-week                |       |
-year                | a     |
+shake               |       | 100000000
+week                |       | 1 / 604800
+year                | a     | 1 / 31556908.8
 
 Torque       | Unit  | Formula
--------------|-------|--------
-gram metre   | g·m   |
+-------------|-------|-------------
+gram metre   | g·m   | 1 / 9806.65
 newton metre | N·m   | DEFAULT
-pound-foot   | lb·ft |
+pound-foot   | lb·ft | 1 / 1.355818
 
 Volume                  | Unit  | Formula
-------------------------|-------|--------
-acetabulum              |       |
-acre-foot               |       |
-adowlie                 |       |
-ale/beer barrel         |       |
-ale/beer firkin         |       |
-ale/beer hogshead       |       |
-amphora quadrantal      |       |
-Australian tablespoon   |       |
-bath                    |       |
-board-foot              | FBM   |
-bushel (imperial)       |       |
-bushel (US)             |       |
-butt of beer            |       |
-chungah                 |       |
-congius                 |       |
-coomb                   |       |
-cotyla                  |       |
-cran                    |       |
-cubic inch              | in³   |
-cubic foot              | ft³   |
-cubic metre             | m³    |
-cubic mile              | mi³   |
-cubic yard              | yd³   |
-culeus                  |       |
-cup (imperial)          |       |
-cup (US)                |       |
-cyathus                 |       |
-demiard                 |       |
-ephah                   | ה‎עֵיפָ |
-fluid dram              | fl dr |
-fluid dram (US)         | fl dr |
-fluid ounce (imperial)  | fl oz |
-fluid ounce (US)        | fl oz |
-gallon (imperial)       | gal   |
-gallon (US)             | gal   |
-garce (India)           |       |
-garce (Sri Lanka)       |       |
-gill (imperial)         |       |
-gill (US)               |       |
-gō                      | 合     |
-hekat                   |       |
-homer                   |       |
-Japanese cup            |       |
-kinderkin               |       |
-koku                    | 石     |
-lambda                  | λ     |
-ligula                  |       |
+------------------------|-------|--------------------------
+acetabulum              |       | 1 / .068125
+acre-foot               |       | 1 / 1233480
+adowlie                 |       | 1 / 2.509
+ale/beer barrel         |       | 1 / 163.65924
+ale/beer firkin         |       | 1 / 40.91481
+ale/beer hogshead       |       | 1 / 245.48886
+amphora quadrantal      |       | 1 / 26.16
+Australian tablespoon   |       | 50
+bath                    |       | 1 / 2200
+board-foot              | FBM   | 1 / 2.359737225
+bushel (imperial)       |       | 1 / 36.368735
+bushel (US)             |       | 1 / 35.239072
+butt of beer            |       | 1 / 490.97772
+chungah                 |       | 1 / .75768236466
+congius                 |       | 1 / 3.27
+coomb                   |       | 1 / 145.47494
+cotyla                  |       | 1 / .2725
+cran                    |       | 1 / 170.47853205
+cubic inch              | in³   | 61.0237440947323
+cubic foot              | ft³   | 1 / 28.316846592
+cubic metre             | m³    | .001
+cubic mile              | mi³   | .000000000000239912758579
+cubic yard              | yd³   | 1 / 764.5549
+culeus                  |       | 1 / 523.2
+cup (imperial)          |       | 1 / .284
+cup (US)                |       | 4.22675
+cyathus                 |       | 1 / (3.27 / 72)
+demiard                 |       | 1 / .284
+ephah                   | ה‎עֵיפָ | 1 / 36.36
+fluid dram              | fl dr | 1 / .0035516328125
+fluid dram (US)         | fl dr | 1 / .0036966911953125
+fluid ounce (imperial)  | fl oz | 35.1950652
+fluid ounce (US)        | fl oz | 33.8140227
+gallon (imperial)       | gal   | 1 / 4.546094188
+gallon (US)             | gal   | 1 / 3.785411784
+garce (India)           |       | 1 / 5244
+garce (Sri Lanka)       |       | 1 / 5084.8
+gill (imperial)         |       | 1 / .1420653125
+gill (US)               |       | 1 / .11829411825
+gō                      | 合     | 1331 / 240.1
+hekat                   |       | 1 / 4.8
+homer                   |       | 1 / 220
+Japanese cup            |       | 5
+kinderkin               |       | 1 / 81.82962
+koku                    | 石     | 1331 / 240100
+lambda                  | λ     | 1000000
+ligula                  |       | 1 / (3.27 / 288)
 litre                   | l     | DEFAULT
-log                     |       |
-maris                   |       |
-metretes                |       |
-metric cup              |       |
-mina                    |       |
-minim (imperial)        | min   |
-minim (US)              | min   |
-octave                  |       |
-omer                    | ר‎עמ  |
-pau                     |       |
-peck (imperial)         |       |
-peck (US)               |       |
-pin                     |       |
-pint (imperial)         | pt    |
-pint (US)               | pt    |
-quart (imperial)        | qt    |
-quart (US)              | qt    |
-quartarius              |       |
-sai                     | 才     |
-seah                    | האס   |
-sextarius               |       |
-shaku                   | 勺     |
-shipping ton (imperial) |       |
-shipping ton (US)       |       |
-shō                     | 升     |
-tablespoon (imperial)   | tbsp  |
-tablespoon (US)         | tbsp  |
-teaspoon (imperial)     | tbsp  |
-teaspoon (US)           | tsp   |
-to                      | 斗     |
-tun                     |       |
-urna                    |       |
-yard of ale             |       |
+log                     |       | 1 / .505
+maris                   |       | 1 / 30.3
+metretes                |       | 1 / 37.4
+metric cup              |       | 4
+mina                    |       | 1 / .505
+minim (imperial)        | min   | 35.1950652 * 480
+minim (US)              | min   | 33.8140227 * 480
+octave                  |       | 1 / 73
+omer                    | ר‎עמ  | 1 / 3.636
+pau                     |       | 1 / .284130625
+peck (imperial)         |       | 1 / 9.09218
+peck (US)               |       | 1 / 8.80976754172
+pin                     |       | 1 / 20.457405
+pint (imperial)         | pt    | 1.75975326
+pint (US)               | pt    | 2.11338
+quart (imperial)        | qt    | .879877
+quart (US)              | qt    | 1.05669
+quartarius              |       | 1 / .13625
+sai                     | 才     | 1331 / 2.401
+seah                    | האס   | 1 / 12.12
+sextarius               |       | 1 / .545
+shaku                   | 勺     | 1331 / 24.01
+shipping ton (imperial) |       | 1 / 1189.307556864
+shipping ton (US)       |       | 1 / 1132.67386368
+shō                     | 升     | 1331 / 2401
+tablespoon (imperial)   | tbsp  | 56.321
+tablespoon (US)         | tbsp  | 1 / .0148
+teaspoon (imperial)     | tbsp  | 168.936
+teaspoon (US)           | tsp   | 202.884
+to                      | 斗     | 1331 / 24010
+tun                     |       | 1 / 981.95544
+urna                    |       | 1 / 13.08
+yard of ale             |       | 1 / 1.4206537
