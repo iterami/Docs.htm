@@ -1,8 +1,6 @@
 [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
 -------------------------------------------------------------------------
 
-Unit conversion tool that can convert units of various types to a specified power and number of decimal places. Formula indicates how much equals 1 default unit.
-
 * [Acceleration](#acceleration)
 * [Angle](#angle)
 * [Area](#area)
