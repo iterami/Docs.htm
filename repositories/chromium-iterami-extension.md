@@ -1,5 +1,5 @@
-[iterami/Chrome-iterami](https://github.com/iterami/Chrome-iterami) Documentation
----------------------------------------------------------------------------------
+[iterami/Chromium-iterami-Extension](https://github.com/iterami/Chromium-iterami-Extension) Documentation
+---------------------------------------------------------------------------------------------------------
 
 * `Dark Theme`: Adds dark theme CSS to every visited webpage.
 * `GitHub Code Wrap`: Forces code on https://github.com to wrap instead of requiring a horizontal scrollbar.
@@ -10,13 +10,13 @@
 
 ---
 
-Load `Chrome-iterami` by:
-* `git clone https://github.com/iterami/Chrome-iterami.git`
+Load `Chromium-iterami-Extension` by:
+* `git clone https://github.com/iterami/Chromium-iterami-Extension.git`
 * Go to `chrome://extensions`.
 * Enable `Developer mode`.
-* Click `Load unpacked extension` and select the `Chrome-iterami` directory located within the cloned repository.
+* Click `Load unpacked extension` and select the `Chromium-iterami-Extension` directory located within the cloned repository.
 
-Update `Chrome-iterami` by:
-* Pulling repository updates via `git`.
+Update `Chromium-iterami-Extension` by:
+* Pulling repository updates via `git pull`.
 * Go to `chrome://extensions`.
 * `CTRL + R`

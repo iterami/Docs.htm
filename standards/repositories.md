@@ -9,7 +9,7 @@ iterami GitHub Repository Standards
 * Repository names should include prefixes and suffixes to indicate their project types:
   * Assembly repositories should use the `.asm` suffix.
   * C++ repositories should use the `.cpp` suffix.
-  * Chrome extension repositories should use the `Chrome-` prefix.
+  * Chromium extension repositories should use the `Chromium-` prefix.
   * Drupal repositories should use the `Drupal-` prefix.
   * GitHub Pages repositories should use the `.htm` suffix.
   * GTK+ repositories should use the `.gtk` suffix.
