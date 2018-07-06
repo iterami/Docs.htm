@@ -11,7 +11,8 @@ iterami/Documentation.htm
   * [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md)
   * [Repositories](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/repositories.md)
 * Repositories:
-  * [iterami/Chrome-iterami](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chrome-iterami.md)
+  * [iterami/Chromium-iterami-Extension](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chromium-iterami-extension.md)
+  * [iterami/Chromium-iterami-Theme](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chromium-iterami-theme.md)
   * [iterami/Drupal-callipepla](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/drupal-callipepla.md)
   * [iterami/eog-Plugin-MenuEnhancer](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/eog-plugin-menuenhancer.md)
   * [iterami/EVETools.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/evetools-gtk.md)
