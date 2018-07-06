@@ -16,5 +16,5 @@ iterami GitHub Repository Standards
   * JavaScript repositories should use the `.js` suffix.
   * PHP repositories should use the `.php` suffix.
   * Python repositories should use the `.py` suffix.
-  * Shel repositories should use the `.sh` suffix.
+  * Shell repositories should use the `.sh` suffix.
 * Wikis are disabled and restricted to users with push access.
