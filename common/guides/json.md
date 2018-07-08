@@ -100,6 +100,9 @@
     "dz": 0,
     "entities": [],
     "experience": 0,
+    "health-current": 100,
+    "health-max": 100,
+    "jump-height": 0.6
     "level": -1,
     "rotate-x": 0,
     "rotate-y": 0,
@@ -303,6 +306,13 @@
 
     // Optional. Current character experience.
     "experience": 0,
+
+    // Optional. Current and maximum health.
+    "health-current": 100,
+    "health-max": 100,
+
+    // Optional. "dy" set when the character jumps.
+    "jump-height": 0.6,
 
     // Optional. Current character level.
     // -1 means character is just a camera.

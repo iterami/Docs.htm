@@ -237,6 +237,8 @@ dy                  | false     |
 dz                  | false     |
 entities            | false     |
 experience          | false     |
+health-current      | false     |
+health-max          | false     |
 jump-height         | false     |
 level               | false     |
 rotate-x            | false     |
