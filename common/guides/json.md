@@ -102,7 +102,7 @@
     "experience": 0,
     "health-current": 100,
     "health-max": 100,
-    "jump-height": 0.6
+    "jump-height": 0.6,
     "level": -1,
     "rotate-x": 0,
     "rotate-y": 0,
