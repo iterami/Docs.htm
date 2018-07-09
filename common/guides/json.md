@@ -50,6 +50,7 @@
       "dy": 0,
       "dz": 0,
       "gravity": false,
+      "item": false,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -102,6 +103,7 @@
     "experience": 0,
     "health-current": 100,
     "health-max": 100,
+    "inventory": {},
     "jump-height": 0.6,
     "level": -1,
     "rotate-x": 0,
@@ -216,6 +218,9 @@
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
+      // Optional. Item properties and interaction properties, or false if this entity is not an item.
+      "item": false,
+
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
       "rotate-y": 0,
@@ -310,6 +315,9 @@
     // Optional. Current and maximum health.
     "health-current": 100,
     "health-max": 100,
+
+    // Optional. Current character inventory.
+    "inventory": {},
 
     // Optional. "dy" set when the character jumps.
     "jump-height": 0.6,
