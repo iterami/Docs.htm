@@ -218,7 +218,7 @@
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
-      // Optional. Item properties and interaction properties, or false if this entity is not an item.
+      // Optional. Item ID to increment by 1 in the webgl_character inventory, or false if this entity is not an item.
       "item": false,
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
