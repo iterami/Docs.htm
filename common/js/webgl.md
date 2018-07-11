@@ -21,6 +21,7 @@
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
+* [`webgl_json_export(args)`](#webgl_json_exportargs)
 * [`webgl_load_level(args)`](#webgl_load_levelargs)
 * [`webgl_load_level_init(args)`](#webgl_load_level_initargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
@@ -248,6 +249,16 @@ speed               | false     |
 translate-x         | false     |
 translate-y         | false     |
 translate-z         | false     |
+
+---
+
+### `webgl_json_export(args)`
+* Outputs JSON for level and character to target element.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+target    | false     |
 
 ---
 
