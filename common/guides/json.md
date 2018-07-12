@@ -35,6 +35,12 @@
     "example-group-0",
     "example-group-1"
   ],
+  "spawn-rotate-x": 0,
+  "spawn-rotate-y": 0,
+  "spawn-rotate-z": 0,
+  "spawn-translate-x": 0,
+  "spawn-translate-y": 0,
+  "spawn-translate-z": 0,
   "entities": [
     {
       "id": "example-entity-0",
@@ -91,9 +97,6 @@
 
 ```json
   "character": {
-    "camera-rotate-x": 0,
-    "camera-rotate-y": 0,
-    "camera-rotate-z": 0,
     "camera-type": "free",
     "camera-zoom-current": 0,
     "camera-zoom-max": 10,
@@ -109,13 +112,7 @@
     "inventory": {},
     "jump-height": 0.6,
     "level": -1,
-    "rotate-x": 0,
-    "rotate-y": 0,
-    "rotate-z": 0,
     "speed": 0.2,
-    "translate-x": 0,
-    "translate-y": 0,
-    "translate-z": 0,
   },
 ```
 
@@ -180,6 +177,16 @@
     "example-group-0",
     "example-group-1"
   ],
+
+  // Optional. Rotation of newly spawned character in degrees between 0 inclusive and 359 exclusive.
+  "spawn-rotate-x": 0,
+  "spawn-rotate-y": 0,
+  "spawn-rotate-z": 0,
+
+  // Optional. Translation of newly spawned character relative to `0, 0, 0`.
+  "spawn-translate-x": 0,
+  "spawn-translate-y": 0,
+  "spawn-translate-z": 0,
 
   // REQUIRED. Array of entities to create.
   "entities": [
@@ -288,11 +295,6 @@
 ```
   // Optional. "character" that isn't false.
   "character": {
-    // Optional. Rotation of camera in degrees between 0 and 359 inclusive.
-    "camera-rotate-x": 0,
-    "camera-rotate-y": 0,
-    "camera-rotate-z": 0,
-
     // Optional. Camera type.
     "camera-type": "free",
 
@@ -334,17 +336,7 @@
     // -1 means character is just a camera.
     "level": -1,
 
-    // Optional. Rotation of character in degrees between 0 and 359 inclusive.
-    "rotate-x": 0,
-    "rotate-y": 0,
-    "rotate-z": 0,
-
     // Optional. Character movement speed.
     "speed": 0.2,
-
-    // Optional. Translation of character relative to `0, 0, 0`.
-    "translate-x": 0,
-    "translate-y": 0,
-    "translate-z": 0,
   },
 ```

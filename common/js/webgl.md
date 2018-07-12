@@ -217,6 +217,12 @@ contextmenu          | false     |
 fog                  | false     |
 gravity-acceleration | false     |
 gravity-max          | false     |
+spawn-rotate-x       | false     |
+spawn-rotate-y       | false     |
+spawn-rotate-z       | false     |
+spawn-translate-x    | false     |
+spawn-translate-y    | false     |
+spawn-translate-z    | false     |
 
 ---
 
@@ -225,9 +231,6 @@ gravity-max          | false     |
 
 Arg                 | Required? | Notes
 --------------------|-----------|------
-camera-rotate-x     | false     |
-camera-rotate-y     | false     |
-camera-rotate-z     | false     |
 camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
@@ -242,13 +245,7 @@ health-current      | false     |
 health-max          | false     |
 jump-height         | false     |
 level               | false     |
-rotate-x            | false     |
-rotate-y            | false     |
-rotate-z            | false     |
 speed               | false     |
-translate-x         | false     |
-translate-y         | false     |
-translate-z         | false     |
 
 ---
 
