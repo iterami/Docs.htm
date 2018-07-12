@@ -11,7 +11,7 @@
 ### 3D JSON Level Format
 
 * Must be valid JSON. Levels listed below with comments are not valid.
-* Must follow the order of the example below.
+* Should follow the order of the example below, as C projects parse properties in order.
 * Optional properties can be removed.
 
 ```json
