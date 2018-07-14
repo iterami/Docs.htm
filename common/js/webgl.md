@@ -367,10 +367,10 @@ image    | false     |
 
 ### `webgl_vertexattribarray_set(args)`
 
-Arg       | Required? | Notes
-----------|-----------|------
-attribute | true      |
-program   | true      |
+Arg        | Required? | Notes
+-----------|-----------|------
+attributes | true      |
+program    | true      |
 
 ---
 
