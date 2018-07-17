@@ -28,7 +28,8 @@
   "directional-green": 1,
   "directional-red": 1,
   "directional-vector": false,
-  "fog": -0.0001,
+  "fog-density": 0.0001,
+  "fog-state": false,
   "gravity-acceleration": -0.05,
   "gravity-max": -1,
   "groups": [
@@ -160,8 +161,9 @@
   // Optional. Directional light red value, between 0 and 1 inclusive.
   "directional-red": 1,
 
-  // Optional. Fog value.
-  "fog": -0.0001,
+  // Optional. Fog density and if fog is enabled.
+  "fog-density": 0.0001,
+  "fog-state": false,
 
   // Optional. Gravity acceleration value.
   // Only affects entities with "gravity" property true.

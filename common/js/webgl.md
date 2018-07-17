@@ -214,7 +214,8 @@ clearcolor-blue      | false     |
 clearcolor-green     | false     |
 clearcolor-red       | false     |
 contextmenu          | false     |
-fog                  | false     |
+fog-density          | false     |
+fog-state            | false     |
 gravity-acceleration | false     |
 gravity-max          | false     |
 spawn-rotate-x       | false     |
