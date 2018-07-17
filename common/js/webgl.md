@@ -6,8 +6,9 @@
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
 * [`webgl_camera_handle()`](#webgl_camera_handle)
-* [`webgl_camera_reset()`](#webgl_camera_reset)
+* [`webgl_camera_origin()`](#webgl_camera_origin)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
+* [`webgl_camera_spawn()`](#webgl_camera_spawn)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_level()`](#webgl_character_level)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
@@ -91,8 +92,8 @@ type | false     |
 
 ---
 
-### `webgl_camera_reset()`
-* Resets the rotation and translation of the `_webgl-camera` entity.
+### `webgl_camera_origin()`
+* Resets the rotation and translation of the `_webgl-camera` entity back to origin.
 
 ---
 
@@ -107,6 +108,11 @@ x         | false     |
 xlock     | false     |
 y         | false     |
 z         | false     |
+
+---
+
+### `webgl_camera_spawn()`
+* Resets the rotation and translation of the `_webgl-camera` entity back to current level spawn coordinates.
 
 ---
 
