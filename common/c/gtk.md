@@ -8,7 +8,6 @@
 
 * [`GtkWidget * gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier)`](#gtkwidget--gtk_add_menuitemgtkwidget-menu-const-gchar-label-gtkaccelgroup-accelgroup-const-guint-key-gdkmodifiertype-modifier)
 * [`void gtk_begin_frameclock(GtkWidget *_glarea)`](#void-gtk_begin_frameclockgtkwidget-_glarea)
-* [`struct nextvalue gtk_get_next_value(GtkTextBuffer *buffer, const int line, const int offset)`](#struct-nextvalue-gtk_get_next_valuegtktextbuffer-buffer-const-int-line-const-int-offset)
 * [`void gtk_init_gtk(GtkApplication* app, const gchar *title)`](#void-gtk_init_gtkgtkapplication-app-const-gchar-title)
 
 ---
@@ -32,17 +31,6 @@ modifier   | GdkModifierType | Shortcut modifier.
 Arg     | Type       | Notes
 --------|------------|-------------------------------------
 _glarea | GtkWidget* | The GtkGlArea the frameclock is for.
-
----
-
-### `struct nextvalue gtk_get_next_value(GtkTextBuffer *buffer, const int line, const int offset)`
-* Get the next value in a comma and `|` separated line in a GtkTextBuffer.
-
-Arg    | Type           | Notes
--------|----------------|--------------------------------------------------
-buffer | GtkTextBuffer* | The GtkTextBuffer that contains the line of text.
-line   | int            | The line within the GtkTextBuffer.
-offset | int            | The current offset within the line.
 
 ---
 
