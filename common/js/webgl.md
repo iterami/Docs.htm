@@ -219,7 +219,10 @@ clearcolor-alpha     | false     |
 clearcolor-blue      | false     |
 clearcolor-green     | false     |
 clearcolor-red       | false     |
-contextmenu          | false     |
+directional-blue     | false     |
+directional-green    | false     |
+directional-red      | false     |
+directional-vector   | false     |
 fog-density          | false     |
 fog-state            | false     |
 gravity-acceleration | false     |
