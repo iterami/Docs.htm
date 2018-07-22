@@ -30,8 +30,8 @@ Ctrl + Shift + G | Find Previous
 Ctrl + Shift + R | Sort Selected Lines Descending
 Ctrl + Shift + S | Save As...
 Ctrl + Shift + Z | Redo
-Ctrl + Shift + = | Move Current Tab Right
-Ctrl + Shift + - | Move Current Tab Left
+Ctrl + Shift + + | Move Current Tab Right
+Ctrl + Shift + _ | Move Current Tab Left
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
