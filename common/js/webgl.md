@@ -323,8 +323,18 @@ collide-range | false     |
 collides      | false     |
 color         | false     |
 count         | false     |
+dx            | false     |
+dy            | false     |
+dz            | false     |
 gravity       | false     |
 lifespan      | false     |
+rotate-x      | false     |
+rotate-y      | false     |
+rotate-z      | false     |
+speed         | false     |
+translate-x   | false     |
+translate-y   | false     |
+translate-z   | false     |
 
 ---
 
