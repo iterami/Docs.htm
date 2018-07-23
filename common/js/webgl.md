@@ -323,9 +323,6 @@ collide-range | false     |
 collides      | false     |
 color         | false     |
 count         | false     |
-dx            | false     |
-dy            | false     |
-dz            | false     |
 gravity       | false     |
 lifespan      | false     |
 rotate-x      | false     |
