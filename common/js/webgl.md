@@ -28,6 +28,7 @@
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
+* [`webgl_particles_create(args)`](#webgl_particles_createargs)
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
@@ -302,13 +303,28 @@ json      | true      |
 ---
 
 ### `webgl_normals(args)`
-* Returns calculated entity normals.
+* Returns calculated normals based on rotation.
 
-Arg        | Required? | Notes
------------|-----------|------
-x-rotation | false     |
-y-rotation | false     |
-z-rotation | false     |
+Arg            | Required? | Notes
+---------------|-----------|------
+rotate-x       | false     |
+rotate-y       | false     |
+rotate-z       | false     |
+vertices-count | false     |
+
+---
+
+### `webgl_particles_create(args)`
+* Creates particle entities in the `particles` group.
+
+Arg           | Required? | Notes
+--------------|-----------|------
+collide-range | false     |
+collides      | false     |
+color         | false     |
+count         | false     |
+gravity       | false     |
+lifespan      | false     |
 
 ---
 
