@@ -6,11 +6,11 @@
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
 * [`webgl_camera_handle()`](#webgl_camera_handle)
-* [`webgl_camera_origin()`](#webgl_camera_origin)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
-* [`webgl_camera_spawn()`](#webgl_camera_spawn)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
-* [`webgl_character_level()`](#webgl_character_level)
+* [`webgl_character_level(args)`](#webgl_character_levelargs)
+* [`webgl_character_origin(args)`](#webgl_character_originargs)
+* [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_draw()`](#webgl_draw)
@@ -93,11 +93,6 @@ type | false     |
 
 ---
 
-### `webgl_camera_origin()`
-* Resets the rotation and translation of the `_webgl-camera` entity back to origin.
-
----
-
 ### `webgl_camera_rotate(args)`
 * Handles rotating the camera and character.
 
@@ -112,19 +107,36 @@ z         | false     |
 
 ---
 
-### `webgl_camera_spawn()`
-* Resets the rotation and translation of the `_webgl-camera` entity back to current level spawn coordinates.
-
----
-
 ### `webgl_camera_zoom()`
 * Functon called by bound `mousewheel` event within `mousebinds`.
 
 ---
 
-### `webgl_character_level()`
-* If character/camera doesn't exist yet, returns `-2`.
-* If character/camera exists, returns level. `-1` means character is just a camera.
+### `webgl_character_level(args)`
+* If character doesn't exist yet, returns `-2`.
+* If character exists, returns level. `-1` means character is just a camera.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+
+---
+
+### `webgl_character_origin(args)`
+* Resets the rotation and translation of a character back to the origin.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+
+---
+
+### `webgl_character_spawn(args)`
+* Resets the rotation and translation of a character back to current level spawn coordinates.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
 
 ---
 
