@@ -266,6 +266,7 @@ entities            | false     |
 experience          | false     |
 health-current      | false     |
 health-max          | false     |
+id                  | false     |
 jump-height         | false     |
 level               | false     |
 speed               | false     |
