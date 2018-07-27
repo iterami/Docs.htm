@@ -289,7 +289,7 @@ target    | false     |
 Arg       | Required? | Notes
 ----------|-----------|------
 character | false     |
-json      | true      |
+json      | false     |
 
 ---
 
@@ -299,7 +299,7 @@ json      | true      |
 Arg       | Required? | Notes
 ----------|-----------|------
 character | true      |
-json      | true      |
+json      | false     |
 
 ---
 
