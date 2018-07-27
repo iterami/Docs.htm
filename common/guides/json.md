@@ -46,10 +46,11 @@
     {
       "id": "example-entity-0",
       "alpha": 1,
-      "attach-to": false,
       "attach-offset-x": 0,
       "attach-offset-y": 0,
       "attach-offset-z": 0,
+      "attach-to": false,
+      "attach-type": "entity",
       "billboard": false,
       "collide-range": 2.5,
       "collides": false,
@@ -202,14 +203,17 @@
       // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
       "alpha": 1,
 
-      // Optional. ID of entity that this entity is attached to, or false if not attached.
-      // Entity needs to already exist.
-      "attach-to": false,
-
       // Optional. Translation offset relative to translation of the entity attached to.
       "attach-offset-x": 0,
       "attach-offset-y": 0,
       "attach-offset-z": 0,
+
+      // Optional. ID of entity that this entity is attached to, or false if not attached.
+      // Entity needs to already exist.
+      "attach-to": false,
+
+      // Optional. Type of attachment. Either `character` or `entity`.
+      "attach-type": "entity",
 
       // Optional. If the entity will rotate based on camera rotation.
       // Array of strings, including "x", "y", "z", or any combination.

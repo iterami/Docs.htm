@@ -52,6 +52,7 @@ offset-x | false     | Number of pixels of x-axis offset.
 offset-y | false     | Number of pixels of y-axis offset.
 offset-z | false     | Number of pixels of z-axis offset.
 to       | true      | ID of the entity being attached to.
+type     | false     |
 
 ---
 
