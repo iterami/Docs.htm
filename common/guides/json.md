@@ -137,8 +137,8 @@
   "ambient-red": 1,
 
   // Optional. Character properties, or false.
-  // The `Commented Character Properties` section has more info.
-  "character": false,
+  // The `Example Characters: Array of Objects` section has more info.
+  "characters": false,
 
   // Optional. Clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
@@ -298,8 +298,8 @@
 #### Commented Character Properties
 
 ```
-  // Optional. "character" that is array of objects instead of false.
-  "character": [
+  // Optional. "characters" that is array of objects instead of false.
+  "characters": [
     {
       // Optional. ID of character.
       "id": "_me",
