@@ -19,7 +19,7 @@
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
-  "character": false,
+  "characters": false,
   "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
@@ -94,27 +94,30 @@
 }
 ```
 
-#### Example Character Properties
+#### Example Characters: Array of Objects
 
 ```json
-  "character": {
-    "camera-type": "free",
-    "camera-zoom-current": 0,
-    "camera-zoom-max": 10,
-    "collide-range": 2.5,
-    "collides": true,
-    "dx": 0,
-    "dy": 0,
-    "dz": 0,
-    "entities": [],
-    "experience": 0,
-    "health-current": 100,
-    "health-max": 100,
-    "inventory": {},
-    "jump-height": 0.6,
-    "level": -1,
-    "speed": 0.2,
-  },
+  "characters": [
+    {
+      "id": "_me",
+      "camera-type": "free",
+      "camera-zoom-current": 0,
+      "camera-zoom-max": 10,
+      "collide-range": 2.5,
+      "collides": true,
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "entities": [],
+      "experience": 0,
+      "health-current": 100,
+      "health-max": 100,
+      "inventory": {},
+      "jump-height": 0.6,
+      "level": -1,
+      "speed": 0.2
+    }
+  ],
 ```
 
 #### Commented Explanation
@@ -254,7 +257,7 @@
       // Optional. If this entity should be moved from "foreground" group to "skybox" group.
       "skybox": false,
 
-      // Optional. id of texture within webgl_textures.
+      // Optional. ID of texture within webgl_textures.
       "texture": "_default",
 
       // Optional. Translation of entity relative to `0, 0, 0`.
@@ -295,50 +298,55 @@
 #### Commented Character Properties
 
 ```
-  // Optional. "character" that isn't false.
-  "character": {
-    // Optional. Camera type.
-    "camera-type": "free",
+  // Optional. "character" that is array of objects instead of false.
+  "character": [
+    {
+      // Optional. ID of character.
+      "id": "_me",
 
-    // Optional. Camera zoom current and max.
-    // When current is 0, camera is in first person mode.
-    "camera-zoom-current": 0,
-    "camera-zoom-max": 0,
+      // Optional. Camera type.
+      "camera-type": "free",
 
-    // Optional. If the character collides, then this is the maximum distance before collision occurs.
-    "collide-range": 2.5,
+      // Optional. Camera zoom current and max.
+      // When current is 0, camera is in first person mode.
+      "camera-zoom-current": 0,
+      "camera-zoom-max": 0,
 
-    // Optional. If the character collides with other entities that have collision.
-    "collides": true,
+      // Optional. If the character collides, then this is the maximum distance before collision occurs.
+      "collide-range": 2.5,
 
-    // Optional. Amount that is added to entity translation.
-    // Currently gets reset after every movement so players can stop.
-    "dx": 0,
-    "dy": 0,
-    "dz": 0,
+      // Optional. If the character collides with other entities that have collision.
+      "collides": true,
 
-    // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
-    // Uses same format as level entities.
-    "entities": [],
+      // Optional. Amount that is added to entity translation.
+      // Currently gets reset after every movement so players can stop.
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
 
-    // Optional. Current character experience.
-    "experience": 0,
+      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
+      // Uses same format as level entities.
+      "entities": [],
 
-    // Optional. Current and maximum health.
-    "health-current": 100,
-    "health-max": 100,
+      // Optional. Current character experience.
+      "experience": 0,
 
-    // Optional. Current character inventory.
-    "inventory": {},
+      // Optional. Current and maximum health.
+      "health-current": 100,
+      "health-max": 100,
 
-    // Optional. "dy" set when the character jumps.
-    "jump-height": 0.6,
+      // Optional. Current character inventory.
+      "inventory": {},
 
-    // Optional. Current character level.
-    // -1 means character is just a camera.
-    "level": -1,
+      // Optional. "dy" set when the character jumps.
+      "jump-height": 0.6,
 
-    // Optional. Character movement speed.
-    "speed": 0.2,
-  },
+      // Optional. Current character level.
+      // -1 means character is just a camera.
+      "level": -1,
+
+      // Optional. Character movement speed.
+      "speed": 0.2
+    }
+  ],
 ```
