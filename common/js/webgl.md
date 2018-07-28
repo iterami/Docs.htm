@@ -158,11 +158,12 @@ red   | true      |
 ### `webgl_collision(args)`
 * Checks for collisions based on entity normals.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-entity    | false     |
-target    | true      |
+Arg          | Required? | Notes
+-------------|-----------|------
+character    | false     |
+character-id | false     |
+entity       | false     |
+target       | true      |
 
 ---
 
