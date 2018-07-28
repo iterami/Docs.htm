@@ -59,10 +59,11 @@ type     | false     |
 ### `webgl_billboard(args)`
 * Changes the rotation of an entity based on the rotation of the camera.
 
-Arg    | Required? | Notes
--------|-----------|------
-axes   | false     |
-entity | true      |
+Arg       | Required? | Notes
+----------|-----------|------
+axes      | false     |
+character | false     |
+entity    | true      |
 
 ---
 
