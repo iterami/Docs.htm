@@ -98,14 +98,15 @@ type | false     |
 ### `webgl_camera_rotate(args)`
 * Handles rotating the camera and character.
 
-Arg       | Required? | Notes
-----------|-----------|------
-camera    | false     |
-character | false     |
-x         | false     |
-xlock     | false     |
-y         | false     |
-z         | false     |
+Arg          | Required? | Notes
+-------------|-----------|------
+camera       | false     |
+character    | false     |
+character-id | false     |
+x            | false     |
+xlock        | false     |
+y            | false     |
+z            | false     |
 
 ---
 
