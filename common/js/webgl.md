@@ -186,27 +186,29 @@ target       | true      |
 ---
 
 ### `webgl_entity_move(args)`
-* Handles moving an entity or the character within 3D space.
+* Handles moving a character or entity within 3D space.
 * Maintains y position unless specifically changed.
 
-Arg         | Required? | Notes
-------------|-----------|------
-entity      | false     |
-multiplier  | false     |
-strafe      | false     |
-y           | false     |
+Arg        | Required? | Notes
+-----------|-----------|------
+character  | false     |
+entity     | false     |
+multiplier | false     |
+strafe     | false     |
+y          | false     |
 
 ---
 
 ### `webgl_entity_move_to(args)`
-* Moves an entity or the character to a specific point.
+* Moves a character or entity to a specific point.
 
-Arg    | Required? | Notes
--------|-----------|------
-entity | false     |
-x      | false     |
-y      | false     |
-z      | false     |
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+entity    | false     |
+x         | false     |
+y         | false     |
+z         | false     |
 
 ---
 
