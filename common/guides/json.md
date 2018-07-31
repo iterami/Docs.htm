@@ -91,7 +91,8 @@
         "example-group-1"
       ]
     }
-  ]
+  ],
+  "randomized": []
 }
 ```
 
@@ -119,6 +120,20 @@
       "speed": 0.2
     }
   ],
+```
+
+#### Example Randomized: Array of Objects
+
+```json
+  "randomized": [
+    {
+      "character": false,
+      "id": "example-entity-0",
+      "max": 100,
+      "min": -100,
+      "property": "translate-z"
+    }
+  ]
 ```
 
 #### Commented Explanation
@@ -295,7 +310,11 @@
         "example-group-1"
       ]
     }
-  ]
+  ],
+
+  // Optional. Array of objects indicating which character or entity properties should be randomized.
+  // The `Example Randomized: Array of Objects` section has more info.
+  "randomized": []
 }
 ```
 
@@ -353,4 +372,26 @@
       "speed": 0.2
     }
   ],
+```
+
+#### Commented Randomized Properties
+
+```
+  // Optional. Array of objects indicating which character or entity properties should be randomized.
+  "randomized": [
+    {
+      // Optional. True if this affects character property, or false if this affects entity property.
+      "character": false,
+
+      // Required. The ID of the character or entity to randomize.
+      "id": "example-entity-0",
+
+      // Required. The maximum and minimum values to randomize between.
+      "max": 100,
+      "min": 100,
+
+      // Required. The property that will be modified.
+      "property": "translate-z"
+    }
+  ]
 ```
