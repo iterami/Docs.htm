@@ -32,6 +32,7 @@
   "fog-state": false,
   "gravity-acceleration": -0.05,
   "gravity-max": -1,
+  "jump-multiplier": 1,
   "groups": [
     "example-group-0",
     "example-group-1"
@@ -191,6 +192,9 @@
   // Optional. Maxiumum downward terminal velocity.
   // Only affects entities with "gravity" property true.
   "gravity-max": -0.05,
+
+  // Optional. Jump height multiplier that affects all characters.
+  "jump-multiplier": 1,
 
   // Optional. Array of groups to create.
   // Do not include automatically created groups, such as "skybox".
