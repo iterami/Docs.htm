@@ -256,7 +256,8 @@ fog-density          | false     |
 fog-state            | false     |
 gravity-acceleration | false     |
 gravity-max          | false     |
-jump-multiplier      | false     |
+multiplier-jump      | false     |
+multiplier-speed     | false     |
 spawn-rotate-x       | false     |
 spawn-rotate-y       | false     |
 spawn-rotate-z       | false     |
