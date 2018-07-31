@@ -8,6 +8,7 @@
 * [`webgl_camera_handle()`](#webgl_camera_handle)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
+* [`webgl_character_kill(args)`](#webgl_character_killargs)
 * [`webgl_character_jump(args)`](#webgl_character_jumpargs)
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
 * [`webgl_character_origin(args)`](#webgl_character_originargs)
@@ -113,6 +114,16 @@ z            | false     |
 
 ### `webgl_camera_zoom()`
 * Functon called by bound `mousewheel` event within `mousebinds`.
+
+---
+
+### `webgl_character_kill(args)`
+* Kills a character. Removes attached entities, then either sets `health-current` to 0 and moves to spawn, or deletes entirely.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+delete    | false     |
 
 ---
 
