@@ -64,6 +64,7 @@
       "dz": 0,
       "gravity": false,
       "item": false,
+      "kill": false,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -265,6 +266,9 @@
 
       // Optional. Item ID to increment by 1 in the webgl_character inventory, or false if this entity is not an item.
       "item": false,
+
+      // Optional. If collision with this entity results in instant character death.
+      "kill": false,
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
