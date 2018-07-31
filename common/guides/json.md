@@ -32,11 +32,12 @@
   "fog-state": false,
   "gravity-acceleration": -0.05,
   "gravity-max": -1,
-  "jump-multiplier": 1,
   "groups": [
     "example-group-0",
     "example-group-1"
   ],
+  "multiplier-jump": 1,
+  "multiplier-speed": 1,
   "spawn-rotate-x": 0,
   "spawn-rotate-y": 0,
   "spawn-rotate-z": 0,
@@ -193,8 +194,9 @@
   // Only affects entities with "gravity" property true.
   "gravity-max": -0.05,
 
-  // Optional. Jump height multiplier that affects all characters.
-  "jump-multiplier": 1,
+  // Optional. Property multipliers that affect all characters.
+  "multiplier-jump": 1,
+  "multiplier-speed": 1,
 
   // Optional. Array of groups to create.
   // Do not include automatically created groups, such as "skybox".
