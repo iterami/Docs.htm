@@ -131,7 +131,9 @@
   "randomized": [
     {
       "character": false,
-      "id": "example-entity-0",
+      "ids": [
+        "example-entity-0"
+      ],
       "max": 100,
       "min": -100,
       "property": "translate-z"
@@ -393,8 +395,10 @@
       // Optional. True if this affects character property, or false if this affects entity property.
       "character": false,
 
-      // Required. The ID of the character or entity to randomize.
-      "id": "example-entity-0",
+      // Required. Array of character or entity IDs, depending on the character property.
+      "ids": [
+        "example-entity-0"
+      ],
 
       // Required. The maximum and minimum values to randomize between.
       "max": 100,
