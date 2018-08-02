@@ -4,9 +4,7 @@
 * [`data_canvas_fence_2d(args)`](#data_canvas_fence_2dargs)
 * [`data_canvas_tree_2d(args)`](#data_canvas_tree_2dargs)
 * [`data_webgl_skybox(args)`](#data_webgl_skyboxargs)
-* [`data_webgl_terrain_3d(args)`](#data_webgl_terrain_3dargs)
 * [`data_webgl_tree_2d(args)`](#data_webgl_tree_2dargs)
-* [`data_webgl_tree_3d(args)`](#data_webgl_tree_3dargs)
 
 ---
 
@@ -46,44 +44,11 @@ color | false     |
 
 ---
 
-### `data_webgl_terrain_3d(args)`
-
-Arg         | Required? | Notes
-------------|-----------|------
-color       | false     |
-id          | false     |
-length      | false     |
-length-step | false     |
-width       | false     |
-width-step  | false     |
-x           | false     |
-y           | false     |
-z           | false     |
-
----
-
 ### `data_webgl_tree_2d(args)`
 
 Arg        | Required? | Notes
 -----------|-----------|------
 billboard  | false     |
-color-base | false     |
-color-leaf | false     |
-dx         | false     |
-dy         | false     |
-dz         | false     |
-id         | false     |
-x          | false     |
-y          | false     |
-z          | false     |
-
----
-
-### `data_webgl_tree_3d(args)`
-
-Arg        | Required? | Notes
------------|-----------|------
-collision  | false     |
 color-base | false     |
 color-leaf | false     |
 dx         | false     |
