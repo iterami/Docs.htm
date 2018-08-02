@@ -54,6 +54,7 @@
       "attach-to": false,
       "attach-type": "entity",
       "billboard": false,
+      "collide-event": false,
       "collide-range": 2.5,
       "collides": false,
       "collision": false,
@@ -64,7 +65,6 @@
       "dz": 0,
       "gravity": false,
       "item": false,
-      "kill": false,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -246,6 +246,10 @@
       // Optional. If this entity collides with other entities that have collision.
       "collides": false,
 
+      // Optional. What should happen when collision with this entity occurs.
+      //   "kill" for killing characters or false for nothing.
+      "collide-event": false,
+
       // Optional. If this entity collides, then this is the maximum distance before collision occurs.
       "collide-range": 2.5,
 
@@ -268,9 +272,6 @@
 
       // Optional. Item ID to increment by 1 in the webgl_character inventory, or false if this entity is not an item.
       "item": false,
-
-      // Optional. If collision with this entity results in instant character death.
-      "kill": false,
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
