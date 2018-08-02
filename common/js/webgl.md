@@ -15,6 +15,7 @@
 * [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
+* [`webgl_cuboid(args)`](#webgl_cuboidargs)
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_drawloop()`](#webgl_drawloop)
@@ -187,6 +188,24 @@ character    | false     |
 character-id | false     |
 entity       | false     |
 target       | true      |
+
+---
+
+### `webgl_cuboid(args)`
+* Creates a cuboid with specified properties.
+
+Arg           | Required? | Notes
+--------------|-----------|------
+collision     | false     |
+exclude       | false     |
+height        | false     |
+length        | false     |
+prefix        | false     |
+translate-x   | false     |
+translate-y   | false     |
+translate-z   | false     |
+vertex-colors | false     |
+width         | false     |
 
 ---
 

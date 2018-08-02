@@ -3,7 +3,6 @@
 
 * [`data_canvas_fence_2d(args)`](#data_canvas_fence_2dargs)
 * [`data_canvas_tree_2d(args)`](#data_canvas_tree_2dargs)
-* [`data_webgl_cube_3d(args)`](#data_webgl_cube_3dargs)
 * [`data_webgl_skybox(args)`](#data_webgl_skyboxargs)
 * [`data_webgl_terrain_3d(args)`](#data_webgl_terrain_3dargs)
 * [`data_webgl_tree_2d(args)`](#data_webgl_tree_2dargs)
@@ -35,24 +34,6 @@ half-leaf  | false     |
 id         | false     |
 x          | false     |
 y          | false     |
-
----
-
-### `data_webgl_cube_3d(args)`
-
-Arg       | Required? | Notes
-----------|-----------|------
-collision | false     |
-color     | false     |
-dx        | false     |
-dy        | false     |
-dz        | false     |
-exclude   | false     |
-id        | false     |
-side      | false     |
-x         | false     |
-y         | false     |
-z         | false     |
 
 ---
 
