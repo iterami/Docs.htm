@@ -119,7 +119,7 @@ z            | false     |
 ---
 
 ### `webgl_character_damage(args)`
-* Damages or fully kills a character, or optionally fully kills them. Removes attached entities, then either sets `health-current` to 0 and moves to spawn, or deletes entirely.
+* Damages or fully kills a character, or optionally fully kills them. Removes attached entities, then either sets `health-current` to 0 or deletes entirely.
 
 Arg       | Required? | Notes
 ----------|-----------|------
