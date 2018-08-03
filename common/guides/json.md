@@ -2,15 +2,17 @@
 ----------------------------------------------------------------------
 
 * [3D JSON Level Format](#3d-json-level-format):
-  * [Example Character Properties](#example-character-properties)
+  * [Example Character: Array of Objects](#example-character-array-of-objects)
+  * [Example Randomized: Array of Objects](#example-randomized-array-of-objects)
   * [Commented Explanation](#commented-explanation)
   * [Commented Character Properties](#commented-character-properties)
+  * [Commented Randomized Properties](#commented-randomized-properties)
 
 ---
 
 ### 3D JSON Level Format
 
-* Must be valid JSON. [Commented Explanation](#commented-explanation) and [Commented Character Properties](#commented-character-properties) are not valid.
+* Must be valid JSON. [Commented Explanation](#commented-explanation), [Commented Character Properties](#commented-character-properties), and [Commented Randomized Properties](#commented-randomized-properties] are not valid.
 * Should follow the order of the example below, as C projects parse properties in order.
 * Optional properties can be removed.
 
