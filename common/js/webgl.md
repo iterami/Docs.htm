@@ -194,18 +194,23 @@ target       | true      |
 ### `webgl_cuboid(args)`
 * Creates a cuboid with specified properties.
 
-Arg           | Required? | Notes
---------------|-----------|------
-collision     | false     |
-exclude       | false     |
-height        | false     |
-length        | false     |
-prefix        | false     |
-translate-x   | false     |
-translate-y   | false     |
-translate-z   | false     |
-vertex-colors | false     |
-width         | false     |
+Arg                  | Required? | Notes
+---------------------|-----------|------
+collision            | false     |
+exclude              | false     |
+height               | false     |
+length               | false     |
+prefix               | false     |
+translate-x          | false     |
+translate-y          | false     |
+translate-z          | false     |
+vertex-colors-back   | false     |
+vertex-colors-bottom | false     |
+vertex-colors-front  | false     |
+vertex-colors-left   | false     |
+vertex-colors-right  | false     |
+vertex-colors-top    | false     |
+width                | false     |
 
 ---
 
