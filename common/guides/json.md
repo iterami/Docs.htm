@@ -265,8 +265,8 @@
 
       // Optional. Width of the cuboid along the x-axis.
       "width": 1
-    ]
-  },
+    }
+  ],
 
   // Optional. Directional light alpha value, between 0 and 1 inclusive.
   "directional-alpha": 1,
