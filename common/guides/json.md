@@ -2,17 +2,13 @@
 ----------------------------------------------------------------------
 
 * [3D JSON Level Format](#3d-json-level-format):
-  * [Example Characters: Array of Objects](#example-characters-array-of-objects)
-  * [Example Randomized: Array of Objects](#example-randomized-array-of-objects)
   * [Commented Explanation](#commented-explanation)
-  * [Commented Character Properties](#commented-character-properties)
-  * [Commented Randomized Properties](#commented-randomized-properties)
 
 ---
 
 ### 3D JSON Level Format
 
-* Must be valid JSON. [Commented Explanation](#commented-explanation), [Commented Character Properties](#commented-character-properties), and [Commented Randomized Properties](#commented-randomized-properties] are not valid.
+* Must be valid JSON. [Commented Explanation](#commented-explanation) is not valid.
 * Should follow the order of the example below, as C projects parse properties in order.
 * Optional properties can be removed.
 
@@ -21,11 +17,51 @@
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
-  "characters": false,
+  "characters": [
+    {
+      "id": "_me",
+      "camera-type": "free",
+      "camera-zoom-current": 0,
+      "camera-zoom-max": 10,
+      "collide-range": 2.5,
+      "collides": true,
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "entities": [],
+      "experience": 0,
+      "health-current": 100,
+      "health-max": 100,
+      "inventory": {},
+      "jump-height": 0.6,
+      "level": -1,
+      "speed": 0.2
+    }
+  ],
   "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
+  "cuboids": [
+    {
+      "collision": false,
+      "exclude": {
+        "bottom": true
+      },
+      "height": 1,
+      "length": 1,
+      "prefix": "example-cuboid",
+      "translate-x": 0,
+      "translate-z": 0,
+      "vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "width": 1
+    ]
+  },
   "directional-blue": 1,
   "directional-green": 1,
   "directional-red": 1,
@@ -97,39 +133,6 @@
       ]
     }
   ],
-  "randomized": []
-}
-```
-
-#### Example Characters: Array of Objects
-
-```json
-  "characters": [
-    {
-      "id": "_me",
-      "camera-type": "free",
-      "camera-zoom-current": 0,
-      "camera-zoom-max": 10,
-      "collide-range": 2.5,
-      "collides": true,
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
-      "entities": [],
-      "experience": 0,
-      "health-current": 100,
-      "health-max": 100,
-      "inventory": {},
-      "jump-height": 0.6,
-      "level": -1,
-      "speed": 0.2
-    }
-  ],
-```
-
-#### Example Randomized: Array of Objects
-
-```json
   "randomized": [
     {
       "character": false,
@@ -141,6 +144,8 @@
       "property": "translate-z"
     }
   ]
+}
+
 ```
 
 #### Commented Explanation
@@ -159,9 +164,58 @@
   // Optional. Ambient light red value, between 0 and 1 inclusive.
   "ambient-red": 1,
 
-  // Optional. Character properties, or false.
-  // The `Example Characters: Array of Objects` section has more info.
-  "characters": false,
+  // Optional. "characters" that is array of objects.
+  //   Set to false to create no new characters.
+  "characters": [
+    {
+      // Optional. ID of character.
+      "id": "_me",
+
+      // Optional. Camera type.
+      "camera-type": "free",
+
+      // Optional. Camera zoom current and max.
+      // When current is 0, camera is in first person mode.
+      "camera-zoom-current": 0,
+      "camera-zoom-max": 0,
+
+      // Optional. If the character collides, then this is the maximum distance before collision occurs.
+      "collide-range": 2.5,
+
+      // Optional. If the character collides with other entities that have collision.
+      "collides": true,
+
+      // Optional. Amount that is added to entity translation.
+      // Currently gets reset after every movement so players can stop.
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+
+      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
+      // Uses same format as level entities.
+      "entities": [],
+
+      // Optional. Current character experience.
+      "experience": 0,
+
+      // Optional. Current and maximum health.
+      "health-current": 100,
+      "health-max": 100,
+
+      // Optional. Current character inventory.
+      "inventory": {},
+
+      // Optional. "dy" set when the character jumps.
+      "jump-height": 0.6,
+
+      // Optional. Current character level.
+      // -1 means character is just a camera.
+      "level": -1,
+
+      // Optional. Character movement speed.
+      "speed": 0.2
+    }
+  ],
 
   // Optional. Clear color alpha value, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
@@ -174,6 +228,45 @@
 
   // Optional. Clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
+
+  // Optional. Array of cuboids to create via webgl_cuboid().
+  "cuboids": [
+    {
+      // Optional. If this cuboid will have collision.
+      "collision": false,
+
+      // Optional. Which sides should be excluded from creation.
+      //   Sides are: back, bottom, front, left, right, top.
+      "exclude": {
+        "bottom": true
+      },
+
+      // Optional. Height of the cuboid along the y-axis.
+      "height": 1,
+
+      // Optional. Length of the cuboid along the z-axis.
+      "length": 1,
+
+      // Optional. Prefix added to each created entity ID.
+      "prefix": "example-cuboid",
+
+      // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0,
+
+      // Optional. Color of the cuboid.
+      "vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
+      // Optional. Width of the cuboid along the x-axis.
+      "width": 1
+    ]
+  },
 
   // Optional. Directional light alpha value, between 0 and 1 inclusive.
   "directional-alpha": 1,
@@ -328,71 +421,7 @@
   ],
 
   // Optional. Array of objects indicating which character or entity properties should be randomized.
-  // The `Example Randomized: Array of Objects` section has more info.
-  "randomized": []
-}
-```
-
-#### Commented Character Properties
-
-```
-  // Optional. "characters" that is array of objects instead of false.
-  "characters": [
-    {
-      // Optional. ID of character.
-      "id": "_me",
-
-      // Optional. Camera type.
-      "camera-type": "free",
-
-      // Optional. Camera zoom current and max.
-      // When current is 0, camera is in first person mode.
-      "camera-zoom-current": 0,
-      "camera-zoom-max": 0,
-
-      // Optional. If the character collides, then this is the maximum distance before collision occurs.
-      "collide-range": 2.5,
-
-      // Optional. If the character collides with other entities that have collision.
-      "collides": true,
-
-      // Optional. Amount that is added to entity translation.
-      // Currently gets reset after every movement so players can stop.
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
-
-      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
-      // Uses same format as level entities.
-      "entities": [],
-
-      // Optional. Current character experience.
-      "experience": 0,
-
-      // Optional. Current and maximum health.
-      "health-current": 100,
-      "health-max": 100,
-
-      // Optional. Current character inventory.
-      "inventory": {},
-
-      // Optional. "dy" set when the character jumps.
-      "jump-height": 0.6,
-
-      // Optional. Current character level.
-      // -1 means character is just a camera.
-      "level": -1,
-
-      // Optional. Character movement speed.
-      "speed": 0.2
-    }
-  ],
-```
-
-#### Commented Randomized Properties
-
-```
-  // Optional. Array of objects indicating which character or entity properties should be randomized.
+  //   Leave as [] to not randomize any properties.
   "randomized": [
     {
       // Optional. True if this affects character property, or false if this affects entity property.
@@ -411,4 +440,5 @@
       "property": "translate-z"
     }
   ]
+}
 ```
