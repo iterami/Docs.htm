@@ -432,9 +432,9 @@
         "example-entity-0"
       ],
 
-      // Required. The maximum and minimum values to randomize between.
+      // Required. The range in which to choose a number, which is then added to the property.
       "max": 100,
-      "min": 100,
+      "min": -100,
 
       // Required. The property that will be modified.
       "property": "translate-z"
