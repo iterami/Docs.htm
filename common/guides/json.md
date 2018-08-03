@@ -60,8 +60,8 @@
         1, 1, 1, 1
       ],
       "width": 1
-    ]
-  },
+    }
+  ],
   "directional-blue": 1,
   "directional-green": 1,
   "directional-red": 1,
