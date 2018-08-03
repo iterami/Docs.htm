@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------
 
 * [3D JSON Level Format](#3d-json-level-format):
-  * [Example Character: Array of Objects](#example-character-array-of-objects)
+  * [Example Characters: Array of Objects](#example-characters-array-of-objects)
   * [Example Randomized: Array of Objects](#example-randomized-array-of-objects)
   * [Commented Explanation](#commented-explanation)
   * [Commented Character Properties](#commented-character-properties)
