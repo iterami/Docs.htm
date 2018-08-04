@@ -8,7 +8,7 @@
 
 ### 3D JSON Level Format
 
-* Must be valid JSON. [Commented Explanation](#commented-explanation) is not valid.
+* Must be valid JSON. [Commented Explanation](#commented-explanation) is not valid. iterami style formatting is optional.
 * Should follow the order of the example below, as C projects parse properties in order.
 * Optional properties can be removed.
 

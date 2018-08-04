@@ -9,15 +9,15 @@
 
 ### Files Used
 * `css`:
-  * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas projects.
-  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/core.md): used by every HTM project.
-  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/dom.md)
-  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/writings.md)
+  * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas HTM projects.
+  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/core.md): used by every HTM project on every non-text-only page.
+  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/dom.md): used by HTM projects that use buttons to simulate a canvas.
+  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/writings.md): used by HTM projects on text-only pages.
 * `js`:
-  * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas projects.
+  * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas HTM projects.
   * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
-  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities.
-  * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas projects.
+  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities for HTM projects.
+  * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas HTM projects.
 
 ---
 
