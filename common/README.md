@@ -1,7 +1,7 @@
 [iterami/common](https://github.com/iterami/common) Documentation
 -----------------------------------------------------------------
 
-`iterami/common` is a standalone library containing various files. Once imported, your projects will have access to functions and variables designed to handle many aspects of project functionality in one standardized way, while also providing additional functionality over their vanilla variants.
+`iterami/common` is a standalone CC0-licensed library containing various importable files that provide your projects with functions and variables designed to handle many aspects of project functionality in a standardized way.
 
 ---
 
