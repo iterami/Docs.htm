@@ -24,7 +24,7 @@ b   | void* |
 ---
 
 ### `int sort_compare_ints_desc(const void* a, const void* b)`
-* Compares two integers.
+* Compares 2 integers.
 * Used in `qsort()` rather than directly called.
 * Returns a value:
   * =0 = integers are equal
@@ -40,7 +40,7 @@ b   | void* |
 
 ### `int sort_compare_strings_asc(const void* a, const void* b)`
 * Used in `qsort()` rather than directly called.
-* Compares two strings.
+* Compares 2 strings.
 * Returns a value:
   * =0 = strings are equal
   * less than 0 = a is earlier than b
@@ -55,7 +55,7 @@ b   | void* |
 
 ### `int sort_compare_strings_desc(const void* a, const void* b)`
 * Used in `qsort()` rather than directly called.
-* Compares two strings.
+* Compares 2 strings.
 * Returns a value:
   * =0 = strings are equal
   * less than 0 = b is earlier than a

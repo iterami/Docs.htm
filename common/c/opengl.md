@@ -43,7 +43,7 @@
 ---
 
 ### `void opengl_billboard(const int id, gboolean x, gboolean y, gboolean z)`
-* Billboards an entity by making it face towards the camera on any of the three axes.
+* Billboards an entity by making it face towards the camera on any of the 3 axes.
 
 Arg | Type     | Notes
 ----|----------|------
@@ -242,7 +242,7 @@ group | groupstruct* |
 ---
 
 ### `void opengl_group_move(groupstruct *oldgroup, entitystruct *entity, groupstruct *newgroup)`
-* Moves an entity from one group to another group.
+* Moves an entity from 1 group to another group.
 
 Arg      | Type         | Notes
 ---------|--------------|------

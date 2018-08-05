@@ -28,7 +28,7 @@ degrees | float |
 ---
 
 ### `float math_distance_2d(const float x0, const float y0, const float x1, const float y1)`
-* Returns the distance between two 2D points.
+* Returns the distance between 2 2D points.
 
 Arg | Type  | Notes
 ----|-------|------
@@ -94,7 +94,7 @@ z      | float  |
 ---
 
 ### `float math_point_angle(const float x0, const float y0, const float x1, const float y1)`
-* Returns the angle between two points relative to the grid.
+* Returns the angle between 2 points relative to the grid.
 
 Arg | Type  | Notes
 ----|-------|------

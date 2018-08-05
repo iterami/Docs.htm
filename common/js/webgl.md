@@ -46,7 +46,7 @@
 ---
 
 ### `webgl_attach(args)`
-* Used to attach one entity to another entity and share a position with optional offset.
+* Used to attach 1 entity to another entity and share a position with optional offset.
 
 Arg      | Required? | Notes
 ---------|-----------|-----------------------------------------
