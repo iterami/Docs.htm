@@ -125,7 +125,7 @@ url  | true      |
 ---
 
 ### `core_args(args)`
-* Utility function for handling usage and default values of the one arguments object.
+* Utility function for handling usage and default values of the 1 arguments object.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -238,7 +238,8 @@ degrees  | true      |
 ---
 
 ### `core_distance(args)`
-* Returns the distance between two two-dimensional points.
+* Returns the distance between 2 3-dimensional points.
+* `z0` and `z1` are optional, so you can compare 2-dimensional points as well.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -247,6 +248,8 @@ x0       | true      |
 x1       | true      |
 y0       | true      |
 y1       | true      |
+z0       | false     |
+z1       | false     |
 
 ---
 
@@ -340,7 +343,7 @@ mousebinds   | false     |
 ---
 
 ### `core_fixed_length_line(args)`
-* Returns the endpoint of a line between two points, where the line has a fixed length.
+* Returns the endpoint of a line between 2 points, where the line has a fixed length.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -386,7 +389,7 @@ to       | true      |
 ---
 
 ### `core_group_remove(args)`
-* Remove entities from one specific group.
+* Remove entities from 1 specific group.
 
 Arg          | Required? | Notes
 -------------|-----------|------
@@ -472,7 +475,7 @@ todo   | false     |
 ---
 
 ### `core_hex_to_rgb(args)`
-* Converts a hexadecimal string of length six to red, green, and blue.
+* Converts a hexadecimal string of length 6 to red, green, and blue.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -684,7 +687,7 @@ mousebinds | true      |
 ---
 
 ### `core_move_2d(args)`
-* Calculates movement in two dimensions.
+* Calculates movement in 2 dimensions.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -709,7 +712,7 @@ speed | true      |
 ---
 
 ### `core_move_3d(args)`
-* Calculates movement in three dimensions.
+* Calculates movement in 3 dimensions.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -722,7 +725,7 @@ strafe     | false     |
 ---
 
 ### `core_point_angle(args)`
-* Returns the angle between two points relative to the grid.
+* Returns the angle between 2 points relative to the grid.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -753,7 +756,7 @@ chance  | false     |
 ---
 
 ### `core_random_hex(args)`
-* Generates a random hexadecimal string of length six.
+* Generates a random hexadecimal string of length 6.
 
 ---
 
@@ -801,7 +804,7 @@ length     | false     |
 ---
 
 ### `core_rectangle_overlap(args)`
-* Checks if two rectangles are overlapping.
+* Checks if 2 rectangles are overlapping.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -1011,7 +1014,7 @@ timestamp | false     |
 ---
 
 ### `core_two_digits(args)`
-* Adds a zero before a number of it only has one digit.
+* Adds a zero before a number of it only has 1 digit.
 
 Arg    | Required? | Notes
 -------|-----------|------
