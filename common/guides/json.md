@@ -110,6 +110,9 @@
       "scale-y": 1,
       "scale-z": 1,
       "skybox": false,
+      "spawn-entity": false,
+      "spawn-interval-current": 0,
+      "spawn-interval-max": 100,
       "speed": 0.2,
       "texture": "_default",
       "translate-x": 0,
@@ -377,6 +380,13 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
+
+      // Optional. If a particle should be spawned.
+      "spawn-entity": false,
+
+      // Optional. Current and maximum number of frames since last particle spawned.
+      "spawn-interval-current": 0,
+      "spawn-interval-max": 0,
 
       // Optional. Entity movement speed.
       "speed": 0.2,
