@@ -3,7 +3,6 @@
 
 * [`data_canvas_fence_2d(args)`](#data_canvas_fence_2dargs)
 * [`data_canvas_tree_2d(args)`](#data_canvas_tree_2dargs)
-* [`data_webgl_skybox(args)`](#data_webgl_skyboxargs)
 * [`data_webgl_tree_2d(args)`](#data_webgl_tree_2dargs)
 
 ---
@@ -32,15 +31,6 @@ half-leaf  | false     |
 id         | false     |
 x          | false     |
 y          | false     |
-
----
-
-### `data_webgl_skybox(args)`
-* Creates a cube around the camera that is drawn first to simulate a sky.
-
-Arg   | Required? | Notes
-------|-----------|------
-color | false     |
 
 ---
 
