@@ -238,16 +238,15 @@ degrees  | true      |
 ---
 
 ### `core_distance(args)`
-* Returns the distance between 2 3-dimensional points.
-* `z0` and `z1` are optional, so you can compare 2-dimensional points as well.
+* Returns the distance between 2 points that can be 3D, 2D, or 1D.
 
 Arg      | Required? | Notes
 ---------|-----------|------
 decimals | false     |
-x0       | true      |
-x1       | true      |
-y0       | true      |
-y1       | true      |
+x0       | false     |
+x1       | false     |
+y0       | false     |
+y1       | false     |
 z0       | false     |
 z1       | false     |
 
