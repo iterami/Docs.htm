@@ -16,6 +16,7 @@ iterami/Documentation.htm
   * [iterami/Chromium-iterami-Theme](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/chromium-iterami-theme.md)
   * [iterami/EVETools.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/evetools-gtk.md)
   * [iterami/FileBrowser.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/filebrowser-gtk.md)
+  * [iterami/GMod-iterami-Addon](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/gmod-iterami-addon.md)
   * [iterami/MultiverseEditor.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/multiverseeditor-gtk.md)
   * [iterami/Platform-2D.sh](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/platform-2d-sh.md)
   * [iterami/TextEditor.gtk](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/texteditor-gtk.md)
