@@ -983,11 +983,11 @@ value | true      |
 
 Arg     | Required? | Notes
 --------|-----------|------
-content | false     |
+content | true      |
 default | false     |
 group   | true      |
 id      | true      |
-label   | false     |
+label   | true      |
 
 ---
 
