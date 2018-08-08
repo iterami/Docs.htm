@@ -172,10 +172,10 @@ character | false     |
 
 Arg   | Required? | Notes
 ------|-----------|------
-alpha | true      |
-blue  | true      |
-green | true      |
-red   | true      |
+alpha | false     |
+blue  | false     |
+green | false     |
+red   | false     |
 
 ---
 
