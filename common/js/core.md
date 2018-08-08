@@ -343,16 +343,18 @@ mousebinds   | false     |
 ---
 
 ### `core_fixed_length_line(args)`
-* Returns the endpoint of a line between 2 points, where the line has a fixed length.
+* Returns the endpoint of a line between 2 3D, 2D, or 1D points, where the line has a fixed length.
 
 Arg      | Required? | Notes
 ---------|-----------|------
 decimals | false     |
-length   | true      |
-x0       | true      |
-x1       | true      |
-y0       | true      |
-y1       | true      |
+length   | false     |
+x0       | false     |
+x1       | false     |
+y0       | false     |
+y1       | false     |
+z0       | false     |
+z1       | false     |
 
 ---
 
