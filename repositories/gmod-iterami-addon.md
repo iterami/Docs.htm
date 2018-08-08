@@ -29,6 +29,7 @@
 ### Uninstallation
 
 1. Remove the `gmod-iterami-addon` directory from your `GarrysMod/garrysmod/addons` directory.
+2. Restart GMod.
 
 ---
 
