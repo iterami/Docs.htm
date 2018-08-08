@@ -438,7 +438,6 @@ shaders | true      |
 
 Arg    | Required? | Notes
 -------|-----------|------
-id     | true      |
 source | true      |
 type   | true      |
 
