@@ -421,9 +421,9 @@ y   | true      |
 ### `webgl_program_create(args)`
 * Creates, links, and uses a WebGL shader program.
 
-Arg        | Required? | Notes
------------|-----------|------
-shaderlist | true      |
+Arg     | Required? | Notes
+--------|-----------|------
+shaders | true      |
 
 ---
 
