@@ -520,7 +520,7 @@ string | true      |
 Arg        | Required? | Notes
 -----------|-----------|------
 id         | true      |
-properties | false     |
+properties | true      |
 
 ---
 
