@@ -27,6 +27,7 @@
 * [`core_events_todoloop()`](#core_events_todoloop)
 * [`core_fixed_length_line(args)`](#core_fixed_length_lineargs)
 * [`core_group_add(args)`](#core_group_addargs)
+* [`core_group_create(args)`](#core_group_createargs)
 * [`core_group_modify(args)`](#core_group_modifyargs)
 * [`core_group_move(args)`](#core_group_moveargs)
 * [`core_group_remove_all(args)`](#core_group_remove_allargs)
@@ -356,12 +357,21 @@ y1       | true      |
 ---
 
 ### `core_group_add(args)`
-* Adds entities to a group and creates the group if it does not exist.
+* Adds entities to a group and calls `core_group_create()` if it does not exist.
 
 Arg      | Required? | Notes
 ---------|-----------|------
 entities | true      |
 group    | true      |
+
+---
+
+### `core_group_create(args)`
+* Creates empty groups and sets up length handling.
+
+Arg | Required? | Notes
+----|-----------|------
+ids | true      |
 
 ---
 
