@@ -288,6 +288,7 @@ clearcolor-red       | false     |
 directional-blue     | false     |
 directional-green    | false     |
 directional-red      | false     |
+directional-state    | false     |
 directional-vector   | false     |
 fog-density          | false     |
 fog-state            | false     |

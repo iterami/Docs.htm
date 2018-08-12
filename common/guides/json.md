@@ -65,7 +65,8 @@
   "directional-blue": 1,
   "directional-green": 1,
   "directional-red": 1,
-  "directional-vector": false,
+  "directional-state": false,
+  "directional-vector": "0, 1, 0",
   "fog-density": 0.0001,
   "fog-state": false,
   "gravity-acceleration": -0.05,
@@ -155,16 +156,10 @@
 
 ```
 {
-  // Optional. Ambient light alpha value, between 0 and 1 inclusive.
+  // Optional. Ambient light values, between 0 and 1 inclusive.
   "ambient-alpha": 1,
-
-  // Optional. Ambient light blue value, between 0 and 1 inclusive.
   "ambient-blue": 1,
-
-  // Optional. Ambient light green value, between 0 and 1 inclusive.
   "ambient-green": 1,
-
-  // Optional. Ambient light red value, between 0 and 1 inclusive.
   "ambient-red": 1,
 
   // Optional. "characters" that is array of objects.
@@ -220,16 +215,10 @@
     }
   ],
 
-  // Optional. Clear color alpha value, between 0 and 1 inclusive.
+  // Optional. Clear color values, between 0 and 1 inclusive.
   "clearcolor-alpha": 1,
-
-  // Optional. Clear color blue value, between 0 and 1 inclusive.
   "clearcolor-blue": 0,
-
-  // Optional. Clear color green value, between 0 and 1 inclusive.
   "clearcolor-green": 0,
-
-  // Optional. Clear color red value, between 0 and 1 inclusive.
   "clearcolor-red": 0,
 
   // Optional. Array of cuboids to create via webgl_cuboid().
@@ -271,17 +260,15 @@
     }
   ],
 
-  // Optional. Directional light alpha value, between 0 and 1 inclusive.
+  // Optional. Directional light values, between 0 and 1 inclusive.
   "directional-alpha": 1,
-
-  // Optional. Directional light blue value, between 0 and 1 inclusive.
   "directional-blue": 1,
-
-  // Optional. Directional light green value, between 0 and 1 inclusive.
   "directional-green": 1,
-
-  // Optional. Directional light red value, between 0 and 1 inclusive.
   "directional-red": 1,
+
+  // Optional. If directional lighting is enabled and which vector it is going.
+  "directional-state": false,
+  "directional-vector": "0, 1, 0",
 
   // Optional. Fog density and if fog is enabled.
   "fog-density": 0.0001,
