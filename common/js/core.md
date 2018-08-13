@@ -33,6 +33,7 @@
 * [`core_group_remove_all(args)`](#core_group_remove_allargs)
 * [`core_group_remove(args)`](#core_group_removeargs)
 * [`core_handle_beforeunload(event)`](#core_handle_beforeunloadevent)
+* [`core_handle_blur(event)`](#core_handle_blurevent)
 * [`core_handle_contextmenu(event)`](#core_handle_contextmenuevent)
 * [`core_handle_defaults(args)`](#core_handle_defaultsargs)
 * [`core_handle_event(args)`](#core_handle_eventargs)
@@ -421,6 +422,10 @@ entities     | true      |
 ---
 
 ### `core_handle_beforeunload(event)`
+
+---
+
+### `core_handle_blur(event)`
 
 ---
 
