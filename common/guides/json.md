@@ -38,7 +38,6 @@
       "speed": 0.2
     }
   ],
-  "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
@@ -157,7 +156,6 @@
 ```
 {
   // Optional. Ambient light values, between 0 and 1 inclusive.
-  "ambient-alpha": 1,
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
@@ -216,7 +214,6 @@
   ],
 
   // Optional. Clear color values, between 0 and 1 inclusive.
-  "clearcolor-alpha": 1,
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,

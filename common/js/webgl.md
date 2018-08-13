@@ -172,7 +172,6 @@ character | false     |
 
 Arg   | Required? | Notes
 ------|-----------|------
-alpha | false     |
 blue  | false     |
 green | false     |
 red   | false     |
@@ -281,7 +280,6 @@ Arg                  | Required? | Notes
 ambient-blue         | false     |
 ambient-green        | false     |
 ambient-red          | false     |
-clearcolor-alpha     | false     |
 clearcolor-blue      | false     |
 clearcolor-green     | false     |
 clearcolor-red       | false     |
