@@ -258,7 +258,6 @@
   ],
 
   // Optional. Directional light values, between 0 and 1 inclusive.
-  "directional-alpha": 1,
   "directional-blue": 1,
   "directional-green": 1,
   "directional-red": 1,
