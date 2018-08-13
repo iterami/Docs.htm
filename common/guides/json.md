@@ -93,7 +93,7 @@
       "attach-to": false,
       "attach-type": "entity",
       "billboard": false,
-      "collide-event": false,
+      "collide-damage": 0,
       "collide-range": 2.5,
       "collides": false,
       "collision": false,
@@ -331,9 +331,8 @@
       // Optional. If this entity collides with other entities that have collision.
       "collides": false,
 
-      // Optional. What should happen when collision with this entity occurs.
-      //   "kill" for killing characters or false for nothing.
-      "collide-event": false,
+      // Optional. How much damage is done to characters when collision occurs.
+      "collide-damage": 0,
 
       // Optional. If this entity collides, then this is the maximum distance before collision occurs.
       "collide-range": 2.5,
