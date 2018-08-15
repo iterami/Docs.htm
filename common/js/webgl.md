@@ -308,7 +308,6 @@ spawn-translate-z    | false     |
 
 Arg                 | Required? | Notes
 --------------------|-----------|------
-camera-type         | false     |
 camera-zoom-current | false     |
 camera-zoom-max     | false     |
 collide-range       | false     |

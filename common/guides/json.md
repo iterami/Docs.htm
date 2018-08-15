@@ -20,7 +20,6 @@
   "characters": [
     {
       "id": "_me",
-      "camera-type": "free",
       "camera-zoom-current": 0,
       "camera-zoom-max": 10,
       "collide-range": 2.5,
@@ -166,9 +165,6 @@
     {
       // Optional. ID of character.
       "id": "_me",
-
-      // Optional. Camera type.
-      "camera-type": "free",
 
       // Optional. Camera zoom current and max.
       // When current is 0, camera is in first person mode.
