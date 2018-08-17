@@ -205,6 +205,7 @@ prefix               | false     |
 translate-x          | false     |
 translate-y          | false     |
 translate-z          | false     |
+vertex-colors-all    | false     |
 vertex-colors-back   | false     |
 vertex-colors-bottom | false     |
 vertex-colors-front  | false     |

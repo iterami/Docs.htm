@@ -51,7 +51,38 @@
       "prefix": "example-cuboid",
       "translate-x": 0,
       "translate-z": 0,
-      "vertex-colors": [
+      "vertex-colors-all": false,
+      "vertex-colors-back": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-bottom": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-front": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-left": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-right": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-top": [
         1, 1, 1, 1,
         1, 1, 1, 1,
         1, 1, 1, 1,
@@ -240,8 +271,41 @@
       "translate-y": 0,
       "translate-z": 0,
 
-      // Optional. Color of the cuboid.
-      "vertex-colors": [
+      // Optional. Color of all cuboid faces, or false if each face has its own color.
+      "vertex-colors-all": false,
+
+      // Optional. Color of each cuboid face, if `vertex-colors-all` is false.
+      "vertex-colors-back": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-bottom": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-front": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-left": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-right": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "vertex-colors-top": [
         1, 1, 1, 1,
         1, 1, 1, 1,
         1, 1, 1, 1,
