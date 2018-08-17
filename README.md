@@ -6,6 +6,8 @@ iterami/Documentation.htm
     * [C](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/c.md)
     * [HTM](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/htm.md)
     * [JSON Level Format](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md)
+    * [CC0 License](https://github.com/iterami/common/blob/gh-pages/LICENSE.md)
+    * [Usage by iterami](https://github.com/iterami/Documentation.htm/blob/gh-pages/repositories/common.md)
 * Standards:
   * [Issues](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md)
   * [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md)
