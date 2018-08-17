@@ -16,6 +16,7 @@
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_cuboid(args)`](#webgl_cuboidargs)
+* [`webgl_cuboid_tree(args)`](#webgl_cuboid_treeargs)
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_drawloop()`](#webgl_drawloop)
@@ -192,6 +193,7 @@ target       | true      |
 
 ### `webgl_cuboid(args)`
 * Creates a cuboid with specified properties.
+* Translation is the center of the cuboid.
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
@@ -210,6 +212,28 @@ vertex-colors-left   | false     |
 vertex-colors-right  | false     |
 vertex-colors-top    | false     |
 width                | false     |
+
+---
+
+### `webgl_cuboid_tree(args)`
+* Creates a cuboid tree with the specified properties.
+* Translation is the center of the bottom face of the trunk.
+
+Arg                  | Required? | Notes
+---------------------|-----------|------
+collision            | false     |
+height-leaves        | false     |
+height-trunk         | false     |
+length-leaves        | false     |
+length-trunk         | false     |
+prefix               | false     |
+translate-x          | false     |
+translate-y          | false     |
+translate-z          | false     |
+vertex-colors-leaves | false     |
+vertex-colors-trunk  | false     |
+width-leaves         | false     |
+width-trunk          | false     |
 
 ---
 
