@@ -50,7 +50,9 @@
       "length": 1,
       "prefix": "example-cuboid",
       "translate-x": 0,
+      "translate-y": 0,
       "translate-z": 0,
+      "tree": false,
       "vertex-colors-all": false,
       "vertex-colors-back": [
         1, 1, 1, 1,
@@ -270,6 +272,9 @@
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
+
+      // Optional. If this cuboid represents a `webgl_cuboid_tree()`.
+      "tree": false,
 
       // Optional. Color of all cuboid faces, or false if each face has its own color.
       "vertex-colors-all": false,
