@@ -222,7 +222,8 @@ width                | false     |
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
-collision            | false     |
+collision-leaves     | false     |
+collision-trunk      | false     |
 height-leaves        | false     |
 height-trunk         | false     |
 length-leaves        | false     |
