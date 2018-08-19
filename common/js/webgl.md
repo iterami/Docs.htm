@@ -21,6 +21,7 @@
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_drawloop()`](#webgl_drawloop)
+* [`webgl_entity_create(args)`](#webgl_entity_createargs)
 * [`webgl_entity_move(args)`](#webgl_entity_moveargs)
 * [`webgl_entity_move_to(args)`](#webgl_entity_move_toargs)
 * [`webgl_entity_radians(args)`](#webgl_entity_radiansargs)
@@ -261,6 +262,15 @@ width-trunk          | false     |
 ### `webgl_drawloop()`
 * Calls `webgl_draw()` if the menu isn't open.
 * Handles animation frames via `core_interval_animationFrame()` usage.
+
+---
+
+### `webgl_entity_create(args)`
+* Creates all entities from `entities` arg, then creates all character entities.
+
+Arg        | Required? | Notes
+-----------|-----------|------
+entities   | false     |
 
 ---
 
