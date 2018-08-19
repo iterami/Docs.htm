@@ -9,6 +9,7 @@
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_damage(args)`](#webgl_character_damageargs)
+* [`webgl_character_home()`](#webgl_character_home)
 * [`webgl_character_jump(args)`](#webgl_character_jumpargs)
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
 * [`webgl_character_origin(args)`](#webgl_character_originargs)
@@ -27,8 +28,9 @@
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_json_export(args)`](#webgl_json_exportargs)
-* [`webgl_load_level(args)`](#webgl_load_levelargs)
-* [`webgl_load_level_init(args)`](#webgl_load_level_initargs)
+* [`webgl_level_init(args)`](#webgl_level_initargs)
+* [`webgl_level_load(args)`](#webgl_level_loadargs)
+* [`webgl_level_unload()`](#webgl_level_unload)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
@@ -128,6 +130,11 @@ character | false     |
 damage    | false     |
 delete    | false     |
 kill      | false     |
+
+---
+
+### `webgl_character_home()`
+* If the `webgl_character_id` character has a home, current level is unloaded and replaced with home.
 
 ---
 
@@ -362,8 +369,18 @@ target    | false     |
 
 ---
 
-### `webgl_load_level(args)`
-* Figures out how to parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
+### `webgl_level_init(args)`
+* Creates a level from a parsed (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | true      |
+json      | false     |
+
+---
+
+### `webgl_level_load(args)`
+* Parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
 Arg       | Required? | Notes
 ----------|-----------|------
@@ -372,13 +389,8 @@ json      | false     |
 
 ---
 
-### `webgl_load_level_init(args)`
-* Loads a parsed (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
-
-Arg       | Required? | Notes
-----------|-----------|------
-character | true      |
-json      | false     |
+### `webgl_level_unload()`
+* Removes all characters that aren't `webgl_character_id` and all entities.
 
 ---
 
