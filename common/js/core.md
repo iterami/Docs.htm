@@ -989,7 +989,6 @@ value | true      |
 Arg     | Required? | Notes
 --------|-----------|------
 content | true      |
-default | false     |
 group   | true      |
 id      | true      |
 label   | true      |
