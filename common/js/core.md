@@ -851,7 +851,6 @@ string   | true      |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-title        | true      |
 audios       | false     |
 beforeunload | false     |
 entities     | false     |
@@ -864,6 +863,8 @@ menu         | false     |
 mousebinds   | false     |
 storage      | false     |
 storage-menu | false     |
+tabs         | false     |
+title        | true      |
 ui           | false     |
 
 ---
