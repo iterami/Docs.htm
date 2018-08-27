@@ -334,6 +334,7 @@ directional-vector   | false     |
 fog-density          | false     |
 fog-state            | false     |
 gravity-acceleration | false     |
+gravity-axis         | false     |
 gravity-max          | false     |
 multiplier-jump      | false     |
 multiplier-speed     | false     |
