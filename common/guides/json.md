@@ -101,7 +101,7 @@
   "fog-density": 0.0001,
   "fog-state": false,
   "gravity-acceleration": -0.05,
-  "gravity-axis": "y",
+  "gravity-axis": "dy",
   "gravity-max": -1,
   "groups": [
     "example-group-0",
@@ -339,7 +339,7 @@
   // Optional. Gravity acceleration, axis, and maxiumum downward terminal velocity.
   // Only affects entities with "gravity" property true.
   "gravity-acceleration": -0.05,
-  "gravity-axis": "y",
+  "gravity-axis": "dy",
   "gravity-max": -0.05,
 
   // Optional. Property multipliers that affect all characters.
