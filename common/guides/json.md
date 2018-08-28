@@ -20,8 +20,8 @@
   "characters": [
     {
       "id": "_me",
-      "camera-zoom-current": 0,
-      "camera-zoom-max": 10,
+      "camera-zoom-current": 20,
+      "camera-zoom-max": 50,
       "collide-range": 2.5,
       "collides": true,
       "dx": 0,
@@ -202,8 +202,8 @@
 
       // Optional. Camera zoom current and max.
       // When current is 0, camera is in first person mode.
-      "camera-zoom-current": 0,
-      "camera-zoom-max": 0,
+      "camera-zoom-current": 20,
+      "camera-zoom-max": 50,
 
       // Optional. If the character collides, then this is the maximum distance before collision occurs.
       "collide-range": 2.5,
