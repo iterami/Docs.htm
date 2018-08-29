@@ -42,13 +42,13 @@
   "clearcolor-red": 0,
   "cuboids": [
     {
+      "prefix": "example-cuboid",
       "collision": false,
       "exclude": {
         "bottom": true
       },
       "height": 1,
       "length": 1,
-      "prefix": "example-cuboid",
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
@@ -251,6 +251,9 @@
   // Optional. Array of cuboids to create via webgl_cuboid().
   "cuboids": [
     {
+      // Optional. Prefix added to each created entity ID.
+      "prefix": "example-cuboid",
+
       // Optional. If this cuboid will have collision.
       "collision": false,
 
@@ -265,9 +268,6 @@
 
       // Optional. Length of the cuboid along the z-axis.
       "length": 1,
-
-      // Optional. Prefix added to each created entity ID.
-      "prefix": "example-cuboid",
 
       // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
       "translate-x": 0,
