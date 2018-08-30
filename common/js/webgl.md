@@ -268,9 +268,9 @@ width-trunk          | false     |
 ### `webgl_entity_create(args)`
 * Creates all entities from `entities` arg, then creates all character entities.
 
-Arg        | Required? | Notes
------------|-----------|------
-entities   | false     |
+Arg      | Required? | Notes
+---------|-----------|------
+entities | false     |
 
 ---
 
@@ -304,9 +304,10 @@ z         | false     |
 ### `webgl_entity_radians(args)`
 * Updates entity rotation radian values based on current degree rotation.
 
-Arg         | Required? | Notes
-------------|-----------|------
-entity      | true      |
+Arg       | Required? | Notes
+----------|-----------|------
+character | true      |
+entity    | true      |
 
 ---
 
