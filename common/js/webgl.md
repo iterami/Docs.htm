@@ -507,8 +507,11 @@ image    | false     |
 ---
 
 ### `webgl_texture_set_todo(args)`
-* Used by `webgl_texture_set(args)` and not called directly.
 * Binds a texture once the image `src` is finished loading.
+
+Arg      | Required? | Notes
+---------|-----------|------
+entityid | true      |
 
 ---
 
