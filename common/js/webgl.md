@@ -368,6 +368,8 @@ id                  | false     |
 jump-height         | false     |
 level               | false     |
 speed               | false     |
+talk                | false     |
+trade               | false     |
 
 ---
 

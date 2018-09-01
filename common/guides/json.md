@@ -34,7 +34,9 @@
       "inventory": {},
       "jump-height": 0.6,
       "level": -1,
-      "speed": 0.2
+      "speed": 0.2,
+      "talk": false,
+      "trade": []
     }
   ],
   "clearcolor-blue": 0,
@@ -239,7 +241,13 @@
       "level": -1,
 
       // Optional. Character movement speed.
-      "speed": 0.2
+      "speed": 0.2,
+
+      // Optional. Text said by the character when the player gets close.
+      "talk": false,
+
+      // Optional. Item trades that this character can do if the player gets close.
+      "trade": []
     }
   ],
 
