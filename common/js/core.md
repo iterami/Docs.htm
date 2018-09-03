@@ -73,6 +73,7 @@
 * [`core_move_2d_diagonal(args)`](#core_move_2d_diagonalargs)
 * [`core_move_2d(args)`](#core_move_2dargs)
 * [`core_move_3d(args)`](#core_move_3dargs)
+* [`core_number_commas(args)`](#core_number_commasargs)
 * [`core_point_angle(args)`](#core_point_angleargs)
 * [`core_radians_to_degrees(args)`](#core_radians_to_degreesargs)
 * [`core_random_boolean(args)`](#core_random_booleanargs)
@@ -737,6 +738,16 @@ decimals   | false     |
 multiplier | false     |
 speed      | false     |
 strafe     | false     |
+
+---
+
+### `core_number_commas(args)`
+* Adds commas to a number and returns it as a string.
+* Example: 5555555555 becomes 5,555,555,555
+
+Arg    | Required? | Notes
+-------|-----------|------
+number | true      |
 
 ---
 
