@@ -744,9 +744,10 @@ strafe     | false     |
 ### `core_number_format(args)`
 * Formats a number based on `new Intl.NumberFormat()`.
 
-Arg    | Required? | Notes
--------|-----------|------
-number | true      |
+Arg      | Required? | Notes
+---------|-----------|------
+decimals | false     |
+number   | true      |
 
 ---
 
