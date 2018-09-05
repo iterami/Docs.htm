@@ -14,6 +14,7 @@
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
 * [`webgl_character_origin(args)`](#webgl_character_originargs)
 * [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
+* [`webgl_character_trade(args)`](#webgl_character_tradeargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_cuboid(args)`](#webgl_cuboidargs)
@@ -173,6 +174,20 @@ character | false     |
 Arg       | Required? | Notes
 ----------|-----------|------
 character | false     |
+
+---
+
+### `webgl_character_trade(args)`
+* Attempts to trade any amount of one item from one character for any amount of one item from another character.
+
+Arg           | Required? | Notes
+--------------|-----------|------
+character-0   | true      |
+character-1   | true      |
+item-0-amount | true      |
+item-0-id     | true      |
+item-1-amount | true      |
+item-1-id     | true      |
 
 ---
 
