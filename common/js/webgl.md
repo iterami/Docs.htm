@@ -339,6 +339,7 @@ Arg                  | Required? | Notes
 ambient-blue         | false     |
 ambient-green        | false     |
 ambient-red          | false     |
+ambient-state        | false     |
 clearcolor-blue      | false     |
 clearcolor-green     | false     |
 clearcolor-red       | false     |
