@@ -875,6 +875,7 @@ mousebinds   | false     |
 storage      | false     |
 storage-menu | false     |
 tabs         | false     |
+textures     | false     |
 title        | true      |
 ui           | false     |
 
