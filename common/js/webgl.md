@@ -44,7 +44,6 @@
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_update()`](#webgl_shader_update)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
-* [`webgl_texture_set_todo(args)`](#webgl_texture_set_todoargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
 
@@ -521,15 +520,6 @@ Arg      | Required? | Notes
 ---------|-----------|------
 entityid | true      |
 image    | false     |
-
----
-
-### `webgl_texture_set_todo(args)`
-* Binds a texture once the image `src` is finished loading.
-
-Arg      | Required? | Notes
----------|-----------|------
-entityid | true      |
 
 ---
 
