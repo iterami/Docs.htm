@@ -516,10 +516,10 @@ type   | true      |
 ### `webgl_texture_set(args)`
 * Creates a texture based on an image or URI.
 
-Arg      | Required? | Notes
----------|-----------|------
-entityid | true      |
-image    | false     |
+Arg     | Required? | Notes
+--------|-----------|------
+entity  | true      |
+texture | false     |
 
 ---
 
