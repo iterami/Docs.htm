@@ -218,6 +218,7 @@
 * [iterami/EVETools.gtk](https://github.com/iterami/EVETools.gtk)
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk)
+* [iterami/random_number_test.gtk](https://github.com/iterami/random_number_test.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
 
 ---
