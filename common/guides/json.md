@@ -51,53 +51,66 @@
   "cuboids": [
     {
       "prefix": "example-cuboid",
-      "collision": false,
+      "all-alpha": false,
+      "all-collision": true,
+      "all-vertex-colors": false,
+      "back-alpha": 1,
+      "back-collision": false,
+      "back-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "bottom-alpha": 1,
+      "bottom-collision": false,
+      "bottom-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
       "exclude": {
         "bottom": true
       },
+      "front-alpha": 1,
+      "front-collision": false,
+      "front-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
       "height": 1,
+      "left-alpha": 1,
+      "left-collision": false,
+      "left-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
       "length": 1,
+      "right-alpha": 1,
+      "right-collision": false,
+      "right-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+      "top-alpha": 1,
+      "top-collision": false,
+      "top-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
       "tree": false,
-      "vertex-colors-all": false,
-      "vertex-colors-back": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-bottom": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-front": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-left": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-right": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-top": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
       "width": 1
     }
   ],
@@ -208,6 +221,10 @@
       // Optional. ID of character.
       "id": "_me",
 
+      "all-alpha": false,
+      "all-collision": true,
+      "all-vertex-colors": false,
+
       // Optional. Camera zoom current and max.
       // When current is 0, camera is in first person mode.
       "camera-zoom-current": 20,
@@ -278,6 +295,31 @@
       // Optional. Prefix added to each created entity ID.
       "prefix": "example-cuboid",
 
+      // Optional. Overrides that can be applied to every non-excluded face.
+      "all-alpha": false,
+      "all-collision": true,
+      "all-vertex-colors": false,
+
+      // Optional. Properties for the -z face.
+      "back-alpha": 1,
+      "back-collision": false,
+      "back-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
+      // Optional. Properties for the -y face.
+      "bottom-alpha": 1,
+      "bottom-collision": false,
+      "bottom-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
       // Optional. If this cuboid will have collision.
       "collision": false,
 
@@ -287,11 +329,51 @@
         "bottom": true
       },
 
+      // Optional. Properties for the +z face.
+      "front-alpha": 1,
+      "front-collision": false,
+      "front-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
       // Optional. Height of the cuboid along the y-axis.
       "height": 1,
 
+      // Optional. Properties for the -x face.
+      "left-alpha": 1,
+      "left-collision": false,
+      "left-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
       // Optional. Length of the cuboid along the z-axis.
       "length": 1,
+
+      // Optional. Properties for the +x face.
+      "right-alpha": 1,
+      "right-collision": false,
+      "right-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
+
+      // Optional. Properties for the +y face.
+      "top-alpha": 1,
+      "top-collision": false,
+      "top-vertex-colors": [
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1,
+        1, 1, 1, 1
+      ],
 
       // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
       "translate-x": 0,
@@ -300,47 +382,6 @@
 
       // Optional. If this cuboid represents a `webgl_cuboid_tree()`.
       "tree": false,
-
-      // Optional. Color of all cuboid faces, or false if each face has its own color.
-      "vertex-colors-all": false,
-
-      // Optional. Color of each cuboid face, if `vertex-colors-all` is false.
-      "vertex-colors-back": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-bottom": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-front": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-left": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-right": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
-      "vertex-colors-top": [
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1,
-        1, 1, 1, 1
-      ],
 
       // Optional. Width of the cuboid along the x-axis.
       "width": 1

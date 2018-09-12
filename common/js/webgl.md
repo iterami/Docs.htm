@@ -219,21 +219,34 @@ target       | true      |
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
-collision            | false     |
+all-alpha            | false     |
+all-collision        | false     |
+all-vertex-colors    | false     |
+back-alpha           | false     |
+back-collision       | false     |
+back-vertex-colors   | false     |
+bottom-alpha         | false     |
+bottom-collision     | false     |
+bottom-vertex-colors | false     |
 exclude              | false     |
+front-alpha          | false     |
+front-collision      | false     |
+front-vertex-colors  | false     |
 height               | false     |
+left-alpha           | false     |
+left-collision       | false     |
+left-vertex-colors   | false     |
 length               | false     |
 prefix               | false     |
+right-alpha          | false     |
+right-collision      | false     |
+right-vertex-colors  | false     |
+top-alpha            | false     |
+top-collision        | false     |
+top-vertex-colors    | false     |
 translate-x          | false     |
 translate-y          | false     |
 translate-z          | false     |
-vertex-colors-all    | false     |
-vertex-colors-back   | false     |
-vertex-colors-bottom | false     |
-vertex-colors-front  | false     |
-vertex-colors-left   | false     |
-vertex-colors-right  | false     |
-vertex-colors-top    | false     |
 width                | false     |
 
 ---
