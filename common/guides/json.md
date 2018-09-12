@@ -34,9 +34,15 @@
       "inventory": {},
       "jump-height": 0.6,
       "level": -1,
+      "rotate-x": 0,
+      "rotate-y": 0,
+      "rotate-z": 0,
       "speed": 0.2,
       "talk": false,
-      "trade": []
+      "trade": [],
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
     }
   ],
   "clearcolor-blue": 0,
@@ -240,6 +246,11 @@
       // -1 means character is just a camera.
       "level": -1,
 
+      // Optional. Rotation of character in degrees between 0 inclusive and 359 exclusive.
+      "rotate-x": 0,
+      "rotate-y": 0,
+      "rotate-z": 0,
+
       // Optional. Character movement speed.
       "speed": 0.2,
 
@@ -247,7 +258,12 @@
       "talk": false,
 
       // Optional. Item trades that this character can do if the player gets close.
-      "trade": []
+      "trade": [],
+
+      // Optional. Translation of the character relative to `0, 0, 0`.
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
     }
   ],
 

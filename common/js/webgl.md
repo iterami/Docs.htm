@@ -382,9 +382,15 @@ health-max          | false     |
 id                  | false     |
 jump-height         | false     |
 level               | false     |
+rotate-x            | false     |
+rotate-z            | false     |
+rotate-z            | false     |
 speed               | false     |
 talk                | false     |
 trade               | false     |
+translate-x         | false     |
+translate-z         | false     |
+translate-z         | false     |
 
 ---
 
