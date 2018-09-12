@@ -25,6 +25,7 @@
 * [`core_events_keyinfo(event)`](#core_events_keyinfoevent)
 * [`core_events_rebind(args)`](#core_events_rebindargs)
 * [`core_events_todoloop()`](#core_events_todoloop)
+* [`core_file(args)`](#core_fileargs)
 * [`core_fixed_length_line(args)`](#core_fixed_length_lineargs)
 * [`core_group_add(args)`](#core_group_addargs)
 * [`core_group_create(args)`](#core_group_createargs)
@@ -341,6 +342,17 @@ mousebinds   | false     |
 
 ### `core_events_todoloop()`
 * Function that runs looping keyboard and mouse event todos.
+
+---
+
+### `core_file(args)`
+* Uses `FileReader` to read a file of any type, then passes the event to `todo()`.
+
+Arg  | Required? | Notes
+-----|-----------|------
+file | true      |
+todo | true      |
+type | false     |
 
 ---
 
