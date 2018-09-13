@@ -365,6 +365,7 @@ fog-state            | false     |
 gravity-acceleration | false     |
 gravity-axis         | false     |
 gravity-max          | false     |
+jump-movement        | false     |
 multiplier-jump      | false     |
 multiplier-speed     | false     |
 spawn-rotate-x       | false     |

@@ -128,6 +128,7 @@
     "example-group-0",
     "example-group-1"
   ],
+  "jump-movement": false,
   "multiplier-jump": 1,
   "multiplier-speed": 1,
   "spawn-rotate-x": 0,
@@ -406,6 +407,9 @@
   "gravity-acceleration": -0.05,
   "gravity-axis": "dy",
   "gravity-max": -0.05,
+
+  // Optional. If characters can change their movement direction while unable to jump.
+  "jump-movement": false,
 
   // Optional. Property multipliers that affect all characters.
   "multiplier-jump": 1,
