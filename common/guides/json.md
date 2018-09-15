@@ -157,7 +157,9 @@
       "dy": 0,
       "dz": 0,
       "gravity": false,
-      "item": false,
+      "item-amount": 1,
+      "item-id": false,
+      "item-stats": {},
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -483,8 +485,10 @@
       // Optional. If this entity is affected by gravity.
       "gravity": false,
 
-      // Optional. Item ID to increment by 1 in the webgl_character inventory, or false if this entity is not an item.
-      "item": false,
+      // Optional. Properties of this item, if "item-id" isn't false.
+      "item-amount": 1,
+      "item-id": false,
+      "item-stats": {},
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,
