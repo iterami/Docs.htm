@@ -29,6 +29,7 @@
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
+* [`webgl_item_reset(args)`](#webgl_item_resetargs)
 * [`webgl_json_export(args)`](#webgl_json_exportargs)
 * [`webgl_level_init(args)`](#webgl_level_initargs)
 * [`webgl_level_load(args)`](#webgl_level_loadargs)
@@ -405,6 +406,16 @@ trade               | false     |
 translate-x         | false     |
 translate-z         | false     |
 translate-z         | false     |
+
+---
+
+### `webgl_item_reset(args)`
+* Resets an item in a characters inventory.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+item      | true      |
 
 ---
 
