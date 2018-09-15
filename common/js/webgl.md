@@ -29,6 +29,7 @@
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
+* [`webgl_item_equip(args)`](#webgl_item_equipargs)
 * [`webgl_item_reset(args)`](#webgl_item_resetargs)
 * [`webgl_json_export(args)`](#webgl_json_exportargs)
 * [`webgl_level_init(args)`](#webgl_level_initargs)
@@ -406,6 +407,17 @@ trade               | false     |
 translate-x         | false     |
 translate-z         | false     |
 translate-z         | false     |
+
+---
+
+### `webgl_item_equip(args)`
+* Equips or unequips an item.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
+equipped  | false     |
+item      | true      |
 
 ---
 
