@@ -416,7 +416,7 @@ translate-z         | false     |
 Arg       | Required? | Notes
 ----------|-----------|------
 character | false     |
-equipped  | false     |
+equip     | false     |
 item      | true      |
 
 ---
