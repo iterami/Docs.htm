@@ -158,6 +158,7 @@
       "dz": 0,
       "gravity": false,
       "item-amount": 1,
+      "item-entities": [],
       "item-id": false,
       "item-stats": {},
       "rotate-x": 0,
@@ -487,6 +488,7 @@
 
       // Optional. Properties of this item, if "item-id" isn't false.
       "item-amount": 1,
+      "item-entities": [],
       "item-id": false,
       "item-stats": {},
 
