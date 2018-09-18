@@ -413,7 +413,9 @@ item      | true      |
 Arg       | Required? | Notes
 ----------|-----------|------
 character | false     |
+entities  | false     |
 item      | true      |
+stats     | false     |
 
 ---
 
