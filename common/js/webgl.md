@@ -504,6 +504,7 @@ color         | false     |
 count         | false     |
 gravity       | false     |
 lifespan      | false     |
+parent        | false     |
 rotate-x      | false     |
 rotate-y      | false     |
 rotate-z      | false     |
