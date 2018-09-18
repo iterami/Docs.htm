@@ -160,7 +160,7 @@
       "item-amount": 1,
       "item-entities": [],
       "item-id": false,
-      "item-spell": {},
+      "item-spell": false,
       "item-stats": {},
       "rotate-x": 0,
       "rotate-y": 0,
@@ -491,7 +491,7 @@
       "item-amount": 1,
       "item-entities": [],
       "item-id": false,
-      "item-spell": {},
+      "item-spell": false,
       "item-stats": {},
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
