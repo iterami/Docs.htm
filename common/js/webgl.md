@@ -415,6 +415,7 @@ Arg       | Required? | Notes
 character | false     |
 entities  | false     |
 item      | true      |
+spell     | false     |
 stats     | false     |
 
 ---
