@@ -225,7 +225,7 @@ left-alpha           | false     |
 left-collision       | false     |
 left-vertex-colors   | false     |
 length               | false     |
-prefix               | false     |
+prefix               | true      |
 right-alpha          | false     |
 right-collision      | false     |
 right-vertex-colors  | false     |
@@ -251,7 +251,7 @@ height-leaves        | false     |
 height-trunk         | false     |
 length-leaves        | false     |
 length-trunk         | false     |
-prefix               | false     |
+prefix               | true      |
 translate-x          | false     |
 translate-y          | false     |
 translate-z          | false     |
