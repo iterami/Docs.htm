@@ -109,8 +109,6 @@
 * [`core_time_two_digits(args)`](#core_two_digitsargs)
 * [`core_type(args)`](#core_typeargs)
 * [`core_ui_update(args)`](#core_ui_updateargs)
-* [`core_uid_create()`](#core_uid_create)
-* [`core_uid()`](#core_uid)
 * [`core_uri(args)`](#core_uriargs)
 * [`core_vendor_prefix(args)`](#core_vendor_prefixargs)
 
@@ -261,7 +259,7 @@ z1       | false     |
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | false     |
+id         | true      |
 properties | false     |
 types      | false     |
 
@@ -575,7 +573,7 @@ Arg            | Required? | Notes
 todo           | true      |
 animationFrame | false     |
 clear          | false     |
-id             | false     |
+id             | true      |
 interval       | false     |
 paused         | false     |
 set            | false     |
@@ -1069,16 +1067,6 @@ Arg  | Required? | Notes
 -----|-----------|------
 type | false     |
 var  | true      |
-
----
-
-### `core_uid()`
-* Returns a unique ID and adds it to a list of created UIDs.
-
----
-
-### `core_uid_create()`
-* Creates a UID string that may not be unqiue.
 
 ---
 

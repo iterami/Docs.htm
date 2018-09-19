@@ -13,7 +13,7 @@ Arg         | Required? | Notes
 ------------|-----------|------
 color       | false     |
 frequency   | false     |
-id          | false     |
+id          | true      |
 length-half | false     |
 x           | false     |
 y           | false     |
@@ -28,7 +28,7 @@ color-base | false     |
 color-leaf | false     |
 half-base  | false     |
 half-leaf  | false     |
-id         | false     |
+id         | true      |
 x          | false     |
 y          | false     |
 
@@ -44,7 +44,7 @@ color-leaf | false     |
 dx         | false     |
 dy         | false     |
 dz         | false     |
-id         | false     |
+id         | true      |
 x          | false     |
 y          | false     |
 z          | false     |
