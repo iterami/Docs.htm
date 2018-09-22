@@ -225,7 +225,7 @@ left-alpha           | false     |
 left-collision       | false     |
 left-vertex-colors   | false     |
 length               | false     |
-prefix               | true      |
+prefix               | false     |
 right-alpha          | false     |
 right-collision      | false     |
 right-vertex-colors  | false     |
