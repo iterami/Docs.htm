@@ -256,10 +256,11 @@ z1       | false     |
 
 ### `core_entity_create(args)`
 * Creates an entity and provides it with additional properties based on entity defaults and functions.
+* Not including `id` makes entity use `core_id_count` which starts at 0 and goes up by 1 every time an entity is created.
 
 Arg        | Required? | Notes
 -----------|-----------|------
-id         | true      |
+id         | false     |
 properties | false     |
 types      | false     |
 
