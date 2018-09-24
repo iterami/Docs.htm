@@ -110,7 +110,6 @@
 * [`core_type(args)`](#core_typeargs)
 * [`core_ui_update(args)`](#core_ui_updateargs)
 * [`core_uri(args)`](#core_uriargs)
-* [`core_vendor_prefix(args)`](#core_vendor_prefixargs)
 
 ---
 
@@ -1088,13 +1087,3 @@ Arg     | Required? | Notes
 id      | false     |
 quality | false     |
 type    | false     |
-
----
-
-### `core_vendor_prefix(args)`
-* Handles vendor prefixing for experimental features.
-
-Arg      | Required? | Notes
----------|-----------|------
-property | true      |
-var      | true      |
