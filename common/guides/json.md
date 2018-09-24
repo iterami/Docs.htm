@@ -186,6 +186,7 @@
       "item-spellproperties": {},
       "item-stats": {},
       "path-active": false,
+      "path-direction": 1,
       "path-id": "",
       "path-point": 0,
       "rotate-x": 0,
@@ -552,8 +553,9 @@
       "item-spellproperties": {},
       "item-stats": {},
 
-      // Optional. Current assigned path, its activity state, and current path point target.
+      // Optional. Current assigned path, its activity state, current path point target, and movement direction.
       "path-active": false,
+      "path-direction": 1,
       "path-id": "",
       "path-point": 0,
 
