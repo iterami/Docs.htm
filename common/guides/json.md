@@ -132,6 +132,26 @@
   "jump-movement": false,
   "multiplier-jump": 1,
   "multiplier-speed": 1,
+  "paths": {
+    "example-path": {
+      "end": 1,
+      "points": [
+        {
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-x": -10,
+          "translate-z": -10
+        },
+        {
+          "translate-x": 0,
+          "translate-y": 0
+        }
+      ]
+    }
+  },
   "spawn-rotate-x": 0,
   "spawn-rotate-y": 0,
   "spawn-rotate-z": 0,
@@ -165,6 +185,9 @@
       "item-spell": false,
       "item-spellproperties": {},
       "item-stats": {},
+      "path-active": false,
+      "path-id": "",
+      "path-point": 0,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -423,6 +446,35 @@
   "multiplier-jump": 1,
   "multiplier-speed": 1,
 
+  // Optional. Paths that entities can move along.
+  "paths": {
+    "example-path": {
+      // Optional. What occurs when the end of the path is reached:
+      //   -1 = return back along path.
+      //    0 = stop.
+      //    1 = restart path from the beginning by moving towards first point.
+      "end": 1,
+
+      // Required. Path waypoints in order.
+      "points": [
+        {
+          // Optional. Waypoint translation. Leave absent to use current translation of that axis.
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-x": -10,
+          "translate-z": -10
+        },
+        {
+          "translate-x": 0,
+          "translate-y": 0
+        }
+      ]
+    }
+  },
+
   // Optional. Array of groups to create.
   // Do not include automatically created groups, such as "skybox".
   "groups": [
@@ -499,6 +551,11 @@
       "item-spell": false,
       "item-spellproperties": {},
       "item-stats": {},
+
+      // Optional. Current assigned path, its activity state, and current path point target.
+      "path-active": false,
+      "path-id": "",
+      "path-point": 0,
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,

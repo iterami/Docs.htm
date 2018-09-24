@@ -356,6 +356,7 @@ gravity-max          | false     |
 jump-movement        | false     |
 multiplier-jump      | false     |
 multiplier-speed     | false     |
+paths                | false     |
 spawn-rotate-x       | false     |
 spawn-rotate-y       | false     |
 spawn-rotate-z       | false     |
