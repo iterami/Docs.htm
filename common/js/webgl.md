@@ -368,31 +368,32 @@ spawn-translate-z    | false     |
 ### `webgl_init_character(args)`
 * Sets up the character and camera.
 
-Arg                 | Required? | Notes
---------------------|-----------|------
-camera-zoom-current | false     |
-camera-zoom-max     | false     |
-collide-range       | false     |
-collides            | false     |
-dx                  | false     |
-dy                  | false     |
-dz                  | false     |
-entities            | false     |
-experience          | false     |
-health-current      | false     |
-health-max          | false     |
-id                  | false     |
-jump-height         | false     |
-level               | false     |
-rotate-x            | false     |
-rotate-z            | false     |
-rotate-z            | false     |
-speed               | false     |
-talk                | false     |
-trade               | false     |
-translate-x         | false     |
-translate-z         | false     |
-translate-z         | false     |
+Arg                      | Required? | Notes
+-------------------------|-----------|------
+camera-zoom-current      | false     |
+camera-zoom-max          | false     |
+collide-range-horizontal | false     |
+collide-range-vertical   | false     |
+collides                 | false     |
+dx                       | false     |
+dy                       | false     |
+dz                       | false     |
+entities                 | false     |
+experience               | false     |
+health-current           | false     |
+health-max               | false     |
+id                       | false     |
+jump-height              | false     |
+level                    | false     |
+rotate-x                 | false     |
+rotate-z                 | false     |
+rotate-z                 | false     |
+speed                    | false     |
+talk                     | false     |
+trade                    | false     |
+translate-x              | false     |
+translate-z              | false     |
+translate-z              | false     |
 
 ---
 

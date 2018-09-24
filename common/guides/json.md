@@ -22,7 +22,8 @@
       "id": "_me",
       "camera-zoom-current": 20,
       "camera-zoom-max": 50,
-      "collide-range": 2.5,
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
       "collides": true,
       "dx": 0,
       "dy": 0,
@@ -148,7 +149,8 @@
       "attach-type": "entity",
       "billboard": false,
       "collide-damage": 0,
-      "collide-range": 2.5,
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
       "collides": false,
       "collision": false,
       "draw": true,
@@ -237,7 +239,8 @@
       "camera-zoom-max": 50,
 
       // Optional. If the character collides, then this is the maximum distance before collision occurs.
-      "collide-range": 2.5,
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
 
       // Optional. If the character collides with other entities that have collision.
       "collides": true,
@@ -469,7 +472,8 @@
       "collide-damage": 0,
 
       // Optional. If this entity collides, then this is the maximum distance before collision occurs.
-      "collide-range": 2.5,
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
 
       // Optional. If this entity can be collided with by other entities that collide.
       "collides": false,
