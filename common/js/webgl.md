@@ -39,6 +39,7 @@
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
 * [`webgl_particles_create(args)`](#webgl_particles_createargs)
+* [`webgl_path_use(args)`](#webgl_path_useargs)
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
@@ -514,6 +515,19 @@ speed         | false     |
 translate-x   | false     |
 translate-y   | false     |
 translate-z   | false     |
+
+---
+
+### `webgl_path_use(args)`
+* Makes target entity use specific path.
+* Disables entity path if no path specified.
+
+Arg            | Required? | Notes
+---------------|-----------|------
+entity         | true      |
+path-direction | false     |
+path-id        | false     |
+path-point     | false     |
 
 ---
 
