@@ -185,9 +185,8 @@
       "item-spell": false,
       "item-spellproperties": {},
       "item-stats": {},
-      "path-active": false,
       "path-direction": 1,
-      "path-id": "",
+      "path-id": false,
       "path-point": 0,
       "rotate-x": 0,
       "rotate-y": 0,
@@ -553,10 +552,9 @@
       "item-spellproperties": {},
       "item-stats": {},
 
-      // Optional. Current assigned path, its activity state, current path point target, and movement direction.
-      "path-active": false,
+      // Optional. Current assigned path or false, current path point target, and movement direction.
       "path-direction": 1,
-      "path-id": "",
+      "path-id": false,
       "path-point": 0,
 
       // Optional. Rotation of entity in degrees between 0 inclusive and 359 exclusive.
