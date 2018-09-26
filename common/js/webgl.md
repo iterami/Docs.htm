@@ -526,6 +526,7 @@ Arg            | Required? | Notes
 ---------------|-----------|------
 entity         | true      |
 path-direction | false     |
+path-end       | false     |
 path-id        | false     |
 path-point     | false     |
 
