@@ -479,12 +479,15 @@ json      | false     |
 
 Arg                  | Required? | Notes
 ---------------------|-----------|------
+prefix               | true      |
 translate-x          | false     |
 translate-y          | false     |
 translate-z          | false     |
 trunk-count-max      | false     |
 trunk-count-min      | false     |
 trunk-height         | false     |
+trunk-width-max      | false     |
+trunk-width-min      | false     |
 vertex-colors-leaves | false     |
 vertex-colors-trunk  | false     |
 
