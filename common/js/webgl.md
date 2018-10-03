@@ -35,6 +35,7 @@
 * [`webgl_level_init(args)`](#webgl_level_initargs)
 * [`webgl_level_load(args)`](#webgl_level_loadargs)
 * [`webgl_level_unload()`](#webgl_level_unload)
+* [`webgl_lines_tree(args)`](#webgl_lines_treeargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
@@ -469,6 +470,23 @@ json      | false     |
 
 ### `webgl_level_unload()`
 * Removes all characters that aren't `webgl_character_id` and all entities.
+
+---
+
+### `webgl_lines_tree(args)`
+* Creates a tree made out of "lines" with the specified properties.
+* Translation is the center of the bottom of the trunk.
+
+Arg                  | Required? | Notes
+---------------------|-----------|------
+length-leaves        | false     |
+translate-x          | false     |
+translate-y          | false     |
+translate-z          | false     |
+trunk-height         | false     |
+trunk-pieces         | false     |
+vertex-colors-leaves | false     |
+vertex-colors-trunk  | false     |
 
 ---
 
