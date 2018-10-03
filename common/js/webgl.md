@@ -483,9 +483,11 @@ prefix               | true      |
 translate-x          | false     |
 translate-y          | false     |
 translate-z          | false     |
+trunk-branch-max     | false     |
+trunk-branch-min     | false     |
 trunk-count-max      | false     |
 trunk-count-min      | false     |
-trunk-height         | false     |
+trunk-length         | false     |
 trunk-width-max      | false     |
 trunk-width-min      | false     |
 vertex-colors-leaves | false     |
