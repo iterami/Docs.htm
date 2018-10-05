@@ -375,12 +375,10 @@ Arg                      | Required? | Notes
 -------------------------|-----------|------
 camera-zoom-current      | false     |
 camera-zoom-max          | false     |
+change                   | false     |
 collide-range-horizontal | false     |
 collide-range-vertical   | false     |
 collides                 | false     |
-dx                       | false     |
-dy                       | false     |
-dz                       | false     |
 entities                 | false     |
 experience               | false     |
 health-current           | false     |

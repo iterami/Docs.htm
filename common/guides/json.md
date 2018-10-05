@@ -22,12 +22,13 @@
       "id": "_me",
       "camera-zoom-current": 20,
       "camera-zoom-max": 50,
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
       "collide-range-horizontal": 2.5,
       "collide-range-vertical": 2.5,
       "collides": true,
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
       "entities": [],
       "experience": 0,
       "health-current": 100,
@@ -171,6 +172,10 @@
       "attach-to": false,
       "attach-type": "entity",
       "billboard": false,
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
       "collide-damage": 0,
       "collide-range-horizontal": 2.5,
       "collide-range-vertical": 2.5,
@@ -178,9 +183,6 @@
       "collision": false,
       "draw": true,
       "draw-type": "TRIANGLE_STRIP",
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
       "gravity": false,
       "item-amount": 1,
       "item-entities": [],
@@ -264,18 +266,19 @@
       "camera-zoom-current": 20,
       "camera-zoom-max": 50,
 
+      // Optional. Amount that any character property should change by when the character is updated.
+      // Player translations are reset after each movement to allow stopping.
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
+
       // Optional. If the character collides, then this is the maximum distance before collision occurs.
       "collide-range-horizontal": 2.5,
       "collide-range-vertical": 2.5,
 
       // Optional. If the character collides with other entities that have collision.
       "collides": true,
-
-      // Optional. Amount that is added to entity translation.
-      // Currently gets reset after every movement so players can stop.
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
 
       // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
       // Uses same format as level entities.
@@ -526,6 +529,12 @@
       // Array of strings, including "x", "y", "z", or any combination.
       "billboard": false,
 
+      // Optional. Amount that any entity property should change by when the entity is updated.
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
+
       // Optional. If this entity collides with other entities that have collision.
       "collides": false,
 
@@ -544,11 +553,6 @@
 
       // Optional. How the vertices should be drawn.
       "draw-type": "TRIANGLE_STRIP",
-
-      // Optional. Entity inertia that is added to entity translation.
-      "dx": 0,
-      "dy": 0,
-      "dz": 0,
 
       // Optional. If this entity is affected by gravity.
       "gravity": false,
