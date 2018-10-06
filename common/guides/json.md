@@ -199,7 +199,6 @@
       "scale-x": 1,
       "scale-y": 1,
       "scale-z": 1,
-      "skybox": false,
       "spawn-entity": false,
       "spawn-interval-current": 0,
       "spawn-interval-max": 100,
@@ -590,9 +589,6 @@
       // Optional. Entity movement speed.
       "speed": 0.2,
 
-      // Optional. If this entity should be moved from "foreground" group to "skybox" group.
-      "skybox": false,
-
       // Optional. ID of texture within webgl_textures.
       "texture": "_default",
 
@@ -622,6 +618,7 @@
       ],
 
       // Optional. Array of groups this entity will be added to. Groups must exist.
+      // This is where entities are added to the "skybox".
       "groups": [
         "example-group-0",
         "example-group-1"
