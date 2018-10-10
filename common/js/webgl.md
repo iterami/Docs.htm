@@ -6,6 +6,7 @@
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
 * [`webgl_buffer_set_type(args)`](#webgl_buffer_set_typeargs)
 * [`webgl_camera_handle()`](#webgl_camera_handle)
+* [`webgl_camera_position(args)`](#webgl_camera_positionargs)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_damage(args)`](#webgl_character_damageargs)
@@ -103,6 +104,15 @@ type | false     |
 ### `webgl_camera_handle()`
 * Functon used as `mousemove` event by 3D projects.
 * Handle first and third person cameras via the `camera-zoom-current` character property.
+
+---
+
+### `webgl_camera_position(args)`
+* Updates the camera position properties of a specific character.
+
+Arg       | Required? | Notes
+----------|-----------|------
+character | false     |
 
 ---
 
