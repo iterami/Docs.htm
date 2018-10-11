@@ -221,6 +221,7 @@ exclude              | false     |
 front-alpha          | false     |
 front-collision      | false     |
 front-vertex-colors  | false     |
+groups               | false     |
 height               | false     |
 left-alpha           | false     |
 left-collision       | false     |
