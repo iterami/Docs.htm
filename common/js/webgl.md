@@ -47,6 +47,7 @@
 * [`webgl_resize()`](#webgl_resize)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_update()`](#webgl_shader_update)
+* [`webgl_skybox(args)`](#webgl_skyboxargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
@@ -595,6 +596,20 @@ type   | true      |
 
 ### `webgl_shader_update()`
 * Recreate the shaders with updated customization values.
+
+---
+
+### `webgl_skybox(args)`
+* Creates a skybox around the `webgl_player_id` camera.
+
+Arg                 | Required? | Notes
+--------------------|-----------|------
+bottom-color-bottom | false     |
+bottom-color-top    | false     |
+prefix              | true      |
+sides               | false     |
+top-color-bottom    | false     |
+top-color-top       | false     |
 
 ---
 
