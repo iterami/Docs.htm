@@ -608,6 +608,7 @@ bottom-color-bottom | false     |
 bottom-color-top    | false     |
 prefix              | true      |
 sides               | false     |
+size                | false     |
 top-color-bottom    | false     |
 top-color-top       | false     |
 
