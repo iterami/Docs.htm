@@ -196,7 +196,6 @@ red   | false     |
 
 Arg          | Required? | Notes
 -------------|-----------|------
-character    | false     |
 character-id | false     |
 entity       | false     |
 target       | true      |
