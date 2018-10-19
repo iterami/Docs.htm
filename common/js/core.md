@@ -102,6 +102,7 @@
 * [`core_storage_update()`](#core_storage_update)
 * [`core_tab_create(args)`](#core_tab_createargs)
 * [`core_tab_switch(args)`](#core_tab_switchargs)
+* [`core_test_function(args)`](#core_test_functionargs)
 * [`core_time_diff(args)`](#core_time_diffargs)
 * [`core_time_format(args)`](#core_time_formatargs)
 * [`core_time_from_inputs()`](#core_time_from_inputs)
@@ -1024,6 +1025,27 @@ label   | true      |
 Arg | Required? | Notes
 ----|-----------|------
 id  | true      |
+
+---
+
+### `core_test_function(args)`
+* Passes args to a function and then compares its return value to an expected value.
+
+Arg      | Required? | Notes
+---------|-----------|------
+args     | false     |
+expect   | true      |
+function | true      |
+
+---
+
+### `core_time_diff(args)`
+* Returns the difference between two dates.
+
+Arg    | Required? | Notes
+-------|-----------|------
+now    | false     |
+target | true      |
 
 ---
 
