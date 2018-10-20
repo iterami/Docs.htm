@@ -765,12 +765,13 @@ number   | true      |
 ### `core_point_angle(args)`
 * Returns the angle between 2 points relative to the grid.
 
-Arg | Required? | Notes
-----|-----------|------
-x0  | true      |
-x1  | true      |
-y0  | true      |
-y1  | true      |
+Arg      | Required? | Notes
+---------|-----------|------
+decimals | false     |
+x0       | true      |
+x1       | true      |
+y0       | true      |
+y1       | true      |
 
 ---
 
