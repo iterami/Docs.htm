@@ -127,7 +127,7 @@ url  | true      |
 ---
 
 ### `core_args(args)`
-* Utility function for handling usage and default values of the 1 arguments object.
+* Creates an `args` object with provided properties, populates it with additional optional default properties, and returns it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -207,7 +207,7 @@ todo | true      |
 ---
 
 ### `core_clamp(args)`
-* Clamps a number between two values.
+* Clamps a number between two values and returns it.
 * If out of bounds, either sets it to closest bound or loops to opposite bound as many times as needed.
 
 Arg      | Required? | Notes
@@ -221,7 +221,7 @@ wrap     | false     |
 ---
 
 ### `core_date_to_timestamp(args)`
-* Converts a date object into a timestamp.
+* Converts a date object into a timestamp and returns it.
 
 Arg  | Required? | Notes
 -----|-----------|------
@@ -230,7 +230,7 @@ date | false     |
 ---
 
 ### `core_degrees_to_radians(args)`
-* Converts a number of degrees to radians.
+* Converts a number of degrees to radians and returns it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -255,7 +255,7 @@ z1       | false     |
 ---
 
 ### `core_entity_create(args)`
-* Creates an entity and provides it with additional properties based on entity defaults and functions.
+* Creates an entity, provides it with additional properties based on entity defaults and functions, and returns its ID.
 * Not including `id` makes entity use `core_id_count` which starts at 0 and goes up by 1 every time an entity is created.
 
 Arg        | Required? | Notes
@@ -434,6 +434,7 @@ entities     | true      |
 ---
 
 ### `core_handle_beforeunload(event)`
+* If the result of the `beforeunload` event returns a string, this function returns it.
 
 ---
 
@@ -442,10 +443,13 @@ entities     | true      |
 ---
 
 ### `core_handle_contextmenu(event)`
+* If the result of the `contextmenu` event doesn't return anything, this function returns `false`.
 
 ---
 
 ### `core_handle_defaults(args)`
+* Recursively applies default values to `var` properties and subproperties.
+* If `var` isn't an object, then this function returns `var`.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -503,7 +507,7 @@ todo   | false     |
 ---
 
 ### `core_hex_to_rgb(args)`
-* Converts a hexadecimal string of length 6 to red, green, and blue.
+* Converts a hexadecimal string of length 6 to red, green, and blue, and returns it.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -523,7 +527,7 @@ type       | false     |
 ---
 
 ### `core_html_format(args)`
-* Replaces characters in a string that may cause HTML errors.
+* Replaces characters in a string that may cause HTML errors and returns it.
 
 Arg    | Required? | Notes
 -------|-----------|------
@@ -542,7 +546,7 @@ properties | true      |
 ---
 
 ### `core_image(args)`
-* Creates and loads an image.
+* Creates an image, begins asynchronous loading, and returns it.
 
 Arg  | Required? | Notes
 -----|-----------|------
@@ -653,7 +657,7 @@ to  | true      |
 ---
 
 ### `core_matrix_create()`
-* Creates a new blank Float32Array of length 16.
+* Creates a new blank Float32Array of length 16 and returns it.
 
 ---
 
@@ -715,7 +719,7 @@ mousebinds | true      |
 ---
 
 ### `core_move_2d(args)`
-* Calculates movement in 2 dimensions.
+* Calculates movement in 2 dimensions and returns an object containing `angle`, `x`, and `y`.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -729,7 +733,7 @@ y1         | true      |
 ---
 
 ### `core_move_2d_diagonal(args)`
-* Handles reduction of movement speed when moving diagonally.
+* Handles reduction of movement speed when moving diagonally amd returns an object containing `x` and `y`.
 
 Arg   | Required? | Notes
 ------|-----------|------
@@ -740,7 +744,7 @@ speed | true      |
 ---
 
 ### `core_move_3d(args)`
-* Calculates movement in 3 dimensions.
+* Calculates movement in 3 dimensions and returns an object containing `x` and `z`.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -753,7 +757,7 @@ strafe     | false     |
 ---
 
 ### `core_number_format(args)`
-* Formats a number based on `new Intl.NumberFormat()`.
+* Formats a number based on `new Intl.NumberFormat()` and returns it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -776,7 +780,7 @@ y1       | true      |
 ---
 
 ### `core_radians_to_degrees(args)`
-* Converts a number of radians to degrees.
+* Converts a number of radians to degrees and returns it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -786,7 +790,7 @@ radians  | true      |
 ---
 
 ### `core_random_boolean(args)`
-* Generates a random boolean with optional probability manipulation.
+* Returns a random boolean with optional probability manipulation.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -795,7 +799,7 @@ chance  | false     |
 ---
 
 ### `core_random_hex(args)`
-* Generates a random hexadecimal string of length 6.
+* Returns a random hexadecimal string of length 6.
 
 ---
 
@@ -819,7 +823,7 @@ object | true      |
 ---
 
 ### `core_random_number(args)`
-* Generates a random number in a range.
+* Returns a random number in a range.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -828,12 +832,12 @@ multiplier | false     |
 ---
 
 ### `core_random_rgb()`
-* Generates random red, green, and blue as an integer between 0 and 256.
+* Returns an object containing random `blue`, `green`, and `red`, as numbers between 0 and 256.
 
 ---
 
 ### `core_random_string(args)`
-* Generates a random string from a string of available characters.
+* Returns a random string from a string of available characters.
 
 Arg        | Required? | Notes
 -----------|-----------|------
@@ -843,7 +847,7 @@ length     | false     |
 ---
 
 ### `core_rectangle_overlap(args)`
-* Checks if 2 rectangles are overlapping.
+* Checks if 2 rectangles are overlapping and returns a boolean.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -902,7 +906,7 @@ id  | false     |
 ---
 
 ### `core_round(args)`
-* Rounds a number to a specific number of decimal places.
+* Rounds a number to a specific number of decimal places and returns it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -912,7 +916,7 @@ number   | true      |
 ---
 
 ### `core_sort_custom(args)`
-* Sorts an array according to custom sorting rules.
+* Sorts an array according to custom sorting rules and returns it.
 * Optionally reverses the array after sorting.
 
 Arg     | Required? | Notes
@@ -924,7 +928,7 @@ todo    | true      |
 ---
 
 ### `core_sort_numbers(args)`
-* Sorts numbers from smallest to biggest.
+* Sorts an array numbers from smallest to biggest and returns it.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -934,7 +938,8 @@ reverse | false     |
 ---
 
 ### `core_sort_random(args)`
-* Sorts an array randomly. Cannot be reversed.
+* Sorts an array randomly and returns it.
+* Cannot be reversed.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -943,7 +948,7 @@ array   | true      |
 ---
 
 ### `core_sort_property(args)`
-* Sort an array based on some property.
+* Sort an array based on some property and return it.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -954,7 +959,7 @@ property | true      |
 ---
 
 ### `core_sort_strings(args)`
-* Sort strings based on `localeCompare()`.
+* Sort an array of strings based on `localeCompare()` and return it.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -974,7 +979,9 @@ storage | true      |
 ---
 
 ### `core_storage_element_property(args)`
-* Figures out what type of HTML element a storage value uses and how to modify it.
+* Returns `checked` when modifying checkboxes.
+* Returns `innerHTML` when modifying `div` or `span`.
+* Returns `value` when modifying everything else.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -984,7 +991,7 @@ key     | true      |
 ---
 
 ### `core_storage_reset()`
-* Resets storage values to their original defaults.
+* Optionally resets storage values to their original defaults.
 
 ---
 
@@ -1030,7 +1037,7 @@ id  | true      |
 ---
 
 ### `core_test_function(args)`
-* Passes args to a function and then compares its return value to an expected value.
+* Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned valuez.
 
 Arg      | Required? | Notes
 ---------|-----------|------
@@ -1041,7 +1048,7 @@ function | true      |
 ---
 
 ### `core_time_diff(args)`
-* Returns the difference between two dates.
+* Returns the formatted difference between two dates and returns it.
 
 Arg    | Required? | Notes
 -------|-----------|------
@@ -1066,7 +1073,7 @@ diff | false     |
 ---
 
 ### `core_timestamp_to_date(args)`
-* Converts a timestamp to a date object.
+* Converts a timestamp to a date object and returns it.
 
 Arg       | Required? | Notes
 ----------|-----------|------
@@ -1075,7 +1082,7 @@ timestamp | false     |
 ---
 
 ### `core_two_digits(args)`
-* Adds a zero before a number of it only has 1 digit.
+* Adds `0` before a number of it only has 1 digit and returns it.
 
 Arg    | Required? | Notes
 -------|-----------|------
@@ -1084,7 +1091,7 @@ number | true      |
 ---
 
 ### `core_type(args)`
-* Returns the type of a variable.
+* Returns the type of `var`.
 
 Arg  | Required? | Notes
 -----|-----------|------

@@ -192,7 +192,7 @@ red   | false     |
 ---
 
 ### `webgl_collision(args)`
-* Checks for collisions based on entity normals.
+* Checks for collisions based on entity normals and returns a boolean.
 
 Arg          | Required? | Notes
 -------------|-----------|------
@@ -506,7 +506,7 @@ vertex-colors-trunk  | false     |
 ---
 
 ### `webgl_normals(args)`
-* Returns calculated normals based on rotation.
+* Returns an array of calculated normals. Contains x, y, and z normals for each vertex.
 
 Arg            | Required? | Notes
 ---------------|-----------|------
@@ -559,7 +559,7 @@ path-point     | false     |
 ---
 
 ### `webgl_pick_color(args)`
-* Returns the RGBA value of the specified pixel.
+* Returns a `Uint8Array(4)` containing the RGBA value of the specified pixel.
 
 Arg | Required? | Notes
 ----|-----------|------
@@ -569,7 +569,7 @@ y   | true      |
 ---
 
 ### `webgl_program_create(args)`
-* Creates, links, and uses a WebGL shader program.
+* Creates, links, uses, and returns a WebGL shader program.
 
 Arg     | Required? | Notes
 --------|-----------|------
@@ -584,7 +584,7 @@ shaders | true      |
 ---
 
 ### `webgl_shader_create(args)`
-* Creates and compiles a shader to be used in a program.
+* Creates and compiles a shader to be used in a program, then returns it.
 
 Arg    | Required? | Notes
 -------|-----------|------
@@ -633,7 +633,7 @@ program    | true      |
 ---
 
 ### `webgl_vertexcolorarray(args)`
-* Converts RGB values to an array of values between 0 and 1 of the correct length based on vertex count.
+* Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
 
 Arg         | Required? | Notes
 ------------|-----------|------
