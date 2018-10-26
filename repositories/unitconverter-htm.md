@@ -199,6 +199,8 @@ ligne               |      | 1 / .0022558291
 link                | l.   | 1 / .201168
 lunar distance      | LD   | 1 / 384402000
 metre               | m    | 1
+metric foot         |      | 1 / .3
+metric inch         |      | 1 / .025
 mil                 |      | 39370.1
 mile                | mi   | 39.3701 / 63360
 mō                  | 毛, 毫 | 33000
@@ -212,6 +214,7 @@ ri                  | 里    | 3.3 / 12960
 rin                 | 厘    | 3300
 shackle             |      | 39.3701 / 1080
 shaku               | 尺    | 3.3
+siriometer          | sir  | 1 / 149597870700000000
 smoot               |      | 1 / 1.702
 spat                | S    | .00000001
 stick               |      | 39.3701 / 2
