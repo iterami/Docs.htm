@@ -57,47 +57,47 @@
 ### `webgl_attach(args)`
 * Used to attach 1 entity to another entity and share a position with optional offset.
 
-Arg      | Required? | Notes
----------|-----------|-----------------------------------------
-entity   | true      | ID of the entity that is being attached.
-offset-x | false     | Number of pixels of x-axis offset.
-offset-y | false     | Number of pixels of y-axis offset.
-offset-z | false     | Number of pixels of z-axis offset.
-to       | true      | ID of the entity being attached to.
-type     | false     |
+Arg      | Default  | Type
+---------|----------|----------
+entity   |          | string ID
+offset-x | 0        | number
+offset-y | 0        | number
+offset-z | 0        | number
+to       |          | string ID
+type     | 'entity' | string
 
 ---
 
 ### `webgl_billboard(args)`
 * Changes the rotation of an entity based on the rotation of the camera.
 
-Arg       | Required? | Notes
-----------|-----------|------
-axes      | false     |
-character | false     |
-entity    | true      |
+Arg       | Default            | Type
+----------|--------------------|-----------------
+axes      | ['y']              | array of strings
+character | webgl_character_id | string ID
+entity    |                    | string ID
 
 ---
 
 ### `webgl_buffer_set(args)`
 * Returns the created buffers for a specific entity.
 
-Arg         | Required? | Notes
-------------|-----------|------
-colorData   | true      |
-normalData  | true      |
-textureData | true      |
-vertexData  | true      |
+Arg         | Default | Type
+------------|---------|-----------------
+colorData   |         | array of numbers
+normalData  |         | array of numbers
+textureData |         | array of numbers
+vertexData  |         | array of numbers
 
 ---
 
 ### `webgl_buffer_set_type(args)`
 * Creates, binds, and returns a buffer.
 
-Arg  | Required? | Notes
------|-----------|------
-data | true      |
-type | false     |
+Arg  | Default        | Type
+-----|----------------|-------
+data |                | array
+type | 'Float32Array' | string
 
 ---
 
@@ -110,14 +110,14 @@ type | false     |
 ### `webgl_camera_rotate(args)`
 * Handles rotating the camera and character.
 
-Arg       | Required? | Notes
-----------|-----------|------
-camera    | false     |
-character | false     |
-x         | false     |
-xlock     | false     |
-y         | false     |
-z         | false     |
+Arg       | Default | Type
+----------|---------|--------
+camera    | true    | boolean
+character | true    | boolean
+x         | 0       | number
+xlock     | true    | boolean
+y         | 0       | number
+z         | 0       | number
 
 ---
 
@@ -129,12 +129,12 @@ z         | false     |
 ### `webgl_character_damage(args)`
 * Damages or fully kills a character, or optionally fully kills them. Removes attached entities, then either sets `health-current` to 0 or deletes entirely.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-damage    | false     |
-delete    | false     |
-kill      | false     |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
+damage    | 100                | number
+delete    | false              | boolean
+kill      | false              | boolean
 
 ---
 
@@ -146,9 +146,9 @@ kill      | false     |
 ### `webgl_character_jump(args)`
 * Attempts to make a character jump.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
 
 ---
 
@@ -156,49 +156,49 @@ character | false     |
 * If character doesn't exist yet, returns `-2`.
 * If character exists, returns level. `-1` means character is just a camera.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
 
 ---
 
 ### `webgl_character_origin(args)`
 * Resets the rotation and translation of a character back to the origin.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
 
 ---
 
 ### `webgl_character_spawn(args)`
 * Resets the rotation and translation of a character back to current level spawn coordinates.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
 
 ---
 
 ### `webgl_clearcolor_set(args)`
 * Stores and sets the clear color.
 
-Arg   | Required? | Notes
-------|-----------|------
-blue  | false     |
-green | false     |
-red   | false     |
+Arg   | Default | Type
+------|---------|-------
+blue  | 0       | number
+green | 0       | number
+red   | 0       | number
 
 ---
 
 ### `webgl_collision(args)`
 * Checks for collisions based on entity normals and returns a boolean.
 
-Arg          | Required? | Notes
--------------|-----------|------
-character-id | false     |
-entity       | false     |
-target       | true      |
+Arg       | Default            | Type
+----------|--------------------|---------------------------
+character | webgl_character_id | string ID
+entity    | false              | boolean false or string ID
+target    |                    | string ID
 
 ---
 
@@ -206,38 +206,38 @@ target       | true      |
 * Creates a cuboid with specified properties.
 * Translation is the center of the cuboid.
 
-Arg                  | Required? | Notes
----------------------|-----------|------
-all-alpha            | false     |
-all-collision        | false     |
-all-vertex-colors    | false     |
-back-alpha           | false     |
-back-collision       | false     |
-back-vertex-colors   | false     |
-bottom-alpha         | false     |
-bottom-collision     | false     |
-bottom-vertex-colors | false     |
-exclude              | false     |
-front-alpha          | false     |
-front-collision      | false     |
-front-vertex-colors  | false     |
-groups               | false     |
-height               | false     |
-left-alpha           | false     |
-left-collision       | false     |
-left-vertex-colors   | false     |
-length               | false     |
-prefix               | false     |
-right-alpha          | false     |
-right-collision      | false     |
-right-vertex-colors  | false     |
-top-alpha            | false     |
-top-collision        | false     |
-top-vertex-colors    | false     |
-translate-x          | false     |
-translate-y          | false     |
-translate-z          | false     |
-width                | false     |
+Arg                  | Default       | Type
+---------------------|---------------|----------------------------------
+all-alpha            | false         | boolean false or number
+all-collision        | true          | boolean
+all-vertex-colors    | false         | boolean false or array of numbers
+back-alpha           | 1             | number
+back-collision       | false         | boolean
+back-vertex-colors   | false         | boolean false or array of numbers
+bottom-alpha         | 1             | number
+bottom-collision     | false         | boolean
+bottom-vertex-colors | false         | boolean false or array of numbers
+exclude              | {}            | object of side booleans
+front-alpha          | 1             | number
+front-collision      | false         | boolean
+front-vertex-colors  | false         | boolean false or array of numbers
+groups               | []            | array of string IDs
+height               | 1             | number
+left-alpha           | 1             | number
+left-collision       | false         | boolean
+left-vertex-colors   | false         | boolean false or array of numbers
+length               | 1             | number
+prefix               | core_id_count | number or string
+right-alpha          | 1             | number
+right-collision      | false         | boolean
+right-vertex-colors  | false         | boolean false or array of numbers
+top-alpha            | 1             | number
+top-collision        | false         | boolean
+top-vertex-colors    | false         | boolean false or array of numbers
+translate-x          | 0             | number
+translate-y          | 0             | number
+translate-z          | 0             | number
+width                | 1             | number
 
 ---
 
@@ -245,22 +245,22 @@ width                | false     |
 * Creates a cuboid tree with the specified properties.
 * Translation is the center of the bottom face of the trunk.
 
-Arg                  | Required? | Notes
----------------------|-----------|------
-collision-leaves     | false     |
-collision-trunk      | false     |
-height-leaves        | false     |
-height-trunk         | false     |
-length-leaves        | false     |
-length-trunk         | false     |
-prefix               | true      |
-translate-x          | false     |
-translate-y          | false     |
-translate-z          | false     |
-vertex-colors-leaves | false     |
-vertex-colors-trunk  | false     |
-width-leaves         | false     |
-width-trunk          | false     |
+Arg                  | Default | Type
+---------------------|---------|-----------------
+collision-leaves     | false   | boolean
+collision-trunk      | false   | boolean
+height-leaves        | 10      | number
+height-trunk         | 10      | number
+length-leaves        | 10      | number
+length-trunk         | 2       | number
+prefix               |         | number or string
+translate-x          | 0       | number
+translate-y          | 0       | number
+translate-z          | 0       | number
+vertex-colors-leaves | array[] | array of numbers
+vertex-colors-trunk  | array[] | array of numbers
+width-leaves         | 10      | number
+width-trunk          | 2       | number
 
 ---
 
@@ -285,9 +285,9 @@ width-trunk          | false     |
 ### `webgl_entity_create(args)`
 * Creates all entities from `entities` arg, then creates all character entities.
 
-Arg      | Required? | Notes
----------|-----------|------
-entities | false     |
+Arg      | Default | Type
+---------|---------|--------------------
+entities | []      | array of string IDs
 
 ---
 
@@ -295,36 +295,36 @@ entities | false     |
 * Handles moving a character or entity within 3D space.
 * Maintains y position unless specifically changed.
 
-Arg        | Required? | Notes
------------|-----------|------
-character  | false     |
-entity     | false     |
-multiplier | false     |
-strafe     | false     |
-y          | false     |
+Arg        | Default            | Type
+-----------|--------------------|---------------------------
+character  | webgl_character_id | string ID
+entity     | false              | boolean false or string ID
+multiplier | 1                  | number
+strafe     | false              | boolean
+y          | false              | boolean false or number
 
 ---
 
 ### `webgl_entity_move_to(args)`
 * Moves a character or entity to a specific point.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-entity    | false     |
-x         | false     |
-y         | false     |
-z         | false     |
+Arg       | Default            | Type
+----------|--------------------|---------------------------
+character | webgl_character_id | string ID
+entity    | false              | boolean false or string ID
+x         | 0                  | number
+y         | 0                  | number
+z         | 0                  | number
 
 ---
 
 ### `webgl_entity_radians(args)`
 * Updates entity rotation radian values based on current degree rotation.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | true      |
-entity    | true      |
+Arg       | Default | Type
+----------|---------|---------------------------
+character | false   | boolean false or string ID
+entity    |         | string ID
 
 ---
 
@@ -336,133 +336,134 @@ entity    | true      |
 ### `webgl_init(args)`
 * Sets up WebGL.
 
-Arg                  | Required? | Notes
----------------------|-----------|------
-ambient-blue         | false     |
-ambient-green        | false     |
-ambient-red          | false     |
-ambient-state        | false     |
-clearcolor-blue      | false     |
-clearcolor-green     | false     |
-clearcolor-red       | false     |
-directional-blue     | false     |
-directional-green    | false     |
-directional-red      | false     |
-directional-state    | false     |
-directional-vector   | false     |
-fog-density          | false     |
-fog-state            | false     |
-gravity-acceleration | false     |
-gravity-axis         | false     |
-gravity-max          | false     |
-jump-movement        | false     |
-multiplier-jump      | false     |
-multiplier-speed     | false     |
-paths                | false     |
-spawn-rotate-x       | false     |
-spawn-rotate-y       | false     |
-spawn-rotate-z       | false     |
-spawn-translate-x    | false     |
-spawn-translate-y    | false     |
-spawn-translate-z    | false     |
+Arg                  | Default   | Type
+---------------------|-----------|--------
+ambient-blue         | 1         | number
+ambient-green        | 1         | number
+ambient-red          | 1         | number
+clearcolor-blue      | 0         | number
+clearcolor-green     | 0         | number
+clearcolor-red       | 0         | number
+directional-blue     | 1         | number
+directional-green    | 1         | number
+directional-red      | 1         | number
+directional-state    | true      | boolean
+directional-vector   | '0, 1, 0' | string
+fog-density          | .0001     | number
+fog-state            | false     | boolean
+gravity-acceleration | -.05      | number
+gravity-axis         | 'y'       | string
+gravity-max          | -2        | number
+jump-movement        | false     | boolean
+multiplier-jump      | 1         | number
+multiplier-speed     | 1         | number
+paths                | {}        | object
+spawn-rotate-x       | 0         | number
+spawn-rotate-y       | 0         | number
+spawn-rotate-z       | 0         | number
+spawn-translate-x    | 0         | number
+spawn-translate-y    | 0         | number
+spawn-translate-z    | 0         | number
 
 ---
 
 ### `webgl_init_character(args)`
 * Sets up the character and camera.
 
-Arg                      | Required? | Notes
--------------------------|-----------|------
-camera-zoom-current      | false     |
-camera-zoom-max          | false     |
-change                   | false     |
-collide-range-horizontal | false     |
-collide-range-vertical   | false     |
-collides                 | false     |
-entities                 | false     |
-experience               | false     |
-health-current           | false     |
-health-max               | false     |
-id                       | false     |
-jump-height              | false     |
-level                    | false     |
-rotate-x                 | false     |
-rotate-z                 | false     |
-rotate-z                 | false     |
-speed                    | false     |
-talk                     | false     |
-trade                    | false     |
-translate-x              | false     |
-translate-z              | false     |
-translate-z              | false     |
+Arg                      | Default            | Type
+-------------------------|--------------------|------------------------
+camera-zoom-current      | 20                 | number
+camera-zoom-max          | 50                 | number
+change                   | {}                 | object
+collide-range-horizontal | 2                  | number
+collide-range-vertical   | 3                  | number
+collides                 | true               | boolean
+entities                 | []                 | array of objects
+experience               | 0                  | number
+health-current           | 100                | number
+health-max               | 100                | number
+id                       | webgl_character_id | string ID
+jump-height              | .6                 | number
+level                    | -1                 | number >= -1
+rotate-x                 | 0                  | number
+rotate-y                 | 0                  | number
+rotate-z                 | 0                  | number
+speed                    | .2                 | number
+talk                     | false              | boolean false or string
+trade                    | []                 | array
+translate-x              | 0                  | number
+translate-y              | 0                  | number
+translate-z              | 0                  | number
 
 ---
 
 ### `webgl_item_equip(args)`
 * Equips or unequips an item.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-equip     | false     |
-item      | true      |
+Arg       | Default            | Type
+----------|--------------------|----------
+character | webgl_character_id | string ID
+equip     | true               | boolean
+item      |                    | object
 
 ---
 
 ### `webgl_item_reset(args)`
 * Resets an item in a characters inventory.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-entities  | false     |
-item      | true      |
-spell     | false     |
-stats     | false     |
+Arg             | Default            | Type
+----------------|--------------------|----------
+character       | webgl_character_id | string ID
+entities        | []                 | array
+item            |                    | object
+spell           | false              | boolean
+spellproperties | {}                 | object
+stats           | {}                 | object
 
 ---
 
 ### `webgl_item_trade(args)`
 * Attempts to trade any amount of one item from one character for any amount of one item from another character.
 
-Arg           | Required? | Notes
---------------|-----------|------
-character-0   | true      |
-character-1   | true      |
-item-0-amount | true      |
-item-0-id     | true      |
-item-1-amount | true      |
-item-1-id     | true      |
+Arg           | Default | Type
+--------------|---------|----------
+character-0   |         | string ID
+character-1   |         | string ID
+item-0-amount |         | number
+item-0-id     |         | number
+item-1-amount |         | number
+item-1-id     |         | number
 
 ---
 
 ### `webgl_json_export(args)`
 * Outputs JSON for level and character to target element.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-target    | false     |
+Arg       | Default    | Type
+----------|------------|----------
+character | true       | boolean
+target    | 'exported' | string ID
 
 ---
 
 ### `webgl_level_init(args)`
 * Creates a level from a parsed (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | true      |
-json      | false     |
+Arg       | Default | Type
+----------|---------|------------------------
+character |         | number
+json      | false   | boolean false or object
 
 ---
 
 ### `webgl_level_load(args)`
 * Parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
-Arg       | Required? | Notes
-----------|-----------|------
-character | false     |
-json      | false     |
+Arg       | Default | Type
+----------|---------|------------------------
+character | 0       | number
+json      | false   | boolean false or object
+
 
 ---
 
@@ -475,21 +476,21 @@ json      | false     |
 * Creates a tree made out of "lines" with the specified properties.
 * Translation is the center of the bottom of the trunk.
 
-Arg                  | Required? | Notes
----------------------|-----------|------
-prefix               | true      |
-translate-x          | false     |
-translate-y          | false     |
-translate-z          | false     |
-trunk-branch-max     | false     |
-trunk-branch-min     | false     |
-trunk-count-max      | false     |
-trunk-count-min      | false     |
-trunk-length         | false     |
-trunk-width-max      | false     |
-trunk-width-min      | false     |
-vertex-colors-leaves | false     |
-vertex-colors-trunk  | false     |
+Arg                  | Default | Type
+---------------------|---------|-----------------
+prefix               |         | string
+translate-x          | 0       | number
+translate-y          | 0       | number
+translate-z          | 0       | number
+trunk-branch-max     | 4       | number
+trunk-branch-min     | 0       | number
+trunk-count-max      | 10      | number
+trunk-count-min      | 1       | number
+trunk-length         | 10      | number
+trunk-width-max      | 2       | number
+trunk-width-min      | 1       | number
+vertex-colors-leaves | array[] | array of numbers
+vertex-colors-trunk  | array[] | array of numbers
 
 ---
 
@@ -508,34 +509,34 @@ vertex-colors-trunk  | false     |
 ### `webgl_normals(args)`
 * Returns an array of calculated normals. Contains x, y, and z normals for each vertex.
 
-Arg            | Required? | Notes
----------------|-----------|------
-rotate-x       | false     |
-rotate-y       | false     |
-rotate-z       | false     |
-vertices-count | false     |
+Arg            | Default | Type
+---------------|---------|-------
+rotate-x       | 0       | number
+rotate-y       | 0       | number
+rotate-z       | 0       | number
+vertices-count | 1       | number
 
 ---
 
 ### `webgl_particles_create(args)`
 * Creates particle entities in the `particles` group.
 
-Arg           | Required? | Notes
---------------|-----------|------
-collide-range | false     |
-collides      | false     |
-color         | false     |
-count         | false     |
-gravity       | false     |
-lifespan      | false     |
-parent        | false     |
-rotate-x      | false     |
-rotate-y      | false     |
-rotate-z      | false     |
-speed         | false     |
-translate-x   | false     |
-translate-y   | false     |
-translate-z   | false     |
+Arg           | Default                                             | Type
+--------------|-----------------------------------------------------|-----------------
+collide-range | 1                                                   | number
+collides      | true                                                | boolean
+color         | [1, 1, 1, 1]                                        | array of numbers
+count         | 1                                                   | number
+gravity       | true                                                | boolean
+lifespan      | 100                                                 | number
+parent        | webgl_character_id                                  | string ID
+rotate-x      | webgl_characters[webgl_character_id]['rotate-x']    | number
+rotate-y      | webgl_characters[webgl_character_id]['rotate-y']    | number
+rotate-z      | webgl_characters[webgl_character_id]['rotate-z']    | number
+speed         | 1                                                   | number
+translate-x   | webgl_characters[webgl_character_id]['translate-x'] | number
+translate-y   | webgl_characters[webgl_character_id]['translate-y'] | number
+translate-z   | webgl_characters[webgl_character_id]['translate-z'] | number
 
 ---
 
@@ -543,13 +544,13 @@ translate-z   | false     |
 * Makes target entity use specific path.
 * Disables entity path if no path specified.
 
-Arg            | Required? | Notes
----------------|-----------|------
-entity         | true      |
-path-direction | false     |
-path-end       | false     |
-path-id        | false     |
-path-point     | false     |
+Arg            | Default | Type
+---------------|---------|---------------------------
+entity         |         | string ID
+path-direction | 1       | 1 or -1
+path-end       | false   | boolean
+path-id        | false   | boolean false or string ID
+path-point     | 0       | number
 
 ---
 
@@ -561,19 +562,19 @@ path-point     | false     |
 ### `webgl_pick_color(args)`
 * Returns a `Uint8Array(4)` containing the RGBA value of the specified pixel.
 
-Arg | Required? | Notes
-----|-----------|------
-x   | true      |
-y   | true      |
+Arg | Default | Type
+----|---------|-------
+x   |         | number
+y   |         | number
 
 ---
 
 ### `webgl_program_create(args)`
 * Creates, links, uses, and returns a WebGL shader program.
 
-Arg     | Required? | Notes
---------|-----------|------
-shaders | true      |
+Arg     | Default | Type
+--------|---------|-------
+shaders |         | object
 
 ---
 
@@ -586,10 +587,10 @@ shaders | true      |
 ### `webgl_shader_create(args)`
 * Creates and compiles a shader to be used in a program, then returns it.
 
-Arg    | Required? | Notes
--------|-----------|------
-source | true      |
-type   | true      |
+Arg    | Default | Type
+-------|---------|-----------------------------------------------------------
+source |         | string
+type   |         | webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
 
 ---
 
@@ -601,41 +602,41 @@ type   | true      |
 ### `webgl_skybox(args)`
 * Creates a skybox around the `webgl_player_id` camera.
 
-Arg                 | Required? | Notes
---------------------|-----------|------
-bottom-color-bottom | false     |
-bottom-color-top    | false     |
-prefix              | true      |
-sides               | false     |
-size                | false     |
-top-color-bottom    | false     |
-top-color-top       | false     |
+Arg                 | Default | Type
+--------------------|---------|----------------------------------
+bottom-color-bottom | false   | boolean false or array of numbers
+bottom-color-top    | false   | boolean false or array of numbers
+prefix              |         | string ID
+sides               | 3       | number
+size                | 99      | number
+top-color-bottom    | false   | boolean false or array of numbers
+top-color-top       | false   | boolean false or array of numbers
 
 ---
 
 ### `webgl_texture_set(args)`
 * Creates a texture based on an image or URI.
 
-Arg     | Required? | Notes
---------|-----------|------
-entity  | true      |
-texture | false     |
+Arg     | Default            | Type
+--------|--------------------|----------
+entity  |                    | string ID
+texture | '_texture-default' | string ID
 
 ---
 
 ### `webgl_vertexattribarray_set(args)`
 
-Arg        | Required? | Notes
------------|-----------|------
-attributes | true      |
-program    | true      |
+Arg        | Default            | Type
+-----------|--------------------|--------------
+attributes |                    | array
+program    |                    | WebGL program
 
 ---
 
 ### `webgl_vertexcolorarray(args)`
 * Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
 
-Arg         | Required? | Notes
-------------|-----------|------
-rgbarray    | false     |
-vertexcount | false     |
+Arg         | Default            | Type
+------------|--------------------|-----------------
+rgbarray    | []                 | array of numbers
+vertexcount | 4                  | number

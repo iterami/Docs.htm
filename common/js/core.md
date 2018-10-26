@@ -117,92 +117,90 @@
 ### `core_ajax(args)`
 * Initiates and handles AJAX requests.
 
-Arg  | Required? | Notes
------|-----------|------
-data | false     |
-todo | true      |
-type | false     |
-url  | true      |
+Arg  | Default                      | Type
+-----|------------------------------|---------
+data | core_ajax_properties['data'] |
+todo |                              | function
+type | core_ajax_properties['type'] | string
+url  |                              | string
 
 ---
 
 ### `core_args(args)`
 * Creates an `args` object with provided properties, populates it with additional optional default properties, and returns it.
 
-Arg      | Required? | Notes
----------|-----------|------
-args     | true      |
-defaults | true      |
+Arg      | Default | Type
+---------|---------|-------
+args     | {}      | object
+defaults | {}      | object
 
 ---
 
 ### `core_audio_create(args)`
 
-Arg    | Required? | Notes
--------|-----------|------
-audios | true      |
+Arg    | Default | Type
+-------|---------|-------
+audios |         | object
 
 ---
 
 ### `core_audio_node_create(args)`
 
-Arg        | Required? | Notes
------------|-----------|------
-id         | false     |
-properties | false     |
+Arg        | Default                 | Type
+-----------|-------------------------|---------------------------
+id         | false                   | boolean false or string ID
+properties | {'label': 'Oscillator'} | object
 
 ---
 
 ### `core_audio_onended(args)`
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|----------
+id  |         | string ID
 
 ---
 
 ### `core_audio_source_create(args)`
 
-Arg               | Required? | Notes
-------------------|-----------|------
-id                | true      |
-volume-multiplier | false     |
+Arg | Default | Type
+----|---------|----------
+id  |         | string ID
 
 ---
 
 ### `core_audio_start(args)`
 
-Arg               | Required? | Notes
-------------------|-----------|------
-id                | true      |
-volume-multiplier | false     |
+Arg | Default | Type
+----|---------|----------
+id  |         | string ID
 
 ---
 
 ### `core_audio_stop(args)`
 
-Arg  | Required? | Notes
------|-----------|------
-id   | true      |
-when | false     |
+Arg  | Default | Type
+-----|---------|-----------------
+id   |         | string ID
+when | void 0  | void 0 or number
 
 ---
 
 ### `core_audio_stop_all(args)`
 
-Arg  | Required? | Notes
------|-----------|------
-when | false     |
+Arg  | Default | Type
+-----|---------|-----------------
+when | void 0  | void 0 or number
 
 ---
 
 ### `core_call(args)`
 * Calls a function if it exists. Used to prevent errors caused by undefined functions.
 
-Arg  | Required? | Notes
------|-----------|------
-args | false     |
-todo | true      |
+Arg  | Default | Type
+-----|---------|-----------------
+args | void 0  | void 0 or object
+todo |         | function
 
 ---
 
@@ -210,47 +208,47 @@ todo | true      |
 * Clamps a number between two values and returns it.
 * If out of bounds, either sets it to closest bound or loops to opposite bound as many times as needed.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-max      | true      |
-min      | true      |
-value    | true      |
-wrap     | false     |
+Arg      | Default                       | Type
+---------|-------------------------------|--------
+decimals | core_storage_data['decimals'] | number
+max      |                               | number
+min      |                               | number
+value    |                               | number
+wrap     | false                         | boolean
 
 ---
 
 ### `core_date_to_timestamp(args)`
 * Converts a date object into a timestamp and returns it.
 
-Arg  | Required? | Notes
------|-----------|------
-date | false     |
+Arg  | Default | Type
+-----|---------|------------------------
+date | false   | boolean false or object
 
 ---
 
 ### `core_degrees_to_radians(args)`
 * Converts a number of degrees to radians and returns it.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-degrees  | true      |
+Arg      | Default                       | Type
+---------|-------------------------------|-------
+decimals | core_storage_data['decimals'] | number
+degrees  |                               | number
 
 ---
 
 ### `core_distance(args)`
 * Returns the distance between 2 points that can be 3D, 2D, or 1D.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-x0       | false     |
-x1       | false     |
-y0       | false     |
-y1       | false     |
-z0       | false     |
-z1       | false     |
+Arg      | Default                       | Type
+---------|-------------------------------|-------
+decimals | core_storage_data['decimals'] | number
+x0       | 0                             | number
+x1       | 0                             | number
+y0       | 0                             | number
+y1       | 0                             | number
+z0       | 0                             | number
+z1       | 0                             | number
 
 ---
 
@@ -258,54 +256,54 @@ z1       | false     |
 * Creates an entity, provides it with additional properties based on entity defaults and functions, and returns its ID.
 * Not including `id` makes entity use `core_id_count` which starts at 0 and goes up by 1 every time an entity is created.
 
-Arg        | Required? | Notes
------------|-----------|------
-id         | false     |
-properties | false     |
-types      | false     |
+Arg        | Default       | Type
+-----------|---------------|-----------------
+id         | core_id_count | string ID
+properties | {}            | object
+types      | []            | array of strings
 
 ---
 
 ### `core_entity_handle_default(args)`
 * Makes sure entity property defaults and groups are handled properly.
 
-Arg  | Required? | Notes
------|-----------|------
-id   | true      |
-type | true      |
+Arg  | Default | Type
+-----|---------|----------
+id   |         | string ID
+type |         | string ID
 
 ---
 
 ### `core_entity_remove(args)`
 * Deletes an entity and removes it from groups.
 
-Arg          | Required? | Notes
--------------|-----------|------
-delete-empty | false     |
-entities     | true      |
+Arg          | Default | Type
+-------------|---------|--------------------
+delete-empty | false   | boolean
+entities     |         | array of string IDs
 
 ---
 
 ### `core_entity_remove_all(args)`
 * Deletes all entities within a specific group.
 
-Arg          | Required? | Notes
--------------|-----------|------
-delete-empty | false     |
-group        | false     |
+Arg          | Default | Type
+-------------|---------|---------------------------
+delete-empty | false   | boolean
+group        | false   | boolean false or string ID
 
 ---
 
 ### `core_entity_set(args)`
 * Creates a new entity type that can then be created.
 
-Arg        | Required? | Notes
------------|-----------|------
-default    | false     |
-groups     | false     |
-properties | false     |
-todo       | false     |
-type       | true      |
+Arg        | Default      | Type
+-----------|--------------|--------------------
+default    | false        | boolean
+groups     | []           | array of string IDs
+properties | {}           | object
+todo       | function(){} | function
+type       |              | string ID
 
 ---
 
@@ -319,14 +317,14 @@ type       | true      |
 ### `core_events_bind(args)`
 * Updates bindings to various events, including optional clearing.
 
-Arg          | Required? | Notes
--------------|-----------|------
-beforeunload | false     |
-clearkeys    | false     |
-clearmouse   | false     |
-elements     | false     |
-keybinds     | false     |
-mousebinds   | false     |
+Arg          | Default | Type
+-------------|---------|--------------------------
+beforeunload | false   | boolean false or function
+clearkeys    | false   | boolean
+clearmouse   | false   | boolean
+elements     | false   | boolean false or object
+keybinds     | false   | boolean false or object
+mousebinds   | false   | boolean false or object
 
 ---
 
@@ -347,89 +345,89 @@ mousebinds   | false     |
 ### `core_file(args)`
 * Uses `FileReader` to read a file of any type, then passes the event to `todo()`.
 
-Arg  | Required? | Notes
------|-----------|------
-file | true      |
-todo | true      |
-type | false     |
+Arg  | Default         | Type
+-----|-----------------|---------
+file |                 | string
+todo |                 | function
+type | 'readAsDataURL' | string
 
 ---
 
 ### `core_fixed_length_line(args)`
 * Returns the endpoint of a line between 2 3D, 2D, or 1D points, where the line has a fixed length.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-length   | false     |
-x0       | false     |
-x1       | false     |
-y0       | false     |
-y1       | false     |
-z0       | false     |
-z1       | false     |
+Arg      | Default                       | Type
+---------|-------------------------------|-------
+decimals | core_storage_data['decimals'] | number
+length   | 1                             | number
+x0       | 0                             | number
+x1       | 0                             | number
+y0       | 0                             | number
+y1       | 0                             | number
+z0       | 0                             | number
+z1       | 0                             | number
 
 ---
 
 ### `core_group_add(args)`
 * Adds entities to a group and calls `core_group_create()` if it does not exist.
 
-Arg      | Required? | Notes
----------|-----------|------
-entities | true      |
-group    | true      |
+Arg      | Default | Type
+---------|---------|--------------------
+entities |         | array of string IDs
+group    |         | string
 
 ---
 
 ### `core_group_create(args)`
 * Creates empty groups and sets up length handling.
 
-Arg | Required? | Notes
-----|-----------|------
-ids | true      |
+Arg | Default | Type
+----|---------|-----------------
+ids |         | array of strings
 
 ---
 
 ### `core_group_modify(args)`
 * Runs code that affects every entity within a group.
 
-Arg     | Required? | Notes
---------|-----------|------
-pretodo | false     |
-group   | true      |
-todo    | true      |
+Arg     | Default         | Type
+--------|-----------------|--------------------------
+groups  |                 | array of string IDs
+pretodo | false           | boolean false or function
+todo    |                 | function
 
 ---
 
 ### `core_group_move(args)`
 * Removes an entity from a group and adds it to a different group.
 
-Arg      | Required? | Notes
----------|-----------|------
-entities | true      |
-from     | true      |
-to       | true      |
+Arg      | Default | Type
+---------|---------|--------------------
+entities |         | array of string IDs
+from     |         | string ID
+to       |         | string ID
 
 ---
 
 ### `core_group_remove(args)`
 * Remove entities from 1 specific group.
 
-Arg          | Required? | Notes
--------------|-----------|------
-delete-empty | false     |
-entities     | true      |
-group        | true      |
+Arg          | Default | Type
+-------------|---------|--------------------
+delete-empty | false   | boolean
+entities     |         | array of string IDs
+group        |         | string
 
 ---
 
 ### `core_group_remove_all(args)`
 * Removes entities fromm all groups.
 
-Arg          | Required? | Notes
--------------|-----------|------
-delete-empty | false     |
-entities     | true      |
+Arg          | Default | Type
+-------------|---------|--------------------
+delete-empty | false   | boolean
+entities     |         | array of string IDs
 
 ---
 
@@ -451,22 +449,22 @@ entities     | true      |
 * Recursively applies default values to `var` properties and subproperties.
 * If `var` isn't an object, then this function returns `var`.
 
-Arg     | Required? | Notes
---------|-----------|------
-default | false     |
-var     | false     |
+Arg     | Default | Type
+--------|---------|-------
+default | {}      | object
+var     | {}      | any
 
 ---
 
 ### `core_handle_event(args)`
 
-Arg    | Required? | Notes
--------|-----------|------
-event  | true      |
-key    | true      |
-object | true      |
-state  | false     |
-todo   | false     |
+Arg    | Default | Type
+-------|---------|-------------------
+event  |         | event
+key    |         | string
+object |         | object
+state  | void 0  |
+todo   | void 0  | void 0 or function
 
 ---
 
@@ -509,50 +507,50 @@ todo   | false     |
 ### `core_hex_to_rgb(args)`
 * Converts a hexadecimal string of length 6 to red, green, and blue, and returns it.
 
-Arg | Required? | Notes
-----|-----------|------
-hex | true      |
+Arg | Default | Type
+----|---------|-------
+hex |         | string
 
 ---
 
 ### `core_html(args)`
 * Returns an HTML element and optionally adds it to a parent.
 
-Arg        | Required? | Notes
------------|-----------|------
-parent     | false     |
-properties | false     |
-type       | false     |
+Arg        | Default | Type
+-----------|---------|---------------------------
+parent     | false   | boolean false or string ID
+properties | {}      | object
+type       | 'div'   | string
 
 ---
 
 ### `core_html_format(args)`
 * Replaces characters in a string that may cause HTML errors and returns it.
 
-Arg    | Required? | Notes
--------|-----------|------
-string | true      |
+Arg    | Default | Type
+-------|---------|-------
+string |         | string
 
 ---
 
 ### `core_html_modify(args)`
 * Assigns properties to an HTML element if it exists.
 
-Arg        | Required? | Notes
------------|-----------|------
-id         | true      |
-properties | true      |
+Arg        | Default | Type
+-----------|---------|-------
+id         |         | string
+properties |         | object
 
 ---
 
 ### `core_image(args)`
 * Creates an image, begins asynchronous loading, and returns it.
 
-Arg  | Required? | Notes
------|-----------|------
-id   | true      |
-src  | true      |
-todo | false     |
+Arg  | Default      | Type
+-----|--------------|---------
+id   |              | string
+src  |              | string
+todo | function(){} | function
 
 ---
 
@@ -564,33 +562,32 @@ todo | false     |
 ### `core_interval_animationFrame(args)`
 * Continues running animation frames.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
 ### `core_interval_modify(args)`
 * Creates or modifies an animation frame, interval, or timeout.
 
-Arg            | Required? | Notes
----------------|-----------|------
-todo           | true      |
-animationFrame | false     |
-clear          | false     |
-id             | true      |
-interval       | false     |
-paused         | false     |
-set            | false     |
+Arg            | Default         | Type
+---------------|-----------------|--------
+animationFrame | false           | boolean
+clear          | 'clearInterval' | string
+id             |                 | string
+interval       | 25              | number
+paused         | false           | boolean
+set            | 'setInterval'   | string
 
 ---
 
 ### `core_interval_pause(args)`
 * Pauses an animation frame, interval, or timeout.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
@@ -602,9 +599,9 @@ id  | true      |
 ### `core_interval_remove(args)`
 * Pauses and removes an animation frame, interval, or timeout.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
@@ -616,9 +613,9 @@ id  | true      |
 ### `core_interval_resume(args)`
 * Resumes an animation frame, interval, or timeout.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
@@ -629,30 +626,30 @@ id  | true      |
 
 ### `core_keys_updatebinds(args)`
 
-Arg      | Required? | Notes
----------|-----------|------
-clear    | false     |
-keybinds | true      |
+Arg      | Default | Type
+---------|---------|--------
+clear    | false   | boolean
+keybinds |         | object
 
 ---
 
 ### `core_matrix_clone(args)`
 * Creates a new matrix and copies the values of an existing matrix onto it.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
-to  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
+to  |         | string
 
 ---
 
 ### `core_matrix_copy(args)`
 * Copies all values of a matrix onto another matrix.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
-to  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
+to  |         | string
 
 ---
 
@@ -664,137 +661,137 @@ to  | true      |
 ### `core_matrix_delete(args)`
 * Deletes various matricies.
 
-Arg | Required? | Notes
-----|-----------|------
-ids | true      |
+Arg | Default | Type
+----|---------|-----------------
+ids |         | array of strings
 
 ---
 
 ### `core_matrix_identity(args)`
 * Resets a matrix to an identity matrix.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
 ### `core_matrix_rotate(args)`
 * Rotates a 3D matrix.
 
-Arg        | Required? | Notes
------------|-----------|------
-dimensions | true      |
-id         | true      |
+Arg        | Default | Type
+-----------|---------|-----------------
+dimensions |         | array of numbers
+id         |         | string
 
 ---
 
 ### `core_matrix_round(args)`
 * Rounds the values of a matrix to the nearest integer.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-id       | true      |
+Arg      | Default                       | Type
+---------|-------------------------------|-------
+decimals | core_storage_data['decimals'] | number
+id       |                               | string
 
 ---
 
 ### `core_matrix_translate(args)`
 * Translates a 3D matrix.
 
-Arg        | Required? | Notes
------------|-----------|------
-dimensions | true      |
-id         | true      |
+Arg        | Default | Type
+-----------|---------|-----------------
+dimensions |         | array of numbers
+id         |         | string
 
 ---
 
 ### `core_mouse_updatebinds(args)`
 
-Arg        | Required? | Notes
------------|-----------|------
-clear      | false     |
-mousebinds | true      |
+Arg        | Default | Type
+-----------|---------|--------
+clear      | false   | boolean
+mousebinds |         | object
 
 ---
 
 ### `core_move_2d(args)`
 * Calculates movement in 2 dimensions and returns an object containing `angle`, `x`, and `y`.
 
-Arg        | Required? | Notes
------------|-----------|------
-decimals   | false     |
-multiplier | false     |
-x0         | true      |
-x1         | true      |
-y0         | true      |
-y1         | true      |
+Arg        | Default                       | Type
+-----------|-------------------------------|-------
+decimals   | core_storage_data['decimals'] | number
+multiplier | 1                             | number
+x0         |                               | number
+x1         |                               | number
+y0         |                               | number
+y1         |                               | number
 
 ---
 
 ### `core_move_2d_diagonal(args)`
 * Handles reduction of movement speed when moving diagonally amd returns an object containing `x` and `y`.
 
-Arg   | Required? | Notes
-------|-----------|------
-dx    | true      |
-dy    | true      |
-speed | true      |
+Arg   | Default | Type
+------|---------|-------
+dx    |         | number
+dy    |         | number
+speed |         | number
 
 ---
 
 ### `core_move_3d(args)`
 * Calculates movement in 3 dimensions and returns an object containing `x` and `z`.
 
-Arg        | Required? | Notes
------------|-----------|------
-angle      | true      |
-decimals   | false     |
-multiplier | false     |
-speed      | false     |
-strafe     | false     |
+Arg        | Default                       | Type
+-----------|-------------------------------|--------
+angle      |                               | number
+decimals   | core_storage_data['decimals'] | number
+multiplier | 1                             | number
+speed      | 1                             | number
+strafe     | false                         | boolean
 
 ---
 
 ### `core_number_format(args)`
 * Formats a number based on `new Intl.NumberFormat()` and returns it.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-number   | true      |
+Arg        | Default                       | Type
+-----------|-------------------------------|--------
+decimals   | core_storage_data['decimals'] | number
+number     |                               | number
 
 ---
 
 ### `core_point_angle(args)`
 * Returns the angle between 2 points relative to the grid.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-x0       | true      |
-x1       | true      |
-y0       | true      |
-y1       | true      |
+Arg        | Default                       | Type
+-----------|-------------------------------|--------
+decimals   | core_storage_data['decimals'] | number
+x0         |                               | number
+x1         |                               | number
+y0         |                               | number
+y1         |                               | number
 
 ---
 
 ### `core_radians_to_degrees(args)`
 * Converts a number of radians to degrees and returns it.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-radians  | true      |
+Arg        | Default                       | Type
+-----------|-------------------------------|-------
+decimals   | core_storage_data['decimals'] | number
+radians    |                               | number
 
 ---
 
 ### `core_random_boolean(args)`
 * Returns a random boolean with optional probability manipulation.
 
-Arg     | Required? | Notes
---------|-----------|------
-chance  | false     |
+Arg     | Default                    | Type
+--------|----------------------------|--------
+chance  | core_random_boolean_chance | boolean
 
 ---
 
@@ -806,28 +803,28 @@ chance  | false     |
 ### `core_random_integer(args)`
 * Generates a random integer in a range.
 
-Arg  | Required? | Notes
------|-----------|------
-max  | false     |
-todo | false     |
+Arg  | Default                 | Type
+-----|-------------------------|--------
+max  | core_random_integer_max | boolean
+todo | 'floor'                 | string
 
 ---
 
 ### `core_random_key(args)`
 * Returns a random object key.
 
-Arg    | Required? | Notes
--------|-----------|------
-object | true      |
+Arg    | Default | Type
+-------|---------|-------
+object |         | object
 
 ---
 
 ### `core_random_number(args)`
 * Returns a random number in a range.
 
-Arg        | Required? | Notes
------------|-----------|------
-multiplier | false     |
+Arg        | Default | Type
+-----------|---------|-------
+multiplier | 1       | number
 
 ---
 
@@ -839,36 +836,36 @@ multiplier | false     |
 ### `core_random_string(args)`
 * Returns a random string from a string of available characters.
 
-Arg        | Required? | Notes
------------|-----------|------
-characters | false     |
-length     | false     |
+Arg        | Default                       | Type
+-----------|-------------------------------|-------
+characters | core_random_string_characters | string
+length     | core_random_string_length     | number
 
 ---
 
 ### `core_rectangle_overlap(args)`
 * Checks if 2 rectangles are overlapping and returns a boolean.
 
-Arg | Required? | Notes
-----|-----------|------
-h0  | true      |
-h1  | true      |
-w0  | true      |
-w1  | true      |
-x0  | true      |
-x1  | true      |
-y0  | true      |
-y1  | true      |
+Arg | Default | Type
+----|---------|-------
+h0  |         | number
+h1  |         | number
+w0  |         | number
+w1  |         | number
+x0  |         | number
+x1  |         | number
+y0  |         | number
+y1  |         | number
 
 ---
 
 ### `core_replace_multiple(args)`
 * Improvement of general string `replace()` that allows multiple replacements.
 
-Arg      | Required? | Notes
----------|-----------|------
-patterns | true      |
-string   | true      |
+Arg      | Default | Type
+---------|---------|-------
+patterns |         | object
+string   |         | string
 
 ---
 
@@ -876,42 +873,42 @@ string   | true      |
 * Called by repository-specific [`repo_init()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/main.md#repo_init) function.
 * Sets up various repository-specific things needed for project function.
 
-Arg          | Required? | Notes
--------------|-----------|------
-audios       | false     |
-beforeunload | false     |
-entities     | false     |
-github       | false     |
-globals      | false     |
-images       | false     |
-info         | false     |
-keybinds     | false     |
-menu         | false     |
-mousebinds   | false     |
-storage      | false     |
-storage-menu | false     |
-tabs         | false     |
-textures     | false     |
-title        | true      |
-ui           | false     |
+Arg          | Default   | Type
+-------------|-----------|--------------------------
+audios       | {}        | object
+beforeunload | false     | boolean false or function
+entities     | {}        | object
+github       | 'iterami' | string
+globals      | {}        | object
+images       | {}        | object
+info         | ''        | string
+keybinds     | false     | boolean false or object
+menu         | false     | boolean
+mousebinds   | false     | boolean false or object
+storage      | {}        | object
+storage-menu | ''        | string
+tabs         | {}        | object
+textures     | false     | boolean false or object
+title        |           | string
+ui           | ''        | string
 
 ---
 
 ### `core_requestpointerlock(args)`
 
-Arg | Required? | Notes
-----|-----------|------
-id  | false     |
+Arg | Default  | Type
+----|----------|-------
+id  | 'canvas' | string
 
 ---
 
 ### `core_round(args)`
 * Rounds a number to a specific number of decimal places and returns it.
 
-Arg      | Required? | Notes
----------|-----------|------
-decimals | false     |
-number   | true      |
+Arg        | Default                       | Type
+-----------|-------------------------------|-------
+decimals   | core_storage_data['decimals'] | number
+number     |                               | number
 
 ---
 
@@ -919,21 +916,21 @@ number   | true      |
 * Sorts an array according to custom sorting rules and returns it.
 * Optionally reverses the array after sorting.
 
-Arg     | Required? | Notes
---------|-----------|------
-array   | true      |
-reverse | false     |
-todo    | true      |
+Arg     | Default | Type
+--------|---------|---------
+array   |         | array
+reverse | false   | boolean
+todo    |         | function
 
 ---
 
 ### `core_sort_numbers(args)`
 * Sorts an array numbers from smallest to biggest and returns it.
 
-Arg     | Required? | Notes
---------|-----------|------
-array   | true      |
-reverse | false     |
+Arg     | Default | Type
+--------|---------|--------
+array   |         | array
+reverse | false   | boolean
 
 ---
 
@@ -941,40 +938,40 @@ reverse | false     |
 * Sorts an array randomly and returns it.
 * Cannot be reversed.
 
-Arg     | Required? | Notes
---------|-----------|------
-array   | true      |
+Arg     | Default | Type
+--------|---------|------
+array   |         | array
 
 ---
 
 ### `core_sort_property(args)`
 * Sort an array based on some property and return it.
 
-Arg      | Required? | Notes
----------|-----------|------
-array    | true      |
-reverse  | false     |
-property | true      |
+Arg      | Default | Type
+---------|---------|--------
+array    |         | array
+property |         } string
+reverse  | false   | boolean
 
 ---
 
 ### `core_sort_strings(args)`
 * Sort an array of strings based on `localeCompare()` and return it.
 
-Arg     | Required? | Notes
---------|-----------|------
-array   | true      |
-reverse | false     |
+Arg     | Default | Type
+--------|---------|--------
+array   |         | array
+reverse | false   | boolean
 
 ---
 
 ### `core_storage_add(args)`
 * Adds information and defaults of a variable that should be stored in `window.localStorage`.
 
-Arg     | Required? | Notes
---------|-----------|------
-prefix  | false     |
-storage | true      |
+Arg     | Default               | Type
+--------|-----------------------|-------
+prefix  | core_repo_title + '-' | string
+storage |                       | object
 
 ---
 
@@ -983,10 +980,10 @@ storage | true      |
 * Returns `innerHTML` when modifying `div` or `span`.
 * Returns `value` when modifying everything else.
 
-Arg     | Required? | Notes
---------|-----------|------
-element | true      |
-key     | true      |
+Arg     | Default | Type
+--------|---------|--------
+element |         | element
+key     |         | string
 
 ---
 
@@ -1003,10 +1000,10 @@ key     | true      |
 ### `core_storage_type_convert(args)`
 * Converts variable types depending on storage value type.
 
-Arg   | Required? | Notes
-------|-----------|------
-key   | true      |
-value | true      |
+Arg   | Default | Type
+------|---------|-------
+key   |         | string
+value |         | any
 
 ---
 
@@ -1018,52 +1015,52 @@ value | true      |
 ### `core_tab_create(args)`
 * Creates an HTML tab div and button for selecting the tab.
 
-Arg     | Required? | Notes
---------|-----------|------
-content | true      |
-group   | true      |
-id      | true      |
-label   | true      |
+Arg     | Default | Type
+--------|---------|-------
+content |         | string
+group   |         | string
+id      |         | string
+label   |         | string
 
 ---
 
 ### `core_tab_switch(args)`
 * Switches to a created tab.
 
-Arg | Required? | Notes
-----|-----------|------
-id  | true      |
+Arg | Default | Type
+----|---------|-------
+id  |         | string
 
 ---
 
 ### `core_test_function(args)`
 * Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned valuez.
 
-Arg      | Required? | Notes
----------|-----------|------
-args     | false     |
-expect   | true      |
-function | true      |
+Arg      | Default | Type
+---------|---------|---------
+args     | {}      | object
+expect   |         | any
+function |         | function
 
 ---
 
 ### `core_time_diff(args)`
 * Returns the formatted difference between two dates and returns it.
 
-Arg    | Required? | Notes
--------|-----------|------
-now    | false     |
-target | true      |
+Arg    | Default | Type
+-------|---------|---------------------------
+now    | false   | boolean false or timestamp
+target |         | timestamp
 
 ---
 
 ### `core_time_format(args)`
 * Returns a date object formatted as a string.
 
-Arg  | Required? | Notes
------|-----------|------
-date | false     |
-diff | false     |
+Arg  | Default | Type
+-----|---------|------------------------
+date | false   | boolean false or object
+diff | false   | boolean false or object
 
 ---
 
@@ -1075,45 +1072,45 @@ diff | false     |
 ### `core_timestamp_to_date(args)`
 * Converts a timestamp to a date object and returns it.
 
-Arg       | Required? | Notes
-----------|-----------|------
-timestamp | false     |
+Arg       | Default | Type
+----------|---------|---------------------------
+timestamp | false   | boolean false or timestamp
 
 ---
 
 ### `core_two_digits(args)`
 * Adds `0` before a number of it only has 1 digit and returns it.
 
-Arg    | Required? | Notes
--------|-----------|------
-number | true      |
+Arg    | Default | Type
+-------|---------|-------
+number |         | number
 
 ---
 
 ### `core_type(args)`
 * Returns the type of `var`.
 
-Arg  | Required? | Notes
------|-----------|------
-type | false     |
-var  | true      |
+Arg  | Default    | Type
+-----|------------|-------
+type | 'function' | string
+var  |            | any
 
 ---
 
 ### `core_ui_update(args)`
 * Updates HTML element values depending on type, but only if the value is new.
 
-Arg | Required? | Notes
-----|-----------|------
-ids | true      |
+Arg | Default | Type
+----|---------|-------
+ids | {}      | object
 
 ---
 
 ### `core_uri(args)`
 * Returns an element converted to a data URI.
 
-Arg     | Required? | Notes
---------|-----------|------
-id      | false     |
-quality | false     |
-type    | false     |
+Arg     | Default     | Type
+--------|-------------|-------
+id      | 'buffer'    | string
+quality | 1           | number
+type    | 'image/png' | string
