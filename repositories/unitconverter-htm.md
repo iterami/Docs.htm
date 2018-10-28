@@ -435,8 +435,8 @@ Hubble time         |       | 1 / 454419486720000000
 Internet Time       | .beat | .01157
 lunar day           |       | 1 / 2360592
 Martian solar day   | sol   | 1 / 88775.2
-momentum            |       | 1 / 60
 minute              | min   | 1 / 90
+momentum            |       | 1 / 60
 month               |       | 1 / 2592000
 radar metre         |       | 1 / .00000000666
 radar nautical mile |       | 1 / .000012355
