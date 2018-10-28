@@ -39,20 +39,21 @@ standard gravity         | ɡₒ    | 1 / 9.80665
 
 ### Angle
 
-Angle     | Unit | 1 radian =
-----------|------|--------------------
-arcminute | ′    | 3437.748
-arcsecond | ″    | 206264.88
-circle    |      | 180 / Math.PI / 360
-degree    | °    | 180 / Math.PI
-gradian   | gon  | 63.662
-mil       |      | 6283.183
-octant    |      | 180 / Math.PI / 45
-quadrant  |      | 180 / Math.PI / 90
-radian    | rad  | 1
-sextant   |      | 180 / Math.PI / 60
-sign      |      | 180 / Math.PI / 30
-turn      |      | .159154943
+Angle       | Unit | 1 radian =
+------------|------|------------------------------
+arcminute   | ′    | 180 / Math.PI * 60
+arcsecond   | ″    | 180 / Math.PI * 3600
+degree      | °    | 180 / Math.PI
+Furman      |      | (180 / Math.PI / 360) * 65536
+gradian     | gon  | 180 / Math.PI / 360 * 400
+hexacontade |      | 180 / Math.PI / 6
+mil         |      | 1000
+octant      |      | 180 / Math.PI / 45
+quadrant    |      | 180 / Math.PI / 90
+radian      | rad  | 1
+sextant     |      | 180 / Math.PI / 60
+sign        |      | 180 / Math.PI / 30
+turn        |      | 180 / Math.PI / 360
 
 ---
 
