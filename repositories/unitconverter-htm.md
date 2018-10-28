@@ -264,6 +264,7 @@ cullingey          |               | 1 / 5.265
 dharni             | धार्नि           | 1 / 2332.5
 dram               | dr            | 1 / 1.7718451953125
 dram apothecaries  | dr ap         | 1 / 3.8879346
+Dutch cask         |               | 1 / 50802.34544
 esterling          |               | .70548
 firkin             |               | 1 / 40823.3133
 fun                | 分             | 4 / 1.5
