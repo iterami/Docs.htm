@@ -92,11 +92,13 @@ yards squared  | yd²  | .83612736
 
 ### Density
 
-Density                     | Unit | 1 gram per litre =
-----------------------------|------|-------------------
-grams per cubic metre       | g/m³ | 1
-grams per litre             | g/l  | 1000
-metric tons per cubic metre | t/m³ | 1000000
+Density                     | Unit    | 1 grams per cubic metre =
+----------------------------|---------|--------------------------
+grams per cubic metre       | g/m³    | 1
+grams per litre             | g/l     | 1000
+metric tons per cubic metre | t/m³    | 1000000
+pounds per cubic inch       | lbs/in³ | 1 / 27679900
+pounds per cubic foot       | lbs/ft³ | 1 / 16018.46
 
 ---
 
