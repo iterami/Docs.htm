@@ -312,6 +312,7 @@ zolotnik           | zol.          | 1 / 4.2658
 
 Power                 | Unit | 1 watt =
 ----------------------|------|--------------
+donkeypower           |      | .004
 mechanical horsepower | hp   | 1 / 745.7
 metric horsepower     | PS   | 1 / 735.49875
 poncelet              | p    | 1 / 980.665
