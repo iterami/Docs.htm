@@ -99,6 +99,8 @@ grams per litre             | g/l     | 1000
 metric tons per cubic metre | t/m³    | 1000000
 pounds per cubic inch       | lbs/in³ | 1 / 27679900
 pounds per cubic foot       | lbs/ft³ | 1 / 16018.46
+slugs per cubic foot        |         | 1 / 515378.8184
+slugs per cubic yard        |         | 1 / 19088.1044
 
 ---
 
