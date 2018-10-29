@@ -298,7 +298,7 @@ seer (Afghanistan) |               | 1 / 7066
 seer (India)       |               | 1 / 933.10
 ship load          |               | 1 / 430803889.3312
 short ton          |               | 1 / 907184
-slug               |               | 1 / 14.593903
+slug               |               | 1 / 14593.903
 stone              | st            | 1 / 6350.29318
 teccalis           |               | 1 / 15.7152
 troy grain         | gr            | 1 / .06479891
