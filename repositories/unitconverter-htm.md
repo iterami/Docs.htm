@@ -237,10 +237,11 @@ yard                | yd   | 39.3701 / 36
 
 ### Level
 
-Level | Unit | 1 bel =
-------|------|------------
-bel   | B    | 1
-neper | Np   | 1 / .868589
+Level   | Unit | 1 decibel =
+--------|------|------------
+bel     | B    | .1
+decibel | dB   | 1
+neper   | Np   | 1 / 8.68589
 
 ---
 
