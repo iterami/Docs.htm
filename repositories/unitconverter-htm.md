@@ -543,6 +543,7 @@ shaku                   | 勺     | 1331 / 24.01
 shipping ton (imperial) |       | 1 / 1189.307556864
 shipping ton (US)       |       | 1 / 1132.67386368
 shō                     | 升     | 1331 / 2401
+sydharb                 |       | 1 / 562000000000
 tablespoon (imperial)   | tbsp  | 56.321
 tablespoon (US)         | tbsp  | 1 / .0148
 teaspoon (imperial)     | tbsp  | 168.936
