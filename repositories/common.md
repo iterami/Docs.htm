@@ -109,7 +109,7 @@
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
-* [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
+* [iterami/URI.htm](https://github.com/iterami/URI.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 
@@ -195,7 +195,7 @@
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/U1.htm](https://github.com/iterami/U1.htm)
 * [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
-* [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
+* [iterami/URI.htm](https://github.com/iterami/URI.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 * [iterami/WindowInfo.htm](https://github.com/iterami/WindowInfo.htm)
@@ -262,7 +262,7 @@
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
-* [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
+* [iterami/URI.htm](https://github.com/iterami/URI.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 
@@ -349,7 +349,7 @@
 * [iterami/Trigonometry.htm](https://github.com/iterami/Trigonometry.htm)
 * [iterami/Tubes-2D3D.htm](https://github.com/iterami/Tubes-2D3D.htm)
 * [iterami/UnitConverter.htm](https://github.com/iterami/UnitConverter.htm)
-* [iterami/URIViewer.htm](https://github.com/iterami/URIViewer.htm)
+* [iterami/URI.htm](https://github.com/iterami/URI.htm)
 * [iterami/Warped.htm](https://github.com/iterami/Warped.htm)
 * [iterami/WASD-2D.htm](https://github.com/iterami/WASD-2D.htm)
 
