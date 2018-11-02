@@ -829,7 +829,7 @@ multiplier | 1       | number
 ---
 
 ### `core_random_rgb()`
-* Returns an object containing random `blue`, `green`, and `red`, as numbers between 0 and 256.
+* Returns an object containing random `blue`, `green`, and `red`, as numbers between 0 and 255.
 
 ---
 
