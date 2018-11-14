@@ -607,6 +607,9 @@ Arg                 | Default | Type
 bottom-color-bottom | false   | boolean false or array of numbers
 bottom-color-top    | false   | boolean false or array of numbers
 prefix              |         | string ID
+rotate-x            | 0       | number
+rotate-y            | 0       | number
+rotate-z            | 0       | number
 sides               | 3       | number
 size                | 99      | number
 top-color-bottom    | false   | boolean false or array of numbers
