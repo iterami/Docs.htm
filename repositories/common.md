@@ -361,6 +361,8 @@
 ---
 
 ### uri.js
+* [iterami/Multiverse.htm](https://github.com/iterami/Multiverse.htm)
+* [iterami/MultiverseEditor.htm](https://github.com/iterami/MultiverseEditor.htm)
 * [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
 
 ---
