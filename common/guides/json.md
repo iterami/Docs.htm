@@ -203,7 +203,8 @@
       "spawn-interval-current": 0,
       "spawn-interval-max": 100,
       "speed": 0.2,
-      "texture": "_default",
+      "texture-id": "default.png",
+      "texture-repeat": 1,
       "translate-x": 0,
       "translate-y": -1,
       "translate-z": 0,
@@ -589,8 +590,11 @@
       // Optional. Entity movement speed.
       "speed": 0.2,
 
-      // Optional. ID of texture within webgl_textures.
-      "texture": "_default",
+      // Optional. ID of texture within core_images.
+      "texture-id": "default.png",
+
+      // Optional. How many times the texture will repeat.
+      "texture-repeat": 1,
 
       // Optional. Translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
