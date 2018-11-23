@@ -175,6 +175,7 @@ alen                |      | 1 / .6277
 aln                 |      | 1 / .5938
 ångström            | Å    | 10000000000
 Aṅgula              |      | 1 / .01763
+archine             |      | 1 / .7112
 arpent              |      | 1 / 58.47109
 astronomical Unit   | au   | 1 / 149597870700
 barleycorn          |      | 118.11
@@ -192,8 +193,11 @@ ell (French)        |      | 1 / 1.372
 ell (German)        |      | 1 / .579
 ell (Polish)        |      | 1 / .787
 ell (Scottish)      |      | 1 / .635
+elle (Kuunar)       |      | 1 / .5334
+faden               |      | 1 / 2.1336
 fathom              |      | 39.3701 / 72
 foot                | ft   | 39.3701 / 12
+foute               |      | 1 / .3048
 furlong             |      | 39.3701 / 7920
 girah               |      | 1 / .05715
 Gunter's chain      |      | 39.3701 / 792
