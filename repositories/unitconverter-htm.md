@@ -59,38 +59,40 @@ turn        |      | 180 / Math.PI / 360
 
 ### Area
 
-Area           | Unit | 1 metre squared =
----------------|------|------------------------------
-acre           | ac   | 1 / 4046.86
-are            | a    | .01
-barn           | b    | .0000000000000000000000000001
-bu             | 歩    | 1 / 3.306
-cawnie         |      | 1 / 5349
-chō            | 町    | 1 / 9917.36
-cuerda         |      | 1 / 3930.395625
-decimal        |      | 1 / 40.4686
-feet squared   | ft²  | 10.7639
-gō             | 合    | 1 / .3306
-ground         |      | 1 / 203
-hectare        | ha   | .0001
-inches squared | in²  | 1550.0031
-jitro          |      | 1 / 5756
-jō             | 畳    | 1 / 1.653
-korec          |      | 1 / 2878
-lan            |      | 1 / 172680
-marabba        |      | 1 / 101171
-merice         |      | 1 / 1999
-metres squared | m²   | 1
-miles squared  | mi²  | 1 / 2589990
-plaza          |      | .00015625
-rood           |      | 1 / 1011.71
-se             | 畝    | 1 / 99.1736
-shaku          | 勺    | 1 / .03306
-strema         |      | .001
-tan            | 段, 反 | 1 / 991.736
-township       |      | 1 / 93239571.972095996141
-tsubo          | 坪    | 1 / 3.306
-yards squared  | yd²  | .83612736
+Area                     | Unit | 1 metre squared =
+-------------------------|------|------------------------------
+acre                     | ac   | 1 / 4046.86
+are                      | a    | .01
+barn                     | b    | .0000000000000000000000000001
+bu                       | 歩    | 1 / 3.306
+cawnie                   |      | 1 / 5349
+chō                      | 町    | 1 / 9917.36
+cuerda                   |      | 1 / 3930.395625
+decimal                  |      | 1 / 40.4686
+desiatina (official)     |      | 1 / 10925.4
+desiatina (proprietor's) |      | 1 / 14567.2
+feet squared             | ft²  | 10.7639
+gō                       | 合    | 1 / .3306
+ground                   |      | 1 / 203
+hectare                  | ha   | .0001
+inches squared           | in²  | 1550.0031
+jitro                    |      | 1 / 5756
+jō                       | 畳    | 1 / 1.653
+korec                    |      | 1 / 2878
+lan                      |      | 1 / 172680
+marabba                  |      | 1 / 101171
+merice                   |      | 1 / 1999
+metres squared           | m²   | 1
+miles squared            | mi²  | 1 / 2589990
+plaza                    |      | .00015625
+rood                     |      | 1 / 1011.71
+se                       | 畝    | 1 / 99.1736
+shaku                    | 勺    | 1 / .03306
+strema                   |      | .001
+tan                      | 段, 反 | 1 / 991.736
+township                 |      | 1 / 93239571.972095996141
+tsubo                    | 坪    | 1 / 3.306
+yards squared            | yd²  | .83612736
 
 ---
 
