@@ -873,24 +873,25 @@ string   |         | string
 * Called by repository-specific [`repo_init()`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/main.md#repo_init) function.
 * Sets up various repository-specific things needed for project function.
 
-Arg          | Default   | Type
--------------|-----------|--------------------------
-audios       | {}        | object
-beforeunload | false     | boolean false or function
-entities     | {}        | object
-github       | 'iterami' | string
-globals      | {}        | object
-images       | {}        | object
-info         | ''        | string
-keybinds     | false     | boolean false or object
-menu         | false     | boolean
-mousebinds   | false     | boolean false or object
-storage      | {}        | object
-storage-menu | ''        | string
-tabs         | {}        | object
-textures     | false     | boolean false or object
-title        |           | string
-ui           | ''        | string
+Arg               | Default   | Type
+------------------|-----------|--------------------------
+audios            | {}        | object
+beforeunload      | false     | boolean false or function
+entities          | {}        | object
+github            | 'iterami' | string
+globals           | {}        | object
+images            | {}        | object
+info              | ''        | string
+keybinds          | false     | boolean false or object
+menu              | false     | boolean
+menu-block-events | true      | boolean
+mousebinds        | false     | boolean false or object
+storage           | {}        | object
+storage-menu      | ''        | string
+tabs              | {}        | object
+textures          | false     | boolean false or object
+title             |           | string
+ui                | ''        | string
 
 ---
 
