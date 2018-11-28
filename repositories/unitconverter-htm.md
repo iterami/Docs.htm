@@ -533,6 +533,7 @@ board-foot              | FBM   | 1 / 2.359737225
 bushel (imperial)       |       | 1 / 36.368735
 bushel (US)             |       | 1 / 35.239072
 butt of beer            |       | 1 / 490.97772
+cash                    |       | 1 / 227.11
 chungah                 |       | 1 / .75768236466
 congius                 |       | 1 / 3.27
 coomb                   |       | 1 / 145.47494
@@ -608,4 +609,5 @@ teaspoon (US)           | tsp   | 202.884
 to                      | 斗     | 1331 / 24010
 tun                     |       | 1 / 981.95544
 urna                    |       | 1 / 13.08
+velt                    |       | 1 / 227.11 * 30
 yard of ale             |       | 1 / 1.4206537
