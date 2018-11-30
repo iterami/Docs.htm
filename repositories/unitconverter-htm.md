@@ -314,6 +314,7 @@ kanme              | 貫目            | 1 / 3750
 keel               |               | 1 / 21540194.46656
 kin                | 斤             | 1 / 600
 kula               |               | 1 / 11165
+libra              |               | 1 / 453.59237 / 1.014286
 large sack         |               | 1 / 101604.69088
 long ton           |               | 1 / 1016046.08
 mane               |               | 1 / (453.59237 * 2.0071)
@@ -551,6 +552,7 @@ cyathus                 |       | 1 / (3.27 / 72)
 demiard                 |       | 1 / .284
 djezla                  |       | 1 / 257.4
 ephah                   | ה‎עֵיפָ | 1 / 36.36
+fanega                  |       | 1 / 274
 fluid dram              | fl dr | 1 / .0035516328125
 fluid dram (US)         | fl dr | 1 / .0036966911953125
 fluid ounce (imperial)  | fl oz | 35.1950652
