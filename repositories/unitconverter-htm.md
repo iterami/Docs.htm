@@ -293,6 +293,7 @@ bazla              |               | 1 / 15525
 bisauli            | बिसौलि           | 1 / 1166.25
 biza               |               | 1 / 1571.52
 boṛi               | बोड़ि            | 1 / 583.125
+bundle             |               | 1 / 317.5
 caret              | ct            | 5
 cental             |               | .0220462262185
 cullingey          |               | 1 / 5.265
