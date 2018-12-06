@@ -579,6 +579,7 @@ lambda                  | λ     | 1000000
 ligula                  |       | 1 / (3.27 / 288)
 litre                   | l     | 1
 log                     |       | 1 / .505
+malter                  |       | 1 / 191
 maris                   |       | 1 / 30.3
 merice                  |       | 1 / 70.6
 metretes                |       | 1 / 37.4
