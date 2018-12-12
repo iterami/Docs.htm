@@ -1,5 +1,5 @@
-[iterami/Chromium-iterami-DevTools](https://github.com/iterami/Chromium-iterami-DevTools) Documentation
--------------------------------------------------------------------------------------------------------
+[iterami/Chromium-iterami-DevTools](https://github.com/iterami/Chromium-iterami-DevTools) Docs
+----------------------------------------------------------------------------------------------
 
 Load `Chromium-iterami-DevTools` by:
 * `git clone https://github.com/iterami/Chromium-iterami-DevTools.git`

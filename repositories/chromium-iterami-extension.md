@@ -1,5 +1,5 @@
-[iterami/Chromium-iterami-Extension](https://github.com/iterami/Chromium-iterami-Extension) Documentation
----------------------------------------------------------------------------------------------------------
+[iterami/Chromium-iterami-Extension](https://github.com/iterami/Chromium-iterami-Extension) Docs
+------------------------------------------------------------------------------------------------
 
 * `Dark Theme`: Adds dark theme CSS to every visited webpage.
 * `GitHub Code Wrap`: Forces code on https://github.com to wrap instead of requiring a horizontal scrollbar.

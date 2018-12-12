@@ -3,9 +3,9 @@ iterami GitHub Repository Standards
 
 * GitHub Pages is used whenever possible:
   * HTTPS is enforced.
-* [Issues](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/issues.md) are enabled.
+* [Issues](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/issues.md) are enabled.
 * Projects are disabled.
-* [Pull Requests](https://github.com/iterami/Documentation.htm/blob/gh-pages/standards/pull-requests.md) are enabled.
+* [Pull Requests](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/pull-requests.md) are enabled.
 * Repository names should include prefixes and suffixes to indicate their project types:
   * Assembly repositories should use the `.asm` suffix.
   * C++ repositories should use the `.cpp` suffix.

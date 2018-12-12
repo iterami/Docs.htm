@@ -1,5 +1,5 @@
-[iterami/GMod-iterami-Addon](https://github.com/iterami/GMod-iterami-Addon) Documentation
------------------------------------------------------------------------------------------
+[iterami/GMod-iterami-Addon](https://github.com/iterami/GMod-iterami-Addon) Docs
+--------------------------------------------------------------------------------
 
 `GMod-iterami-Addon` adds an `iterami` tab to the right side of your spawn menu and to your context menu.
 

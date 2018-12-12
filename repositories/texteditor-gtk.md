@@ -1,5 +1,5 @@
-[iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk) Documentation
----------------------------------------------------------------------------------
+[iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk) Docs
+------------------------------------------------------------------------
 
 * [Shortcuts](#shortcuts)
 * [Installation](#installation)

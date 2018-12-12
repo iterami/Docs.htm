@@ -1,5 +1,5 @@
-GitHub Documentation
---------------------
+GitHub Docs
+-----------
 
 https://help.github.com/
 

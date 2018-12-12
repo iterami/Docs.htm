@@ -1,7 +1,7 @@
 [iterami/common](https://github.com/iterami/common) Usage
 ---------------------------------------------------------
 
-* Documentation: https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md
+* Docs: https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md
 
 ---
 
@@ -225,7 +225,7 @@
 
 ### writings.css
 * [iterami/Bookmarklets.htm](https://github.com/iterami/Bookmarklets.htm)
-* [iterami/Documentation.htm](https://github.com/iterami/Documentation.htm)
+* [iterami/Docs.htm](https://github.com/iterami/Docs.htm)
 * [iterami/Guides.htm](https://github.com/iterami/Guides.htm)
 
 ---

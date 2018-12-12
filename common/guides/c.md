@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/common) C Documentation
--------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/common) C Docs
+----------------------------------------------------------
 
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)
@@ -8,15 +8,15 @@
 
 ### Files Used
 * `c`:
-  * [`core.c` and `core.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/core.md): used by every C project.
-  * [`gtk.c` and `gtk.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/gtk.md): used by every GTK+ 3 project and every OpenGL project.
-  * [`json.c`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/json.md): used by every OpenGL project and by projects that require JSON parsing.
-  * [`math.c` and `math.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/math.md): used by every OpenGL project and some non-OpenGL projects.
-  * [`opengl.c` and `opengl.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/opengl.md): used by every OpenGL project.
-  * [`random.c` and `random.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/random.md): used by projects that need randomization.
-  * [`sort.c` and `sort.h`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/c/sort.md): used by projects that need to sort values.
+  * [`core.c` and `core.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/core.md): used by every C project.
+  * [`gtk.c` and `gtk.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/gtk.md): used by every GTK+ 3 project and every OpenGL project.
+  * [`json.c`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/json.md): used by every OpenGL project and by projects that require JSON parsing.
+  * [`math.c` and `math.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/math.md): used by every OpenGL project and some non-OpenGL projects.
+  * [`opengl.c` and `opengl.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/opengl.md): used by every OpenGL project.
+  * [`random.c` and `random.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/random.md): used by projects that need randomization.
+  * [`sort.c` and `sort.h`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/c/sort.md): used by projects that need to sort values.
 * `css`:
-  * [`gtk.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/gtk.md): contains CSS to standardize GTK appearance.
+  * [`gtk.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/gtk.md): contains CSS to standardize GTK appearance.
 
 ---
 

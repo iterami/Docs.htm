@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/webgl.js
----------------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/webgl.js
+------------------------------------------------------------------------------------------------
 
 * [`webgl_attach(args)`](#webgl_attachargs)
 * [`webgl_billboard(args)`](#webgl_billboardargs)
@@ -447,7 +447,7 @@ target    | 'exported' | string ID
 ---
 
 ### `webgl_level_init(args)`
-* Creates a level from a parsed (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
+* Creates a level from a parsed (https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
 Arg       | Default | Type
 ----------|---------|------------------------
@@ -457,7 +457,7 @@ json      | false   | boolean false or object
 ---
 
 ### `webgl_level_load(args)`
-* Parses a (https://github.com/iterami/Documentation.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
+* Parses a (https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
 Arg       | Default | Type
 ----------|---------|------------------------

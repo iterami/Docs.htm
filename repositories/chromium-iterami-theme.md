@@ -1,5 +1,5 @@
-[iterami/Chromium-iterami-Theme](https://github.com/iterami/Chromium-iterami-Theme) Documentation
--------------------------------------------------------------------------------------------------
+[iterami/Chromium-iterami-Theme](https://github.com/iterami/Chromium-iterami-Theme) Docs
+----------------------------------------------------------------------------------------
 
 Load `Chromium-iterami-Theme` by:
 * `git clone https://github.com/iterami/Chromium-iterami-Theme.git`

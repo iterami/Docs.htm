@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/c/sort.c
-------------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/c/sort.c
+---------------------------------------------------------------------------------------------
 
 * ['int sort_compare_ints_asc(const void* a, const void* b)`](#int-sort_compare_ints_ascconst-void-a-const-void-b)
 * ['int sort_compare_ints_desc(const void* a, const void* b)`](#int-sort_compare_ints_descconst-void-a-const-void-b)

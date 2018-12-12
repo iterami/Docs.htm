@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/README.md)/js/core.js
---------------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/core.js
+-----------------------------------------------------------------------------------------------
 
 * [`core_ajax(args)`](#core_ajaxargs)
 * [`core_args(args)`](#core_argsargs)

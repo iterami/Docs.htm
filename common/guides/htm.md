@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/common) HTM Documentation
----------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/common) HTM Docs
+------------------------------------------------------------
 
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)
@@ -9,23 +9,23 @@
 
 ### Files Used
 * `css`:
-  * [`canvas.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas HTM projects.
-  * [`core.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/core.md): used by every HTM project on every non-text-only page.
-  * [`dom.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/dom.md): used by HTM projects that use buttons to simulate a canvas.
-  * [`writings.css`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/css/writings.md): used by HTM projects on text-only pages.
+  * [`canvas.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas HTM projects.
+  * [`core.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/core.md): used by every HTM project on every non-text-only page.
+  * [`dom.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/dom.md): used by HTM projects that use buttons to simulate a canvas.
+  * [`writings.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/writings.md): used by HTM projects on text-only pages.
 * `js`:
-  * [`canvas.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas HTM projects.
-  * [`core.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
-  * [`data.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities for HTM projects.
-  * [`uri.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/uri.md): used by HTM projects that require various data URIs.
-  * [`webgl.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas HTM projects.
+  * [`canvas.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas HTM projects.
+  * [`core.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
+  * [`data.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities for HTM projects.
+  * [`uri.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/uri.md): used by HTM projects that require various data URIs.
+  * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas HTM projects.
 
 ---
 
 ### Recommended Project File Structure
 * `js`: directory containing JavaScript files.
   * `data.js`: contains repository-specific code, such as levels or custom functions.
-  * [`main.js`](https://github.com/iterami/Documentation.htm/blob/gh-pages/common/js/main.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
+  * [`main.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/main.md): main project JavaScript file, which only contains functions defined by `iterami/common`.
 * `404.htm`: handles 404 errors for GitHub Pages repositories.
 * `index.htm`: the page on which your project resides.
 * `LICENSE.md`: contains license information about your project.

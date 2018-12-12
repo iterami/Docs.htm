@@ -1,5 +1,5 @@
-[iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk) Documentation
----------------------------------------------------------------------------------------------
+[iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk) Docs
+------------------------------------------------------------------------------------
 
 * [Shortcuts](#shortcuts)
 * [Installation](#installation)

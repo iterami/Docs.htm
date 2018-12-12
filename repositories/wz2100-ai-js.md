@@ -1,5 +1,5 @@
-[iterami/WZ2100-AI.js](https://github.com/iterami/WZ2100-AI.js) Documentation
------------------------------------------------------------------------------
+[iterami/WZ2100-AI.js](https://github.com/iterami/WZ2100-AI.js) Docs
+--------------------------------------------------------------------
 
 * Each AI does not vary by difficulty and always follows the same build order.
 * Cheats are not used.
