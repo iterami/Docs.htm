@@ -22,7 +22,7 @@ Ctrl + Q         | Quit
 2. `sudo apt-get install libgtk-3-dev`
 3. `git clone https://github.com/iterami/common.git` into the same directory as `EVETools.gtk`.
 4. Use your terminal to navigate to the `EVETools.gtk` directory and `make` it.
-5. Run the compiled `evetools` located at `~/.iterami/evetools`.
+5. Run the compiled `~/.iterami/evetools`.
 
 ---
 
@@ -31,7 +31,7 @@ Ctrl + Q         | Quit
 1. Close `EVETools.gtk`.
 2. `git pull` the `common` and `EVETools.gtk` repositories that you cloned.
 3. Use your terminal to navigate to the `EVETools.gtk` directory and `make` it.
-4. Run the compiled `evetools` located at `~/.iterami/evetools`.
+4. Run the compiled `~/.iterami/evetools`.
 
 ---
 

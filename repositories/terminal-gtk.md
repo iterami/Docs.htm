@@ -22,7 +22,7 @@ Ctrl + Q         | Quit
 2. `sudo apt-get install libgtk-3-dev`
 3. `git clone https://github.com/iterami/common.git` into the same directory as `Terminal.gtk`.
 4. Use your terminal to navigate to the `Terminal.gtk` directory and `make` it.
-5. Run the compiled `terminal` located at `~/.iterami/terminal`.
+5. Run the compiled `~/.iterami/terminal`.
 
 ---
 
@@ -31,7 +31,7 @@ Ctrl + Q         | Quit
 1. Close `Terminal.gtk`.
 2. `git pull` the `common` and `Terminal.gtk` repositories that you cloned.
 3. Use your terminal to navigate to the `Terminal.gtk` directory and `make` it.
-4. Run the compiled `terminal` located at `~/.iterami/terminal`.
+4. Run the compiled `~/.iterami/terminal`.
 
 ---
 

@@ -54,7 +54,7 @@ Insert           | Toggle Overwrite
 2. `sudo apt-get install libgtk-3-dev`
 3. `git clone https://github.com/iterami/common.git` into the same directory as `TextEditor.gtk`.
 4. Use your terminal to navigate to the `TextEditor.gtk` directory and `make` it.
-5. Run the compiled `texteditor` located at `~/.iterami/texteditor`.
+5. Run the compiled `~/.iterami/texteditor`.
 
 ---
 
@@ -63,7 +63,7 @@ Insert           | Toggle Overwrite
 1. Close `TextEditor.gtk`.
 2. `git pull` the `common` and `TextEditor.gtk` repositories that you cloned.
 3. Use your terminal to navigate to the `TextEditor.gtk` directory and `make` it.
-4. Run the compiled `texteditor` located at `~/.iterami/texteditor`.
+4. Run the compiled `~/.iterami/texteditor`.
 
 ---
 

@@ -29,7 +29,7 @@ W                | Move Camera Forward
 2. `sudo apt-get install libglew-dev libgtk-3-dev`
 3. `git clone https://github.com/iterami/common.git` into the same directory as `MultiverseEditor.gtk`.
 4. Use your terminal to navigate to the `MultiverseEditor.gtk` directory and `make` it.
-5. Run the compiled `multiverseeditor` located at `~/.iterami/multiverseeditor`.
+5. Run the compiled `~/.iterami/multiverseeditor`.
 
 ---
 
@@ -38,7 +38,7 @@ W                | Move Camera Forward
 1. Close `MultiverseEditor.gtk`.
 2. `git pull` the `common` and `MultiverseEditor.gtk` repositories that you cloned.
 3. Use your terminal to navigate to the `MultiverseEditor.gtk` directory and `make` it.
-4. Run the compiled `multiverseeditor` located at `~/.iterami/multiverseeditor`.
+4. Run the compiled `~/.iterami/multiverseeditor`.
 
 ---
 
