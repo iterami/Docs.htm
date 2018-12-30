@@ -228,6 +228,7 @@ left-collision       | false         | boolean
 left-vertex-colors   | false         | boolean false or array of numbers
 length               | 1             | number
 prefix               | core_id_count | number or string
+properties           | {}            | object
 right-alpha          | 1             | number
 right-collision      | false         | boolean
 right-vertex-colors  | false         | boolean false or array of numbers
