@@ -581,7 +581,7 @@ shaders |         | object
 
 ### `webgl_resize()`
 * Handles resizing the canvas to current window proportions.
-* Resets canvas and WebGL properties that are lost upon resize, including resetting the perspective matrix.
+* Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
 
 ---
 

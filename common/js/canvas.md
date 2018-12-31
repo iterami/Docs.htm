@@ -16,14 +16,14 @@
 ---
 
 ### `canvas_attach(args)`
-* Used to attach 1 entity to another entity and share a position with optional offset.
+* Used to attach an entity to another entity and share a position with optional offset.
 
-Arg      | Required? | Notes
----------|-----------|-----------------------------------------
-base     | true      | ID of the entity being attached to.
-entity   | true      | ID of the entity that is being attached.
-offset-x | false     | Number of pixels of x-axis offset.
-offset-y | false     | Number of pixels of y-axis offset.
+Arg      | Default | Type
+---------|---------|----------
+base     |         | string ID
+entity   |         | string ID
+offset-x | 0       | number
+offset-y | 0       | number
 
 ---
 
@@ -42,36 +42,37 @@ offset-y | false     | Number of pixels of y-axis offset.
 ### `canvas_draw_path(args)`
 * Draws interesting things with various properties, such as polygons and spheres.
 
-Arg        | Required? | Notes
------------|-----------|------
-properties | false     |
-style      | false     |
-type       | false     |
-vertices   | true      |
-x          | false     |
-y          | false     |
+Arg        | Default                    | Type
+-----------|----------------------------|--------
+properties | {}                         | object
+style      | canvas_properties['style'] | string
+translate  | false                      | boolean
+type       | 'lineTo'                   | string
+vertices   |                            | array
+x          | 0                          | number
+y          | 0                          | number
 
 ---
 
 ### `canvas_gradient(args)`
 * Returns a gradient that can be used as a `fillStyle`.
 
-Arg    | Required? | Notes
--------|-----------|------
-height | false     |
-stops  | true      |
-width  | false     |
-x      | false     |
-y      | false     |
+Arg    | Default | Type
+-------|---------|-------
+height | 0       | number
+stops  |         | array
+width  | 0       | number
+x      | 0       | number
+y      | 0       | number
 
 ---
 
 ### `canvas_init(args)`
 * Sets up various aspects of projects that use full screen canvases.
 
-Arg         | Required? | Notes
-------------|-----------|------
-contextmenu | false     |
+Arg         | Default | Type
+------------|---------|--------
+contextmenu | true    | boolean
 
 ---
 
@@ -88,23 +89,23 @@ contextmenu | false     |
 
 ### `canvas_resize()`
 * Handles resizing the canvas to current window proportions.
-* Resets canvas properties that are lost upon resize.
+* Resets canvas properties that may have been lost upon resize.
 
 ---
 
 ### `canvas_setmode(args)`
 * Mode reset and mode content loading function.
 
-Arg     | Required? | Notes
---------|-----------|------
-mode    | false     |
-newgame | false     |
+Arg     | Default | Type
+--------|---------|--------
+mode    | 0       | number
+newgame | false   | boolean
 
 ---
 
 ### `canvas_setproperties(args)`
-* Sets and stores canvas properties that can be found in `canvas_init()`.
+* Sets and stores canvas properties in `window.canvas_properties`.
 
-Arg        | Required? | Notes
------------|-----------|------
-properties | true      |
+Arg        | Default | Type
+-----------|---------|-------
+properties |         | object
