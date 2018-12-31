@@ -95,6 +95,7 @@
           1, 1, 1, 1
         ],
         "length": 1,
+        "properties": {},
         "right-alpha": 1,
         "right-collision": false,
         "right-vertex-colors": [
@@ -397,6 +398,9 @@
 
         // Optional. Length of the cuboid along the z-axis.
         "length": 1,
+
+        // Optional. Additional properties that are applied to each entity created by this prefab.
+        "properties": {},
 
         // Optional. Properties for the +x face.
         "right-alpha": 1,
