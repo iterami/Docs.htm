@@ -46,6 +46,7 @@
 * [`webgl_program_create(args)`](#webgl_program_createargs)
 * [`webgl_resize()`](#webgl_resize)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
+* [`webgl_shader_recreate()`](#webgl_shader_recreate)
 * [`webgl_shader_update()`](#webgl_shader_update)
 * [`webgl_skybox(args)`](#webgl_skyboxargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
@@ -595,8 +596,15 @@ type   |         | webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
 
 ---
 
+### `webgl_shader_recreate()`
+* Deletes the current shader program, if one exists.
+* Creates the fragment and vertex shaders.
+* Sets up the shader program and uniform locations.
+
+---
+
 ### `webgl_shader_update()`
-* Recreate the shaders with updated customization values.
+* Updates the shader uniform values.
 
 ---
 
