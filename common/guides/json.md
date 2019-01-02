@@ -124,7 +124,7 @@
   "directional-green": 1,
   "directional-red": 1,
   "directional-state": true,
-  "directional-vector": "0, 1, 0",
+  "directional-vector": [0, 1, 0],
   "fog-density": 0.0001,
   "fog-state": false,
   "gravity-acceleration": -0.05,
@@ -441,9 +441,9 @@
   "directional-green": 1,
   "directional-red": 1,
 
-  // Optional. If directional lighting is enabled and which vector it is going.
+  // Optional. If directional lighting is enabled and its vector.
   "directional-state": true,
-  "directional-vector": "0, 1, 0",
+  "directional-vector": [0, 1, 0],
 
   // Optional. Fog density and if fog is enabled.
   "fog-density": 0.0001,
