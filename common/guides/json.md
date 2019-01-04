@@ -205,7 +205,8 @@
       "spawn-interval-max": 100,
       "speed": 0.2,
       "texture-id": "default.png",
-      "texture-repeat": 1,
+      "texture-repeat-x": 1,
+      "texture-repeat-y": 1,
       "translate-x": 0,
       "translate-y": -1,
       "translate-z": 0,
@@ -598,7 +599,8 @@
       "texture-id": "default.png",
 
       // Optional. How many times the texture will repeat.
-      "texture-repeat": 1,
+      "texture-repeat-x": 1,
+      "texture-repeat-y": 1,
 
       // Optional. Translation of entity relative to `0, 0, 0`.
       "translate-x": 0,
