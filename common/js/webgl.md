@@ -640,18 +640,18 @@ texture | '_texture-default' | string ID
 
 ### `webgl_vertexattribarray_set(args)`
 
-Arg        | Default            | Type
------------|--------------------|--------------
-attributes |                    | array
-program    |                    | WebGL program
+Arg        | Default | Type
+-----------|---------|--------------
+attributes |         | array
+program    |         | WebGL program
 
 ---
 
 ### `webgl_vertexcolorarray(args)`
 * Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
 
-Arg           | Default            | Type
---------------|--------------------|-----------------
-random-colors | false              | boolean
-rgbarray      | []                 | array of numbers
-vertexcount   | 4                  | number
+Arg           | Default | Type
+--------------|---------|-----------------
+random-colors | false   | boolean
+rgbarray      | []      | array of numbers
+vertexcount   | 4       | number

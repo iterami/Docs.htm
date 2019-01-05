@@ -9,7 +9,6 @@
 ### `repo_escape()`
 * Optional function to run additional code when [`core_escape()`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/core.md#core_escape) is called.
 
-
 ---
 
 ### `repo_init()`

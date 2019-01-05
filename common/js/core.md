@@ -391,11 +391,11 @@ ids |         | array of strings
 ### `core_group_modify(args)`
 * Runs code that affects every entity within a group.
 
-Arg     | Default         | Type
---------|-----------------|--------------------------
-groups  |                 | array of string IDs
-pretodo | false           | boolean false or function
-todo    |                 | function
+Arg     | Default | Type
+--------|---------|--------------------------
+groups  |         | array of string IDs
+pretodo | false   | boolean false or function
+todo    |         | function
 
 ---
 
