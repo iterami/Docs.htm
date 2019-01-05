@@ -96,6 +96,7 @@
         ],
         "length": 1,
         "properties": {},
+        "random-colors": false,
         "right-alpha": 1,
         "right-collision": false,
         "right-vertex-colors": [
@@ -402,6 +403,9 @@
 
         // Optional. Additional properties that are applied to each entity created by this prefab.
         "properties": {},
+
+        // Optional. If this prefab should use random colors or 255,255,255.
+        "random-colors": false,
 
         // Optional. Properties for the +x face.
         "right-alpha": 1,

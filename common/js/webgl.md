@@ -230,6 +230,7 @@ left-vertex-colors   | false         | boolean false or array of numbers
 length               | 1             | number
 prefix               | core_id_count | number or string
 properties           | {}            | object
+random-colors        | false         | boolean
 right-alpha          | 1             | number
 right-collision      | false         | boolean
 right-vertex-colors  | false         | boolean false or array of numbers
@@ -616,6 +617,7 @@ Arg                 | Default | Type
 bottom-color-bottom | false   | boolean false or array of numbers
 bottom-color-top    | false   | boolean false or array of numbers
 prefix              |         | string ID
+random-colors       | false   | boolean
 rotate-x            | 0       | number
 rotate-y            | 0       | number
 rotate-z            | 0       | number
@@ -648,7 +650,8 @@ program    |                    | WebGL program
 ### `webgl_vertexcolorarray(args)`
 * Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
 
-Arg         | Default            | Type
-------------|--------------------|-----------------
-rgbarray    | []                 | array of numbers
-vertexcount | 4                  | number
+Arg           | Default            | Type
+--------------|--------------------|-----------------
+random-colors | false              | boolean
+rgbarray      | []                 | array of numbers
+vertexcount   | 4                  | number
