@@ -182,7 +182,7 @@
       "collide-range-horizontal": 2.5,
       "collide-range-vertical": 2.5,
       "collides": false,
-      "collision": false,
+      "collision": true,
       "draw": true,
       "draw-type": "TRIANGLE_STRIP",
       "gravity": false,
@@ -545,7 +545,7 @@
       },
 
       // Optional. If this entity collides with other entities that have collision.
-      "collides": false,
+      "collides": true,
 
       // Optional. How much damage is done to characters when collision occurs.
       "collide-damage": 0,

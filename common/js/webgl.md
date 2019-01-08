@@ -250,8 +250,8 @@ width                | 1             | number
 
 Arg                  | Default | Type
 ---------------------|---------|-----------------
-collision-leaves     | false   | boolean
-collision-trunk      | false   | boolean
+collision-leaves     | true    | boolean
+collision-trunk      | true    | boolean
 height-leaves        | 10      | number
 height-trunk         | 10      | number
 length-leaves        | 10      | number
