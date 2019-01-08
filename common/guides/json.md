@@ -17,11 +17,11 @@
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
+  "camera-zoom-max": 50,
   "characters": [
     {
       "id": "_me",
-      "camera-zoom-current": 20,
-      "camera-zoom-max": 50,
+      "camera-zoom": 20,
       "change": {
         "rotate-y": 0,
         "translate-x": 0
@@ -253,6 +253,10 @@
   "ambient-green": 1,
   "ambient-red": 1,
 
+  // Optional. Maximum camera zoom.
+  // When 0, characters are forced into first-person mode.
+  "camera-zoom-max": 50,
+
   // Optional. "characters" that is array of objects.
   //   Set to false to create no new characters.
   "characters": [
@@ -264,10 +268,9 @@
       "all-collision": true,
       "all-vertex-colors": false,
 
-      // Optional. Camera zoom current and max.
-      // When current is 0, camera is in first person mode.
-      "camera-zoom-current": 20,
-      "camera-zoom-max": 50,
+      // Optional. Current camera zoom value.
+      // When 0, camera is in first-person mode.
+      "camera-zoom": 20,
 
       // Optional. Amount that any character property should change by when the character is updated.
       // Player translations are reset after each movement to allow stopping.

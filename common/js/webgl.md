@@ -344,6 +344,7 @@ Arg                  | Default   | Type
 ambient-blue         | 1         | number
 ambient-green        | 1         | number
 ambient-red          | 1         | number
+camera-zoom-max      | 50        | number
 clearcolor-blue      | 0         | number
 clearcolor-green     | 0         | number
 clearcolor-red       | 0         | number
@@ -373,30 +374,29 @@ spawn-translate-z    | 0         | number
 ### `webgl_init_character(args)`
 * Sets up the character and camera.
 
-Arg                      | Default            | Type
--------------------------|--------------------|------------------------
-camera-zoom-current      | 20                 | number
-camera-zoom-max          | 50                 | number
-change                   | {}                 | object
-collide-range-horizontal | 2                  | number
-collide-range-vertical   | 3                  | number
-collides                 | true               | boolean
-entities                 | []                 | array of objects
-experience               | 0                  | number
-health-current           | 100                | number
-health-max               | 100                | number
-id                       | webgl_character_id | string ID
-jump-height              | .6                 | number
-level                    | -1                 | number >= -1
-rotate-x                 | 0                  | number
-rotate-y                 | 0                  | number
-rotate-z                 | 0                  | number
-speed                    | .2                 | number
-talk                     | false              | boolean false or string
-trade                    | []                 | array
-translate-x              | 0                  | number
-translate-y              | 0                  | number
-translate-z              | 0                  | number
+Arg                      | Default                             | Type
+-------------------------|-------------------------------------|------------------------
+camera-zoom              | webgl_properties['camera-zoom-max'] | number
+change                   | {}                                  | object
+collide-range-horizontal | 2                                   | number
+collide-range-vertical   | 3                                   | number
+collides                 | true                                | boolean
+entities                 | []                                  | array of objects
+experience               | 0                                   | number
+health-current           | 100                                 | number
+health-max               | 100                                 | number
+id                       | webgl_character_id                  | string ID
+jump-height              | .6                                  | number
+level                    | -1                                  | number >= -1
+rotate-x                 | 0                                   | number
+rotate-y                 | 0                                   | number
+rotate-z                 | 0                                   | number
+speed                    | .2                                  | number
+talk                     | false                               | boolean false or string
+trade                    | []                                  | array
+translate-x              | 0                                   | number
+translate-y              | 0                                   | number
+translate-z              | 0                                   | number
 
 ---
 
