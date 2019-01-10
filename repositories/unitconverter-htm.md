@@ -569,6 +569,7 @@ fluid dram              | fl dr | 1 / .0035516328125
 fluid dram (US)         | fl dr | 1 / .0036966911953125
 fluid ounce (imperial)  | fl oz | 35.1950652
 fluid ounce (US)        | fl oz | 33.8140227
+fluid scruple           | ℈     | 1 / 1.23
 gallon (imperial)       | gal   | 1 / 4.546094188
 gallon (US)             | gal   | 1 / 3.785411784
 garce (India)           |       | 1 / 5244
