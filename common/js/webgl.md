@@ -223,24 +223,24 @@ front-alpha          | 1             | number
 front-collision      | false         | boolean
 front-vertex-colors  | false         | boolean false or array of numbers
 groups               | []            | array of string IDs
-height               | 1             | number
 left-alpha           | 1             | number
 left-collision       | false         | boolean
 left-vertex-colors   | false         | boolean false or array of numbers
-length               | 1             | number
 prefix               | core_id_count | number or string
 properties           | {}            | object
 random-colors        | false         | boolean
 right-alpha          | 1             | number
 right-collision      | false         | boolean
 right-vertex-colors  | false         | boolean false or array of numbers
+size-x               | 1             | number
+size-y               | 1             | number
+size-z               | 1             | number
 top-alpha            | 1             | number
 top-collision        | false         | boolean
 top-vertex-colors    | false         | boolean false or array of numbers
 translate-x          | 0             | number
 translate-y          | 0             | number
 translate-z          | 0             | number
-width                | 1             | number
 
 ---
 
@@ -252,18 +252,18 @@ Arg                  | Default | Type
 ---------------------|---------|-----------------
 collision-leaves     | true    | boolean
 collision-trunk      | true    | boolean
-height-leaves        | 10      | number
-height-trunk         | 10      | number
-length-leaves        | 10      | number
-length-trunk         | 2       | number
+leaves-size-x        | 10      | number
+leaves-size-y        | 10      | number
+leaves-size-z        | 10      | number
 prefix               |         | number or string
 translate-x          | 0       | number
 translate-y          | 0       | number
 translate-z          | 0       | number
+trunk-size-x         | 2       | number
+trunk-size-y         | 10      | number
+trunk-size-z         | 2       | number
 vertex-colors-leaves | array[] | array of numbers
 vertex-colors-trunk  | array[] | array of numbers
-width-leaves         | 10      | number
-width-trunk          | 2       | number
 
 ---
 

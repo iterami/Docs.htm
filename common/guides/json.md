@@ -85,7 +85,6 @@
           1, 1, 1, 1,
           1, 1, 1, 1
         ],
-        "height": 1,
         "left-alpha": 1,
         "left-collision": false,
         "left-vertex-colors": [
@@ -94,7 +93,6 @@
           1, 1, 1, 1,
           1, 1, 1, 1
         ],
-        "length": 1,
         "properties": {},
         "random-colors": false,
         "right-alpha": 1,
@@ -105,6 +103,9 @@
           1, 1, 1, 1,
           1, 1, 1, 1
         ],
+        "size-x": 1,
+        "size-y": 1,
+        "size-z": 1,
         "top-alpha": 1,
         "top-collision": false,
         "top-vertex-colors": [
@@ -115,9 +116,7 @@
         ],
         "translate-x": 0,
         "translate-y": 0,
-        "translate-z": 0,
-        "tree": false,
-        "width": 1
+        "translate-z": 0
       }
     }
   ],
@@ -388,9 +387,6 @@
           1, 1, 1, 1
         ],
 
-        // Optional. Height of the cuboid along the y-axis.
-        "height": 1,
-
         // Optional. Properties for the -x face.
         "left-alpha": 1,
         "left-collision": false,
@@ -400,9 +396,6 @@
           1, 1, 1, 1,
           1, 1, 1, 1
         ],
-
-        // Optional. Length of the cuboid along the z-axis.
-        "length": 1,
 
         // Optional. Additional properties that are applied to each entity created by this prefab.
         "properties": {},
@@ -420,6 +413,11 @@
           1, 1, 1, 1
         ],
 
+        // Optional. Size of the cuboid.
+        "size-x": 1,
+        "size-y": 1,
+        "size-z": 1,
+
         // Optional. Properties for the +y face.
         "top-alpha": 1,
         "top-collision": false,
@@ -433,13 +431,7 @@
         // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
         "translate-x": 0,
         "translate-y": 0,
-        "translate-z": 0,
-
-        // Optional. If this cuboid represents a `webgl_cuboid_tree()`.
-        "tree": false,
-
-        // Optional. Width of the cuboid along the x-axis.
-        "width": 1
+        "translate-z": 0
       }
     }
   ],
