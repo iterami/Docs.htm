@@ -142,6 +142,7 @@
       "end": 1,
       "points": [
         {
+          "speed": 2,
           "translate-x": 0,
           "translate-y": 0,
           "translate-z": 0
@@ -474,6 +475,9 @@
       // Required. Path waypoints in order.
       "points": [
         {
+          // Optional. Speed multiplier when entities are approaching this point.
+          "speed": 2,
+
           // Optional. Waypoint translation. Leave absent to use current translation of that axis.
           "translate-x": 0,
           "translate-y": 0,
