@@ -26,6 +26,7 @@
 * [`webgl_entity_move_to(args)`](#webgl_entity_move_toargs)
 * [`webgl_entity_radians(args)`](#webgl_entity_radiansargs)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
+* [`webgl_extension(args)`](#webgl_extensionargs)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_item_equip(args)`](#webgl_item_equipargs)
@@ -333,6 +334,17 @@ entity    |         | string ID
 
 ### `webgl_entity_todo(entity)`
 * Function called upon entity creation for optimization purposes.
+
+---
+
+### `webgl_extension(args)`
+* Attempts to get a WebGL extension based on the supplied `id` arg.
+* If the extension is available, it gets added to `window.webgl_extensions`.
+* Returns a boolean indicating if the extension is available or not.
+
+Arg | Default | Type
+----|---------|----------
+id  |         | string ID
 
 ---
 
