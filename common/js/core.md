@@ -791,9 +791,9 @@ radians    |                               | number
 ### `core_random_boolean(args)`
 * Returns a random boolean with optional probability manipulation.
 
-Arg     | Default                    | Type
---------|----------------------------|--------
-chance  | core_random_boolean_chance | boolean
+Arg     | Default | Type
+--------|---------|--------
+chance  | .5      | boolean
 
 ---
 
@@ -805,10 +805,10 @@ chance  | core_random_boolean_chance | boolean
 ### `core_random_integer(args)`
 * Generates a random integer in a range.
 
-Arg  | Default                 | Type
------|-------------------------|--------
-max  | core_random_integer_max | boolean
-todo | 'floor'                 | string
+Arg  | Default | Type
+-----|---------|--------
+max  | 100     | boolean
+todo | 'floor' | string
 
 ---
 
@@ -838,10 +838,10 @@ multiplier | 1       | number
 ### `core_random_string(args)`
 * Returns a random string from a string of available characters.
 
-Arg        | Default                       | Type
------------|-------------------------------|-------
-characters | core_random_string_characters | string
-length     | core_random_string_length     | number
+Arg        | Default                                                          | Type
+-----------|------------------------------------------------------------------|-------
+characters | '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' | string
+length     | 100                                                              | number
 
 ---
 
