@@ -339,12 +339,13 @@ entity    |         | string ID
 
 ### `webgl_extension(args)`
 * Attempts to get a WebGL extension based on the supplied `id` arg.
-* If the extension is available, it gets added to `window.webgl_extensions`.
+* If the extension is available, it gets added to `window.webgl_extensions` using the `label` arg.
 * Returns a boolean indicating if the extension is available or not.
 
-Arg | Default | Type
-----|---------|----------
-id  |         | string ID
+Arg   | Default    | Type
+------|------------|----------
+id    |            | string ID
+label | args['id'] | string ID
 
 ---
 
