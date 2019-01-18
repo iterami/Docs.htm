@@ -117,12 +117,14 @@
 ### `core_ajax(args)`
 * Initiates and handles AJAX requests.
 
-Arg  | Default                      | Type
------|------------------------------|---------
-data | core_ajax_properties['data'] |
-todo |                              | function
-type | core_ajax_properties['type'] | string
-url  |                              | string
+Arg        | Default | Type
+-----------|---------|---------
+data       | null    |
+readyState | 4       | number
+status     | 200     | number
+todo       |         | function
+type       | 'GET'   | string
+url        |         | string
 
 ---
 
