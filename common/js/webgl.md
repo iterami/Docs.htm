@@ -406,6 +406,7 @@ rotate-y                 | 0                  | number
 rotate-z                 | 0                  | number
 speed                    | .2                 | number
 talk                     | false              | boolean false or string
+talk-range               | 15                 | number
 trade                    | []                 | array
 translate-x              | 0                  | number
 translate-y              | 0                  | number

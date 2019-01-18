@@ -41,6 +41,7 @@
       "rotate-z": 0,
       "speed": 0.2,
       "talk": false,
+      "talk-range": 15,
       "trade": [],
       "translate-x": 0,
       "translate-y": 0,
@@ -315,8 +316,9 @@
       // Optional. Character movement speed.
       "speed": 0.2,
 
-      // Optional. Text said by the character when the player gets close.
+      // Optional. Text said by the character when the player within range
       "talk": false,
+      "talk-range": 15,
 
       // Optional. Item trades that this character can do if the player gets close.
       "trade": [],
