@@ -98,7 +98,6 @@
 * [`core_storage_element_property(args)`](#core_storage_element_propertyargs)
 * [`core_storage_reset()`](#core_storage_reset)
 * [`core_storage_save()`](#core_storage_save)
-* [`core_storage_type_convert(args)`](#core_storage_type_convertargs)
 * [`core_storage_update()`](#core_storage_update)
 * [`core_tab_create(args)`](#core_tab_createargs)
 * [`core_tab_switch(args)`](#core_tab_switchargs)
@@ -109,6 +108,7 @@
 * [`core_time_timestamp_to_date(args)`](#core_timestamp_to_dateargs)
 * [`core_time_two_digits(args)`](#core_two_digitsargs)
 * [`core_type(args)`](#core_typeargs)
+* [`core_type_convert(args)`](#core_type_convertargs)
 * [`core_ui_update(args)`](#core_ui_updateargs)
 * [`core_uri(args)`](#core_uriargs)
 
@@ -1000,16 +1000,6 @@ key     |         | string
 
 ---
 
-### `core_storage_type_convert(args)`
-* Converts variable types depending on storage value type.
-
-Arg   | Default | Type
-------|---------|-------
-key   |         | string
-value |         | any
-
----
-
 ### `core_storage_update()`
 * Updates settings inputs with current storage values.
 
@@ -1097,6 +1087,16 @@ Arg  | Default    | Type
 -----|------------|-------
 type | 'function' | string
 var  |            | any
+
+---
+
+### `core_type_convert(args)`
+* Converts variable depending on template variable type.
+
+Arg      | Default | Type
+---------|---------|-----
+template |         | any
+value    |         | any
 
 ---
 
