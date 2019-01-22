@@ -116,6 +116,7 @@ Arg       | Default | Type
 ----------|---------|--------
 camera    | true    | boolean
 character | true    | boolean
+set       | false   | boolean
 x         | 0       | number
 xlock     | true    | boolean
 y         | 0       | number
