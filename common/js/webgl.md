@@ -46,6 +46,7 @@
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
 * [`webgl_resize()`](#webgl_resize)
+* [`webgl_settings_init()`](#webgl_settings_init)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_recreate()`](#webgl_shader_recreate)
 * [`webgl_shader_update()`](#webgl_shader_update)
@@ -599,6 +600,12 @@ shaders |         | object
 ### `webgl_resize()`
 * Handles resizing the canvas to current window proportions.
 * Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
+
+---
+
+### `webgl_settings_init()`
+* Adds a `WebGL` settings tab to the `core-menu` group.
+* Must be called directly after `core_repo_init()`.
 
 ---
 
