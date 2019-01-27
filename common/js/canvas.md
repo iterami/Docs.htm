@@ -1,6 +1,7 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/canvas.js
 -------------------------------------------------------------------------------------------------
 
+* [Globals](#globals)
 * [`canvas_attach(args)`](#canvas_attachargs)
 * [`canvas_draw()`](#canvas_draw)
 * [`canvas_drawloop()`](#canvas_drawloop)
@@ -12,6 +13,16 @@
 * [`canvas_resize()`](#canvas_resize)
 * [`canvas_setmode(args)`](#canvas_setmodeargs)
 * [`canvas_setproperties(args)`](#canvas_setpropertiesargs)
+
+---
+
+### Globals
+
+Global            | Default | Type
+------------------|---------|--------------------------------------
+canvas_buffer     | 0       | placeholder, CanvasRenderingContext2D
+canvas_canvas     | 0       | placeholder, CanvasRenderingContext2D
+canvas_properties | {}      | object
 
 ---
 

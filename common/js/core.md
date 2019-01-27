@@ -1,6 +1,7 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/core.js
 -----------------------------------------------------------------------------------------------
 
+* [Globals](#globals)
 * [`core_ajax(args)`](#core_ajaxargs)
 * [`core_args(args)`](#core_argsargs)
 * [`core_audio_create(args)`](#core_audio_createargs)
@@ -111,6 +112,40 @@
 * [`core_type_convert(args)`](#core_type_convertargs)
 * [`core_ui_update(args)`](#core_ui_updateargs)
 * [`core_uri(args)`](#core_uriargs)
+
+---
+
+### Globals
+
+Global                    | Default         | Type
+--------------------------|-----------------|----------------------
+core_audio                | {}              | object
+core_audio_context        | false           | boolean, AudioContext
+core_audio_sources        | {}              | object
+core_degree               | Math.PI / 180   | number
+core_entities             | {}              | object
+core_entity_info          | {}              | object
+core_entity_types_defualt | []              | array
+core_events               | {}              | object
+core_gamepads             | {}              | object
+core_groups               | {'_length': {}} | object
+core_id_count             | 0               | number
+core_images               | {}              | object
+core_intervals            | {}              | object
+core_key_rebinds          | {}              | object
+core_keys                 | {}              | object
+core_matrices             | {}              | object
+core_menu_block_events    | true            | boolean
+core_menu_open            | false           | boolean
+core_mode                 | 0               | number
+core_mouse                | {}              | object
+core_radian               | 180 / Math.PI   | number
+core_repo_title           | ''              | string
+core_storage_data         | {}              | object
+core_storage_info         | {}              | object
+core_tabs                 | {}              | object
+core_tau                  | Math.PI * 2     | number
+core_ui_values            | {}              | object
 
 ---
 

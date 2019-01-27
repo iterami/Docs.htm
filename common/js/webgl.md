@@ -1,6 +1,7 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/webgl.js
 ------------------------------------------------------------------------------------------------
 
+* [Globals](#globals)
 * [`webgl_attach(args)`](#webgl_attachargs)
 * [`webgl_billboard(args)`](#webgl_billboardargs)
 * [`webgl_buffer_set(args)`](#webgl_buffer_setargs)
@@ -54,6 +55,25 @@
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
+
+---
+
+### Globals
+
+Global                   | Default | Type
+-------------------------|---------|------------------------------------
+webgl_buffer             | 0       | placeholder, WebGL2RenderingContext
+webgl_canvas             | 0       | placeholder, WebGL2RenderingContext
+webgl_character_count    | 0       | number
+webgl_character_homebase | {}      | object
+webgl_character_id       | '_me'   | string ID
+webgl_character_trading  | ''      | string ID
+webgl_characters         | {}      | object
+webgl_diagonal           | 0       | number
+webgl_extensions         | {}      | object
+webgl_paths              | {}      | object
+webgl_properties         | {}      | object
+webgl_text               | {}      | object
 
 ---
 
