@@ -61,9 +61,9 @@
 ### Globals
 
 Global                   | Default | Type
--------------------------|---------|------------------------------------
+-------------------------|---------|--------------------------------------
 webgl_buffer             | 0       | placeholder, WebGL2RenderingContext
-webgl_canvas             | 0       | placeholder, WebGL2RenderingContext
+webgl_canvas             | 0       | placeholder, CanvasRenderingContext2D
 webgl_character_count    | 0       | number
 webgl_character_homebase | {}      | object
 webgl_character_id       | '_me'   | string ID
