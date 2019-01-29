@@ -1,18 +1,15 @@
 iterami/Docs.htm
 ----------------
 
-* Core Repositories:
-  * [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md):
-    * [C](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md)
-    * [HTM](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md)
-    * [JSON Level Format](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md)
-    * [CC0 License](https://github.com/iterami/common/blob/gh-pages/LICENSE.md)
-    * [Usage by iterami](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
-* Standards:
-  * [Contributing to iterami Repositories](https://github.com/iterami/Docs.htm/blob/gh-pages/CONTRIBUTING.md)
-  * [Issues](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/issues.md)
-  * [Pull Requests](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/pull-requests.md)
-  * [Repositories](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/repositories.md)
+* [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md):
+  * [C](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md)
+  * [HTM](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md)
+  * [JSON Level Format](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md)
+  * Tests:
+    * [core.js](https://iterami.com/Docs.htm/tests/common-core-js.htm)
+    * [uri.js](https://iterami.com/Docs.htm/tests/common-uri-js.htm)
+    * [webgl.js](https://iterami.com/Docs.htm/tests/common-webgl-js.htm)
+  * [Usage by iterami](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
 * Repositories:
   * [iterami/Chromium-iterami-DevTools](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-devtools.md)
   * [iterami/Chromium-iterami-Extension](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-extension.md)
@@ -27,8 +24,13 @@ iterami/Docs.htm
   * [iterami/UnitConverter.htm](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/unitconverter-htm.md)
   * [iterami/WebBrowser.gtk](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/webbrowser-gtk.md)
   * [iterami/WZ2100-AI.js](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/wz2100-ai-js.md)
-* GitHub:
-  * [GitHub Docs](https://github.com/iterami/Docs.htm/blob/gh-pages/github/README.md)
+* Standards:
+  * [Contributing to iterami Repositories](https://github.com/iterami/Docs.htm/blob/gh-pages/CONTRIBUTING.md)
+  * Languages:
+    * [HTM](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/htm.md)
+  * [Issues](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/issues.md)
+  * [Pull Requests](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/pull-requests.md)
+  * [Repositories](https://github.com/iterami/Docs.htm/blob/gh-pages/standards/repositories.md)
 
 ---
 
