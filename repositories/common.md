@@ -38,7 +38,9 @@
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk)
 * [iterami/random_number_test.gtk](https://github.com/iterami/random_number_test.gtk)
+* [iterami/Terminal.gtk](https://github.com/iterami/Terminal.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
+* [iterami/WebBrowser.gtk](https://github.com/iterami/WebBrowser.gtk)
 
 ---
 
@@ -47,7 +49,9 @@
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk)
 * [iterami/random_number_test.gtk](https://github.com/iterami/random_number_test.gtk)
+* [iterami/Terminal.gtk](https://github.com/iterami/Terminal.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
+* [iterami/WebBrowser.gtk](https://github.com/iterami/WebBrowser.gtk)
 
 ---
 
@@ -219,7 +223,9 @@
 * [iterami/FileBrowser.gtk](https://github.com/iterami/FileBrowser.gtk)
 * [iterami/MultiverseEditor.gtk](https://github.com/iterami/MultiverseEditor.gtk)
 * [iterami/random_number_test.gtk](https://github.com/iterami/random_number_test.gtk)
+* [iterami/Terminal.gtk](https://github.com/iterami/Terminal.gtk)
 * [iterami/TextEditor.gtk](https://github.com/iterami/TextEditor.gtk)
+* [iterami/WebBrowser.gtk](https://github.com/iterami/WebBrowser.gtk)
 
 ---
 
