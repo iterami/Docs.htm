@@ -11,8 +11,14 @@
 ### Shortcuts
 
 Shortcut         | Notes
------------------|------
+-----------------|-----------------------
 Ctrl + Q         | Quit
+Ctrl + Shift + + | Move Current Tab Right
+Ctrl + Shift + _ | Move Current Tab Left
+Ctrl + T         | New Tab
+Ctrl + W         | Close Tab
+Ctrl + =         | Next Tab
+Ctrl + -         | Previous Tab
 
 ---
 
