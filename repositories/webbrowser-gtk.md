@@ -13,6 +13,7 @@
 Shortcut         | Notes
 -----------------|-----------------------
 Ctrl + Q         | Quit
+Ctrl + R         | Reload
 Ctrl + Shift + + | Move Current Tab Right
 Ctrl + Shift + _ | Move Current Tab Left
 Ctrl + T         | New Tab
