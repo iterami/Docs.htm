@@ -12,14 +12,21 @@
 
 Shortcut         | Notes
 -----------------|-----------------------
+Backspace        | Backspace
+Ctrl + A         | Select All
+Ctrl + C         | Copy Selected
 Ctrl + Q         | Quit
 Ctrl + R         | Reload
 Ctrl + Shift + + | Move Current Tab Right
 Ctrl + Shift + _ | Move Current Tab Left
 Ctrl + T         | New Tab
+Ctrl + V         | Paste
 Ctrl + W         | Close Tab
+Ctrl + X         | Cut Selected
 Ctrl + =         | Next Tab
 Ctrl + -         | Previous Tab
+Delete           | Delete
+Insert           | Toggle Overwrite
 
 ---
 
