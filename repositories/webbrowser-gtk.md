@@ -15,9 +15,11 @@ Shortcut         | Notes
 Backspace        | Backspace
 Ctrl + A         | Select All
 Ctrl + C         | Copy Selected
+Ctrl + O         | Open File...
 Ctrl + Q         | Quit
 Ctrl + R         | Reload
 Ctrl + Shift + + | Move Current Tab Right
+Ctrl + Shift + R | Reload, Bypass Cache
 Ctrl + Shift + _ | Move Current Tab Left
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
