@@ -13,6 +13,8 @@
 Shortcut         | Notes
 -----------------|-----------------------
 Backspace        | Backspace
+Ctrl + -         | Previous Tab
+Ctrl + =         | Next Tab
 Ctrl + A         | Select All
 Ctrl + C         | Copy Selected
 Ctrl + O         | Open File...
@@ -25,8 +27,6 @@ Ctrl + T         | New Tab
 Ctrl + V         | Paste
 Ctrl + W         | Close Tab
 Ctrl + X         | Cut Selected
-Ctrl + =         | Next Tab
-Ctrl + -         | Previous Tab
 Delete           | Delete
 Insert           | Toggle Overwrite
 

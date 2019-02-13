@@ -13,6 +13,8 @@
 Shortcut         | Notes
 -----------------|-------------------------------
 Backspace        | Backspace
+Ctrl + -         | Previous Tab
+Ctrl + =         | Next Tab
 Ctrl + A         | Select All
 Ctrl + Backspace | Delete Previous Word
 Ctrl + C         | Copy Selected
@@ -26,11 +28,11 @@ Ctrl + O         | Open...
 Ctrl + Q         | Quit
 Ctrl + R         | Sort Selected Lines Ascending
 Ctrl + S         | Save
+Ctrl + Shift + + | Move Current Tab Right
 Ctrl + Shift + G | Find Previous
 Ctrl + Shift + R | Sort Selected Lines Descending
 Ctrl + Shift + S | Save As...
 Ctrl + Shift + Z | Redo
-Ctrl + Shift + + | Move Current Tab Right
 Ctrl + Shift + _ | Move Current Tab Left
 Ctrl + T         | New Tab
 Ctrl + V         | Paste
@@ -38,8 +40,6 @@ Ctrl + W         | Close Tab
 Ctrl + X         | Cut Selected
 Ctrl + Y         | Clear Undo/Redo
 Ctrl + Z         | Undo
-Ctrl + =         | Next Tab
-Ctrl + -         | Previous Tab
 Delete           | Delete
 End              | Go to Bottom
 Escape           | Hide Windows
