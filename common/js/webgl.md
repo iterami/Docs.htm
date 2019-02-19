@@ -499,7 +499,8 @@ json      | false   | boolean false or object
 * Parses a (https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md#3d-json-level-format)[3D JSON Level Format] file.
 
 Arg       | Default | Type
-----------|---------|------------------------
+----------|---------|---------------------------
+cache     | false   | boolean false or string ID
 character | 0       | number
 json      | false   | boolean false or object
 
