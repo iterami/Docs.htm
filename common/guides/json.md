@@ -338,7 +338,7 @@
     "example-group-1"
   ],
 
-  // REQUIRED. Array of entities to create.
+  // Optional. Array of entities to create.
   "entities": [
     {
       // Optional. Entity ID.
