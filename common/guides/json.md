@@ -18,109 +18,9 @@
   "ambient-green": 1,
   "ambient-red": 1,
   "camera-zoom-max": 50,
-  "characters": [
-    {
-      "id": "_me",
-      "camera-zoom": 20,
-      "change": {
-        "rotate-y": 0,
-        "translate-x": 0
-      },
-      "collide-range-horizontal": 2.5,
-      "collide-range-vertical": 2.5,
-      "collides": true,
-      "entities": [],
-      "experience": 0,
-      "health-current": 100,
-      "health-max": 100,
-      "inventory": {},
-      "jump-height": 0.6,
-      "level": -1,
-      "rotate-x": 0,
-      "rotate-y": 0,
-      "rotate-z": 0,
-      "speed": 0.2,
-      "talk": false,
-      "talk-range": 15,
-      "trade": [],
-      "translate-x": 0,
-      "translate-y": 0,
-      "translate-z": 0
-    }
-  ],
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
-  "prefabs": [
-    {
-      "type": "webgl_cuboid",
-      "properties": {
-        "prefix": "example-cuboid",
-        "all-alpha": false,
-        "all-collision": true,
-        "all-vertex-colors": false,
-        "back-alpha": 1,
-        "back-collision": false,
-        "back-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "bottom-alpha": 1,
-        "bottom-collision": false,
-        "bottom-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "exclude": {
-          "bottom": true
-        },
-        "front-alpha": 1,
-        "front-collision": false,
-        "front-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "left-alpha": 1,
-        "left-collision": false,
-        "left-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "properties": {},
-        "random-colors": false,
-        "right-alpha": 1,
-        "right-collision": false,
-        "right-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "size-x": 1,
-        "size-y": 1,
-        "size-z": 1,
-        "top-alpha": 1,
-        "top-collision": false,
-        "top-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "translate-x": 0,
-        "translate-y": 0,
-        "translate-z": 0
-      }
-    }
-  ],
   "directional-blue": 1,
   "directional-green": 1,
   "directional-red": 1,
@@ -131,10 +31,6 @@
   "gravity-acceleration": -0.05,
   "gravity-axis": "dy",
   "gravity-max": -1,
-  "groups": [
-    "example-group-0",
-    "example-group-1"
-  ],
   "jump-movement": false,
   "multiplier-jump": 1,
   "multiplier-speed": 1,
@@ -165,6 +61,10 @@
   "spawn-translate-x": 0,
   "spawn-translate-y": 0,
   "spawn-translate-z": 0,
+  "groups": [
+    "example-group-0",
+    "example-group-1"
+  ],
   "entities": [
     {
       "id": "example-entity-0",
@@ -230,6 +130,106 @@
       ]
     }
   ],
+  "prefabs": [
+    {
+      "type": "webgl_cuboid",
+      "properties": {
+        "prefix": "example-cuboid",
+        "all-alpha": false,
+        "all-collision": true,
+        "all-vertex-colors": false,
+        "back-alpha": 1,
+        "back-collision": false,
+        "back-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "bottom-alpha": 1,
+        "bottom-collision": false,
+        "bottom-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "exclude": {
+          "bottom": true
+        },
+        "front-alpha": 1,
+        "front-collision": false,
+        "front-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "left-alpha": 1,
+        "left-collision": false,
+        "left-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "properties": {},
+        "random-colors": false,
+        "right-alpha": 1,
+        "right-collision": false,
+        "right-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "size-x": 1,
+        "size-y": 1,
+        "size-z": 1,
+        "top-alpha": 1,
+        "top-collision": false,
+        "top-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+        "translate-x": 0,
+        "translate-y": 0,
+        "translate-z": 0
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "_me",
+      "camera-zoom": 20,
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
+      "collides": true,
+      "entities": [],
+      "experience": 0,
+      "health-current": 100,
+      "health-max": 100,
+      "inventory": {},
+      "jump-height": 0.6,
+      "level": -1,
+      "rotate-x": 0,
+      "rotate-y": 0,
+      "rotate-z": 0,
+      "speed": 0.2,
+      "talk": false,
+      "talk-range": 15,
+      "trade": [],
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
+    }
+  ],
   "randomized": [
     {
       "character": false,
@@ -258,186 +258,10 @@
   // When 0, characters are forced into first-person mode.
   "camera-zoom-max": 50,
 
-  // Optional. "characters" that is array of objects.
-  //   Set to false to create no new characters.
-  "characters": [
-    {
-      // Optional. ID of character.
-      "id": "_me",
-
-      "all-alpha": false,
-      "all-collision": true,
-      "all-vertex-colors": false,
-
-      // Optional. Current camera zoom value.
-      // When 0, camera is in first-person mode.
-      "camera-zoom": 20,
-
-      // Optional. Amount that any character property should change by when the character is updated.
-      // Player translations are reset after each movement to allow stopping.
-      "change": {
-        "rotate-y": 0,
-        "translate-x": 0
-      },
-
-      // Optional. If the character collides, then this is the maximum distance before collision occurs.
-      "collide-range-horizontal": 2.5,
-      "collide-range-vertical": 2.5,
-
-      // Optional. If the character collides with other entities that have collision.
-      "collides": true,
-
-      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
-      // Uses same format as level entities.
-      "entities": [],
-
-      // Optional. Current character experience.
-      "experience": 0,
-
-      // Optional. Current and maximum health.
-      "health-current": 100,
-      "health-max": 100,
-
-      // Optional. Current character inventory.
-      "inventory": {},
-
-      // Optional. "dy" set when the character jumps.
-      "jump-height": 0.6,
-
-      // Optional. Current character level.
-      // -1 means character is just a camera.
-      "level": -1,
-
-      // Optional. Rotation of character in degrees between 0 inclusive and 359 exclusive.
-      "rotate-x": 0,
-      "rotate-y": 0,
-      "rotate-z": 0,
-
-      // Optional. Character movement speed.
-      "speed": 0.2,
-
-      // Optional. Text said by the character when the player within range
-      "talk": false,
-      "talk-range": 15,
-
-      // Optional. Item trades that this character can do if the player gets close.
-      "trade": [],
-
-      // Optional. Translation of the character relative to `0, 0, 0`.
-      "translate-x": 0,
-      "translate-y": 0,
-      "translate-z": 0
-    }
-  ],
-
   // Optional. Clear color values, between 0 and 1 inclusive.
   "clearcolor-blue": 0,
   "clearcolor-green": 0,
   "clearcolor-red": 0,
-
-  // Optional. Array of prefabs to create via various specific functions.
-  "prefabs": [
-    {
-      // REQUIRED. Function that will create this prefab.
-      "type": "webgl_cuboid",
-
-      // REQUIRED. Properties of this prefab. Passed as args.
-      "properties": {
-        // REQUIRED. Prefix added to each created entity ID.
-        "prefix": "example-cuboid",
-
-        // Optional. Overrides that can be applied to every non-excluded face.
-        "all-alpha": false,
-        "all-collision": true,
-        "all-vertex-colors": false,
-
-        // Optional. Properties for the -z face.
-        "back-alpha": 1,
-        "back-collision": false,
-        "back-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Properties for the -y face.
-        "bottom-alpha": 1,
-        "bottom-collision": false,
-        "bottom-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. If this cuboid will have collision.
-        "collision": false,
-
-        // Optional. Which sides should be excluded from creation.
-        //   Sides are: back, bottom, front, left, right, top.
-        "exclude": {
-          "bottom": true
-        },
-
-        // Optional. Properties for the +z face.
-        "front-alpha": 1,
-        "front-collision": false,
-        "front-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Properties for the -x face.
-        "left-alpha": 1,
-        "left-collision": false,
-        "left-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Additional properties that are applied to each entity created by this prefab.
-        "properties": {},
-
-        // Optional. If this prefab should use random colors or 255,255,255.
-        "random-colors": false,
-
-        // Optional. Properties for the +x face.
-        "right-alpha": 1,
-        "right-collision": false,
-        "right-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Size of the cuboid.
-        "size-x": 1,
-        "size-y": 1,
-        "size-z": 1,
-
-        // Optional. Properties for the +y face.
-        "top-alpha": 1,
-        "top-collision": false,
-        "top-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
-        "translate-x": 0,
-        "translate-y": 0,
-        "translate-z": 0
-      }
-    }
-  ],
 
   // Optional. Directional light values, between 0 and 1 inclusive.
   "directional-blue": 1,
@@ -497,13 +321,6 @@
     }
   },
 
-  // Optional. Array of groups to create.
-  // Do not include automatically created groups, such as "skybox".
-  "groups": [
-    "example-group-0",
-    "example-group-1"
-  ],
-
   // Optional. Rotation of newly spawned character in degrees between 0 inclusive and 359 exclusive.
   "spawn-rotate-x": 0,
   "spawn-rotate-y": 0,
@@ -513,6 +330,13 @@
   "spawn-translate-x": 0,
   "spawn-translate-y": 0,
   "spawn-translate-z": 0,
+
+  // Optional. Array of groups to create.
+  // Do not include automatically created groups, such as "skybox".
+  "groups": [
+    "example-group-0",
+    "example-group-1"
+  ],
 
   // REQUIRED. Array of entities to create.
   "entities": [
@@ -638,6 +462,182 @@
         "example-group-0",
         "example-group-1"
       ]
+    }
+  ],
+
+  // Optional. Array of prefabs to create via various specific functions.
+  "prefabs": [
+    {
+      // REQUIRED. Function that will create this prefab.
+      "type": "webgl_cuboid",
+
+      // REQUIRED. Properties of this prefab. Passed as args.
+      "properties": {
+        // REQUIRED. Prefix added to each created entity ID.
+        "prefix": "example-cuboid",
+
+        // Optional. Overrides that can be applied to every non-excluded face.
+        "all-alpha": false,
+        "all-collision": true,
+        "all-vertex-colors": false,
+
+        // Optional. Properties for the -z face.
+        "back-alpha": 1,
+        "back-collision": false,
+        "back-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. Properties for the -y face.
+        "bottom-alpha": 1,
+        "bottom-collision": false,
+        "bottom-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. If this cuboid will have collision.
+        "collision": false,
+
+        // Optional. Which sides should be excluded from creation.
+        //   Sides are: back, bottom, front, left, right, top.
+        "exclude": {
+          "bottom": true
+        },
+
+        // Optional. Properties for the +z face.
+        "front-alpha": 1,
+        "front-collision": false,
+        "front-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. Properties for the -x face.
+        "left-alpha": 1,
+        "left-collision": false,
+        "left-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. Additional properties that are applied to each entity created by this prefab.
+        "properties": {},
+
+        // Optional. If this prefab should use random colors or 255,255,255.
+        "random-colors": false,
+
+        // Optional. Properties for the +x face.
+        "right-alpha": 1,
+        "right-collision": false,
+        "right-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. Size of the cuboid.
+        "size-x": 1,
+        "size-y": 1,
+        "size-z": 1,
+
+        // Optional. Properties for the +y face.
+        "top-alpha": 1,
+        "top-collision": false,
+        "top-vertex-colors": [
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1,
+          1, 1, 1, 1
+        ],
+
+        // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
+        "translate-x": 0,
+        "translate-y": 0,
+        "translate-z": 0
+      }
+    }
+  ],
+
+  // Optional. "characters" that is array of objects.
+  //   Set to false to create no new characters.
+  "characters": [
+    {
+      // Optional. ID of character.
+      "id": "_me",
+
+      "all-alpha": false,
+      "all-collision": true,
+      "all-vertex-colors": false,
+
+      // Optional. Current camera zoom value.
+      // When 0, camera is in first-person mode.
+      "camera-zoom": 20,
+
+      // Optional. Amount that any character property should change by when the character is updated.
+      // Player translations are reset after each movement to allow stopping.
+      "change": {
+        "rotate-y": 0,
+        "translate-x": 0
+      },
+
+      // Optional. If the character collides, then this is the maximum distance before collision occurs.
+      "collide-range-horizontal": 2.5,
+      "collide-range-vertical": 2.5,
+
+      // Optional. If the character collides with other entities that have collision.
+      "collides": true,
+
+      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
+      // Uses same format as level entities.
+      "entities": [],
+
+      // Optional. Current character experience.
+      "experience": 0,
+
+      // Optional. Current and maximum health.
+      "health-current": 100,
+      "health-max": 100,
+
+      // Optional. Current character inventory.
+      "inventory": {},
+
+      // Optional. "dy" set when the character jumps.
+      "jump-height": 0.6,
+
+      // Optional. Current character level.
+      // -1 means character is just a camera.
+      "level": -1,
+
+      // Optional. Rotation of character in degrees between 0 inclusive and 359 exclusive.
+      "rotate-x": 0,
+      "rotate-y": 0,
+      "rotate-z": 0,
+
+      // Optional. Character movement speed.
+      "speed": 0.2,
+
+      // Optional. Text said by the character when the player within range
+      "talk": false,
+      "talk-range": 15,
+
+      // Optional. Item trades that this character can do if the player gets close.
+      "trade": [],
+
+      // Optional. Translation of the character relative to `0, 0, 0`.
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
     }
   ],
 
