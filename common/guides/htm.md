@@ -17,6 +17,7 @@
   * [`canvas.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas HTM projects.
   * [`core.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
   * [`data.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/data.md): shortcuts for complex 2D and 3D entities for HTM projects.
+  * [`tables.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/tables.md): stand-alone file that adds sorting to all available tables.
   * [`uri.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/uri.md): used by HTM projects that require various data URIs.
   * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas HTM projects.
 
