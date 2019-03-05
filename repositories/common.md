@@ -23,6 +23,7 @@
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
   * [data.js](#datajs)
+  * [tables.js](#tablesjs)
   * [uri.js](#urijs)
   * [webgl.js](#webgljs)
   * `genre`:
@@ -363,6 +364,10 @@
 ### data.js
 * [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
 * [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
+
+---
+
+### tables.js
 
 ---
 
