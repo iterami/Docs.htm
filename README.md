@@ -7,6 +7,7 @@ iterami/Docs.htm
   * [JSON Level Format](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md)
   * Tests:
     * [core.js](https://iterami.com/Docs.htm/tests/common-core-js.htm)
+    * [tables.js](https://iterami.com/Docs.htm/tests/common-tables-js.htm)
     * [uri.js](https://iterami.com/Docs.htm/tests/common-uri-js.htm)
     * [webgl.js](https://iterami.com/Docs.htm/tests/common-webgl-js.htm)
   * [Usage by iterami](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
