@@ -62,6 +62,34 @@ function repo_init(){
       },
       {
         'args': {
+          'height-0': 10,
+          'width-0': 10,
+          'x-0': 5,
+          'y-0': 5,
+          'height-1': 10,
+          'width-1': 10,
+          'x-1': 0,
+          'y-1': 0,
+        },
+        'expect': true,
+        'function': 'core_cuboid_overlap',
+      },
+      {
+        'args': {
+          'height-0': 10,
+          'width-0': 10,
+          'x-0': 15,
+          'y-0': 15,
+          'height-1': 10,
+          'width-1': 10,
+          'x-1': 0,
+          'y-1': 0,
+        },
+        'expect': false,
+        'function': 'core_cuboid_overlap',
+      },
+      {
+        'args': {
           'date': {
             'date': 21,
             'hour': 16,
@@ -263,34 +291,6 @@ function repo_init(){
         },
         'expect': 0,
         'function': 'core_random_integer',
-      },
-      {
-        'args': {
-          'h0': 10,
-          'w0': 10,
-          'x0': 5,
-          'y0': 5,
-          'h1': 10,
-          'w1': 10,
-          'x1': 0,
-          'y1': 0,
-        },
-        'expect': true,
-        'function': 'core_rectangle_overlap',
-      },
-      {
-        'args': {
-          'h0': 10,
-          'w0': 10,
-          'x0': 15,
-          'y0': 15,
-          'h1': 10,
-          'w1': 10,
-          'x1': 0,
-          'y1': 0,
-        },
-        'expect': false,
-        'function': 'core_rectangle_overlap',
       },
       {
         'args': {

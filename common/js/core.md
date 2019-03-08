@@ -13,6 +13,7 @@
 * [`core_audio_stop(args)`](#core_audio_stopargs)
 * [`core_call(args)`](#core_callargs)
 * [`core_clamp(args)`](#core_clampargs)
+* [`core_cuboid_overlap(args)`](#core_cuboid_overlapargs)
 * [`core_date_to_timestamp(args)`](#core_date_to_timestampargs)
 * [`core_degrees_to_radians(args)`](#core_degrees_to_radiansargs)
 * [`core_distance(args)`](#core_distanceargs)
@@ -85,7 +86,6 @@
 * [`core_random_number(args)`](#core_random_numberargs)
 * [`core_random_rgb()`](#core_random_rgb)
 * [`core_random_string(args)`](#core_random_stringargs)
-* [`core_rectangle_overlap(args)`](#core_rectangle_overlapargs)
 * [`core_replace_multiple`](#core_replace_multipleargs)
 * [`core_repo_init(args)`](#core_repo_initargs)
 * [`core_requestpointerlock(args)`](#core_requestpointerlockargs)
@@ -252,6 +252,27 @@ max      |                               | number
 min      |                               | number
 value    |                               | number
 wrap     | false                         | boolean
+
+---
+
+### `core_cuboid_overlap(args)`
+* Checks if 2 cuboids are overlapping and returns a boolean.
+* Z-axis and depth are optional, allowing 2D rectangle overlap check.
+
+Arg      | Default | Type
+---------|---------|-------
+depth-0  | 0       | number
+depth-1  | 0       | number
+height-0 |         | number
+height-1 |         | number
+width-0  |         | number
+width-1  |         | number
+x-0      |         | number
+x-1      |         | number
+y-0      |         | number
+y-1      |         | number
+z-0      | 0       | number
+z-1      | 0       | number
 
 ---
 
@@ -877,22 +898,6 @@ Arg        | Default                                                          | 
 -----------|------------------------------------------------------------------|-------
 characters | '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' | string
 length     | 100                                                              | number
-
----
-
-### `core_rectangle_overlap(args)`
-* Checks if 2 rectangles are overlapping and returns a boolean.
-
-Arg | Default | Type
-----|---------|-------
-h0  |         | number
-h1  |         | number
-w0  |         | number
-w1  |         | number
-x0  |         | number
-x1  |         | number
-y0  |         | number
-y1  |         | number
 
 ---
 
