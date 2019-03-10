@@ -94,6 +94,7 @@
       "item-spellproperties": {},
       "item-stats": {},
       "path-direction": 1,
+      "path-end": false,
       "path-id": false,
       "path-point": 0,
       "rotate-x": 0,
@@ -400,7 +401,9 @@
       "item-stats": {},
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
+      // "path-end" is false for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
       "path-direction": 1,
+      "path-end": false,
       "path-id": false,
       "path-point": 0,
 
