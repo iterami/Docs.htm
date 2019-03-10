@@ -39,6 +39,7 @@
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
 * [`webgl_particles_create(args)`](#webgl_particles_createargs)
+* [`webgl_path_move(args)`](#webgl_path_moveargs)
 * [`webgl_path_use(args)`](#webgl_path_useargs)
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
@@ -491,6 +492,15 @@ speed         | 1                                                   | number
 translate-x   | webgl_characters[webgl_character_id]['translate-x'] | number
 translate-y   | webgl_characters[webgl_character_id]['translate-y'] | number
 translate-z   | webgl_characters[webgl_character_id]['translate-z'] | number
+
+---
+
+### `webgl_path_move(args)`
+* Move an entity or a character along it's path, if it has one.
+
+Arg    | Default | Type
+-------|---------|--------------
+entity |         | entity object
 
 ---
 
