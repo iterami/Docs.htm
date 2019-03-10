@@ -219,6 +219,10 @@
       "inventory": {},
       "jump-height": 0.6,
       "level": -1,
+      "path-direction": 1,
+      "path-end": false,
+      "path-id": false,
+      "path-point": 0,
       "rotate-x": 0,
       "rotate-y": 0,
       "rotate-z": 0,
@@ -621,6 +625,13 @@
       // Optional. Current character level.
       // -1 means character is just a camera.
       "level": -1,
+
+      // Optional. Current assigned path or false, current path point target, and movement direction.
+      // "path-end" is false for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
+      "path-direction": 1,
+      "path-end": false,
+      "path-id": false,
+      "path-point": 0,
 
       // Optional. Rotation of character in degrees between 0 inclusive and 359 exclusive.
       "rotate-x": 0,

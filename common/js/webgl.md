@@ -510,11 +510,11 @@ entity |         | entity object
 
 Arg            | Default | Type
 ---------------|---------|---------------------------
-entity         |         | string ID
+entity         |         | entity object
 path-direction | 1       | 1 or -1
-path-end       | false   | boolean
+path-end       | false   | boolean false or integer
 path-id        | false   | boolean false or string ID
-path-point     | 0       | number
+path-point     | 0       | integer
 
 ---
 
