@@ -132,7 +132,7 @@
   ],
   "prefabs": [
     {
-      "type": "webgl_cuboid",
+      "type": "cuboid",
       "properties": {
         "prefix": "example-cuboid",
         "all-alpha": false,
@@ -468,8 +468,8 @@
   // Optional. Array of prefabs to create via various specific functions.
   "prefabs": [
     {
-      // REQUIRED. Function that will create this prefab.
-      "type": "webgl_cuboid",
+      // REQUIRED. Prefab type.
+      "type": "cuboid",
 
       // REQUIRED. Properties of this prefab. Passed as args.
       "properties": {

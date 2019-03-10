@@ -17,8 +17,6 @@
 * [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
-* [`webgl_cuboid(args)`](#webgl_cuboidargs)
-* [`webgl_cuboid_tree(args)`](#webgl_cuboid_treeargs)
 * [`webgl_draw()`](#webgl_draw)
 * [`webgl_draw_entity(entity)`](#webgl_draw_entityentity)
 * [`webgl_drawloop()`](#webgl_drawloop)
@@ -37,7 +35,6 @@
 * [`webgl_level_init(args)`](#webgl_level_initargs)
 * [`webgl_level_load(args)`](#webgl_level_loadargs)
 * [`webgl_level_unload()`](#webgl_level_unload)
-* [`webgl_lines_tree(args)`](#webgl_lines_treeargs)
 * [`webgl_logicloop()`](#webgl_logicloop)
 * [`webgl_logicloop_handle_entity(entity)`](#webgl_logicloop_handle_entityentity)
 * [`webgl_normals(args)`](#webgl_normalsargs)
@@ -45,13 +42,16 @@
 * [`webgl_path_use(args)`](#webgl_path_useargs)
 * [`webgl_perspective()`](#webgl_perspective)
 * [`webgl_pick_color(args)`](#webgl_pick_colorargs)
+* [`webgl_prefab_cuboid(args)`](#webgl_prefab_cuboidargs)
+* [`webgl_prefab_cuboid_tree(args)`](#webgl_prefab_cuboid_treeargs)
+* [`webgl_prefab_lines_tree(args)`](#webgl_prefab_lines_treeargs)
+* [`webgl_prefab_skybox(args)`](#webgl_prefab_skyboxargs)
 * [`webgl_program_create(args)`](#webgl_program_createargs)
 * [`webgl_resize()`](#webgl_resize)
 * [`webgl_settings_init()`](#webgl_settings_init)
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_recreate()`](#webgl_shader_recreate)
 * [`webgl_shader_update()`](#webgl_shader_update)
-* [`webgl_skybox(args)`](#webgl_skyboxargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
@@ -223,70 +223,6 @@ Arg       | Default            | Type
 character | webgl_character_id | string ID
 entity    | false              | boolean false or string ID
 target    |                    | string ID
-
----
-
-### `webgl_cuboid(args)`
-* Creates a cuboid with specified properties.
-* Translation is the center of the cuboid.
-
-Arg                  | Default       | Type
----------------------|---------------|----------------------------------
-all-alpha            | false         | boolean false or number
-all-collision        | true          | boolean
-all-vertex-colors    | false         | boolean false or array of numbers
-back-alpha           | 1             | number
-back-collision       | false         | boolean
-back-vertex-colors   | false         | boolean false or array of numbers
-bottom-alpha         | 1             | number
-bottom-collision     | false         | boolean
-bottom-vertex-colors | false         | boolean false or array of numbers
-exclude              | {}            | object of side booleans
-front-alpha          | 1             | number
-front-collision      | false         | boolean
-front-vertex-colors  | false         | boolean false or array of numbers
-groups               | []            | array of string IDs
-left-alpha           | 1             | number
-left-collision       | false         | boolean
-left-vertex-colors   | false         | boolean false or array of numbers
-prefix               | core_id_count | number or string
-properties           | {}            | object
-random-colors        | false         | boolean
-right-alpha          | 1             | number
-right-collision      | false         | boolean
-right-vertex-colors  | false         | boolean false or array of numbers
-size-x               | 1             | number
-size-y               | 1             | number
-size-z               | 1             | number
-top-alpha            | 1             | number
-top-collision        | false         | boolean
-top-vertex-colors    | false         | boolean false or array of numbers
-translate-x          | 0             | number
-translate-y          | 0             | number
-translate-z          | 0             | number
-
----
-
-### `webgl_cuboid_tree(args)`
-* Creates a cuboid tree with the specified properties.
-* Translation is the center of the bottom face of the trunk.
-
-Arg                  | Default | Type
----------------------|---------|-----------------
-collision-leaves     | true    | boolean
-collision-trunk      | true    | boolean
-leaves-size-x        | 10      | number
-leaves-size-y        | 10      | number
-leaves-size-z        | 10      | number
-prefix               |         | number or string
-translate-x          | 0       | number
-translate-y          | 0       | number
-translate-z          | 0       | number
-trunk-size-x         | 2       | number
-trunk-size-y         | 10      | number
-trunk-size-z         | 2       | number
-vertex-colors-leaves | array[] | array of numbers
-vertex-colors-trunk  | array[] | array of numbers
 
 ---
 
@@ -512,28 +448,6 @@ json      | false   | boolean false or object
 
 ---
 
-### `webgl_lines_tree(args)`
-* Creates a tree made out of "lines" with the specified properties.
-* Translation is the center of the bottom of the trunk.
-
-Arg                  | Default | Type
----------------------|---------|-----------------
-prefix               |         | string
-translate-x          | 0       | number
-translate-y          | 0       | number
-translate-z          | 0       | number
-trunk-branch-max     | 4       | number
-trunk-branch-min     | 0       | number
-trunk-count-max      | 10      | number
-trunk-count-min      | 1       | number
-trunk-length         | 10      | number
-trunk-width-max      | 2       | number
-trunk-width-min      | 1       | number
-vertex-colors-leaves | array[] | array of numbers
-vertex-colors-trunk  | array[] | array of numbers
-
----
-
 ### `webgl_logicloop()`
 * Handles camera movement of various different styles.
 * Calls repository-specific `logic()`.
@@ -609,6 +523,111 @@ y   |         | number
 
 ---
 
+### `webgl_prefab_cuboid(args)`
+* Creates a cuboid prefab with specified properties.
+* Translation is the center of the cuboid.
+
+Arg                  | Default       | Type
+---------------------|---------------|----------------------------------
+all-alpha            | false         | boolean false or number
+all-collision        | true          | boolean
+all-vertex-colors    | false         | boolean false or array of numbers
+back-alpha           | 1             | number
+back-collision       | false         | boolean
+back-vertex-colors   | false         | boolean false or array of numbers
+bottom-alpha         | 1             | number
+bottom-collision     | false         | boolean
+bottom-vertex-colors | false         | boolean false or array of numbers
+exclude              | {}            | object of side booleans
+front-alpha          | 1             | number
+front-collision      | false         | boolean
+front-vertex-colors  | false         | boolean false or array of numbers
+groups               | []            | array of string IDs
+left-alpha           | 1             | number
+left-collision       | false         | boolean
+left-vertex-colors   | false         | boolean false or array of numbers
+prefix               | core_id_count | number or string
+properties           | {}            | object
+random-colors        | false         | boolean
+right-alpha          | 1             | number
+right-collision      | false         | boolean
+right-vertex-colors  | false         | boolean false or array of numbers
+size-x               | 1             | number
+size-y               | 1             | number
+size-z               | 1             | number
+top-alpha            | 1             | number
+top-collision        | false         | boolean
+top-vertex-colors    | false         | boolean false or array of numbers
+translate-x          | 0             | number
+translate-y          | 0             | number
+translate-z          | 0             | number
+
+---
+
+### `webgl_prefab_cuboid_tree(args)`
+* Creates a cuboid tree prefab with the specified properties.
+* Translation is the center of the bottom face of the trunk.
+
+Arg                  | Default | Type
+---------------------|---------|-----------------
+collision-leaves     | true    | boolean
+collision-trunk      | true    | boolean
+leaves-size-x        | 10      | number
+leaves-size-y        | 10      | number
+leaves-size-z        | 10      | number
+prefix               |         | number or string
+translate-x          | 0       | number
+translate-y          | 0       | number
+translate-z          | 0       | number
+trunk-size-x         | 2       | number
+trunk-size-y         | 10      | number
+trunk-size-z         | 2       | number
+vertex-colors-leaves | array[] | array of numbers
+vertex-colors-trunk  | array[] | array of numbers
+
+---
+
+### `webgl_prefab_lines_tree(args)`
+* Creates a lines tree prefab with the specified properties.
+* Translation is the center of the bottom of the trunk.
+
+Arg                  | Default | Type
+---------------------|---------|-----------------
+prefix               |         | string
+translate-x          | 0       | number
+translate-y          | 0       | number
+translate-z          | 0       | number
+trunk-branch-max     | 4       | number
+trunk-branch-min     | 0       | number
+trunk-count-max      | 10      | number
+trunk-count-min      | 1       | number
+trunk-length         | 10      | number
+trunk-width-max      | 2       | number
+trunk-width-min      | 1       | number
+vertex-colors-leaves | array[] | array of numbers
+vertex-colors-trunk  | array[] | array of numbers
+
+---
+
+### `webgl_prefab_skybox(args)`
+* Creates a skybox prefab around the `webgl_player_id` camera.
+
+Arg                 | Default | Type
+--------------------|---------|----------------------------------
+bottom-color-bottom | false   | boolean false or array of numbers
+bottom-color-top    | false   | boolean false or array of numbers
+prefix              |         | string ID
+random-colors       | false   | boolean
+rotate-x            | 0       | number
+rotate-y            | 0       | number
+rotate-z            | 0       | number
+sides               | 3       | number
+size                | 99      | number
+top-color-bottom    | false   | boolean false or array of numbers
+top-color-top       | false   | boolean false or array of numbers
+
+---
+
 ### `webgl_program_create(args)`
 * Creates, links, uses, and returns a WebGL shader program.
 
@@ -649,25 +668,6 @@ type   |         | webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
 
 ### `webgl_shader_update()`
 * Updates the shader uniform values.
-
----
-
-### `webgl_skybox(args)`
-* Creates a skybox around the `webgl_player_id` camera.
-
-Arg                 | Default | Type
---------------------|---------|----------------------------------
-bottom-color-bottom | false   | boolean false or array of numbers
-bottom-color-top    | false   | boolean false or array of numbers
-prefix              |         | string ID
-random-colors       | false   | boolean
-rotate-x            | 0       | number
-rotate-y            | 0       | number
-rotate-z            | 0       | number
-sides               | 3       | number
-size                | 99      | number
-top-color-bottom    | false   | boolean false or array of numbers
-top-color-top       | false   | boolean false or array of numbers
 
 ---
 
