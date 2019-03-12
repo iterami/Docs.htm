@@ -342,7 +342,7 @@ fog-state            | false     | boolean
 gravity-acceleration | -.05      | number
 gravity-axis         | 'y'       | string
 gravity-max          | -2        | number
-jump-movement        | false     | boolean
+jump-movement        | 0         | number
 multiplier-jump      | 1         | number
 multiplier-speed     | 1         | number
 paths                | {}        | object
