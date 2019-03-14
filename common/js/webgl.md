@@ -230,13 +230,12 @@ red   | 0       | number
 ---
 
 ### `webgl_collision(args)`
-* Checks for collisions based on entity normals and returns a boolean.
+* Checks for collision between characters/entities.
 
-Arg       | Default            | Type
-----------|--------------------|---------------------------
-character | webgl_character_id | string ID
-entity    | false              | boolean false or string ID
-target    |                    | string ID
+Arg      | Default | Type
+---------|---------|------------------------
+collider |         | entity/character object
+target   |         | entity object
 
 ---
 
@@ -326,8 +325,8 @@ label | args['id'] | string ID
 * If attached to something, returns parent translation plus offsets.
 
 Arg    | Default | Type
--------|---------|--------------
-entity |         | entity object
+-------|---------|------------------------
+entity |         | entity/character object
 
 ---
 
@@ -500,14 +499,14 @@ vertices-count | 1       | number
 * Creates particle entities in the `particles` group.
 
 Arg           | Default                                             | Type
---------------|-----------------------------------------------------|-----------------
+--------------|-----------------------------------------------------|------------------------
 collide-range | 1                                                   | number
 collides      | true                                                | boolean
 color         | [1, 1, 1, 1]                                        | array of numbers
 count         | 1                                                   | number
 gravity       | true                                                | boolean
 lifespan      | 100                                                 | number
-parent        |                                                     | entity object
+parent        |                                                     | entity/character object
 rotate-x      | webgl_characters[webgl_character_id]['rotate-x']    | number
 rotate-y      | webgl_characters[webgl_character_id]['rotate-y']    | number
 rotate-z      | webgl_characters[webgl_character_id]['rotate-z']    | number
@@ -522,8 +521,8 @@ translate-z   | webgl_characters[webgl_character_id]['translate-z'] | number
 * Move an entity or a character along it's path, if it has one.
 
 Arg    | Default | Type
--------|---------|--------------
-entity |         | entity object
+-------|---------|------------------------
+entity |         | entity/character object
 
 ---
 
@@ -533,7 +532,7 @@ entity |         | entity object
 
 Arg            | Default | Type
 ---------------|---------|---------------------------
-entity         |         | entity object
+entity         |         | entity/character object
 path-direction | 1       | 1 or -1
 path-end       | false   | boolean false or integer
 path-id        | false   | boolean false or string ID
