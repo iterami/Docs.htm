@@ -234,7 +234,7 @@ red   | 0       | number
 
 Arg      | Default | Type
 ---------|---------|------------------------
-collider |         | entity/character object
+collider |         | character/entity object
 target   |         | entity object
 
 ---
@@ -283,13 +283,12 @@ y          | false              | boolean false or number
 ### `webgl_entity_move_to(args)`
 * Moves a character or entity to a specific point.
 
-Arg       | Default            | Type
-----------|--------------------|---------------------------
-character | webgl_character_id | string ID
-entity    | false              | boolean false or string ID
-x         | 0                  | number
-y         | 0                  | number
-z         | 0                  | number
+Arg       | Default | Type
+----------|---------|------------------------
+entity    |         | character/entity object
+x         | 0       | number
+y         | 0       | number
+z         | 0       | number
 
 ---
 
@@ -326,7 +325,7 @@ label | args['id'] | string ID
 
 Arg    | Default | Type
 -------|---------|------------------------
-entity |         | entity/character object
+entity |         | character/entity object
 
 ---
 
@@ -506,7 +505,7 @@ color         | [1, 1, 1, 1]                                        | array of n
 count         | 1                                                   | number
 gravity       | true                                                | boolean
 lifespan      | 100                                                 | number
-parent        |                                                     | entity/character object
+parent        |                                                     | character/entity object
 rotate-x      | webgl_characters[webgl_character_id]['rotate-x']    | number
 rotate-y      | webgl_characters[webgl_character_id]['rotate-y']    | number
 rotate-z      | webgl_characters[webgl_character_id]['rotate-z']    | number
@@ -522,7 +521,7 @@ translate-z   | webgl_characters[webgl_character_id]['translate-z'] | number
 
 Arg    | Default | Type
 -------|---------|------------------------
-entity |         | entity/character object
+entity |         | character/entity object
 
 ---
 
@@ -532,7 +531,7 @@ entity |         | entity/character object
 
 Arg            | Default | Type
 ---------------|---------|---------------------------
-entity         |         | entity/character object
+entity         |         | character/entity object
 path-direction | 1       | 1 or -1
 path-end       | false   | boolean false or integer
 path-id        | false   | boolean false or string ID
