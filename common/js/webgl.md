@@ -27,6 +27,7 @@
 * [`webgl_entity_radians(args)`](#webgl_entity_radiansargs)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_extension(args)`](#webgl_extensionargs)
+* [`webgl_get_translation(args)`](#webgl_get_translationargs)
 * [`webgl_init(args)`](#webgl_initargs)
 * [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_item_equip(args)`](#webgl_item_equipargs)
@@ -320,6 +321,16 @@ label | args['id'] | string ID
 
 ---
 
+### `webgl_get_translation(args)`
+* Gets the translation of an entity or charcter.
+* If attached to something, returns parent translation plus offsets.
+
+Arg    | Default | Type
+-------|---------|--------------
+entity |         | entity object
+
+---
+
 ### `webgl_init(args)`
 * Sets up WebGL.
 
@@ -496,7 +507,7 @@ color         | [1, 1, 1, 1]                                        | array of n
 count         | 1                                                   | number
 gravity       | true                                                | boolean
 lifespan      | 100                                                 | number
-parent        | webgl_character_id                                  | string ID
+parent        |                                                     | entity object
 rotate-x      | webgl_characters[webgl_character_id]['rotate-x']    | number
 rotate-y      | webgl_characters[webgl_character_id]['rotate-y']    | number
 rotate-z      | webgl_characters[webgl_character_id]['rotate-z']    | number
