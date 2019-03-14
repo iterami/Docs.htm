@@ -108,7 +108,7 @@
           "attach-offset-y": 0,
           "attach-offset-z": 0,
           "attach-to": false,
-          "attach-type": "entity",
+          "attach-type": "core_entities",
           "billboard": false,
           "change": {
             "rotate-y": 0,
@@ -444,8 +444,8 @@
           // Entity needs to already exist.
           "attach-to": false,
 
-          // Optional. Type of attachment. Either `character` or `entity`.
-          "attach-type": "entity",
+          // Optional. Variable that contains what this entity is attached to.
+          "attach-type": "core_entities",
 
           // Optional. If the entity will rotate based on camera rotation.
           // Array of strings, including "x", "y", "z", or any combination.
