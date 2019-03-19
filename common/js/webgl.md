@@ -11,6 +11,7 @@
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_damage(args)`](#webgl_character_damageargs)
 * [`webgl_character_home()`](#webgl_character_home)
+* [`webgl_character_init(args)`](#webgl_character_initargs)
 * [`webgl_character_jump(args)`](#webgl_character_jumpargs)
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
 * [`webgl_character_origin(args)`](#webgl_character_originargs)
@@ -29,7 +30,6 @@
 * [`webgl_extension(args)`](#webgl_extensionargs)
 * [`webgl_get_translation(args)`](#webgl_get_translationargs)
 * [`webgl_init(args)`](#webgl_initargs)
-* [`webgl_init_character(args)`](#webgl_init_characterargs)
 * [`webgl_item_equip(args)`](#webgl_item_equipargs)
 * [`webgl_item_reset(args)`](#webgl_item_resetargs)
 * [`webgl_item_trade(args)`](#webgl_item_tradeargs)
@@ -167,6 +167,36 @@ kill      | false              | boolean
 
 ### `webgl_character_home()`
 * If the `webgl_character_id` character has a home, current level is unloaded and replaced with home.
+
+---
+
+### `webgl_character_init(args)`
+* Sets up the character and camera.
+
+Arg                      | Default            | Type
+-------------------------|--------------------|------------------------
+camera-zoom              | 0                  | number
+change                   | {}                 | object
+collide-range-horizontal | 2                  | number
+collide-range-vertical   | 3                  | number
+collides                 | true               | boolean
+entities                 | []                 | array of objects
+experience               | 0                  | number
+health-current           | 100                | number
+health-max               | 100                | number
+id                       | webgl_character_id | string ID
+jump-height              | .6                 | number
+level                    | -1                 | number >= -1
+rotate-x                 | 0                  | number
+rotate-y                 | 0                  | number
+rotate-z                 | 0                  | number
+speed                    | .2                 | number
+talk                     | false              | boolean false or string
+talk-range               | 15                 | number
+trade                    | []                 | array
+translate-x              | 0                  | number
+translate-y              | 0                  | number
+translate-z              | 0                  | number
 
 ---
 
@@ -361,36 +391,6 @@ spawn-rotate-z       | 0         | number
 spawn-translate-x    | 0         | number
 spawn-translate-y    | 0         | number
 spawn-translate-z    | 0         | number
-
----
-
-### `webgl_init_character(args)`
-* Sets up the character and camera.
-
-Arg                      | Default            | Type
--------------------------|--------------------|------------------------
-camera-zoom              | 0                  | number
-change                   | {}                 | object
-collide-range-horizontal | 2                  | number
-collide-range-vertical   | 3                  | number
-collides                 | true               | boolean
-entities                 | []                 | array of objects
-experience               | 0                  | number
-health-current           | 100                | number
-health-max               | 100                | number
-id                       | webgl_character_id | string ID
-jump-height              | .6                 | number
-level                    | -1                 | number >= -1
-rotate-x                 | 0                  | number
-rotate-y                 | 0                  | number
-rotate-z                 | 0                  | number
-speed                    | .2                 | number
-talk                     | false              | boolean false or string
-talk-range               | 15                 | number
-trade                    | []                 | array
-translate-x              | 0                  | number
-translate-y              | 0                  | number
-translate-z              | 0                  | number
 
 ---
 
