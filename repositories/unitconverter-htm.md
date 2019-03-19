@@ -170,105 +170,107 @@ skot        | sk   | 3141.69
 
 ### Length
 
-Length              | Unit | 1 metre =
---------------------|------|-------------------------------------
-ald                 |      | 1 / 1.6
-alen                |      | 1 / .6277
-aln                 |      | 1 / .5938
-ångström            | Å    | 10000000000
-Aṅgula              |      | 1 / .01763
-anne                |      | 1 / 1.188
-archine             |      | 1 / .7112
-arpent              |      | 1 / 58.47109
-astronomical Unit   | au   | 1 / 149597870700
-barleycorn          |      | 118.11
-bu                  | 分    | 330
-cable               |      | 39.3701 / 7200
-chain               | ch   | 1 / 20.1168
-chi                 | 尺    | 3
-chō                 | 町    | 3.3 / 360
-covid               |      | 1 / .464
-cubit               |      | 1 / .4572
-digit               |      | 39.3701 / .75
-ell (Danish)        |      | 1 / .941318
-ell (Flemish)       |      | 1 / .686
-ell (French)        |      | 1 / 1.372
-ell (German)        |      | 1 / .579
-ell (Polish)        |      | 1 / .787
-ell (Scottish)      |      | 1 / .635
-elle (Kuunar)       |      | 1 / .5334
-faden               |      | 1 / 2.1336
-fathom              |      | 39.3701 / 72
-foot                | ft   | 39.3701 / 12
-foute               |      | 1 / .3048
-furlong             |      | 39.3701 / 7920
-girah               |      | 1 / .05715
-Gunter's chain      |      | 39.3701 / 792
-Hammer unit         |      | (39.3701 / 12) * 16
-hand                | h    | 39.3701 / 4
-hiro                | 尋    | .55
-Hubble length       |      | 1 / (9460730472580800 * 14400000000)
-inch                | in   | 39.3701
-jacktan             |      | 1 / 3.658
-jō                  | 丈    | .33
-jow                 |      | 1 / .00635
-kanejaku            | 曲尺   | 3.3
-ken                 | 間    | .55
-kos                 |      | 1 / 3075
-lár                 |      | 39.3701 / 190080
-latro               |      | 1 / 1.917
-league              |      | 9.3701 / 216000
-light-second        |      | 1 / 299792458
-light-year          | ly   | 1 / 9460730472580800
-ligne               |      | 1 / .0022558291
-link                | l.   | 1 / .201168
-loket (Bohemia)     |      | 1 / .593
-loket (Moravia)     |      | 1 / .594
-loket (Silesia      |      | 1 / .579
-lunar distance      | LD   | 1 / 384402000
-metre               | m    | 1
-metric foot         |      | 1 / .3
-metric inch         |      | 1 / .025
-mil                 |      | 39370.1
-mile                | mi   | 39.3701 / 63360
-mō                  | 毛, 毫 | 33000
-nail                |      | 39.3701 / .25
-nautical league     |      | 1 / 5556
-nautical mile       | nmi  | 1 / 1852
-ohra                |      | 1 / .571
-palm                |      | 39.3701 / 3
-parsec              | pc   | 1 / 30856775800000000
-perche              |      | 1 / 6.497
-pic                 |      | 1 / .582
-pied                |      | 1 / .32485
-pik                 |      | 1 / .578
-potrzebie           |      | 1 / .0022633484517438173216473
-rack unit           | U    | 39.3701 / 1.75
-rahf                |      | 39.3701 / 46.46
-ranga               |      | 39.3701 / 38.016
-ri                  | 里    | 3.3 / 12960
-rin                 | 厘    | 3300
-sah                 |      | 1 / 1.778
-shackle             |      | 39.3701 / 1080
-shaku               | 尺    | 3.3
-Sheppey             |      | 39.3701 / 55440
-siriometer          | sir  | 1 / 149597870700000000
-Skyrim unit         |      | 39.3701 / (12 * .046875)
-smoot               |      | 1 / 1.702
-spat                | S    | .00000001
-stick               |      | 39.3701 / 2
-stopa (Bohemia)     |      | 1 / .2965
-stopa (Moravia)     |      | 1 / .284
-stopa (Silesia)     |      | 1 / .2895
-story               |      | 1 / 3.3
-sun                 | 寸    | 33
-survey foot (India) |      | 1 / .3047996
-survey foot (US)    |      | 3937 / 1200
-thou                |      | 1 / .0000254
-toise               |      | 1 / 1.9488
-unglie              |      | 1 / .01905
-vara                |      | 39.3701 / 33.384
-yard                | yd   | 39.3701 / 36
+Length                   | Unit | 1 metre =
+-------------------------|------|-------------------------------------
+ald                      |      | 1 / 1.6
+alen                     |      | 1 / .6277
+aln                      |      | 1 / .5938
+Altuve                   |      | 39.3701 / 65
+ångström                 | Å    | 10000000000
+Aṅgula                   |      | 1 / .01763
+anne                     |      | 1 / 1.188
+archine                  |      | 1 / .7112
+arpent                   |      | 1 / 58.47109
+astronomical Unit        | au   | 1 / 149597870700
+barleycorn               |      | 118.11
+bu                       | 分    | 330
+cable                    |      | 39.3701 / 7200
+chain                    | ch   | 1 / 20.1168
+chi                      | 尺    | 3
+chō                      | 町    | 3.3 / 360
+covid                    |      | 1 / .464
+cubit                    |      | 1 / .4572
+digit                    |      | 39.3701 / .75
+ell (Danish)             |      | 1 / .941318
+ell (Flemish)            |      | 1 / .686
+ell (French)             |      | 1 / 1.372
+ell (German)             |      | 1 / .579
+ell (Polish)             |      | 1 / .787
+ell (Scottish)           |      | 1 / .635
+elle (Kuunar)            |      | 1 / .5334
+faden                    |      | 1 / 2.1336
+fathom                   |      | 39.3701 / 72
+foot                     | ft   | 39.3701 / 12
+foute                    |      | 1 / .3048
+furlong                  |      | 39.3701 / 7920
+girah                    |      | 1 / .05715
+Gunter's chain           |      | 39.3701 / 792
+Hammer unit              |      | (39.3701 / 12) * 16
+hand                     | h    | 39.3701 / 4
+hiro                     | 尋    | .55
+Hubble length            |      | 1 / (9460730472580800 * 14400000000)
+inch                     | in   | 39.3701
+jacktan                  |      | 1 / 3.658
+Jimmy Griffin Snow Index |      | 39.3701 / 4
+jō                       | 丈    | .33
+jow                      |      | 1 / .00635
+kanejaku                 | 曲尺   | 3.3
+ken                      | 間    | .55
+kos                      |      | 1 / 3075
+lár                      |      | 39.3701 / 190080
+latro                    |      | 1 / 1.917
+league                   |      | 9.3701 / 216000
+light-second             |      | 1 / 299792458
+light-year               | ly   | 1 / 9460730472580800
+ligne                    |      | 1 / .0022558291
+link                     | l.   | 1 / .201168
+loket (Bohemia)          |      | 1 / .593
+loket (Moravia)          |      | 1 / .594
+loket (Silesia           |      | 1 / .579
+lunar distance           | LD   | 1 / 384402000
+metre                    | m    | 1
+metric foot              |      | 1 / .3
+metric inch              |      | 1 / .025
+mil                      |      | 39370.1
+mile                     | mi   | 39.3701 / 63360
+mō                       | 毛, 毫 | 33000
+nail                     |      | 39.3701 / .25
+nautical league          |      | 1 / 5556
+nautical mile            | nmi  | 1 / 1852
+ohra                     |      | 1 / .571
+palm                     |      | 39.3701 / 3
+parsec                   | pc   | 1 / 30856775800000000
+perche                   |      | 1 / 6.497
+pic                      |      | 1 / .582
+pied                     |      | 1 / .32485
+pik                      |      | 1 / .578
+potrzebie                |      | 1 / .0022633484517438173216473
+rack unit                | U    | 39.3701 / 1.75
+rahf                     |      | 39.3701 / 46.46
+ranga                    |      | 39.3701 / 38.016
+ri                       | 里    | 3.3 / 12960
+rin                      | 厘    | 3300
+sah                      |      | 1 / 1.778
+shackle                  |      | 39.3701 / 1080
+shaku                    | 尺    | 3.3
+Sheppey                  |      | 39.3701 / 55440
+siriometer               | sir  | 1 / 149597870700000000
+Skyrim unit              |      | 39.3701 / (12 * .046875)
+smoot                    |      | 1 / 1.702
+spat                     | S    | .00000001
+stick                    |      | 39.3701 / 2
+stopa (Bohemia)          |      | 1 / .2965
+stopa (Moravia)          |      | 1 / .284
+stopa (Silesia)          |      | 1 / .2895
+story                    |      | 1 / 3.3
+sun                      | 寸    | 33
+survey foot (India)      |      | 1 / .3047996
+survey foot (US)         |      | 3937 / 1200
+thou                     |      | 1 / .0000254
+toise                    |      | 1 / 1.9488
+unglie                   |      | 1 / .01905
+vara                     |      | 39.3701 / 33.384
+yard                     | yd   | 39.3701 / 36
 
 ---
 
