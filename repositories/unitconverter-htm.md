@@ -118,6 +118,7 @@ Energy                            | Unit               | 1 joule =
 ----------------------------------|--------------------|--------------------
 electron volt                     | eV                 | 6241509343300000000
 erg                               |                    | 10000000
+foe                               |                    | 1 / 1e44
 foot-pound                        | ft·lb              | 1 / 1.3558179483314
 international steam table calorie | cal<sub>it</sub>   | 1 / 4.1868
 joule                             | J                  | 1
