@@ -15,6 +15,7 @@
 * [`webgl_character_jump(args)`](#webgl_character_jumpargs)
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
 * [`webgl_character_origin(args)`](#webgl_character_originargs)
+* [`webgl_character_random(args)`](#webgl_character_randomargs)
 * [`webgl_character_set(args)`](#webgl_character_setargs)
 * [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
@@ -225,6 +226,15 @@ character | webgl_character_id | string ID
 Arg       | Default            | Type
 ----------|--------------------|----------
 character | webgl_character_id | string ID
+
+---
+
+### `webgl_character_random(args)`
+* Creates a new character with randomized properties and cuboid body.
+
+Arg | Default | Type
+----|---------|----------
+id  |         | string ID
 
 ---
 
