@@ -320,6 +320,14 @@ function repo_init(){
       },
       {
         'args': {
+          'decimals': 1,
+          'number': 1.234e23,
+        },
+        'expect': 1.2e23,
+        'function': 'core_round',
+      },
+      {
+        'args': {
           'array': [
             8,
             16,
