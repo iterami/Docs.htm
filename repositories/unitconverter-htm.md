@@ -310,6 +310,7 @@ boṛi               | बोड़ि            | 1 / 583.125
 bundle             |               | 1 / 317.5
 caret              | ct            | 5
 cental             |               | .0220462262185
+couric             |               | 1 / 453.59237 / 2.5
 cullingey          |               | 1 / 5.265
 dharni             | धार्नि           | 1 / 2332.5
 dirhem (Ottoman)   |               | 1 / 3.20725
