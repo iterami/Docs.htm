@@ -11,6 +11,7 @@
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
 * [`webgl_character_damage(args)`](#webgl_character_damageargs)
 * [`webgl_character_home()`](#webgl_character_home)
+* [`webgl_character_home_entityupdate()`](#webgl_character_home_entityupdate)
 * [`webgl_character_init(args)`](#webgl_character_initargs)
 * [`webgl_character_jump(args)`](#webgl_character_jumpargs)
 * [`webgl_character_level(args)`](#webgl_character_levelargs)
@@ -168,6 +169,12 @@ kill      | false              | boolean
 
 ### `webgl_character_home()`
 * If the `webgl_character_id` character has a home, current level is unloaded and replaced with home.
+
+---
+
+### `webgl_character_home_entityupdate()`
+* Clears current `webgl_character_homebase['entities']`.
+* Loops through current entities. If any are attached to `webgl_character_id` and not in the skybox, then their properties are copied and pushed into `webgl_character_homebase['entities']`.
 
 ---
 
