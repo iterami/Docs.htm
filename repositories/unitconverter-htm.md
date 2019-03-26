@@ -11,6 +11,7 @@
 * [Illuminance](#illuminance)
 * [Length](#length)
 * [Level](#level)
+* [Luminous Intensity](#luminous-intensity)
 * [Magnetism](#magnetism)
 * [Mass](#mass)
 * [Power](#power)
@@ -275,13 +276,22 @@ yard                     | yd   | 39.3701 / 36
 
 ---
 
-### Level
+### Luminous Intensity
+
+Luminous Intensity | Unit | 1 candela =
+-------------------|------|------------
+candlepower        | cp   | 1 / .981
+candela            | cd   | 1
+Carcel             |      | 1 / 9.74
+Hefnerkerze        |      | 1 / .920
+Violle             |      | 1 / 20.17
+
+---
+
+### level
 
 Level   | Unit | 1 decibel =
 --------|------|------------
-bel     | B    | .1
-decibel | dB   | 1
-neper   | Np   | 1 / 8.68589
 
 ---
 
