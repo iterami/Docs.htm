@@ -36,28 +36,22 @@ function repo_init(){
     document.getElementById('results').innerHTML = results;
 
     for(let uri in uris){
-        core_image({
-          'id': uri,
-          'src': uris[uri],
-          'todo': function(){
-              let canvas_element = document.getElementById('canvas-' + uri);
+        let canvas_element = document.getElementById('canvas-' + uri);
 
-              canvas_element.height = core_images[uri]['height'];
-              canvas_element.width = core_images[uri]['width'];
-              canvas_element.style.display = 'inline';
+        canvas_element.height = core_images[uri]['height'];
+        canvas_element.width = core_images[uri]['width'];
+        canvas_element.style.display = 'inline';
 
-              let canvas = canvas_element.getContext('2d');
-              canvas.drawImage(
-                core_images[uri],
-                0,
-                0
-              );
+        let canvas = canvas_element.getContext('2d');
+        canvas.drawImage(
+          core_images[uri],
+          0,
+          0
+        );
 
-              document.getElementById('height-' + uri).innerHTML = core_images[uri]['height'];
-              document.getElementById('width-' + uri).innerHTML = core_images[uri]['width'];
-              document.getElementById('size-' + uri).innerHTML = document.getElementById(uri).value.length;
-          },
-        });
+        document.getElementById('height-' + uri).innerHTML = core_images[uri]['height'];
+        document.getElementById('width-' + uri).innerHTML = core_images[uri]['width'];
+        document.getElementById('size-' + uri).innerHTML = document.getElementById(uri).value.length;
     }
 }
 
