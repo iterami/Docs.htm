@@ -931,7 +931,6 @@ mousebinds        | false     | boolean false or object
 storage           | {}        | object
 storage-menu      | ''        | string
 tabs              | {}        | object
-textures          | false     | boolean false or object
 title             |           | string
 ui                | ''        | string
 
