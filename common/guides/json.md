@@ -114,13 +114,18 @@
             "rotate-y": 0,
             "translate-x": 0
           },
-          "collide-damage": 0,
           "collide-range-horizontal": 2.5,
           "collide-range-vertical": 2.5,
           "collides": false,
           "collision": true,
           "draw": true,
           "draw-type": "TRIANGLE_STRIP",
+          "event-modify": {
+            "health-current": -100
+          },
+          "event-target-id": "_me",
+          "event-target-type": "character",
+          "event-type": "collision",
           "gravity": false,
           "item-amount": 1,
           "item-entities": [],
@@ -460,9 +465,6 @@
           // Optional. If this entity collides with other entities that have collision.
           "collides": true,
 
-          // Optional. How much damage is done to characters when collision occurs.
-          "collide-damage": 0,
-
           // Optional. If this entity collides, then this is the maximum distance before collision occurs.
           "collide-range-horizontal": 2.5,
           "collide-range-vertical": 2.5,
@@ -475,6 +477,21 @@
 
           // Optional. How the vertices should be drawn.
           "draw-type": "TRIANGLE_STRIP",
+
+          // Optional. Property modification upon successful event trigger.
+          "event-modify": {
+            "health-current": -100
+          },
+
+          // Optional. ID required to trigger event, or false to allow all.
+          "event-target-id": "_me",
+
+          // Optional. Type required to trigger event, either "character" or "entity".
+          "event-target-type": "character",
+
+          // Optional. How this entity's event is triggered, or false for no event.
+          // Current options include: "collision"
+          "event-type": "collision",
 
           // Optional. If this entity is affected by gravity.
           "gravity": false,

@@ -9,7 +9,6 @@
 * [`webgl_camera_handle()`](#webgl_camera_handle)
 * [`webgl_camera_rotate(args)`](#webgl_camera_rotateargs)
 * [`webgl_camera_zoom()`](#webgl_camera_zoom)
-* [`webgl_character_damage(args)`](#webgl_character_damageargs)
 * [`webgl_character_home()`](#webgl_character_home)
 * [`webgl_character_home_entityupdate()`](#webgl_character_home_entityupdate)
 * [`webgl_character_init(args)`](#webgl_character_initargs)
@@ -58,6 +57,7 @@
 * [`webgl_shader_create(args)`](#webgl_shader_createargs)
 * [`webgl_shader_recreate()`](#webgl_shader_recreate)
 * [`webgl_shader_update()`](#webgl_shader_update)
+* [`webgl_stat_modify(args)`](#webgl_stat_modifyargs)
 * [`webgl_texture_set(args)`](#webgl_texture_setargs)
 * [`webgl_vertexattribarray_set(args)`](#webgl_vertexattribarray_setargs)
 * [`webgl_vertexcolorarray(args)`](#webgl_vertexcolorarrayargs)
@@ -153,18 +153,6 @@ z         | 0       | number
 
 ### `webgl_camera_zoom()`
 * Functon called by bound `mousewheel` event within `mousebinds`.
-
----
-
-### `webgl_character_damage(args)`
-* Damages or fully kills a character, or optionally fully kills them. Removes attached entities, then either sets `health-current` to 0 or deletes entirely.
-
-Arg       | Default            | Type
-----------|--------------------|----------
-character | webgl_character_id | string ID
-damage    | 100                | number
-delete    | false              | boolean
-kill      | false              | boolean
 
 ---
 
@@ -727,6 +715,18 @@ type   |         | webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
 
 ### `webgl_shader_update()`
 * Updates the shader uniform values.
+
+---
+
+### `webgl_stat_modify(args)`
+* Modifies a character or entity property.
+* Character `health-current` has extra checks for character death, to then remove attached entities.
+
+Arg    | Default | Type
+-------|---------|------------------------
+parent |         | character/entity object
+amount | 1       | number
+stat   |         | string
 
 ---
 
