@@ -123,9 +123,9 @@
           "event-modify": {
             "health-current": -100
           },
+          "event-range": 0,
           "event-target-id": "_me",
           "event-target-type": "character",
-          "event-type": "collision",
           "gravity": false,
           "item-amount": 1,
           "item-entities": [],
@@ -483,15 +483,15 @@
             "health-current": -100
           },
 
+          // Optional. The range at which this event triggers.
+          // If range is 0, only during collisions.
+          "event-range": 0,
+
           // Optional. ID required to trigger event, or false to allow all.
           "event-target-id": "_me",
 
           // Optional. Type required to trigger event, either "character" or "entity".
           "event-target-type": "character",
-
-          // Optional. How this entity's event is triggered, or false for no event.
-          // Current options include: "collision"
-          "event-type": "collision",
 
           // Optional. If this entity is affected by gravity.
           "gravity": false,
