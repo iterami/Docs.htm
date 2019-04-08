@@ -120,9 +120,12 @@
           "collision": true,
           "draw": true,
           "draw-type": "TRIANGLE_STRIP",
-          "event-modify": {
-            "health-current": -100
-          },
+          "event-modify": [
+            {
+              "amount": -100,
+              "stat": "health-current"
+            }
+          ],
           "event-range": 0,
           "event-target-id": "_me",
           "event-target-type": "character",
@@ -478,10 +481,13 @@
           // Optional. How the vertices should be drawn.
           "draw-type": "TRIANGLE_STRIP",
 
-          // Optional. Property modification upon successful event trigger.
-          "event-modify": {
-            "health-current": -100
-          },
+          // Optional. Array of stat modifications to use upon successful event trigger.
+          "event-modify": [
+            {
+              "amount": -100,
+              "stat": "health-current"
+            }
+          ],
 
           // Optional. The range at which this event triggers.
           // If range is 0, only during collisions.

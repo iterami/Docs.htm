@@ -719,13 +719,14 @@ type   |         | webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
 ---
 
 ### `webgl_stat_modify(args)`
-* Modifies a character or entity property.
-* Character `health-current` has extra checks for character death, to then remove attached entities.
+* Modifies or sets a character/entity property.
+* Character `health-current` property has extra checks to remove attached entities upon death.
 
 Arg    | Default | Type
 -------|---------|------------------------
 parent |         | character/entity object
 amount | 1       | number
+set    | false   | boolean
 stat   |         | string
 
 ---
