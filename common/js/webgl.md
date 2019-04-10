@@ -675,6 +675,16 @@ top-color-top       | false   | boolean false or array of numbers
 
 ---
 
+### `webgl_prefab_tiles(args)`
+* Creates a randomized assortment of tile prefabs.
+
+Arg    | Default | Type
+-------|---------|----------
+prefix |         | string ID
+
+
+---
+
 ### `webgl_program_create(args)`
 * Creates, links, uses, and returns a WebGL shader program.
 
