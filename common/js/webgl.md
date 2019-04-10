@@ -549,9 +549,9 @@ Arg            | Default | Type
 ---------------|---------|---------------------------
 entity         |         | character/entity object
 path-direction | 1       | 1 or -1
-path-end       | false   | boolean false or integer
+path-end       | false   | boolean false or number
 path-id        | false   | boolean false or string ID
-path-point     | 0       | integer
+path-point     | 0       | number
 
 ---
 
@@ -574,40 +574,41 @@ y   |         | number
 * Creates a cuboid prefab with specified properties.
 * Translation is the center of the cuboid.
 
-Arg                  | Default       | Type
----------------------|---------------|----------------------------------
-all-alpha            | false         | boolean false or number
-all-collision        | true          | boolean
-all-vertex-colors    | false         | boolean false or array of numbers
-back-alpha           | 1             | number
-back-collision       | false         | boolean
-back-vertex-colors   | false         | boolean false or array of numbers
-bottom-alpha         | 1             | number
-bottom-collision     | false         | boolean
-bottom-vertex-colors | false         | boolean false or array of numbers
-exclude              | {}            | object of side booleans
-front-alpha          | 1             | number
-front-collision      | false         | boolean
-front-vertex-colors  | false         | boolean false or array of numbers
-groups               | []            | array of string IDs
-left-alpha           | 1             | number
-left-collision       | false         | boolean
-left-vertex-colors   | false         | boolean false or array of numbers
-prefix               | core_id_count | number or string
-properties           | {}            | object
-random-colors        | false         | boolean
-right-alpha          | 1             | number
-right-collision      | false         | boolean
-right-vertex-colors  | false         | boolean false or array of numbers
-size-x               | 1             | number
-size-y               | 1             | number
-size-z               | 1             | number
-top-alpha            | 1             | number
-top-collision        | false         | boolean
-top-vertex-colors    | false         | boolean false or array of numbers
-translate-x          | 0             | number
-translate-y          | 0             | number
-translate-z          | 0             | number
+Arg                  | Default            | Type
+---------------------|--------------------|----------------------------------
+all-alpha            | false              | boolean false or number
+all-collision        | true               | boolean
+all-vertex-colors    | false              | boolean false or array of numbers
+back-alpha           | 1                  | number
+back-collision       | false              | boolean
+back-vertex-colors   | false              | boolean false or array of numbers
+bottom-alpha         | 1                  | number
+bottom-collision     | false              | boolean
+bottom-vertex-colors | false              | boolean false or array of numbers
+character            | webgl_character_id | string ID
+exclude              | {}                 | object of side booleans
+front-alpha          | 1                  | number
+front-collision      | false              | boolean
+front-vertex-colors  | false              | boolean false or array of numbers
+groups               | []                 | array of string IDs
+left-alpha           | 1                  | number
+left-collision       | false              | boolean
+left-vertex-colors   | false              | boolean false or array of numbers
+prefix               | core_id_count      | number or string
+properties           | {}                 | object
+random-colors        | false              | boolean
+right-alpha          | 1                  | number
+right-collision      | false              | boolean
+right-vertex-colors  | false              | boolean false or array of numbers
+size-x               | 1                  | number
+size-y               | 1                  | number
+size-z               | 1                  | number
+top-alpha            | 1                  | number
+top-collision        | false              | boolean
+top-vertex-colors    | false              | boolean false or array of numbers
+translate-x          | 0                  | number
+translate-y          | 0                  | number
+translate-z          | 0                  | number
 
 ---
 
@@ -615,22 +616,23 @@ translate-z          | 0             | number
 * Creates a cuboid tree prefab with the specified properties.
 * Translation is the center of the bottom face of the trunk.
 
-Arg                  | Default       | Type
----------------------|---------------|-----------------
-collision-leaves     | true          | boolean
-collision-trunk      | true          | boolean
-leaves-size-x        | 10            | number
-leaves-size-y        | 10            | number
-leaves-size-z        | 10            | number
-prefix               | core_id_count | number or string
-translate-x          | 0             | number
-translate-y          | 0             | number
-translate-z          | 0             | number
-trunk-size-x         | 2             | number
-trunk-size-y         | 10            | number
-trunk-size-z         | 2             | number
-vertex-colors-leaves | array[]       | array of numbers
-vertex-colors-trunk  | array[]       | array of numbers
+Arg                  | Default            | Type
+---------------------|--------------------|-----------------
+character            | webgl_character_id | string ID
+collision-leaves     | true               | boolean
+collision-trunk      | true               | boolean
+leaves-size-x        | 10                 | number
+leaves-size-y        | 10                 | number
+leaves-size-z        | 10                 | number
+prefix               | core_id_count      | number or string
+translate-x          | 0                  | number
+translate-y          | 0                  | number
+translate-z          | 0                  | number
+trunk-size-x         | 2                  | number
+trunk-size-y         | 10                 | number
+trunk-size-z         | 2                  | number
+vertex-colors-leaves | array[]            | array of numbers
+vertex-colors-trunk  | array[]            | array of numbers
 
 ---
 
@@ -638,50 +640,55 @@ vertex-colors-trunk  | array[]       | array of numbers
 * Creates a lines tree prefab with the specified properties.
 * Translation is the center of the bottom of the trunk.
 
-Arg                  | Default       | Type
----------------------|---------------|-----------------
-prefix               | core_id_count | number or string
-translate-x          | 0             | number
-translate-y          | 0             | number
-translate-z          | 0             | number
-trunk-branch-max     | 4             | number
-trunk-branch-min     | 0             | number
-trunk-count-max      | 10            | number
-trunk-count-min      | 1             | number
-trunk-length         | 10            | number
-trunk-width-max      | 2             | number
-trunk-width-min      | 1             | number
-vertex-colors-leaves | array[]       | array of numbers
-vertex-colors-trunk  | array[]       | array of numbers
+Arg                  | Default            | Type
+---------------------|--------------------|-----------------
+character            | webgl_character_id | string ID
+prefix               | core_id_count      | number or string
+translate-x          | 0                  | number
+translate-y          | 0                  | number
+translate-z          | 0                  | number
+trunk-branch-max     | 4                  | number
+trunk-branch-min     | 0                  | number
+trunk-count-max      | 10                 | number
+trunk-count-min      | 1                  | number
+trunk-length         | 10                 | number
+trunk-width-max      | 2                  | number
+trunk-width-min      | 1                  | number
+vertex-colors-leaves | array[]            | array of numbers
+vertex-colors-trunk  | array[]            | array of numbers
 
 ---
 
 ### `webgl_prefab_skybox(args)`
 * Creates a skybox prefab around the `webgl_player_id` camera.
 
-Arg                 | Default       | Type
---------------------|---------------|----------------------------------
-bottom-color-bottom | false         | boolean false or array of numbers
-bottom-color-top    | false         | boolean false or array of numbers
-prefix              | core_id_count | number or string
-random-colors       | false         | boolean
-rotate-x            | 0             | number
-rotate-y            | 0             | number
-rotate-z            | 0             | number
-sides               | 3             | number
-size                | 99            | number
-top-color-bottom    | false         | boolean false or array of numbers
-top-color-top       | false         | boolean false or array of numbers
+Arg                 | Default            | Type
+--------------------|--------------------|----------------------------------
+bottom-color-bottom | false              | boolean false or array of numbers
+bottom-color-top    | false              | boolean false or array of numbers
+character           | webgl_character_id | string ID
+prefix              | core_id_count      | number or string
+random-colors       | false              | boolean
+rotate-x            | 0                  | number
+rotate-y            | 0                  | number
+rotate-z            | 0                  | number
+sides               | 3                  | number
+size                | 99                 | number
+top-color-bottom    | false              | boolean false or array of numbers
+top-color-top       | false              | boolean false or array of numbers
 
 ---
 
 ### `webgl_prefab_tiles(args)`
 * Creates a randomized assortment of tile prefabs.
 
-Arg    | Default       | Type
--------|---------------|----------
-prefix | core_id_count | number or string
-
+Arg       | Default            | Type
+----------|--------------------|----------------------
+character | webgl_character_id | string ID
+prefix    | core_id_count      | number or string
+tiles     |                    | array of tile objects
+tiles-max | 5                  | number
+tiles-min | 1                  | number
 
 ---
 
