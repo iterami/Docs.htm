@@ -682,13 +682,16 @@ top-color-top       | false              | boolean false or array of numbers
 ### `webgl_prefab_tiles(args)`
 * Creates a randomized assortment of tile prefabs.
 
-Arg       | Default            | Type
-----------|--------------------|----------------------
-character | webgl_character_id | string ID
-prefix    | core_id_count      | number or string
-tiles     |                    | array of tile objects
-tiles-max | 5                  | number
-tiles-min | 1                  | number
+Arg         | Default            | Type
+------------|--------------------|----------------------
+character   | webgl_character_id | string ID
+prefix      | core_id_count      | number or string
+tiles       |                    | array of tile objects
+tiles-max   | 5                  | number
+tiles-min   | 1                  | number
+translate-x | 0                  | number
+translate-y | 0                  | number
+translate-z | 0                  | number
 
 ---
 
