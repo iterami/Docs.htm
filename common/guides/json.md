@@ -589,7 +589,7 @@
 
       // REQUIRED. Properties of this prefab. Passed as args.
       "properties": {
-        // REQUIRED. Prefix added to each created entity ID.
+        // Optional. Prefix added to each created entity ID.
         "prefix": "example-cuboid",
 
         // Optional. Overrides that can be applied to every non-excluded face.

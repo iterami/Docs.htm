@@ -615,22 +615,22 @@ translate-z          | 0             | number
 * Creates a cuboid tree prefab with the specified properties.
 * Translation is the center of the bottom face of the trunk.
 
-Arg                  | Default | Type
----------------------|---------|-----------------
-collision-leaves     | true    | boolean
-collision-trunk      | true    | boolean
-leaves-size-x        | 10      | number
-leaves-size-y        | 10      | number
-leaves-size-z        | 10      | number
-prefix               |         | number or string
-translate-x          | 0       | number
-translate-y          | 0       | number
-translate-z          | 0       | number
-trunk-size-x         | 2       | number
-trunk-size-y         | 10      | number
-trunk-size-z         | 2       | number
-vertex-colors-leaves | array[] | array of numbers
-vertex-colors-trunk  | array[] | array of numbers
+Arg                  | Default       | Type
+---------------------|---------------|-----------------
+collision-leaves     | true          | boolean
+collision-trunk      | true          | boolean
+leaves-size-x        | 10            | number
+leaves-size-y        | 10            | number
+leaves-size-z        | 10            | number
+prefix               | core_id_count | number or string
+translate-x          | 0             | number
+translate-y          | 0             | number
+translate-z          | 0             | number
+trunk-size-x         | 2             | number
+trunk-size-y         | 10            | number
+trunk-size-z         | 2             | number
+vertex-colors-leaves | array[]       | array of numbers
+vertex-colors-trunk  | array[]       | array of numbers
 
 ---
 
@@ -638,49 +638,49 @@ vertex-colors-trunk  | array[] | array of numbers
 * Creates a lines tree prefab with the specified properties.
 * Translation is the center of the bottom of the trunk.
 
-Arg                  | Default | Type
----------------------|---------|-----------------
-prefix               |         | string
-translate-x          | 0       | number
-translate-y          | 0       | number
-translate-z          | 0       | number
-trunk-branch-max     | 4       | number
-trunk-branch-min     | 0       | number
-trunk-count-max      | 10      | number
-trunk-count-min      | 1       | number
-trunk-length         | 10      | number
-trunk-width-max      | 2       | number
-trunk-width-min      | 1       | number
-vertex-colors-leaves | array[] | array of numbers
-vertex-colors-trunk  | array[] | array of numbers
+Arg                  | Default       | Type
+---------------------|---------------|-----------------
+prefix               | core_id_count | number or string
+translate-x          | 0             | number
+translate-y          | 0             | number
+translate-z          | 0             | number
+trunk-branch-max     | 4             | number
+trunk-branch-min     | 0             | number
+trunk-count-max      | 10            | number
+trunk-count-min      | 1             | number
+trunk-length         | 10            | number
+trunk-width-max      | 2             | number
+trunk-width-min      | 1             | number
+vertex-colors-leaves | array[]       | array of numbers
+vertex-colors-trunk  | array[]       | array of numbers
 
 ---
 
 ### `webgl_prefab_skybox(args)`
 * Creates a skybox prefab around the `webgl_player_id` camera.
 
-Arg                 | Default | Type
---------------------|---------|----------------------------------
-bottom-color-bottom | false   | boolean false or array of numbers
-bottom-color-top    | false   | boolean false or array of numbers
-prefix              |         | string ID
-random-colors       | false   | boolean
-rotate-x            | 0       | number
-rotate-y            | 0       | number
-rotate-z            | 0       | number
-sides               | 3       | number
-size                | 99      | number
-top-color-bottom    | false   | boolean false or array of numbers
-top-color-top       | false   | boolean false or array of numbers
+Arg                 | Default       | Type
+--------------------|---------------|----------------------------------
+bottom-color-bottom | false         | boolean false or array of numbers
+bottom-color-top    | false         | boolean false or array of numbers
+prefix              | core_id_count | number or string
+random-colors       | false         | boolean
+rotate-x            | 0             | number
+rotate-y            | 0             | number
+rotate-z            | 0             | number
+sides               | 3             | number
+size                | 99            | number
+top-color-bottom    | false         | boolean false or array of numbers
+top-color-top       | false         | boolean false or array of numbers
 
 ---
 
 ### `webgl_prefab_tiles(args)`
 * Creates a randomized assortment of tile prefabs.
 
-Arg    | Default | Type
--------|---------|----------
-prefix |         | string ID
+Arg    | Default       | Type
+-------|---------------|----------
+prefix | core_id_count | number or string
 
 
 ---
