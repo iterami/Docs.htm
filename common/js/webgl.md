@@ -686,6 +686,9 @@ Arg         | Default            | Type
 ------------|--------------------|----------------------
 character   | webgl_character_id | string ID
 prefix      | core_id_count      | number or string
+rotate-x    | 0                  | number
+rotate-y    | 0                  | number
+rotate-z    | 0                  | number
 tiles       |                    | array of tile objects
 tiles-max   | 5                  | number
 tiles-min   | 1                  | number
