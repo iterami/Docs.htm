@@ -77,6 +77,7 @@ webgl_character_trading  | ''      | string ID
 webgl_characters         | {}      | object
 webgl_diagonal           | 0       | number
 webgl_extensions         | {}      | object
+webgl_levelcache         | {}      | object
 webgl_paths              | {}      | object
 webgl_properties         | {}      | object
 webgl_text               | {}      | object
