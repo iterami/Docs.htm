@@ -479,7 +479,6 @@ cache     | false   | boolean false or string ID
 character | 0       | number
 json      | false   | boolean false or object
 
-
 ---
 
 ### `webgl_level_unload()`
@@ -683,19 +682,18 @@ top-color-top       | false              | boolean false or array of numbers
 ### `webgl_prefab_tiles(args)`
 * Creates a randomized assortment of tile prefabs.
 
-Arg         | Default            | Type
-------------|--------------------|----------------------
-character   | webgl_character_id | string ID
-prefix      | core_id_count      | number or string
-rotate-x    | 0                  | number
-rotate-y    | 0                  | number
-rotate-z    | 0                  | number
-tiles       |                    | array of tile objects
-tiles-max   | 5                  | number
-tiles-min   | 1                  | number
-translate-x | 0                  | number
-translate-y | 0                  | number
-translate-z | 0                  | number
+Arg         | Default       | Type
+------------|---------------|----------------------
+prefix      | core_id_count | number or string
+rotate-x    | 0             | number
+rotate-y    | 0             | number
+rotate-z    | 0             | number
+tiles       |               | array of tile objects
+tiles-max   | 5             | number
+tiles-min   | 1             | number
+translate-x | 0             | number
+translate-y | 0             | number
+translate-z | 0             | number
 
 ---
 
