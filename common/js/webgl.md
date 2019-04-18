@@ -26,7 +26,6 @@
 * [`webgl_entity_create(args)`](#webgl_entity_createargs)
 * [`webgl_entity_move(args)`](#webgl_entity_moveargs)
 * [`webgl_entity_move_to(args)`](#webgl_entity_move_toargs)
-* [`webgl_entity_radians(args)`](#webgl_entity_radiansargs)
 * [`webgl_entity_todo(entity)`](#webgl_entity_todoentity)
 * [`webgl_event(args)`](#webgl_eventargs)
 * [`webgl_extension(args)`](#webgl_extensionargs)
@@ -326,16 +325,6 @@ entity    |         | character/entity object
 x         | 0       | number
 y         | 0       | number
 z         | 0       | number
-
----
-
-### `webgl_entity_radians(args)`
-* Updates entity rotation radian values based on current degree rotation.
-
-Arg       | Default | Type
-----------|---------|---------------------------
-character | false   | boolean false or string ID
-entity    |         | string ID
 
 ---
 
