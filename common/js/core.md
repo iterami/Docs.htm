@@ -76,6 +76,7 @@
 * [`core_move_2d_diagonal(args)`](#core_move_2d_diagonalargs)
 * [`core_move_2d(args)`](#core_move_2dargs)
 * [`core_move_3d(args)`](#core_move_3dargs)
+* [`core_normalize(args)`](#core_normalizeargs)
 * [`core_number_format(args)`](#core_number_formatargs)
 * [`core_point_angle(args)`](#core_point_angleargs)
 * [`core_radians_to_degrees(args)`](#core_radians_to_degreesargs)
@@ -808,6 +809,17 @@ decimals   | core_storage_data['decimals'] | number
 multiplier | 1                             | number
 speed      | 1                             | number
 strafe     | false                         | boolean
+
+---
+
+### `core_normalize(args)`
+* Normalize a 2D or 3D vector.
+
+Arg | Default | Type
+----|---------|-------
+x   |         | number
+y   |         | number
+z   | 0       | number
 
 ---
 
