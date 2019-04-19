@@ -488,14 +488,11 @@ json      | false   | boolean false or object
 ---
 
 ### `webgl_normals(args)`
-* Returns an array of calculated normals. Contains x, y, and z normals for each vertex.
+* Returns an array of calculated normals, containing x, y, and z normals based on rotation.
 
-Arg            | Default | Type
----------------|---------|-------
-rotate-x       | 0       | number
-rotate-y       | 0       | number
-rotate-z       | 0       | number
-vertices-count | 1       | number
+Arg    | Default | Type
+-------|---------|------------------------
+entity |         | character/entity object
 
 ---
 
