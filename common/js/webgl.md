@@ -18,6 +18,7 @@
 * [`webgl_character_random(args)`](#webgl_character_randomargs)
 * [`webgl_character_set(args)`](#webgl_character_setargs)
 * [`webgl_character_spawn(args)`](#webgl_character_spawnargs)
+* [`webgl_clamp_rotation(args)`](#webgl_clamp_rotationargs)
 * [`webgl_clearcolor_set(args)`](#webgl_clearcolor_setargs)
 * [`webgl_collision(args)`](#webgl_collisionargs)
 * [`webgl_draw()`](#webgl_draw)
@@ -251,6 +252,15 @@ id  |         | string ID
 Arg       | Default            | Type
 ----------|--------------------|----------
 character | webgl_character_id | string ID
+
+---
+
+### `webgl_clamp_rotation(args)`
+* Clamps x/y/z rotation to less than 360 and greater than or equal to 0.
+
+Arg    | Default | Type
+-------|---------|------------------------
+entity |         | character/entity object
 
 ---
 
