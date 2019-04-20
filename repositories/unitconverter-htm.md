@@ -584,8 +584,8 @@ cubic metre             | m³    | .001
 cubic mile              | mi³   | .000000000000239912758579
 cubic yard              | yd³   | 1 / 764.5549
 culeus                  |       | 1 / 523.2
-cup (imperial)          |       | 1 / .284
-cup (US)                |       | 4.22675
+cup (imperial)          |       | 35.1950652 / 8
+cup (US)                |       | 33.8140227 / 8
 cyathus                 |       | 1 / (3.27 / 72)
 demiard                 |       | 1 / .284
 djezla                  |       | 1 / 257.4
@@ -596,12 +596,12 @@ fluid dram (US)         | fl dr | 1 / .0036966911953125
 fluid ounce (imperial)  | fl oz | 35.1950652
 fluid ounce (US)        | fl oz | 33.8140227
 fluid scruple           | ℈     | 1 / 1.23
-gallon (imperial)       | gal   | 1 / 4.546094188
-gallon (US)             | gal   | 1 / 3.785411784
+gallon (imperial)       | gal   | 35.1950652 / 160
+gallon (US)             | gal   | 33.8140227 / 132
 garce (India)           |       | 1 / 5244
 garce (Sri Lanka)       |       | 1 / 5084.8
-gill (imperial)         |       | 1 / .1420653125
-gill (US)               |       | 1 / .11829411825
+gill (imperial)         |       | 35.1950652 / 5
+gill (US)               |       | 33.8140227 / 4
 gō                      | 合     | 1331 / 240.1
 hekat                   |       | 1 / 4.8
 homer                   |       | 1 / 220
@@ -619,21 +619,21 @@ merice                  |       | 1 / 70.6
 metretes                |       | 1 / 37.4
 metric cup              |       | 4
 mina                    |       | 1 / .505
-minim (imperial)        | min   | 35.1950652 * 480
-minim (US)              | min   | 33.8140227 * 480
+minim (imperial)        | min   | 16893.631296
+minim (US)              | min   | 16230.730896
 naggin                  |       | 5
 octave                  |       | 1 / 73
 omer                    | ר‎עמ  | 1 / 3.636
 pau                     |       | 1 / .284130625
-peck (imperial)         |       | 1 / 9.09218
-peck (US)               |       | 1 / 8.80976754172
+peck (imperial)         |       | 35.1950652 / 320
+peck (US)               |       | 33.8140227 / 264
 pin                     |       | 1 / 20.457405
-pint (imperial)         | pt    | 1.75975326
-pint (US)               | pt    | 2.11338
+pint (imperial)         | pt    | 35.1950652 / 20
+pint (US)               | pt    | 33.8140227 / 16
 puddee (Chennai)        |       | 1 / 1.591264
 puddee (Government)     |       | 1 / 1.64
-quart (imperial)        | qt    | .879877
-quart (US)              | qt    | 1.05669
+quart (imperial)        | qt    | 35.1950652 / 40
+quart (US)              | qt    | 33.8140227 / 32
 quartarius              |       | 1 / .13625
 sai                     | 才     | 1331 / 2.401
 seah                    | האס   | 1 / 12.12
@@ -644,10 +644,10 @@ shipping ton (US)       |       | 1 / 1132.67386368
 shō                     | 升     | 1331 / 2401
 shoulder                |       | 1 / .35
 sydharb                 |       | 1 / 562000000000
-tablespoon (imperial)   | tbsp  | 56.321
-tablespoon (US)         | tbsp  | 1 / .0148
-teaspoon (imperial)     | tbsp  | 168.936
-teaspoon (US)           | tsp   | 202.884
+tablespoon (imperial)   | tbsp  | 56.1312777
+tablespoon (US)         | tbsp  | 67.6280454
+teaspoon (imperial)     | tbsp  | 168.393833
+teaspoon (US)           | tsp   | 202.8841362
 to                      | 斗     | 1331 / 24010
 tun                     |       | 1 / 981.95544
 urna                    |       | 1 / 13.08
