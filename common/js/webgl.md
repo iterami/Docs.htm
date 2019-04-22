@@ -140,15 +140,15 @@ type | 'Float32Array' | string
 ### `webgl_camera_rotate(args)`
 * Handles rotating the camera and character.
 
-Arg       | Default | Type
-----------|---------|--------
-camera    | true    | boolean
-character | true    | boolean
-set       | false   | boolean
-x         | 0       | number
-xlock     | true    | boolean
-y         | 0       | number
-z         | 0       | number
+Arg       | Default            | Type
+----------|--------------------|----------
+camera    | true               | boolean
+character | webgl_character_id | string ID
+set       | false              | boolean
+x         | 0                  | number
+xlock     | true               | boolean
+y         | 0                  | number
+z         | 0                  | number
 
 ---
 
