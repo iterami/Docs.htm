@@ -146,7 +146,6 @@ camera    | true               | boolean
 character | webgl_character_id | string ID
 set       | false              | boolean
 x         | 0                  | number
-xlock     | true               | boolean
 y         | 0                  | number
 z         | 0                  | number
 
