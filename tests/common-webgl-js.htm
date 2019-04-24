@@ -32,27 +32,20 @@ function repo_init(){
     webgl_level_load({
       'character': -1,
     });
+    webgl_character_init({
+      'id': 'test-character-0',
+    });
 
     let tests = [
       {
         'args': {
-          'id': 'test-character',
+          'id': 'test-character-1',
           'level': 5,
         },
         'expect': function(returned){
-            return webgl_characters['test-character']['health-current'] === 100;
+            return webgl_characters['test-character-1']['health-current'] === 100;
         },
         'function': 'webgl_character_init',
-      },
-      {
-        'args': {
-          'character': 'test-character',
-          'damage': 23,
-        },
-        'expect': function(returned){
-            return webgl_characters['test-character']['health-current'] === 77;
-        },
-        'function': 'webgl_character_damage',
       },
       {
         'args': void 0,
@@ -68,7 +61,7 @@ function repo_init(){
       },
       {
         'args': {
-          'character': 'test-character',
+          'character': 'test-character-1',
         },
         'expect': 5,
         'function': 'webgl_character_level',
@@ -85,33 +78,10 @@ function repo_init(){
         'function': 'webgl_clearcolor_set',
       },
       {
-        'args': void 0,
-        'expect': [
-          0,
-          1,
-          0,
-        ],
-        'function': 'webgl_normals',
-      },
-      {
         'args': {
-          'rotate-z': 90,
+          'entity': webgl_characters['test-character-0'],
         },
         'expect': [
-          1,
-          0,
-          0,
-        ],
-        'function': 'webgl_normals',
-      },
-      {
-        'args': {
-          'vertices-length': 2,
-        },
-        'expect': [
-          0,
-          1,
-          0,
           0,
           1,
           0,
