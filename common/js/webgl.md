@@ -569,41 +569,27 @@ y   |         | number
 * Creates a cuboid prefab with specified properties.
 * Translation is the center of the cuboid.
 
-Arg                  | Default            | Type
----------------------|--------------------|----------------------------------
-all-alpha            | false              | boolean false or number
-all-collision        | true               | boolean
-all-vertex-colors    | false              | boolean false or array of numbers
-back-alpha           | 1                  | number
-back-collision       | false              | boolean
-back-vertex-colors   | false              | boolean false or array of numbers
-bottom-alpha         | 1                  | number
-bottom-collision     | false              | boolean
-bottom-vertex-colors | false              | boolean false or array of numbers
-character            | webgl_character_id | string ID
-exclude              | {}                 | object of side booleans
-front-alpha          | 1                  | number
-front-collision      | false              | boolean
-front-vertex-colors  | false              | boolean false or array of numbers
-groups               | []                 | array of string IDs
-left-alpha           | 1                  | number
-left-collision       | false              | boolean
-left-vertex-colors   | false              | boolean false or array of numbers
-prefix               | core_id_count      | number or string
-properties           | {}                 | object
-random-colors        | false              | boolean
-right-alpha          | 1                  | number
-right-collision      | false              | boolean
-right-vertex-colors  | false              | boolean false or array of numbers
-size-x               | 1                  | number
-size-y               | 1                  | number
-size-z               | 1                  | number
-top-alpha            | 1                  | number
-top-collision        | false              | boolean
-top-vertex-colors    | false              | boolean false or array of numbers
-translate-x          | 0                  | number
-translate-y          | 0                  | number
-translate-z          | 0                  | number
+Arg           | Default            | Type
+--------------|--------------------|------------------------
+all           | {}                 | object
+back          | {}                 | object
+bottom        | {}                 | object
+character     | webgl_character_id | string ID
+exclude       | {}                 | object of side booleans
+front         | {}                 | object
+groups        | []                 | array of string IDs
+left          | {}                 | object
+prefix        | core_id_count      | number or string
+properties    | {}                 | object
+random-colors | false              | boolean
+right         | {}                 | object
+size-x        | 1                  | number
+size-y        | 1                  | number
+size-z        | 1                  | number
+tp[           | {}                 | object
+translate-x   | 0                  | number
+translate-y   | 0                  | number
+translate-z   | 0                  | number
 
 ---
 
