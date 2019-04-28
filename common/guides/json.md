@@ -150,6 +150,12 @@
           "spawn-interval-current": 0,
           "spawn-interval-max": 100,
           "speed": 0.2,
+          "texture-align": [
+            1, 1,
+            1, 0,
+            0, 0,
+            0, 1
+          ],
           "texture-id": "default.png",
           "texture-repeat-x": 1,
           "texture-repeat-y": 1,
@@ -536,6 +542,14 @@
 
           // Optional. Entity movement speed.
           "speed": 0.2,
+
+          // Optional. Texture alignment.
+          "texture-align": [
+            1, 1,
+            1, 0,
+            0, 0,
+            0, 1
+          ],
 
           // Optional. ID of texture within core_images.
           "texture-id": "default.png",
