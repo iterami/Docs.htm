@@ -144,6 +144,7 @@ Arg       | Default            | Type
 ----------|--------------------|----------
 camera    | true               | boolean
 character | webgl_character_id | string ID
+mouse     | true               | boolean
 set       | false              | boolean
 x         | 0                  | number
 y         | 0                  | number
