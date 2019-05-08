@@ -574,12 +574,11 @@ y   |         | number
 * Translation is the center of the cuboid.
 
 Arg           | Default            | Type
---------------|--------------------|------------------------
+--------------|--------------------|--------------------
 all           | {}                 | object
 back          | {}                 | object
 bottom        | {}                 | object
 character     | webgl_character_id | string ID
-exclude       | {}                 | object of side booleans
 front         | {}                 | object
 groups        | []                 | array of string IDs
 left          | {}                 | object

@@ -187,65 +187,18 @@
       "type": "cuboid",
       "properties": {
         "prefix": "example-cuboid",
-        "all-alpha": false,
-        "all-collision": true,
-        "all-vertex-colors": false,
-        "back-alpha": 1,
-        "back-collision": false,
-        "back-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "bottom-alpha": 1,
-        "bottom-collision": false,
-        "bottom-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "exclude": {
-          "bottom": true
-        },
-        "front-alpha": 1,
-        "front-collision": false,
-        "front-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "left-alpha": 1,
-        "left-collision": false,
-        "left-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-        "properties": {},
+        "all": {},
+        "back": {},
+        "bottom": {},
+        "character": "world-static",
+        "front": {},
+        "left": {},
         "random-colors": false,
-        "right-alpha": 1,
-        "right-collision": false,
-        "right-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        "right": {},
         "size-x": 1,
         "size-y": 1,
         "size-z": 1,
-        "top-alpha": 1,
-        "top-collision": false,
-        "top-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        "top": {},
         "translate-x": 0,
         "translate-y": 0,
         "translate-z": 0
@@ -606,90 +559,43 @@
         // Optional. Prefix added to each created entity ID.
         "prefix": "example-cuboid",
 
-        // Optional. Overrides that can be applied to every non-excluded face.
-        "all-alpha": false,
-        "all-collision": true,
-        "all-vertex-colors": false,
+        // Optional. Properties applied to every face of this cuboid.
+        "all": {},
 
-        // Optional. Properties for the -z face.
-        "back-alpha": 1,
-        "back-collision": false,
-        "back-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        // Optional. Properties applied to the -z face.
+        // Set "exclude" to true to prevent this face from being created.
+        "back": {},
 
-        // Optional. Properties for the -y face.
-        "bottom-alpha": 1,
-        "bottom-collision": false,
-        "bottom-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        // Optional. Properties applied to the -y face.
+        // Set "exclude" to true to prevent this face from being created.
+        "bottom": {},
 
-        // Optional. If this cuboid will have collision.
-        "collision": false,
+        // Optional. Which character this cuboid should be attached to.
+        "character": "world-static",
 
-        // Optional. Which sides should be excluded from creation.
-        //   Sides are: back, bottom, front, left, right, top.
-        "exclude": {
-          "bottom": true
-        },
+        // Optional. Properties applied to the +z face.
+        // Set "exclude" to true to prevent this face from being created.
+        "front": {},
 
-        // Optional. Properties for the +z face.
-        "front-alpha": 1,
-        "front-collision": false,
-        "front-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Properties for the -x face.
-        "left-alpha": 1,
-        "left-collision": false,
-        "left-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
-
-        // Optional. Additional properties that are applied to each entity created by this prefab.
-        "properties": {},
+        // Optional. Properties applied to the -x face.
+        // Set "exclude" to true to prevent this face from being created.
+        "left": {},
 
         // Optional. If this prefab should use random colors or 255,255,255.
         "random-colors": false,
 
-        // Optional. Properties for the +x face.
-        "right-alpha": 1,
-        "right-collision": false,
-        "right-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        // Optional. Properties applied to the +x face.
+        // Set "exclude" to true to prevent this face from being created.
+        "right": {},
 
         // Optional. Size of the cuboid.
         "size-x": 1,
         "size-y": 1,
         "size-z": 1,
 
-        // Optional. Properties for the +y face.
-        "top-alpha": 1,
-        "top-collision": false,
-        "top-vertex-colors": [
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1,
-          1, 1, 1, 1
-        ],
+        // Optional. Properties applied to the +y face.
+        // Set "exclude" to true to prevent this face from being created.
+        "top": {},
 
         // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
         "translate-x": 0,
