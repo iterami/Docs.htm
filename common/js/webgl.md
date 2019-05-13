@@ -173,6 +173,7 @@ z         | 0                  | number
 
 Arg                      | Default            | Type
 -------------------------|--------------------|------------------------
+automove                 | false              | boolean
 camera-zoom              | 0                  | number
 change                   | {}                 | object
 collide-range-horizontal | 2                  | number
