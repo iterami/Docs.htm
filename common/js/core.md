@@ -100,7 +100,7 @@
 * [`core_storage_element_property(args)`](#core_storage_element_propertyargs)
 * [`core_storage_reset()`](#core_storage_reset)
 * [`core_storage_save()`](#core_storage_save)
-* [`core_storage_update()`](#core_storage_update)
+* [`core_storage_update(args)`](#core_storage_updateargs)
 * [`core_tab_create(args)`](#core_tab_createargs)
 * [`core_tab_switch(args)`](#core_tab_switchargs)
 * [`core_test_function(args)`](#core_test_functionargs)
@@ -1051,8 +1051,14 @@ key     |         | string
 
 ---
 
-### `core_storage_update()`
+### `core_storage_update(args)`
 * Updates settings inputs with current storage values.
+* Updates all by default, but can also only update specific keys.
+
+Arg  | Default | Type
+-----|---------|-----------------
+all  | true    | boolean
+keys | false   | array of strings
 
 ---
 
