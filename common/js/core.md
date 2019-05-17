@@ -1056,9 +1056,8 @@ key     |         | string
 * Updates all by default, but can also only update specific keys.
 
 Arg  | Default | Type
------|---------|-----------------
-all  | true    | boolean
-keys | false   | array of strings
+-----|---------|----------------------------------
+keys | false   | boolean false or array of strings
 
 ---
 
