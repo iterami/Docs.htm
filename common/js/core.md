@@ -123,7 +123,6 @@ Global                    | Default         | Type
 core_audio                | {}              | object
 core_audio_context        | false           | boolean, AudioContext
 core_audio_sources        | {}              | object
-core_degree               | Math.PI / 180   | number
 core_entities             | {}              | object
 core_entity_info          | {}              | object
 core_entity_types_defualt | []              | array
@@ -140,7 +139,6 @@ core_menu_block_events    | true            | boolean
 core_menu_open            | false           | boolean
 core_mode                 | 0               | number
 core_mouse                | {}              | object
-core_radian               | 180 / Math.PI   | number
 core_repo_title           | ''              | string
 core_storage_data         | {}              | object
 core_storage_info         | {}              | object
