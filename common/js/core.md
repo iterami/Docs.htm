@@ -118,33 +118,33 @@
 
 ### Globals
 
-Global                    | Default         | Type
---------------------------|-----------------|----------------------
-core_audio                | {}              | object
-core_audio_context        | false           | boolean, AudioContext
-core_audio_sources        | {}              | object
-core_entities             | {}              | object
-core_entity_info          | {}              | object
-core_entity_types_defualt | []              | array
-core_events               | {}              | object
-core_gamepads             | {}              | object
-core_groups               | {'_length': {}} | object
-core_id_count             | 0               | number
-core_images               | {}              | object
-core_intervals            | {}              | object
-core_key_rebinds          | {}              | object
-core_keys                 | {}              | object
-core_matrices             | {}              | object
-core_menu_block_events    | true            | boolean
-core_menu_open            | false           | boolean
-core_mode                 | 0               | number
-core_mouse                | {}              | object
-core_repo_title           | ''              | string
-core_storage_data         | {}              | object
-core_storage_info         | {}              | object
-core_tabs                 | {}              | object
-core_tau                  | Math.PI * 2     | number
-core_ui_values            | {}              | object
+Global                    | Default           | Type
+--------------------------|-------------------|----------------------
+core_audio                | {}                | object
+core_audio_context        | false             | boolean, AudioContext
+core_audio_sources        | {}                | object
+core_entities             | {}                | object
+core_entity_info          | {}                | object
+core_entity_types_defualt | []                | array
+core_events               | {}                | object
+core_gamepads             | {}                | object
+core_groups               | {'_length': {}}   | object
+core_id_count             | 0                 | number
+core_images               | {}                | object
+core_intervals            | {}                | object
+core_key_rebinds          | {}                | object
+core_keys                 | {}                | object
+core_matrices             | {}                | object
+core_menu_block_events    | true              | boolean
+core_menu_open            | false             | boolean
+core_mode                 | 0                 | number
+core_mouse                | {}                | object
+core_repo_title           | ''                | string
+core_storage_data         | {}                | object
+core_storage_info         | {}                | object
+core_tabs                 | {}                | object
+core_tau                  | 6.283185307179586 | number
+core_ui_values            | {}                | object
 
 ---
 
