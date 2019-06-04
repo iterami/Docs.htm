@@ -568,6 +568,7 @@ ale/beer barrel         |       | 1 / 163.65924
 ale/beer firkin         |       | 1 / 40.91481
 ale/beer hogshead       |       | 1 / 245.48886
 amphora quadrantal      |       | 1 / 26.16
+Anker                   |       | 33.8140227 / 1320
 arroba                  |       | 1 / 16.137
 Australian tablespoon   |       | 50
 bath                    |       | 1 / 2200
