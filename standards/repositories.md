@@ -18,4 +18,5 @@ iterami GitHub Repository Standards
   * PHP repositories should use the `.php` suffix.
   * Python repositories should use the `.py` suffix.
   * Shell repositories should use the `.sh` suffix.
+* Sponsorships are enabled.
 * Wikis are disabled and restricted to users with push access.
