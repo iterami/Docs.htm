@@ -531,7 +531,11 @@ lunar day           |       | 1 / 2360592
 Martian solar day   | sol   | 1 / 88775.2
 minute              | min   | 1 / 90
 momentum            |       | 1 / 60
-month               |       | 1 / 2592000
+month (anomalistic) |       | 1 / 2380713.2064,
+month (draconic)    |       | 1 / 2351135.808,
+month (sidereal)    |       | 1 / 2360591.5104,
+month (synodic)     |       | 1 / 2551442.8015584,
+month (tropical)    |       | 1 / 2360584.6848,
 piktun              |       | 1 / 248832000000
 radar metre         |       | 1 / .00000000666
 radar nautical mile |       | 1 / .000012355
