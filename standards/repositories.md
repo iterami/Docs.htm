@@ -38,10 +38,10 @@ iterami GitHub Repository Standards
 3. Clone the repository locally, add the locally prepared project files, and push them to the `master` branch.
 4. Run [Scripts/git/gh-pages-from-master.sh](https://github.com/iterami/Scripts/blob/master/git/gh-pages-from-master.sh) on the cloned repository. Make `gh-pages` the default branch on GitHub and delete the `master` branch.
 5. Add the repository link to various iterami repositories:
-  * [Docs.htm common file usage notes](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md) so that usage can be managed.
-  * [iterami.github.io](https://github.com/iterami/iterami.github.io) so that it may have a link on the index page.
-  * [RandomRepository.htm](https://github.com/iterami/RandomRepository.htm) so that it may be randomly selected.
-  * [Scripts iterami-repositories-list.sh](https://github.com/iterami/iterami.github.io) so that it may be managed in bulk.
+    * [Docs.htm common file usage notes](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md) so that usage can be managed.
+    * [iterami.github.io](https://github.com/iterami/iterami.github.io) so that it may have a link on the index page.
+    * [RandomRepository.htm](https://github.com/iterami/RandomRepository.htm) so that it may be randomly selected.
+    * [Scripts iterami-repositories-list.sh](https://github.com/iterami/iterami.github.io) so that it may be managed in bulk.
 6. Update the repository `Description` with an emoji, mention of CC0 license, description of project and type, and a link to it hosted on https://iterami.com.
 7. Update the repository `Website` with a link to it hosted on https://iterami.com.
 
@@ -53,9 +53,9 @@ iterami GitHub Repository Standards
 2. Create the repository on GitHub and make sure its settings match the list in the [Settings section](#settings).
 3. Clone the repository locally, add the locally prepared project files, and push them to the `master` branch.
 4. Add the repository link to various iterami repositories:
-  * [Docs.htm common file usage notes](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md) so that usage can be managed.
-  * [iterami.github.io](https://github.com/iterami/iterami.github.io) so that it may have a link on the index page.
-  * [RandomRepository.htm](https://github.com/iterami/RandomRepository.htm) so that it may be randomly selected.
-  * [Scripts iterami-repositories-list.sh](https://github.com/iterami/iterami.github.io) so that it may be managed in bulk.
+    * [Docs.htm common file usage notes](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md) so that usage can be managed.
+    * [iterami.github.io](https://github.com/iterami/iterami.github.io) so that it may have a link on the index page.
+    * [RandomRepository.htm](https://github.com/iterami/RandomRepository.htm) so that it may be randomly selected.
+    * [Scripts iterami-repositories-list.sh](https://github.com/iterami/iterami.github.io) so that it may be managed in bulk.
 5. Update the repository `Description` with an emoji, mention of CC0 license, description of project and type, and a link to download the repository as a `.tar.gz` file.
 6. Update the repository `Website` with a link to download the repository as a `.tar.gz` file.
