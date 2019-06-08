@@ -16,7 +16,9 @@
 * [Mass](#mass)
 * [Power](#power)
 * [Pressure](#pressure)
-* [Radiation](#radiation)
+* [Radioactivity Absorbed Dose](#radioactivity-absorbed-dose)
+* [Radioactivity Dose Equivalent](#radioactivity-dose-equivalent)
+* [Radioactivity Specific Activity](#radioactivity-specific-activity)
 * [Speed](#speed)
 * [Temperature](#temperature)
 * [Time](#time)
@@ -411,13 +413,32 @@ Vickers pyramid number               | HV   | 1 / 9807000
 
 ---
 
-### Radiation
+### Radioactivity Absorbed Dose
 
 Radiation           | Unit | 1 gray =
 --------------------|------|---------
 gray                | Gy   | 1
 joules per kilogram | J/kg | .01
 rad                 |      | 100
+
+---
+
+### Radioactivity Dose Equivalents
+
+Radiation              | Unit | 1 sievert =
+-----------------------|------|------------
+sievert                | Gy   | 1
+röntgen equivalent man | rem  | 100
+
+---
+
+### Radioactivity Specific Activity
+
+Radiation  | Unit | 1 becquerel =
+-----------|------|--------------
+becquerel  | Bq   | 1
+curie      | Ci   | 1 / 3.7e10
+rutherford | Rd   | 1e-6
 
 ---
 
