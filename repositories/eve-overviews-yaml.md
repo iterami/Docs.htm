@@ -9,7 +9,7 @@
 ### Installation and Updating
 
 1. Copy the `.yaml` file of the overview you wish to use into your overview directory:
-  * Linux: `~/Documents/EVE/Overview/`
+    * Linux: `~/Documents/EVE/Overview/`
 2. When undocked, open your `Overview Settings`.
 3. In the `Misc` tab, click on `Import Overview Settings`.
 4. In the `FILE NAME` section, select the file you copied. Make sure every checkbox on the right is checked.
