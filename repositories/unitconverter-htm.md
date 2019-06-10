@@ -472,7 +472,7 @@ yards per second  | yd/s   | 39.3701 / 36
 
 ### Temperature
 
-Temperature         | Unit | Formula (Convert to °C)    | Formula (Convert From °C)
+Temperature         | Unit | Convert to °C              | Convert From °C
 --------------------|------|----------------------------|------------------------------
 Amonton             |      | value * 4.65116 - 239.535  | value * .215 + 51.5
 Barnsdorf           |      | value * 3.80952 - 13.9683  | value * .2625 + 11 / 3
