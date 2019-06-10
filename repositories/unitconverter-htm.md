@@ -299,6 +299,9 @@ Violle             |      | 1 / 20.17
 
 Level   | Unit | 1 decibel =
 --------|------|------------
+bel     | B    | .1
+decibel | dB   | 1
+neper   | Np   | 1 / 8.68589
 
 ---
 
