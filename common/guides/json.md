@@ -5,7 +5,8 @@
 
 * [example.json](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/example.json) is an example level file with every property.
 * Must be valid JSON. This commented example below is not valid. iterami style formatting is optional.
-* Should follow the order of the example, as C projects parse properties in order, and optional properties can be removed.
+* Optional properties can be removed.
+* Should follow the order of the example, as C projects parse properties in order.
 
 ```
 {
