@@ -14,9 +14,9 @@
   "fog-density": 0.0001,
   "fog-state": false,
   "gravity-acceleration": -0.05,
-  "gravity-axis": "dy",
-  "gravity-max": -1,
-  "jump-movement": false,
+  "gravity-axis": "y",
+  "gravity-max": -2,
+  "jump-movement": 0,
   "multiplier-jump": 1,
   "multiplier-speed": 1,
   "paths": {

@@ -40,11 +40,11 @@
   // Optional. Gravity acceleration, axis, and maxiumum downward terminal velocity.
   // Only affects entities with "gravity" property true.
   "gravity-acceleration": -0.05,
-  "gravity-axis": "dy",
-  "gravity-max": -0.05,
+  "gravity-axis": "y",
+  "gravity-max": -2,
 
-  // Optional. If characters can change their movement direction while unable to jump.
-  "jump-movement": false,
+  // Optional. How much characters can change their movement direction while unable to jump.
+  "jump-movement": 0,
 
   // Optional. Property multipliers that affect all characters.
   "multiplier-jump": 1,
