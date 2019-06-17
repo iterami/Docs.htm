@@ -106,9 +106,8 @@
       // Optional. ID of character.
       "id": "_me",
 
-      "all-alpha": false,
-      "all-collision": true,
-      "all-vertex-colors": false,
+      // Optional. If this character is moving forward regardless of key states.
+      "automove": false,
 
       // Optional. Current camera zoom value.
       // When 0, camera is in first-person mode.
@@ -122,8 +121,8 @@
       },
 
       // Optional. If the character collides, then this is the maximum distance before collision occurs.
-      "collide-range-horizontal": 2.5,
-      "collide-range-vertical": 2.5,
+      "collide-range-horizontal": 2,
+      "collide-range-vertical": 3,
 
       // Optional. If the character collides with other entities that have collision.
       "collides": true,
@@ -147,7 +146,7 @@
 
       // Optional. Current character level.
       // -1 means character is just a camera.
-      "level": -1,
+      "level": 0,
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
       // "path-end" is false for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.

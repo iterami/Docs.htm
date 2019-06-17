@@ -53,13 +53,14 @@
   "characters": [
     {
       "id": "_me",
+      "automove": false,
       "camera-zoom": 20,
       "change": {
         "rotate-y": 0,
         "translate-x": 0
       },
-      "collide-range-horizontal": 2.5,
-      "collide-range-vertical": 2.5,
+      "collide-range-horizontal": 2,
+      "collide-range-vertical": 3,
       "collides": true,
       "entities": [],
       "experience": 0,
@@ -67,7 +68,7 @@
       "health-max": 100,
       "inventory": {},
       "jump-height": 0.6,
-      "level": -1,
+      "level": 0,
       "path-direction": 1,
       "path-end": false,
       "path-id": false,
