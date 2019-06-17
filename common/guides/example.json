@@ -97,22 +97,26 @@
           "attach-type": "core_entities",
           "billboard": false,
           "change": {
+            "rotate-x": 0,
             "rotate-y": 0,
-            "translate-x": 0
+            "rotate-z": 0,
+            "translate-x": 0,
+            "translate-y": 0,
+            "translate-z": 0
           },
-          "collide-range-horizontal": 2.5,
-          "collide-range-vertical": 2.5,
+          "collide-range-horizontal": 2,
+          "collide-range-vertical": 3,
           "collides": false,
           "collision": true,
           "draw": true,
-          "draw-type": "TRIANGLE_STRIP",
+          "draw-type": "TRIANGLE_FAN",
           "event-modify": [
             {
               "amount": -100,
               "stat": "health-current"
             }
           ],
-          "event-range": 0,
+          "event-range": false,
           "event-target-id": "_me",
           "event-target-type": "character",
           "gravity": false,

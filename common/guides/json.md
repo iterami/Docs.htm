@@ -205,16 +205,21 @@
 
           // Optional. Amount that any entity property should change by when the entity is updated.
           "change": {
+            "rotate-x": 0,
             "rotate-y": 0,
-            "translate-x": 0
+            "rotate-z": 0,
+
+            "translate-x": 0,
+            "translate-y": 0,
+            "translate-z": 0
           },
 
           // Optional. If this entity collides with other entities that have collision.
           "collides": true,
 
           // Optional. If this entity collides, then this is the maximum distance before collision occurs.
-          "collide-range-horizontal": 2.5,
-          "collide-range-vertical": 2.5,
+          "collide-range-horizontal": 2,
+          "collide-range-vertical": 3,
 
           // Optional. If this entity can be collided with by other entities that collide.
           "collides": false,
@@ -223,7 +228,7 @@
           "draw": true,
 
           // Optional. How the vertices should be drawn.
-          "draw-type": "TRIANGLE_STRIP",
+          "draw-type": "TRIANGLE_FAN",
 
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
@@ -233,9 +238,9 @@
             }
           ],
 
-          // Optional. The range at which this event triggers.
+          // Optional. The range at which this event triggers, or false to disable.
           // If range is 0, only during collisions.
-          "event-range": 0,
+          "event-range": false,
 
           // Optional. ID required to trigger event, or false to allow all.
           "event-target-id": "_me",
@@ -257,7 +262,7 @@
           // Optional. Current assigned path or false, current path point target, and movement direction.
           // "path-end" is false for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
           "path-direction": 1,
-         "path-end": false,
+          "path-end": false,
           "path-id": false,
           "path-point": 0,
 
