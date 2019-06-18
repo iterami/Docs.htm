@@ -65,7 +65,8 @@
           // Optional. Speed multiplier when entities are approaching this point.
           "speed": 2,
 
-          // Optional. Waypoint translation. Leave absent to use current translation of that axis.
+          // Optional. Waypoint translation relative to `0, 0, 0`.
+          // Leave absent to use current translation of that axis.
           "translate-x": 0,
           "translate-y": 0,
           "translate-z": 0
@@ -116,8 +117,13 @@
       // Optional. Amount that any character property should change by when the character is updated.
       // Player translations are reset after each movement to allow stopping.
       "change": {
+        "rotate-x": 0,
         "rotate-y": 0,
-        "translate-x": 0
+        "rotate-z": 0,
+
+        "translate-x": 0,
+        "translate-y": 0,
+        "translate-z": 0
       },
 
       // Optional. If the character collides, then this is the maximum distance before collision occurs.
@@ -301,6 +307,11 @@
           "texture-repeat-x": 1,
           "texture-repeat-y": 1,
 
+          // Optional. Translation of the character relative to the parent character translation.
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+
           // REQUIRED if "draw" === true. Optional if "draw" === false.
           // Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
           // Each row is: red, green, blue, alpha
@@ -387,7 +398,7 @@
         // Set "exclude" to true to prevent this face from being created.
         "top": {},
 
-        // Optional. Translation of the center of the cuboid relative to `0, 0, 0`.
+        // Optional. Translation of the center of the cuboid relative to the parent character translation.
         "translate-x": 0,
         "translate-y": 0,
         "translate-z": 0

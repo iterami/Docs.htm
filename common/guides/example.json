@@ -56,8 +56,12 @@
       "automove": false,
       "camera-zoom": 20,
       "change": {
+        "rotate-x": 0,
         "rotate-y": 0,
-        "translate-x": 0
+        "rotate-z": 0,
+        "translate-x": 0,
+        "translate-y": 0,
+        "translate-z": 0
       },
       "collide-range-horizontal": 2,
       "collide-range-vertical": 3,
@@ -149,6 +153,9 @@
           "texture-id": "default.png",
           "texture-repeat-x": 1,
           "texture-repeat-y": 1,
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0,
           "vertex-colors": [
             1, 1, 1, 1,
             1, 0, 0, 1,
