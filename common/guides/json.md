@@ -84,14 +84,14 @@
   },
 
   // Optional. Rotation of newly spawned character in degrees between 0 inclusive and 359 exclusive.
-  "spawn-rotate-x": 0,
+  "spawn-rotate-x": 45,
   "spawn-rotate-y": 0,
   "spawn-rotate-z": 0,
 
   // Optional. Translation of newly spawned character relative to `0, 0, 0`.
   "spawn-translate-x": 0,
-  "spawn-translate-y": 0,
-  "spawn-translate-z": 0,
+  "spawn-translate-y": 5,
+  "spawn-translate-z": 5,
 
   // Optional. Array of groups to create.
   // Do not include automatically created groups, such as "skybox".
@@ -343,9 +343,9 @@
 
       // Optional. Translation of the character relative to `0, 0, 0`.
       // Any attach offsets will be relative to this position.
-      "translate-x": 5,
-      "translate-y": 10,
-      "translate-z": 15
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
     }
   ],
 
@@ -382,8 +382,8 @@
         // Set "exclude" to true to prevent this face from being created.
         "left": {},
 
-        // Optional. If this prefab should use random colors or 255,255,255.
-        "random-colors": false,
+        // Optional. If this prefab should use random colors or require vertex-colors for each face.
+        "random-colors": true,
 
         // Optional. Properties applied to the +x face.
         // Set "exclude" to true to prevent this face from being created.

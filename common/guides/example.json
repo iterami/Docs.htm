@@ -40,12 +40,12 @@
       ]
     }
   },
-  "spawn-rotate-x": 0,
+  "spawn-rotate-x": 45,
   "spawn-rotate-y": 0,
   "spawn-rotate-z": 0,
   "spawn-translate-x": 0,
-  "spawn-translate-y": 0,
-  "spawn-translate-z": 0,
+  "spawn-translate-y": 5,
+  "spawn-translate-z": 5,
   "groups": [
     "example-group-0",
     "example-group-1"
@@ -174,9 +174,9 @@
           ]
         }
       ],
-      "translate-x": 5,
-      "translate-y": 10,
-      "translate-z": 15
+      "translate-x": 0,
+      "translate-y": 0,
+      "translate-z": 0
     }
   ],
   "prefabs": [
@@ -190,7 +190,7 @@
         "character": "world-static",
         "front": {},
         "left": {},
-        "random-colors": false,
+        "random-colors": true,
         "right": {},
         "size-x": 1,
         "size-y": 1,
