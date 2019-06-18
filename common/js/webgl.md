@@ -380,7 +380,7 @@ entity |         | character/entity object
 * Sets up WebGL.
 
 Arg                  | Default   | Type
----------------------|-----------|--------
+---------------------|-----------|--------------------
 ambient-blue         | 1         | number
 ambient-green        | 1         | number
 ambient-red          | 1         | number
@@ -398,6 +398,7 @@ fog-state            | false     | boolean
 gravity-acceleration | -.05      | number
 gravity-axis         | 'y'       | string
 gravity-max          | -2        | number
+groups               | []        | array of string IDs
 jump-movement        | 0         | number
 multiplier-jump      | 1         | number
 multiplier-speed     | 1         | number
