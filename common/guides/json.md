@@ -195,7 +195,7 @@
 
           // Optional. Translation offset relative to translation of the entity/character attached to.
           "attach-offset-x": 0,
-          "attach-offset-y": 0,
+          "attach-offset-y": -2,
           "attach-offset-z": 0,
 
           // Optional. ID of entity that this entity is attached to, or false if not attached.
@@ -307,11 +307,6 @@
           "texture-repeat-x": 1,
           "texture-repeat-y": 1,
 
-          // Optional. Translation of the character relative to the parent character translation.
-          "translate-x": 0,
-          "translate-y": 0,
-          "translate-z": 0
-
           // REQUIRED if "draw" === true. Optional if "draw" === false.
           // Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
           // Each row is: red, green, blue, alpha
@@ -326,10 +321,10 @@
           //   relative to the entity translation.
           // Each row is: x, y, z, w
           "vertices": [
-            10, -2, 10, 1,
-            10, -2, -10, 1,
-            -10, -2, -10, 1,
-            -10, -2, 10, 1
+            10, 0, 10, 1,
+            10, 0, -10, 1,
+            -10, 0, -10, 1,
+            -10, 0, 10, 1
           ],
 
           // Optional. Array of groups this entity will be added to. Groups must exist.
