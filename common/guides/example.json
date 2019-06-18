@@ -114,6 +114,7 @@
           "collision": true,
           "draw": true,
           "draw-type": "TRIANGLE_FAN",
+          "event-key": false,
           "event-modify": [
             {
               "amount": -100,

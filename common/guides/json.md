@@ -236,6 +236,9 @@
           // Optional. How the vertices should be drawn.
           "draw-type": "TRIANGLE_FAN",
 
+          // Optional. Item in inventory required to trigger event, or false for no requirement.
+          "event-key": false,
+
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
             {
