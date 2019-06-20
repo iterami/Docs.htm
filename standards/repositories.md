@@ -21,7 +21,7 @@ iterami GitHub Repository Standards
   * Drupal repositories should use the `Drupal-` prefix.
   * Firefox repositories should use the `Firefox-` prefix.
   * GitHub Pages repositories should use the `.htm` suffix.
-  * GTK+ repositories should use the `.gtk` suffix.
+  * GTK repositories should use the `.gtk` suffix.
   * JavaScript repositories should use the `.js` suffix.
   * PHP repositories should use the `.php` suffix.
   * Python repositories should use the `.py` suffix.
