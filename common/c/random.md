@@ -6,8 +6,8 @@
 
 ---
 
-* ['int random_integer(const int max)`](#int-random_integerconst-int-max)
-* ['void random_seed(void)`](#void-random_seedvoid)
+* [`int random_integer(const int max)`](#int-random_integerconst-int-max)
+* [`void random_seed(void)`](#void-random_seedvoid)
 
 ---
 
