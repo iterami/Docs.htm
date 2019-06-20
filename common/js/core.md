@@ -1,6 +1,10 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/core.js
 -----------------------------------------------------------------------------------------------
 
+* https://github.com/iterami/common/blob/gh-pages/js/core.js
+
+---
+
 * [Globals](#globals)
 * [`core_ajax(args)`](#core_ajaxargs)
 * [`core_args(args)`](#core_argsargs)

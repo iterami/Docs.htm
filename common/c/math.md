@@ -1,6 +1,11 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/c/math.c
 ---------------------------------------------------------------------------------------------
 
+* https://github.com/iterami/common/blob/gh-pages/c/math.c
+* https://github.com/iterami/common/blob/gh-pages/c/math.h
+
+---
+
 ### Includes
 * `<math.h>`
 

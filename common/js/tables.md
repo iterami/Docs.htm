@@ -1,6 +1,10 @@
 [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/tables.js
 -------------------------------------------------------------------------------------------------
 
+* https://github.com/iterami/common/blob/gh-pages/js/tables.js
+
+---
+
 * [Globals](#globals)
 * [`tables_init()`](#tables_init)
 * [`tables_sort(element, column, direction)`](#tables_sortelement_column_direction)
