@@ -2,8 +2,8 @@ iterami/Docs.htm
 ----------------
 
 * [iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md):
-  * [C](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md)
-  * [HTM](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md)
+  * [C Projects](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md)
+  * [HTM Projects](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md)
   * [JSON Level Format](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md)
   * Tests:
     * [core.js](https://iterami.com/Docs.htm/tests/common-core-js.htm)

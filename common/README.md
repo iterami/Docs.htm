@@ -5,8 +5,8 @@
 
 ---
 
-* [C Docs](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md): includes C, GTK 3, and OpenGL.
-* [HTM Docs](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md): includes CSS, HTM, JavaScript, and WebGL.
+* [C Projects](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/c.md): includes C, GTK 3, and OpenGL.
+* [HTM Projects](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/htm.md): includes CSS, HTM, JavaScript, and WebGL.
 * [JSON Level Format Docs](https://github.com/iterami/Docs.htm/blob/gh-pages/common/guides/json.md): includes the JSON level format shared by C and HTM projects.
 
 ---
