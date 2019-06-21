@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/common) HTM Docs
-------------------------------------------------------------
+[iterami/common](https://github.com/iterami/common) HTM Project Docs
+--------------------------------------------------------------------
 
 * [Files Used](#files-used)
 * [Recommended Project File Structure](#recommended-project-file-structure)

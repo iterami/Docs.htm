@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/common) JSON Docs
--------------------------------------------------------------
+[iterami/common](https://github.com/iterami/common) JSON Level Format Docs
+--------------------------------------------------------------------------
 
 ### 3D JSON Level Format
 
