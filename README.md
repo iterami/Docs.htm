@@ -12,8 +12,8 @@ iterami/Docs.htm
     * [webgl.js](https://iterami.com/Docs.htm/tests/common-webgl-js.htm)
   * [Usage by iterami](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
 * Repositories:
-  * [iterami/Chromium-iterami-DevTools](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-devtools.md)
-  * [iterami/Chromium-iterami-Extension](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-extension.md)
+  * [Chromium-iterami-DevTools](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-devtools.md)
+  * [Chromium-iterami-Extension](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-extension.md)
   * [Chromium-iterami-Theme](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-theme.md)
   * [EVE-Overviews.yaml](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/eve-overviews-yaml.md)
   * [EVETools.gtk](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/evetools-gtk.md)
