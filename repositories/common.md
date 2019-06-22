@@ -366,7 +366,7 @@
 ---
 
 ### tables.js
-* [iterami/Multiverse.htm](https://github.com/iterami/Guides.htm)
+* [iterami/Guides.htm](https://github.com/iterami/Guides.htm)
 
 ---
 
