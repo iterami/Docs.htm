@@ -10,7 +10,7 @@ iterami/Docs.htm
     * [tables.js](https://iterami.com/Docs.htm/tests/common-tables-js.htm)
     * [uri.js](https://iterami.com/Docs.htm/tests/common-uri-js.htm)
     * [webgl.js](https://iterami.com/Docs.htm/tests/common-webgl-js.htm)
-  * [Usage by iterami](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
+  * [Usage by iterami Repositories](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/common.md)
 * Repositories:
   * [Chromium-iterami-DevTools](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-devtools.md)
   * [Chromium-iterami-Extension](https://github.com/iterami/Docs.htm/blob/gh-pages/repositories/chromium-iterami-extension.md)
