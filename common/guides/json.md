@@ -351,7 +351,7 @@
   "prefabs": [
     {
       // REQUIRED. Prefab type.
-      "type": "cuboid",
+      "type": "prefabs_webgl_cuboid",
 
       // REQUIRED. Properties of this prefab. Passed as args.
       "properties": {

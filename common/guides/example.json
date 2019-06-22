@@ -179,7 +179,7 @@
   ],
   "prefabs": [
     {
-      "type": "cuboid",
+      "type": "prefabs_webgl_cuboid",
       "properties": {
         "prefix": "example-cuboid",
         "all": {},

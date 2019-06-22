@@ -7,12 +7,12 @@
 ---
 
 * No globals.
-* [`data_canvas_fence_2d(args)`](#data_canvas_fence_2dargs)
-* [`data_canvas_tree_2d(args)`](#data_canvas_tree_2dargs)
+* [`prefabs_canvas_fence_2d(args)`](#prefabs_canvas_fence_2dargs)
+* [`prefabs_canvas_tree_2d(args)`](#prefabs_canvas_tree_2dargs)
 
 ---
 
-### `data_canvas_fence_2d(args)`
+### `prefabs_canvas_fence_2d(args)`
 
 Arg         | Default | Type
 ------------|---------|----------
@@ -25,7 +25,7 @@ y           | 0       | number
 
 ---
 
-### `data_canvas_tree_2d(args)`
+### `prefabs_canvas_tree_2d(args)`
 
 Arg         | Default                 | Type
 ------------|-------------------------|----------
