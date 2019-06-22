@@ -22,15 +22,17 @@
 * JavaScript:
   * [canvas.js](#canvasjs)
   * [core.js](#corejs)
-  * [data.js](#datajs)
   * [tables.js](#tablesjs)
-  * [uri.js](#urijs)
   * [webgl.js](#webgljs)
   * `genre`:
     * [platform.js](#genreplatformjs)
     * [race.js](#genreracejs)
     * [rpg.js](#genrerpgjs)
     * [rts.js](#genrertsjs)
+  * `prefabs`:
+    * [canvas.js](#prefabscanvasjs)
+    * [uri.js](#prefabsurijs)
+    * [webgl.js](#prefabswebgljs)
 
 ---
 
@@ -363,20 +365,8 @@
 
 ---
 
-### data.js
-* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
-* [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
-
----
-
 ### tables.js
-
----
-
-### uri.js
-* [iterami/Multiverse.htm](https://github.com/iterami/Multiverse.htm)
-* [iterami/MultiverseEditor.htm](https://github.com/iterami/MultiverseEditor.htm)
-* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
+* [iterami/Multiverse.htm](https://github.com/iterami/Guides.htm)
 
 ---
 
@@ -404,3 +394,20 @@
 
 ### genre/rts.js
 * [iterami/RTS-2D.htm](https://github.com/iterami/RTS-2D.htm)
+
+---
+
+### prefabs/canvas.js
+* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
+* [iterami/Trains-2D.htm](https://github.com/iterami/Trains-2D.htm)
+
+---
+
+### prefabs/uri.js
+* [iterami/Multiverse.htm](https://github.com/iterami/Multiverse.htm)
+* [iterami/MultiverseEditor.htm](https://github.com/iterami/MultiverseEditor.htm)
+* [iterami/Platform-2D.htm](https://github.com/iterami/Platform-2D.htm)
+
+---
+
+### prefabs/webgl.js
