@@ -1,5 +1,5 @@
-[iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/prefabs/uri.js
----------------------------------------------------------------------------------------------------
+[iterami/common](https://github.com/iterami/Docs.htm/blob/gh-pages/common/README.md)/js/prefabs/uri.js
+------------------------------------------------------------------------------------------------------
 
 * https://github.com/iterami/common/blob/gh-pages/js/prefabs/uri.js
 
