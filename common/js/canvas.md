@@ -2,7 +2,7 @@
 -------------------------------------------------------------------------------------------------
 
 * https://github.com/iterami/common/blob/gh-pages/js/canvas.js
-* https://github.com/iterami/Docs.htm/blob/gh-pages/common/prefabs/canvas.md
+* https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/prefabs/canvas.md
 
 ---
 
