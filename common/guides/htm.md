@@ -9,19 +9,19 @@
 
 ### Files Used
 * `css`:
-  * [`canvas.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/canvas.md): used for 2D and 3D canvas HTM projects.
-  * [`core.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/core.md): used by every HTM project on every non-text-only page.
-  * [`dom.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/dom.md): used by HTM projects that use buttons to simulate a canvas.
-  * [`writings.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/writings.md): used by HTM projects on text-only pages.
+  * [`canvas.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/canvas.md): used for 2D canvas and 3D WebGL HTM projects.
+  * [`core.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/core.md): used for every HTM project that isn't only text.
+  * [`dom.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/dom.md): used for HTM projects that use buttons to simulate a canvas.
+  * [`writings.css`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/css/writings.md): used for HTM projects that are only text.
 * `js`:
   * [`canvas.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/canvas.md): used for 2D canvas HTM projects.
-  * [`core.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/core.md): used by every HTM project.
-  * [`tables.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/tables.md): stand-alone file that adds sorting to all available tables.
-  * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/webgl.md): used for 3D canvas HTM projects.
+  * [`core.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/core.md): used for every HTM project.
+  * [`tables.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/tables.md): stand-alone file that adds table column sorting.
+  * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/webgl.md): used for 3D WebGL HTM projects.
   * `prefabs`:
     * [`canvas.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/prefabs/canvas.md): prefabricated 2D canvas entities.
     * [`uri.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/prefabs/uri.md): prefabricated data URIs.
-    * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/prefabs/webgl.md): prefabricated 3D webgl entities.
+    * [`webgl.js`](https://github.com/iterami/Docs.htm/blob/gh-pages/common/js/prefabs/webgl.md): prefabricated 3D WebGL entities.
 
 ---
 
