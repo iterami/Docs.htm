@@ -115,6 +115,7 @@
           "draw": true,
           "draw-type": "TRIANGLE_FAN",
           "event-key": false,
+          "event-key-consume": 0,
           "event-modify": [
             {
               "amount": -100,

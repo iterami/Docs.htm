@@ -239,6 +239,9 @@
           // Optional. Item in inventory required to trigger event, or false for no requirement.
           "event-key": false,
 
+          // Optional. How much of the `event-key` item should be consumed during the event, or 0 for none.
+          "event-key-consume": 0,
+
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
             {
