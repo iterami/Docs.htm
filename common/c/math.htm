@@ -1,0 +1,220 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>math.c + math.h</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/c.htm>C</a>/math.c + math.h
+<ul>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/math.c rel=noopener>math.c</a>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/math.h rel=noopener>math.h</a>
+  <li>Includes:<ul>
+    <li>"&lt;math.h&gt;"
+  </ul>
+  <li>Functions:<ul>
+    <li><a href=#math-degrees-to-radians>float math_degrees_to_radians(const float degrees)</a>
+    <li><a href=#math-distance-2d>float math_distance_2d(const float x0, const float y0, const float x1, const float y1)</a>
+    <li><a href=#math-matrix-copy>void math_matrix_copy(float *from, float *to)</a>
+    <li><a href=#math-matrix-identity>void math_matrix_identity(float *matrix)</a>
+    <li><a href=#math-matrix-perspective>void math_matrix_perspective(float *matrix, const int width, const int height)</a>
+    <li><a href=#math-matrix-rotate>void math_matrix_rotate(float *matrix, const float x, const float y, const float z)</a>
+    <li><a href=#math-matrix-translate>void math_matrix_translate(float *matrix, const float x, const float y, const float z)</a>
+    <li><a href=#math-point-angle>float math_point_angle(const float x0, const float y0, const float x1, const float y1)</a>
+    <li><a href=#math-radians-to-degrees>float math_radians_to_degrees(const float radians)</a>
+  </ul>
+</ul>
+<hr id=math-degrees-to-radians>
+float math_degrees_to_radians(const float degrees)
+<ul>
+  <li>Converts degrees to radians.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>degrees
+    <td>float
+    <td>
+</table>
+<hr id=math-distance-2d>
+float math_distance_2d(const float x0, const float y0, const float x1, const float y1)
+<ul>
+  <li>Returns the distance between 2 2D points.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>x0
+    <td>float
+    <td>
+  <tr>
+    <td>y0
+    <td>float
+    <td>
+  <tr>
+    <td>x1
+    <td>float
+    <td>
+  <tr>
+    <td>y1
+    <td>float
+    <td>
+</table>
+<hr id=math-matrix-copy>
+void math_matrix_copy(float *from, float *to)
+<ul>
+  <li>Copy the values in a matrix into another matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>from
+    <td>float*
+    <td>
+  <tr>
+    <td>to
+    <td>float*
+    <td>
+</table>
+<hr id=math-matrix-identity>
+void math_matrix_identity(float *matrix)
+<ul>
+  <li>Reset values in a matrix to those of an identity matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>matrix
+    <td>float*
+    <td>
+</table>
+<hr id=math-matrix-perspective>
+void math_matrix_perspective(float *matrix, const int width, const int height)
+<ul>
+  <li>Set up a perspective matrix based on window height and width.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>matrix
+    <td>float*
+    <td>
+  <tr>
+    <td>width
+    <td>int
+    <td>
+  <tr>
+    <td>height
+    <td>int
+    <td>
+</table>
+<hr id=math-matrix-rotate>
+void math_matrix_rotate(float *matrix, const float x, const float y, const float z)
+<ul>
+  <li>Rotate a matrix by a specific amount of degrees.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>matrix
+    <td>float*
+    <td>
+  <tr>
+    <td>x
+    <td>float
+    <td>
+  <tr>
+    <td>y
+    <td>float
+    <td>
+  <tr>
+    <td>z
+    <td>float
+    <td>
+</table>
+<hr id=math-matrix-translate>
+void math_matrix_translate(float *matrix, const float x, const float y, const float z)
+<ul>
+  <li>Translate a matrix by a specific amount.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>matrix
+    <td>float*
+    <td>
+  <tr>
+    <td>x
+    <td>float
+    <td>
+  <tr>
+    <td>y
+    <td>float
+    <td>
+  <tr>
+    <td>z
+    <td>float
+    <td>
+</table>
+<hr id=math-point-angle>
+float math_point_angle(const float x0, const float y0, const float x1, const float y1)
+<ul>
+  <li>Returns the angle between 2 points relative to the grid.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>x0
+    <td>float
+    <td>
+  <tr>
+    <td>y0
+    <td>float
+    <td>
+  <tr>
+    <td>x1
+    <td>float
+    <td>
+  <tr>
+    <td>y1
+    <td>float
+    <td>
+</table>
+<hr id=math-radians-to-degrees>
+float math_radians_to_degrees(const float radians)
+<ul>
+  <li>Converts radians to degrees.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>radians
+    <td>float
+    <td>
+</table>

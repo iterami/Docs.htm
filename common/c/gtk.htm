@@ -1,0 +1,93 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>gtk.c + gtk.h</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/c.htm>C</a>/gtk.c + gtk.h
+<ul>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/gtk.c rel=noopener>gtk.c</a>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/gtk.h rel=noopener>gtk.h</a>
+  <li>Includes:<ul>
+    <li>"&lt;gtk/gtk.h&gt;"
+  </ul>
+  <li>Functions:<ul>
+    <li><a href=#gtk-add-menuitem>void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)</a>
+    <li><a href=#gtk-begin-frameclock>void gtk_begin_frameclock(GtkWidget *_glarea)</a>
+    <li><a href=#gtk-init-gtk>void gtk_init_gtk(GtkApplication* app, const gchar *title)</a>
+  </ul>
+</ul>
+<hr id=gtk-add-menuitem>
+void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)
+<ul>
+  <li>Adds a menuitem to a menu.
+  <li>Attempts to connect callback function or disables the menuitem.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>menu
+    <td>GtkWidget*
+    <td>Menu to add menuitem to.
+  <tr>
+    <td>label
+    <td>gchar*
+    <td>Menuitem label.
+  <tr>
+    <td>accelgroup
+    <td>GtkAccelGroup*
+    <td>All should use same accelgroup.
+  <tr>
+    <td>key
+    <td>guint
+    <td>Shortcut key.
+  <tr>
+    <td>modifier
+    <td>GdkModifierType
+    <td>Shortcut modifier.
+  <tr>
+    <td>callback
+    <td>GCallback
+    <td>Callback function.
+  <tr>
+    <td>data
+    <td>gpointer
+    <td>Optional data to pass to the callback function.
+</table>
+<hr id=gtk-begin-frameclock>
+void gtk_begin_frameclock(GtkWidget *_glarea)
+<ul>
+  <li>Beings a frameclock for a GtkGlArea.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>_glarea
+    <td>GtkWidget*
+    <td>The GtkGlArea the frameclock is for.
+</table>
+<hr id=gtk-init-gtk>
+void gtk_init_gtk(GtkApplication* app, const gchar *title)
+<ul>
+  <li>Handles generic init code for all GTK projects.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>app
+    <td>GtkApplication*
+    <td>
+  <tr>
+    <td>title
+    <td>gchar*
+    <td>The title of the created window.
+</table>

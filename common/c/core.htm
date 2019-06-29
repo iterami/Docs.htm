@@ -1,0 +1,92 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>core.c + core.h</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/c.htm>C</a>/core.c + core.h
+<ul>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/core.c rel=noopener>core.c</a>
+  <li><a class=external href=https://github.com/iterami/common/blob/gh-pages/c/core.h rel=noopener>core.h</a>
+  <li>Includes:<ul>
+    <li>"&lt;stdlib.h&gt;"
+  </ul>
+  <li>Functions:<ul>
+    <li><a href=#core-clamp>float core_clamp_float(const float value, const float min, const float max, const int wrap)</a>
+    <li><a href=#core-is-hexadecimal>int core_is_hexadecimal(const char character)</a>
+    <li><a href=#core-get-int-length>int core_get_int_length(const int integer)</a>
+    <li><a href=#core-iterami-path>char* core_iterami_path(const char *filename)</a>
+  </ul>
+</ul>
+<hr id=core-clamp>
+float core_clamp_float(const float value, const float min, const float max, const int wrap)
+<ul>
+  <li>Clamps a numerical value between min and max, with optional wrapping.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>value
+    <td>float
+    <td>The value to clamp.
+  <tr>
+    <td>min
+    <td>float
+    <td>The minimum possible value.
+  <tr>
+    <td>max
+    <td>float
+    <td>The maximum possible value.
+  <tr>
+    <td>wrap
+    <td>int
+    <td>If the value should wrap. Example: 450 clamped between 0 and 360 with wrap would be 90.
+</table>
+<hr id=core-is-hexadecimal>
+int core_is_hexadecimal(const char character)
+<ul>
+  <li>Checks if a character is hexadecimal. Returns 1 if yes, 0 if no.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>character
+    <td>char
+    <td>The character to check.
+</table>
+<hr id=core-get-int-length>
+int core_get_int_length(const int integer)
+<ul>
+  <li>Returns the length of an integer converted into a string.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>integer
+    <td>int
+    <td>The integer value to check.
+</table>
+<hr id=core-iterami-path>
+char* core_iterami_path(const char *filename)
+<ul>
+  <li>Returns the absolute file path for iterami files within the "~/.iterami/" directory.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>filename
+    <td>char*
+    <td>Path of the requested file, relative to "~/.iterami/".
+</table>

@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>tables.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/tables.js rel=noopener>tables.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#tables-init>tables_init()</a>
+    <li><a href=#tables-sort>tables_sort(element, column, direction)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>tables_column_main
+    <td>0
+    <td>number
+</table>
+<hr id=tables-init>
+tables_init()
+<ul>
+  <li>Automatically called when the file is loaded.
+  <li>Adds sorting buttons to the first `<tr>` in the `<tbody>`.
+  <li>Ignores tables and columns with `tables-nosort` class.
+  <li>Uses column with `tables-main` class as unique main column.
+</ul>
+<hr id=tables-sort>
+tables_sort(element, column, direction)
+<ul>
+  <li>Called when sorting buttons are pressed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>element
+    <td>
+    <td>HTML element
+  <tr>
+    <td>column
+    <td>
+    <td>string ID
+  <tr>
+    <td>direction
+    <td>
+    <td>1 for ascending, 0 for descending
+</table>

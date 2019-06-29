@@ -1,0 +1,2147 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>core.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/core.js rel=noopener>core.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#core-ajax>core_ajax(args)</a>
+    <li><a href=#core-args>core_args(args)</a>
+    <li><a href=#core-audio-create>core_audio_create(args)</a>
+    <li><a href=#core-audio-node-create>core_audio_node_create(args)</a>
+    <li><a href=#core-onended>core_audio_onended(args)</a>
+    <li><a href=#core-source-create>core_audio_source_create(args)</a>
+    <li><a href=#core-start>core_audio_start(args)</a>
+    <li><a href=#core-stop-all>core_audio_stop_all(args)</a>
+    <li><a href=#core-stop>core_audio_stop(args)</a>
+    <li><a href=#core-call>core_call(args)</a>
+    <li><a href=#core-clamp>core_clamp(args)</a>
+    <li><a href=#core-cuboid-overlap>core_cuboid_overlap(args)</a>
+    <li><a href=#core-date-to-timestamp>core_date_to_timestamp(args)</a>
+    <li><a href=#core-degrees-to-radians>core_degrees_to_radians(args)</a>
+    <li><a href=#core-distance>core_distance(args)</a>
+    <li><a href=#core-entity-create>core_entity_create(args)</a>
+    <li><a href=#core-entity-handle-default>core_entity_handle_default(args)</a>
+    <li><a href=#core-entity-remove-all>core_entity_remove_all(args)</a>
+    <li><a href=#core-entity-remove>core_entity_remove(args)</a>
+    <li><a href=#core-entity-set>core_entity_set(args)</a>
+    <li><a href=#core-escape>core_escape()</a>
+    <li><a href=#core-events-bind>core_events_bind(args)</a>
+    <li><a href=#core-events-keyinfo>core_events_keyinfo(event)</a>
+    <li><a href=#core-events-rebind>core_events_rebind(args)</a>
+    <li><a href=#core-events-todoloop>core_events_todoloop()</a>
+    <li><a href=#core-file>core_file(args)</a>
+    <li><a href=#core-fixed-length-line>core_fixed_length_line(args)</a>
+    <li><a href=#core-group-add>core_group_add(args)</a>
+    <li><a href=#core-group-create>core_group_create(args)</a>
+    <li><a href=#core-group-modify>core_group_modify(args)</a>
+    <li><a href=#core-group-move>core_group_move(args)</a>
+    <li><a href=#core-group-remove-all>core_group_remove_all(args)</a>
+    <li><a href=#core-group-remove>core_group_remove(args)</a>
+    <li><a href=#core-handle-beforeunload>core_handle_beforeunload(event)</a>
+    <li><a href=#core-handle-blur>core_handle_blur(event)</a>
+    <li><a href=#core-handle-contextmenu>core_handle_contextmenu(event)</a>
+    <li><a href=#core-handle-defaults>core_handle_defaults(args)</a>
+    <li><a href=#core-handle-event>core_handle_event(args)</a>
+    <li><a href=#core-handle-gamepadconnected>core_handle_gamepadconnected(event)</a>
+    <li><a href=#core-handle-gamepaddisconnected>core_handle_gamepaddisconnected(event)</a>
+    <li><a href=#core-handle-keydown>core_handle_keydown(event)</a>
+    <li><a href=#core-handle-keyup>core_handle_keyup(event)</a>
+    <li><a href=#core-handle-mousedown>core_handle_mousedown(event)</a>
+    <li><a href=#core-handle-mousemove>core_handle_mousemove(event)</a>
+    <li><a href=#core-handle-mouseup>core_handle_mouseup(event)</a>
+    <li><a href=#core-handle-mousewheel>core_handle_mousewheel(event)</a>
+    <li><a href=#core-handle-pointerlockchange>core_handle_pointerlockchange(event)</a>
+    <li><a href=#core-hex-to-rgb>core_hex_to_rgb(args)</a>
+    <li><a href=#core-html-format>core_html_format(args)</a>
+    <li><a href=#core-html_modify>core_html_modify(args)</a>
+    <li><a href=#core-html>core_html(args)</a>
+    <li><a href=#core-image>core_image(args)</a>
+    <li><a href=#core-init>core_init()</a>
+    <li><a href=#core-interval-animationframe>core_interval_animationFrame(args)</a>
+    <li><a href=#core-interval-modify>core_interval_modify(args)</a>
+    <li><a href=#core-interval-pause-all>core_interval_pause_all()</a>
+    <li><a href=#core-interval-pause>core_interval_pause(args)</a>
+    <li><a href=#core-interval-remove-all>core_interval_remove_all()</a>
+    <li><a href=#core-interval-remove>core_interval_remove(args)</a>
+    <li><a href=#core-interval-resume-all>core_interval_resume_all()</a>
+    <li><a href=#core-interval-resume>core_interval_resume(args)</a>
+    <li><a href=#core-keys-updatebinds>core_keys_updatebinds(args)</a>
+    <li><a href=#core-matrix-clone>core_matrix_clone(args)</a>
+    <li><a href=#core-matrix-copy>core_matrix_copy(args)</a>
+    <li><a href=#core-matrix-create>core_matrix_create()</a>
+    <li><a href=#core-matrix-delete>core_matrix_delete(args)</a>
+    <li><a href=#core-matrix-identity>core_matrix_identity(args)</a>
+    <li><a href=#core-matrix-rotate>core_matrix_rotate(args)</a>
+    <li><a href=#core-matrix-round>core_matrix_round(args)</a>
+    <li><a href=#core-matrix-translate>core_matrix_translate(args)</a>
+    <li><a href=#core-mouse-updatebinds>core_mouse_updatebinds(args)</a>
+    <li><a href=#core-move-2d-diagonal>core_move_2d_diagonal(args)</a>
+    <li><a href=#core-move-2d>core_move_2d(args)</a>
+    <li><a href=#core-move-3d>core_move_3d(args)</a>
+    <li><a href=#core-core-normalize>core_normalize(args)</a>
+    <li><a href=#core-core-number-format>core_number_format(args)</a>
+    <li><a href=#core-point-angle>core_point_angle(args)</a>
+    <li><a href=#core-radians-to-degrees>core_radians_to_degrees(args)</a>
+    <li><a href=#core-random-boolean>core_random_boolean(args)</a>
+    <li><a href=#core-random-hex>core_random_hex(args)</a>
+    <li><a href=#core-random-integer>core_random_integer(args)</a>
+    <li><a href=#core-random-key>core_random_key(args)</a>
+    <li><a href=#core-random-number>core_random_number(args)</a>
+    <li><a href=#core-random-rgb>core_random_rgb()</a>
+    <li><a href=#core-random-string>core_random_string(args)</a>
+    <li><a href=#core-replace-multiple>core_replace_multiple</a>
+    <li><a href=#core-repo-init>core_repo_init(args)</a>
+    <li><a href=#core-requestpointerlock>core_requestpointerlock(args)</a>
+    <li><a href=#core-round>core_round(args)</a>
+    <li><a href=#core-sort-custom>core_sort_custom(args)</a>
+    <li><a href=#core-sort-numbers>core_sort_numbers(args)</a>
+    <li><a href=#core-sort-property>core_sort_property(args)</a>
+    <li><a href=#core-sort-random>core_sort_random(args)</a>
+    <li><a href=#core-sort-strings>core_sort_strings(args)</a>
+    <li><a href=#core-storage-add>core_storage_add(args)</a>
+    <li><a href=#core-storage-element-property>core_storage_element_property(args)</a>
+    <li><a href=#core-storage-reset>core_storage_reset()</a>
+    <li><a href=#core-storage-save>core_storage_save()</a>
+    <li><a href=#core-storage-update>core_storage_update(args)</a>
+    <li><a href=#core-tab-create>core_tab_create(args)</a>
+    <li><a href=#core-tab-switch>core_tab_switch(args)</a>
+    <li><a href=#core-test-function>core_test_function(args)</a>
+    <li><a href=#core-time-diff>core_time_diff(args)</a>
+    <li><a href=#core-time-format>core_time_format(args)</a>
+    <li><a href=#core-time-from-inputs>core_time_from_inputs()</a>
+    <li><a href=#core-time-timestamp-to-date>core_time_timestamp_to_date(args)</a>
+    <li><a href=#core-time-two-digits>core_time_two_digits(args)</a>
+    <li><a href=#core-type>core_type(args)</a>
+    <li><a href=#core-type-convert>core_type_convert(args)</a>
+    <li><a href=#core-ui-update>core_ui_update(args)</a>
+    <li><a href=#core-uri>core_uri(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>core_audio
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_audio_context
+    <td>false
+    <td>boolean false or AudioContext
+  <tr>
+    <td>core_audio_sources
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_entities
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_entity_info
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_entity_types_defualt
+    <td>[]
+    <td>array
+  <tr>
+    <td>core_events
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_gamepads
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_groups
+    <td>{'_length': {}}
+    <td>object
+  <tr>
+    <td>core_id_count
+    <td>0
+    <td>number
+  <tr>
+    <td>core_images
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_intervals
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_key_rebinds
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_keys
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_matrices
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_menu_block_events
+    <td>true
+    <td>boolean
+  <tr>
+    <td>core_menu_open
+    <td>false
+    <td>boolean
+  <tr>
+    <td>core_mode
+    <td>0
+    <td>number
+  <tr>
+    <td>core_mouse
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_repo_title
+    <td>''
+    <td>string
+  <tr>
+    <td>core_storage_data
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_storage_info
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_tabs
+    <td>{}
+    <td>object
+  <tr>
+    <td>core_tau
+    <td>6.283185307179586
+    <td>number
+  <tr>
+    <td>core_ui_values
+    <td>{}
+    <td>object
+</table>
+<hr id=core-ajax>
+core_ajax(args)
+<ul>
+  <li>Initiates and handles AJAX requests.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>data
+    <td>null
+    <td>
+  <tr>
+    <td>readyState
+    <td>4
+    <td>number
+  <tr>
+    <td>status
+    <td>200
+    <td>number
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+  <tr>
+    <td>type
+    <td>'GET'
+    <td>string
+  <tr>
+    <td>url
+    <td>
+    <td>string
+</table>
+<hr id=core-args>
+core_args(args)
+<ul>
+  <li>Creates an "args" object with provided properties, populates it with additional optional default properties, and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>args
+    <td>{}
+    <td>object
+  <tr>
+    <td>defaults
+    <td>{}
+    <td>object
+</table>
+<hr id=core-audio-create>
+core_audio_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>audios
+    <td>
+    <td>object
+</table>
+<hr id=core-audio-node-create>
+core_audio_node_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>properties
+    <td>{'label': 'Oscillator'}
+    <td>object
+</table>
+<hr id=core-audio-onended>
+core_audio_onended(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-audio-source-create>
+core_audio_source_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-audio-start>
+core_audio_start(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-audio-stop>
+core_audio_stop(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>when
+    <td>void 0
+    <td>void 0 or number
+</table>
+<hr id=core-audio-stop-all>
+core_audio_stop_all(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>when
+    <td>void 0
+    <td>void 0 or number
+</table>
+<hr id=core-call>
+core_call(args)
+<ul>
+  <li>Calls a function if it exists. Used to prevent errors caused by undefined functions.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>args
+    <td>void 0
+    <td>void 0 or object
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+</table>
+<hr id=core-clamp>
+core_clamp(args)
+<ul>
+  <li>Clamps a number between two values and returns it.
+  <li>If out of bounds, either sets it to closest bound or loops to opposite bound as many times as needed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>max
+    <td>
+    <td>number
+  <tr>
+    <td>min
+    <td>
+    <td>number
+  <tr>
+    <td>value
+    <td>
+    <td>number
+  <tr>
+    <td>wrap
+    <td>false
+    <td>boolean
+</table>
+<hr id=core-cuboid-overlap>
+core_cuboid_overlap(args)
+<ul>
+  <li>Checks if 2 cuboids are overlapping and returns a boolean.
+  <li>Z-axis and depth are optional, allowing 2D rectangle overlap check.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>depth-0
+    <td>0
+    <td>number
+  <tr>
+    <td>depth-1
+    <td>0
+    <td>number
+  <tr>
+    <td>height-0
+    <td>
+    <td>number
+  <tr>
+    <td>height-1
+    <td>
+    <td>number
+  <tr>
+    <td>width-0
+    <td>
+    <td>number
+  <tr>
+    <td>width-1
+    <td>
+    <td>number
+  <tr>
+    <td>x-0
+    <td>
+    <td>number
+  <tr>
+    <td>x-1
+    <td>
+    <td>number
+  <tr>
+    <td>y-0
+    <td>
+    <td>number
+  <tr>
+    <td>y-1
+    <td>
+    <td>number
+  <tr>
+    <td>z-0
+    <td>0
+    <td>number
+  <tr>
+    <td>z-1
+    <td>0
+    <td>number
+</table>
+<hr id=core-date-to-timestamp>
+core_date_to_timestamp(args)
+<ul>
+  <li>Converts a date object into a timestamp and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>date
+    <td>false
+    <td>boolean false or object
+</table>
+<hr id=core-degrees-to-radians>
+core_degrees_to_radians(args)
+<ul>
+  <li>Converts a number of degrees to radians and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>degrees
+    <td>
+    <td>number
+</table>
+<hr id=core-distance>
+core_distance(args)
+<ul>
+  <li>Returns the distance between 2 points that can be 3D, 2D, or 1D.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>x0
+    <td>0
+    <td>number
+  <tr>
+    <td>x1
+    <td>0
+    <td>number
+  <tr>
+    <td>y0
+    <td>0
+    <td>number
+  <tr>
+    <td>y1
+    <td>0
+    <td>number
+  <tr>
+    <td>z0
+    <td>0
+    <td>number
+  <tr>
+    <td>z1
+    <td>0
+    <td>number
+</table>
+<hr id=core-entity-create>
+core_entity_create(args)
+<ul>
+  <li>Creates an entity, provides it with additional properties based on entity defaults and functions, and returns its ID.
+  <li>Not including "id" makes entity use "core_id_count" which starts at 0 and goes up by 1 every time an entity is created.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>core_id_count
+    <td>string ID
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>types
+    <td>[]
+    <td>array of strings
+</table>
+<hr id=core-entity-handle-default>
+core_entity_handle_default(args)
+<ul>
+  <li>Makes sure entity property defaults and groups are handled properly.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
+</table>
+<hr id=core-entity-remove>
+core_entity_remove(args)
+<ul>
+  <li>Deletes an entity and removes it from groups.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=core-entity-remove-all>
+core_entity_remove_all(args)
+<ul>
+  <li>Deletes all entities within a specific group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>group
+    <td>false
+    <td>boolean false or string ID
+</table>
+<hr id=core-entity-set>
+core_entity_set(args)
+<ul>
+  <li>Creates a new entity type that can then be created.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>default
+    <td>false
+    <td>boolean
+  <tr>
+    <td>groups
+    <td>[]
+    <td>array of string IDs
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>todo
+    <td>function(){}
+    <td>function
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
+</table>
+<hr id=core-escape>
+core_escape()
+<ul>
+  <li>Pressing escape opens or closes the menu.
+  <li>Pauses or resumes intervals depending on state.
+  <li>Calls optional repository-specific <a href=main.htm#repo-escape>repo_escape()</a> function.
+</ul>
+<hr id=core-events-bind>
+core_events_bind(args)
+<ul>
+  <li>Updates bindings to various events, including optional clearing.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>beforeunload
+    <td>false
+    <td>boolean false or function
+  <tr>
+    <td>clearkeys
+    <td>false
+    <td>boolean
+  <tr>
+    <td>clearmouse
+    <td>false
+    <td>boolean
+  <tr>
+    <td>elements
+    <td>false
+    <td>boolean false or object
+  <tr>
+    <td>keybinds
+    <td>false
+    <td>boolean false or object
+  <tr>
+    <td>mousebinds
+    <td>false
+    <td>boolean false or object
+</table>
+<hr id=core-events-keyinfo>
+core_events_keyinfo(event)
+<ul>
+  <li>Returns keycode and character of fired keyboard event.
+</ul>
+<hr id=core-events-rebind>
+core_events_rebind(args)
+<hr id=core-events-todoloop>
+core_events_todoloop()
+<ul>
+  <li>Function that runs looping keyboard and mouse event todos.
+</ul>
+<hr id=core-file>
+core_file(args)
+<ul>
+  <li>Uses "FileReader" to read a file of any type, then passes the event to "todo()".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>file
+    <td>
+    <td>string
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+  <tr>
+    <td>type
+    <td>'readAsDataURL'
+    <td>string
+</table>
+<hr id=core-fixed-length-line>
+core_fixed_length_line(args)
+<ul>
+  <li>Returns the endpoint of a line between 2 3D, 2D, or 1D points, where the line has a fixed length.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>length
+    <td>1
+    <td>number
+  <tr>
+    <td>x0
+    <td>0
+    <td>number
+  <tr>
+    <td>x1
+    <td>0
+    <td>number
+  <tr>
+    <td>y0
+    <td>0
+    <td>number
+  <tr>
+    <td>y1
+    <td>0
+    <td>number
+  <tr>
+    <td>z0
+    <td>0
+    <td>number
+  <tr>
+    <td>z1
+    <td>0
+    <td>number
+</table>
+<hr id=core-group-add>
+core_group_add(args)
+<ul>
+  <li>Adds entities to a group and calls "core_group_create()" if it does not exist.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>group
+    <td>
+    <td>string
+</table>
+<hr id=core-group-create>
+core_group_create(args)
+<ul>
+  <li>Creates empty groups and sets up length handling.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ids
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=core-group-modify>
+core_group_modify(args)
+<ul>
+  <li>Runs code that affects every entity within a group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>groups
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>pretodo
+    <td>false
+    <td>boolean false or function
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+</table>
+<hr id=core-group-move>
+core_group_move(args)
+<ul>
+  <li>Removes an entity from a group and adds it to a different group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>from
+    <td>
+    <td>string ID
+  <tr>
+    <td>to
+    <td>
+    <td>string ID
+</table>
+<hr id=core-group-remove>
+core_group_remove(args)
+<ul>
+  <li>Remove entities from 1 specific group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>group
+    <td>
+    <td>string ID
+</table>
+<hr id=core-group-remove-all>
+core_group_remove_all(args)
+<ul>
+  <li>Removes entities fromm all groups.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=core-handle-beforeunload>
+core_handle_beforeunload(event)
+<ul>
+  <li>If the result of the "beforeunload" event returns a string, this function returns it.
+</ul>
+<hr id=core-handle-blur>
+core_handle_blur(event)
+<hr id=core-handle-contextmenu>
+core_handle_contextmenu(event)
+<ul>
+  <li>If the result of the "contextmenu" event doesn't return anything, this function returns "false".
+</ul>
+<hr id=core-handle-defaults>
+core_handle_defaults(args)
+<ul>
+  <li>Recursively applies default values to "var" properties and subproperties.
+  <li>If "var" isn't an object, then this function returns "var".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>default
+    <td>{}
+    <td>object
+  <tr>
+    <td>var
+    <td>{}
+    <td>any
+</table>
+<hr id=core-handle-event>
+core_handle_event(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>event
+    <td>
+    <td>event
+  <tr>
+    <td>key
+    <td>
+    <td>string
+  <tr>
+    <td>object
+    <td>
+    <td>object
+  <tr>
+    <td>state
+    <td>void 0
+    <td>
+  <tr>
+    <td>todo
+    <td>void 0
+    <td>void 0 or function
+</table>
+<hr id=core-handle-gamepadconnected>
+core_handle_gamepadconnected(event)
+<hr id=core-handle-gamepaddisconnected>
+core_handle_gamepaddisconnected(event)
+<hr id=core-handle-keydown>
+core_handle_keydown(event)
+<hr id=core-handle-keyup>
+core_handle_keyup(event)
+<hr id=core-handle-mousedown>
+core_handle_mousedown(event)
+<hr id=core-handle-mousemove>
+core_handle_mousemove(event)
+<hr id=core-handle-mousemove>
+core_handle_mousemove(event)
+<hr id=core-handle-mouseup>
+core_handle_mouseup(event)
+<hr id=core-handle-mousewheel>
+core_handle_mousewheel(event)
+<hr id=core-handle-pointerlockchange>
+core_handle_pointerlockchange(event)
+<hr id=core-hex-to-rgb>
+core_hex_to_rgb(args)
+<ul>
+  <li>Converts a hexadecimal string of length 6 to red, green, and blue, and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>hex
+    <td>
+    <td>string
+</table>
+<hr id=core-html>
+core_html(args)
+<ul>
+  <li>Returns an HTML element and optionally adds it to a parent.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>parent
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>type
+    <td>'div'
+    <td>string
+</table>
+<hr id=core-html-format>
+core_html_format(args)
+<ul>
+  <li>Replaces characters in a string that may cause HTML errors and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>string
+    <td>
+    <td>string
+</table>
+<hr id=core-html-modify>
+core_html_modify(args)
+<ul>
+  <li>Assigns properties to an HTML element if it exists.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>properties
+    <td>
+    <td>object
+</table>
+<hr id=core-image>
+core_image(args)
+<ul>
+  <li>Creates an image, begins asynchronous loading, and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>src
+    <td>
+    <td>string
+  <tr>
+    <td>todo
+    <td>function(){}
+    <td>function
+</table>
+<hr id=core-init>
+core_init()
+<ul>
+  <li>Sets up universal project components, such as the core menu and events.
+</ul>
+<hr id=core-interval-animationframe>
+core_interval_animationFrame(args)
+<ul>
+  <li>Continues running animation frames.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-interval-modify>
+core_interval_modify(args)
+<ul>
+  <li>Creates or modifies an animation frame, interval, or timeout.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>animationFrame
+    <td>false
+    <td>boolean
+  <tr>
+    <td>clear
+    <td>'clearInterval'
+    <td>string
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>interval
+    <td>25
+    <td>number
+  <tr>
+    <td>paused
+    <td>false
+    <td>boolean
+  <tr>
+    <td>set
+    <td>'setInterval'
+    <td>string
+</table>
+<hr id=core-interval-pause>
+core_interval_pause(args)
+<ul>
+  <li>Pauses an animation frame, interval, or timeout.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-interval-pause-all>
+ore_interval_pause_all()
+<ul>
+  <li>Pauses all animation frames, intervals, and timeouts.
+</ul>
+<hr id=core-interval-remove>
+core_interval_remove(args)
+<ul>
+  <li>Pauses and removes an animation frame, interval, or timeout.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-interval-remove-all>
+core_interval_remove_all()
+<ul>
+  <li>Pauses and removes all animation frames, intervals, and timeouts.
+</ul>
+<hr id=core-interval-resume>
+core_interval_resume(args)
+<ul>
+  <li>Resumes an animation frame, interval, or timeout.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-interval-resume-all>
+core_interval_resume_all()
+<ul>
+  <li>Reumes all animation frames, intervals, and timeouts.
+</ul>
+<hr id=core-keys-updatebinds>
+core_keys_updatebinds(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>clear
+    <td>false
+    <td>boolean
+  <tr>
+    <td>keybinds
+    <td>
+    <td>object
+</table>
+<hr id=core-matrix-clone>
+core_matrix_clone(args)
+<ul>
+  <li>Creates a new matrix and copies the values of an existing matrix onto it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>to
+    <td>
+    <td>string
+</table>
+<hr id=core-matrix-copy>
+core_matrix_copy(args)
+<ul>
+  <li>Copies all values of a matrix onto another matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>to
+    <td>
+    <td>string
+</table>
+<hr id=core-matrix-create>
+core_matrix_create()
+<ul>
+  <li>Creates a new blank Float32Array of length 16 and returns it.
+</ul>
+<hr id=core-matrix-delete>
+core_matrix_delete(args)
+<ul>
+  <li>Deletes various matricies.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ids
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=core-matrix-identity>
+core_matrix_identity(args)
+<ul>
+  <li>Resets a matrix to an identity matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-matrix-rotate>
+core_matrix_rotate(args)
+<ul>
+  <li>Rotates a 3D matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dimensions
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-matrix-round>
+core_matrix_round(args)
+<ul>
+  <li>Rounds the values of a matrix to the nearest integer.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-matrix-translate>
+core_matrix_translate(args)
+<ul>
+  <li>Translates a 3D matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dimensions
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=core-mouse-updatebinds>
+core_mouse_updatebinds(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>clear
+    <td>false
+    <td>boolean
+  <tr>
+    <td>mousebinds
+    <td>
+    <td>object
+</table>
+<hr id=core-move-2d>
+core_move_2d(args)
+<ul>
+  <li>Calculates movement in 2 dimensions and returns an object containing "angle", "x", and "y".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>x0
+    <td>
+    <td>number
+  <tr>
+    <td>x1
+    <td>
+    <td>number
+  <tr>
+    <td>y0
+    <td>
+    <td>number
+  <tr>
+    <td>y1
+    <td>
+    <td>number
+</table>
+<hr id=core-move-2d-diagonal>
+core_move_2d_diagonal(args)
+<ul>
+  <li>Handles reduction of movement speed when moving diagonally amd returns an object containing "x" and "y".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dx
+    <td>
+    <td>number
+  <tr>
+    <td>dy
+    <td>
+    <td>number
+  <tr>
+    <td>speed
+    <td>
+    <td>number
+</table>
+<hr id=core-move-3d>
+core_move_3d(args)
+<ul>
+  <li>Calculates movement in 3 dimensions and returns an object containing "x" and "z".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>angle
+    <td>
+    <td>number
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>speed
+    <td>1
+    <td>number
+  <tr>
+    <td>strafe
+    <td>false
+    <td>boolean
+</table>
+<hr id=core-normalize>
+core_normalize(args)
+<ul>
+  <li>Normalize a 2D or 3D vector.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x
+    <td>
+    <td>number
+  <tr>
+    <td>y
+    <td>
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=core-number-format>
+core_number_format(args)
+<ul>
+  <li>Formats a number based on "new Intl.NumberFormat()" and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>number
+    <td>
+    <td>number
+</table>
+<hr id=core-point-angle>
+core_point_angle(args)
+<ul>
+  <li>Returns the angle between 2 points relative to the grid.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>x0
+    <td>
+    <td>number
+  <tr>
+    <td>x1
+    <td>
+    <td>number
+  <tr>
+    <td>y0
+    <td>
+    <td>number
+  <tr>
+    <td>y1
+    <td>
+    <td>number
+</table>
+<hr id=core-radians-to-degrees>
+core_radians_to_degrees(args)
+<ul>
+  <li>Converts a number of radians to degrees and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>radians
+    <td>
+    <td>number
+</table>
+<hr id=core-randomb-boolean>
+core_random_boolean(args)
+<ul>
+  <li>Returns a random boolean with optional probability manipulation.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>chance
+    <td>.5
+    <td>boolean
+</table>
+<hr id=core-random-hex>
+core_random_hex(args)
+<ul>
+  <li>Returns a random hexadecimal string of length 6.
+</ul>
+<hr id=core-random-integer>
+core_random_integer(args)
+<ul>
+  <li>Generates a random integer in a range.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>max
+    <td>100
+    <td>number
+  <tr>
+    <td>todo
+    <td>'floor'
+    <td>string
+</table>
+<hr id=core-random-key>
+core_random_key(args)
+<ul>
+  <li>Returns a random object key.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>object
+    <td>
+    <td>object
+</table>
+<hr id=core-random-number>
+core_random_number(args)
+<ul>
+  <li>Returns a random number in a range.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+</table>
+<hr id=core-random-rgb>
+core_random_rgb()
+<ul>
+  <li>Returns an object containing random "blue", "green", and "red", as numbers between 0 and 255.
+</ul>
+<hr id=core-random-string>
+core_random_string(args)
+<ul>
+  <li>Returns a random string from a string of available characters.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>characters
+    <td>'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    <td>string
+  <tr>
+    <td>length
+    <td>100
+    <td>number
+</table>
+<hr id=core-replace-multiple>
+core_replace_multiple(args)
+<ul>
+  <li>Improvement of general string "replace()" that allows multiple replacements.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>patterns
+    <td>
+    <td>object
+  <tr>
+    <td>string
+    <td>
+    <td>string
+</table>
+<hr id=core-repo-init>
+core_repo_init(args)
+<ul>
+  <li>Called by repository-specific <a href=main.htm#repo-init>repo_init()</a> function.
+  <li>Sets up various repository-specific things needed for project function.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>audios
+    <td>{}
+    <td>object
+  <tr>
+    <td>beforeunload
+    <td>false
+    <td>boolean false or function
+  <tr>
+    <td>entities
+    <td>{}
+    <td>object
+  <tr>
+    <td>github
+    <td>'iterami'
+    <td>string ID of GitHub repo owner
+  <tr>
+    <td>globals
+    <td>{}
+    <td>object
+  <tr>
+    <td>images
+    <td>{}
+    <td>object
+  <tr>
+    <td>info
+    <td>''
+    <td>string
+  <tr>
+    <td>keybinds
+    <td>false
+    <td>boolean false or object
+  <tr>
+    <td>menu
+    <td>false
+    <td>boolean
+  <tr>
+    <td>menu-block-events
+    <td>true
+    <td>boolean
+  <tr>
+    <td>mousebinds
+    <td>false
+    <td>boolean false or object
+  <tr>
+    <td>storage
+    <td>{}
+    <td>object
+  <tr>
+    <td>storage-menu
+    <td>''
+    <td>string
+  <tr>
+    <td>tabs
+    <td>{}
+    <td>object
+  <tr>
+    <td>title
+    <td>
+    <td>string
+  <tr>
+    <td>ui
+    <td>''
+    <td>string
+</table>
+<hr id=core-requestpointerlock>
+core_requestpointerlock(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>'canvas'
+    <td>string
+</table>
+<hr id=core-round>
+core_round(args)
+<ul>
+  <li>Rounds a number to a specific number of decimal places and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>number
+    <td>
+    <td>number
+</table>
+<hr id=core-sort-custom>
+core_sort_custom(args)
+<ul>
+  <li>Sorts an array according to custom sorting rules and returns it.
+  <li>Optionally reverses the array after sorting.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>array
+    <td>
+    <td>array
+  <tr>
+    <td>reverse
+    <td>false
+    <td>boolean
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+</table>
+<hr id=core-sort-numbers>
+core_sort_numbers(args)
+<ul>
+  <li>Sorts an array numbers from smallest to biggest and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>array
+    <td>
+    <td>array
+  <tr>
+    <td>reverse
+    <td>false
+    <td>boolean
+</table>
+<hr id=core-sort-random>
+core_sort_random(args)
+<ul>
+  <li>Sorts an array randomly and returns it.
+  <li>Cannot be reversed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>array
+    <td>
+    <td>array
+</table>
+<hr id=core-sort-property>
+core_sort_property(args)
+<ul>
+  <li>Sort an array based on some property and return it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>array
+    <td>
+    <td>array
+  <tr>
+    <td>property
+    <td>
+    <td>string ID
+  <tr>
+    <td>reverse
+    <td>false
+    <td>boolean
+</table>
+<hr id=core-sort-strings>
+core_sort_strings(args)
+<ul>
+  <li>Sort an array of strings based on "localeCompare()" and return it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>array
+    <td>
+    <td>array
+  <tr>
+    <td>reverse
+    <td>false
+    <td>boolean
+</table>
+<hr id=core-storage-add>
+core_storage_add(args)
+<ul>
+  <li>Adds information and defaults of a variable that should be stored in "window.localStorage".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>prefix
+    <td>core_repo_title + '-'
+    <td>string
+  <tr>
+    <td>storage
+    <td>
+    <td>object
+</table>
+<hr id=core-storage-element-property>
+core_storage_element_property(args)
+<ul>
+  <li>Returns "checked" when modifying checkboxes.
+  <li>Returns "innerHTML" when modifying "div" or "span".
+  <li>Returns "value" when modifying everything else.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>element
+    <td>
+    <td>element
+  <tr>
+    <td>key
+    <td>
+    <td>string
+</table>
+<hr id=core-storage-reset>
+core_storage_reset()
+<ul>
+  <li>Optionally resets storage values to their original defaults.
+</ul>
+<hr id=core-storage-save>
+core_storage_save()
+<ul>
+  <li>Saves current storage input values as new storage values.
+</ul>
+<hr id=core-storage-update>
+core_storage_update(args)
+<ul>
+  <li>Updates settings inputs with current storage values.
+  <li>Updates all by default, but can also only update specific keys.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>keys
+    <td>false
+    <td>boolean false or array of strings
+</table>
+<hr id=core-tab-create>
+core_tab_create(args)
+<ul>
+  <li>Creates an HTML tab div and button for selecting the tab.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>content
+    <td>
+    <td>string
+  <tr>
+    <td>group
+    <td>
+    <td>string ID
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>label
+    <td>
+    <td>string
+</table>
+<hr id=core-tab-switch>
+core_tab_switch(args)
+<ul>
+  <li>Switches to a created tab.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=core-test-function>
+core_test_function(args)
+<ul>
+  <li>Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned valuez.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>args
+    <td>{}
+    <td>object
+  <tr>
+    <td>expect
+    <td>
+    <td>any
+  <tr>
+    <td>function
+    <td>
+    <td>function
+</table>
+<hr id=core-time-diff>
+core_time_diff(args)
+<ul>
+  <li>Returns the formatted difference between two dates and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>now
+    <td>false
+    <td>boolean false or timestamp
+  <tr>
+    <td>target
+    <td>
+    <td>timestamp
+</table>
+<hr id=core-time-format>
+core_time_format(args)
+<ul>
+  <li>Returns a date object formatted as a string.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>date
+    <td>false
+    <td>boolean false or object
+  <tr>
+    <td>diff
+    <td>false
+    <td>boolean false or object
+</table>
+<hr id=core-time-from-inputs>
+core_time_from_inputs()
+<ul>
+  <li>Collects date information from specific HTML elements and returns a timestamp.
+</ul>
+<hr id=core-timestamp-to-date>
+core_timestamp_to_date(args)
+<ul>
+  <li>Converts a timestamp to a date object and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>timestamp
+    <td>false
+    <td>boolean false or timestamp
+</table>
+<hr id=core-two-digits>
+core_two_digits(args)
+<ul>
+  <li>Adds "0" before a number of it only has 1 digit and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>number
+    <td>
+    <td>number
+</table>
+<hr id=core-type>
+core_type(args)
+<ul>
+  <li>Returns the type of "var".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>type
+    <td>'function'
+    <td>string
+  <tr>
+    <td>var
+    <td>
+    <td>any
+</table>
+<hr id=core-type-convert>
+core_type_convert(args)
+<ul>
+  <li>Converts variable depending on template variable type.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>template
+    <td>
+    <td>any
+  <tr>
+    <td>value
+    <td>
+    <td>any
+</table>
+<hr id=core-ui-update>
+core_ui_update(args)
+<ul>
+  <li>Updates HTML element values depending on type, but only if the value is new.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ids
+    <td>{}
+    <td>object
+</table>
+<hr id=core-uri>
+core_uri(args)
+<ul>
+  <li>Returns an element converted to a data URI.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>'buffer'
+    <td>string ID
+  <tr>
+    <td>quality
+    <td>1
+    <td>number
+  <tr>
+    <td>type
+    <td>'image/png'
+    <td>string
+</table>

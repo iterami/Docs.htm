@@ -1,0 +1,217 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>canvas.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/canvas.js rel=noopener>canvas.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#canvas-attach>canvas_attach(args)</a>
+    <li><a href=#canvas-draw>canvas_draw()</a>
+    <li><a href=#canvas-drawloop>canvas_drawloop()</a>
+    <li><a href=#canvas-draw-path>canvas_draw_path(args)</a>
+    <li><a href=#canvas-gradient>canvas_gradient(args)</a>
+    <li><a href=#canvas-init>canvas_init(args)</a>
+    <li><a href=#canvas-logicloop>canvas_logicloop()</a>
+    <li><a href=#canvas-logicloop-handle-entity>canvas_logicloop_handle_entity(entity)</a>
+    <li><a href=#canvas-resize>canvas_resize()</a>
+    <li><a href=#canvas-setmode>canvas_setmode(args)</a>
+    <li><a href=#canvas-setproperties>canvas_setproperties(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>canvas_buffer
+    <td>0
+    <td>placeholder, CanvasRenderingContext2D
+  <tr>
+    <td>canvas_canvas
+    <td>0
+    <td>placeholder, CanvasRenderingContext2D
+  <tr>
+    <td>canvas_properties
+    <td>{}
+    <td>object
+</table>
+<hr id=canvas-attach>
+canvas_attach(args)
+<ul>
+  <li>Used to attach an entity to another entity and share a position with optional offset.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>base
+    <td>
+    <td>string ID
+  <tr>
+    <td>entity
+    <td>
+    <td>string ID
+  <tr>
+    <td>offset-x
+    <td>0
+    <td>number
+  <tr>
+    <td>offset-y
+    <td>0
+    <td>number
+</table>
+<hr id=canvas-draw>
+canvas_draw()
+<ul>
+  <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
+  <li>Main drawing code is handled via repository-specific "draw_logic()" code.
+</ul>
+<hr id=canvas-drawloop>
+canvas_drawloop()
+<ul>
+  <li>Calls "canvas_draw()" if the menu isn't open.
+  <li>Handles animation frames via "core_interval_animationFrame()" usage.
+</ul>
+<hr id=canvas-draw-path>
+canvas_draw_path(args)
+<ul>
+  <li>Draws interesting things with various properties, such as polygons and spheres.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>style
+    <td>canvas_properties['style']
+    <td>string
+  <tr>
+    <td>translate
+    <td>false
+    <td>boolean
+  <tr>
+    <td>type
+    <td>'lineTo'
+    <td>string
+  <tr>
+    <td>vertices
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+</table>
+<hr id=canvas-gradient>
+canvas_gradient(args)
+<ul>
+  <li>Returns a gradient that can be used as a "fillStyle".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>height
+    <td>0
+    <td>number
+  <tr>
+    <td>stops
+    <td>
+    <td>array
+  <tr>
+    <td>width
+    <td>0
+    <td>number
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+</table>
+<hr id=canvas-init>
+canvas_init(args)
+<ul>
+  <li>Sets up various aspects of projects that use full screen canvases.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>contextmenu
+    <td>true
+    <td>boolean
+</table>
+<hr id=canvas-logicloop>
+canvas_logicloop()
+<ul>
+  <li>Calls repository-specific "logic()".
+  <li>Updates attached entities.
+</ul>
+<hr id=canvas-logicloop-handle-entity>
+canvas_logicloop_handle_entity(entity)
+<ul>
+  <li>Function called by "canvas_logicloop()" for optimization purposes.
+</ul>
+<hr id=canvas-resize>
+canvas_resize()
+<ul>
+  <li>Handles resizing the canvas to current window proportions.
+  <li>Resets canvas properties that may have been lost upon resize.
+</ul>
+<hr id=canvas-setmode>
+canvas_setmode(args)
+<ul>
+  <li>Mode reset and mode content loading function.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>mode
+    <td>0
+    <td>number
+  <tr>
+    <td>newgame
+    <td>false
+    <td>boolean
+</table>
+<hr id=canvas-setproperties>
+canvas_setproperties(args)
+<ul>
+  <li>Sets and stores canvas properties in "window.canvas_properties".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>properties
+    <td>
+    <td>object
+</table>
