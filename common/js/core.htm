@@ -22,6 +22,7 @@
     <li><a href=#core-cuboid-overlap>core_cuboid_overlap(args)</a>
     <li><a href=#core-date-to-timestamp>core_date_to_timestamp(args)</a>
     <li><a href=#core-degrees-to-radians>core_degrees_to_radians(args)</a>
+    <li><a href=#core-digits-min>core_digits_min(args)</a>
     <li><a href=#core-distance>core_distance(args)</a>
     <li><a href=#core-entity-create>core_entity_create(args)</a>
     <li><a href=#core-entity-handle-default>core_entity_handle_default(args)</a>
@@ -114,7 +115,6 @@
     <li><a href=#core-time-format>core_time_format(args)</a>
     <li><a href=#core-time-from-inputs>core_time_from_inputs()</a>
     <li><a href=#core-time-timestamp-to-date>core_time_timestamp_to_date(args)</a>
-    <li><a href=#core-time-two-digits>core_time_two_digits(args)</a>
     <li><a href=#core-type>core_type(args)</a>
     <li><a href=#core-type-convert>core_type_convert(args)</a>
     <li><a href=#core-ui-update>core_ui_update(args)</a>
@@ -516,6 +516,26 @@ core_degrees_to_radians(args)
     <td>number
   <tr>
     <td>degrees
+    <td>
+    <td>number
+</table>
+<hr id=core-digits-min>
+core_digits_min(args)
+<ul>
+  <li>Returns a string containing a minimum number of digits.
+  <li>Example: 7 with 3 minimum digits would become "007".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>digits
+    <td>2
+    <td>number
+  <tr>
+    <td>number
     <td>
     <td>number
 </table>
@@ -2053,21 +2073,6 @@ core_timestamp_to_date(args)
     <td>timestamp
     <td>false
     <td>boolean false or timestamp
-</table>
-<hr id=core-two-digits>
-core_two_digits(args)
-<ul>
-  <li>Adds "0" before a number of it only has 1 digit and returns it.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>number
-    <td>
-    <td>number
 </table>
 <hr id=core-type>
 core_type(args)

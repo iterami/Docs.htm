@@ -112,6 +112,14 @@ function repo_init(){
       },
       {
         'args': {
+          'digits': 3,
+          'number': 7,
+        },
+        'expect': '007',
+        'function': 'core_digits_min',
+      },
+      {
+        'args': {
           'x0': 4,
           'y0': 8,
           'z0': 15,
@@ -397,13 +405,6 @@ function repo_init(){
         },
         'expect': -2211753600000,
         'function': 'core_time_from_inputs',
-      },
-      {
-        'args': {
-          'number': 7,
-        },
-        'expect': '07',
-        'function': 'core_two_digits',
       },
     ];
 
