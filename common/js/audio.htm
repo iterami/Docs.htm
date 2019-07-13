@@ -1,0 +1,130 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>audio.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/audio.js rel=noopener>audio.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#audio-create>audio_create(args)</a>
+    <li><a href=#audio-node-create>audio_node_create(args)</a>
+    <li><a href=#audio-onended>audio_onended(args)</a>
+    <li><a href=#audio-source-create>audio_source_create(args)</a>
+    <li><a href=#audio-start>audio_start(args)</a>
+    <li><a href=#audio-stop>audio_stop(args)</a>
+    <li><a href=#audio-stop-all>audio_stop_all(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>audio_audios
+    <td>{}
+    <td>object
+  <tr>
+    <td>audio_context
+    <td>false
+    <td>boolean false or AudioContext
+  <tr>
+    <td>audio_sources
+    <td>{}
+    <td>object
+</table>
+<hr id=audio-create>
+audio_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>audios
+    <td>
+    <td>object
+</table>
+<hr id=audio-node-create>
+audio_node_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>properties
+    <td>{'label': 'Oscillator'}
+    <td>object
+</table>
+<hr id=audio-onended>
+audio_onended(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=audio-source-create>
+audio_source_create(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=audio-start>
+audio_start(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=audio-stop>
+audio_stop(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>when
+    <td>void 0
+    <td>void 0 or number
+</table>
+<hr id=audio-stop-all>
+audio_stop_all(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>when
+    <td>void 0
+    <td>void 0 or number
+</table>

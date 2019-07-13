@@ -10,13 +10,6 @@
   <li>Functions:<ul>
     <li><a href=#core-ajax>core_ajax(args)</a>
     <li><a href=#core-args>core_args(args)</a>
-    <li><a href=#core-audio-create>core_audio_create(args)</a>
-    <li><a href=#core-audio-node-create>core_audio_node_create(args)</a>
-    <li><a href=#core-onended>core_audio_onended(args)</a>
-    <li><a href=#core-source-create>core_audio_source_create(args)</a>
-    <li><a href=#core-start>core_audio_start(args)</a>
-    <li><a href=#core-stop-all>core_audio_stop_all(args)</a>
-    <li><a href=#core-stop>core_audio_stop(args)</a>
     <li><a href=#core-call>core_call(args)</a>
     <li><a href=#core-clamp>core_clamp(args)</a>
     <li><a href=#core-cuboid-overlap>core_cuboid_overlap(args)</a>
@@ -128,18 +121,6 @@
     <td>Globals
     <td>Default
     <td>Type
-  <tr>
-    <td>core_audio
-    <td>{}
-    <td>object
-  <tr>
-    <td>core_audio_context
-    <td>false
-    <td>boolean false or AudioContext
-  <tr>
-    <td>core_audio_sources
-    <td>{}
-    <td>object
   <tr>
     <td>core_entities
     <td>{}
@@ -282,98 +263,6 @@ core_args(args)
     <td>defaults
     <td>{}
     <td>object
-</table>
-<hr id=core-audio-create>
-core_audio_create(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>audios
-    <td>
-    <td>object
-</table>
-<hr id=core-audio-node-create>
-core_audio_node_create(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>false
-    <td>boolean false or string ID
-  <tr>
-    <td>properties
-    <td>{'label': 'Oscillator'}
-    <td>object
-</table>
-<hr id=core-audio-onended>
-core_audio_onended(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-</table>
-<hr id=core-audio-source-create>
-core_audio_source_create(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-</table>
-<hr id=core-audio-start>
-core_audio_start(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-</table>
-<hr id=core-audio-stop>
-core_audio_stop(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-  <tr>
-    <td>when
-    <td>void 0
-    <td>void 0 or number
-</table>
-<hr id=core-audio-stop-all>
-core_audio_stop_all(args)
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>when
-    <td>void 0
-    <td>void 0 or number
 </table>
 <hr id=core-call>
 core_call(args)
@@ -1709,10 +1598,6 @@ core_repo_init(args)
     <td>Arg
     <td>Default
     <td>Type
-  <tr>
-    <td>audios
-    <td>{}
-    <td>object
   <tr>
     <td>beforeunload
     <td>false
