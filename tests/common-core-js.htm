@@ -154,6 +154,16 @@ function repo_init(){
       },
       {
         'args': {
+          'numerator': 222,
+        },
+        'expect': {
+          'denominator': 500,
+          'numerator': 111,
+        },
+        'function': 'core_fraction_reduce',
+      },
+      {
+        'args': {
           'a': 11,
           'b': 99,
         },

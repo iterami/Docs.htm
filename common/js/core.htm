@@ -29,6 +29,7 @@
     <li><a href=#core-events-todoloop>core_events_todoloop()</a>
     <li><a href=#core-file>core_file(args)</a>
     <li><a href=#core-fixed-length-line>core_fixed_length_line(args)</a>
+    <li><a href=#core-fraction-reduce>core_fraction_reduce(args)</a>
     <li><a href=#core-greatest-common-divisor>core_greatest_common_divisor(args)</a>
     <li><a href=#core-group-add>core_group_add(args)</a>
     <li><a href=#core-group-create>core_group_create(args)</a>
@@ -698,6 +699,26 @@ core_fixed_length_line(args)
   <tr>
     <td>z1
     <td>0
+    <td>number
+</table>
+<hr id=core-fraction-reduce>
+core_fraction_reduce(args)
+<ul>
+  <li>Reduces a fraction to it's smallest form, such as reducing 222/1000 to 111/500.
+  <li>The "denominator" arg is optional and will default to the nearest higher power of 10.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>denominator
+    <td>false
+    <td>number or boolean false
+  <tr>
+    <td>numerator
+    <td>
     <td>number
 </table>
 <hr id=core-greatest-common-divisor>
