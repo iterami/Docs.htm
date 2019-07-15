@@ -8,17 +8,17 @@
 <ul>
   <li><a href=#globals>Globals</a>
   <li>Functions:<ul>
-    <li><a href=#canvas-attach>canvas_attach(args)</a>
-    <li><a href=#canvas-draw>canvas_draw()</a>
-    <li><a href=#canvas-drawloop>canvas_drawloop()</a>
-    <li><a href=#canvas-draw-path>canvas_draw_path(args)</a>
-    <li><a href=#canvas-gradient>canvas_gradient(args)</a>
-    <li><a href=#canvas-init>canvas_init(args)</a>
-    <li><a href=#canvas-logicloop>canvas_logicloop()</a>
-    <li><a href=#canvas-logicloop-handle-entity>canvas_logicloop_handle_entity(entity)</a>
-    <li><a href=#canvas-resize>canvas_resize()</a>
-    <li><a href=#canvas-setmode>canvas_setmode(args)</a>
-    <li><a href=#canvas-setproperties>canvas_setproperties(args)</a>
+    <li><a href=#canvas_attach>canvas_attach(args)</a>
+    <li><a href=#canvas_draw>canvas_draw()</a>
+    <li><a href=#canvas_drawloop>canvas_drawloop()</a>
+    <li><a href=#canvas_draw_path>canvas_draw_path(args)</a>
+    <li><a href=#canvas_gradient>canvas_gradient(args)</a>
+    <li><a href=#canvas_init>canvas_init(args)</a>
+    <li><a href=#canvas_logicloop>canvas_logicloop()</a>
+    <li><a href=#canvas_logicloop_handle_entity>canvas_logicloop_handle_entity(entity)</a>
+    <li><a href=#canvas_resize>canvas_resize()</a>
+    <li><a href=#canvas_setmode>canvas_setmode(args)</a>
+    <li><a href=#canvas_setproperties>canvas_setproperties(args)</a>
   </ul>
 </ul>
 <hr id=globals>
@@ -40,7 +40,7 @@
     <td>{}
     <td>object
 </table>
-<hr id=canvas-attach>
+<hr id=canvas_attach>
 canvas_attach(args)
 <ul>
   <li>Used to attach an entity to another entity and share a position with optional offset.
@@ -67,19 +67,19 @@ canvas_attach(args)
     <td>0
     <td>number
 </table>
-<hr id=canvas-draw>
+<hr id=canvas_draw>
 canvas_draw()
 <ul>
   <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
   <li>Main drawing code is handled via repository-specific "draw_logic()" code.
 </ul>
-<hr id=canvas-drawloop>
+<hr id=canvas_drawloop>
 canvas_drawloop()
 <ul>
   <li>Calls "canvas_draw()" if the menu isn't open.
   <li>Handles animation frames via "core_interval_animationFrame()" usage.
 </ul>
-<hr id=canvas-draw-path>
+<hr id=canvas_draw_path>
 canvas_draw_path(args)
 <ul>
   <li>Draws interesting things with various properties, such as polygons and spheres.
@@ -118,7 +118,7 @@ canvas_draw_path(args)
     <td>0
     <td>number
 </table>
-<hr id=canvas-gradient>
+<hr id=canvas_gradient>
 canvas_gradient(args)
 <ul>
   <li>Returns a gradient that can be used as a "fillStyle".
@@ -149,7 +149,7 @@ canvas_gradient(args)
     <td>0
     <td>number
 </table>
-<hr id=canvas-init>
+<hr id=canvas_init>
 canvas_init(args)
 <ul>
   <li>Sets up various aspects of projects that use full screen canvases.
@@ -164,24 +164,24 @@ canvas_init(args)
     <td>true
     <td>boolean
 </table>
-<hr id=canvas-logicloop>
+<hr id=canvas_logicloop>
 canvas_logicloop()
 <ul>
   <li>Calls repository-specific "logic()".
   <li>Updates attached entities.
 </ul>
-<hr id=canvas-logicloop-handle-entity>
+<hr id=canvas_logicloop_handle_entity>
 canvas_logicloop_handle_entity(entity)
 <ul>
   <li>Function called by "canvas_logicloop()" for optimization purposes.
 </ul>
-<hr id=canvas-resize>
+<hr id=canvas_resize>
 canvas_resize()
 <ul>
   <li>Handles resizing the canvas to current window proportions.
   <li>Resets canvas properties that may have been lost upon resize.
 </ul>
-<hr id=canvas-setmode>
+<hr id=canvas_setmode>
 canvas_setmode(args)
 <ul>
   <li>Mode reset and mode content loading function.
@@ -200,7 +200,7 @@ canvas_setmode(args)
     <td>false
     <td>boolean
 </table>
-<hr id=canvas-setproperties>
+<hr id=canvas_setproperties>
 canvas_setproperties(args)
 <ul>
   <li>Sets and stores canvas properties in "window.canvas_properties".
