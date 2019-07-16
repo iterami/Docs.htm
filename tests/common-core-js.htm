@@ -90,21 +90,6 @@ function repo_init(){
       },
       {
         'args': {
-          'date': {
-            'date': 21,
-            'hour': 16,
-            'millisecond': 0,
-            'minute': 20,
-            'month': 2,
-            'second': 0,
-            'year': 2013,
-          },
-        },
-        'expect': 1361463600000,
-        'function': 'core_date_to_timestamp',
-      },
-      {
-        'args': {
           'degrees': 145,
         },
         'expect': 2.5307274,
@@ -393,36 +378,6 @@ function repo_init(){
           'twentythree',
         ],
         'function': 'core_sort_strings',
-      },
-      {
-        'args': {
-          'now': 9876543210,
-          'target': 123456789,
-        },
-        'expect': '- 00-03-22 21:11:26',
-        'function': 'core_time_diff',
-      },
-      {
-        'args': {
-          'date': {
-            'date': 21,
-            'hour': 16,
-            'millisecond': 0,
-            'minute': 20,
-            'month': 2,
-            'second': 0,
-            'year': 2013,
-          },
-        },
-        'expect': '2013-02-21 16:20:00',
-        'function': 'core_time_format',
-      },
-      {
-        'args': {
-          'number': 7,
-        },
-        'expect': -2211753600000,
-        'function': 'core_time_from_inputs',
       },
     ];
 

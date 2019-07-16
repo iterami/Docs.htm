@@ -13,7 +13,6 @@
     <li><a href=#core_call>core_call(args)</a>
     <li><a href=#core_clamp>core_clamp(args)</a>
     <li><a href=#core_cuboid_overlap>core_cuboid_overlap(args)</a>
-    <li><a href=#core_date_to_timestamp>core_date_to_timestamp(args)</a>
     <li><a href=#core_degrees_to_radians>core_degrees_to_radians(args)</a>
     <li><a href=#core_digits_min>core_digits_min(args)</a>
     <li><a href=#core_distance>core_distance(args)</a>
@@ -106,10 +105,6 @@
     <li><a href=#core_tab_create>core_tab_create(args)</a>
     <li><a href=#core_tab_switch>core_tab_switch(args)</a>
     <li><a href=#core_test_function>core_test_function(args)</a>
-    <li><a href=#core_time_diff>core_time_diff(args)</a>
-    <li><a href=#core_time_format>core_time_format(args)</a>
-    <li><a href=#core_time_from_inputs>core_time_from_inputs()</a>
-    <li><a href=#core_time_timestamp_to_date>core_time_timestamp_to_date(args)</a>
     <li><a href=#core_type>core_type(args)</a>
     <li><a href=#core_type_convert>core_type_convert(args)</a>
     <li><a href=#core_ui_update>core_ui_update(args)</a>
@@ -375,21 +370,6 @@ core_cuboid_overlap(args)
     <td>z-1
     <td>0
     <td>number
-</table>
-<hr id=core_date_to_timestamp>
-core_date_to_timestamp(args)
-<ul>
-  <li>Converts a date object into a timestamp and returns it.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>date
-    <td>false
-    <td>boolean false or object
 </table>
 <hr id=core_degrees_to_radians>
 core_degrees_to_radians(args)
@@ -1942,64 +1922,6 @@ core_test_function(args)
     <td>function
     <td>
     <td>function
-</table>
-<hr id=core_time_diff>
-core_time_diff(args)
-<ul>
-  <li>Returns the formatted difference between two dates and returns it.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>now
-    <td>false
-    <td>boolean false or timestamp
-  <tr>
-    <td>target
-    <td>
-    <td>timestamp
-</table>
-<hr id=core_time_format>
-core_time_format(args)
-<ul>
-  <li>Returns a date object formatted as a string.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>date
-    <td>false
-    <td>boolean false or object
-  <tr>
-    <td>diff
-    <td>false
-    <td>boolean false or object
-</table>
-<hr id=core_time_from_inputs>
-core_time_from_inputs()
-<ul>
-  <li>Collects date information from specific HTML elements and returns a timestamp.
-</ul>
-<hr id=core_timestamp_to_date>
-core_timestamp_to_date(args)
-<ul>
-  <li>Converts a timestamp to a date object and returns it.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>timestamp
-    <td>false
-    <td>boolean false or timestamp
 </table>
 <hr id=core_type>
 core_type(args)
