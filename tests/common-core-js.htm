@@ -43,60 +43,6 @@ function repo_init(){
       },
       {
         'args': {
-          'max': 360,
-          'min': 0,
-          'value': 450,
-        },
-        'expect': 360,
-        'function': 'core_clamp',
-      },
-      {
-        'args': {
-          'max': 360,
-          'min': 0,
-          'value': 450,
-          'wrap': true,
-        },
-        'expect': 90,
-        'function': 'core_clamp',
-      },
-      {
-        'args': {
-          'height-0': 10,
-          'width-0': 10,
-          'x-0': 5,
-          'y-0': 5,
-          'height-1': 10,
-          'width-1': 10,
-          'x-1': 0,
-          'y-1': 0,
-        },
-        'expect': true,
-        'function': 'core_cuboid_overlap',
-      },
-      {
-        'args': {
-          'height-0': 10,
-          'width-0': 10,
-          'x-0': 15,
-          'y-0': 15,
-          'height-1': 10,
-          'width-1': 10,
-          'x-1': 0,
-          'y-1': 0,
-        },
-        'expect': false,
-        'function': 'core_cuboid_overlap',
-      },
-      {
-        'args': {
-          'degrees': 145,
-        },
-        'expect': 2.5307274,
-        'function': 'core_degrees_to_radians',
-      },
-      {
-        'args': {
           'digits': 3,
           'number': 7,
         },
@@ -104,56 +50,9 @@ function repo_init(){
         'function': 'core_digits_min',
       },
       {
-        'args': {
-          'x0': 4,
-          'y0': 8,
-          'z0': 15,
-          'x1': 16,
-          'y1': 23,
-          'z1': 42,
-        },
-        'expect': 33.1360831,
-        'function': 'core_distance',
-      },
-      {
         'args': void 0,
         'expect': 0,
         'function': 'core_entity_create',
-      },
-      {
-        'args': {
-          'length': 5,
-          'x0': 0,
-          'y0': 0,
-          'z0': 0,
-          'x1': 1,
-          'y1': 0,
-          'z1': 1,
-        },
-        'expect': {
-          'x': 3.5355338,
-          'y': 0,
-          'z': 3.5355338,
-        },
-        'function': 'core_fixed_length_line',
-      },
-      {
-        'args': {
-          'numerator': 222,
-        },
-        'expect': {
-          'denominator': 500,
-          'numerator': 111,
-        },
-        'function': 'core_fraction_reduce',
-      },
-      {
-        'args': {
-          'a': 11,
-          'b': 99,
-        },
-        'expect': 11,
-        'function': 'core_greatest_common_divisor',
       },
       {
         'args': void 0,
@@ -216,85 +115,11 @@ function repo_init(){
         'function': 'core_html_modify',
       },
       {
-        'args': void 0,
-        'expect': {
-          '0': 0,
-          '1': 0,
-          '2': 0,
-          '3': 0,
-          '4': 0,
-          '5': 0,
-          '6': 0,
-          '7': 0,
-          '8': 0,
-          '9': 0,
-          '10': 0,
-          '11': 0,
-          '12': 0,
-          '13': 0,
-          '14': 0,
-          '15': 0,
-        },
-        'function': 'core_matrix_create',
-      },
-      {
-        'args': {
-          'multiplier': 2,
-          'x0': 0,
-          'y0': 0,
-          'x1': 1,
-          'y1': 1,
-        },
-        'expect': {
-          'angle': .7853982,
-          'x': 1.4142136,
-          'y': 1.4142136,
-        },
-        'function': 'core_move_2d',
-      },
-      {
-        'args': {
-          'speed': 2,
-          'dx': 1,
-          'dy': 1,
-        },
-        'expect': '?',
-        'function': 'core_move_2d_diagonal',
-      },
-      {
-        'args': {
-          'angle': 45,
-          'multiplier': 2,
-        },
-        'expect': {
-          'x': 1.4142136,
-          'z': 1.4142136,
-        },
-        'function': 'core_move_3d',
-      },
-      {
         'args': {
           'number': '123456.789',
         },
         'expect': '123,456.789',
         'function': 'core_number_format',
-      },
-      {
-        'args': {
-          'x0': 0,
-          'y0': 0,
-          'x1': 5,
-          'y1': 5,
-        },
-        'expect': .7853982,
-        'function': 'core_point_angle',
-      },
-      {
-        'args': {
-          'radians': .7853981633974483,
-        },
-        'expect': 45,
-        'function': 'core_radians_to_degrees',
       },
       {
         'args': {

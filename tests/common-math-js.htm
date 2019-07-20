@@ -1,0 +1,243 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>common math.js Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Tests/<a href=../../common/js/math.js>common math.js</a>
+<table class=center>
+  <thead>
+    <tr class=header>
+      <td>Function
+      <td>Args
+      <td>Expected
+      <td>Returned
+      <td>Test
+  <tbody id=results>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/math.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+
+    const tests = [
+      {
+        'args': {
+          'max': 360,
+          'min': 0,
+          'value': 450,
+        },
+        'expect': 360,
+        'function': 'math_clamp',
+      },
+      {
+        'args': {
+          'max': 360,
+          'min': 0,
+          'value': 450,
+          'wrap': true,
+        },
+        'expect': 90,
+        'function': 'math_clamp',
+      },
+      {
+        'args': {
+          'height-0': 10,
+          'width-0': 10,
+          'x-0': 5,
+          'y-0': 5,
+          'height-1': 10,
+          'width-1': 10,
+          'x-1': 0,
+          'y-1': 0,
+        },
+        'expect': true,
+        'function': 'math_cuboid_overlap',
+      },
+      {
+        'args': {
+          'height-0': 10,
+          'width-0': 10,
+          'x-0': 15,
+          'y-0': 15,
+          'height-1': 10,
+          'width-1': 10,
+          'x-1': 0,
+          'y-1': 0,
+        },
+        'expect': false,
+        'function': 'math_cuboid_overlap',
+      },
+      {
+        'args': {
+          'degrees': 145,
+        },
+        'expect': 2.5307274,
+        'function': 'math_degrees_to_radians',
+      },
+      {
+        'args': {
+          'x0': 4,
+          'y0': 8,
+          'z0': 15,
+          'x1': 16,
+          'y1': 23,
+          'z1': 42,
+        },
+        'expect': 33.1360831,
+        'function': 'math_distance',
+      },
+      {
+        'args': {
+          'length': 5,
+          'x0': 0,
+          'y0': 0,
+          'z0': 0,
+          'x1': 1,
+          'y1': 0,
+          'z1': 1,
+        },
+        'expect': {
+          'x': 3.5355338,
+          'y': 0,
+          'z': 3.5355338,
+        },
+        'function': 'math_fixed_length_line',
+      },
+      {
+        'args': {
+          'numerator': 222,
+        },
+        'expect': {
+          'denominator': 500,
+          'numerator': 111,
+        },
+        'function': 'math_fraction_reduce',
+      },
+      {
+        'args': {
+          'a': 11,
+          'b': 99,
+        },
+        'expect': 11,
+        'function': 'math_greatest_common_divisor',
+      },
+      {
+        'args': void 0,
+        'expect': {
+          '0': 0,
+          '1': 0,
+          '2': 0,
+          '3': 0,
+          '4': 0,
+          '5': 0,
+          '6': 0,
+          '7': 0,
+          '8': 0,
+          '9': 0,
+          '10': 0,
+          '11': 0,
+          '12': 0,
+          '13': 0,
+          '14': 0,
+          '15': 0,
+        },
+        'function': 'math_matrix_create',
+      },
+      {
+        'args': {
+          'multiplier': 2,
+          'x0': 0,
+          'y0': 0,
+          'x1': 1,
+          'y1': 1,
+        },
+        'expect': {
+          'angle': .7853982,
+          'x': 1.4142136,
+          'y': 1.4142136,
+        },
+        'function': 'math_move_2d',
+      },
+      {
+        'args': {
+          'speed': 2,
+          'dx': 1,
+          'dy': 1,
+        },
+        'expect': '?',
+        'function': 'math_move_2d_diagonal',
+      },
+      {
+        'args': {
+          'angle': 45,
+          'multiplier': 2,
+        },
+        'expect': {
+          'x': 1.4142136,
+          'z': 1.4142136,
+        },
+        'function': 'math_move_3d',
+      },
+      {
+        'args': {
+          'x0': 0,
+          'y0': 0,
+          'x1': 5,
+          'y1': 5,
+        },
+        'expect': .7853982,
+        'function': 'math_point_angle',
+      },
+      {
+        'args': {
+          'radians': .7853981633974483,
+        },
+        'expect': 45,
+        'function': 'math_radians_to_degrees',
+      },
+    ];
+
+    let results = '';
+    for(let test in tests){
+        let test_args = {};
+        Object.assign(
+          test_args,
+          tests[test]
+        );
+        test_args['args'] = {};
+        Object.assign(
+          test_args['args'],
+          tests[test]['args']
+        );
+        const result = core_test_function(test_args);
+        const expect = core_type({
+          'var': tests[test]['expect'],
+        })
+          ? tests[test]['expect'].toString()
+          : JSON.stringify(
+            tests[test]['expect'],
+            void 0,
+            1
+          );
+
+        results += '<tr ' + (!result['test'] ? ' style=background:#600' : '') + '>'
+          + '<td><a href=../common/js/math.htm#' + tests[test]['function'] + '>' + tests[test]['function'] + '()</a>'
+          + '<td>' + JSON.stringify(
+            tests[test]['args'],
+            null,
+            1
+          ) + '<td>' + expect
+          + '<td>' + JSON.stringify(
+            result['returned'],
+            null,
+            1
+          ) + '<td>' + result['test'];
+    }
+    document.getElementById('results').innerHTML = results;
+}
+</script>

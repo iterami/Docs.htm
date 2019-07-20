@@ -1,0 +1,569 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>math.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/math.js rel=noopener>math.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#math_clamp>math_clamp(args)</a>
+    <li><a href=#math_cuboid_overlap>math_cuboid_overlap(args)</a>
+    <li><a href=#math_degrees_to_radians>math_degrees_to_radians(args)</a>
+    <li><a href=#math_distance>math_distance(args)</a>
+    <li><a href=#math_fixed_length_line>math_fixed_length_line(args)</a>
+    <li><a href=#math_fraction_reduce>math_fraction_reduce(args)</a>
+    <li><a href=#math_greatest_common_divisor>math_greatest_common_divisor(args)</a>
+    <li><a href=#math_matrix_clone>math_matrix_clone(args)</a>
+    <li><a href=#math_matrix_copy>math_matrix_copy(args)</a>
+    <li><a href=#math_matrix_create>math_matrix_create()</a>
+    <li><a href=#math_matrix_delete>math_matrix_delete(args)</a>
+    <li><a href=#math_matrix_identity>math_matrix_identity(args)</a>
+    <li><a href=#math_matrix_rotate>math_matrix_rotate(args)</a>
+    <li><a href=#math_matrix_round>math_matrix_round(args)</a>
+    <li><a href=#math_matrix_translate>math_matrix_translate(args)</a>
+    <li><a href=#math_move_2d_diagonal>math_move_2d_diagonal(args)</a>
+    <li><a href=#math_move_2d>math_move_2d(args)</a>
+    <li><a href=#math_move_3d>math_move_3d(args)</a>
+    <li><a href=#math_normalize>math_normalize(args)</a>
+    <li><a href=#math_point_angle>math_point_angle(args)</a>
+    <li><a href=#math_radians_to_degrees>math_radians_to_degrees(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>math_matrices
+    <td>{}
+    <td>object
+</table>
+<hr id=math_clamp>
+math_clamp(args)
+<ul>
+  <li>Clamps a number between two values and returns it.
+  <li>If out of bounds, either sets it to closest bound or loops to opposite bound as many times as needed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>max
+    <td>
+    <td>number
+  <tr>
+    <td>min
+    <td>
+    <td>number
+  <tr>
+    <td>value
+    <td>
+    <td>number
+  <tr>
+    <td>wrap
+    <td>false
+    <td>boolean
+</table>
+<hr id=math_cuboid_overlap>
+math_cuboid_overlap(args)
+<ul>
+  <li>Checks if 2 cuboids are overlapping and returns a boolean.
+  <li>Z-axis and depth are optional, allowing 2D rectangle overlap check.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>depth-0
+    <td>0
+    <td>number
+  <tr>
+    <td>depth-1
+    <td>0
+    <td>number
+  <tr>
+    <td>height-0
+    <td>
+    <td>number
+  <tr>
+    <td>height-1
+    <td>
+    <td>number
+  <tr>
+    <td>width-0
+    <td>
+    <td>number
+  <tr>
+    <td>width-1
+    <td>
+    <td>number
+  <tr>
+    <td>x-0
+    <td>
+    <td>number
+  <tr>
+    <td>x-1
+    <td>
+    <td>number
+  <tr>
+    <td>y-0
+    <td>
+    <td>number
+  <tr>
+    <td>y-1
+    <td>
+    <td>number
+  <tr>
+    <td>z-0
+    <td>0
+    <td>number
+  <tr>
+    <td>z-1
+    <td>0
+    <td>number
+</table>
+<hr id=math_degrees_to_radians>
+math_degrees_to_radians(args)
+<ul>
+  <li>Converts a number of degrees to radians and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>degrees
+    <td>
+    <td>number
+</table>
+<hr id=math_distance>
+math_distance(args)
+<ul>
+  <li>Returns the distance between 2 points that can be 3D, 2D, or 1D.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>x0
+    <td>0
+    <td>number
+  <tr>
+    <td>x1
+    <td>0
+    <td>number
+  <tr>
+    <td>y0
+    <td>0
+    <td>number
+  <tr>
+    <td>y1
+    <td>0
+    <td>number
+  <tr>
+    <td>z0
+    <td>0
+    <td>number
+  <tr>
+    <td>z1
+    <td>0
+    <td>number
+</table>
+<hr id=math_fixed_length_line>
+math_fixed_length_line(args)
+<ul>
+  <li>Returns the endpoint of a line between 2 3D, 2D, or 1D points, where the line has a fixed length.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>length
+    <td>1
+    <td>number
+  <tr>
+    <td>x0
+    <td>0
+    <td>number
+  <tr>
+    <td>x1
+    <td>0
+    <td>number
+  <tr>
+    <td>y0
+    <td>0
+    <td>number
+  <tr>
+    <td>y1
+    <td>0
+    <td>number
+  <tr>
+    <td>z0
+    <td>0
+    <td>number
+  <tr>
+    <td>z1
+    <td>0
+    <td>number
+</table>
+<hr id=math_fraction_reduce>
+math_fraction_reduce(args)
+<ul>
+  <li>Reduces a fraction to it's smallest form, such as reducing 222/1000 to 111/500.
+  <li>The "denominator" arg is optional and will default to the nearest higher power of 10.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>denominator
+    <td>false
+    <td>number or boolean false
+  <tr>
+    <td>numerator
+    <td>
+    <td>number
+</table>
+<hr id=math_greatest_common_divisor>
+math_greatest_common_divisor(args)
+<ul>
+  <li>Calculates and returns the greatest common divisor of 2 numbers.
+  <li>If either number is 0, the other number is returned.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>a
+    <td>
+    <td>number
+  <tr>
+    <td>b
+    <td>
+    <td>number
+</table>
+<hr id=math_matrix_clone>
+math_matrix_clone(args)
+<ul>
+  <li>Creates a new matrix and copies the values of an existing matrix onto it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>to
+    <td>
+    <td>string
+</table>
+<hr id=math_matrix_copy>
+math_matrix_copy(args)
+<ul>
+  <li>Copies all values of a matrix onto another matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>to
+    <td>
+    <td>string
+</table>
+<hr id=math_matrix_create>
+math_matrix_create()
+<ul>
+  <li>Creates a new blank Float32Array of length 16 and returns it.
+</ul>
+<hr id=math_matrix_delete>
+math_matrix_delete(args)
+<ul>
+  <li>Deletes various matricies.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ids
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=math_matrix_identity>
+math_matrix_identity(args)
+<ul>
+  <li>Resets a matrix to an identity matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=math_matrix_rotate>
+math_matrix_rotate(args)
+<ul>
+  <li>Rotates a 3D matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dimensions
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=math_matrix_round>
+math_matrix_round(args)
+<ul>
+  <li>Rounds the values of a matrix to the nearest integer.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=math_matrix_translate>
+math_matrix_translate(args)
+<ul>
+  <li>Translates a 3D matrix.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dimensions
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=math_move_2d>
+math_move_2d(args)
+<ul>
+  <li>Calculates movement in 2 dimensions and returns an object containing "angle", "x", and "y".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>x0
+    <td>
+    <td>number
+  <tr>
+    <td>x1
+    <td>
+    <td>number
+  <tr>
+    <td>y0
+    <td>
+    <td>number
+  <tr>
+    <td>y1
+    <td>
+    <td>number
+</table>
+<hr id=math_move_2d_diagonal>
+math_move_2d_diagonal(args)
+<ul>
+  <li>Handles reduction of movement speed when moving diagonally amd returns an object containing "x" and "y".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>dx
+    <td>
+    <td>number
+  <tr>
+    <td>dy
+    <td>
+    <td>number
+  <tr>
+    <td>speed
+    <td>
+    <td>number
+</table>
+<hr id=math_move_3d>
+math_move_3d(args)
+<ul>
+  <li>Calculates movement in 3 dimensions and returns an object containing "x" and "z".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>angle
+    <td>
+    <td>number
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>speed
+    <td>1
+    <td>number
+  <tr>
+    <td>strafe
+    <td>false
+    <td>boolean
+</table>
+<hr id=math_normalize>
+math_normalize(args)
+<ul>
+  <li>Normalize a 2D or 3D vector.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x
+    <td>
+    <td>number
+  <tr>
+    <td>y
+    <td>
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=math_point_angle>
+math_point_angle(args)
+<ul>
+  <li>Returns the angle between 2 points relative to the grid.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>x0
+    <td>
+    <td>number
+  <tr>
+    <td>x1
+    <td>
+    <td>number
+  <tr>
+    <td>y0
+    <td>
+    <td>number
+  <tr>
+    <td>y1
+    <td>
+    <td>number
+</table>
+<hr id=math_radians_to_degrees>
+math_radians_to_degrees(args)
+<ul>
+  <li>Converts a number of radians to degrees and returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>decimals
+    <td>core_storage_data['decimals']
+    <td>number
+  <tr>
+    <td>radians
+    <td>
+    <td>number
+</table>
