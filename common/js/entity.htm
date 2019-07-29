@@ -1,0 +1,284 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>entity.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/entity.js rel=noopener>entity.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Functions:<ul>
+    <li><a href=#entity_create>entity_create(args)</a>
+    <li><a href=#entity_handle_default>entity_handle_default(args)</a>
+    <li><a href=#entity_remove>entity_remove(args)</a>
+    <li><a href=#entity_remove_all>entity_remove_all(args)</a>
+    <li><a href=#entity_set>entity_set(args)</a>
+    <li><a href=#entity_group_add>entity_group_add(args)</a>
+    <li><a href=#entity_group_create>entity_group_create(args)</a>
+    <li><a href=#entity_group_modify>entity_group_modify(args)</a>
+    <li><a href=#entity_group_move>entity_group_move(args)</a>
+    <li><a href=#entity_group_remove>entity_group_remove(args)</a>
+    <li><a href=#entity_group_remove_all>entity_group_remove_all(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity_entities
+    <td>{}
+    <td>object
+  <tr>
+    <td>entity_info
+    <td>{}
+    <td>object
+  <tr>
+    <td>entity_types_defualt
+    <td>[]
+    <td>array
+  <tr>
+    <td>entity_groups
+    <td>{'_length': {}}
+    <td>object
+  <tr>
+    <td>entity_id_count
+    <td>0
+    <td>number
+</table>
+<hr id=entity_create>
+entity_create(args)
+<ul>
+  <li>Creates an entity, provides it with additional properties based on entity defaults and functions, and returns its ID.
+  <li>Not including "id" makes entity use "entity_id_count" which starts at 0 and goes up by 1 every time an entity is created.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>entity_id_count
+    <td>string ID
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>types
+    <td>[]
+    <td>array of strings
+</table>
+<hr id=entity_handle_default>
+entity_handle_default(args)
+<ul>
+  <li>Makes sure entity property defaults and groups are handled properly.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
+</table>
+<hr id=entity_remove>
+entity_remove(args)
+<ul>
+  <li>Deletes an entity and removes it from groups.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=entity_remove_all>
+entity_remove_all(args)
+<ul>
+  <li>Deletes all entities within a specific group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>group
+    <td>false
+    <td>boolean false or string ID
+</table>
+<hr id=entity_set>
+entity_set(args)
+<ul>
+  <li>Creates a new entity type that can then be created.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>default
+    <td>false
+    <td>boolean
+  <tr>
+    <td>groups
+    <td>[]
+    <td>array of string IDs
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>todo
+    <td>function(){}
+    <td>function
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
+</table>
+<hr id=entity_group_add>
+entity_group_add(args)
+<ul>
+  <li>Adds entities to a group and calls "entity_group_create()" if it does not exist.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>group
+    <td>
+    <td>string
+</table>
+<hr id=entity_group_create>
+entity_group_create(args)
+<ul>
+  <li>Creates empty groups and sets up length handling.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ids
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=entity_group_modify>
+entity_group_modify(args)
+<ul>
+  <li>Runs code that affects every entity within a group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>groups
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>pretodo
+    <td>false
+    <td>boolean false or function
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+</table>
+<hr id=entity_group_move>
+entity_group_move(args)
+<ul>
+  <li>Removes an entity from a group and adds it to a different group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>from
+    <td>
+    <td>string ID
+  <tr>
+    <td>to
+    <td>
+    <td>string ID
+</table>
+<hr id=entity_group_remove>
+entity_group_remove(args)
+<ul>
+  <li>Remove entities from 1 specific group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+  <tr>
+    <td>group
+    <td>
+    <td>string ID
+</table>
+<hr id=entity_group_remove_all>
+entity_group_remove_all(args)
+<ul>
+  <li>Removes entities fromm all groups.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+</table>

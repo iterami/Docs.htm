@@ -1,0 +1,73 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>common entity.js Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Tests/<a href=../../common/js/entity.js>common entity.js</a>
+<table class=center>
+  <thead>
+    <tr class=header>
+      <td>Function
+      <td>Args
+      <td>Expected
+      <td>Returned
+      <td>Test
+  <tbody id=results>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/entity.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+
+    const tests = [
+      {
+        'args': void 0,
+        'expect': 0,
+        'function': 'entity_create',
+      },
+    ];
+
+    let results = '';
+    for(let test in tests){
+        let test_args = {};
+        Object.assign(
+          test_args,
+          tests[test]
+        );
+        test_args['args'] = {};
+        Object.assign(
+          test_args['args'],
+          tests[test]['args']
+        );
+        const result = core_test_function(test_args);
+        const expect = core_type({
+          'var': tests[test]['expect'],
+        })
+          ? tests[test]['expect'].toString()
+          : JSON.stringify(
+            tests[test]['expect'],
+            void 0,
+            1
+          );
+
+        results += '<tr ' + (!result['test'] ? ' style=background:#600' : '') + '>'
+          + '<td><a href=../common/js/entity.htm#' + tests[test]['function'] + '>' + tests[test]['function'] + '()</a>'
+          + '<td>' + JSON.stringify(
+            tests[test]['args'],
+            null,
+            1
+          ) + '<td>' + expect
+          + '<td>' + JSON.stringify(
+            result['returned'],
+            null,
+            1
+          ) + '<td>' + result['test'];
+    }
+    document.getElementById('results').innerHTML = results;
+}
+</script>

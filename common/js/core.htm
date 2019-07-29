@@ -12,23 +12,12 @@
     <li><a href=#core_args>core_args(args)</a>
     <li><a href=#core_call>core_call(args)</a>
     <li><a href=#core_digits_min>core_digits_min(args)</a>
-    <li><a href=#core_entity_create>core_entity_create(args)</a>
-    <li><a href=#core_entity_handle_default>core_entity_handle_default(args)</a>
-    <li><a href=#core_entity_remove_all>core_entity_remove_all(args)</a>
-    <li><a href=#core_entity_remove>core_entity_remove(args)</a>
-    <li><a href=#core_entity_set>core_entity_set(args)</a>
     <li><a href=#core_escape>core_escape()</a>
     <li><a href=#core_events_bind>core_events_bind(args)</a>
     <li><a href=#core_events_keyinfo>core_events_keyinfo(event)</a>
     <li><a href=#core_events_rebind>core_events_rebind(args)</a>
     <li><a href=#core_events_todoloop>core_events_todoloop()</a>
     <li><a href=#core_file>core_file(args)</a>
-    <li><a href=#core_group_add>core_group_add(args)</a>
-    <li><a href=#core_group_create>core_group_create(args)</a>
-    <li><a href=#core_group_modify>core_group_modify(args)</a>
-    <li><a href=#core_group_move>core_group_move(args)</a>
-    <li><a href=#core_group_remove_all>core_group_remove_all(args)</a>
-    <li><a href=#core_group_remove>core_group_remove(args)</a>
     <li><a href=#core_handle_beforeunload>core_handle_beforeunload(event)</a>
     <li><a href=#core_handle_blur>core_handle_blur(event)</a>
     <li><a href=#core_handle_contextmenu>core_handle_contextmenu(event)</a>
@@ -97,18 +86,6 @@
     <td>Default
     <td>Type
   <tr>
-    <td>core_entities
-    <td>{}
-    <td>object
-  <tr>
-    <td>core_entity_info
-    <td>{}
-    <td>object
-  <tr>
-    <td>core_entity_types_defualt
-    <td>[]
-    <td>array
-  <tr>
     <td>core_events
     <td>{}
     <td>object
@@ -116,14 +93,6 @@
     <td>core_gamepads
     <td>{}
     <td>object
-  <tr>
-    <td>core_groups
-    <td>{'_length': {}}
-    <td>object
-  <tr>
-    <td>core_id_count
-    <td>0
-    <td>number
   <tr>
     <td>core_images
     <td>{}
@@ -274,118 +243,6 @@ core_digits_min(args)
     <td>
     <td>number
 </table>
-<hr id=core_entity_create>
-core_entity_create(args)
-<ul>
-  <li>Creates an entity, provides it with additional properties based on entity defaults and functions, and returns its ID.
-  <li>Not including "id" makes entity use "core_id_count" which starts at 0 and goes up by 1 every time an entity is created.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>core_id_count
-    <td>string ID
-  <tr>
-    <td>properties
-    <td>{}
-    <td>object
-  <tr>
-    <td>types
-    <td>[]
-    <td>array of strings
-</table>
-<hr id=core_entity_handle_default>
-core_entity_handle_default(args)
-<ul>
-  <li>Makes sure entity property defaults and groups are handled properly.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-  <tr>
-    <td>type
-    <td>
-    <td>string ID
-</table>
-<hr id=core_entity_remove>
-core_entity_remove(args)
-<ul>
-  <li>Deletes an entity and removes it from groups.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
-</table>
-<hr id=core_entity_remove_all>
-core_entity_remove_all(args)
-<ul>
-  <li>Deletes all entities within a specific group.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>group
-    <td>false
-    <td>boolean false or string ID
-</table>
-<hr id=core_entity_set>
-core_entity_set(args)
-<ul>
-  <li>Creates a new entity type that can then be created.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>default
-    <td>false
-    <td>boolean
-  <tr>
-    <td>groups
-    <td>[]
-    <td>array of string IDs
-  <tr>
-    <td>properties
-    <td>{}
-    <td>object
-  <tr>
-    <td>todo
-    <td>function(){}
-    <td>function
-  <tr>
-    <td>type
-    <td>
-    <td>string ID
-</table>
 <hr id=core_escape>
 core_escape()
 <ul>
@@ -462,128 +319,6 @@ core_file(args)
     <td>type
     <td>'readAsDataURL'
     <td>string
-</table>
-<hr id=core_group_add>
-core_group_add(args)
-<ul>
-  <li>Adds entities to a group and calls "core_group_create()" if it does not exist.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
-  <tr>
-    <td>group
-    <td>
-    <td>string
-</table>
-<hr id=core_group_create>
-core_group_create(args)
-<ul>
-  <li>Creates empty groups and sets up length handling.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>ids
-    <td>
-    <td>array of string IDs
-</table>
-<hr id=core_group_modify>
-core_group_modify(args)
-<ul>
-  <li>Runs code that affects every entity within a group.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>groups
-    <td>
-    <td>array of string IDs
-  <tr>
-    <td>pretodo
-    <td>false
-    <td>boolean false or function
-  <tr>
-    <td>todo
-    <td>
-    <td>function
-</table>
-<hr id=core_group_move>
-core_group_move(args)
-<ul>
-  <li>Removes an entity from a group and adds it to a different group.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
-  <tr>
-    <td>from
-    <td>
-    <td>string ID
-  <tr>
-    <td>to
-    <td>
-    <td>string ID
-</table>
-<hr id=core_group_remove>
-core_group_remove(args)
-<ul>
-  <li>Remove entities from 1 specific group.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
-  <tr>
-    <td>group
-    <td>
-    <td>string ID
-</table>
-<hr id=core_group_remove_all>
-core_group_remove_all(args)
-<ul>
-  <li>Removes entities fromm all groups.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
 </table>
 <hr id=core_handle_beforeunload>
 core_handle_beforeunload(event)
@@ -1053,10 +788,6 @@ core_repo_init(args)
     <td>beforeunload
     <td>false
     <td>boolean false or function
-  <tr>
-    <td>entities
-    <td>{}
-    <td>object
   <tr>
     <td>github
     <td>'iterami'
