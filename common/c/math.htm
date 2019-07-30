@@ -10,6 +10,7 @@
     <li>"&lt;math.h&gt;"
   </ul>
   <li>Functions:<ul>
+    <li><a href=#math-clamp>float math_clamp_float(const float value, const float min, const float max, const int wrap)</a>
     <li><a href=#math-degrees-to-radians>float math_degrees_to_radians(const float degrees)</a>
     <li><a href=#math-distance-2d>float math_distance_2d(const float x0, const float y0, const float x1, const float y1)</a>
     <li><a href=#math-matrix-copy>void math_matrix_copy(float *from, float *to)</a>
@@ -21,6 +22,33 @@
     <li><a href=#math-radians-to-degrees>float math_radians_to_degrees(const float radians)</a>
   </ul>
 </ul>
+<hr id=math-clamp>
+float math_clamp_float(const float value, const float min, const float max, const int wrap)
+<ul>
+  <li>Clamps a numerical value between min and max, with optional wrapping.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>value
+    <td>float
+    <td>The value to clamp.
+  <tr>
+    <td>min
+    <td>float
+    <td>The minimum possible value.
+  <tr>
+    <td>max
+    <td>float
+    <td>The maximum possible value.
+  <tr>
+    <td>wrap
+    <td>int
+    <td>If the value should wrap. Example: 450 clamped between 0 and 360 with wrap would be 90.
+</table>
 <hr id=math-degrees-to-radians>
 float math_degrees_to_radians(const float degrees)
 <ul>
