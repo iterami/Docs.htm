@@ -50,6 +50,14 @@ function repo_init(){
         'function': 'core_digits_min',
       },
       {
+        'args': {
+          'digits': 3,
+          'number': -7,
+        },
+        'expect': '-007',
+        'function': 'core_digits_min',
+      },
+      {
         'args': void 0,
         'expect': {},
         'function': 'core_handle_defaults',
