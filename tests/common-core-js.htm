@@ -44,6 +44,14 @@ function repo_init(){
       {
         'args': {
           'digits': 3,
+          'number': 7777,
+        },
+        'expect': '7777',
+        'function': 'core_digits_min',
+      },
+      {
+        'args': {
+          'digits': 3,
           'number': 7,
         },
         'expect': '007',
@@ -75,6 +83,33 @@ function repo_init(){
           'var': 5,
         },
         'expect': 5,
+        'function': 'core_handle_defaults',
+      },
+      {
+        'args': {
+          'default': {
+            'test': 5,
+          },
+          'var': {},
+        },
+        'expect': {
+          'test': 5,
+        },
+        'function': 'core_handle_defaults',
+      },
+      {
+        'args': {
+          'default': {
+            'test': 5,
+          },
+          'var': {
+            'other': 6,
+          },
+        },
+        'expect': {
+          'other': 6,
+          'test': 5,
+        },
         'function': 'core_handle_defaults',
       },
       {
