@@ -40,8 +40,14 @@ test_function(args)
 <hr id=test_time>
 test_time(args)
 <ul>
-  <li>Tracks how long it takes for a function to get called "repeat" number of times.
-  <li>Returns number of milliseconds.
+  <li>Tracks how long it takes for a function to get called "runs" number of times.
+  <li>Returns an object:<ul>
+    <li>"average": average number of milliseconds.
+    <li>"max": most milliseconds that any run required.
+    <li>"min": least milliseconds that any run required.
+    <li>"runs": number of runs.
+    <li>"total": total milliseconds that every run required.
+  </ul>
 </ul>
 <table>
   <tr class=header>
@@ -57,7 +63,7 @@ test_time(args)
     <td>void 0
     <td>any
   <tr>
-    <td>repeat
+    <td>runs
     <td>100
     <td>number
 </table>
