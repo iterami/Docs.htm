@@ -6,12 +6,12 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/test.js rel=noopener>test.js</a>
 <ul>
-  <li><a href=#globals>Globals</a>
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
   </ul>
   <li>Functions:<ul>
     <li><a href=#test_function>test_function(args)</a>
+    <li><a href=#test_time>test_time(args)</a>
   </ul>
 </ul>
 <hr id=test_function>
@@ -36,4 +36,28 @@ test_function(args)
     <td>function
     <td>
     <td>function
+</table>
+<hr id=test_time>
+test_time(args)
+<ul>
+  <li>Tracks how long it takes for a function to get called "repeat" number of times.
+  <li>Returns number of milliseconds.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>function
+    <td>
+    <td>function
+  <tr>
+    <td>function-args
+    <td>void 0
+    <td>any
+  <tr>
+    <td>repeat
+    <td>100
+    <td>number
 </table>
