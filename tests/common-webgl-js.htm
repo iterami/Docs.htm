@@ -18,6 +18,7 @@
 </table>
 
 <script src=../../common/js/core.js></script>
+<script src=../../common/js/test.js></script>
 <script src=../../common/js/math.js></script>
 <script src=../../common/js/entity.js></script>
 <script src=../../common/js/webgl.js></script>
@@ -151,7 +152,7 @@ function repo_init(){
           test_args['args'],
           tests[test]['args']
         );
-        const result = core_test_function(test_args);
+        const result = test_function(test_args);
         const expect = core_type({
           'var': tests[test]['expect'],
         })
