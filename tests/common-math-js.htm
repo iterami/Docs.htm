@@ -47,6 +47,26 @@ function repo_init(){
       },
       {
         'args': {
+          'max': 200,
+          'min': 100,
+          'value': -4050,
+          'wrap': true,
+        },
+        'expect': 150,
+        'function': 'math_clamp',
+      },
+      {
+        'args': {
+          'max': 200,
+          'min': 100,
+          'value': 450,
+          'wrap': true,
+        },
+        'expect': 150,
+        'function': 'math_clamp',
+      },
+      {
+        'args': {
           'height-0': 10,
           'width-0': 10,
           'x-0': 5,
