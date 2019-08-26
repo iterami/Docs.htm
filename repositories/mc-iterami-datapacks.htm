@@ -1,0 +1,80 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>MC-iterami-DataPacks Docs</title>
+<link href=../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a class=external href=https://github.com/iterami/MC-iterami-DataPacks rel=noopener>MC-iterami-DataPacks</a>
+<ul>
+  <li>Installation:<ol>
+    <li>Exit your Minecraft world.
+    <li>Clone or download the repository.
+    <li>Copy the directory of the data pack you wish to use into your world save's "datapacks" directory.
+  </ol>
+  <li>Updating:<ol>
+    <li>Exit your Minecraft world.
+    <li>Pull or re-download the repository.
+    <li>Within your world save's "datapack" directory, delete the directory of the data pack you wish to update.
+    <li>Copy the directory of the data pack you wish to use into your world save's "datapacks" directory.
+  </ol>
+  <li>Uninstallation:<ol>
+    <li>Exit your Minecraft world.
+    <li>Within your world save's "datapack" directory, delete the directory of the data pack you wish to uninstall.
+  </ol>
+  <li>Functions:<ul>
+    <li><a href=#clear_chunk>clear_chunk</a>
+    <li><a href=#make_block>make_block</a>
+    <li><a href=#make_csg>make_csg</a>
+    <li><a href=#make_empty>make_empty</a>
+    <li><a href=#set_default>set_default</a>
+    <li><a href=#set_peace>set_peace</a>
+  </ul>
+</ul>
+<table>
+  <tr class=header>
+    <td>Functions
+    <td>Notes
+  <tr id=clear_chunk>
+    <td><textarea>/function iterami:clear_chunk</textarea>
+    <td><ol>
+      <li>Enable chunk display by pressing "F3 + G".
+      <li>Go to the northwest corner of the chunk you wish to clear at any Y position.
+      <li>Run the function to replace all blocks in the chunk with air.
+    </ol>
+  <tr id=make_block>
+    <td><textarea>/function iterami:make_block</textarea>
+    <td><ul>
+      <li>If there are no blocks one block below you, this function creates a stone block there.
+    </ul>
+  <tr id=make_csg>
+    <td><textarea>/function iterami:make_csg</textarea>
+    <td><ul>
+      <li>Makes a simple cobblestone generator.
+      <li>Replaces blocks, so be careful where you place it.
+    </ul>
+  <tr id=make_empty>
+    <td><textarea>/function iterami:make_empty</textarea>
+    <td><ul>
+      <li>This function assumes you are playing in an entirely empty world.
+      <li>Creates a bedrock block at 0,100,0 and teleports you on top of it.
+    </ul>
+  <tr id=set_default>
+    <td><textarea>/function iterami:set_default</textarea>
+    <td><ul>
+      <li>Returns all "gamerule" commands to their default values.
+    </ul>
+  <tr id=set_peace>
+    <td><textarea>/function iterami:set_peace</textarea>
+    <td><ul>
+      <li>Attempts to make your world as peaceful as possible within "survival" mode:<ul>
+        <li>Sets difficulty to "peaceful".
+        <li>Sets weather to "clear".
+        <li>Sets time to "day".
+        <li>Disables raids.
+        <li>Disables fire ticks.
+        <li>Allows you to keep your inventory when you die.
+        <li>Disables mob griefing.
+        <li>Enables natural health regeneration.
+      </ul>
+    </ul>
+</table>
