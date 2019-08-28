@@ -11,13 +11,14 @@
   </ul>
   <li>Functions:<ul>
     <li><a href=#test_function>test_function(args)</a>
+    <li><a href=#test_run>test_run(args)</a>
     <li><a href=#test_time>test_time(args)</a>
   </ul>
 </ul>
 <hr id=test_function>
 test_function(args)
 <ul>
-  <li>Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned valuez.
+  <li>Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned value.
 </ul>
 <table>
   <tr class=header>
@@ -36,6 +37,25 @@ test_function(args)
     <td>function
     <td>
     <td>function
+</table>
+<hr id=test_run>
+test_run(args)
+<ul>
+  <li>Runs the inputted tests and constructs a results table.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>link
+    <td>
+    <td>string
+  <tr>
+    <td>tests
+    <td>
+    <td>array of objects
 </table>
 <hr id=test_time>
 test_time(args)

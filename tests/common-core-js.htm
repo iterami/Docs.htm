@@ -25,271 +25,236 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
-    const tests = [
-      {
-        'args': void 0,
-        'expect': {},
-        'function': 'core_args',
-      },
-      {
-        'args': {
-          'args': {},
-          'defaults': {
+    test_run({
+      'link': '../common/js/core.htm#',
+      'tests': [
+        {
+          'args': void 0,
+          'expect': {},
+          'function': 'core_args',
+        },
+        {
+          'args': {
+            'args': {},
+            'defaults': {
+              'test-default-arg': 7,
+            },
+          },
+          'expect': {
             'test-default-arg': 7,
-          },
-        },
-        'expect': {
-          'test-default-arg': 7,
         },
         'function': 'core_args',
-      },
-      {
-        'args': {
-          'digits': 3,
-          'number': 7777,
         },
-        'expect': '7777',
-        'function': 'core_digits_min',
-      },
-      {
-        'args': {
-          'digits': 3,
-          'number': 7,
+        {
+          'args': {
+            'digits': 3,
+            'number': 7777,
+          },
+          'expect': '7777',
+          'function': 'core_digits_min',
         },
-        'expect': '007',
-        'function': 'core_digits_min',
-      },
-      {
-        'args': {
-          'digits': 3,
-          'number': -7,
+        {
+          'args': {
+            'digits': 3,
+            'number': 7,
+          },
+          'expect': '007',
+          'function': 'core_digits_min',
         },
-        'expect': '-007',
-        'function': 'core_digits_min',
-      },
-      {
-        'args': {
-          'digits': 3,
-          'number': -7.7,
+        {
+          'args': {
+            'digits': 3,
+            'number': -7,
+          },
+          'expect': '-007',
+          'function': 'core_digits_min',
         },
-        'expect': '-007.7',
-        'function': 'core_digits_min',
-      },
-      {
-        'args': void 0,
-        'expect': {},
-        'function': 'core_handle_defaults',
-      },
-      {
-        'args': {
-          'var': 5,
+        {
+          'args': {
+            'digits': 3,
+            'number': -7.7,
+          },
+          'expect': '-007.7',
+          'function': 'core_digits_min',
         },
-        'expect': 5,
-        'function': 'core_handle_defaults',
-      },
-      {
-        'args': {
-          'default': {
+        {
+          'args': void 0,
+          'expect': {},
+          'function': 'core_handle_defaults',
+        },
+        {
+          'args': {
+            'var': 5,
+          },
+          'expect': 5,
+          'function': 'core_handle_defaults',
+        },
+        {
+          'args': {
+            'default': {
+              'test': 5,
+            },
+            'var': {},
+          },
+          'expect': {
             'test': 5,
           },
-          'var': {},
+          'function': 'core_handle_defaults',
         },
-        'expect': {
-          'test': 5,
-        },
-        'function': 'core_handle_defaults',
-      },
-      {
-        'args': {
-          'default': {
-            'test': 5,
+        {
+          'args': {
+            'default': {
+              'test': 5,
+            },
+            'var': {
+              'other': 6,
+            },
           },
-          'var': {
+          'expect': {
             'other': 6,
+            'test': 5,
           },
+          'function': 'core_handle_defaults',
         },
-        'expect': {
-          'other': 6,
-          'test': 5,
+        {
+          'args': {
+            'hex': '#123',
+          },
+          'expect': 'rgb(17, 34, 51)',
+          'function': 'core_hex_to_rgb',
         },
-        'function': 'core_handle_defaults',
-      },
-      {
-        'args': {
-          'hex': '#123',
+        {
+          'args': {
+            'hex': '#123456',
+          },
+          'expect': 'rgb(18, 52, 86)',
+          'function': 'core_hex_to_rgb',
         },
-        'expect': 'rgb(17, 34, 51)',
-        'function': 'core_hex_to_rgb',
-      },
-      {
-        'args': {
-          'hex': '#123456',
+        {
+          'args': {
+            'parent': document.body,
+            'properties': {
+              'id': 'core_html-element',
+            },
+          },
+          'expect': function(returned){
+              return document.getElementById('core_html-element') === returned;
+          },
+          'function': 'core_html',
         },
-        'expect': 'rgb(18, 52, 86)',
-        'function': 'core_hex_to_rgb',
-      },
-      {
-        'args': {
-          'parent': document.body,
-          'properties': {
+        {
+          'args': {
+            'string': '<u>test</u>',
+          },
+          'expect': '&lt;u&gt;test&lt;/u&gt;',
+          'function': 'core_html_format',
+        },
+        {
+          'args': {
             'id': 'core_html-element',
+            'properties': {
+              'id': 'core_html_modify-element',
+            },
           },
-        },
-        'expect': function(returned){
-            return document.getElementById('core_html-element') === returned;
-        },
-        'function': 'core_html',
-      },
-      {
-        'args': {
-          'string': '<u>test</u>',
-        },
-        'expect': '&lt;u&gt;test&lt;/u&gt;',
-        'function': 'core_html_format',
-      },
-      {
-        'args': {
-          'id': 'core_html-element',
-          'properties': {
-            'id': 'core_html_modify-element',
+          'expect': function(returned){
+              if(document.getElementById('core_html_modify-element')){
+                  return true;
+              }
+              return false;
           },
+          'function': 'core_html_modify',
         },
-        'expect': function(returned){
-            if(document.getElementById('core_html_modify-element')){
-                return true;
-            }
-            return false;
-        },
-        'function': 'core_html_modify',
-      },
-      {
-        'args': {
-          'number': '123456.789',
-        },
-        'expect': '123,456.789',
-        'function': 'core_number_format',
-      },
-      {
-        'args': {
-          'max': 1,
-        },
-        'expect': 0,
-        'function': 'core_random_integer',
-      },
-      {
-        'args': {
-          'patterns': {
-            'it': '',
+        {
+          'args': {
+            'number': '123456.789',
           },
-          'string': 'iterami iterami iterami',
+          'expect': '123,456.789',
+          'function': 'core_number_format',
         },
-        'expect': 'erami erami erami',
-        'function': 'core_replace_multiple',
-      },
-      {
-        'args': {
-          'decimals': 0,
-          'number': 123.456,
+        {
+          'args': {
+            'max': 1,
+          },
+          'expect': 0,
+          'function': 'core_random_integer',
         },
-        'expect': 123,
-        'function': 'core_round',
-      },
-      {
-        'args': {
-          'decimals': 1,
-          'number': 123.456,
+        {
+          'args': {
+            'patterns': {
+              'it': '',
+            },
+            'string': 'iterami iterami iterami',
+          },
+          'expect': 'erami erami erami',
+          'function': 'core_replace_multiple',
         },
-        'expect': 123.5,
-        'function': 'core_round',
-      },
-      {
-        'args': {
-          'decimals': 1,
-          'number': 1.234e23,
+        {
+          'args': {
+            'decimals': 0,
+            'number': 123.456,
+          },
+          'expect': 123,
+          'function': 'core_round',
         },
-        'expect': 1.2e23,
-        'function': 'core_round',
-      },
-      {
-        'args': {
-          'array': [
-            8,
-            16,
+        {
+          'args': {
+            'decimals': 1,
+            'number': 123.456,
+          },
+          'expect': 123.5,
+          'function': 'core_round',
+        },
+        {
+          'args': {
+            'decimals': 1,
+            'number': 1.234e23,
+          },
+          'expect': 1.2e23,
+          'function': 'core_round',
+        },
+        {
+          'args': {
+            'array': [
+              8,
+              16,
+              4,
+              42,
+              23,
+              15,
+            ],
+          },
+          'expect': [
             4,
-            42,
-            23,
+            8,
             15,
+            16,
+            23,
+            42,
           ],
+          'function': 'core_sort_numbers',
         },
-        'expect': [
-          4,
-          8,
-          15,
-          16,
-          23,
-          42,
-        ],
-        'function': 'core_sort_numbers',
-      },
-      {
-        'args': {
-          'array': [
+        {
+          'args': {
+            'array': [
+              'eight',
+              'sixteen',
+              'four',
+              'fortytwo',
+              'twentythree',
+              'fifteen',
+            ],
+          },
+          'expect': [
             'eight',
-            'sixteen',
-            'four',
-            'fortytwo',
-            'twentythree',
             'fifteen',
-          ],
-        },
-        'expect': [
-          'eight',
-          'fifteen',
-          'fortytwo',
-          'four',
-          'sixteen',
+            'fortytwo',
+            'four',
+            'sixteen',
           'twentythree',
-        ],
-        'function': 'core_sort_strings',
-      },
-    ];
-
-    let results = '';
-    for(let test in tests){
-        let test_args = {};
-        Object.assign(
-          test_args,
-          tests[test]
-        );
-        test_args['args'] = {};
-        Object.assign(
-          test_args['args'],
-          tests[test]['args']
-        );
-        const result = test_function(test_args);
-        const expect = core_type({
-          'var': tests[test]['expect'],
-        })
-          ? tests[test]['expect'].toString()
-          : JSON.stringify(
-            tests[test]['expect'],
-            void 0,
-            1
-          );
-
-        results += '<tr ' + (!result['test'] ? ' style=background:#600' : '') + '>'
-          + '<td><a href=../common/js/core.htm#' + tests[test]['function'] + '>' + tests[test]['function'] + '()</a>'
-          + '<td>' + JSON.stringify(
-            tests[test]['args'],
-            null,
-            1
-          ) + '<td>' + expect
-          + '<td>' + JSON.stringify(
-            result['returned'],
-            null,
-            1
-          ) + '<td>' + result['test'];
-    }
-    document.getElementById('results').innerHTML = results;
+          ],
+          'function': 'core_sort_strings',
+        },
+      ],
+    });
 }
 </script>

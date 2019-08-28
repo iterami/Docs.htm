@@ -26,57 +26,22 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
-    const tests = [
-      {
-        'args': void 0,
-        'expect': 0,
-        'function': 'entity_create',
-      },
-      {
-        'args': {
-          'id': 'test',
+    test_run({
+      'link': '../common/js/entity.htm#',
+      'tests': [
+        {
+          'args': void 0,
+          'expect': 0,
+            'function': 'entity_create',
         },
-        'expect': 'test',
-        'function': 'entity_create',
-      },
-    ];
-
-    let results = '';
-    for(let test in tests){
-        let test_args = {};
-        Object.assign(
-          test_args,
-          tests[test]
-        );
-        test_args['args'] = {};
-        Object.assign(
-          test_args['args'],
-          tests[test]['args']
-        );
-        const result = test_function(test_args);
-        const expect = core_type({
-          'var': tests[test]['expect'],
-        })
-          ? tests[test]['expect'].toString()
-          : JSON.stringify(
-            tests[test]['expect'],
-            void 0,
-            1
-          );
-
-        results += '<tr ' + (!result['test'] ? ' style=background:#600' : '') + '>'
-          + '<td><a href=../common/js/entity.htm#' + tests[test]['function'] + '>' + tests[test]['function'] + '()</a>'
-          + '<td>' + JSON.stringify(
-            tests[test]['args'],
-            null,
-            1
-          ) + '<td>' + expect
-          + '<td>' + JSON.stringify(
-            result['returned'],
-            null,
-            1
-          ) + '<td>' + result['test'];
-    }
-    document.getElementById('results').innerHTML = results;
+        {
+          'args': {
+            'id': 'test',
+          },
+          'expect': 'test',
+          'function': 'entity_create',
+        },
+      ],
+    });
 }
 </script>

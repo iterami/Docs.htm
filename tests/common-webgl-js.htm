@@ -40,146 +40,108 @@ function repo_init(){
       'id': 'test-character-0',
     });
 
-    let tests = [
-      {
-        'args': {
-          'id': 'test-character-1',
-          'level': 5,
+    test_run({
+      'link': '../common/js/webgl.htm#',
+      'tests': [
+        {
+          'args': {
+            'id': 'test-character-1',
+            'level': 5,
+          },
+          'expect': function(returned){
+              return webgl_characters['test-character-1']['health-current'] === 100;
+          },
+          'function': 'webgl_character_init',
         },
-        'expect': function(returned){
-            return webgl_characters['test-character-1']['health-current'] === 100;
+        {
+          'args': void 0,
+          'expect': -1,
+          'function': 'webgl_character_level',
         },
-        'function': 'webgl_character_init',
-      },
-      {
-        'args': void 0,
-        'expect': -1,
-        'function': 'webgl_character_level',
-      },
-      {
-        'args': {
-          'character': 'fake-character',
+        {
+          'args': {
+            'character': 'fake-character',
+          },
+          'expect': -2,
+          'function': 'webgl_character_level',
         },
-        'expect': -2,
-        'function': 'webgl_character_level',
-      },
-      {
-        'args': {
-          'character': 'test-character-1',
+        {
+          'args': {
+            'character': 'test-character-1',
+          },
+          'expect': 5,
+          'function': 'webgl_character_level',
         },
-        'expect': 5,
-        'function': 'webgl_character_level',
-      },
-      {
-        'args': {
-          'green': 1,
+        {
+          'args': {
+            'green': 1,
+          },
+          'expect': function(returned){
+              return webgl_properties['clearcolor-blue'] === 0
+                && webgl_properties['clearcolor-green'] === 1
+                && webgl_properties['clearcolor-red'] === 0;
+          },
+          'function': 'webgl_clearcolor_set',
         },
-        'expect': function(returned){
-            return webgl_properties['clearcolor-blue'] === 0
-              && webgl_properties['clearcolor-green'] === 1
-              && webgl_properties['clearcolor-red'] === 0;
+        {
+          'args': {
+            'id': 'EXT_texture_filter_anisotropic',
+            'label': 'anisotropic',
+          },
+          'expect': true,
+          'function': 'webgl_extension',
         },
-        'function': 'webgl_clearcolor_set',
-      },
-      {
-        'args': {
-          'id': 'EXT_texture_filter_anisotropic',
-          'label': 'anisotropic',
-        },
-        'expect': true,
-        'function': 'webgl_extension',
-      },
-      {
-        'args': {
-          'rotate-x': webgl_characters['test-character-0']['rotate-x'],
-          'rotate-y': webgl_characters['test-character-0']['rotate-y'],
-          'rotate-z': webgl_characters['test-character-0']['rotate-z'],
-          'vertices-length': 1,
-        },
-        'expect': [
-          0,
-          1,
-          0,
-        ],
-        'function': 'webgl_normals',
-      },
-      {
-        'args': {
-          'x': 0,
-          'y': 0,
-        },
-        'expect': [
-          0,
-          0,
-          0,
-          0,
-        ],
-        'function': 'webgl_pick_color',
-      },
-      {
-        'args': {
-          'rgbarray': [
-            {
-              'blue': 0,
-              'green': 255,
-              'red': 0,
-            },
+        {
+          'args': {
+            'rotate-x': webgl_characters['test-character-0']['rotate-x'],
+            'rotate-y': webgl_characters['test-character-0']['rotate-y'],
+            'rotate-z': webgl_characters['test-character-0']['rotate-z'],
+            'vertices-length': 1,
+          },
+          'expect': [
+            0,
+            1,
+            0,
           ],
-          'vertexcount': 2,
+          'function': 'webgl_normals',
         },
-        'expect': [
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-        ],
-        'function': 'webgl_vertexcolorarray',
-      },
-    ];
-
-    let results = '';
-    for(let test in tests){
-        let test_args = {};
-        Object.assign(
-          test_args,
-          tests[test]
-        );
-        test_args['args'] = {};
-        Object.assign(
-          test_args['args'],
-          tests[test]['args']
-        );
-        const result = test_function(test_args);
-        const expect = core_type({
-          'var': tests[test]['expect'],
-        })
-          ? tests[test]['expect'].toString()
-          : JSON.stringify(
-            tests[test]['expect'],
-            void 0,
-            1
-          );
-
-        results += '<tr ' + (!result['test'] ? ' style=background:#600' : '') + '>'
-          + '<td><a href=../common/js/webgl.htm#' + tests[test]['function'] + '>' + tests[test]['function'] + '()</a>'
-          + '<td>' + JSON.stringify(
-            tests[test]['args'],
-            null,
-            1
-          ) + '<td>' + expect
-          + '<td>' + JSON.stringify(
-            result['returned'],
-            null,
-            1
-          ) + '<td>' + result['test'];
-    }
-    document.getElementById('results').innerHTML = results;
-}
-
-function repo_logic(){
+        {
+          'args': {
+            'x': 0,
+            'y': 0,
+          },
+          'expect': [
+            0,
+            0,
+            0,
+            0,
+          ],
+          'function': 'webgl_pick_color',
+        },
+        {
+          'args': {
+            'rgbarray': [
+              {
+                'blue': 0,
+                'green': 255,
+                'red': 0,
+              },
+            ],
+            'vertexcount': 2,
+          },
+          'expect': [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+          ],
+          'function': 'webgl_vertexcolorarray',
+        },
+      ],
+    });
 }
 </script>
