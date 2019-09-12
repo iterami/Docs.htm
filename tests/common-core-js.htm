@@ -178,6 +178,23 @@ function repo_init(){
         },
         {
           'args': {
+            'max': 1,
+            'todo': 'ceil',
+          },
+          'expect': 1,
+          'function': 'core_random_integer',
+        },
+        {
+          'args': {
+            'object': {
+              'test-key': 1,
+            },
+          },
+          'expect': 'test-key',
+          'function': 'core_random_key',
+        },
+        {
+          'args': {
             'patterns': {
               'it': '',
             },
