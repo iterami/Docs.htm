@@ -60,8 +60,8 @@
     <li><a href=#core_random_string>core_random_string(args)</a>
     <li><a href=#core_replace_multiple>core_replace_multiple(args)</a>
     <li><a href=#core_repo_init>core_repo_init(args)</a>
+    <li><a href=#core_repo_reset>core_repo_reset()</a>
     <li><a href=#core_requestpointerlock>core_requestpointerlock(args)</a>
-    <li><a href=#core_reset_todo>core_reset_todo()</a>
     <li><a href=#core_round>core_round(args)</a>
     <li><a href=#core_sort_custom>core_sort_custom(args)</a>
     <li><a href=#core_sort_numbers>core_sort_numbers(args)</a>
@@ -132,7 +132,7 @@
     <td>''
     <td>string
   <tr>
-    <td>core_reset
+    <td>core_reset_todo
     <td>false
     <td>boolean false or function
   <tr>
@@ -899,6 +899,11 @@ core_repo_init(args)
     <td>''
     <td>string
 </table>
+<hr id=core_repo_reset>
+core_repo_reset()
+<ul>
+  <li>Calls "core_reset_todo()" if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
+</ul>
 <hr id=core_requestpointerlock>
 core_requestpointerlock(args)
 <table>
@@ -911,11 +916,6 @@ core_requestpointerlock(args)
     <td>'canvas'
     <td>string
 </table>
-<hr id=core_reset_todo>
-core_reset_todo()
-<ul>
-  <li>Calls "core_reset()" if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
-</ul>
 <hr id=core_round>
 core_round(args)
 <ul>
