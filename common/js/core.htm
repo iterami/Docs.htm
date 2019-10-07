@@ -61,6 +61,7 @@
     <li><a href=#core_replace_multiple>core_replace_multiple(args)</a>
     <li><a href=#core_repo_init>core_repo_init(args)</a>
     <li><a href=#core_requestpointerlock>core_requestpointerlock(args)</a>
+    <li><a href=#core_reset_todo>core_reset_todo()</a>
     <li><a href=#core_round>core_round(args)</a>
     <li><a href=#core_sort_custom>core_sort_custom(args)</a>
     <li><a href=#core_sort_numbers>core_sort_numbers(args)</a>
@@ -130,6 +131,10 @@
     <td>core_repo_title
     <td>''
     <td>string
+  <tr>
+    <td>core_reset
+    <td>false
+    <td>boolean false or function
   <tr>
     <td>core_storage_data
     <td>{}
@@ -906,6 +911,11 @@ core_requestpointerlock(args)
     <td>'canvas'
     <td>string
 </table>
+<hr id=core_reset_todo>
+core_reset_todo()
+<ul>
+  <li>Calls "core_reset()" if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
+</ul>
 <hr id=core_round>
 core_round(args)
 <ul>
