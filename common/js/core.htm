@@ -88,6 +88,10 @@
     <td>Default
     <td>Type
   <tr>
+    <td>core_elements
+    <td>{}
+    <td>object
+  <tr>
     <td>core_events
     <td>{}
     <td>object
@@ -469,6 +473,7 @@ core_html(args)
 <ul>
   <li>Constructs and returns an HTML element.
   <li>Optionally can append/prepend it to a parent.
+  <li>Optionally can store it in "window.core_elements";
 </ul>
 <table>
   <tr class=header>
@@ -483,6 +488,10 @@ core_html(args)
     <td>properties
     <td>{}
     <td>object
+  <tr>
+    <td>store
+    <td>false
+    <td>boolean false or string ID
   <tr>
     <td>todo
     <td>'append'
