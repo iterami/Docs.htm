@@ -12,16 +12,16 @@
   </ul>
   <li>Functions:<ul>
     <li><a href=#entity_create>entity_create(args)</a>
-    <li><a href=#entity_handle_default>entity_handle_default(args)</a>
-    <li><a href=#entity_remove>entity_remove(args)</a>
-    <li><a href=#entity_remove_all>entity_remove_all(args)</a>
-    <li><a href=#entity_set>entity_set(args)</a>
     <li><a href=#entity_group_add>entity_group_add(args)</a>
     <li><a href=#entity_group_create>entity_group_create(args)</a>
     <li><a href=#entity_group_modify>entity_group_modify(args)</a>
     <li><a href=#entity_group_move>entity_group_move(args)</a>
     <li><a href=#entity_group_remove>entity_group_remove(args)</a>
     <li><a href=#entity_group_remove_all>entity_group_remove_all(args)</a>
+    <li><a href=#entity_handle_default>entity_handle_default(args)</a>
+    <li><a href=#entity_remove>entity_remove(args)</a>
+    <li><a href=#entity_remove_all>entity_remove_all(args)</a>
+    <li><a href=#entity_set>entity_set(args)</a>
   </ul>
 </ul>
 <hr id=globals>
@@ -74,94 +74,6 @@ entity_create(args)
     <td>types
     <td>[]
     <td>array of strings
-</table>
-<hr id=entity_handle_default>
-entity_handle_default(args)
-<ul>
-  <li>Makes sure entity property defaults and groups are handled properly.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>id
-    <td>
-    <td>string ID
-  <tr>
-    <td>type
-    <td>
-    <td>string ID
-</table>
-<hr id=entity_remove>
-entity_remove(args)
-<ul>
-  <li>Deletes an entity and removes it from groups.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>entities
-    <td>
-    <td>array of string IDs
-</table>
-<hr id=entity_remove_all>
-entity_remove_all(args)
-<ul>
-  <li>Deletes all entities within a specific group.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>delete-empty
-    <td>false
-    <td>boolean
-  <tr>
-    <td>group
-    <td>false
-    <td>boolean false or string ID
-</table>
-<hr id=entity_set>
-entity_set(args)
-<ul>
-  <li>Creates a new entity type that can then be created.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>default
-    <td>false
-    <td>boolean
-  <tr>
-    <td>groups
-    <td>[]
-    <td>array of string IDs
-  <tr>
-    <td>properties
-    <td>{}
-    <td>object
-  <tr>
-    <td>todo
-    <td>function(){}
-    <td>function
-  <tr>
-    <td>type
-    <td>
-    <td>string ID
 </table>
 <hr id=entity_group_add>
 entity_group_add(args)
@@ -284,4 +196,92 @@ entity_group_remove_all(args)
     <td>entities
     <td>
     <td>array of string IDs
+</table>
+<hr id=entity_handle_default>
+entity_handle_default(args)
+<ul>
+  <li>Makes sure entity property defaults and groups are handled properly.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
+</table>
+<hr id=entity_remove>
+entity_remove(args)
+<ul>
+  <li>Deletes an entity and removes it from groups.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>
+    <td>array of string IDs
+</table>
+<hr id=entity_remove_all>
+entity_remove_all(args)
+<ul>
+  <li>Deletes all entities within a specific group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>delete-empty
+    <td>false
+    <td>boolean
+  <tr>
+    <td>group
+    <td>false
+    <td>boolean false or string ID
+</table>
+<hr id=entity_set>
+entity_set(args)
+<ul>
+  <li>Creates a new entity type that can then be created.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>default
+    <td>false
+    <td>boolean
+  <tr>
+    <td>groups
+    <td>[]
+    <td>array of string IDs
+  <tr>
+    <td>properties
+    <td>{}
+    <td>object
+  <tr>
+    <td>todo
+    <td>function(){}
+    <td>function
+  <tr>
+    <td>type
+    <td>
+    <td>string ID
 </table>
