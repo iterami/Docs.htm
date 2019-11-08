@@ -1,0 +1,1322 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>genre.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../index.htm>common</a>/<a href=../guides/htm.htm>HTM</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/genre.js rel=noopener>genre.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>Requires:<ul>
+    <li><a href=core.htm>core.js</a>
+    <li><a href=entity.htm>entity.js</a>
+    <li><a href=math.htm>math.js</a>
+  </ul>
+  <li>Functions:<ul>
+    <li>platform_coin_collide(args)
+    <li>platform_init()
+    <li>platform_jump(args)
+    <li>platform_player_reset(args)
+    <li>race_init()
+    <li>race_racer_create(args)
+    <li>race_unload()
+    <li>rpg_character_affect(args)
+    <li>rpg_character_create(args)
+    <li>rpg_character_handle()
+    <li>rpg_handle_all()
+    <li>rpg_item_create(args)
+    <li>rpg_item_select(args)
+    <li>rpg_item_toggle(id)
+    <li>rpg_particle_create(args)
+    <li>rpg_particle_handle()
+    <li>rpg_spawner_create(args)
+    <li>rpg_spawner_handle()
+    <li>rpg_unload()
+    <li>rpg_world_dynamic_create(args)
+    <li>rts_building_build(args)
+    <li>rts_building_destroy(args)
+    <li>rts_building_fog()
+    <li>rts_building_handle()
+    <li>rts_bullet_handle()
+    <li>rts_camera_validatemove(args)
+    <li>rts_destionation_set(args)
+    <li>rts_destionation_validate(args)
+    <li>rts_players_handle()
+    <li>rts_select()
+    <li>rts_selected_destroy()
+    <li>rts_unit_build(args)
+    <li>rts_unit_destroy(args)
+    <li>rts_unit_handle()
+    <li><a href=#webgl_billboard>webgl_billboard(args)</a>
+    <li><a href=#webgl_character_home>webgl_character_home()</a>
+    <li><a href=#webgl_character_home_entityupdate>webgl_character_home_entityupdate()</a>
+    <li><a href=#webgl_character_init>webgl_character_init(args)</a>
+    <li><a href=#webgl_character_jump>webgl_character_jump(args)</a>
+    <li><a href=#webgl_character_level>webgl_character_level(args)</a>
+    <li><a href=#webgl_character_origin>webgl_character_origin(args)</a>
+    <li><a href=#webgl_character_random>webgl_character_random(args)</a>
+    <li><a href=#webgl_character_set>webgl_character_set(args)</a>
+    <li><a href=#webgl_character_spawn>webgl_character_spawn(args)</a>
+    <li><a href=#webgl_entity_create>webgl_entity_create(args)</a>
+    <li><a href=#webgl_entity_move>webgl_entity_move(args)</a>
+    <li><a href=#webgl_entity_move_to>webgl_entity_move_to(args)</a>
+    <li><a href=#webgl_entity_todo>webgl_entity_todo(entity)</a>
+    <li><a href=#webgl_event>webgl_event(args)</a>
+    <li><a href=#webgl_item_equip>webgl_item_equip(args)</a>
+    <li><a href=#webgl_item_reset>webgl_item_reset(args)</a>
+    <li><a href=#webgl_item_trade>webgl_item_trade(args)</a>
+    <li><a href=#webgl_particles_create>webgl_particles_create(args)</a>
+    <li><a href=#webgl_path_move>webgl_path_move(args)</a>
+    <li><a href=#webgl_path_use>webgl_path_use(args)</a>
+    <li><a href=#webgl_stat_modify>webgl_stat_modify(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>platform_players
+    <td>{}
+    <td>object
+  <tr>
+    <td>platform_score_goal
+    <td>1
+    <td>number
+  <tr>
+    <td>race_checkpoints
+    <td>[]
+    <td>array
+  <tr>
+    <td>rpg_characters
+    <td>[]
+    <td>array
+  <tr>
+    <td>rpg_particles
+    <td>[]
+    <td>array
+  <tr>
+    <td>rpg_spanwers
+    <td>[]
+    <td>array
+  <tr>
+    <td>rpg_world_dynamic
+    <td>[]
+    <td>array
+  <tr>
+    <td>rpg_world_static
+    <td>[]
+    <td>array
+  <tr>
+    <td>rts_build_mode
+    <td>''
+    <td>string
+  <tr>
+    <td>rts_buildings
+    <td>{}
+    <td>object
+  <tr>
+    <td>rts_bullets
+    <td>[]
+    <td>array
+  <tr>
+    <td>rts_fog
+    <td>[]
+    <td>array
+  <tr>
+    <td>rts_math
+    <td>[]
+    <td>array
+  <tr>
+    <td>rts_money_timer
+    <td>0
+    <td>number
+  <tr>
+    <td>rts_players
+    <td>{}
+    <td>object
+  <tr>
+    <td>rts_selected_id
+    <td>-1
+    <td>number
+  <tr>
+    <td>rts_selected_type
+    <td>''
+    <td>string
+  <tr>
+    <td>rts_units
+    <td>{}
+    <td>object
+  <tr>
+    <td>rts_world_dynamic
+    <td>[]
+    <td>array
+  <tr>
+    <td>rts_world_static
+    <td>[]
+    <td>array
+  <tr>
+    <td>webgl_character_count
+    <td>0
+    <td>number
+  <tr>
+    <td>webgl_character_homebase
+    <td>{}
+    <td>object
+  <tr>
+    <td>webgl_character_id
+    <td>'_me'
+    <td>string ID
+  <tr>
+    <td>webgl_character_trading
+    <td>''
+    <td>string ID
+  <tr>
+    <td>webgl_characters
+    <td>{}
+    <td>object
+  <tr>
+    <td>webgl_paths
+    <td>{}
+    <td>object
+</table>
+<hr id=webgl_billboard>
+webgl_billboard(args)
+<ul>
+  <li>Changes the rotation of an entity based on the rotation of the camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>axes
+    <td>['y']
+    <td>array of axis strings
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entity
+    <td>
+    <td>string ID
+</table>
+<hr id=webgl_buffer_set>
+webgl_buffer_set(args)
+<ul>
+  <li>Returns the created buffers for a specific entity.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>colorData
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>normalData
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>textureData
+    <td>
+    <td>array of numbers
+  <tr>
+    <td>vertexData
+    <td>
+    <td>array of numbers
+</table>
+<hr id=webgl_buffer_set_type>
+webgl_buffer_set_type(args)
+<ul>
+  <li>Creates, binds, and returns a buffer.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>data
+    <td>
+    <td>array
+  <tr>
+    <td>type
+    <td>'Float32Array'
+    <td>string
+</table>
+<hr id=webgl_camera_handle>
+webgl_camera_handle()
+<ul>
+  <li>Functon used as "mousemove" event by 3D projects.
+  <li>Handle first and third person cameras via the "camera-zoom-current" character property.
+</ul>
+<hr id=webgl_camera_rotate>
+webgl_camera_rotate(args)
+<ul>
+  <li>Handles rotating the camera and character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>camera
+    <td>true
+    <td>boolean
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>mouse
+    <td>true
+    <td>boolean
+  <tr>
+    <td>set
+    <td>false
+    <td>boolean
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_camera_zoom>
+webgl_camera_zoom()
+<ul>
+  <li>Functon called by bound "mousewheel" event within "mousebinds".
+</ul>
+<hr id=webgl_character_home>
+webgl_character_home()
+<ul>
+  <li>If the "webgl_character_id" character has a home, current level is unloaded and replaced with home.
+</ul>
+<hr id=webgl_character_home_entityupdate>
+webgl_character_home_entityupdate()
+<ul>
+  <li>Clears current "webgl_character_homebase['entities']".
+  <li>Loops through current entities. If any are attached to "webgl_character_id" and not in the skybox, then their properties are copied and pushed into "webgl_character_homebase['entities']".
+</ul>
+<hr id=webgl_character_init>
+webgl_character_init(args)
+<ul>
+  <li>Sets up the character and camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>automove
+    <td>false
+    <td>boolean
+  <tr>
+    <td>camera-zoom
+    <td>0
+    <td>number
+  <tr>
+    <td>change
+    <td>{}
+    <td>object
+  <tr>
+    <td>collide-range-horizontal
+    <td>2
+    <td>number
+  <tr>
+    <td>collide-range-vertical
+    <td>3
+    <td>number
+  <tr>
+    <td>collides
+    <td>true
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array of objects
+  <tr>
+    <td>experience
+    <td>0
+    <td>number
+  <tr>
+    <td>health-current
+    <td>100
+    <td>number
+  <tr>
+    <td>health-max
+    <td>100
+    <td>number
+  <tr>
+    <td>id
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>jump-height
+    <td>.6
+    <td>number
+  <tr>
+    <td>level
+    <td>-1
+    <td>number
+  <tr>
+    <td>rotate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-z
+    <td>0
+    <td>number
+  <tr>
+    <td>speed
+    <td>.2
+    <td>number
+  <tr>
+    <td>talk
+    <td>false
+    <td>boolean false or string
+  <tr>
+    <td>talk-range
+    <td>15
+    <td>number
+  <tr>
+    <td>trade
+    <td>[]
+    <td>array
+  <tr>
+    <td>translate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_character_jump>
+webgl_character_jump(args)
+<ul>
+  <li>Attempts to make a character jump.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_level>
+webgl_character_level(args)
+<ul>
+  <li>If character doesn't exist yet, returns "-2".
+  <li>If character exists, returns level. "-1" means character is just a camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_origin>
+webgl_character_origin(args)
+<ul>
+  <li>Resets the rotation and translation of a character back to the origin.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_random>
+webgl_character_random(args)
+<ul>
+  <li>Creates a new character with randomized properties and cuboid body.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=webgl_character_set>
+webgl_character_set(args)
+<ul>
+  <li>Changes the character controlled by the player.
+  <li>Makes sure character zoom is less than or equal to "webgl_properties['camera-zoom-max']".
+  <li>Attaches skybox entities to the new character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=webgl_character_spawn>
+webgl_character_spawn(args)
+<ul>
+  <li>Resets the rotation and translation of a character back to current level spawn coordinates.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_clamp_rotation>
+webgl_clamp_rotation(args)
+<ul>
+  <li>Clamps x/y/z rotation to less than 360 and greater than or equal to 0.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+</table>
+<hr id=webgl_clearcolor_set>
+webgl_clearcolor_set(args)
+<ul>
+  <li>Stores and sets the clear color.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>blue
+    <td>0
+    <td>number
+  <tr>
+    <td>green
+    <td>0
+    <td>number
+  <tr>
+    <td>red
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_collision>
+webgl_collision(args)
+<ul>
+  <li>Checks for collision between characters/entities.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>collider
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>target
+    <td>
+    <td>entity object
+</table>
+<hr id=webgl_draw>
+webgl_draw()
+<ul>
+  <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
+  <li>Sets up matricies, sets up the camera, and draws all created entities in specific order.
+  <li>Draws text, pointer, and other 2D canvas UI elements.
+</ul>
+<hr id=webgl_draw_entity>
+webgl_draw_entity(entity)
+<ul>
+  <li>Positions and draws an entity.
+</ul>
+<hr id=webgl_drawloop>
+webgl_drawloop()
+<ul>
+  <li>Calls "webgl_draw()" if the menu isn't open.
+  <li>Handles animation frames via "core_interval_animationFrame()" usage.
+</ul>
+<hr id=webgl_entity_create>
+webgl_entity_create(args)
+<ul>
+  <li>Creates all entities from "entities" arg, then creates all character entities.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array of string IDs
+</table>
+<hr id=webgl_entity_move>
+webgl_entity_move(args)
+<ul>
+  <li>Handles moving a character or entity within 3D space.
+  <li>Maintains y position unless specifically changed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entity
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>strafe
+    <td>false
+    <td>boolean
+  <tr>
+    <td>y
+    <td>false
+    <td>boolean false or number
+</table>
+<hr id=webgl_entity_move_to>
+webgl_entity_move_to(args)
+<ul>
+  <li>Moves a character or entity to a specific point.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_entity_todo>
+webgl_entity_todo(entity)
+<ul>
+  <li>Function called upon entity creation for optimization purposes.
+</ul>
+<hr id=webgl_event>
+webgl_event(args)
+<ul>
+  <li>Handles entity events.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>parent
+    <td>
+    <td>entity object
+  <tr>
+    <td>target
+    <td>
+    <td>character/entity object
+</table>
+<hr id=webgl_extension>
+webgl_extension(args)
+<ul>
+  <li>Attempts to get a WebGL extension based on the supplied "id" arg.
+  <li>If the extension is available, it gets added to "window.webgl_extensions" using the "label" arg.
+  <li>Returns a boolean indicating if the extension is available or not.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+  <tr>
+    <td>label
+    <td>args['id']
+    <td>string ID
+</table>
+<hr id=webgl_get_translation>
+webgl_get_translation(args)
+<ul>
+  <li>Gets the translation of an entity or charcter.
+  <li>If attached to something, returns parent translation plus offsets.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+</table>
+<hr id=webgl_init>
+webgl_init(args)
+<ul>
+  <li>Sets up WebGL.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>ambient-blue
+    <td>1
+    <td>number
+  <tr>
+    <td>ambient-green
+    <td>1
+    <td>number
+  <tr>
+    <td>ambient-red
+    <td>1
+    <td>number
+  <tr>
+    <td>camera-zoom-max
+    <td>50
+    <td>number
+  <tr>
+    <td>clearcolor-blue
+    <td>0
+    <td>number
+  <tr>
+    <td>clearcolor-green
+    <td>0
+    <td>number
+  <tr>
+    <td>clearcolor-red
+    <td>0
+    <td>number
+  <tr>
+    <td>directional-blue
+    <td>1
+    <td>number
+  <tr>
+    <td>directional-green
+    <td>1
+    <td>number
+  <tr>
+    <td>directional-red
+    <td>1
+    <td>number
+  <tr>
+    <td>directional-state
+    <td>true
+    <td>boolean
+  <tr>
+    <td>directional-vector
+    <td>'0, 1, 0'
+    <td>string
+  <tr>
+    <td>fog-density
+    <td>.0001
+    <td>number
+  <tr>
+    <td>fog-state
+    <td>false
+    <td>boolean
+  <tr>
+    <td>gravity-acceleration
+    <td>-.05
+    <td>number
+  <tr>
+    <td>gravity-axis
+    <td>'y'
+    <td>string
+  <tr>
+    <td>gravity-max
+    <td>-2
+    <td>number
+  <tr>
+    <td>groups
+    <td>[]
+    <td>array of string IDs
+  <tr>
+    <td>jump-movement
+    <td>0
+    <td>number
+  <tr>
+    <td>multiplier-jump
+    <td>1
+    <td>number
+  <tr>
+    <td>multiplier-speed
+    <td>1
+    <td>number
+  <tr>
+    <td>paths
+    <td>{}
+    <td>object
+  <tr>
+    <td>shader-fragment
+    <td>'fragment-0'
+    <td>string ID
+  <tr>
+    <td>shader-vertex
+    <td>'vertex-0'
+    <td>string ID
+  <tr>
+    <td>spawn-rotate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-rotate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-rotate-z
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_item_equip>
+webgl_item_equip(args)
+<ul>
+  <li>Equips or unequips an item.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>equip
+    <td>true
+    <td>boolean
+  <tr>
+    <td>item
+    <td>
+    <td>object
+</table>
+<hr id=webgl_item_reset>
+webgl_item_reset(args)
+<ul>
+  <li>Resets an item in a characters inventory.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array
+  <tr>
+    <td>item
+    <td>
+    <td>object
+  <tr>
+    <td>spell
+    <td>false
+    <td>boolean
+  <tr>
+    <td>spellproperties
+    <td>{}
+    <td>object
+  <tr>
+    <td>stats
+    <td>{}
+    <td>object
+</table>
+<hr id=webgl_item_trade>
+webgl_item_trade(args)
+<ul>
+  <li>Attempts to trade any amount of one item from one character for any amount of one item from another character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character-0
+    <td>
+    <td>string ID
+  <tr>
+    <td>character-1
+    <td>
+    <td>string ID
+  <tr>
+    <td>item-0-amount
+    <td>
+    <td>number
+  <tr>
+    <td>item-0-id
+    <td>
+    <td>number
+  <tr>
+    <td>item-1-amount
+    <td>
+    <td>number
+  <tr>
+    <td>item-1-id
+    <td>
+    <td>number
+</table>
+<hr id=webgl_json_export>
+webgl_json_export(args)
+<ul>
+  <li>Returns exported JSON for level and optionally character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>true
+    <td>boolean
+</table>
+<hr id=webgl_level_init>
+webgl_level_init(args)
+<ul>
+  <li>Creates a level from a parsed <a href=../guides/json.htm>JSON Level Format</a> file.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>
+    <td>number
+  <tr>
+    <td>json
+    <td>false
+    <td>boolean false or object
+</table>
+<hr id=webgl_level_load>
+webgl_level_load(args)
+<ul>
+  <li>Parses a <a href=../guides/json.htm>JSON Level Format</a> file.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>cache
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>character
+    <td>0
+    <td>number
+  <tr>
+    <td>json
+    <td>false
+    <td>boolean false or object
+</table>
+<hr id=webgl_level_unload>
+webgl_level_unload()
+<ul>
+  <li>Removes all characters that aren't "webgl_character_id" and all entities.
+</ul>
+<hr id=webgl_logicloop>
+webgl_logicloop()
+<ul>
+  <li>Handles camera movement of various different styles.
+  <li>Calls repository-specific "logic()".
+  <li>Updates attached entities.
+</ul>
+<hr id=webgl_logicloop_handle_entity>
+webgl_logicloop_handle_entity(entity)
+<ul>
+  <li>Function called by "webgl_logicloop()" to maintain various entity properties and interactions.
+</ul>
+<hr id=webgl_normals>
+webgl_normals(args)
+<ul>
+  <li>Returns an array of calculated normals, containing x, y, and z normals based on rotation.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>rotate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-z
+    <td>0
+    <td>number
+  <tr>
+    <td>vertices-length
+    <td>1
+    <td>number
+</table>
+<hr id=webgl_particles_create>
+webgl_particles_create(args)
+<ul>
+  <li>Creates particle entities in the "particles" group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>collide-range
+    <td>1
+    <td>number
+  <tr>
+    <td>collides
+    <td>true
+    <td>boolean
+  <tr>
+    <td>color
+    <td>[1, 1, 1, 1]
+    <td>array of numbers
+  <tr>
+    <td>count
+    <td>1
+    <td>number
+  <tr>
+    <td>gravity
+    <td>true
+    <td>boolean
+  <tr>
+    <td>lifespan
+    <td>100
+    <td>number
+  <tr>
+    <td>parent
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>rotate-x
+    <td>webgl_characters[webgl_character_id]['rotate-x']
+    <td>number
+  <tr>
+    <td>rotate-y
+    <td>webgl_characters[webgl_character_id]['rotate-y']
+    <td>number
+  <tr>
+    <td>rotate-z
+    <td>webgl_characters[webgl_character_id]['rotate-z']
+    <td>number
+  <tr>
+    <td>speed
+    <td>1
+    <td>number
+  <tr>
+    <td>translate-x
+    <td>webgl_characters[webgl_character_id]['translate-x']
+    <td>number
+  <tr>
+    <td>translate-y
+    <td>webgl_characters[webgl_character_id]['translate-y']
+    <td>number
+  <tr>
+    <td>translate-z
+    <td>webgl_characters[webgl_character_id]['translate-z']
+    <td>number
+</table>
+<hr id=webgl_path_move>
+webgl_path_move(args)
+<ul>
+  <li>Move an entity or a character along it's path, if it has one.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+</table>
+<hr id=webgl_path_use>
+webgl_path_use(args)
+<ul>
+  <li>Makes target entity use specific path.
+  <li>Disables entity path if no path specified.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>path-direction
+    <td>1
+    <td>1 or -1
+  <tr>
+    <td>path-end
+    <td>false
+    <td>boolean false or number
+  <tr>
+    <td>path-id
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>path-point
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_perspective>
+webgl_perspective()
+<ul>
+  <li>Sets up the perspective matrix.
+</ul>
+<hr id=webgl_pick_color>
+webgl_pick_color(args)
+<ul>
+  <li>Returns a "Uint8Array(4)" containing the RGBA value of the specified pixel.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x
+    <td>
+    <td>number
+  <tr>
+    <td>y
+    <td>
+    <td>number
+</table>
+<hr id=webgl_program_create>
+webgl_program_create(args)
+<ul>
+  <li>Creates, links, uses, and returns a WebGL shader program.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>shaders
+    <td>
+    <td>object
+</table>
+<hr id=webgl_resize>
+webgl_resize()
+<ul>
+  <li>Handles resizing the canvas to current window proportions.
+  <li>Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
+</ul>
+<hr id=webgl_settings_init>
+webgl_settings_init()
+<ul>
+  <li>Adds a "WebGL" settings tab to the "core-menu" group.
+  <li>Must be called directly after "core_repo_init()".
+</ul>
+<hr id=webgl_shader_create>
+webgl_shader_create(args)
+<ul>
+  <li>Creates and compiles a shader to be used in a program, then returns it.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>source
+    <td>
+    <td>string
+  <tr>
+    <td>type
+    <td>
+    <td>webgl_buffer.FRAGMENT_SHADER or webgl_buffer.VERTEX_SHADER
+</table>
+<hr id=webgl_shader_recreate>
+webgl_shader_recreate()
+<ul>
+  <li>Deletes the current shader program, if one exists.
+  <li>Creates the fragment and vertex shaders.
+  <li>Sets up the shader program and uniform locations.
+</ul>
+<hr id=webgl_stat_modify>
+webgl_stat_modify(args)
+<ul>
+  <li>Modifies or sets a character/entity property.
+  <li>Character "health-current" property has extra checks to remove attached entities upon death.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>parent
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>amount
+    <td>1
+    <td>number
+  <tr>
+    <td>set
+    <td>false
+    <td>boolean
+  <tr>
+    <td>stat
+    <td>
+    <td>string
+</table>
+<hr id=webgl_texture_set>
+webgl_texture_set(args)
+<ul>
+  <li>Creates a texture based on an image or URI.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>string ID
+  <tr>
+    <td>texture
+    <td>'_texture-default'
+    <td>string ID
+</table>
+<hr id=webgl_vertexattribarray_set>
+webgl_vertexattribarray_set(args)
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>attributes
+    <td>
+    <td>array
+  <tr>
+    <td>program
+    <td>
+    <td>WebGL program
+</table>
+<hr id=webgl_vertexcolorarray>
+webgl_vertexcolorarray(args)
+<ul>
+  <li>Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>random-colors
+    <td>false
+    <td>boolean
+  <tr>
+    <td>rgbarray
+    <td>[]
+    <td>array of numbers
+  <tr>
+    <td>vertexcount
+    <td>4
+    <td>number
+</table>
