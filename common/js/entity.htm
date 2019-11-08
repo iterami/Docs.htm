@@ -11,6 +11,7 @@
     <li><a href=core.htm>core.js</a>
   </ul>
   <li>Functions:<ul>
+    <li><a href=#entity_attach>entity_attach(args)</a>
     <li><a href=#entity_create>entity_create(args)</a>
     <li><a href=#entity_group_add>entity_group_add(args)</a>
     <li><a href=#entity_group_create>entity_group_create(args)</a>
@@ -50,6 +51,41 @@
     <td>entity_id_count
     <td>0
     <td>number
+</table>
+<hr id=entity_attach>
+entity_attach(args)
+<ul>
+  <li>Used to attach an entity to another entity and share a position with optional offset.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>string ID
+  <tr>
+    <td>offset-x
+    <td>0
+    <td>number
+  <tr>
+    <td>offset-y
+    <td>0
+    <td>number
+  <tr>
+    <td>offset-z
+    <td>0
+    <td>number
+  <tr>
+    <td>to
+    <td>
+    <td>string ID
+  <tr>
+    <td>type
+    <td>'entity'
+    <td>string
 </table>
 <hr id=entity_create>
 entity_create(args)
