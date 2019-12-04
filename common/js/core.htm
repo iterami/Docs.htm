@@ -207,7 +207,7 @@
 <hr id=core_ajax>
 core_ajax(args)
 <ul>
-  <li>Initiates and handles AJAX requests.
+  <li>Initiates and handles AJAX requests using the Fetch API.
 </ul>
 <table>
   <tr class=header>
@@ -215,25 +215,21 @@ core_ajax(args)
     <td>Default
     <td>Type
   <tr>
-    <td>data
-    <td>null
-    <td>
+    <td>catch
+    <td>function(){}
+    <td>function
   <tr>
-    <td>readyState
-    <td>4
-    <td>number
+    <td>method
+    <td>'GET'
+    <td>string
   <tr>
-    <td>status
-    <td>200
-    <td>number
+    <td>redirect
+    <td>'follow'
+    <td>string
   <tr>
     <td>todo
     <td>
     <td>function
-  <tr>
-    <td>type
-    <td>'GET'
-    <td>string
   <tr>
     <td>url
     <td>
