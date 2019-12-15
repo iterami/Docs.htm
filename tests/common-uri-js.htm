@@ -29,7 +29,7 @@ function repo_init(){
     let results = '';
     for(let uri in uris){
         results += '<tr><td><a href="#' + uri + '">' + uri + '</a>'
-          + '<td><textarea id="' + uri + '">' + uris[uri] + '</textarea>'
+          + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>'
           + '<td><canvas id="canvas-' + uri + '"></canvas>'
           + '<td><span id="height-' + uri + '"></span>x<span id="width-' + uri + '"></span>'
           + '<td id="size-' + uri + '">';
