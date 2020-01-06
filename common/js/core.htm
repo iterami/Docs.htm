@@ -1135,7 +1135,7 @@ core_storage_reset()
     <td>Type
   <tr>
     <td>keys
-    <td>core_storage_info
+    <td>false
     <td>object
   <tr>
     <td>label
@@ -1146,7 +1146,18 @@ core_storage_reset()
 core_storage_save()
 <ul>
   <li>Saves current storage input values as new storage values.
+  <li>Saves all by default, but can also only save specific keys.
 </ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>keys
+    <td>false
+    <td>object
+</table>
 <hr id=core_storage_update>
 core_storage_update(args)
 <ul>
