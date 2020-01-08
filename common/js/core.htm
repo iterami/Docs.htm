@@ -53,6 +53,7 @@
     <li><a href=#core_mouse_updatebinds>core_mouse_updatebinds(args)</a>
     <li><a href=#core_number_format>core_number_format(args)</a>
     <li><a href=#core_random_boolean>core_random_boolean(args)</a>
+    <li><a href=#core_random_crypto>core_random_crypto(args)</a>
     <li><a href=#core_random_hex>core_random_hex(args)</a>
     <li><a href=#core_random_integer>core_random_integer(args)</a>
     <li><a href=#core_random_key>core_random_key(args)</a>
@@ -766,6 +767,25 @@ core_random_boolean(args)
     <td>chance
     <td>.5
     <td>number
+</table>
+<hr id=core_random_crypto>
+core_random_crypto(args)
+<ul>
+  <li>Returns a TypedArray with crytographically strong random integers.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>length
+    <td>1
+    <td>number
+  <tr>
+    <td>type
+    <td>'Uint8Array'
+    <td>string
 </table>
 <hr id=core_random_hex>
 core_random_hex(args)
