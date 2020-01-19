@@ -6,8 +6,12 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Standards/Script
 <ul>
-  <li>Args must be listed at the top of the file, with example usage.<ul>
-    <li>If no args, display "# No args.".
+  <li>All scripts should start with:<ul>
+    <li>The shebang should always be the first line.
+    <li>set -eu
+    <li>Args must be listed in a comment, with example usage.<ul>
+      <li>If no args, display "# No args.".
+    </ul>
   </ul>
   <li>Exit codes should use the following values:<table class=center>
     <tr class=header>
@@ -21,4 +25,5 @@
       <td>Error
   </table>
   <li>Repositories cloned via the "git clone" command must end with the ".git" suffix.
+  </ul>
 </ul>
