@@ -9,6 +9,7 @@
   <li>Functions:<ul>
     <li><a href=#prefabs-webgl-cuboid>prefabs_webgl_cuboid(args)</a>
     <li><a href=#prefabs-webgl-cuboid-tree>prefabs_webgl_cuboid_tree(args)</a>
+    <li><a href=#prefabs-webgl-ellipsoid>prefabs_webgl_ellipsoid(args)</a>
     <li><a href=#prefabs-webgl-lines-tree>prefabs_webgl_lines_tree(args)</a>
     <li><a href=#prefabs-webgl-skybox>prefabs_webgl_skybox(args)</a>
     <li><a href=#prefabs-webgl-tiles>prefabs_webgl_tiles(args)</a>
@@ -19,7 +20,7 @@
 prefabs_webgl_cuboid(args)
 <ul>
   <li>Creates a cuboid prefab with specified properties.
-  <li>Translation is the center of the cuboid.
+  <li>Translation is from the center of the cuboid.
 </ul>
 <table>
   <tr class=header>
@@ -103,7 +104,7 @@ prefabs_webgl_cuboid(args)
 prefabs_webgl_cuboid_tree(args)
 <ul>
   <li>Creates a cuboid tree prefab with the specified properties.
-  <li>Translation is the center of the bottom face of the trunk.
+  <li>Translation is from the center of the bottom face of the trunk.
 </ul>
 <table>
   <tr class=header>
@@ -171,11 +172,63 @@ prefabs_webgl_cuboid_tree(args)
     <td>array[]
     <td>array of numbers
 </table>
+<hr id=prefabs-webgl-ellipsoid>
+prefabs_webgl_ellipsoid(args)
+<ul>
+  <li>Creates a ellipsoid prefab with specified properties.
+  <li>Translation is from the center of the ellipsoid.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>prefix
+    <td>entity_id_count
+    <td>number or string
+  <tr>
+    <td>radius-x
+    <td>5
+    <td>number
+  <tr>
+    <td>radius-y
+    <td>5
+    <td>number
+  <tr>
+    <td>radius-z
+    <td>5
+    <td>number
+  <tr>
+    <td>slices-latitude
+    <td>10
+    <td>number
+  <tr>
+    <td>slices-longitude
+    <td>10
+    <td>number
+  <tr>
+    <td>translate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-z
+    <td>0
+    <td>number
+</table>
 <hr id=prefabs-webgl-lines-tree>
 prefabs_webgl_lines_tree(args)
 <ul>
   <li>Creates a lines tree prefab with the specified properties.
-  <li>Translation is the center of the bottom of the trunk.
+  <li>Translation is from the center of the bottom of the trunk.
 </ul>
 <table>
   <tr class=header>
