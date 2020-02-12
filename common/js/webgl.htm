@@ -39,6 +39,7 @@
     <li><a href=#webgl_pick_color>webgl_pick_color(args)</a>
     <li><a href=#webgl_program_create>webgl_program_create(args)</a>
     <li><a href=#webgl_resize>webgl_resize()</a>
+    <li><a href=#webgl_scissor>webgl_scissor(args)</a>
     <li><a href=#webgl_settings_init>webgl_settings_init()</a>
     <li><a href=#webgl_shader_create>webgl_shader_create(args)</a>
     <li><a href=#webgl_shader_recreate>webgl_shader_recreate()</a>
@@ -571,6 +572,37 @@ webgl_resize()
   <li>Handles resizing the canvas to current window proportions.
   <li>Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
 </ul>
+<hr id=webgl_scissor>
+webgl_scissor(args)
+<ul>
+  <li>Renders a specific rectangle portion of the viewport, such as rendering one pixel for picking purposes.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>height
+    <td>1
+    <td>number
+  <tr>
+    <td>todo
+    <td>
+    <td>function
+  <tr>
+    <td>width
+    <td>1
+    <td>number
+  <tr>
+    <td>x
+    <td>
+    <td>number
+  <tr>
+    <td>y
+    <td>
+    <td>number
+</table>
 <hr id=webgl_settings_init>
 webgl_settings_init()
 <ul>
