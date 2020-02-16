@@ -20,6 +20,7 @@
     <li><a href=#core_events_rebind>core_events_rebind(args)</a>
     <li><a href=#core_events_todoloop>core_events_todoloop()</a>
     <li><a href=#core_file>core_file(args)</a>
+    <li><a href=#core_float_compare>core_float_compare(args)</a>
     <li><a href=#core_handle_beforeunload>core_handle_beforeunload(event)</a>
     <li><a href=#core_handle_blur>core_handle_blur(event)</a>
     <li><a href=#core_handle_contextmenu>core_handle_contextmenu(event)</a>
@@ -374,6 +375,29 @@ core_file(args)
     <td>type
     <td>'readAsDataURL'
     <td>string
+</table>
+<hr id=core_float_compare>
+core_float_compare(args)
+<ul>
+  <li>Checks if two float numbers are equal, within a specific level of precision.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>a
+    <td>
+    <td>number
+  <tr>
+    <td>b
+    <td>
+    <td>number
+  <tr>
+    <td>precision
+    <td>Math.EPSILON
+    <td>number
 </table>
 <hr id=core_handle_beforeunload>
 core_handle_beforeunload(event)
