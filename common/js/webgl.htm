@@ -262,7 +262,7 @@ webgl_drawloop()
 webgl_extension(args)
 <ul>
   <li>Attempts to get a WebGL extension based on the supplied "id" arg.
-  <li>If the extension is available, it gets added to "window.webgl_extensions" using the "label" arg.
+  <li>If the extension is available, it gets added to "globalThis.webgl_extensions" using the "label" arg.
   <li>Returns a boolean indicating if the extension is available or not.
 </ul>
 <table>
@@ -569,7 +569,7 @@ webgl_program_create(args)
 <hr id=webgl_resize>
 webgl_resize()
 <ul>
-  <li>Handles resizing the canvas to current window proportions.
+  <li>Handles resizing the canvas to current globalThis proportions.
   <li>Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
 </ul>
 <hr id=webgl_scissor>

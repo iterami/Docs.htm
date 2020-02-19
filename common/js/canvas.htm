@@ -154,7 +154,7 @@ canvas_logicloop_handle_entity(entity)
 <hr id=canvas_resize>
 canvas_resize()
 <ul>
-  <li>Handles resizing the canvas to current window proportions.
+  <li>Handles resizing the canvas to current globalThis proportions.
   <li>Resets canvas properties that may have been lost upon resize.
 </ul>
 <hr id=canvas_setmode>
@@ -175,7 +175,7 @@ canvas_setmode(args)
 <hr id=canvas_setproperties>
 canvas_setproperties(args)
 <ul>
-  <li>Sets and stores canvas properties in "window.canvas_properties".
+  <li>Sets and stores canvas properties in "globalThis.canvas_properties".
 </ul>
 <table>
   <tr class=header>
