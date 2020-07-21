@@ -31,6 +31,8 @@
     <li><a href=#math_move_3d>math_move_3d(args)</a>
     <li><a href=#math_normalize>math_normalize(args)</a>
     <li><a href=#math_point_angle>math_point_angle(args)</a>
+    <li><a href=#math_quaternion_from_euler>math_quaternion_from_euler(args)</a>
+    <li><a href=#math_quaternion_to_euler>math_quaternion_to_euler(args)</a>
     <li><a href=#math_radians_to_degrees>math_radians_to_degrees(args)</a>
   </ul>
 </ul>
@@ -549,6 +551,56 @@ math_point_angle(args)
   <tr>
     <td>y1
     <td>
+    <td>number
+</table>
+<hr id=math_quaternion_from_euler>
+math_quaternion_from_euler(args)
+<ul>
+  <li>Converts xyz angle into a quaternion and returns an object containing "w", "x", "y", and "z".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=math_quaternion_to_euler>
+math_quaternion_from_to(args)
+<ul>
+  <li>Converts wxyz quaternion into xyz angles and returns an object containing "x", "y", and "z".
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>w
+    <td>0
+    <td>number
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+  <tr>
+    <td>z
+    <td>0
     <td>number
 </table>
 <hr id=math_radians_to_degrees>
