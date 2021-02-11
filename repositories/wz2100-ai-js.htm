@@ -6,16 +6,21 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Repositories</a>/<a class=external href=https://github.com/iterami/WZ2100-AI.js rel=noopener>WZ2100-AI.js</a>
 <ul>
-  <li>Each AI does not vary by difficulty and always follows the same build order.
-  <li>Cheats are not used.
+  <li>Cheats are not used, including limiting knowledge to sensor range.
+  <li>AIs:<ul>
+    <li>iterami-competitive: an attempt to create a general-purpose bot that can win competitive games.
+    <li>iterami-cyborg-machinegun: a bot that spams cyborgs with machineguns that attack every enemy droid they see.
+    <li>iterami-missilefortress: a bot that quickly researches and spams missile fortresses.
+  </ul>
   <li>Installation:<ol>
     <li>"git clone https://github.com/iterami/WZ2100-AI.js.git --depth 1"
-    <li>Copy the directories within "WZ2100-AI.js/ai/" into the "mods/autoload/" directory within your Warzone 2100 directory.
+    <li>Copy the directories of the bots you wish to use into the "mods/autoload/" directory within your Warzone 2100 directory.
   </ol>
   <li>Observation:<ol>
     <li>"shift + backspace" to enable debug and cheats. Keep this mode active for the entire game.
-    <li>"ctrl + o" and change "Current Player" to the AI you wish to observe.
-    <li>"ctrl + g" to optionally reveal the entire map.
+    <li>"ctrl + o" and change "Selected Player" to the AI you wish to observe.
+    <li>You can also attach the AI you wish to observe to whichever player number you are.
+    <li>Click "Reveal all" to reveal the entire map for easier observation.
     <li>"ctrl + +" to increase the game speed for quicker observation.
   </ol>
 </ul>
