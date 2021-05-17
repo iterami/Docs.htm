@@ -10,11 +10,31 @@
     <li>"&lt;gtk/gtk.h&gt;"
   </ul>
   <li>Functions:<ul>
+    <li><a href=#gtk-activate>void gtk_activate(GtkApplication* app, gpointer data)</a>
     <li><a href=#gtk-add-menuitem>void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)</a>
     <li><a href=#gtk-begin-frameclock>void gtk_begin_frameclock(GtkWidget *_glarea)</a>
     <li><a href=#gtk-init-gtk>void gtk_init_gtk(GtkApplication* app, const gchar *title)</a>
   </ul>
 </ul>
+<hr id=gtk-activate>
+void gtk_activate(GtkApplication* app, gpointer data)
+<ul>
+  <li>Set up in main(), this function handles the "activate" signal by displaying and focusing the already-created window, instead of creating a new one.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>app
+    <td>GtkApplication*
+    <td>The app created via "gtk_application_new()".
+  <tr>
+    <td>data
+    <td>gpointer
+    <td>NULL.
+</table>
 <hr id=gtk-add-menuitem>
 void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)
 <ul>
