@@ -37,7 +37,8 @@
           "translate-x": 0,
           "translate-y": 0
         }
-      ]
+      ],
+      "speed": 2
     }
   },
   "spawn-rotate-x": 45,
