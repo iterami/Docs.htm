@@ -1185,8 +1185,8 @@ core_storage_element_property(args)
 <hr id=core_storage_reset>
 core_storage_reset()
 <ul>
-  <li>Asks the users if they wish to reset storage values.
-  <li>If accepted, this function either resets all storage values or only specific keys.
+  <li>Asks the user if they wish to reset specific storage values.
+  <li>If accepted, this function either resets the value of specific keys, keys with a specific prefix, or all keys.
 </ul>
 <table>
   <tr class=header>
@@ -1201,6 +1201,10 @@ core_storage_reset()
     <td>label
     <td>'global iterami'
     <td>string
+  <tr>
+    <td>prefix
+    <td>false
+    <td>boolean false or string
 </table>
 <hr id=core_storage_save>
 core_storage_save()
