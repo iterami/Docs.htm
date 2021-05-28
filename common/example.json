@@ -121,6 +121,7 @@
           "event-modify": [
             {
               "amount": -100,
+              "set": false,
               "stat": "health-current"
             }
           ],
@@ -147,7 +148,7 @@
           "spawn-entity": false,
           "spawn-interval-current": 0,
           "spawn-interval-max": 100,
-          "speed": 0.2,
+          "speed": 0.1,
           "texture-align": [
             1, 1,
             1, 0,

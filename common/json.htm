@@ -62,7 +62,7 @@
       //    1 = restart path from the beginning by moving towards first point.
       "end": 1,
 
-      // Required. Path waypoints in order.
+      // REQUIRED. Path waypoints in order.
       "points": [
         {
           // Optional. Speed multiplier when entities are approaching this point.
@@ -132,7 +132,7 @@
         "translate-z": 0
       },
 
-      // Optional. If the character collides, then this is the maximum distance before collision occurs.
+      // Optional. The maximum distance that collision can occur.
       "collide-range-horizontal": 2,
       "collide-range-vertical": 3,
 
@@ -178,7 +178,7 @@
       // Optional. Character movement speed.
       "speed": 0.1,
 
-      // Optional. Text said by the character when the player within range
+      // Optional. Text said by the character when the player is within range.
       "talk": false,
       "talk-range": 15,
 
@@ -229,15 +229,15 @@
             "translate-z": 0
           },
 
-          // Optional. If this entity collides with other entities that have collision.
-          "collides": true,
-
-          // Optional. If this entity collides, then this is the maximum distance before collision occurs.
+          // Optional. The maximum distance that collision can occur.
           "collide-range-horizontal": 2,
           "collide-range-vertical": 3,
 
-          // Optional. If this entity can be collided with by other entities that collide.
+          // Optional. If this entity collides with other entities that have collision.
           "collides": false,
+
+          // Optional. If this entity can be collided with by other entities that collide.
+          "collision": true,
 
           // Optional. If the entity should be drawn or not.
           "draw": true,
@@ -254,7 +254,14 @@
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
             {
+              // Optional. Amount of change that occurs when this event is triggered.
               "amount": -100,
+
+              // Optional. If this event should set the stat to a specific value,
+              //   or modify the stat by a specific amount.
+              "set": false,
+
+              // REQUIRED. ID of the stat that will be modified.
               "stat": "health-current"
             }
           ],
@@ -305,7 +312,7 @@
           "spawn-interval-max": 0,
 
           // Optional. Entity movement speed.
-          "speed": 0.2,
+          "speed": 0.1,
 
           // Optional. Texture alignment.
           "texture-align": [
@@ -423,16 +430,16 @@
       // Optional. True if this affects character property, or false if this affects entity property.
       "character": false,
 
-      // Required. Array of character or entity IDs, depending on the character property.
+      // REQUIRED. Array of character or entity IDs, depending on the character property.
       "ids": [
         "example-entity-0"
       ],
 
-      // Required. The range in which to choose a number, which is then added to the property.
+      // REQUIRED. The range in which to choose a number, which is then added to the property.
       "max": 100,
       "min": -100,
 
-      // Required. The property that will be modified.
+      // REQUIRED. The property that will be modified.
       "property": "translate-z"
     }
   ]
