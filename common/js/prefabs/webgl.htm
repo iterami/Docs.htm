@@ -241,6 +241,7 @@ prefabs_webgl_lines_shrub(args)
 <ul>
   <li>Creates a lines shrub prefab with the specified properties.
   <li>Translation is from the start of the line.
+  <li>The color of each vertex is either base or leaf color, depending on distance from the start of the line.
   <li>Types:<ul>
     <li>Offset: random number is added to the translation for each new point.
     <li>Range: each point is a random translation within specified cuboid relative to the start of the line.
@@ -256,13 +257,21 @@ prefabs_webgl_lines_shrub(args)
     <td>webgl_character_id
     <td>string ID
   <tr>
-    <td>color
-    <td>array[]
+    <td>color-base
+    <td>array[0, 0, 0]
+    <td>array of numbers
+  <tr>
+    <td>color-leaf
+    <td>array[1, 1, 1]
     <td>array of numbers
   <tr>
     <td>id
     <td>entity_id_count
     <td>number or string
+  <tr>
+    <td>leaf-distance
+    <td>.5
+    <td>number
   <tr>
     <td>points
     <td>10
@@ -285,27 +294,27 @@ prefabs_webgl_lines_shrub(args)
     <td>'offset' or 'range'
   <tr>
     <td>x-max
-    <td>0
+    <td>1
     <td>number
   <tr>
     <td>x-min
-    <td>0
+    <td>-1
     <td>number
   <tr>
     <td>y-max
-    <td>0
+    <td>1
     <td>number
   <tr>
     <td>y-min
-    <td>0
+    <td>-1
     <td>number
   <tr>
     <td>z-max
-    <td>0
+    <td>1
     <td>number
   <tr>
     <td>z-min
-    <td>0
+    <td>-1
     <td>number
 </table>
 <hr id=prefabs-webgl-lines-tree>
