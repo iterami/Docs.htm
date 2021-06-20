@@ -10,24 +10,41 @@
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
     <li><a href=entity.htm>entity.js</a>
-    <li><a href=genre.htm>genre.js</a>
     <li><a href=math.htm>math.js</a>
   </ul>
   <li>Functions:<ul>
+    <li><a href=#webgl_billboard>webgl_billboard(args)</a>
     <li><a href=#webgl_buffer_set>webgl_buffer_set(args)</a>
     <li><a href=#webgl_buffer_set_type>webgl_buffer_set_type(args)</a>
     <li><a href=#webgl_camera_handle>webgl_camera_handle()</a>
     <li><a href=#webgl_camera_rotate>webgl_camera_rotate(args)</a>
     <li><a href=#webgl_camera_zoom>webgl_camera_zoom()</a>
+    <li><a href=#webgl_character_home>webgl_character_home()</a>
+    <li><a href=#webgl_character_home_entityupdate>webgl_character_home_entityupdate()</a>
+    <li><a href=#webgl_character_init>webgl_character_init(args)</a>
+    <li><a href=#webgl_character_jump>webgl_character_jump(args)</a>
+    <li><a href=#webgl_character_level>webgl_character_level(args)</a>
+    <li><a href=#webgl_character_origin>webgl_character_origin(args)</a>
+    <li><a href=#webgl_character_random>webgl_character_random(args)</a>
+    <li><a href=#webgl_character_set>webgl_character_set(args)</a>
+    <li><a href=#webgl_character_spawn>webgl_character_spawn(args)</a>
     <li><a href=#webgl_clamp_rotation>webgl_clamp_rotation(args)</a>
     <li><a href=#webgl_clearcolor_set>webgl_clearcolor_set(args)</a>
     <li><a href=#webgl_collision>webgl_collision(args)</a>
     <li><a href=#webgl_draw>webgl_draw()</a>
     <li><a href=#webgl_draw_entity>webgl_draw_entity(entity)</a>
     <li><a href=#webgl_drawloop>webgl_drawloop()</a>
+    <li><a href=#webgl_entity_create>webgl_entity_create(args)</a>
+    <li><a href=#webgl_entity_move>webgl_entity_move(args)</a>
+    <li><a href=#webgl_entity_move_to>webgl_entity_move_to(args)</a>
+    <li><a href=#webgl_entity_todo>webgl_entity_todo(entity)</a>
+    <li><a href=#webgl_event>webgl_event(args)</a>
     <li><a href=#webgl_extension>webgl_extension(args)</a>
     <li><a href=#webgl_get_translation>webgl_get_translation(args)</a>
     <li><a href=#webgl_init>webgl_init(args)</a>
+    <li><a href=#webgl_item_equip>webgl_item_equip(args)</a>
+    <li><a href=#webgl_item_reset>webgl_item_reset(args)</a>
+    <li><a href=#webgl_item_trade>webgl_item_trade(args)</a>
     <li><a href=#webgl_json_export>webgl_json_export(args)</a>
     <li><a href=#webgl_level_init>webgl_level_init(args)</a>
     <li><a href=#webgl_level_load>webgl_level_load(args)</a>
@@ -35,6 +52,9 @@
     <li><a href=#webgl_logicloop>webgl_logicloop()</a>
     <li><a href=#webgl_logicloop_handle_entity>webgl_logicloop_handle_entity(entity)</a>
     <li><a href=#webgl_normals>webgl_normals(args)</a>
+    <li><a href=#webgl_particles_create>webgl_particles_create(args)</a>
+    <li><a href=#webgl_path_move>webgl_path_move(args)</a>
+    <li><a href=#webgl_path_use>webgl_path_use(args)</a>
     <li><a href=#webgl_perspective>webgl_perspective()</a>
     <li><a href=#webgl_pick_color>webgl_pick_color(args)</a>
     <li><a href=#webgl_program_create>webgl_program_create(args)</a>
@@ -43,6 +63,7 @@
     <li><a href=#webgl_settings_init>webgl_settings_init()</a>
     <li><a href=#webgl_shader_create>webgl_shader_create(args)</a>
     <li><a href=#webgl_shader_recreate>webgl_shader_recreate()</a>
+    <li><a href=#webgl_stat_modify>webgl_stat_modify(args)</a>
     <li><a href=#webgl_texture_set>webgl_texture_set(args)</a>
     <li><a href=#webgl_vertexattribarray_set>webgl_vertexattribarray_set(args)</a>
     <li><a href=#webgl_vertexcolorarray>webgl_vertexcolorarray(args)</a>
@@ -63,6 +84,26 @@
     <td>0
     <td>placeholder, CanvasRenderingContext2D
   <tr>
+    <td>webgl_character_count
+    <td>0
+    <td>number
+  <tr>
+    <td>webgl_character_homebase
+    <td>{}
+    <td>object
+  <tr>
+    <td>webgl_character_id
+    <td>'_me'
+    <td>string ID
+  <tr>
+    <td>webgl_character_trading
+    <td>''
+    <td>string ID
+  <tr>
+    <td>webgl_characters
+    <td>{}
+    <td>object
+  <tr>
     <td>webgl_diagonal
     <td>0
     <td>number
@@ -72,6 +113,10 @@
     <td>object
   <tr>
     <td>webgl_levelcache
+    <td>{}
+    <td>object
+  <tr>
+    <td>webgl_paths
     <td>{}
     <td>object
   <tr>
@@ -86,6 +131,29 @@
     <td>webgl_text
     <td>{}
     <td>object
+</table>
+<hr id=webgl_billboard>
+webgl_billboard(args)
+<ul>
+  <li>Changes the rotation of an entity based on the rotation of the camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>axes
+    <td>['y']
+    <td>array of axis strings
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entity
+    <td>
+    <td>string ID
 </table>
 <hr id=webgl_buffer_set>
 webgl_buffer_set(args)
@@ -183,6 +251,217 @@ webgl_camera_zoom()
 <ul>
   <li>Functon called by bound "mousewheel" event within "mousebinds".
 </ul>
+<hr id=webgl_character_home>
+webgl_character_home()
+<ul>
+  <li>If the "webgl_character_id" character has a home, current level is unloaded and replaced with home.
+</ul>
+<hr id=webgl_character_home_entityupdate>
+webgl_character_home_entityupdate()
+<ul>
+  <li>Clears current "webgl_character_homebase['entities']".
+  <li>Loops through current entities. If any are attached to "webgl_character_id" and not in the skybox, then their properties are copied and pushed into "webgl_character_homebase['entities']".
+</ul>
+<hr id=webgl_character_init>
+webgl_character_init(args)
+<ul>
+  <li>Sets up the character and camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>automove
+    <td>false
+    <td>boolean
+  <tr>
+    <td>camera-zoom
+    <td>0
+    <td>number
+  <tr>
+    <td>change
+    <td>{}
+    <td>object
+  <tr>
+    <td>collide-range-horizontal
+    <td>2
+    <td>number
+  <tr>
+    <td>collide-range-vertical
+    <td>3
+    <td>number
+  <tr>
+    <td>collides
+    <td>true
+    <td>boolean
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array of objects
+  <tr>
+    <td>experience
+    <td>0
+    <td>number
+  <tr>
+    <td>health-current
+    <td>100
+    <td>number
+  <tr>
+    <td>health-max
+    <td>100
+    <td>number
+  <tr>
+    <td>id
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>jump-height
+    <td>.6
+    <td>number
+  <tr>
+    <td>level
+    <td>-1
+    <td>number
+  <tr>
+    <td>reticle
+    <td>'#fff'
+    <td>boolean false or string
+  <tr>
+    <td>rotate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>rotate-z
+    <td>0
+    <td>number
+  <tr>
+    <td>speed
+    <td>.2
+    <td>number
+  <tr>
+    <td>talk
+    <td>false
+    <td>boolean false or string
+  <tr>
+    <td>talk-range
+    <td>15
+    <td>number
+  <tr>
+    <td>trade
+    <td>[]
+    <td>array
+  <tr>
+    <td>translate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>translate-z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_character_jump>
+webgl_character_jump(args)
+<ul>
+  <li>Attempts to make a character jump.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_level>
+webgl_character_level(args)
+<ul>
+  <li>If character doesn't exist yet, returns "-2".
+  <li>If character exists, returns level. "-1" means character is just a camera.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_origin>
+webgl_character_origin(args)
+<ul>
+  <li>Resets the rotation and translation of a character back to the origin.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
+<hr id=webgl_character_random>
+webgl_character_random(args)
+<ul>
+  <li>Creates a new character with randomized properties and cuboid body.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=webgl_character_set>
+webgl_character_set(args)
+<ul>
+  <li>Changes the character controlled by the player.
+  <li>Makes sure character zoom is less than or equal to "webgl_properties['camera-zoom-max']".
+  <li>Attaches skybox entities to the new character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string ID
+</table>
+<hr id=webgl_character_spawn>
+webgl_character_spawn(args)
+<ul>
+  <li>Resets the rotation and translation of a character back to current level spawn coordinates.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+</table>
 <hr id=webgl_clamp_rotation>
 webgl_clamp_rotation(args)
 <ul>
@@ -258,6 +537,104 @@ webgl_drawloop()
   <li>Calls "webgl_draw()" if the menu isn't open.
   <li>Handles animation frames via "core_interval_animationFrame()" usage.
 </ul>
+<hr id=webgl_entity_create>
+webgl_entity_create(args)
+<ul>
+  <li>Creates all entities from "entities" arg, then creates all character entities.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array of string IDs
+</table>
+<hr id=webgl_entity_move>
+webgl_entity_move(args)
+<ul>
+  <li>Handles moving a character or entity within 3D space.
+  <li>Maintains y position unless specifically changed.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entity
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>multiplier
+    <td>1
+    <td>number
+  <tr>
+    <td>strafe
+    <td>false
+    <td>boolean
+  <tr>
+    <td>y
+    <td>false
+    <td>boolean false or number
+</table>
+<hr id=webgl_entity_move_to>
+webgl_entity_move_to(args)
+<ul>
+  <li>Moves a character or entity to a specific point.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>x
+    <td>0
+    <td>number
+  <tr>
+    <td>y
+    <td>0
+    <td>number
+  <tr>
+    <td>z
+    <td>0
+    <td>number
+</table>
+<hr id=webgl_entity_todo>
+webgl_entity_todo(entity)
+<ul>
+  <li>Function called upon entity creation for optimization purposes.
+</ul>
+<hr id=webgl_event>
+webgl_event(args)
+<ul>
+  <li>Handles entity events.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>parent
+    <td>
+    <td>entity object
+  <tr>
+    <td>target
+    <td>
+    <td>character/entity object
+</table>
 <hr id=webgl_extension>
 webgl_extension(args)
 <ul>
@@ -426,6 +803,99 @@ webgl_init(args)
     <td>0
     <td>number
 </table>
+<hr id=webgl_item_equip>
+webgl_item_equip(args)
+<ul>
+  <li>Equips or unequips an item.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>equip
+    <td>true
+    <td>boolean
+  <tr>
+    <td>item
+    <td>
+    <td>object
+</table>
+<hr id=webgl_item_reset>
+webgl_item_reset(args)
+<ul>
+  <li>Resets an item in a characters inventory.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>entities
+    <td>[]
+    <td>array
+  <tr>
+    <td>item
+    <td>
+    <td>object
+  <tr>
+    <td>spell
+    <td>false
+    <td>boolean
+  <tr>
+    <td>spellproperties
+    <td>{}
+    <td>object
+  <tr>
+    <td>stats
+    <td>{}
+    <td>object
+</table>
+<hr id=webgl_item_trade>
+webgl_item_trade(args)
+<ul>
+  <li>Attempts to trade any amount of one item from one character for any amount of one item from another character.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>character-0
+    <td>
+    <td>string ID
+  <tr>
+    <td>character-1
+    <td>
+    <td>string ID
+  <tr>
+    <td>item-0-amount
+    <td>
+    <td>number
+  <tr>
+    <td>item-0-id
+    <td>
+    <td>number
+  <tr>
+    <td>item-1-amount
+    <td>
+    <td>number
+  <tr>
+    <td>item-1-id
+    <td>
+    <td>number
+</table>
 <hr id=webgl_json_export>
 webgl_json_export(args)
 <ul>
@@ -525,6 +995,120 @@ webgl_normals(args)
   <tr>
     <td>vertices-length
     <td>1
+    <td>number
+</table>
+<hr id=webgl_particles_create>
+webgl_particles_create(args)
+<ul>
+  <li>Creates particle entities in the "particles" group.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>collide-range
+    <td>1
+    <td>number
+  <tr>
+    <td>collides
+    <td>true
+    <td>boolean
+  <tr>
+    <td>color
+    <td>[1, 1, 1, 1]
+    <td>array of numbers
+  <tr>
+    <td>count
+    <td>1
+    <td>number
+  <tr>
+    <td>gravity
+    <td>true
+    <td>boolean
+  <tr>
+    <td>lifespan
+    <td>100
+    <td>number
+  <tr>
+    <td>parent
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>rotate-x
+    <td>webgl_characters[webgl_character_id]['rotate-x']
+    <td>number
+  <tr>
+    <td>rotate-y
+    <td>webgl_characters[webgl_character_id]['rotate-y']
+    <td>number
+  <tr>
+    <td>rotate-z
+    <td>webgl_characters[webgl_character_id]['rotate-z']
+    <td>number
+  <tr>
+    <td>speed
+    <td>1
+    <td>number
+  <tr>
+    <td>translate-x
+    <td>webgl_characters[webgl_character_id]['translate-x']
+    <td>number
+  <tr>
+    <td>translate-y
+    <td>webgl_characters[webgl_character_id]['translate-y']
+    <td>number
+  <tr>
+    <td>translate-z
+    <td>webgl_characters[webgl_character_id]['translate-z']
+    <td>number
+</table>
+<hr id=webgl_path_move>
+webgl_path_move(args)
+<ul>
+  <li>Move an entity or a character along it's path, if it has one.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+</table>
+<hr id=webgl_path_use>
+webgl_path_use(args)
+<ul>
+  <li>Makes target entity use specific path.
+  <li>Disables entity path if no path specified.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>entity
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>path-direction
+    <td>1
+    <td>1 or -1
+  <tr>
+    <td>path-end
+    <td>false
+    <td>boolean false or number
+  <tr>
+    <td>path-id
+    <td>false
+    <td>boolean false or string ID
+  <tr>
+    <td>path-point
+    <td>0
     <td>number
 </table>
 <hr id=webgl_perspective>
@@ -636,6 +1220,34 @@ webgl_shader_recreate()
   <li>Creates the fragment and vertex shaders.
   <li>Sets up the shader program and uniform locations.
 </ul>
+<hr id=webgl_stat_modify>
+webgl_stat_modify(args)
+<ul>
+  <li>Modifies or sets a character/entity property.
+  <li>Character "health-current" property has extra checks to remove attached entities upon death.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>parent
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>amount
+    <td>1
+    <td>number
+  <tr>
+    <td>set
+    <td>false
+    <td>boolean
+  <tr>
+    <td>stat
+    <td>
+    <td>string
+</table>
 <hr id=webgl_texture_set>
 webgl_texture_set(args)
 <ul>
