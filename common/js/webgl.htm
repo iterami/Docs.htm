@@ -57,6 +57,7 @@
     <li><a href=#webgl_path_use>webgl_path_use(args)</a>
     <li><a href=#webgl_perspective>webgl_perspective()</a>
     <li><a href=#webgl_pick_color>webgl_pick_color(args)</a>
+    <li><a href=#webgl_pick_entity>webgl_pick_entity(args)</a>
     <li><a href=#webgl_program_create>webgl_program_create(args)</a>
     <li><a href=#webgl_resize>webgl_resize()</a>
     <li><a href=#webgl_scissor>webgl_scissor(args)</a>
@@ -65,6 +66,7 @@
     <li><a href=#webgl_shader_recreate>webgl_shader_recreate()</a>
     <li><a href=#webgl_stat_modify>webgl_stat_modify(args)</a>
     <li><a href=#webgl_texture_set>webgl_texture_set(args)</a>
+    <li><a href=#webgl_uniform_update>webgl_uniform_update()</a>
     <li><a href=#webgl_vertexattribarray_set>webgl_vertexattribarray_set(args)</a>
     <li><a href=#webgl_vertexcolorarray>webgl_vertexcolorarray(args)</a>
   </ul>
@@ -1135,6 +1137,26 @@ webgl_pick_color(args)
     <td>
     <td>number
 </table>
+<hr id=webgl_pick_entity>
+webgl_pick_entity(args)
+<ul>
+  <li>Temporarily draws entities using their "pick-color" and determines which entity has been picked.
+  <li>If the picked entity has "pick-todo", then that function is called.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x
+    <td>
+    <td>number
+  <tr>
+    <td>y
+    <td>
+    <td>number
+</table>
 <hr id=webgl_program_create>
 webgl_program_create(args)
 <ul>
@@ -1267,6 +1289,11 @@ webgl_texture_set(args)
     <td>'_texture-default'
     <td>string ID
 </table>
+<hr id=webgl_uniform_update>
+webgl_uniform_update()
+<ul>
+  <li>Updates the shader uniform values.
+</ul>
 <hr id=webgl_vertexattribarray_set>
 webgl_vertexattribarray_set(args)
 <table>
