@@ -139,6 +139,8 @@
           "path-end": false,
           "path-id": false,
           "path-point": 0,
+          "pick-color": [0, 1, 0],
+          "pick-todo": false,
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,
