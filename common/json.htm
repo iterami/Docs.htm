@@ -253,15 +253,18 @@
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
             {
-              // Optional. Amount of change that occurs when this event is triggered.
-              "amount": -100,
+              // Optional. If this event should affect this entity or the one that triggered it.
+              "self": false,
 
               // Optional. If this event should set the stat to a specific value,
-              //   or modify the stat by a specific amount.
+              //   or modify the stat by a specific value.
               "set": false,
 
               // REQUIRED. ID of the stat that will be modified.
-              "stat": "health-current"
+              "stat": "health-current",
+
+              // Optional. Value of change that occurs when this event is triggered.
+              "value": -100
             }
           ],
 

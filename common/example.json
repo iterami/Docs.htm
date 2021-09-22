@@ -120,9 +120,10 @@
           "event-key-consume": 0,
           "event-modify": [
             {
-              "amount": -100,
+              "self": false,
               "set": false,
-              "stat": "health-current"
+              "stat": "health-current",
+              "value": -100
             }
           ],
           "event-range": false,
