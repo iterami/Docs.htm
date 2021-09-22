@@ -1247,20 +1247,13 @@ webgl_stat_modify(args)
 <ul>
   <li>Modifies or sets a character/entity property.
   <li>Character "health-current" property has extra checks to remove attached entities upon death.
+  <li>Modifying "vertex-colors" randomizes colors.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
-  <tr>
-    <td>parent
-    <td>
-    <td>character/entity object
-  <tr>
-    <td>amount
-    <td>1
-    <td>number
   <tr>
     <td>set
     <td>false
@@ -1269,6 +1262,14 @@ webgl_stat_modify(args)
     <td>stat
     <td>
     <td>string
+  <tr>
+    <td>target
+    <td>
+    <td>character/entity object
+  <tr>
+    <td>value
+    <td>1
+    <td>number
 </table>
 <hr id=webgl_texture_set>
 webgl_texture_set(args)
