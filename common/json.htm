@@ -211,7 +211,7 @@
           "attach-to": false,
 
           // Optional. Variable that contains what this entity is attached to.
-          "attach-type": "core_entities",
+          "attach-type": "entity_entities",
 
           // Optional. If the entity will rotate based on camera rotation.
           // Array of strings, including "x", "y", "z", or any combination.
@@ -262,6 +262,9 @@
 
               // REQUIRED. ID of the stat that will be modified.
               "stat": "health-current",
+
+              // Optional. ID of the entity that will be affected.
+              "target": "example-entity-1",
 
               // Optional. Value of change that occurs when this event is triggered.
               "value": -100

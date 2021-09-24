@@ -100,7 +100,7 @@
           "attach-offset-y": -2,
           "attach-offset-z": 0,
           "attach-to": false,
-          "attach-type": "core_entities",
+          "attach-type": "entity_entities",
           "billboard": false,
           "change": {
             "rotate-x": 0,
@@ -123,6 +123,7 @@
               "self": false,
               "set": false,
               "stat": "health-current",
+              "target": "example-entity-1",
               "value": -100
             }
           ],
