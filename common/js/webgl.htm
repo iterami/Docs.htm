@@ -1246,6 +1246,7 @@ webgl_shader_recreate()
 webgl_stat_modify(args)
 <ul>
   <li>Modifies or sets a character/entity property.
+  <li>Creates the stat if it does not exist and the "has" arg is false.
   <li>Character "health-current" property has extra checks to remove attached entities upon death.
   <li>Modifying "vertex-colors" randomizes colors.
 </ul>
@@ -1254,6 +1255,10 @@ webgl_stat_modify(args)
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>has
+    <td>true
+    <td>boolean
   <tr>
     <td>set
     <td>false
