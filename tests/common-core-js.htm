@@ -118,16 +118,24 @@ function repo_init(){
         },
         {
           'args': {
-            'hex': '#123',
+            'hex': '#abc',
           },
-          'expect': 'rgb(17, 34, 51)',
+          'expect': {
+            'blue': 204,
+            'red': 170,
+            'green': 187,
+          },
           'function': 'core_hex_to_rgb',
         },
         {
           'args': {
-            'hex': '#123456',
+            'hex': '#abcdef',
           },
-          'expect': 'rgb(18, 52, 86)',
+          'expect': {
+            'blue': 239,
+            'red': 171,
+            'green': 205,
+          },
           'function': 'core_hex_to_rgb',
         },
         {
