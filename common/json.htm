@@ -149,9 +149,6 @@
       "health-current": 1,
       "health-max": 1,
 
-      // Optional. Current character inventory.
-      "inventory": {},
-
       // Optional. "dy" set when the character jumps.
       "jump-height": 0.1,
 
@@ -176,13 +173,6 @@
 
       // Optional. Character movement speed.
       "speed": 0.1,
-
-      // Optional. Text said by the character when the player is within range.
-      "talk": false,
-      "talk-range": 15,
-
-      // Optional. Item trades that this character can do if the player gets close.
-      "trade": [],
 
       // Optional. Translation of the character relative to "0, 0, 0".
       "translate-x": 0,
@@ -244,12 +234,6 @@
           // Optional. How the vertices should be drawn.
           "draw-type": "TRIANGLE_FAN",
 
-          // Optional. Item in inventory required to trigger event, or false for no requirement.
-          "event-key": false,
-
-          // Optional. How much of the "event-key" item should be consumed during the event, or 0 for none.
-          "event-key-consume": 0,
-
           // Optional. Array of stat modifications to use upon successful event trigger.
           "event-modify": [
             {
@@ -283,14 +267,6 @@
 
           // Optional. If this entity is affected by gravity.
           "gravity": false,
-
-          // Optional. Properties of this item, if "item-id" isn't false.
-          "item-amount": 1,
-          "item-entities": [],
-          "item-id": false,
-          "item-spell": false,
-          "item-spellproperties": {},
-          "item-stats": {},
 
           // Optional. Current assigned path or false, current path point target, and movement direction.
           // "path-end" is false for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
