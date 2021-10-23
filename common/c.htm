@@ -5,26 +5,45 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../../common/index.htm>common</a> C Projects
-<ul>
-  <li>C Files:<ul>
-    <li><a href=c/core.htm>core.c and core.h</a>: used by C projects.
-    <li><a href=c/gtk.htm>gtk.c and gtk.h</a>: used by GTK 3 and OpenGL projects.
-    <li><a href=c/json.htm>json.c</a>: used by OpenGL projects and projects that require JSON parsing.
-    <li><a href=c/math.htm>math.c and math.h</a>: used by OpenGL projects.
-    <li><a href=c/opengl.htm>opengl.c and opengl.h</a>: used by OpenGL projects.
-    <li><a href=c/random.htm>random.c and random.h</a>: used by projects that require randomization.
-    <li><a href=c/sort.htm>sort.c and sort.h</a>: used by projects that need to sort values.
+<table>
+  <tr class=header>
+    <td>C Files
+    <td>Used By
+  <tr>
+    <td><a href=c/core.htm>core.c + core.h</a>
+    <td>C projects
+  <tr>
+    <td><a href=c/gtk.htm>gtk.c + gtk.h</a>
+    <td>GTK 3 and OpenGL projects
+  <tr>
+    <td><a href=c/json.htm>json.c</a>
+    <td>OpenGL projects and projects that require JSON parsing
+  <tr>
+    <td><a href=c/math.htm>math.c + math.h</a>
+    <td>OpenGL projects
+  <tr>
+    <td><a href=c/opengl.htm>opengl.c + opengl.h</a>
+    <td>OpenGL projects
+  <tr>
+    <td><a href=c/random.htm>random.c + random.h</a>
+    <td>projects that require randomization
+  <tr>
+    <td><a href=c/sort.htm>sort.c + sort.h</a>
+    <td>projects that need to sort values
+  <tr class=header>
+    <td>CSS Files
+    <td>Used By
+  <tr>
+    <td>gtk.css
+    <td>GTK 3 projects
+  <tr>
+</table>
+Recommended Project Structure:<ul>
+  <li>/c/:<ul>
+    <li>main.c: contains project code.
+    <li>main.h: declares project functions and global variables.
   </ul>
-  <li>CSS Files:<ul>
-    <li>gtk.css: used by GTK 3 projects.
-  </ul>
-  <li>Recommended Project Structure:<ul>
-    <li>/c/:<ul>
-      <li>main.c: contains project code.
-      <li>main.h: declares project functions and global variables.
-    </ul>
-    <li>LICENSE.md: contains license information about your project.
-    <li>MakeFile: contains make instructions.
-    <li>README.md: contains information about your project.
-  </ul>
+  <li>LICENSE.md: contains license information about your project.
+  <li>MakeFile: contains make instructions.
+  <li>README.md: contains information about your project.
 </ul>
