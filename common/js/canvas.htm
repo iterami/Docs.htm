@@ -47,13 +47,13 @@
 canvas_draw()
 <ul>
   <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
-  <li>Main drawing code is handled via repository-specific "draw_logic()" code.
+  <li>Main drawing code is handled via repository-specific draw_logic() code.
 </ul>
 <hr id=canvas_drawloop>
 canvas_drawloop()
 <ul>
   <li>Calls "canvas_draw()" if the menu isn't open.
-  <li>Handles animation frames via "core_interval_animationFrame()" usage.
+  <li>Handles animation frames via <a href=core.htm#core_interval_animationframe>core_interval_animationFrame()</a> usage.
 </ul>
 <hr id=canvas_draw_path>
 canvas_draw_path(args)
@@ -143,13 +143,13 @@ canvas_init(args)
 <hr id=canvas_logicloop>
 canvas_logicloop()
 <ul>
-  <li>Calls repository-specific "logic()".
+  <li>Calls repository-specific logic().
   <li>Updates attached entities.
 </ul>
 <hr id=canvas_logicloop_handle_entity>
 canvas_logicloop_handle_entity(entity)
 <ul>
-  <li>Function called by "canvas_logicloop()" for optimization purposes.
+  <li>Function called by <a href=#canvas_logicloop>canvas_logicloop()</a> for optimization purposes.
 </ul>
 <hr id=canvas_resize>
 canvas_resize()
@@ -175,7 +175,7 @@ canvas_setmode(args)
 <hr id=canvas_setproperties>
 canvas_setproperties(args)
 <ul>
-  <li>Sets and stores canvas properties in "globalThis.canvas_properties".
+  <li>Sets and stores canvas properties in globalThis.canvas_properties.
 </ul>
 <table>
   <tr class=header>

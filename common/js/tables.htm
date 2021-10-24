@@ -9,7 +9,8 @@
   <li><a href=#globals>Globals</a>
   <li>No requirements.
   <li>Functions:<ul>
-    <li><a href=#tables_format_number>tables_format_number()</a>
+    <li><a href=#tables_add>tables_add(table)</a>
+    <li><a href=#tables_format_number>tables_format_number(value)</a>
     <li><a href=#tables_init>tables_init()</a>
     <li><a href=#tables_sort>tables_sort(element, column, direction)</a>
   </ul>
@@ -24,6 +25,23 @@
     <td>tables_column_main
     <td>0
     <td>number
+</table>
+<hr id=tables_add>
+tables_add(table)
+<ul>
+  <li>Adds sorting buttons to the first &lt;tr&gt; in the &lt;tbody&gt;.
+  <li>Ignores tables and columns with "tables-nosort" class.
+  <li>Uses column with "tables-main" class as unique main column.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>value
+    <td>
+    <td>number or string
 </table>
 <hr id=tables_format_number>
 tables_format_number(value)
@@ -44,9 +62,7 @@ tables_format_number(value)
 tables_init()
 <ul>
   <li>Automatically called when the file is loaded.
-  <li>Adds sorting buttons to the first "&lt;tr&gt;" in the "&lt;tbody&gt;".
-  <li>Ignores tables and columns with "tables-nosort" class.
-  <li>Uses column with "tables-main" class as unique main column.
+  <li>Loops through all table elements and adds them via <a href=#tables_add>tables_add()</a>.
 </ul>
 <hr id=tables_sort>
 tables_sort(element, column, direction)

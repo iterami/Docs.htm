@@ -357,7 +357,7 @@ core_events_todoloop()
 <hr id=core_file>
 core_file(args)
 <ul>
-  <li>Uses "FileReader" to read a file of any type, then passes the event to "todo()" via "onloadend".
+  <li>Uses "FileReader" to read a file of any type, then passes the event to todo() via "onloadend".
 </ul>
 <table>
   <tr class=header>
@@ -501,7 +501,7 @@ core_html(args)
 <ul>
   <li>Constructs and returns an HTML element.
   <li>Optionally can append/prepend it to a parent.
-  <li>Optionally can store it in "globalThis.core_elements";
+  <li>Optionally can store it in globalThis.core_elements;
 </ul>
 <table>
   <tr class=header>
@@ -759,7 +759,7 @@ core_mouse_updatebinds(args)
 <hr id=core_number_format>
 core_number_format(args)
 <ul>
-  <li>Formats a number based on "new Intl.NumberFormat()" and returns it.
+  <li>Formats a number based on new Intl.NumberFormat() and returns it.
 </ul>
 <table>
   <tr class=header>
@@ -870,7 +870,7 @@ core_random_number(args)
 <hr id=core_random_rgb>
 core_random_rgb()
 <ul>
-  <li>Returns an object containing random "blue", "green", and "red", as numbers between 0 and 255.
+  <li>Returns an object containing random "blue", "green", and "red", as numbers between 0 and 255 inclusive.
 </ul>
 <hr id=core_random_splice>
 core_random_splice(args)
@@ -909,7 +909,7 @@ core_random_string(args)
 <hr id=core_replace_multiple>
 core_replace_multiple(args)
 <ul>
-  <li>Improvement of general string "replace()" that allows multiple replacements.
+  <li>Improvement of general string replace() that allows multiple replacements.
 </ul>
 <table>
   <tr class=header>
@@ -1008,7 +1008,7 @@ core_repo_init(args)
 <hr id=core_repo_reset>
 core_repo_reset()
 <ul>
-  <li>Calls "core_reset_todo()" if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
+  <li>Calls <a href=#globals>core_reset_todo()</a> if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
 </ul>
 <hr id=core_requestpointerlock>
 core_requestpointerlock(args)
@@ -1127,7 +1127,7 @@ core_sort_property(args)
 core_sort_strings(args)
 <ul>
   <li>Sorts a cloned array of strings and returns it.
-  <li>Uses the "compare()" function provided by "Intl.Collator".
+  <li>Uses the compare() function provided by Intl.Collator.
 </ul>
 <table>
   <tr class=header>
@@ -1146,7 +1146,7 @@ core_sort_strings(args)
 <hr id=core_storage_add>
 core_storage_add(args)
 <ul>
-  <li>Adds information and defaults of a variable that should be stored in "globalThis.localStorage".
+  <li>Adds information and defaults of a variable that should be stored in globalThis.localStorage.
 </ul>
 <table>
   <tr class=header>

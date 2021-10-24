@@ -249,13 +249,13 @@ webgl_camera_zoom()
 <hr id=webgl_character_home>
 webgl_character_home()
 <ul>
-  <li>If the "webgl_character_id" character has a home, current level is unloaded and replaced with home.
+  <li>If the webgl_character_id character has a home, current level is unloaded and replaced with home.
 </ul>
 <hr id=webgl_character_home_entityupdate>
 webgl_character_home_entityupdate()
 <ul>
-  <li>Clears current "webgl_character_homebase['entities']".
-  <li>Loops through current entities. If any are attached to "webgl_character_id" and not in the skybox, then their properties are copied and pushed into "webgl_character_homebase['entities']".
+  <li>Clears current webgl_character_homebase['entities'].
+  <li>Loops through current entities. If any are attached to webgl_character_id and not in the skybox, then their properties are copied and pushed into webgl_character_homebase['entities'].
 </ul>
 <hr id=webgl_character_init>
 webgl_character_init(args)
@@ -417,7 +417,7 @@ webgl_character_random(args)
 webgl_character_set(args)
 <ul>
   <li>Changes the character controlled by the player.
-  <li>Makes sure character zoom is less than or equal to "webgl_properties['camera-zoom-max']".
+  <li>Makes sure character zoom is less than or equal to webgl_properties['camera-zoom-max'].
   <li>Attaches skybox entities to the new character.
 </ul>
 <table>
@@ -517,8 +517,8 @@ webgl_draw_entity(entity)
 <hr id=webgl_drawloop>
 webgl_drawloop()
 <ul>
-  <li>Calls "webgl_draw()" if the menu isn't open.
-  <li>Handles animation frames via "core_interval_animationFrame()" usage.
+  <li>Calls <a href=#webgl_draw>webgl_draw()</a> if the menu isn't open.
+  <li>Handles animation frames via <a href=core.htm#core_interval_animationframe>core_interval_animationFrame()</a> usage.
 </ul>
 <hr id=webgl_entity_create>
 webgl_entity_create(args)
@@ -622,7 +622,7 @@ webgl_event(args)
 webgl_extension(args)
 <ul>
   <li>Attempts to get a WebGL extension based on the supplied "id" arg.
-  <li>If the extension is available, it gets added to "globalThis.webgl_extensions" using the "label" arg.
+  <li>If the extension is available, it gets added to globalThis.webgl_extensions using the "label" arg.
   <li>Returns a boolean indicating if the extension is available or not.
 </ul>
 <table>
@@ -850,19 +850,19 @@ webgl_level_load(args)
 <hr id=webgl_level_unload>
 webgl_level_unload()
 <ul>
-  <li>Removes all characters that aren't "webgl_character_id" and all entities.
+  <li>Removes all characters that aren't webgl_character_id and all entities.
 </ul>
 <hr id=webgl_logicloop>
 webgl_logicloop()
 <ul>
   <li>Handles camera movement of various different styles.
-  <li>Calls repository-specific "logic()".
+  <li>Calls repository-specific repo_logic().
   <li>Updates attached entities.
 </ul>
 <hr id=webgl_logicloop_handle_entity>
 webgl_logicloop_handle_entity(entity)
 <ul>
-  <li>Function called by "webgl_logicloop()" to maintain various entity properties and interactions.
+  <li>Function called by <a href=#webgl_logicloop>webgl_logicloop()</a> to maintain various entity properties and interactions.
 </ul>
 <hr id=webgl_normals>
 webgl_normals(args)
@@ -1013,7 +1013,7 @@ webgl_perspective()
 <hr id=webgl_pick_color>
 webgl_pick_color(args)
 <ul>
-  <li>Returns a "Uint8Array(4)" containing the RGBA value of the specified pixel.
+  <li>Returns a Uint8Array(4) containing the RGBA value of the specified pixel.
 </ul>
 <table>
   <tr class=header>
@@ -1106,7 +1106,7 @@ webgl_scissor(args)
 webgl_settings_init()
 <ul>
   <li>Adds a "WebGL" settings tab to the "core-menu" group.
-  <li>Must be called directly after "core_repo_init()".
+  <li>Must be called directly after <a href=core.htm#core_repo_init>core_repo_init()</a>.
 </ul>
 <hr id=webgl_shader_create>
 webgl_shader_create(args)
@@ -1190,7 +1190,7 @@ webgl_texture_set(args)
 <hr id=webgl_uniform_update>
 webgl_uniform_update()
 <ul>
-  <li>Use the current values of "webgl_properties" to update the shader uniforms.
+  <li>Use the current values of webgl_properties to update the shader uniforms.
 </ul>
 <hr id=webgl_vertexattribarray_set>
 webgl_vertexattribarray_set(args)
