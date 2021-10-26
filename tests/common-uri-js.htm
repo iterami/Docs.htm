@@ -9,11 +9,8 @@
 <table class=center>
   <thead>
     <tr class=header>
-      <td>ID
-      <td>Image
-      <td>Dimensions
-      <td>Size
       <td>URI
+      <td>Base64
   <tbody id=results>
 </table>
 
@@ -28,10 +25,7 @@ function repo_init(){
 
     let results = '';
     for(let uri in uris){
-        results += '<tr><td><a href="#' + uri + '">' + uri + '</a>'
-          + '<td><canvas id="canvas-' + uri + '"></canvas>'
-          + '<td><span id="height-' + uri + '"></span>x<span id="width-' + uri + '"></span>'
-          + '<td id="size-' + uri + '">'
+        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br><a href="#' + uri + '">' + uri + '</a><br><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br><span id="size-' + uri + '"></span> B'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
     document.getElementById('results').innerHTML = results;
