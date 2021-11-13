@@ -977,6 +977,7 @@ webgl_path_move(args)
 webgl_path_use(args)
 <ul>
   <li>Makes target entity use specific path.
+  <li>Optionally allows entity to use path properties to set movement direction and end behavior.
   <li>Disables entity path if no path specified.
 </ul>
 <table>
@@ -989,21 +990,17 @@ webgl_path_use(args)
     <td>
     <td>character/entity object
   <tr>
-    <td>path-direction
-    <td>1
-    <td>1 or -1
-  <tr>
-    <td>path-end
-    <td>false
-    <td>number
-  <tr>
     <td>path-id
-    <td>false
+    <td>''
     <td>string ID
   <tr>
     <td>path-point
     <td>0
     <td>number
+  <tr>
+    <td>use-path-properties
+    <td>true
+    <td>boolean
 </table>
 <hr id=webgl_perspective>
 webgl_perspective()
