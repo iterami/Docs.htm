@@ -977,7 +977,7 @@ webgl_path_move(args)
 webgl_path_use(args)
 <ul>
   <li>Makes target entity use specific path.
-  <li>Optionally allows entity to use path properties to set movement direction and end behavior.
+  <li>Optionally allows entity to use path properties to set current point, movement direction, and end behavior.
   <li>Disables entity path if no path specified.
 </ul>
 <table>
@@ -993,10 +993,6 @@ webgl_path_use(args)
     <td>path-id
     <td>''
     <td>string ID
-  <tr>
-    <td>path-point
-    <td>0
-    <td>number
   <tr>
     <td>use-path-properties
     <td>true
