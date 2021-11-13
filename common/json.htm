@@ -56,9 +56,10 @@
   "paths": {
     "example-path": {
       // Optional. What occurs when the end of the path is reached:
-      //   -1 = return back along path.
-      //    0 = stop.
-      //    1 = restart path from the beginning by moving towards first point.
+      //   2 = teleport back to first point.
+      //   1 = loop from the beginning by moving towards first point.
+      //   0 = stop and exit path.
+      //  -1 = return back along path.
       "end": 1,
 
       // REQUIRED. Path waypoints in order.
@@ -157,7 +158,11 @@
       "level": 0,
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
-      // "path-end" is 0 for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
+      // What occurs when the end of the path is reached:
+      //   2 = teleport back to first point.
+      //   1 = loop from the beginning by moving towards first point.
+      //   0 = stop and exit path.
+      //  -1 = return back along path.
       "path-direction": 1,
       "path-end": 0,
       "path-id": "",
@@ -269,7 +274,11 @@
           "gravity": false,
 
           // Optional. Current assigned path or false, current path point target, and movement direction.
-          // "path-end" is 0 for path exit, -1 for direction swap, 1 for loop, or 2 for teleport.
+          // What occurs when the end of the path is reached:
+          //   2 = teleport back to first point.
+          //   1 = loop from the beginning by moving towards first point.
+          //   0 = stop and exit path.
+          //  -1 = return back along path.
           "path-direction": 1,
           "path-end": 0,
           "path-id": "",
