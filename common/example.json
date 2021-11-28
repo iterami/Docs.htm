@@ -174,7 +174,7 @@
   ],
   "prefabs": [
     {
-      "type": "prefabs_webgl_cuboid",
+      "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "example-cuboid",
         "all": {},
