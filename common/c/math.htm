@@ -10,19 +10,19 @@
     <li>"&lt;math.h&gt;"
   </ul>
   <li>Functions:<ul>
-    <li><a href=#math-clamp>float math_clamp_float(const float value, const float min, const float max, const int wrap)</a>
-    <li><a href=#math-degrees-to-radians>float math_degrees_to_radians(const float degrees)</a>
-    <li><a href=#math-distance-2d>float math_distance_2d(const float x0, const float y0, const float x1, const float y1)</a>
-    <li><a href=#math-matrix-copy>void math_matrix_copy(float *from, float *to)</a>
-    <li><a href=#math-matrix-identity>void math_matrix_identity(float *matrix)</a>
-    <li><a href=#math-matrix-perspective>void math_matrix_perspective(float *matrix, const int width, const int height)</a>
-    <li><a href=#math-matrix-rotate>void math_matrix_rotate(float *matrix, const float x, const float y, const float z)</a>
-    <li><a href=#math-matrix-translate>void math_matrix_translate(float *matrix, const float x, const float y, const float z)</a>
-    <li><a href=#math-point-angle>float math_point_angle(const float x0, const float y0, const float x1, const float y1)</a>
-    <li><a href=#math-radians-to-degrees>float math_radians_to_degrees(const float radians)</a>
+    <li><a href=#math_clamp>float math_clamp_float(const float value, const float min, const float max, const int wrap)</a>
+    <li><a href=#math_degrees_to_radians>float math_degrees_to_radians(const float degrees)</a>
+    <li><a href=#math_distance_2d>float math_distance_2d(const float x0, const float y0, const float x1, const float y1)</a>
+    <li><a href=#math_matrix_copy>void math_matrix_copy(float *from, float *to)</a>
+    <li><a href=#math_matrix_identity>void math_matrix_identity(float *matrix)</a>
+    <li><a href=#math_matrix_perspective>void math_matrix_perspective(float *matrix, const int width, const int height)</a>
+    <li><a href=#math_matrix_rotate>void math_matrix_rotate(float *matrix, const float x, const float y, const float z)</a>
+    <li><a href=#math_matrix_translate>void math_matrix_translate(float *matrix, const float x, const float y, const float z)</a>
+    <li><a href=#math_point_angle>float math_point_angle(const float x0, const float y0, const float x1, const float y1)</a>
+    <li><a href=#math_radians_to_degrees>float math_radians_to_degrees(const float radians)</a>
   </ul>
 </ul>
-<hr id=math-clamp>
+<hr id=math_clamp>
 float math_clamp_float(const float value, const float min, const float max, const int wrap)
 <ul>
   <li>Clamps a numerical value between min and max, with optional wrapping.
@@ -49,7 +49,7 @@ float math_clamp_float(const float value, const float min, const float max, cons
     <td>int
     <td>If the value should wrap. Example: 450 clamped between 0 and 360 with wrap would be 90.
 </table>
-<hr id=math-degrees-to-radians>
+<hr id=math_degrees_to_radians>
 float math_degrees_to_radians(const float degrees)
 <ul>
   <li>Converts degrees to radians.
@@ -64,7 +64,7 @@ float math_degrees_to_radians(const float degrees)
     <td>float
     <td>
 </table>
-<hr id=math-distance-2d>
+<hr id=math_distance_2d>
 float math_distance_2d(const float x0, const float y0, const float x1, const float y1)
 <ul>
   <li>Returns the distance between 2 2D points.
@@ -91,7 +91,7 @@ float math_distance_2d(const float x0, const float y0, const float x1, const flo
     <td>float
     <td>
 </table>
-<hr id=math-matrix-copy>
+<hr id=math_matrix_copy>
 void math_matrix_copy(float *from, float *to)
 <ul>
   <li>Copy the values in a matrix into another matrix.
@@ -110,7 +110,7 @@ void math_matrix_copy(float *from, float *to)
     <td>float*
     <td>
 </table>
-<hr id=math-matrix-identity>
+<hr id=math_matrix_identity>
 void math_matrix_identity(float *matrix)
 <ul>
   <li>Reset values in a matrix to those of an identity matrix.
@@ -125,7 +125,7 @@ void math_matrix_identity(float *matrix)
     <td>float*
     <td>
 </table>
-<hr id=math-matrix-perspective>
+<hr id=math_matrix_perspective>
 void math_matrix_perspective(float *matrix, const int width, const int height)
 <ul>
   <li>Set up a perspective matrix based on window height and width.
@@ -148,7 +148,7 @@ void math_matrix_perspective(float *matrix, const int width, const int height)
     <td>int
     <td>
 </table>
-<hr id=math-matrix-rotate>
+<hr id=math_matrix_rotate>
 void math_matrix_rotate(float *matrix, const float x, const float y, const float z)
 <ul>
   <li>Rotate a matrix by a specific amount of degrees.
@@ -175,7 +175,7 @@ void math_matrix_rotate(float *matrix, const float x, const float y, const float
     <td>float
     <td>
 </table>
-<hr id=math-matrix-translate>
+<hr id=math_matrix_translate>
 void math_matrix_translate(float *matrix, const float x, const float y, const float z)
 <ul>
   <li>Translate a matrix by a specific amount.
@@ -202,7 +202,7 @@ void math_matrix_translate(float *matrix, const float x, const float y, const fl
     <td>float
     <td>
 </table>
-<hr id=math-point-angle>
+<hr id=math_point_angle>
 float math_point_angle(const float x0, const float y0, const float x1, const float y1)
 <ul>
   <li>Returns the angle between 2 points relative to the grid.
@@ -229,7 +229,7 @@ float math_point_angle(const float x0, const float y0, const float x1, const flo
     <td>float
     <td>
 </table>
-<hr id=math-radians-to-degrees>
+<hr id=math_radians_to_degrees>
 float math_radians_to_degrees(const float radians)
 <ul>
   <li>Converts radians to degrees.
