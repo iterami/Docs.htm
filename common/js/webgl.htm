@@ -46,6 +46,7 @@
     <li><a href=#webgl_level_init>webgl_level_init(args)</a>
     <li><a href=#webgl_level_load>webgl_level_load(args)</a>
     <li><a href=#webgl_level_unload>webgl_level_unload()</a>
+    <li><a href=#webgl_storage_init>webgl_storage_init()</a>
     <li><a href=#webgl_logicloop>webgl_logicloop()</a>
     <li><a href=#webgl_logicloop_handle_entity>webgl_logicloop_handle_entity(entity)</a>
     <li><a href=#webgl_normals>webgl_normals(args)</a>
@@ -60,7 +61,6 @@
     <li><a href=#webgl_program_create>webgl_program_create(args)</a>
     <li><a href=#webgl_resize>webgl_resize()</a>
     <li><a href=#webgl_scissor>webgl_scissor(args)</a>
-    <li><a href=#webgl_settings_init>webgl_settings_init()</a>
     <li><a href=#webgl_shader_create>webgl_shader_create(args)</a>
     <li><a href=#webgl_shader_recreate>webgl_shader_recreate()</a>
     <li><a href=#webgl_stat_modify>webgl_stat_modify(args)</a>
@@ -1245,12 +1245,6 @@ webgl_scissor(args)
     <td>
     <td>number
 </table>
-<hr id=webgl_settings_init>
-webgl_settings_init()
-<ul>
-  <li>Adds a "WebGL" settings tab to the "core-menu" group.
-  <li>Must be called directly after <a href=core.htm#core_repo_init>core_repo_init()</a>.
-</ul>
 <hr id=webgl_shader_create>
 webgl_shader_create(args)
 <ul>
@@ -1311,6 +1305,12 @@ webgl_stat_modify(args)
     <td>1
     <td>number
 </table>
+<hr id=webgl_storage_init>
+webgl_storage_init()
+<ul>
+  <li>Adds a "WebGL" tab to the "core-menu" group for managing WebGL localStorage.
+  <li>Must be called directly after <a href=core.htm#core_repo_init>core_repo_init()</a>.
+</ul>
 <hr id=webgl_texture_set>
 webgl_texture_set(args)
 <ul>
