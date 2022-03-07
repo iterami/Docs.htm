@@ -111,7 +111,7 @@
           "collides": false,
           "collision": true,
           "draw": true,
-          "draw-type": "TRIANGLE_FAN",
+          "draw-mode": "TRIANGLE_FAN",
           "event-modify": [
             {
               "self": false,
