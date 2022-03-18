@@ -31,7 +31,7 @@ tables_add(table)
 <ul>
   <li>Adds sorting buttons to the first &lt;tr&gt; in the &lt;tbody&gt;.
   <li>Ignores tables and columns with "tables-nosort" class.
-  <li>Uses column with "tables-main" class as unique main column.
+  <li>Uses column with "tables-main" class as unique main column, or defaults to the first column on the left.
 </ul>
 <table>
   <tr class=header>
@@ -39,9 +39,9 @@ tables_add(table)
     <td>Default
     <td>Type
   <tr>
-    <td>value
+    <td>table
     <td>
-    <td>number or string
+    <td>HTML element
 </table>
 <hr id=tables_format_number>
 tables_format_number(value)
