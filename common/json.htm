@@ -58,8 +58,8 @@
       // Optional. What occurs when the end of the path is reached:
       //   2 = teleport back to first point.
       //   1 = loop from the beginning by moving towards first point.
-      //   0 = stop and exit path.
       //  -1 = return back along path.
+      //  -2 = stop and exit path.
       "end": 1,
 
       // REQUIRED. Path waypoints in order.
@@ -161,8 +161,9 @@
       // What occurs when the end of the path is reached:
       //   2 = teleport back to first point.
       //   1 = loop from the beginning by moving towards first point.
-      //   0 = stop and exit path.
+      //   0 = use default end set by path.
       //  -1 = return back along path.
+      //  -2 = stop and exit path.
       "path-direction": 1,
       "path-end": 0,
       "path-id": "",
