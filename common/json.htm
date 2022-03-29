@@ -56,11 +56,11 @@
   "paths": {
     "example-path": {
       // Optional. What occurs when the end of the path is reached:
-      //   2 = teleport back to first point.
-      //   1 = loop from the beginning by moving towards first point.
-      //  -1 = return back along path.
-      //  -2 = stop and exit path.
-      "end": 1,
+      //   exit = stop and exit path.
+      //   loop = loop from the beginning by moving towards first point.
+      //   reverse = return back along path.
+      //   warp = teleport back to first point.
+      "end": "loop",
 
       // REQUIRED. Path waypoints in order.
       "points": [
@@ -159,13 +159,13 @@
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
       // What occurs when the end of the path is reached:
-      //   2 = teleport back to first point.
-      //   1 = loop from the beginning by moving towards first point.
-      //   0 = use default end set by path.
-      //  -1 = return back along path.
-      //  -2 = stop and exit path.
+      //   default = use default end set by path.
+      //   exit = stop and exit path.
+      //   loop = loop from the beginning by moving towards first point.
+      //   reverse = return back along path.
+      //   warp = teleport back to first point.
       "path-direction": 1,
-      "path-end": 0,
+      "path-end": "default",
       "path-id": "",
       "path-point": 0,
 
@@ -276,12 +276,13 @@
 
           // Optional. Current assigned path or false, current path point target, and movement direction.
           // What occurs when the end of the path is reached:
-          //   2 = teleport back to first point.
-          //   1 = loop from the beginning by moving towards first point.
-          //   0 = stop and exit path.
-          //  -1 = return back along path.
+          //   default = use default end set by path.
+          //   exit = stop and exit path.
+          //   loop = loop from the beginning by moving towards first point.
+          //   reverse = return back along path.
+          //   warp = teleport back to first point.
           "path-direction": 1,
-          "path-end": 0,
+          "path-end": "default",
           "path-id": "",
           "path-point": 0,
 

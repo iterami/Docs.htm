@@ -21,7 +21,7 @@
   "multiplier-speed": 1,
   "paths": {
     "example-path": {
-      "end": 1,
+      "end": "loop",
       "points": [
         {
           "speed": 2,
@@ -74,7 +74,7 @@
       "jump-height": 0.1,
       "level": 0,
       "path-direction": 1,
-      "path-end": 0,
+      "path-end": "default",
       "path-id": "",
       "path-point": 0,
       "reticle": "#fff",
@@ -126,7 +126,7 @@
           "event-target-type": "character",
           "gravity": false,
           "path-direction": 1,
-          "path-end": 0,
+          "path-end": "default",
           "path-id": "",
           "path-point": 0,
           "pick-color": [0, 1, 0],
