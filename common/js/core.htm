@@ -1338,13 +1338,18 @@ core_type_convert(args)
 <hr id=core_ui_update>
 core_ui_update(args)
 <ul>
-  <li>Updates HTML element values depending on type, but only if the value is new.
+  <li>Updates HTML element values by ID and depending on type, but only if the value is new.
+  <li>Can optionally update all elements that have the ID in their classes.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>class
+    <td>false
+    <td>boolean
   <tr>
     <td>ids
     <td>{}
