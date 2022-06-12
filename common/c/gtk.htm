@@ -12,7 +12,6 @@
   <li>Functions:<ul>
     <li><a href=#gtk_activate>void gtk_activate(GtkApplication* app, gpointer data)</a>
     <li><a href=#gtk_add_menuitem>void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)</a>
-    <li><a href=#gtk_begin_frameclock>void gtk_begin_frameclock(GtkWidget *_glarea)</a>
     <li><a href=#gtk_init_gtk>void gtk_init_gtk(GtkApplication* app, const gchar *title)</a>
   </ul>
 </ul>
@@ -74,21 +73,6 @@ void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelg
     <td>data
     <td>gpointer
     <td>Optional data to pass to the callback function.
-</table>
-<hr id=gtk_begin_frameclock>
-void gtk_begin_frameclock(GtkWidget *_glarea)
-<ul>
-  <li>Beings a frameclock for a GtkGlArea.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Type
-    <td>Notes
-  <tr>
-    <td>_glarea
-    <td>GtkWidget*
-    <td>The GtkGlArea the frameclock is for.
 </table>
 <hr id=gtk_init_gtk>
 void gtk_init_gtk(GtkApplication* app, const gchar *title)
