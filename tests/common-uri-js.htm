@@ -25,34 +25,35 @@ function repo_init(){
 
     let results = '';
     for(let uri in uris){
-        core_image({
-          'id': uri,
-          'src': uris[uri],
-        });
-
         results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br><a href="#' + uri + '">' + uri + '</a><br><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br><span id="size-' + uri + '"></span> B'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
     document.getElementById('results').innerHTML = results;
 
     for(let uri in uris){
-        let canvas_element = document.getElementById('canvas-' + uri);
+        core_image({
+          'id': uri,
+          'src': uris[uri],
+          'todo': function(){
+              let canvas_element = document.getElementById('canvas-' + uri);
 
-        canvas_element.height = core_images[uri]['height'];
-        canvas_element.width = core_images[uri]['width'];
-        canvas_element.style.border = 'solid 10px #000';
-        canvas_element.style.display = 'inline';
+              canvas_element.height = core_images[uri]['height'];
+              canvas_element.width = core_images[uri]['width'];
+              canvas_element.style.border = 'solid 10px #000';
+              canvas_element.style.display = 'inline';
 
-        let canvas = canvas_element.getContext('2d');
-        canvas.drawImage(
-          core_images[uri],
-          0,
-          0
-        );
+              let canvas = canvas_element.getContext('2d');
+              canvas.drawImage(
+                core_images[uri],
+                0,
+                0
+              );
 
-        document.getElementById('height-' + uri).textContent = core_images[uri]['height'];
-        document.getElementById('width-' + uri).textContent = core_images[uri]['width'];
-        document.getElementById('size-' + uri).textContent = document.getElementById(uri).value.length;
+              document.getElementById('height-' + uri).textContent = core_images[uri]['height'];
+              document.getElementById('width-' + uri).textContent = core_images[uri]['width'];
+              document.getElementById('size-' + uri).textContent = document.getElementById(uri).value.length;
+          },
+        });
     }
 }
 </script>
