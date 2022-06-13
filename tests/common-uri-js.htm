@@ -25,6 +25,11 @@ function repo_init(){
 
     let results = '';
     for(let uri in uris){
+        core_image({
+          'id': uri,
+          'src': uris[uri],
+        });
+
         results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br><a href="#' + uri + '">' + uri + '</a><br><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br><span id="size-' + uri + '"></span> B'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
