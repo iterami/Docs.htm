@@ -12,7 +12,7 @@
   <li>Functions:<ul>
     <li><a href=#gtk_activate>void gtk_activate(GtkApplication* app, gpointer data)</a>
     <li><a href=#gtk_add_menuitem>void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)</a>
-    <li><a href=#gtk_init_gtk>void gtk_init_gtk(GtkApplication* app, const gchar *title)</a>
+    <li><a href=#gtk_init_gtk>void gtk_init_gtk(GtkApplication* app, const gchar *title, const gchar *icon)</a>
   </ul>
 </ul>
 <hr id=gtk_activate>
@@ -75,7 +75,7 @@ void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelg
     <td>Optional data to pass to the callback function.
 </table>
 <hr id=gtk_init_gtk>
-void gtk_init_gtk(GtkApplication* app, const gchar *title)
+void gtk_init_gtk(GtkApplication* app, const gchar *title, const gchar *icon)
 <ul>
   <li>Handles general init code for all GTK projects.
 </ul>
@@ -92,4 +92,8 @@ void gtk_init_gtk(GtkApplication* app, const gchar *title)
     <td>title
     <td>gchar*
     <td>The title of the created window.
+  <tr>
+    <td>icon
+    <td>gchar*
+    <td>Path to the icon within the "~/.iterami/" folder, or NULL for no icon.
 </table>
