@@ -17,7 +17,6 @@
     <li><a href=#core_escape>core_escape()</a>
     <li><a href=#core_events_bind>core_events_bind(args)</a>
     <li><a href=#core_events_keyinfo>core_events_keyinfo(event)</a>
-    <li><a href=#core_events_rebind>core_events_rebind(args)</a>
     <li><a href=#core_events_todoloop>core_events_todoloop()</a>
     <li><a href=#core_file>core_file(args)</a>
     <li><a href=#core_float_compare>core_float_compare(args)</a>
@@ -60,7 +59,7 @@
     <li><a href=#core_random_key>core_random_key(args)</a>
     <li><a href=#core_random_number>core_random_number(args)</a>
     <li><a href=#core_random_rgb>core_random_rgb()</a>
-    <li><a href=#core_random_splice>core_random_splice()</a>
+    <li><a href=#core_random_splice>core_random_splice(args)</a>
     <li><a href=#core_random_string>core_random_string(args)</a>
     <li><a href=#core_replace_multiple>core_replace_multiple(args)</a>
     <li><a href=#core_repo_init>core_repo_init(args)</a>
@@ -348,8 +347,6 @@ core_events_keyinfo(event)
 <ul>
   <li>Returns keycode and character of fired keyboard event.
 </ul>
-<hr id=core_events_rebind>
-core_events_rebind(args)
 <hr id=core_events_todoloop>
 core_events_todoloop()
 <ul>
@@ -408,10 +405,13 @@ core_handle_beforeunload(event)
 </ul>
 <hr id=core_handle_blur>
 core_handle_blur(event)
+<ul>
+  <li>Resets all key and mouse states to false.
+</ul>
 <hr id=core_handle_contextmenu>
 core_handle_contextmenu(event)
 <ul>
-  <li>If the result of the "contextmenu" event doesn't return anything, this function returns "false".
+  <li>If the result of the "contextmenu" event doesn't return anything, this function returns false.
 </ul>
 <hr id=core_handle_defaults>
 core_handle_defaults(args)
@@ -502,7 +502,7 @@ core_html(args)
 <ul>
   <li>Constructs and returns an HTML element.
   <li>Optionally can append/prepend it to a parent.
-  <li>Optionally can store it in globalThis.core_elements;
+  <li>Optionally can store it in "globalThis.core_elements".
 </ul>
 <table>
   <tr class=header>
