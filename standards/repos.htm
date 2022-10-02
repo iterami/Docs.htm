@@ -1,0 +1,169 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>iterami Repo Standards</title>
+<link href=../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Standards/Repos
+<ul>
+  <li>Settings:<ul>
+    <li>Actions are disabled.
+    <li>Discussions are disabled.
+    <li>GitHub Pages is used whenever possible.<ul>
+      <li>HTTPS is enforced.
+      <li>Links on repo pages must be to github.io links rather than specific domains.
+    </ul>
+    <li>Include in the home page:<ul>
+      <li>Releases: disabled unless required.
+      <li>Packages: disabled unless required.
+      <li>Environments: enabled.
+    </ul>
+    <li>Issues and Pull Requests are enabled.
+    <li>Labels that aren't "Bug" or "Enhancement" are removed. Label descriptions are removed.
+    <li>Preservation of the repo in the GitHub Archive Program is enabled.
+    <li>Projects are disabled.
+    <li>Repo names should include additional information if they contain work in a specific language:<table class=center>
+      <tr class=header>
+        <td>Type
+        <td>Prefix
+        <td>Suffix
+        <td>Topics
+      <tr>
+        <td>Assembly
+        <td>
+        <td>.asm
+        <td>
+      <tr>
+        <td>C
+        <td>
+        <td>.c
+        <td>
+      <tr>
+        <td>C++
+        <td>
+        <td>.cpp
+        <td>
+      <tr>
+        <td>GTK
+        <td>
+        <td>.gtk
+        <td>gtk3
+      <tr>
+        <td>HTM and GitHub Pages
+        <td>
+        <td>.htm
+        <td>
+      <tr>
+        <td>JavaScript
+        <td>
+        <td>.js
+        <td>
+      <tr>
+        <td>Lua
+        <td>
+        <td>.lua
+        <td>
+      <tr>
+        <td>PHP
+        <td>
+        <td>.php
+        <td>
+      <tr>
+        <td>Python
+        <td>
+        <td>.py
+        <td>
+      <tr>
+        <td>Shell
+        <td>
+        <td>.sh
+        <td>
+      <tr>
+        <td>YAML
+        <td>
+        <td>.yaml
+        <td>
+    </table>
+    <li>Repo names should include additional information if they target specific software:<table class=center>
+      <tr class=header>
+        <td>Type
+        <td>Prefix
+        <td>Suffix
+        <td>Topics
+      <tr>
+        <td>Atom
+        <td>
+        <td>
+        <td>atom, atom-package
+      <tr>
+        <td>Chromium
+        <td>Chromium-
+        <td>
+        <td>chromium-browser
+      <tr>
+        <td>Diablo
+        <td>D2- or D2LoD-
+        <td>
+        <td>
+      <tr>
+        <td>Firefox
+        <td>Firefox-
+        <td>
+        <td>firefox
+      <tr>
+        <td>Minecraft
+        <td>MC-
+        <td>
+        <td>minecraft
+      <tr>
+        <td>Starcraft
+        <td>SC-
+        <td>
+        <td>starcraft
+      <tr>
+        <td>Warzone 2100
+        <td>WZ2100-
+        <td>
+        <td>warzone2100
+      <tr>
+        <td>World of Warcraft
+        <td>WoW-
+        <td>
+        <td>world-of-warcraft
+    </table>
+    <li>Sponsorships are disabled.
+    <li>Table of contents for markdown files is enabled.
+    <li>Template repo setting should be enabled for every repo.
+    <li>Topics should be used but limited. Must be in alphabetical order.
+    <li>Wikis are disabled and restricted to users with push access.
+  </ul>
+  <li>Creating a new GitHub Pages repo:<ol>
+    <li>Locally prepare the first repo commit.
+    <li>Create the repo on GitHub and make sure its settings match the list in the settings section.
+    <li>Clone the repo locally, add the locally prepared project files, and push them to the "master" branch.
+    <li>Run <a class=external href=https://github.com/iterami/Scripts/blob/master/git/gh-pages-from-master.sh rel=noreferrer>gh-pages-from-master.sh</a> on the cloned repo. Make "gh-pages" the default branch on GitHub and delete the "master" branch.
+    <li>Add the repo link to various iterami repos:<ul>
+      <li><a href=../repos/index.htm>Repos table</a> so that docs, common file usage, and tests can be managed.
+      <li><a class=external href=https://github.com/iterami/iterami.github.io rel=noreferrer>iterami.github.io</a> so that it may have a link on the index page.
+      <li><a class=external href=https://github.com/iterami/RandomRepo.htm rel=noreferrer>RandomRepo.htm</a> so that it may be randomly selected.
+      <li><a class=external href=https://github.com/iterami/iterami.github.io rel=noreferrer>Scripts iterami-repos-list.sh</a> so that it may be managed in bulk.
+    </ul>
+    <li>Update the repo "Description" with an <a class=external href=https://github.com/iterami/Guides.htm/blob/gh-pages/github/README.md rel=noreferrer>emoji</a>, mention of CC0 license, description of project and type, and a link to it hosted on <a class=external href=https://iterami.github.io>https://iterami.github.io</a>.
+    <li>Update the repo "Website" with a link to it hosted on <a class=external href=https://iterami.github.io>https://iterami.github.io</a>.
+    <li>Update the repo "Topics" with at least one topic.
+  </ol>
+  <li>Creating a new repo not hosted on GitHub Pages:<ol>
+    <li>Locally prepare the first repo commit.
+    <li>Create the repo on GitHub and make sure its settings match the list in the settings section.
+    <li>Clone the repo locally, add the locally prepared project files, and push them to the "master" branch.
+    <li>Add the repo link to various iterami repos:<ul>
+      <li><a href=../repos/index.htm>Repos table</a> so that docs, common file usage, and tests can be managed.
+      <li><a class=external href=https://github.com/iterami/iterami.github.io rel=noreferrer>iterami.github.io</a> so that it may have a link on the index page.
+      <li><a class=external href=https://github.com/iterami/RandomRepo.htm rel=noreferrer>RandomRepos.htm</a> so that it may be randomly selected.
+      <li><a class=external href=https://github.com/iterami/Scripts/blob/master/iterami/iterami-repos-list.sh rel=noreferrer>Scripts iterami-repos-list.sh</a> so that it may be managed in bulk.
+    </ul>
+    <li>Update the repo "Description" with an <a class=external href=https://github.com/iterami/Guides.htm/blob/gh-pages/github/README.md rel=noreferrer>emoji</a>, mention of CC0 license, description of project and type, and a link to download the repo as a ".tar.gz" file.
+    <li>Update the repo "Website" with a link to download the repo as a ".tar.gz" file.
+    <li>Update the repo "Topics" with at least one topic.
+  </ol>
+</ul>
