@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>common chess.js Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+<link href=../../common/css/chess.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
+<table class="center chess" id=board></table>
+
+<script src=../../common/js/chess.js></script>
+<script>
+function update_board(){
+    for(let y = 0; y < 8; y++){
+        for(let x = 0; x < 8; x++){
+            document.getElementById(y + '-' + x).innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
+        }
+    }
+}
+
+chess_new({
+  'id': 'test',
+});
+let board_html = '';
+for(let y = 0; y < 8; y++){
+    board_html += '<tr>';
+    for(let x = 0; x < 8; x++){
+        board_html += '<td id="' + y + '-' + x + '">';
+    }
+}
+document.getElementById('board').innerHTML = board_html;
+update_board();
+</script>

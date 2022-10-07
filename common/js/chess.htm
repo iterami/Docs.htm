@@ -1,0 +1,113 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>chess.js</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/chess.js rel=noreferrer>chess.js</a>
+<ul>
+  <li><a href=#globals>Globals</a>
+  <li>No requirements.
+  <li>Functions:<ul>
+    <li><a href=#chess_move>chess_move(args)</a>
+    <li><a href=#chess_new>chess_new(args)</a>
+    <li><a href=#chess_validate>chess_validate(args)</a>
+  </ul>
+</ul>
+<hr id=globals>
+<table>
+  <tr class=header>
+    <td>Globals
+    <td>Default
+    <td>Type
+  <tr>
+    <td>chess_games
+    <td>{}
+    <td>object of objects
+  <tr>
+    <td>chess_pieces
+    <td>[['♙', '♘', '♗', '♖', '♕', '♔'],['♟', '♞', '♝', '♜', '♛', '♚']]
+    <td>array of arrays
+</table>
+<hr id=chess_move>
+chess_move(args)
+<ul>
+  <li>Attempts to move the specified piece to the target location.
+  <li>If the move is not valid, then nothing happens.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>piece_x
+    <td>
+    <td>number
+  <tr>
+    <td>piece_y
+    <td>
+    <td>number
+  <tr>
+    <td>target_x
+    <td>
+    <td>number
+  <tr>
+    <td>target_y
+    <td>
+    <td>number
+</table>
+<hr id=chess_new>
+chess_new(args)
+<ul>
+  <li>Creates a new default chess board with the specified ID.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
+<hr id=chess_validate>
+chess_validate(args)
+<ul>
+  <li>Will check if the requested move is valid or not.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>piece
+    <td>
+    <td>string
+  <tr>
+    <td>piece_x
+    <td>
+    <td>number
+  <tr>
+    <td>piece_y
+    <td>
+    <td>number
+  <tr>
+    <td>target_x
+    <td>
+    <td>number
+  <tr>
+    <td>target_y
+    <td>
+    <td>number
+</table>
