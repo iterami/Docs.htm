@@ -7,10 +7,14 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
 <table class="center chess" id=board></table>
+<span id=turn></span>'s turn <input onclick="update_board()" type=button value="Update Board">
 
 <script src=../../common/js/chess.js></script>
 <script>
 function update_board(){
+    document.getElementById('turn').textContent = chess_games['test']['player']
+      ? 'Black'
+      : 'White';
     for(let y = 0; y < 8; y++){
         for(let x = 0; x < 8; x++){
             document.getElementById(y + '-' + x).innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
