@@ -20,8 +20,10 @@ function select_square(id){
         selected_y = -1;
 
     }else if(selected_x === -1 || selected_y === -1){
-        selected_x = square_x;
-        selected_y = square_y;
+        if(chess_games['test']['board'][square_y - 1][square_x - 1].length === 1){
+            selected_x = square_x;
+            selected_y = square_y;
+        }
 
     }else if(chess_move({
         'id': 'test',
