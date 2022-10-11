@@ -11,16 +11,53 @@
 
 <script src=../../common/js/chess.js></script>
 <script>
+function select_square(event){
+    const square_x = Number(event.id[2]);
+    const square_y = Number(event.id[0]);
+
+    if(selected_x === square_x && selected_y === square_y){
+        selected_x = -1;
+        selected_y = -1;
+
+    }else if(selected_x === -1 || selected_y === -1){
+        selected_x = square_x;
+        selected_y = square_y;
+
+    }else if(chess_move({
+        'id': 'test',
+        'piece-x': selected_x,
+        'piece-y': selected_y,
+        'target-x': square_x,
+        'target-y': square_y,
+      })){
+        selected_x = -1;
+        selected_y = -1;
+
+    }else{
+        selected_x = -1;
+        selected_y = -1;
+    }
+
+    update_board();
+}
+
 function update_board(){
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
     for(let y = 0; y < 8; y++){
         for(let x = 0; x < 8; x++){
-            document.getElementById(y + '-' + x).innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
+            const td = document.getElementById(y + '-' + x);
+            td.innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
+            td.style.color = selected_x === x && selected_y === y
+              ? '#0a0'
+              : '#000';
         }
     }
 }
+
+let selected_x = -1;
+let selected_y = -1;
 
 chess_new({
   'id': 'test',
@@ -29,7 +66,7 @@ let board_html = '';
 for(let y = 0; y < 8; y++){
     board_html += '<tr>';
     for(let x = 0; x < 8; x++){
-        board_html += '<td id="' + y + '-' + x + '">';
+        board_html += '<td id="' + y + '-' + x + '" onclick="select_square(this)">';
     }
 }
 document.getElementById('board').innerHTML = board_html;
