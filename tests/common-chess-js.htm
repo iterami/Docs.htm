@@ -7,7 +7,7 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
 <table class="center chess" id=board></table>
-<span id=turn></span>'s turn <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update>
+<span id=turn></span>'s turn <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update> en passant: <span id=en-passant></span>
 
 <script src=../../common/js/chess.js></script>
 <script>
@@ -57,6 +57,9 @@ function reset_board(reset){
 }
 
 function update_board(){
+    document.getElementById('en-passant').textContent = chess_games['test']['en-passant'] > -1
+      ? chess_games['test']['en-passant']
+      : '';
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
