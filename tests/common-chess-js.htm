@@ -7,7 +7,7 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
 <table class="center chess" id=board></table>
-<span id=turn></span>'s turn <input onclick="update_board()" type=button value="Update Board">
+<span id=turn></span>'s turn <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update>
 
 <script src=../../common/js/chess.js></script>
 <script>
@@ -43,6 +43,19 @@ function select_square(id){
     update_board();
 }
 
+function reset_board(reset){
+    if(reset && !globalThis.confirm('Reset the entire board?')){
+        return false;
+    }
+
+    chess_new({
+      'id': 'test',
+    });
+    selected_x = -1;
+    selected_y = -1;
+    update_board();
+}
+
 function update_board(){
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
@@ -61,9 +74,6 @@ function update_board(){
 let selected_x = -1;
 let selected_y = -1;
 
-chess_new({
-  'id': 'test',
-});
 let board_html = '';
 for(let y = 1; y < 9; y++){
     board_html += '<tr>';
@@ -72,5 +82,6 @@ for(let y = 1; y < 9; y++){
     }
 }
 document.getElementById('board').innerHTML = board_html;
-update_board();
+
+reset_board(false);
 </script>
