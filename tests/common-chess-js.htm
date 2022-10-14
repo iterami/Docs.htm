@@ -4,14 +4,30 @@
 <title>common chess.js Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <link href=../../common/css/chess.css rel=stylesheet>
+<style>
+.taken{
+    background: #fff;
+    color: #000;
+}
+</style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
 <table class="center chess" id=board></table>
-<span id=turn></span>'s turn <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update> en passant: <span id=en-passant></span>
+<span class=big>
+  <span class=taken id=black-pieces-taken></span>
+  <span id=turn></span>'s turn
+  <span class=taken id=white-pieces-taken></span>
+</span><br>
+<input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update><br>
+en passant: <span id=en-passant></span>
 
 <script src=../../common/js/chess.js></script>
 <script>
 function select_square(id){
+    if(selected_x > -1){
+        document.getElementById(selected_y + '-' + selected_x).style.color = '#000';
+    }
+
     const square_x = Number(id[2]);
     const square_y = Number(id[0]);
 
@@ -34,13 +50,16 @@ function select_square(id){
       })){
         selected_x = -1;
         selected_y = -1;
+        update_board();
 
     }else{
         selected_x = -1;
         selected_y = -1;
     }
 
-    update_board();
+    if(selected_x > -1){
+        document.getElementById(selected_y + '-' + selected_x).style.color = '#0a0';
+    }
 }
 
 function reset_board(reset){
@@ -57,19 +76,17 @@ function reset_board(reset){
 }
 
 function update_board(){
+    document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
     document.getElementById('en-passant').textContent = chess_games['test']['en-passant'] > -1
       ? chess_games['test']['en-passant']
       : '';
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
+    document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
-            const td = document.getElementById(y + '-' + x);
-            td.innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
-            td.style.color = selected_x === x && selected_y === y
-              ? '#0a0'
-              : '#000';
+            document.getElementById(y + '-' + x).innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
         }
     }
 }
