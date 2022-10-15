@@ -19,7 +19,9 @@
   <span class=taken id=white-pieces-taken></span>
 </span><br>
 <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update><br>
-en passant: <span id=en-passant></span>
+en passant: <span id=en-passant></span><br>
+Black king moved: <span id=black-king-moved></span><br>
+White king moved: <span id=white-king-moved></span>
 
 <script src=../../common/js/chess.js></script>
 <script>
@@ -76,6 +78,7 @@ function reset_board(reset){
 }
 
 function update_board(){
+    document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
     document.getElementById('en-passant').textContent = chess_games['test']['en-passant'] > -1
       ? chess_games['test']['en-passant']
@@ -83,6 +86,7 @@ function update_board(){
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
+    document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
