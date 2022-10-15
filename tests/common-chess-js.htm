@@ -20,6 +20,18 @@
 </span><br>
 <input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update><br>
 en passant: <span id=en-passant></span><br>
+Black pawn promote: <select id=black-pawn-promote>
+  <option value=2>Bishop</option>
+  <option value=1>Knight</option>
+  <option value=4 selected>Queen</option>
+  <option value=3>Rook</option>
+</select><br>
+White pawn promote: <select id=white-pawn-promote>
+  <option value=2>Bishop</option>
+  <option value=1>Knight</option>
+  <option value=4 selected>Queen</option>
+  <option value=3>Rook</option>
+</select><br>
 Black king moved: <span id=black-king-moved></span><br>
 White king moved: <span id=white-king-moved></span>
 
@@ -78,6 +90,9 @@ function reset_board(reset){
 }
 
 function update_board(){
+    chess_games['test']['players'][1]['pawn-promote'] = Number(document.getElementById('black-pawn-promote').value);
+    chess_games['test']['players'][0]['pawn-promote'] = Number(document.getElementById('white-pawn-promote').value);
+
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
     document.getElementById('en-passant').textContent = chess_games['test']['en-passant'] > -1
