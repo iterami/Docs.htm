@@ -18,7 +18,7 @@
   <span id=turn></span>'s turn
   <span class=taken id=white-pieces-taken></span>
 </span><br>
-<input onclick="reset_board(true)" type=button value=Reset><input onclick="update_board()" type=button value=Update><br>
+<input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update><br>
 en passant: <span id=en-passant></span><br>
 Black pawn promote: <select id=black-pawn-promote>
   <option value=2>Bishop</option>
@@ -37,6 +37,36 @@ White king moved: <span id=white-king-moved></span>
 
 <script src=../../common/js/chess.js></script>
 <script>
+function remove_pawns(){
+    if(!globalThis.confirm('Remove all pawns?')){
+        return false;
+    }
+
+    for(let y = 1; y < 9; y++){
+        for(let x = 1; x < 9; x++){
+            const piece = document.getElementById(y + '-' + x).textContent
+            if(piece === chess_pieces[0][0] || piece === chess_pieces[1][0]){
+                chess_games['test']['board'][y - 1][x - 1] = '';
+            }
+        }
+    }
+
+    update_board();
+}
+
+function reset_board(reset){
+    if(reset && !globalThis.confirm('Reset the entire board?')){
+        return false;
+    }
+
+    chess_new({
+      'id': 'test',
+    });
+    selected_x = -1;
+    selected_y = -1;
+    update_board();
+}
+
 function select_square(id){
     if(selected_x > -1){
         document.getElementById(selected_y + '-' + selected_x).style.color = '#000';
@@ -74,19 +104,6 @@ function select_square(id){
     if(selected_x > -1){
         document.getElementById(selected_y + '-' + selected_x).style.color = '#0a0';
     }
-}
-
-function reset_board(reset){
-    if(reset && !globalThis.confirm('Reset the entire board?')){
-        return false;
-    }
-
-    chess_new({
-      'id': 'test',
-    });
-    selected_x = -1;
-    selected_y = -1;
-    update_board();
 }
 
 function update_board(){
