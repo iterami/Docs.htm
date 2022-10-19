@@ -137,6 +137,7 @@ chess_move(args)
 <ul>
   <li>Attempts to move the specified piece to the target location.
   <li>If the move is not valid, then nothing happens.
+  <li>Returns the validation done by <a href=#chess_validate>chess_validate()</a>.
 </ul>
 <table>
   <tr class=header>
@@ -183,6 +184,7 @@ chess_new(args)
 chess_validate(args)
 <ul>
   <li>Will check if the requested move is valid or not.
+  <li>Returns an object of properties describing the move and if it was valid or not.
 </ul>
 <table>
   <tr class=header>

@@ -18,11 +18,32 @@
   <span id=turn></span>'s turn
   <span class=taken id=white-pieces-taken></span>
 </span><br>
-<input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update>
+<input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update><br>
 <table>
+  <tr class=header>
+    <td>chess_move()
+    <td>response
   <tr>
     <td>en passant
     <td id=en-passant>
+  <tr>
+    <td>en passant taken
+    <td id=en-passant-taken>
+  <tr>
+    <td>king moved
+    <td id=king-moved>
+  <tr>
+    <td>pawn promote
+    <td id=pawn-promote>
+  <tr>
+    <td>rook long moved
+    <td id=rook-long-moved>
+  <tr>
+    <td>rook short moved
+    <td id=rook-short-moved>
+  <tr class=header>
+    <td>player info
+    <td>state
   <tr>
     <td>Black king moved
     <td id=black-king-moved>
@@ -109,20 +130,32 @@ function select_square(id){
             selected_y = square_y;
         }
 
-    }else if(chess_move({
-        'id': 'test',
-        'piece-x': selected_x,
-        'piece-y': selected_y,
-        'target-x': square_x,
-        'target-y': square_y,
-      })){
-        selected_x = -1;
-        selected_y = -1;
-        update_board();
-
     }else{
-        selected_x = -1;
-        selected_y = -1;
+        const move = chess_move({
+          'id': 'test',
+          'piece-x': selected_x,
+          'piece-y': selected_y,
+          'target-x': square_x,
+          'target-y': square_y,
+        });
+
+        if(move['valid']){
+            selected_x = -1;
+            selected_y = -1;
+
+            for(const property in move){
+                const element = document.getElementById(property);
+                if(element){
+                    element.textContent = move[property];
+                }
+            }
+
+            update_board();
+
+        }else{
+            selected_x = -1;
+            selected_y = -1;
+        }
     }
 
     if(selected_x > -1){
@@ -134,16 +167,13 @@ function update_board(){
     chess_games['test']['players'][1]['pawn-promote'] = Number(document.getElementById('black-pawn-promote').value);
     chess_games['test']['players'][0]['pawn-promote'] = Number(document.getElementById('white-pawn-promote').value);
 
+    document.getElementById('turn').textContent = chess_games['test']['player']
+      ? 'Black'
+      : 'White';
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
     document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
-    document.getElementById('en-passant').textContent = chess_games['test']['en-passant'] > -1
-      ? chess_games['test']['en-passant']
-      : '';
-    document.getElementById('turn').textContent = chess_games['test']['player']
-      ? 'Black'
-      : 'White';
     document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
