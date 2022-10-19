@@ -5,21 +5,24 @@
 <link href=../../common/css/core.css rel=stylesheet>
 <link href=../../common/css/chess.css rel=stylesheet>
 <style>
+.chess,
+.inline{
+    display: inline-block;
+    vertical-align: top;
+}
 .taken{
     background: #fff;
     color: #000;
 }
 </style>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../repos/index.htm>Repo</a> Tests/<a href=../../common/index.htm>common</a>/<a href=../../common/js/chess.js>chess.js</a><br>
 <table class="center chess" id=board></table>
-<span class=big>
-  <span class=taken id=black-pieces-taken></span>
-  <span id=turn></span>'s turn
-  <span class=taken id=white-pieces-taken></span>
-</span><br>
-<input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update><br>
-<table>
+<table class=inline>
+  <tr>
+    <td class=big colspan=2><span id=turn></span>'s turn
+  <tr class="big taken">
+    <td colspan=2><div id=black-pieces-taken></div><div id=white-pieces-taken></div>
   <tr class=header>
     <td>chess_move()
     <td>response
@@ -78,6 +81,8 @@
   <tr>
     <td>White rook (short) moved
     <td id=white-rook-short-moved>
+  <tr>
+    <td colspan=2><input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update>
 </table>
 
 <script src=../../common/js/chess.js></script>
