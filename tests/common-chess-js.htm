@@ -25,33 +25,36 @@
     <td colspan=2><div id=black-pieces-taken></div><div id=white-pieces-taken></div>
   <tr class=header>
     <td>chess_move()
-    <td>response
+    <td>Response
   <tr>
-    <td>en passant
+    <td>en-passant
     <td id=en-passant>
   <tr>
-    <td>en passant taken
+    <td>en-passant-taken
     <td id=en-passant-taken>
   <tr>
-    <td>king moved
+    <td>king-moved
     <td id=king-moved>
   <tr>
-    <td>pawn promote
+    <td>pawn-promote
     <td id=pawn-promote>
   <tr>
-    <td>rook long moved
+    <td>rook-long-moved
     <td id=rook-long-moved>
   <tr>
-    <td>rook short moved
+    <td>rook-short-moved
     <td id=rook-short-moved>
-  <tr class=header>
-    <td>player info
-    <td>state
   <tr>
-    <td>Black king moved
+    <td>valid
+    <td id=valid>
+  <tr class=header>
+    <td>Black Player
+    <td>State
+  <tr>
+    <td>king-moved
     <td id=black-king-moved>
   <tr>
-    <td>Black pawn promote
+    <td>pawn-promote
     <td><select onchange="update_board()" id=black-pawn-promote>
       <option value=2>Bishop</option>
       <option value=1>Knight</option>
@@ -59,16 +62,19 @@
       <option value=3>Rook</option>
     </select>
   <tr>
-    <td>Black rook (long) moved
+    <td>rook-long-moved
     <td id=black-rook-long-moved>
   <tr>
-    <td>Black rook (short) moved
+    <td>rook-short-moved
     <td id=black-rook-short-moved>
+  <tr class=header>
+    <td>White Player
+    <td>State
   <tr>
-    <td>White king moved
+    <td>king-moved
     <td id=white-king-moved>
   <tr>
-    <td>White pawn promote
+    <td>pawn-promote
     <td><select onchange="update_board()" id=white-pawn-promote>
       <option value=2>Bishop</option>
       <option value=1>Knight</option>
@@ -76,10 +82,10 @@
       <option value=3>Rook</option>
     </select>
   <tr>
-    <td>White rook (long) moved
+    <td>rook-long-moved
     <td id=white-rook-long-moved>
   <tr>
-    <td>White rook (short) moved
+    <td>rook-short-moved
     <td id=white-rook-short-moved>
   <tr>
     <td colspan=2><input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update>
@@ -143,17 +149,16 @@ function select_square(id){
           'target-x': square_x,
           'target-y': square_y,
         });
+        for(const property in move){
+            const element = document.getElementById(property);
+            if(element){
+                element.textContent = move[property];
+            }
+        }
 
         if(move['valid']){
             selected_x = -1;
             selected_y = -1;
-
-            for(const property in move){
-                const element = document.getElementById(property);
-                if(element){
-                    element.textContent = move[property];
-                }
-            }
 
             update_board();
 
