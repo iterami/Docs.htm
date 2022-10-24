@@ -14,6 +14,7 @@
     <li><a href=#chess_move>chess_check_row(args)</a>
     <li><a href=#chess_move>chess_move(args)</a>
     <li><a href=#chess_new>chess_new(args)</a>
+    <li><a href=#chess_threat>chess_threat(args)</a>
     <li><a href=#chess_validate>chess_validate(args)</a>
   </ul>
 </ul>
@@ -36,7 +37,7 @@
 chess_check_column(args)
 <ul>
   <li>Checks if there are any pieces in a column between loopstart and loopend.
-  <li>Returns true if pieces are found, or else returns false;
+  <li>Returns true if pieces are found, or else returns false.
 </ul>
 <table>
   <tr class=header>
@@ -64,7 +65,7 @@ chess_check_column(args)
 chess_check_diagonal(args)
 <ul>
   <li>Checks if there are any pieces in a diagonal direction starting at a point.
-  <li>Returns true if pieces are found, or else returns false;
+  <li>Returns true if pieces are found, or else returns false.
 </ul>
 <table>
   <tr class=header>
@@ -104,7 +105,7 @@ chess_check_diagonal(args)
 chess_check_column(args)
 <ul>
   <li>Checks if there are any pieces in a row between loopstart and loopend.
-  <li>Returns true if pieces are found, or else returns false;
+  <li>Returns true if pieces are found, or else returns false.
 </ul>
 <table>
   <tr class=header>
@@ -180,11 +181,34 @@ chess_new(args)
     <td>
     <td>string
 </table>
+<hr id=chess_threat>
+chess_threat(args)
+<ul>
+  <li>Returns true if a square is threatened by the other player, or else returns false.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+  <tr>
+    <td>piece-x
+    <td>
+    <td>number 1-8
+  <tr>
+    <td>piece-y
+    <td>
+    <td>number 1-8
+</table>
 <hr id=chess_validate>
 chess_validate(args)
 <ul>
-  <li>Will check if the requested move is valid or not.
-  <li>Returns an object of properties describing the move and if it was valid or not.
+  <li>Checks if the requested move is valid or not.
+  <li>Returns an object of properties describing the requested move.
 </ul>
 <table>
   <tr class=header>
