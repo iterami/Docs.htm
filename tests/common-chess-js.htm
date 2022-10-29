@@ -57,6 +57,12 @@
     <td>king-moved
     <td id=black-king-moved>
   <tr>
+    <td>king-x
+    <td id=black-king-x>
+  <tr>
+    <td>king-y
+    <td id=black-king-y>
+  <tr>
     <td>pawn-promote
     <td><select onchange="update_board()" id=black-pawn-promote>
       <option value=2>Bishop</option>
@@ -76,6 +82,12 @@
   <tr>
     <td>king-moved
     <td id=white-king-moved>
+  <tr>
+    <td>king-x
+    <td id=white-king-x>
+  <tr>
+    <td>king-y
+    <td id=white-king-y>
   <tr>
     <td>pawn-promote
     <td><select onchange="update_board()" id=white-pawn-promote>
@@ -184,10 +196,14 @@ function update_board(){
       ? 'Black'
       : 'White';
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
+    document.getElementById('black-king-x').textContent = chess_games['test']['players'][1]['king-x'];
+    document.getElementById('black-king-y').textContent = chess_games['test']['players'][1]['king-y'];
     document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
     document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
     document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
+    document.getElementById('white-king-x').textContent = chess_games['test']['players'][0]['king-x'];
+    document.getElementById('white-king-y').textContent = chess_games['test']['players'][0]['king-y'];
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
