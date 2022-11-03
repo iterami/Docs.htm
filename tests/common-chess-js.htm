@@ -5,6 +5,9 @@
 <link href=../../common/css/core.css rel=stylesheet>
 <link href=../../common/css/chess.css rel=stylesheet>
 <style>
+.bottom{
+    line-height: 1em !important;
+}
 .chess,
 .inline{
     display: inline-block;
@@ -214,13 +217,13 @@ let selected = '';
 
 let board_html = '';
 for(let y = 1; y < 9; y++){
-    board_html += '<tr><td class=notation>' + (9 - y);
+    board_html += '<tr><td class="notation right">' + (9 - y);
     for(let x = 1; x < 9; x++){
         const letters = 'abcdefgh';
         board_html += '<td id="' + letters[x - 1] + (9 - y) + '" onclick="select_square(this.id)">';
     }
 }
-board_html += '<tr><td class=notation><td class=notation>a<td class=notation>b<td class=notation>c<td class=notation>d<td class=notation>e<td class=notation>f<td class=notation>g<td class=notation>h';
+board_html += '<tr><td class="bottom notation"><td class="bottom notation">a<td class="bottom notation">b<td class="bottom notation">c<td class="bottom notation">d<td class="bottom notation">e<td class="bottom notation">f<td class="bottom notation">g<td class="bottom notation">h';
 document.getElementById('board').innerHTML = board_html;
 
 reset_board(false);
