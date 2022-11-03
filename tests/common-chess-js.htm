@@ -10,6 +10,11 @@
     display: inline-block;
     vertical-align: top;
 }
+.notation{
+    background-color: #000 !important;
+    color: #aaa !important;
+    font-size: initial !important;
+}
 .taken{
     background: #aaa;
     color: #000;
@@ -118,7 +123,7 @@ function remove_pawns(){
 
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
-            const piece = document.getElementById(y + '-' + x).textContent
+            const piece = document.getElementById(letters[x - 1] + (9 - y)).textContent;
             if(piece === chess_pieces[0][0] || piece === chess_pieces[1][0]){
                 chess_games['test']['board'][y - 1][x - 1] = '';
             }
@@ -136,34 +141,31 @@ function reset_board(reset){
     chess_new({
       'id': 'test',
     });
-    selected_x = -1;
-    selected_y = -1;
+    selected = '';
     update_board();
 }
 
 function select_square(id){
-    if(selected_x > -1){
-        document.getElementById(selected_y + '-' + selected_x).style.color = '#000';
+    if(selected.length){
+        document.getElementById(selected).style.color = '#000';
     }
 
-    const square_x = Number(id[2]);
-    const square_y = Number(id[0]);
+    const square_x = Number('abcdefgh'.indexOf(id[0]));
+    const square_y = Number(8 - id[1]);
 
-    if(selected_x === square_x && selected_y === square_y){
-        selected_x = -1;
-        selected_y = -1;
+    if(selected === id){
+        selected = '';
 
-    }else if(selected_x === -1 || selected_y === -1){
-        if(chess_games['test']['board'][square_y - 1][square_x - 1].length === 1){
-            selected_x = square_x;
-            selected_y = square_y;
+    }else if(!selected.length){
+        if(chess_games['test']['board'][square_y][square_x].length === 1){
+            selected = id;
         }
 
     }else{
         const move = chess_move({
           'id': 'test',
-          'piece-x': selected_x,
-          'piece-y': selected_y,
+          'piece-x': Number('abcdefgh'.indexOf(selected[0])),
+          'piece-y': Number(8 - selected[1]),
           'target-x': square_x,
           'target-y': square_y,
         });
@@ -175,19 +177,17 @@ function select_square(id){
         }
 
         if(move['valid']){
-            selected_x = -1;
-            selected_y = -1;
+            selected = '';
 
             update_board();
 
         }else{
-            selected_x = -1;
-            selected_y = -1;
+            selected = '';
         }
     }
 
-    if(selected_x > -1){
-        document.getElementById(selected_y + '-' + selected_x).style.color = '#0a0';
+    if(selected.length){
+        document.getElementById(selected).style.color = '#0a0';
     }
 }
 
@@ -212,21 +212,23 @@ function update_board(){
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
-            document.getElementById(y + '-' + x).innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
+            const letters = 'abcdefgh';
+            document.getElementById(letters[x - 1] + (9 - y)).innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
         }
     }
 }
 
-let selected_x = -1;
-let selected_y = -1;
+let selected = '';
 
 let board_html = '';
 for(let y = 1; y < 9; y++){
-    board_html += '<tr>';
+    board_html += '<tr><td class=notation>' + (9 - y);
     for(let x = 1; x < 9; x++){
-        board_html += '<td id="' + y + '-' + x + '" onclick="select_square(this.id)">';
+        const letters = 'abcdefgh';
+        board_html += '<td id="' + letters[x - 1] + (9 - y) + '" onclick="select_square(this.id)">';
     }
 }
+board_html += '<tr><td class=notation><td class=notation>a<td class=notation>b<td class=notation>c<td class=notation>d<td class=notation>e<td class=notation>f<td class=notation>g<td class=notation>h';
 document.getElementById('board').innerHTML = board_html;
 
 reset_board(false);
