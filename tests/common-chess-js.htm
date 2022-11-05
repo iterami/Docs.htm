@@ -4,9 +4,6 @@
 <title>common chess.js Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
-.bottom{
-    line-height: 1em !important;
-}
 .chess,
 .inline{
     display: inline-block;
@@ -21,9 +18,18 @@
     user-select: none;
     width: 64px;
 }
+.chess td.bottom{
+    line-height: 1em;
+}
+.chess td:hover{
+    color: #070;
+}
+.chess td.selected{
+    color: #0b0;
+}
 .chess td.notation{
     background-color: #000 !important;
-    color: #aaa !important;
+    color: #aaa;
     cursor: auto;
     font-size: initial;
 }
@@ -162,7 +168,7 @@ function reset_board(reset){
 
 function select_square(id){
     if(selected.length){
-        document.getElementById(selected).style.color = '#000';
+        document.getElementById(selected).classList.remove('selected');
     }
 
     const square_x = Number('abcdefgh'.indexOf(id[0]));
@@ -202,7 +208,7 @@ function select_square(id){
     }
 
     if(selected.length){
-        document.getElementById(selected).style.color = '#0a0';
+        document.getElementById(selected).classList.add('selected');
     }
 }
 
