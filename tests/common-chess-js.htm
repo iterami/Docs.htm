@@ -21,6 +21,12 @@
     user-select: none;
     width: 64px;
 }
+.chess td.notation{
+    background-color: #000 !important;
+    color: #aaa !important;
+    cursor: auto;
+    font-size: initial;
+}
 .chess tr:nth-child(even) td:nth-child(even),
 .chess tr:nth-child(odd) td:nth-child(odd){
     background-color: #aaa;
@@ -28,11 +34,6 @@
 .chess tr:nth-child(even) td:nth-child(odd),
 .chess tr:nth-child(odd) td:nth-child(even){
     background-color: #fff;
-}
-.notation{
-    background-color: #000 !important;
-    color: #aaa !important;
-    font-size: initial !important;
 }
 .taken{
     background: #aaa;
@@ -134,6 +135,7 @@ function remove_pawns(){
         return false;
     }
 
+    const letters = 'abcdefgh';
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
             const piece = document.getElementById(letters[x - 1] + (9 - y)).textContent;
