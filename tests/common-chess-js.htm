@@ -91,6 +91,9 @@
     <td>king
     <td id=black-king>
   <tr>
+    <td>king-checked
+    <td id=black-king-checked>
+  <tr>
     <td>king-moved
     <td id=black-king-moved>
   <tr>
@@ -113,6 +116,9 @@
   <tr>
     <td>king
     <td id=white-king>
+  <tr>
+    <td>king-checked
+    <td id=white-king-checked>
   <tr>
     <td>king-moved
     <td id=white-king-moved>
@@ -220,11 +226,13 @@ function update_board(){
       ? 'Black'
       : 'White';
     document.getElementById('black-king').textContent = 'abcdefgh'[chess_games['test']['players'][1]['king-x']] + (8 - chess_games['test']['players'][1]['king-y']);
+    document.getElementById('black-king-checked').textContent = chess_games['test']['players'][1]['king-checked'];
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
     document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
     document.getElementById('white-king').textContent = 'abcdefgh'[chess_games['test']['players'][0]['king-x']] + (8 - chess_games['test']['players'][0]['king-y']);
+    document.getElementById('white-king-checked').textContent = chess_games['test']['players'][0]['king-checked'];
     document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];

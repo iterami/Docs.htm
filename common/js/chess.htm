@@ -203,12 +203,17 @@ chess_threat(args)
     <td>piece-y
     <td>
     <td>number 0-7
+  <tr>
+    <td>player
+    <td>
+    <td>0 or 1
 </table>
 <hr id=chess_validate>
 chess_validate(args)
 <ul>
   <li>Checks if the requested move is valid or not.
   <li>Returns an object of properties describing the requested move.
+  <li>Can optionally ignore current turn and check hypothetical moves.
 </ul>
 <table>
   <tr class=header>
@@ -228,6 +233,10 @@ chess_validate(args)
     <td>
     <td>number 0-7
   <tr>
+    <td>player
+    <td>
+    <td>0 or 1
+  <tr>
     <td>target-x
     <td>
     <td>number 0-7
@@ -235,4 +244,8 @@ chess_validate(args)
     <td>target-y
     <td>
     <td>number 0-7
+  <tr>
+    <td>threat
+    <td>false
+    <td>boolean
 </table>
