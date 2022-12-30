@@ -1076,6 +1076,7 @@ webgl_primitive_cuboid(args)
   <li>Creates a cuboid primitive with specified properties.
   <li>Translation is the center of the cuboid.
   <li>Each side can overwrite any of the properties applied to "all", or can be not created by setting "exclude" to true.
+  <li>Sides that don't set their own vertex-colors will have a random color.
 </ul>
 <table>
   <tr class=header>
@@ -1118,10 +1119,6 @@ webgl_primitive_cuboid(args)
     <td>properties
     <td>{}
     <td>object
-  <tr>
-    <td>random-colors
-    <td>false
-    <td>boolean
   <tr>
     <td>right
     <td>{}
