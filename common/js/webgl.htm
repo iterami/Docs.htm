@@ -1447,6 +1447,7 @@ webgl_vertexattribarray_set(args)
 webgl_vertexcolorarray(args)
 <ul>
   <li>Returns an array containing RGBA values normalized to between 0 and 1 for each vertex.
+  <li>If the colors arg is empty, then a random color will be used.
 </ul>
 <table>
   <tr class=header>
@@ -1454,13 +1455,9 @@ webgl_vertexcolorarray(args)
     <td>Default
     <td>Type
   <tr>
-    <td>random-colors
-    <td>false
-    <td>boolean
-  <tr>
-    <td>rgbarray
+    <td>colors
     <td>[]
-    <td>array of numbers
+    <td>array of color objects
   <tr>
     <td>vertexcount
     <td>4
