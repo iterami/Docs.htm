@@ -109,7 +109,7 @@
     <td>1
     <td>Table
 </table>
-<input onclick="add_rows(10)" type=button value="+10 Rows"><input onclick="add_rows(100)" type=button value="+100 Rows">
+<input onclick="add_rows(10)" type=button value="+10 Rows"><input onclick="add_rows(100)" type=button value="+100 Rows"><input onclick="reset_rows()" type=button value=Reset> <span id=row-count>0</span>
 <table>
   <thead>
     <tr class=header>
@@ -134,11 +134,13 @@ function add_rows(rows){
           + '<td>' + random_number();
         row_counter++;
     }
+    document.getElementById('row-count').textContent = row_counter;
 }
 
 function random_number(){
     return Math.floor(Math.random() * 1e10);
 }
+
 function random_string(){
     const letters = 'bcdfghjklmnpqrstvwxyz';
 
@@ -147,6 +149,12 @@ function random_string(){
         string += letters[Math.floor(Math.random() * letters.length)];
     }
     return string;
+}
+
+function reset_rows(){
+    document.getElementById('custom-table-body').innerHTML = '';
+    row_counter = 0;
+    document.getElementById('row-count').textContent = row_counter;
 }
 
 let row_counter = 0;
