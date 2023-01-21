@@ -105,5 +105,43 @@
     <td>4,888
     <td>column
 </table>
+<input onclick="add_rows(10)" type=button value="+10 Rows"><input onclick="add_rows(100)" type=button value="+100 Rows">
+<table id=custom-table>
+  <tr class=header>
+    <td>ID
+    <td>String Sortable
+    <td class=tables-nosort>String<br>Unsortable
+    <td class=tables-numbers>Number Sortable
+    <td class=tables-nosort>Number<br>Unsortable
+</table>
 
+<script>
+function add_rows(rows){
+    const table_element = document.getElementById('custom-table');
+    for(let i = 0; i < rows; i++){
+        table_element.innerHTML += '<tr>'
+          + '<td>' + row_counter
+          + '<td>' + random_string()
+          + '<td>' + random_string()
+          + '<td>' + random_number()
+          + '<td>' + random_number();
+        row_counter++;
+    }
+}
+
+function random_number(){
+    return Math.floor(Math.random() * 1e10);
+}
+function random_string(){
+    const letters = 'bcdfghjklmnpqrstvwxyz';
+
+    let string = '';
+    for(let i = 0; i < 10; i++){
+        string += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return string;
+}
+
+let row_counter = 0;
+</script>
 <script src=../../common/js/tables.js></script>
