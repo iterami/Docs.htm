@@ -29,9 +29,9 @@
 <hr id=tables_add>
 tables_add(table)
 <ul>
-  <li>Adds sorting buttons to the first &lt;tr&gt; in the &lt;tbody&gt;.
+  <li>Adds sorting buttons to each &lt;td&gt; in the first child of the first child of the table, which is typically a header &lt;tr&gt; in a &lt;thead&gt; or &lt;tbody&gt;.
   <li>Ignores tables and columns with "tables-nosort" class.
-  <li>Uses column with "tables-main" class as unique main column, or defaults to the first column on the left.
+  <li>Uses column with "tables-main" class as unique main column, or defaults to "tables_column_main".
 </ul>
 <table>
   <tr class=header>
@@ -67,7 +67,7 @@ tables_init()
 <hr id=tables_sort>
 tables_sort(element, column, direction)
 <ul>
-  <li>Called when sorting buttons are pressed.
+  <li>Called by sorting buttons to sort a specific table's column.
 </ul>
 <table>
   <tr class=header>
@@ -86,4 +86,8 @@ tables_sort(element, column, direction)
     <td>direction
     <td>
     <td>1 for ascending, 0 for descending
+  <tr>
+    <td>type
+    <td>
+    <td>1 for numbers, 0 for strings
 </table>
