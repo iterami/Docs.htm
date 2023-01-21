@@ -31,6 +31,7 @@ tables_add(table)
 <ul>
   <li>Adds sorting buttons to each &lt;td&gt; in the first child of the first child of the table, which is typically a header &lt;tr&gt; in a &lt;thead&gt; or &lt;tbody&gt;.
   <li>Ignores tables and columns with "tables-nosort" class.
+  <li>Adds the "tables-added" class to affected tables, which then prevents multiple sorting buttons getting added to 1 table.
   <li>Uses column with "tables-main" class as unique main column, or defaults to "tables_column_main".
 </ul>
 <table>
