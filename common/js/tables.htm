@@ -6,7 +6,6 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a class=external href=https://github.com/iterami/common/blob/gh-pages/js/tables.js rel=noreferrer>tables.js</a>
 <ul>
-  <li><a href=#globals>Globals</a>
   <li>No requirements.
   <li>Functions:<ul>
     <li><a href=#tables_add>tables_add(table)</a>
@@ -15,24 +14,13 @@
     <li><a href=#tables_sort>tables_sort(element, column, direction, type)</a>
   </ul>
 </ul>
-<hr id=globals>
-<table>
-  <tr class=header>
-    <td>Globals
-    <td>Default
-    <td>Type
-  <tr>
-    <td>tables_column_main
-    <td>0
-    <td>number
-</table>
 <hr id=tables_add>
 tables_add(table)
 <ul>
   <li>Adds sorting buttons to each &lt;td&gt; in the first child of the first child of the table, which is typically a header &lt;tr&gt; in a &lt;thead&gt; or &lt;tbody&gt;.
   <li>Ignores tables and columns with "tables-nosort" class.
-  <li>Adds the "tables-added" class to affected tables, which then prevents multiple sorting buttons getting added to 1 table.
-  <li>Uses column with "tables-main" class as unique main column, or defaults to "tables_column_main".
+  <li>Adds the "tables-added" class to prevent adding multiple sorting buttons to 1 table.
+  <li>Adds a "tables-main-X" class to indicate which column contains a unique value for each row.
 </ul>
 <table>
   <tr class=header>
@@ -68,7 +56,7 @@ tables_init()
 <hr id=tables_sort>
 tables_sort(element, column, direction)
 <ul>
-  <li>Called by sorting buttons to sort a specific table's column.
+  <li>Called by sorting buttons to sort a column of a specific table.
 </ul>
 <table>
   <tr class=header>
