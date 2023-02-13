@@ -296,7 +296,7 @@ webgl_character_init(args)
     <td>boolean
   <tr>
     <td>camera-zoom
-    <td>0
+    <td>50
     <td>number
   <tr>
     <td>collide-range-horizontal
@@ -320,11 +320,11 @@ webgl_character_init(args)
     <td>number
   <tr>
     <td>health-current
-    <td>100
+    <td>1
     <td>number
   <tr>
     <td>health-max
-    <td>100
+    <td>1
     <td>number
   <tr>
     <td>id
@@ -336,7 +336,23 @@ webgl_character_init(args)
     <td>number
   <tr>
     <td>level
-    <td>-1
+    <td>0
+    <td>number
+  <tr>
+    <td>path-direction
+    <td>1
+    <td>number
+  <tr>
+    <td>path-end
+    <td>'default'
+    <td>string
+  <tr>
+    <td>path-id
+    <td>''
+    <td>string ID
+  <tr>
+    <td>path-point
+    <td>0
     <td>number
   <tr>
     <td>reticle
@@ -734,8 +750,8 @@ webgl_init(args)
     <td>boolean
   <tr>
     <td>directional-vector
-    <td>'0, 1, 0'
-    <td>string
+    <td>[0, 1, 0]
+    <td>array of numbers
   <tr>
     <td>fog-density
     <td>.0001
