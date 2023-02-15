@@ -137,7 +137,7 @@
     <td>rook-short-moved
     <td id=white-rook-short-moved>
   <tr>
-    <td colspan=2><input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update>
+    <td colspan=2><input onclick="reset_board(true)" type=button value=Reset><input onclick="remove_pawns()" type=button value="Remove Pawns"><input onclick="update_board()" type=button value=Update><br><input onclick="override=!override" type=checkbox> Override Rules
 </table>
 
 <script src=../../common/js/chess.js></script>
@@ -191,6 +191,7 @@ function select_square(id){
     }else{
         const move = chess_move({
           'id': 'test',
+          'override': override,
           'piece-x': Number('abcdefgh'.indexOf(selected[0])),
           'piece-y': Number(8 - selected[1]),
           'target-x': square_x,
@@ -203,7 +204,7 @@ function select_square(id){
             }
         }
 
-        if(move['valid']){
+        if(override || move['valid']){
             selected = '';
 
             update_board();
@@ -245,6 +246,7 @@ function update_board(){
     }
 }
 
+let override = false;
 let selected = '';
 
 let board_html = '';

@@ -137,7 +137,7 @@ chess_check_column(args)
 chess_move(args)
 <ul>
   <li>Attempts to move the specified piece to the target location.
-  <li>If the move is not valid, then nothing happens.
+  <li>Nothing happens if the move is not valid, unless you override the rule validation.
   <li>Returns the validation done by <a href=#chess_validate>chess_validate()</a>.
 </ul>
 <table>
@@ -149,6 +149,10 @@ chess_move(args)
     <td>id
     <td>
     <td>string
+  <tr>
+    <td>override
+    <td>false
+    <td>boolean
   <tr>
     <td>piece-x
     <td>
