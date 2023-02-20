@@ -43,7 +43,7 @@
     <li><a href=#webgl_extension>webgl_extension(args)</a>
     <li><a href=#webgl_get_translation>webgl_get_translation(args)</a>
     <li><a href=#webgl_init>webgl_init(args)</a>
-    <li><a href=#webgl_json_export>webgl_json_export(args)</a>
+    <li><a href=#webgl_level_export>webgl_level_export()</a>
     <li><a href=#webgl_level_init>webgl_level_init(args)</a>
     <li><a href=#webgl_level_load>webgl_level_load(args)</a>
     <li><a href=#webgl_level_unload>webgl_level_unload()</a>
@@ -821,21 +821,12 @@ webgl_init(args)
     <td>false
     <td>boolean false or string
 </table>
-<hr id=webgl_json_export>
-webgl_json_export(args)
+<hr id=webgl_level_export>
+webgl_level_export()
 <ul>
-  <li>Returns exported JSON for level and optionally character.
+  <li>Converts the current level to JSON and returns it.
+  <li>Excludes the character current set as webgl_character_id.
 </ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>character
-    <td>true
-    <td>boolean
-</table>
 <hr id=webgl_level_init>
 webgl_level_init(args)
 <ul>
