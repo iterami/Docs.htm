@@ -138,10 +138,6 @@
       // Optional. If the character collides with other entities that have collision.
       "collides": true,
 
-      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
-      // Uses same format as level entities.
-      "entities": [],
-
       // Optional. Current character experience.
       "experience": 0,
 
@@ -182,7 +178,11 @@
       // Optional. Translation of the character relative to "0, 0, 0".
       "translate-x": 0,
       "translate-y": 0,
-      "translate-z": 0
+      "translate-z": 0,
+
+      // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
+      // Uses same format as level entities.
+      "entities": []
     },
 
     // Example of character with entities.
@@ -350,13 +350,7 @@
             "example-group-1"
           ]
         }
-      ],
-
-      // Optional. Translation of the character relative to "0, 0, 0".
-      // Any attach offsets will be relative to this position.
-      "translate-x": 0,
-      "translate-y": 0,
-      "translate-z": 0
+      ]
     }
   ],
 
