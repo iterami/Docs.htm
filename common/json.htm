@@ -119,8 +119,12 @@
       // When 0, camera is in first-person mode.
       "camera-zoom": 20,
 
-      // Optional. Amount that character translation should change by when the character is updated.
+      // Optional. Amount that character rotation/translation should change by when the character is updated.
+      // Player rotation changes affect the camera rotation as well.
       // Player translations are reset after each movement to allow stopping.
+      "change-rotate-x": 0,
+      "change-rotate-x": 0,
+      "change-rotate-x": 0,
       "change-translate-x": 0,
       "change-translate-x": 0,
       "change-translate-x": 0,
@@ -206,7 +210,10 @@
           // Array of strings, including "x", "y", "z", or any combo.
           "billboard": false,
 
-          // Optional. Amount that entity translation should change by when the entity is updated.
+          // Optional. Amount that entity rotation/translation should change by when the entity is updated.
+          "change-rotate-x": 0,
+          "change-rotate-y": 0,
+          "change-rotate-z": 0,
           "change-translate-x": 0,
           "change-translate-y": 0,
           "change-translate-z": 0,
