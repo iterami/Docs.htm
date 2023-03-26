@@ -119,17 +119,11 @@
       // When 0, camera is in first-person mode.
       "camera-zoom": 20,
 
-      // Optional. Amount that any character property should change by when the character is updated.
+      // Optional. Amount that character translation should change by when the character is updated.
       // Player translations are reset after each movement to allow stopping.
-      "change": {
-        "rotate-x": 0,
-        "rotate-y": 0,
-        "rotate-z": 0,
-
-        "translate-x": 0,
-        "translate-y": 0,
-        "translate-z": 0
-      },
+      "change-translate-x": 0,
+      "change-translate-x": 0,
+      "change-translate-x": 0,
 
       // Optional. The maximum distance that collision can occur.
       "collide-range-horizontal": 2,
@@ -212,16 +206,10 @@
           // Array of strings, including "x", "y", "z", or any combo.
           "billboard": false,
 
-          // Optional. Amount that any entity property should change by when the entity is updated.
-          "change": {
-            "rotate-x": 0,
-            "rotate-y": 0,
-            "rotate-z": 0,
-
-            "translate-x": 0,
-            "translate-y": 0,
-            "translate-z": 0
-          },
+          // Optional. Amount that entity translation should change by when the entity is updated.
+          "change-translate-x": 0,
+          "change-translate-y": 0,
+          "change-translate-z": 0,
 
           // Optional. The maximum distance that collision can occur.
           "collide-range-horizontal": 2,
