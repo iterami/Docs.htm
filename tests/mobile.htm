@@ -6,8 +6,7 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Mobile
 <hr>
-<input onclick="update_stats()" type=button value="Update Stats">
-<div id=stats></div>
+<table id=stats></table>
 <hr>
 text<input type=button value="Default Button">text<input style="padding:0px" type=button value="padding: 0px">text<input style="padding:2px" type=button value="padding: 2px">text<input style="padding:2px 7px" type=button value="padding: 2px 7px">text<input style="padding:4px 8px" type=button value="padding: 4px 8px">text<input style="padding:10px" type=button value="padding: 10px">text<input style="padding:20px 10px" type=button value="padding: 20px 10px">text
 
@@ -18,17 +17,23 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
+    globalThis.onresize = update_stats;
     update_stats();
 }
 
 function update_stats(){
     const stats = [
-      'innerWidth',
+      'devicePixelRatio',
       'innerHeight',
+      'innerWidth',
+      'outerHeight',
+      'outerWidth',
+      'screenLeft',
+      'screenTop',
     ];
     let stats_content = '';
     for(const stat in stats){
-        stats_content += stats[stat] + ': ' + window[stats[stat]] + '<br>';
+        stats_content += '<tr><td>' + stats[stat] + '<td>' + window[stats[stat]];
     }
     document.getElementById('stats').innerHTML = stats_content;
 }
