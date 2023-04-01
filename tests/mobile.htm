@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Mobile Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Mobile
+<hr>
+<input onclick="update_stats()" type=button value="Update Stats">
+<div id=stats></div>
+<hr>
+text<input type=button value="Default Button">text<input style="padding:0px" type=button value="padding: 0px">text<input style="padding:2px" type=button value="padding: 2px">text<input style="padding:2px 7px" type=button value="padding: 2px 7px">text<input style="padding:4px 8px" type=button value="padding: 4px 8px">text<input style="padding:10px" type=button value="padding: 10px">text<input style="padding:20px 10px" type=button value="padding: 20px 10px">text
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+
+    update_stats();
+}
+
+function update_stats(){
+    const stats = [
+      'innerWidth',
+      'innerHeight',
+    ];
+    let stats_content = '';
+    for(const stat in stats){
+        stats_content += stats[stat] + ': ' + window[stats[stat]] + '<br>';
+    }
+    document.getElementById('stats').innerHTML = stats_content;
+}
+</script>
