@@ -48,6 +48,7 @@
     <li><a href=#core_interval_remove>core_interval_remove(args)</a>
     <li><a href=#core_interval_resume_all>core_interval_resume_all()</a>
     <li><a href=#core_interval_resume>core_interval_resume(args)</a>
+    <li><a href=#core_interval_sync>core_interval_sync(args)</a>
     <li><a href=#core_keys_rebind>core_keys_rebind()</a>
     <li><a href=#core_keys_updatebinds>core_keys_updatebinds(args)</a>
     <li><a href=#core_mouse_updatebinds>core_mouse_updatebinds(args)</a>
@@ -587,6 +588,7 @@ core_interval_animationFrame(args)
 core_interval_modify(args)
 <ul>
   <li>Creates or modifies an animation frame, interval, or timeout.
+  <li>Intervals can be synced to occur once per second with as close to 0 milliseconds as possible.
 </ul>
 <table>
   <tr class=header>
@@ -686,6 +688,21 @@ core_interval_resume_all()
 <ul>
   <li>Resumes all paused animation frames, intervals, and timeouts.
 </ul>
+<hr id=core_interval_sync>
+core_interval_sync(args)
+<ul>
+  <li>Attemps to repeat an interval as close to once per second as possible.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>id
+    <td>
+    <td>string
+</table>
 <hr id=core_keys_rebind>
 core_keys_rebind()
 <ul>
