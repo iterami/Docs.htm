@@ -588,7 +588,7 @@ core_interval_animationFrame(args)
 core_interval_modify(args)
 <ul>
   <li>Creates or modifies an animation frame, interval, or timeout.
-  <li>Intervals can be synced to occur once per second with as close to 0 milliseconds as possible.
+  <li>Intervals can be synced to repeat as closely aligned to official UTC seconds as possible.
 </ul>
 <table>
   <tr class=header>
@@ -691,7 +691,7 @@ core_interval_resume_all()
 <hr id=core_interval_sync>
 core_interval_sync(args)
 <ul>
-  <li>Attemps to repeat an interval as close to once per second as possible.
+  <li>Attempts to repeat an interval as closely aligned to official UTC seconds as possible.
 </ul>
 <table>
   <tr class=header>
@@ -702,6 +702,10 @@ core_interval_sync(args)
     <td>id
     <td>
     <td>string
+  <tr>
+    <td>interval
+    <td>
+    <td>number
 </table>
 <hr id=core_keys_rebind>
 core_keys_rebind()
