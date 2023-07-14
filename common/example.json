@@ -113,7 +113,8 @@
               "set": false,
               "stat": "health-current",
               "target": "example-entity-1",
-              "value": -100
+              "value": -100,
+              "webgl": false
             }
           ],
           "event-range": false,
