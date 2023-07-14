@@ -6,17 +6,35 @@
 <link href=../../common/css/dom.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/dom.css
+<div id=custom-test></div>
 <table>
   <tr class=header>
     <td>Element
     <td>Example
+    <td>Test <input onclick=clear_elements() type=button value="Clear">
   <tr>
     <td>Box
     <td><div class=box></div>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Grid Button
-    <td><input class=gridbutton disabled style="background-color:#2a2a2a" type=button value=G><input class=gridbutton disabled  style="background-color:#2a2a2a" type=button value=G>
+    <td><input class=gridbutton disabled style="background-color:#2a2a2a" type=button value=G>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Grid Button Clickable
-    <td><input class=gridbuttonclickable style="background-color:#2a2a2a" type=button value=C><input class=gridbuttonclickable type=button style="background-color:#2a2a2a" value=C>
+    <td><input class=gridbuttonclickable style="background-color:#2a2a2a" type=button value=C>
+    <td><input onclick=add_element(this) type=button value=Add>
 </table>
+
+<script src=../../common/js/tables.js></script>
+<script>
+function add_element(element){
+    document.getElementById('custom-test').innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+}
+function clear_elements(){
+    const elements = document.getElementById('custom-test');
+    while(elements.firstChild){
+        elements.removeChild(elements.firstChild);
+    }
+}
+</script>

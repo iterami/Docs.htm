@@ -5,34 +5,43 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/writings.css
+<div id=custom-test></div>
 <table>
   <tr class=header>
     <td>Element
     <td>Example
+    <td>Test <input onclick=clear_elements() type=button value="Clear">
   <tr>
     <td>Center Aligned Text
     <td class=center>Center
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Right Aligned Text
     <td class=right>Right
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>External Link
     <td><a class=external href=common-core-css.htm rel=noreferrer>External Link</a>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Internal Link
     <td><a href=common-core-css.htm>Internal Link</a>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Code
     <td>
 <code>function example(args){
     // Example code.
 }</code>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Input type=button
     <td><input type=button value=Button>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Input type=button Disabled
     <td><input disabled type=button value=Disabled>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>List Ordered
     <td><ol>
@@ -55,6 +64,7 @@
         </ol>
       </ol>
     </ol>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>List Unordered
     <td><ul>
@@ -77,9 +87,11 @@
         </ul>
       </ul>
     </ul>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Separator
     <td><hr>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Table
     <td><table>
@@ -104,12 +116,26 @@
         <td>Row
         <td>Contents
     </table>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Textarea
     <td><textarea>Textarea</textarea>
+    <td><input onclick=add_element(this) type=button value=Add>
   <tr>
     <td>Textarea Readonly
     <td><textarea readonly>Textarea Readonly</textarea>
+    <td><input onclick=add_element(this) type=button value=Add>
 </table>
 
 <script src=../../common/js/tables.js></script>
+<script>
+function add_element(element){
+    document.getElementById('custom-test').innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+}
+function clear_elements(){
+    const elements = document.getElementById('custom-test');
+    while(elements.firstChild){
+        elements.removeChild(elements.firstChild);
+    }
+}
+</script>
