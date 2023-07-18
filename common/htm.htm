@@ -7,18 +7,6 @@
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=../../common/index.htm>common</a> HTM Projects
 <table>
   <tr class=header>
-    <td>CSS Files
-    <td>Used By
-  <tr>
-    <td>canvas.css
-    <td>2D canvas and 3D WebGL HTM projects
-  <tr>
-    <td>core.css
-    <td>every HTM project that uses the core menu
-  <tr>
-    <td>writings.css
-    <td>HTM projects that are text-based and don't use the core menu
-  <tr class=header>
     <td>JavaScript Files
     <td>Used By
   <tr>
@@ -63,17 +51,19 @@
   <tr>
     <td><a href=js/prefabs/webgl.htm>webgl.js</a>
     <td>prefabricated 3D WebGL entities
+  <tr class=header>
+    <td>CSS Files
+    <td>Used By
+  <tr>
+    <td>canvas.css
+    <td>2D canvas and 3D WebGL HTM projects
+  <tr>
+    <td>core.css
+    <td>every HTM project that uses the core menu
+  <tr>
+    <td>writings.css
+    <td>HTM projects that are text-based and don't use the core menu
 </table>
-Recommended Project Structure:<ul>
-  <li>/js/:<ul>
-    <li>data.js: contains repo-specific code, such as levels or custom functions.
-    <li><a href=js/main.htm>main.js</a>: main project JavaScript file, which only contains functions defined by iterami/common.
-  </ul>
-  <li>404.htm: handles 404 errors for GitHub Pages repos.
-  <li>index.htm: the page on which your project resides.
-  <li>LICENSE.md: contains license information about your project.
-  <li>README.md: contains information about your project.
-</ul>
 Using and Updating:<ul>
   <li>If your project is being hosted on GitHub Pages, you should use a fork of iterami/common:<ul>
     <li>Update your fork by using the <a class=external href=https://github.com/iterami/Scripts/blob/master/iterami/common-fork-rebase.sh rel=noreferrer>iterami/Scripts/iterami/common-fork-rebase.sh script</a>.
@@ -84,3 +74,29 @@ Using and Updating:<ul>
     <li>Your iterami/common folder does not need to be in a particular location, as long as the paths in your &lt;script&gt; tags are correct.
   </ul>
 </ul>
+<table>
+  <tr class=header>
+    <td>File
+    <td>Need
+    <td>Recommended Project Files
+  <tr>
+    <td>404.htm
+    <td>Optional
+    <td>handles 404 errors for GitHub Pages repos
+  <tr>
+    <td>index.htm
+    <td>Required
+    <td>the page that loads your project
+  <tr>
+    <td>LICENSE.md
+    <td>Optional
+    <td>contains license information about your project
+  <tr>
+    <td>README.md
+    <td>Optional
+    <td>contains useful links and information about your project
+  <tr>
+    <td><a href=js/repo.htm>repo.js</a>
+    <td>Required
+    <td>contains repo-specific code for your project
+</table>
