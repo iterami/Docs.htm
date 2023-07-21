@@ -55,7 +55,7 @@
     <li><a href=#core_number_format>core_number_format(args)</a>
     <li><a href=#core_random_boolean>core_random_boolean(args)</a>
     <li><a href=#core_random_crypto>core_random_crypto(args)</a>
-    <li><a href=#core_random_hex>core_random_hex(args)</a>
+    <li><a href=#core_random_hex>core_random_hex()</a>
     <li><a href=#core_random_integer>core_random_integer(args)</a>
     <li><a href=#core_random_key>core_random_key(args)</a>
     <li><a href=#core_random_number>core_random_number(args)</a>
@@ -265,6 +265,7 @@ core_digits_min(args)
 <hr id=core_escape>
 core_escape()
 <ul>
+  <li>No args.
   <li>Pressing escape opens or closes the menu.
   <li>Pauses or resumes intervals depending on state.
   <li>Calls optional repo-specific <a href=repo.htm#repo_escape>repo_escape()</a> function.
@@ -312,6 +313,7 @@ core_events_keyinfo(event)
 <hr id=core_events_todoloop>
 core_events_todoloop()
 <ul>
+  <li>No args.
   <li>Function that runs looping keyboard and mouse event todos.
 </ul>
 <hr id=core_file>
@@ -567,6 +569,7 @@ core_image(args)
 <hr id=core_init>
 core_init()
 <ul>
+  <li>No args.
   <li>Sets up universal project components, such as the core menu and events.
 </ul>
 <hr id=core_interval_animationframe>
@@ -642,6 +645,7 @@ core_interval_pause(args)
 <hr id=core_interval_pause_all>
 ore_interval_pause_all()
 <ul>
+  <li>No args.
   <li>Pauses all animation frames, intervals, and timeouts.
 </ul>
 <hr id=core_interval_remove>
@@ -662,6 +666,7 @@ core_interval_remove(args)
 <hr id=core_interval_remove_all>
 core_interval_remove_all()
 <ul>
+  <li>No args.
   <li>Pauses and removes all animation frames, intervals, and timeouts.
 </ul>
 <hr id=core_interval_resume>
@@ -682,6 +687,7 @@ core_interval_resume(args)
 <hr id=core_interval_resume_all>
 core_interval_resume_all()
 <ul>
+  <li>No args.
   <li>Resumes all paused animation frames, intervals, and timeouts.
 </ul>
 <hr id=core_interval_sync>
@@ -706,6 +712,7 @@ core_interval_sync(args)
 <hr id=core_keys_rebind>
 core_keys_rebind()
 <ul>
+  <li>No args.
   <li>Rebinds keys from scratch with current key values.
 </ul>
 <hr id=core_keys_updatebinds>
@@ -798,8 +805,9 @@ core_random_crypto(args)
     <td>string
 </table>
 <hr id=core_random_hex>
-core_random_hex(args)
+core_random_hex()
 <ul>
+  <li>No args.
   <li>Returns a random hexadecimal string of length 6.
 </ul>
 <hr id=core_random_integer>
@@ -854,6 +862,7 @@ core_random_number(args)
 <hr id=core_random_rgb>
 core_random_rgb()
 <ul>
+  <li>No args.
   <li>Returns an object containing random "blue", "green", and "red", as numbers between 0 and 255 inclusive.
 </ul>
 <hr id=core_random_splice>
@@ -992,6 +1001,7 @@ core_repo_init(args)
 <hr id=core_repo_reset>
 core_repo_reset()
 <ul>
+  <li>No args.
   <li>Calls <a href=#globals>core_reset_todo()</a> if it has been set by the "reset" arg in <a href=#core_repo_init>core_repo_init()</a>.
 </ul>
 <hr id=core_requestpointerlock>

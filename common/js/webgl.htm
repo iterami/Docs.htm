@@ -22,7 +22,7 @@
     <li><a href=#webgl_buffer_set_type>webgl_buffer_set_type(args)</a>
     <li><a href=#webgl_camera_handle>webgl_camera_handle()</a>
     <li><a href=#webgl_camera_rotate>webgl_camera_rotate(args)</a>
-    <li><a href=#webgl_camera_zoom>webgl_camera_zoom()</a>
+    <li><a href=#webgl_camera_zoom>webgl_camera_zoom(event)</a>
     <li><a href=#webgl_character_home>webgl_character_home()</a>
     <li><a href=#webgl_character_home_entityupdate>webgl_character_home_entityupdate()</a>
     <li><a href=#webgl_character_init>webgl_character_init(args)</a>
@@ -731,6 +731,7 @@ webgl_buffer_set_type(args)
 <hr id=webgl_camera_handle>
 webgl_camera_handle()
 <ul>
+  <li>No args.
   <li>Functon used as "mousemove" event by 3D projects.
   <li>Handle first and third person cameras via the "camera-zoom-current" character property.
 </ul>
@@ -774,18 +775,20 @@ webgl_camera_rotate(args)
     <td>boolean false or number
 </table>
 <hr id=webgl_camera_zoom>
-webgl_camera_zoom()
+webgl_camera_zoom(event)
 <ul>
-  <li>Functon called by bound "mousewheel" event within "mousebinds".
+  <li>Functon called by bound "mousewheel" event within "mousebinds", which passes the event arg.
 </ul>
 <hr id=webgl_character_home>
 webgl_character_home()
 <ul>
+  <li>No args.
   <li>If the webgl_character_id character has a home, current level is unloaded and replaced with home.
 </ul>
 <hr id=webgl_character_home_entityupdate>
 webgl_character_home_entityupdate()
 <ul>
+  <li>No args.
   <li>Clears current webgl_character_homebase['entities'].
   <li>Loops thru current entities. If any are attached to webgl_character_id and not in the skybox, then their properties are copied and pushed into webgl_character_homebase['entities'].
 </ul>
@@ -1049,6 +1052,7 @@ webgl_collision(args)
 <hr id=webgl_draw>
 webgl_draw()
 <ul>
+  <li>No args.
   <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
   <li>Sets up matricies, sets up the camera, and draws all created entities in specific order.
   <li>Draws text, pointer, and other 2D canvas UI elements.
@@ -1061,6 +1065,7 @@ webgl_draw_entity(entity)
 <hr id=webgl_drawloop>
 webgl_drawloop()
 <ul>
+  <li>No args.
   <li>Calls <a href=#webgl_draw>webgl_draw()</a> if the menu isn't open.
   <li>Handles animation frames via <a href=core.htm#core_interval_animationframe>core_interval_animationFrame()</a> usage.
 </ul>
@@ -1333,6 +1338,7 @@ webgl_init(args)
 <hr id=webgl_level_export>
 webgl_level_export()
 <ul>
+  <li>No args.
   <li>Converts the current level to JSON and returns it.
   <li>Excludes the character current set as webgl_character_id.
 </ul>
@@ -1378,11 +1384,13 @@ webgl_level_load(args)
 <hr id=webgl_level_unload>
 webgl_level_unload()
 <ul>
+  <li>No args.
   <li>Removes all characters that aren't webgl_character_id and all entities.
 </ul>
 <hr id=webgl_logicloop>
 webgl_logicloop()
 <ul>
+  <li>No args.
   <li>Handles camera movement of various different styles.
   <li>Calls repo-specific <a href=repo.htm#repo_logic>repo_logic()</a>.
   <li>Updates attached entities.
@@ -1529,6 +1537,7 @@ webgl_path_use(args)
 <hr id=webgl_perspective>
 webgl_perspective()
 <ul>
+  <li>No args.
   <li>Sets up the perspective matrix.
 </ul>
 <hr id=webgl_pick_color>
@@ -1822,6 +1831,7 @@ webgl_program_create(args)
 <hr id=webgl_resize>
 webgl_resize()
 <ul>
+  <li>No args.
   <li>Handles resizing the canvas to current globalThis proportions.
   <li>Resets canvas and WebGL properties that may have been lost upon resize, including resetting the perspective matrix.
 </ul>
@@ -1879,6 +1889,7 @@ webgl_shader_create(args)
 <hr id=webgl_shader_recreate>
 webgl_shader_recreate()
 <ul>
+  <li>No args.
   <li>Deletes the current shader program, if one exists.
   <li>Creates the fragment and vertex shaders.
   <li>Sets up the shader program and uniform locations.
@@ -1920,6 +1931,7 @@ webgl_stat_modify(args)
 <hr id=webgl_storage_init>
 webgl_storage_init()
 <ul>
+  <li>No args.
   <li>Adds a "WebGL" tab to the "core-menu" group for managing WebGL localStorage.
   <li>Must be called directly after <a href=core.htm#core_repo_init>core_repo_init()</a>.
 </ul>
@@ -1945,6 +1957,7 @@ webgl_texture_set(args)
 <hr id=webgl_uniform_update>
 webgl_uniform_update()
 <ul>
+  <li>No args.
   <li>Use the current values of webgl_properties to update the shader uniforms.
 </ul>
 <hr id=webgl_vertexattribarray_set>

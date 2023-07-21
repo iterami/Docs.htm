@@ -46,12 +46,14 @@
 <hr id=canvas_draw>
 canvas_draw()
 <ul>
+  <li>No args.
   <li>Handles canvas clearing and drawing the "buffer" onto the "canvas".
   <li>Main drawing code is handled via repo-specific <a href=repo.htm#repo_drawlogic>repo_drawlogic()</a> code.
 </ul>
 <hr id=canvas_drawloop>
 canvas_drawloop()
 <ul>
+  <li>No args.
   <li>Calls "canvas_draw()" if the menu isn't open.
   <li>Handles animation frames via <a href=core.htm#core_interval_animationframe>core_interval_animationFrame()</a> usage.
 </ul>
@@ -147,6 +149,7 @@ canvas_init(args)
 <hr id=canvas_logicloop>
 canvas_logicloop()
 <ul>
+  <li>No args.
   <li>Calls repo-specific <a href=repo.htm#repo_logic>repo_logic()</a>.
   <li>Updates attached entities.
 </ul>
@@ -158,6 +161,7 @@ canvas_logicloop_handle_entity(entity)
 <hr id=canvas_resize>
 canvas_resize()
 <ul>
+  <li>No args.
   <li>Handles resizing the canvas to current globalThis proportions.
   <li>Resets canvas properties that may have been lost upon resize.
 </ul>
