@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../c.htm>common C Projects</a>/<a href=gtk.htm>gtk.c</a>/void gtk_add_menuitem(GtkWidget *menu, const gchar *label, GtkAccelGroup *accelgroup, const guint key, GdkModifierType modifier, GCallback callback, gpointer data)
+<ul>
+  <li>Adds a menuitem to a menu.
+  <li>Attempts to connect callback function or disables the menuitem.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Type
+    <td>Notes
+  <tr>
+    <td>menu
+    <td>GtkWidget*
+    <td>Menu to add menuitem to.
+  <tr>
+    <td>label
+    <td>gchar*
+    <td>Menuitem label.
+  <tr>
+    <td>accelgroup
+    <td>GtkAccelGroup*
+    <td>All should use same accelgroup.
+  <tr>
+    <td>key
+    <td>guint
+    <td>Shortcut key.
+  <tr>
+    <td>modifier
+    <td>GdkModifierType
+    <td>Shortcut modifier.
+  <tr>
+    <td>callback
+    <td>GCallback
+    <td>Callback function.
+  <tr>
+    <td>data
+    <td>gpointer
+    <td>Optional data to pass to the callback function.
+</table>
