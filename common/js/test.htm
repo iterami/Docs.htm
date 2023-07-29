@@ -10,80 +10,8 @@
     <li><a href=core.htm>core.js</a>
   </ul>
   <li>Functions:<ul>
-    <li><a href=#test_function>test_function(args)</a>
-    <li><a href=#test_run>test_run(args)</a>
-    <li><a href=#test_time>test_time(args)</a>
+    <li><a href=test_function.htm>test_function(args)</a>
+    <li><a href=test_run.htm>test_run(args)</a>
+    <li><a href=test_time.htm>test_time(args)</a>
   </ul>
 </ul>
-<hr id=test_function>
-test_function(args)
-<ul>
-  <li>Passes args to a function, compares its return value to an expected value of any type, and returns the test result and returned value.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>args
-    <td>{}
-    <td>object
-  <tr>
-    <td>expect
-    <td>
-    <td>any
-  <tr>
-    <td>function
-    <td>
-    <td>function
-</table>
-<hr id=test_run>
-test_run(args)
-<ul>
-  <li>Runs the inputted tests and constructs a results table.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>link
-    <td>
-    <td>string
-  <tr>
-    <td>tests
-    <td>
-    <td>array of objects
-</table>
-<hr id=test_time>
-test_time(args)
-<ul>
-  <li>Tracks how long it takes for a function to get called "runs" number of times.
-  <li>Returns an object:<ul>
-    <li>"average": average number of milliseconds.
-    <li>"max": most milliseconds that any run required.
-    <li>"min": least milliseconds that any run required.
-    <li>"runs": number of runs.
-    <li>"total": total milliseconds that every run required.
-  </ul>
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>function
-    <td>
-    <td>function
-  <tr>
-    <td>function-args
-    <td>void 0
-    <td>any
-  <tr>
-    <td>runs
-    <td>100
-    <td>number
-</table>

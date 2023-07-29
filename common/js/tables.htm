@@ -8,76 +8,9 @@
 <ul>
   <li>No requirements.
   <li>Functions:<ul>
-    <li><a href=#tables_add>tables_add(table)</a>
-    <li><a href=#tables_format_number>tables_format_number(value)</a>
-    <li><a href=#tables_init>tables_init()</a>
-    <li><a href=#tables_sort>tables_sort(element, column, direction, type)</a>
+    <li><a href=tables_add.htm>tables_add(table)</a>
+    <li><a href=tables_format_number.htm>tables_format_number(value)</a>
+    <li><a href=tables_init.htm>tables_init()</a>
+    <li><a href=tables_sort.htm>tables_sort(element, column, direction, type)</a>
   </ul>
 </ul>
-<hr id=tables_add>
-tables_add(table)
-<ul>
-  <li>Adds sorting buttons to each &lt;td&gt; in the first child of the first child of the table, which is typically a header &lt;tr&gt; in a &lt;thead&gt; or &lt;tbody&gt;.
-  <li>Ignores tables and columns with "tables-nosort" class.
-  <li>Adds the "tables-added" class to prevent adding multiple sorting buttons to 1 table.
-  <li>Adds a "tables-main-X" class to indicate which column contains a unique value for each row.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>table
-    <td>
-    <td>HTML element
-</table>
-<hr id=tables_format_number>
-tables_format_number(value)
-<ul>
-  <li>Removes commas and converts to Number during sort of "tables-numbers" columns.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>value
-    <td>
-    <td>number or string
-</table>
-<hr id=tables_init>
-tables_init()
-<ul>
-  <li>No args.
-  <li>Automatically called when the file is loaded.
-  <li>Loops thru all table elements and adds them via <a href=#tables_add>tables_add()</a>.
-</ul>
-<hr id=tables_sort>
-tables_sort(element, column, direction)
-<ul>
-  <li>Called by sorting buttons to sort a column of a specific table.
-</ul>
-<table>
-  <tr class=header>
-    <td>Arg
-    <td>Default
-    <td>Type
-  <tr>
-    <td>element
-    <td>
-    <td>HTML element
-  <tr>
-    <td>column
-    <td>
-    <td>string ID
-  <tr>
-    <td>direction
-    <td>
-    <td>1 for ascending, 0 for descending
-  <tr>
-    <td>type
-    <td>
-    <td>1 for numbers, 0 for strings
-</table>
