@@ -71,9 +71,36 @@ function repo_init(){
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
-            'precision': 0.0000000001,
+            'precision': 0,
+          },
+          'expect': false,
+          'function': 'core_float_compare',
+        },
+        {
+          'args': {
+            'a': 0.1 + 0.2 + 0.3,
+            'b': 0.6,
+            'precision': Number.EPSILON,
           },
           'expect': true,
+          'function': 'core_float_compare',
+        },
+        {
+          'args': {
+            'a': 0.1 + 0.2 + 0.3,
+            'b': 0.6,
+            'precision': 1e-15,
+          },
+          'expect': true,
+          'function': 'core_float_compare',
+        },
+        {
+          'args': {
+            'a': 0.1 + 0.2 + 0.3,
+            'b': 0.6,
+            'precision': 1e-16,
+          },
+          'expect': false,
           'function': 'core_float_compare',
         },
         {
