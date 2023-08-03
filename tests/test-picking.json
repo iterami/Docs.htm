@@ -1,0 +1,130 @@
+{
+  "characters": [
+    {
+      "id": "test-picking",
+      "entities": [
+        {
+          "id": "base",
+          "attach-offset-y": -10,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "pick-blocker",
+          "alpha": 0.6,
+          "attach-offset-y": 10,
+          "attach-offset-z": -49,
+          "collision": false,
+          "rotate-x": 90,
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            0, 0, 0, 1,
+            0, 0, 0, 1
+          ],
+          "vertices": [
+            50, 0, -5,
+            -50, 0, -5,
+            -50, 0, 5,
+            50, 0, 5
+          ]
+        },
+        {
+          "id": "pick-blocker-down",
+          "attach-offset-x": 20,
+          "attach-offset-y": 10,
+          "attach-offset-z": -25,
+          "collision": false,
+          "event-modify": [
+            {
+              "stat": "attach-offset-y",
+              "target": "pick-blocker",
+              "value": -1
+            }
+          ],
+          "pick-color": [0, 1, 1],
+          "rotate-x": 90,
+          "vertex-colors": [
+            1, 0, 0, 1,
+            1, 0, 0, 1,
+            1, 0, 0, 1,
+            1, 0, 0, 1
+          ],
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "pick-blocker-up",
+          "attach-offset-x": 20,
+          "attach-offset-y": 15,
+          "attach-offset-z": -25,
+          "collision": false,
+          "event-modify": [
+            {
+              "stat": "attach-offset-y",
+              "target": "pick-blocker",
+              "value": 1
+            }
+          ],
+          "pick-color": [1, 1, 0],
+          "rotate-x": 90,
+          "vertex-colors": [
+            0, 0, 1, 1,
+            0, 0, 1, 1,
+            0, 0, 1, 1,
+            0, 0, 1, 1
+          ],
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "pick-color",
+          "attach-offset-y": 25,
+          "attach-offset-z": -50,
+          "event-modify": [
+            {
+              "self": true,
+              "stat": "vertex-colors"
+            }
+          ],
+          "pick-color": [0, 1, 0],
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 2,
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ],
+          "vertices": [
+            50, 0, -10,
+            -50, 0, -10,
+            -50, 0, 10,
+            50, 0, 10
+          ]
+        }
+      ]
+    }
+  ]
+}
