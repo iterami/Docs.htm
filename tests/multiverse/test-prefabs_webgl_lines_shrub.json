@@ -1,0 +1,50 @@
+{
+  "title": "Lines Shrub Prefab Test",
+  "spawn-translate-y": 10,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-lines-shrub",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
+        "character": "test-lines-shrub",
+        "prefix": "humanoid-0",
+        "color-base": [
+          0.3, 0.15, 0
+        ],
+        "color-leaf": [
+          0, 1, 0
+        ],
+        "leaf-distance": 10,
+        "points": 100,
+        "x-max": 10,
+        "x-min": -10,
+        "y-max": 10,
+        "z-max": 10,
+        "z-min": -10
+      }
+    }
+  ]
+}

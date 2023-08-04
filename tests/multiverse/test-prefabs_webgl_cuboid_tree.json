@@ -1,0 +1,37 @@
+{
+  "title": "Cuboid Tree Prefab Test",
+  "spawn-translate-y": 10,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-cuboid-tree",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_cuboid_tree",
+      "properties": {
+        "character": "test-cuboid-tree",
+        "prefix": "tree-0"
+      }
+    }
+  ]
+}
