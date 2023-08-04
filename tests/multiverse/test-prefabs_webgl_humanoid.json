@@ -30,7 +30,7 @@
       "type": "prefabs_webgl_humanoid",
       "properties": {
         "character": "test-humanoid",
-        "prefix": "humanoid-0"
+        "prefix": "humanoid"
       }
     }
   ]

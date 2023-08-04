@@ -30,7 +30,7 @@
       "type": "prefabs_webgl_lines_tree",
       "properties": {
         "character": "test-lines-tree",
-        "prefix": "tree-0"
+        "prefix": "tree"
       }
     }
   ]

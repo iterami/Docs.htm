@@ -30,7 +30,7 @@
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
         "character": "test-lines-shrub",
-        "prefix": "humanoid-0",
+        "prefix": "humanoid",
         "color-base": [
           0.3, 0.15, 0
         ],

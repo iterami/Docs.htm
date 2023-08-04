@@ -30,7 +30,7 @@
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
         "character": "test-cuboid-tree",
-        "prefix": "tree-0"
+        "prefix": "tree"
       }
     }
   ]

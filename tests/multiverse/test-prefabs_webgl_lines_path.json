@@ -1,7 +1,7 @@
 {
   "title": "Lines Path Prefab Test",
   "paths": {
-    "test-path-0": {
+    "test-path": {
       "end": "loop",
       "points": [
         {
@@ -19,7 +19,7 @@
           "translate-x": -10
         }
       ],
-      "speed": 1
+      "speed": 0.5
     }
   },
   "characters": [
@@ -44,6 +44,24 @@
           ]
         }
       ]
+    },
+    {
+      "id": "path-user",
+      "entities": [
+        {
+          "id": "example",
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-id": "test-path"
     }
   ],
   "prefabs": [
@@ -51,8 +69,8 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-lines-path",
-        "path": "test-path-0",
-        "prefix": "lines-0"
+        "path": "test-path",
+        "prefix": "lines"
       }
     }
   ]

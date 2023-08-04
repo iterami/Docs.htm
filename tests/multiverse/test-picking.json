@@ -24,7 +24,6 @@
         {
           "id": "pick-blocker",
           "alpha": 0.6,
-          "attach-offset-y": 10,
           "attach-offset-z": -49,
           "collision": false,
           "rotate-x": 90,
@@ -44,7 +43,6 @@
         {
           "id": "pick-blocker-down",
           "attach-offset-x": 20,
-          "attach-offset-y": 10,
           "attach-offset-z": -25,
           "collision": false,
           "event-modify": [
@@ -72,7 +70,7 @@
         {
           "id": "pick-blocker-up",
           "attach-offset-x": 20,
-          "attach-offset-y": 15,
+          "attach-offset-y": 5,
           "attach-offset-z": -25,
           "collision": false,
           "event-modify": [
@@ -99,7 +97,6 @@
         },
         {
           "id": "pick-color",
-          "attach-offset-y": 25,
           "attach-offset-z": -50,
           "event-modify": [
             {
