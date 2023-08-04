@@ -1,0 +1,59 @@
+{
+  "title": "Lines Path Prefab Test",
+  "paths": {
+    "test-path-0": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": -10,
+          "translate-y": 10,
+          "translate-z": -25
+        },
+        {
+          "translate-x": 10
+        },
+        {
+          "translate-y": -10
+        },
+        {
+          "translate-x": -10
+        }
+      ],
+      "speed": 1
+    }
+  },
+  "characters": [
+    {
+      "id": "test-lines-path",
+      "entities": [
+        {
+          "id": "base",
+          "attach-offset-y": -10,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-lines-path",
+        "path": "test-path-0",
+        "prefix": "lines-0"
+      }
+    }
+  ]
+}
