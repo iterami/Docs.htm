@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>common test.js Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/test.htm>test.js</a>
+<table id=consts></table>
+<table id=results></table>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/test.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+
+    document.getElementById('consts').innerHTML = test_consts({
+      'consts': {
+        'Math.PI': Math.PI,
+        'wrong': 'wrong',
+      },
+    });
+    document.getElementById('results').innerHTML = test_run({
+      'link': '../common/js/',
+      'tests': [
+        {
+          'args': {
+            'decimals': 0,
+            'number': 123.456,
+          },
+          'expect': 123,
+          'function': 'core_round',
+        },
+        {
+          'args': {
+            'decimals': 0,
+            'number': 123.456,
+          },
+          'expect': 'wrong',
+          'function': 'core_round',
+        },
+      ],
+    });
+}
+</script>
