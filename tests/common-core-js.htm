@@ -17,9 +17,9 @@ function repo_init(){
     });
 
     document.getElementById('consts').innerHTML = test_consts({
-      'consts': {
-        'Number.EPSILON': Number.EPSILON,
-      },
+      'consts': [
+        'Number.EPSILON',
+      ],
     });
     document.getElementById('results').innerHTML = test_run({
       'link': '../common/js/',

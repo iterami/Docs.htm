@@ -18,9 +18,9 @@ function repo_init(){
     });
 
     document.getElementById('consts').innerHTML = test_consts({
-      'consts': {
-        'Math.PI': Math.PI,
-      },
+      'consts': [
+        'Math.PI',
+      ],
     });
     document.getElementById('results').innerHTML = test_run({
       'link': '../common/js/',
