@@ -5,15 +5,7 @@
 <link href=../../common/css/core.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/core.htm>core.js</a>
-<table>
-  <thead>
-    <tr class=header>
-      <td>Const
-      <td>Value
-      <td>Test
-  </thead>
-  <tbody id=consts></tbody>
-</table>
+<table id=consts></table>
 <table id=results></table>
 
 <script src=../../common/js/core.js></script>
@@ -24,7 +16,12 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
-    test_run({
+    document.getElementById('consts').innerHTML = test_consts({
+      'consts': {
+        'Number.EPSILON': Number.EPSILON,
+      },
+    });
+    document.getElementById('results').innerHTML = test_run({
       'link': '../common/js/',
       'tests': [
         {
@@ -333,16 +330,5 @@ function repo_init(){
         },
       ],
     });
-
-    var consts = {
-      'Number.EPSILON': Number.EPSILON,
-    };
-    let const_results = '';
-    for(let id in consts){
-        const_results += '<tr><td>' + id
-          + '<td>' + consts[id]
-          + '<td>' + (consts[id] !== void 0);
-    }
-    document.getElementById('consts').innerHTML = const_results;
 }
 </script>
