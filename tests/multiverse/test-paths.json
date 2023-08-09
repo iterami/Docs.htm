@@ -126,6 +126,24 @@
       "path-id": "path-xy"
     },
     {
+      "id": "path-xy-user-reverse",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-direction": -1,
+      "path-id": "path-xy"
+    },
+    {
       "id": "path-xyz-user",
       "entities": [
         {
@@ -140,6 +158,24 @@
           ]
         }
       ],
+      "path-id": "path-xyz"
+    },
+    {
+      "id": "path-xyz-user-reverse",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-direction": -1,
       "path-id": "path-xyz"
     },
     {
@@ -160,6 +196,24 @@
       "path-id": "path-xz"
     },
     {
+      "id": "path-xz-user-reverse",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-direction": -1,
+      "path-id": "path-xz"
+    },
+    {
       "id": "path-yz-user",
       "entities": [
         {
@@ -174,6 +228,24 @@
           ]
         }
       ],
+      "path-id": "path-yz"
+    },
+    {
+      "id": "path-yz-user-reverse",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-direction": -1,
       "path-id": "path-yz"
     }
   ],
