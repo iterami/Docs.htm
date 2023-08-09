@@ -177,8 +177,8 @@ function repo_init(){
               'id': 'core_html-element',
             },
           },
-          'expect': function(returned){
-              return document.getElementById('core_html-element') === returned;
+          'expect': function(result){
+              return document.getElementById('core_html-element') === result;
           },
           'function': 'core_html',
         },
@@ -196,7 +196,7 @@ function repo_init(){
               'id': 'core_html_modify-element',
             },
           },
-          'expect': function(returned){
+          'expect': function(result){
               if(document.getElementById('core_html_modify-element')){
                   return true;
               }

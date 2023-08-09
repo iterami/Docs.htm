@@ -38,6 +38,16 @@ function repo_init(){
             'decimals': 0,
             'number': 123.456,
           },
+          'expect': function(result){
+              return result === 123;
+          },
+          'function': 'core_round',
+        },
+        {
+          'args': {
+            'decimals': 0,
+            'number': 123.456,
+          },
           'expect': 'wrong',
           'function': 'core_round',
         },
