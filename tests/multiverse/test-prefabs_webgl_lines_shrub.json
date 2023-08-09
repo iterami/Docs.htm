@@ -33,7 +33,29 @@
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
         "character": "test-lines-shrub",
-        "prefix": "humanoid",
+        "prefix": "shrub-0",
+        "color-base": [
+          0.3, 0.15, 0
+        ],
+        "color-leaf": [
+          0, 1, 0
+        ],
+        "leaf-distance": 10,
+        "translate-x": -20,
+        "translate-y": -10,
+        "translate-z": -20,
+        "points": 100,
+        "x-max": 10,
+        "x-min": -10,
+        "y-max": 10,
+        "z-max": 10,
+        "z-min": -10
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
+        "character": "test-lines-shrub",
         "color-base": [
           0.3, 0.15, 0
         ],
@@ -42,11 +64,63 @@
         ],
         "leaf-distance": 10,
         "points": 100,
-        "x-max": 10,
-        "x-min": -10,
-        "y-max": 10,
-        "z-max": 10,
-        "z-min": -10
+        "prefix": "shrub-1",
+        "translate-x": 20,
+        "translate-y": -10,
+        "translate-z": -20,
+        "x-max": 5,
+        "x-min": -5,
+        "y-max": 30,
+        "z-max": 5,
+        "z-min": -5
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
+        "character": "test-lines-shrub",
+        "color-base": [
+          0.3, 0.15, 0
+        ],
+        "color-leaf": [
+          0, 1, 0
+        ],
+        "leaf-distance": 10,
+        "points": 25,
+        "prefix": "shrub-2",
+        "translate-x": -20,
+        "translate-y": -10,
+        "translate-z": 20,
+        "type": "offset",
+        "x-max": 4,
+        "x-min": -4,
+        "y-max": 4,
+        "z-max": 4,
+        "z-min": -4
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
+        "character": "test-lines-shrub",
+        "color-base": [
+          0.3, 0.15, 0
+        ],
+        "color-leaf": [
+          0, 1, 0
+        ],
+        "draw-mode": "TRIANGLE_FAN",
+        "leaf-distance": 10,
+        "points": 100,
+        "prefix": "shrub-3",
+        "translate-x": 20,
+        "translate-y": -10,
+        "translate-z": 20,
+        "x-max": 5,
+        "x-min": -5,
+        "y-max": 30,
+        "z-max": 5,
+        "z-min": -5
       }
     }
   ]
