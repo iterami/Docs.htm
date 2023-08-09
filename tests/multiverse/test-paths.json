@@ -1,25 +1,27 @@
 {
   "title": "Paths Test",
+  "spawn-translate-y": 10,
+  "spawn-translate-z": 10,
   "paths": {
     "path-xy": {
       "end": "loop",
       "points": [
         {
           "translate-x": 0,
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": 0
         },
         {
           "translate-x": 10,
-          "translate-y": 0
+          "translate-y": 5
         },
         {
           "translate-x": 10,
-          "translate-y": 10
+          "translate-y": 15
         },
         {
           "translate-x": 0,
-          "translate-y": 10
+          "translate-y": 15
         }
       ],
       "speed": 0.5
@@ -29,22 +31,22 @@
       "points": [
         {
           "translate-x": 0,
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": 0
         },
         {
           "translate-x": 0,
-          "translate-y": 10,
+          "translate-y": 15,
           "translate-z": 0
         },
         {
           "translate-x": 10,
-          "translate-y": 10,
+          "translate-y": 15,
           "translate-z": -10
         },
         {
           "translate-x": 10,
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": -10
         }
       ],
@@ -55,7 +57,7 @@
       "points": [
         {
           "translate-x": 0,
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": 0
         },
         {
@@ -78,19 +80,19 @@
       "points": [
         {
           "translate-x": 0,
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": 0
         },
         {
-          "translate-y": 10,
+          "translate-y": 15,
           "translate-z": 0
         },
         {
-          "translate-y": 10,
+          "translate-y": 15,
           "translate-z": -10
         },
         {
-          "translate-y": 0,
+          "translate-y": 5,
           "translate-z": -10
         }
       ],
@@ -103,7 +105,6 @@
       "entities": [
         {
           "id": "base",
-          "attach-offset-y": -10,
           "texture-id": "grid.png",
           "texture-repeat-x": 20,
           "texture-repeat-y": 20,
@@ -126,14 +127,15 @@
       "id": "path-xy-user",
       "entities": [
         {
+          "id": "path-xy-user-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -143,14 +145,15 @@
       "id": "path-xy-user-reverse",
       "entities": [
         {
+          "id": "path-xy-user-reverse-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -161,14 +164,15 @@
       "id": "path-xyz-user",
       "entities": [
         {
+          "id": "path-xyz-user-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -178,14 +182,15 @@
       "id": "path-xyz-user-reverse",
       "entities": [
         {
+          "id": "path-xyz-user-reverse-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -196,14 +201,15 @@
       "id": "path-xz-user",
       "entities": [
         {
+          "id": "path-xz-user-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -213,14 +219,15 @@
       "id": "path-xz-user-reverse",
       "entities": [
         {
+          "id": "path-xz-user-reverse-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -231,14 +238,15 @@
       "id": "path-yz-user",
       "entities": [
         {
+          "id": "path-yz-user-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],
@@ -248,14 +256,15 @@
       "id": "path-yz-user-reverse",
       "entities": [
         {
+          "id": "path-yz-user-reverse-body",
+          "billboard": ["y"],
           "collision": false,
-          "rotate-x": 90,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ],

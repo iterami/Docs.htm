@@ -8,7 +8,6 @@
       "entities": [
         {
           "id": "base",
-          "attach-offset-y": -10,
           "texture-id": "grid.png",
           "texture-repeat-x": 20,
           "texture-repeat-y": 20,

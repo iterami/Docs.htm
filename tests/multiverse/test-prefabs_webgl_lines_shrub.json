@@ -1,14 +1,12 @@
 {
   "title": "Lines Shrub Prefab Test",
   "spawn-translate-y": 10,
-  "spawn-translate-z": 10,
   "characters": [
     {
       "id": "test-lines-shrub",
       "entities": [
         {
           "id": "base",
-          "attach-offset-y": -10,
           "texture-id": "grid.png",
           "texture-repeat-x": 20,
           "texture-repeat-y": 20,
@@ -42,7 +40,6 @@
         ],
         "leaf-distance": 10,
         "translate-x": -20,
-        "translate-y": -10,
         "translate-z": -20,
         "points": 100,
         "x-max": 10,
@@ -66,7 +63,6 @@
         "points": 100,
         "prefix": "shrub-1",
         "translate-x": 20,
-        "translate-y": -10,
         "translate-z": -20,
         "x-max": 5,
         "x-min": -5,
@@ -89,7 +85,6 @@
         "points": 25,
         "prefix": "shrub-2",
         "translate-x": -20,
-        "translate-y": -10,
         "translate-z": 20,
         "type": "offset",
         "x-max": 4,
@@ -114,7 +109,6 @@
         "points": 100,
         "prefix": "shrub-3",
         "translate-x": 20,
-        "translate-y": -10,
         "translate-z": 20,
         "x-max": 5,
         "x-min": -5,
