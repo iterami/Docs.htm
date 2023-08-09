@@ -1,0 +1,49 @@
+{
+  "title": "Primitive Frustum Test",
+  "spawn-translate-y": 10,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-primitive-frustum",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_frustum",
+      "properties": {
+        "prefix": "test-primitive-frustum",
+        "character": "labs",
+        "color-top": [
+          0, 0, 1, 1
+        ],
+        "color-bottom": [
+          1, 0, 1, 1
+        ],
+        "length": 10,
+        "size-top": 5,
+        "size-bottom": 10,
+        "translate-y": 15
+      }
+    }
+  ]
+}
