@@ -1,0 +1,214 @@
+{
+  "title": "Paths Test",
+  "paths": {
+    "path-xy": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-x": 10
+        },
+        {
+          "translate-y": 10
+        },
+        {
+          "translate-x": 0
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-xyz": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-y": 10
+        },
+        {
+          "translate-x": 10,
+          "translate-z": -10
+        },
+        {
+          "translate-y": 0
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-xz": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-x": 10
+        },
+        {
+          "translate-z": -10
+        },
+        {
+          "translate-x": 0
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-yz": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": 0,
+          "translate-y": 0,
+          "translate-z": 0
+        },
+        {
+          "translate-y": 10
+        },
+        {
+          "translate-z": -10
+        },
+        {
+          "translate-y": 0
+        }
+      ],
+      "speed": 0.5
+    }
+  },
+  "characters": [
+    {
+      "id": "test-paths",
+      "entities": [
+        {
+          "id": "base",
+          "attach-offset-y": -10,
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path-xy-user",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-id": "path-xy"
+    },
+    {
+      "id": "path-xyz-user",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-id": "path-xyz"
+    },
+    {
+      "id": "path-xz-user",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-id": "path-xz"
+    },
+    {
+      "id": "path-yz-user",
+      "entities": [
+        {
+          "collision": false,
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "path-id": "path-yz"
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-xy",
+        "prefix": "lines-xy"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-xyz",
+        "prefix": "lines-xyz"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-xz",
+        "prefix": "lines-xz"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-yz",
+        "prefix": "lines-yz"
+      }
+    }
+  ]
+}
