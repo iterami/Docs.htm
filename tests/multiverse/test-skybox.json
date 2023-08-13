@@ -1,0 +1,46 @@
+{
+  "title": "Skybox Test",
+  "spawn-translate-y": 10,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-skybox",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "groups": [
+          "skybox"
+        ],
+        "prefix": "skybox",
+        "radius-x": -10,
+        "radius-y": -10,
+        "radius-z": -10,
+        "slices-latitude": 4,
+        "slices-longitude": 2
+      }
+    }
+  ]
+}
