@@ -33,12 +33,6 @@
       "properties": {
         "prefix": "test-primitive-frustum",
         "character": "labs",
-        "color-top": [
-          0, 0, 1, 1
-        ],
-        "color-bottom": [
-          1, 0, 1, 1
-        ],
         "length": 10,
         "size-top": 5,
         "size-bottom": 10,

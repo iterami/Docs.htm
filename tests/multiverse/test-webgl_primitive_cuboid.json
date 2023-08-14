@@ -33,13 +33,7 @@
       "properties": {
         "prefix": "cuboid",
         "all": {
-          "texture-id": "debug.png",
-          "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1
-          ]
+          "texture-id": "debug.png"
         },
         "character": "test-primitive-cuboid",
         "size-x": 5,

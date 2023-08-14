@@ -33,12 +33,6 @@
       "properties": {
         "prefix": "ellipsoid",
         "character": "test-primitive-ellipsoid",
-        "color0": [
-          0, 0, 1, 1
-        ],
-        "color1": [
-          1, 0, 1, 1
-        ],
         "radius-x": 15,
         "radius-y": 10,
         "radius-z": 5,
