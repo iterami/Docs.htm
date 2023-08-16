@@ -128,7 +128,7 @@
       "entities": [
         {
           "id": "path-xy-user-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -146,7 +146,7 @@
       "entities": [
         {
           "id": "path-xy-user-reverse-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -165,7 +165,7 @@
       "entities": [
         {
           "id": "path-xyz-user-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -183,7 +183,7 @@
       "entities": [
         {
           "id": "path-xyz-user-reverse-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -202,7 +202,7 @@
       "entities": [
         {
           "id": "path-xz-user-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -220,7 +220,7 @@
       "entities": [
         {
           "id": "path-xz-user-reverse-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -239,7 +239,7 @@
       "entities": [
         {
           "id": "path-yz-user-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -257,7 +257,7 @@
       "entities": [
         {
           "id": "path-yz-user-reverse-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [

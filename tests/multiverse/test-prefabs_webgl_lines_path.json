@@ -53,7 +53,7 @@
       "entities": [
         {
           "id": "path-user-body",
-          "billboard": ["y"],
+          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [

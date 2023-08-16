@@ -1,0 +1,113 @@
+{
+  "title": "Billboard Test",
+  "spawn-translate-y": 1,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-billboard",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        },
+        {
+          "id": "billboard-x",
+          "attach-offset-x": -15,
+          "attach-offset-y": 5,
+          "billboard": "x",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "billboard-xy",
+          "attach-offset-x": -10,
+          "attach-offset-y": 5,
+          "billboard": "xy",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "billboard-xyz",
+          "attach-offset-x": -5,
+          "attach-offset-y": 5,
+          "billboard": "xyz",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "billboard-y",
+          "attach-offset-y": 5,
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "billboard-yz",
+          "attach-offset-x": 5,
+          "attach-offset-y": 5,
+          "billboard": "yz",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "billboard-z",
+          "attach-offset-x": 10,
+          "attach-offset-y": 5,
+          "billboard": "z",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ]
+    }
+  ]
+}
