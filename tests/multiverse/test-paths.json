@@ -3,6 +3,82 @@
   "spawn-translate-y": 1,
   "spawn-translate-z": 10,
   "paths": {
+    "path-exit": {
+      "end": "exit",
+      "points": [
+        {
+          "translate-x": -20,
+          "translate-y": 5,
+          "translate-z": -15
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 5
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-loop": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": -20,
+          "translate-y": 5,
+          "translate-z": -16
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 5
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-reverse": {
+      "end": "reverse",
+      "points": [
+        {
+          "translate-x": -20,
+          "translate-y": 5,
+          "translate-z": -17
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 5
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
+    "path-warp": {
+      "end": "warp",
+      "points": [
+        {
+          "translate-x": -20,
+          "translate-y": 5,
+          "translate-z": -18
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 5
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
     "path-xy": {
       "end": "loop",
       "points": [
@@ -122,6 +198,78 @@
           ]
         }
       ]
+    },
+    {
+      "id": "path-exit-user",
+      "entities": [
+        {
+          "id": "path-exit-user-body",
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "path-id": "path-exit"
+    },
+    {
+      "id": "path-loop-user",
+      "entities": [
+        {
+          "id": "path-loop-user-body",
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "path-id": "path-loop"
+    },
+    {
+      "id": "path-reverse-user",
+      "entities": [
+        {
+          "id": "path-reverse-user-body",
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "path-id": "path-reverse"
+    },
+    {
+      "id": "path-warp-user",
+      "entities": [
+        {
+          "id": "path-warp-user-body",
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "path-id": "path-warp"
     },
     {
       "id": "path-xy-user",
@@ -273,6 +421,38 @@
     }
   ],
   "prefabs": [
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-exit",
+        "prefix": "lines-exit"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-loop",
+        "prefix": "lines-loop"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-reverse",
+        "prefix": "lines-reverse"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-warp",
+        "prefix": "lines-warp"
+      }
+    },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
