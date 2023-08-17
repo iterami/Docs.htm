@@ -39,6 +39,22 @@
         "size-x": 5,
         "size-y": 10,
         "size-z": 15,
+        "translate-x": -10,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid-inverse",
+        "all": {
+          "texture-id": "debug.png"
+        },
+        "character": "test-primitive-cuboid",
+        "size-x": -5,
+        "size-y": -10,
+        "size-z": -15,
+        "translate-x": 10,
         "translate-y": 5
       }
     }

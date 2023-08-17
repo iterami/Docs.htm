@@ -33,9 +33,22 @@
       "properties": {
         "prefix": "ellipsoid",
         "character": "test-primitive-ellipsoid",
-        "radius-x": 15,
+        "radius-x": 5,
         "radius-y": 10,
-        "radius-z": 5,
+        "radius-z": 15,
+        "translate-x": -10,
+        "translate-y": 15
+      }
+    },
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "prefix": "ellipsoid-inverse",
+        "character": "test-primitive-ellipsoid",
+        "radius-x": -5,
+        "radius-y": -10,
+        "radius-z": -15,
+        "translate-x": 10,
         "translate-y": 15
       }
     }
