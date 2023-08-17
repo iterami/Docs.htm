@@ -31,22 +31,22 @@
     {
       "type": "webgl_primitive_frustum",
       "properties": {
-        "prefix": "test-primitive-frustum",
         "character": "test-primitive-frustum",
         "length": 10,
-        "size-top": 5,
+        "prefix": "frustum",
         "size-bottom": 10,
+        "size-top": 5,
         "translate-x": -10
       }
     },
     {
       "type": "webgl_primitive_frustum",
       "properties": {
-        "prefix": "test-primitive-frustum-inverse",
         "character": "test-primitive-frustum",
         "length": 10,
-        "size-top": -5,
+        "prefix": "frustum-inverse",
         "size-bottom": -10,
+        "size-top": -5,
         "translate-x": 10
       }
     }

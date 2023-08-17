@@ -31,7 +31,7 @@
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
         "character": "test-lines-shrub",
-        "prefix": "shrub-0",
+        "prefix": "shrub-short",
         "color-base": [
           0.3, 0.15, 0
         ],
@@ -39,9 +39,9 @@
           0, 1, 0
         ],
         "leaf-distance": 10,
+        "points": 100,
         "translate-x": -20,
         "translate-z": -20,
-        "points": 100,
         "x-max": 10,
         "x-min": -10,
         "y-max": 10,
@@ -61,7 +61,7 @@
         ],
         "leaf-distance": 10,
         "points": 100,
-        "prefix": "shrub-1",
+        "prefix": "shrub-tall",
         "translate-x": 20,
         "translate-z": -20,
         "x-max": 5,
@@ -83,7 +83,7 @@
         ],
         "leaf-distance": 10,
         "points": 25,
-        "prefix": "shrub-2",
+        "prefix": "shrub-line",
         "translate-x": -20,
         "translate-z": 20,
         "type": "offset",
@@ -107,7 +107,7 @@
         "draw-mode": "TRIANGLE_FAN",
         "leaf-distance": 10,
         "points": 100,
-        "prefix": "shrub-3",
+        "prefix": "shrub-filled",
         "translate-x": 20,
         "translate-z": 20,
         "x-max": 5,
