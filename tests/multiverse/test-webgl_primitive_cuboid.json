@@ -1,6 +1,6 @@
 {
   "title": "Primitive Cuboid Test",
-  "spawn-translate-y": 1,
+  "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "characters": [
     {
