@@ -7,16 +7,16 @@
       "end": "exit",
       "points": [
         {
-          "translate-x": -20,
+          "translate-x": -15,
           "translate-y": 5,
           "translate-z": -15
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 5
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 15
         }
       ],
@@ -26,16 +26,16 @@
       "end": "loop",
       "points": [
         {
-          "translate-x": -20,
+          "translate-x": -15,
           "translate-y": 5,
           "translate-z": -16
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 5
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 15
         }
       ],
@@ -45,16 +45,16 @@
       "end": "reverse",
       "points": [
         {
-          "translate-x": -20,
+          "translate-x": -15,
           "translate-y": 5,
           "translate-z": -17
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 5
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 15
         }
       ],
@@ -64,16 +64,16 @@
       "end": "warp",
       "points": [
         {
-          "translate-x": -20,
+          "translate-x": -15,
           "translate-y": 5,
           "translate-z": -18
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 5
         },
         {
-          "translate-x": 20,
+          "translate-x": 15,
           "translate-y": 15
         }
       ],
@@ -215,6 +215,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-exit"
     },
     {
@@ -233,6 +234,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-loop"
     },
     {
@@ -251,6 +253,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-reverse"
     },
     {
@@ -269,6 +272,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-warp"
     },
     {
@@ -287,6 +291,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-xy"
     },
     {
@@ -305,6 +310,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-direction": -1,
       "path-id": "path-xy"
     },
@@ -324,6 +330,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-xyz"
     },
     {
@@ -342,6 +349,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-direction": -1,
       "path-id": "path-xyz"
     },
@@ -361,6 +369,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-xz"
     },
     {
@@ -379,6 +388,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-direction": -1,
       "path-id": "path-xz"
     },
@@ -398,6 +408,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-id": "path-yz"
     },
     {
@@ -416,6 +427,7 @@
           ]
         }
       ],
+      "level": 1,
       "path-direction": -1,
       "path-id": "path-yz"
     }
