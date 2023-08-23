@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Keyboard Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Keyboard
+<table>
+  <thead>
+    <tr class=header>
+      <td>Keycode
+      <td>Key
+      <td>loop
+      <td>preventDefault
+      <td>solo
+      <td>state
+  </thead>
+  <tbody id=keys></tbody>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+
+    core_interval_modify({
+      'id': 'interval',
+      'interval': 50,
+      'todo': update_keys,
+    });
+}
+
+function update_keys(){
+    let keys_html = '';
+    for(const key in core_keys){
+        keys_html += '<tr><td>' + String.fromCharCode(key)
+          + '<td>' + key
+          + '<td>' + core_keys[key]['loop']
+          + '<td>' + core_keys[key]['preventDefault']
+          + '<td>' + core_keys[key]['solo']
+          + '<td>' + core_keys[key]['state'];
+    }
+    document.getElementById('keys').innerHTML = keys_html;
+}
+</script>
+
