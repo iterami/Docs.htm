@@ -22,12 +22,27 @@
 <script>
 function repo_init(){
     core_repo_init({
+      'keybinds': {
+        'all': {
+          'todo': function(event){
+              if(!core_keys[event.keyCode]){
+                  core_keys[event.keyCode] = {
+                    'loop': false,
+                    'preventDefault': false,
+                    'solo': false,
+                    'state': false,
+                    'todo': function(){},
+                  };
+              }
+          },
+        },
+      },
       'title': 'Docs.htm',
     });
 
     core_interval_modify({
       'id': 'interval',
-      'interval': 50,
+      'interval': 100,
       'todo': update_keys,
     });
 }
