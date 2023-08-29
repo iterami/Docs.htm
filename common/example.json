@@ -120,6 +120,8 @@
           "event-range": false,
           "event-target-id": "_me",
           "event-target-type": "character",
+          "event-todo": false,
+          "event-todo-args": void 0,
           "gravity": false,
           "path-direction": 1,
           "path-end": "default",

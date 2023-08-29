@@ -233,14 +233,14 @@
           // Optional. How the vertices should be drawn.
           "draw-mode": "TRIANGLE_FAN",
 
-          // Optional. Array of stat modifications to use upon successful event trigger.
+          // Optional. Array of stats to modify when event is triggered.
           "event-modify": [
             {
               // Optional. If this event should affect this entity or the one that triggered it.
               "self": false,
 
               // Optional. If this event should set the stat to a specific value,
-              //   or modify the stat by a specific value.
+              //   or add to the stat by a specific value.
               "set": false,
 
               // REQUIRED. ID of the stat that will be modified.
@@ -266,6 +266,12 @@
 
           // Optional. Type required to trigger event, either "character" or "entity".
           "event-target-type": "character",
+
+          // Optional. Function that should be run during triggered events.
+          "event-todo": false,
+
+          // Optional. Optional args that should be passed to the todo function.
+          "event-todo-args": void 0,
 
           // Optional. If this entity is affected by gravity.
           "gravity": false,
