@@ -267,10 +267,13 @@
           // Optional. Type required to trigger event, either "character" or "entity".
           "event-target-type": "character",
 
-          // Optional. Function that should be run during triggered events.
+          // Optional. String name of a function to run with "event-todo-args" passed,
+          //   or string name of a variable that has its value changed to "event-todo-args",
+          //   or false for no action.
           "event-todo": false,
 
-          // Optional. Optional args that should be passed to the todo function.
+          // Optional. Optional args that should be passed to the todo function
+          //   or the new value of the todo variable.
           "event-todo-args": void 0,
 
           // Optional. If this entity is affected by gravity.
