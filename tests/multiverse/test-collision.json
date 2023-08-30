@@ -1,0 +1,22 @@
+{
+  "title": "Collision Test",
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-collision"
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "collision",
+        "character": "test-collision",
+        "size-x": -20,
+        "size-y": -20,
+        "size-z": -20,
+        "translate-y": 10
+      }
+    }
+  ]
+}
