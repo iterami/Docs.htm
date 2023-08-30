@@ -104,6 +104,7 @@
         {
           "id": "pick-color",
           "attach-offset-z": -50,
+          "collision": false,
           "event-modify": [
             {
               "self": true,
