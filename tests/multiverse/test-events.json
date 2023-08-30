@@ -1,0 +1,68 @@
+{
+  "title": "Events Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-events",
+      "entities": [
+        {
+          "id": "base",
+          "attach-offset-y": -10,
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        },
+        {
+          "id": "door",
+          "attach-offset-z": -20,
+          "event-modify": [
+            {
+              "set": true,
+              "stat": "translate-x",
+              "value": 0
+            },
+            {
+              "set": true,
+              "stat": "translate-y",
+              "value": 3
+            },
+            {
+              "set": true,
+              "stat": "translate-z",
+              "value": 0
+            }
+          ],
+          "event-range": 0,
+          "pick-color": [0, 0, 1],
+          "rotate-x": 90,
+          "texture-id": "door.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ],
+          "vertices": [
+            5, 0, -10,
+            -5, 0, -10,
+            -5, 0, 10,
+            5, 0, 10
+          ]
+        }
+      ]
+    }
+  ]
+}
