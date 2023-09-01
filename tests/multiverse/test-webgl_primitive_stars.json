@@ -43,7 +43,9 @@
         "character": "test-primitive-stars",
         "prefix": "full",
         "radius": 10,
-        "translate-x": -20
+        "range": 0,
+        "translate-x": -15,
+        "translate-y": 10
       }
     },
     {
@@ -53,7 +55,9 @@
         "half": true,
         "prefix": "half",
         "radius": 10,
-        "translate-x": 20
+        "range": 0,
+        "translate-x": 15,
+        "translate-y": 10
       }
     }
   ]
