@@ -36,6 +36,25 @@
         ],
         "prefix": "skybox"
       }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "prefix": "full",
+        "radius": 10,
+        "translate-x": -20
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "half": true,
+        "prefix": "half",
+        "radius": 10,
+        "translate-x": 20
+      }
     }
   ]
 }
