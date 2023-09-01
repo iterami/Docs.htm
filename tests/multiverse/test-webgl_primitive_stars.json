@@ -41,6 +41,7 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
+        "color": false,
         "prefix": "full",
         "radius": 10,
         "range": 0,
@@ -52,6 +53,7 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
+        "color": false,
         "half": true,
         "prefix": "half",
         "radius": 10,
