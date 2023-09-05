@@ -33,6 +33,7 @@
       "properties": {
         "prefix": "boost",
         "all": {
+          "collision": false,
           "texture-id": "boost.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -54,6 +55,7 @@
       "properties": {
         "prefix": "debug",
         "all": {
+          "collision": false,
           "texture-id": "debug.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -75,6 +77,7 @@
       "properties": {
         "prefix": "default",
         "all": {
+          "collision": false,
           "texture-id": "default.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -95,6 +98,7 @@
       "properties": {
         "prefix": "door",
         "all": {
+          "collision": false,
           "texture-id": "door.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -116,6 +120,7 @@
       "properties": {
         "prefix": "goal",
         "all": {
+          "collision": false,
           "texture-id": "goal.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -137,6 +142,7 @@
       "properties": {
         "prefix": "grid",
         "all": {
+          "collision": false,
           "texture-id": "grid.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -159,6 +165,7 @@
       "properties": {
         "prefix": "key",
         "all": {
+          "collision": false,
           "texture-id": "key.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -181,6 +188,7 @@
       "properties": {
         "prefix": "lavaleaf",
         "all": {
+          "collision": false,
           "texture-id": "lavaleaf.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -202,6 +210,7 @@
       "properties": {
         "prefix": "stone",
         "all": {
+          "collision": false,
           "texture-id": "stone.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -224,6 +233,7 @@
       "properties": {
         "prefix": "wall",
         "all": {
+          "collision": false,
           "texture-id": "wall.png",
           "vertex-colors": [
             1, 1, 1, 1,
@@ -246,6 +256,7 @@
       "properties": {
         "prefix": "wood",
         "all": {
+          "collision": false,
           "texture-id": "wood.png",
           "vertex-colors": [
             1, 1, 1, 1,
