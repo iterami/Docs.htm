@@ -1,0 +1,267 @@
+{
+  "title": "Textures Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-textures",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "boost",
+        "all": {
+          "texture-id": "boost.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "debug",
+        "all": {
+          "texture-id": "debug.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -10,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "default",
+        "all": {
+          "texture-id": "default.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "door",
+        "all": {
+          "texture-id": "door.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 10,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "goal",
+        "all": {
+          "texture-id": "goal.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 20,
+        "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "grid",
+        "all": {
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 5,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "key",
+        "all": {
+          "texture-id": "key.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -10,
+        "translate-y": 5,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "lavaleaf",
+        "all": {
+          "texture-id": "lavaleaf.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 5,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "stone",
+        "all": {
+          "texture-id": "stone.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 10,
+        "translate-y": 5,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "wall",
+        "all": {
+          "texture-id": "wall.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 20,
+        "translate-y": 5,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "wood",
+        "all": {
+          "texture-id": "wood.png",
+          "vertex-colors": [
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1,
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 5,
+        "translate-z": -20
+      }
+    }
+  ]
+}
