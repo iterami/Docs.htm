@@ -1,0 +1,42 @@
+{
+  "title": "Alpha Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-alpha"
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "solid",
+        "all": {
+          "texture-id": "grid.png"
+        },
+        "character": "test-alpha",
+        "size-x": -20,
+        "size-y": -20,
+        "size-z": -20,
+        "translate-y": 10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "transparent",
+        "all": {
+          "alpha": 0.5,
+          "collision": false,
+          "texture-id": "grid.png"
+        },
+        "character": "test-alpha",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 10
+      }
+    }
+  ]
+}
