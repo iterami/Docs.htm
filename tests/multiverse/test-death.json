@@ -1,0 +1,37 @@
+{
+  "title": "Death Test",
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-death",
+      "entities": [
+        {
+          "id": "base",
+          "event-modify": [
+            {
+              "set": true,
+              "stat": "health-current",
+              "value": 0
+            }
+          ],
+          "event-range": 0,
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.4, 0.2, 0.2, 1,
+            0.4, 0.2, 0.2, 1,
+            0.4, 0.2, 0.2, 1,
+            0.4, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ]
+}

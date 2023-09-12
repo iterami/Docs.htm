@@ -1,0 +1,31 @@
+{
+  "title": "Fog Test",
+  "fog-density": 0.001,
+  "fog-state": true,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-fog",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ]
+}
