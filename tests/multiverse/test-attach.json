@@ -1,0 +1,50 @@
+{
+  "title": "Attach Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-attach",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spinner",
+      "change-rotate-y": 10,
+      "translate-y": 10
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid",
+        "all": {
+          "texture-id": "debug.png"
+        },
+        "character": "spinner",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5
+      }
+    }
+  ]
+}
