@@ -31,6 +31,16 @@
           "event-modify": [
             {
               "set": true,
+              "stat": "camera-rotate-y",
+              "value": 0
+            },
+            {
+              "set": true,
+              "stat": "rotate-y",
+              "value": 0
+            },
+            {
+              "set": true,
               "stat": "translate-x",
               "value": 0
             },
