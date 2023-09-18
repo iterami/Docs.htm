@@ -1,0 +1,63 @@
+{
+  "title": "Attach Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-attach",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parent",
+      "change-rotate-y": 5,
+      "entities": [
+        {
+          "id": "body",
+          "attach-offset-y": 2,
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "attached",
+          "attach-offset-x": 10,
+          "attach-offset-y": 2,
+          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ]
+    }
+  ]
+}
