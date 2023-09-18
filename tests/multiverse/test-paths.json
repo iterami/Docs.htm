@@ -10,7 +10,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -15
+          "translate-z": -16
         },
         {
           "translate-x": 15,
@@ -29,7 +29,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -16
+          "translate-z": -17
         },
         {
           "translate-x": 15,
@@ -48,7 +48,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -17
+          "translate-z": -18
         },
         {
           "translate-x": 15,
@@ -67,7 +67,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -18
+          "translate-z": -19
         },
         {
           "translate-x": 15,
@@ -114,12 +114,12 @@
         {
           "translate-x": -5,
           "translate-y": 15,
-          "translate-z": 0
+          "translate-z": 5
         },
         {
           "translate-x": 15,
           "translate-y": 15,
-          "translate-z": -10
+          "translate-z": -15
         },
         {
           "translate-x": 10,
