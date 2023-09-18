@@ -27,13 +27,12 @@
       ]
     },
     {
-      "id": "parent",
-      "change-rotate-y": 5,
+      "id": "rotate-x",
+      "change-rotate-x": 5,
       "entities": [
         {
-          "id": "body",
+          "id": "body-x",
           "attach-offset-y": 2,
-          "billboard": "y",
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -44,10 +43,74 @@
           ]
         },
         {
-          "id": "attached",
+          "id": "attached-x",
           "attach-offset-x": 10,
           "attach-offset-y": 2,
-          "billboard": "y",
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "translate-x": -15,
+      "translate-z": -15
+    },
+    {
+      "id": "rotate-y",
+      "change-rotate-y": 5,
+      "entities": [
+        {
+          "id": "body-y",
+          "attach-offset-y": 2,
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "attached-y",
+          "attach-offset-x": 10,
+          "attach-offset-y": 2,
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ],
+      "translate-z": -15
+    },
+    {
+      "id": "rotate-z",
+      "change-rotate-z": 5,
+      "entities": [
+        {
+          "id": "body-z",
+          "attach-offset-y": 2,
+          "collision": false,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "attached-z",
+          "attach-offset-x": 10,
+          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
