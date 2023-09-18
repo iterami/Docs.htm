@@ -2,6 +2,7 @@
   "title": "Fog Test",
   "fog-density": 0.001,
   "fog-state": true,
+  "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "characters": [
     {

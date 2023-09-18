@@ -1,5 +1,6 @@
 {
   "title": "Primitive Stars Test",
+  "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "characters": [

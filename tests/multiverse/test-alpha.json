@@ -1,5 +1,6 @@
 {
   "title": "Alpha Test",
+  "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "characters": [
@@ -16,9 +17,9 @@
           "texture-id": "grid.png"
         },
         "character": "test-alpha",
-        "size-x": -20,
-        "size-y": -20,
-        "size-z": -20,
+        "size-x": -25,
+        "size-y": -25,
+        "size-z": -25,
         "translate-y": 10
       }
     },
@@ -32,9 +33,9 @@
           "texture-id": "grid.png"
         },
         "character": "test-alpha",
-        "size-x": 5,
-        "size-y": 5,
-        "size-z": 5,
+        "size-x": 10,
+        "size-y": 10,
+        "size-z": 10,
         "translate-y": 10
       }
     }

@@ -1,5 +1,6 @@
 {
   "title": "Attach Test",
+  "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "characters": [
@@ -32,7 +33,6 @@
       "entities": [
         {
           "id": "body-x",
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -45,7 +45,6 @@
         {
           "id": "attached-x",
           "attach-offset-x": 10,
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -57,6 +56,7 @@
         }
       ],
       "translate-x": -15,
+      "translate-y": 2,
       "translate-z": -15
     },
     {
@@ -65,7 +65,6 @@
       "entities": [
         {
           "id": "body-y",
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -78,7 +77,6 @@
         {
           "id": "attached-y",
           "attach-offset-x": 10,
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -89,6 +87,7 @@
           ]
         }
       ],
+      "translate-y": 2,
       "translate-z": -15
     },
     {
@@ -97,7 +96,6 @@
       "entities": [
         {
           "id": "body-z",
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -110,7 +108,6 @@
         {
           "id": "attached-z",
           "attach-offset-x": 10,
-          "attach-offset-y": 2,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -122,6 +119,7 @@
         }
       ],
       "translate-x": 15,
+      "translate-y": 2,
       "translate-z": -15
     }
   ]
