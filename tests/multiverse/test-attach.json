@@ -57,7 +57,9 @@
             2, 0, 2
           ]
         }
-      ]
+      ],
+      "translate-x": 15,
+      "translate-z": -15
     }
   ]
 }
