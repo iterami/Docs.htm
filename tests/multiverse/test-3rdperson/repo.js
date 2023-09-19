@@ -75,5 +75,4 @@ function repo_init(){
       'info': '<input id=new-game type=button value="New Game">',
       'title': 'Docs.htm',
     });
-    webgl_storage_init();
 }
