@@ -1,0 +1,51 @@
+{
+  "title": "Prefab Repeat Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-prefab-repeat",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1,
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            20, 0, -20,
+            -20, 0, -20,
+            -20, 0, 20,
+            20, 0, 20
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_prefab_repeat",
+      "properties": {
+        "type": "prefabs_webgl_tree_2d",
+        "count": 100,
+        "properties": {
+          "character": "test-prefab-repeat",
+          "height": 25,
+          "leaf-bottom": 5,
+          "width-base": 6,
+          "width-leaf": 20
+        },
+        "x-max": 100,
+        "x-min": -100,
+        "z-max": 100,
+        "z-min": -100
+      }
+    }
+  ]
+}
