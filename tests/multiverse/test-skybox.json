@@ -42,6 +42,19 @@
         "slices-latitude": 4,
         "slices-longitude": 2
       }
+    },
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "character": "test-skybox",
+        "prefix": "skybox-unattached",
+        "radius-x": -10,
+        "radius-y": -10,
+        "radius-z": -10,
+        "slices-latitude": 4,
+        "slices-longitude": 2,
+        "translate-y": 10
+      }
     }
   ]
 }
