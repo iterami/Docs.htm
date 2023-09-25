@@ -16,9 +16,6 @@ function new_game(){
                 'texture-repeat-x': 20,
                 'texture-repeat-y': 20,
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
-                  0.2, 0.2, 0.2, 1,
-                  0.2, 0.2, 0.2, 1,
                   0.2, 0.2, 0.2, 1
                 ],
                 'vertices': [

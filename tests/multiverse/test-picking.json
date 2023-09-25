@@ -14,9 +14,6 @@
           "texture-repeat-x": 20,
           "texture-repeat-y": 20,
           "vertex-colors": [
-            0.2, 0.2, 0.2, 1,
-            0.2, 0.2, 0.2, 1,
-            0.2, 0.2, 0.2, 1,
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
@@ -61,9 +58,6 @@
           "pick-color": [0, 1, 1],
           "rotate-x": 90,
           "vertex-colors": [
-            1, 0, 0, 1,
-            1, 0, 0, 1,
-            1, 0, 0, 1,
             1, 0, 0, 1
           ],
           "vertices": [
@@ -90,9 +84,6 @@
           "pick-color": [1, 1, 0],
           "rotate-x": 90,
           "vertex-colors": [
-            0, 0, 1, 1,
-            0, 0, 1, 1,
-            0, 0, 1, 1,
             0, 0, 1, 1
           ],
           "vertices": [
@@ -119,9 +110,6 @@
           "texture-repeat-x": 10,
           "texture-repeat-y": 2,
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ],
           "vertices": [

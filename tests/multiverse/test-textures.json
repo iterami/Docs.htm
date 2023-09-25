@@ -13,9 +13,6 @@
           "texture-repeat-x": 20,
           "texture-repeat-y": 20,
           "vertex-colors": [
-            0.2, 0.2, 0.2, 1,
-            0.2, 0.2, 0.2, 1,
-            0.2, 0.2, 0.2, 1,
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
@@ -37,9 +34,6 @@
           "collision": false,
           "texture-id": "boost.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -59,9 +53,6 @@
           "collision": false,
           "texture-id": "debug.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -81,9 +72,6 @@
           "collision": false,
           "texture-id": "default.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -102,9 +90,6 @@
           "collision": false,
           "texture-id": "door.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -124,9 +109,6 @@
           "collision": false,
           "texture-id": "goal.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -146,9 +128,6 @@
           "collision": false,
           "texture-id": "grid.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -169,9 +148,6 @@
           "collision": false,
           "texture-id": "key.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -192,9 +168,6 @@
           "collision": false,
           "texture-id": "lavaleaf.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -214,9 +187,6 @@
           "collision": false,
           "texture-id": "stone.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -237,9 +207,6 @@
           "collision": false,
           "texture-id": "wall.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
@@ -260,9 +227,6 @@
           "collision": false,
           "texture-id": "wood.png",
           "vertex-colors": [
-            1, 1, 1, 1,
-            1, 1, 1, 1,
-            1, 1, 1, 1,
             1, 1, 1, 1
           ]
         },
