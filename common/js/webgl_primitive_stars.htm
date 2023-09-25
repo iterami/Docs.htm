@@ -9,6 +9,7 @@
   <li>Randomly creates points on a sphere.
   <li>Translation is the center of the sphere.
   <li>If the "color" arg is false then a random color will be used for each point.
+  <li>The "radian" arg is used to determine on how much of the sphere points can be placed. For example: 2 would be the full sphere and 1 would be only half.
 </ul>
 <table>
   <tr class=header>
@@ -28,13 +29,13 @@
     <td>[]
     <td>array of string IDs
   <tr>
-    <td>half
-    <td>false
-    <td>boolean
-  <tr>
     <td>prefix
     <td>entity_id_count
     <td>number or string
+  <tr>
+    <td>radian
+    <td>2
+    <td>number
   <tr>
     <td>radius
     <td>250

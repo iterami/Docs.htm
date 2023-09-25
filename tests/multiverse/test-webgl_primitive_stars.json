@@ -39,7 +39,6 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "color": false,
         "prefix": "full",
         "radius": 10,
         "range": 0,
@@ -51,13 +50,24 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "color": false,
-        "half": true,
         "prefix": "half",
+        "radian": 1,
         "radius": 10,
         "range": 0,
         "translate-x": 15,
         "translate-y": 10
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "prefix": "quarter",
+        "radian": 0.5,
+        "radius": 10,
+        "range": 0,
+        "translate-y": 10,
+        "translate-z": -30
       }
     }
   ]
