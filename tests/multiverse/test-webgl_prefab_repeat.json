@@ -33,7 +33,8 @@
         "count": 100,
         "properties": {
           "character": "test-prefab-repeat",
-          "height": 25,
+          "height": 20,
+          "height-range": 20,
           "leaf-bottom": 5,
           "width-base": 6,
           "width-leaf": 20

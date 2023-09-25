@@ -30,7 +30,8 @@
       "type": "prefabs_webgl_tree_2d",
       "properties": {
         "character": "test-tree-2d",
-        "height": 25,
+        "height": 10,
+        "height-range": 20,
         "leaf-bottom": 5,
         "prefix": "tree",
         "width-base": 6,
