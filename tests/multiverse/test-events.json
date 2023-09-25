@@ -24,18 +24,36 @@
           ]
         },
         {
-          "id": "door",
+          "id": "respawn",
           "attach-offset-z": -20,
+          "event-todo": "webgl_character_spawn",
+          "event-range": 0,
+          "pick-color": [0, 0, 1],
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ],
+          "vertices": [
+            5, 0, -10,
+            -5, 0, -10,
+            -5, 0, 10,
+            5, 0, 10
+          ]
+        },
+        {
+          "id": "set",
+          "attach-offset-x": -20,
           "event-modify": [
             {
               "set": true,
               "stat": "camera-rotate-y",
-              "value": 0
+              "value": 270
             },
             {
               "set": true,
               "stat": "rotate-y",
-              "value": 0
+              "value": 270
             },
             {
               "set": true,
@@ -45,7 +63,7 @@
             {
               "set": true,
               "stat": "translate-y",
-              "value": 3
+              "value": 20
             },
             {
               "set": true,
@@ -54,17 +72,17 @@
             }
           ],
           "event-range": 0,
-          "pick-color": [0, 0, 1],
-          "rotate-x": 90,
-          "texture-id": "door.png",
+          "pick-color": [0, 1, 0],
+          "rotate-z": 270,
+          "texture-id": "grid.png",
           "vertex-colors": [
             1, 1, 1, 1
           ],
           "vertices": [
-            5, 0, -10,
-            -5, 0, -10,
-            -5, 0, 10,
-            5, 0, 10
+            10, 0, -5,
+            -10, 0, -5,
+            -10, 0, 5,
+            10, 0, 5
           ]
         }
       ]

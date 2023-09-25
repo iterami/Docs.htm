@@ -121,7 +121,7 @@
           "event-target-id": "_me",
           "event-target-type": "character",
           "event-todo": false,
-          "event-todo-args": null,
+          "event-todo-args": {},
           "gravity": false,
           "path-direction": 1,
           "path-end": "default",
