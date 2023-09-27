@@ -42,8 +42,7 @@
     <li><a href=webgl_entity_todo.htm>webgl_entity_todo(entity)</a>
     <li><a href=webgl_event.htm>webgl_event(args)</a>
     <li><a href=webgl_extension.htm>webgl_extension(args)</a>
-    <li><a href=webgl_getContext_2d.htm>webgl_getContext_2d(args)</a>
-    <li><a href=webgl_getContext_webgl.htm>webgl_getContext_webgl(args)</a>
+    <li><a href=webgl_getContext.htm>webgl_getContext(args)</a>
     <li><a href=webgl_get_translation.htm>webgl_get_translation(args)</a>
     <li><a href=webgl_init.htm>webgl_init(args)</a>
     <li><a href=webgl_level_export.htm>webgl_level_export()</a>
@@ -101,13 +100,9 @@
     <td>Default
     <td>Type
   <tr>
-    <td>webgl_buffer
+    <td>webgl
     <td>0
-    <td>placeholder, CanvasRenderingContext2D
-  <tr>
-    <td>webgl_canvas
-    <td>0
-    <td>placeholder, CanvasRenderingContext2D
+    <td>placeholder, WebGL2RenderingContext
   <tr>
     <td>webgl_character_count
     <td>0
@@ -152,10 +147,6 @@
     <td>webgl_shaders
     <td>false
     <td>boolean false or object
-  <tr>
-    <td>webgl_text
-    <td>{}
-    <td>object
 </table>
 <table id=webgl-properties>
   <tr class=header>
@@ -182,22 +173,6 @@
     <td>camera-zoom-max
     <td>50
     <td>number
-  <tr>
-    <td>canvas
-    <td><pre>{
-  'fillStyle': '#fff',
-  'font': '200% monospace',
-  'height': 0,
-  'height-half': 0,
-  'lineJoin': 'miter',
-  'lineWidth': 1,
-  'strokeStyle': '#fff',
-  'textAlign': 'start',
-  'textBaseline': 'alphabetic',
-  'width': 0,
-  'width-half': 0,
-}</pre>
-    <td>object
   <tr>
     <td>clearcolor-blue
     <td>0
