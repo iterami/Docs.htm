@@ -32,7 +32,6 @@
         "character": "test-tree-2d",
         "height": 10,
         "height-range": 20,
-        "leaf-bottom": 5,
         "prefix": "tree",
         "width-base": 6,
         "width-leaf": 20

@@ -35,7 +35,6 @@
           "character": "test-prefab-repeat",
           "height": 20,
           "height-range": 20,
-          "leaf-bottom": 5,
           "width-base": 6,
           "width-leaf": 20
         },
