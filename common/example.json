@@ -107,6 +107,7 @@
           "collision": true,
           "draw": true,
           "draw-mode": "TRIANGLE_FAN",
+          "event-limit": false,
           "event-modify": [
             {
               "self": false,

@@ -24,6 +24,51 @@
           ]
         },
         {
+          "id": "limit",
+          "attach-offset-x": 20,
+          "event-limit": 2,
+          "event-modify": [
+            {
+              "set": true,
+              "stat": "camera-rotate-y",
+              "value": 90
+            },
+            {
+              "set": true,
+              "stat": "rotate-y",
+              "value": 90
+            },
+            {
+              "set": true,
+              "stat": "translate-x",
+              "value": 0
+            },
+            {
+              "set": true,
+              "stat": "translate-y",
+              "value": 20
+            },
+            {
+              "set": true,
+              "stat": "translate-z",
+              "value": 0
+            }
+          ],
+          "event-range": 0,
+          "pick-color": [1, 0, 0],
+          "rotate-z": 90,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ],
+          "vertices": [
+            10, 0, -5,
+            -10, 0, -5,
+            -10, 0, 5,
+            10, 0, 5
+          ]
+        },
+        {
           "id": "respawn",
           "attach-offset-z": -20,
           "event-todo": "webgl_character_spawn",
