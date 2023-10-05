@@ -41,7 +41,7 @@
         },
         {
           "id": "attached-x",
-          "attach-offset-x": 10,
+          "attach-x": 10,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -73,7 +73,7 @@
         },
         {
           "id": "attached-y",
-          "attach-offset-x": 10,
+          "attach-x": 10,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
@@ -104,7 +104,7 @@
         },
         {
           "id": "attached-z",
-          "attach-offset-x": 10,
+          "attach-x": 10,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [

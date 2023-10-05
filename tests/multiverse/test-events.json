@@ -9,7 +9,7 @@
       "entities": [
         {
           "id": "base",
-          "attach-offset-y": -10,
+          "attach-y": -10,
           "texture-id": "grid.png",
           "texture-repeat-x": 100,
           "texture-repeat-y": 100,
@@ -25,7 +25,7 @@
         },
         {
           "id": "limit",
-          "attach-offset-x": 20,
+          "attach-x": 20,
           "event-limit": 2,
           "event-modify": [
             {
@@ -70,7 +70,7 @@
         },
         {
           "id": "respawn",
-          "attach-offset-z": -20,
+          "attach-z": -20,
           "event-todo": "webgl_character_spawn",
           "event-range": 0,
           "pick-color": [0, 0, 1],
@@ -88,7 +88,7 @@
         },
         {
           "id": "set",
-          "attach-offset-x": -20,
+          "attach-x": -20,
           "event-modify": [
             {
               "set": true,
