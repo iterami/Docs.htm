@@ -38,7 +38,7 @@
         "leaf-distance": 10,
         "points": 100,
         "prefix": "shrub-short",
-        "translate-x": -20,
+        "translate-x": -30,
         "translate-z": -20,
         "x-max": 10,
         "x-min": -10,
@@ -60,7 +60,30 @@
         "leaf-distance": 10,
         "points": 100,
         "prefix": "shrub-tall",
-        "translate-x": 20,
+        "translate-x": -10,
+        "translate-z": -20,
+        "x-max": 5,
+        "x-min": -5,
+        "y-max": 30,
+        "z-max": 5,
+        "z-min": -5
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
+        "base-color": [
+          0.3, 0.15, 0
+        ],
+        "character": "test-lines-shrub",
+        "draw-mode": "TRIANGLE_FAN",
+        "leaf-color": [
+          0, 1, 0
+        ],
+        "leaf-distance": 10,
+        "points": 100,
+        "prefix": "shrub-filled",
+        "translate-x": 10,
         "translate-z": -20,
         "x-max": 5,
         "x-min": -5,
@@ -82,37 +105,14 @@
         "leaf-distance": 10,
         "points": 25,
         "prefix": "shrub-line",
-        "translate-x": -20,
-        "translate-z": 20,
+        "translate-x": 30,
+        "translate-z": -20,
         "type": "offset",
         "x-max": 4,
         "x-min": -4,
         "y-max": 4,
         "z-max": 4,
         "z-min": -4
-      }
-    },
-    {
-      "type": "prefabs_webgl_lines_shrub",
-      "properties": {
-        "base-color": [
-          0.3, 0.15, 0
-        ],
-        "character": "test-lines-shrub",
-        "draw-mode": "TRIANGLE_FAN",
-        "leaf-color": [
-          0, 1, 0
-        ],
-        "leaf-distance": 10,
-        "points": 100,
-        "prefix": "shrub-filled",
-        "translate-x": 20,
-        "translate-z": 20,
-        "x-max": 5,
-        "x-min": -5,
-        "y-max": 30,
-        "z-max": 5,
-        "z-min": -5
       }
     }
   ]

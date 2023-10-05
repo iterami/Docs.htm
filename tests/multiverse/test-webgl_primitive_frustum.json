@@ -34,7 +34,8 @@
         "prefix": "frustum",
         "size-bottom": 10,
         "size-top": 5,
-        "translate-x": -10
+        "translate-x": -10,
+        "translate-y": 5
       }
     },
     {
@@ -46,7 +47,7 @@
         "size-bottom": -10,
         "size-top": -5,
         "translate-x": 10,
-        "translate-y": 10
+        "translate-y": 15
       }
     }
   ]

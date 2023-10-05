@@ -9,7 +9,6 @@
       "entities": [
         {
           "id": "base",
-          "attach-y": -10,
           "texture-id": "grid.png",
           "texture-repeat-x": 100,
           "texture-repeat-y": 100,
@@ -26,8 +25,8 @@
         {
           "id": "pick-blocker",
           "alpha": 0.6,
+          "attach-y": 10,
           "attach-z": -49,
-          "collision": false,
           "rotate-x": 90,
           "vertex-colors": [
             1, 1, 1, 1,
@@ -44,9 +43,9 @@
         },
         {
           "id": "pick-blocker-down",
-          "attach-x": 20,
+          "attach-x": 25,
+          "attach-y": 2,
           "attach-z": -25,
-          "collision": false,
           "event-modify": [
             {
               "stat": "attach-y",
@@ -70,9 +69,8 @@
         {
           "id": "pick-blocker-up",
           "attach-x": 20,
-          "attach-y": 5,
+          "attach-y": 2,
           "attach-z": -25,
-          "collision": false,
           "event-modify": [
             {
               "stat": "attach-y",
@@ -95,6 +93,7 @@
         },
         {
           "id": "pick-color",
+          "attach-y": 10,
           "attach-z": -50,
           "collision": false,
           "event-modify": [

@@ -38,7 +38,7 @@
         "size-y": 10,
         "size-z": 15,
         "translate-x": -10,
-        "translate-y": 5
+        "translate-y": 15
       }
     },
     {
@@ -53,7 +53,7 @@
         "size-y": -10,
         "size-z": -15,
         "translate-x": 10,
-        "translate-y": 5
+        "translate-y": 15
       }
     }
   ]

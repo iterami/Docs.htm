@@ -9,14 +9,14 @@
       "points": [
         {
           "translate-x": -10,
-          "translate-y": 20,
+          "translate-y": 25,
           "translate-z": -25
         },
         {
           "translate-x": 10
         },
         {
-          "translate-y": 0
+          "translate-y": 5
         },
         {
           "translate-x": -10
