@@ -8,6 +8,22 @@
       "entities": [
         {
           "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 20,
+          "texture-repeat-y": 20,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "death",
+          "attach-y": -1,
           "event-modify": [
             {
               "set": true,
@@ -16,11 +32,9 @@
             }
           ],
           "event-range": 0,
-          "texture-id": "grid.png",
-          "texture-repeat-x": 100,
-          "texture-repeat-y": 100,
+          "texture-id": "lavaleaf.png",
           "vertex-colors": [
-            0.2, 0.2, 0.2, 1
+            0.3, 0, 0, 1
           ],
           "vertices": [
             50, 0, -50,
