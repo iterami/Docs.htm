@@ -9,16 +9,16 @@
         {
           "id": "base",
           "texture-id": "grid.png",
-          "texture-repeat-x": 20,
-          "texture-repeat-y": 20,
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
-            20, 0, -20,
-            -20, 0, -20,
-            -20, 0, 20,
-            20, 0, 20
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         }
       ]

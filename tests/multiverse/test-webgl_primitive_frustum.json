@@ -10,16 +10,16 @@
         {
           "id": "base",
           "texture-id": "grid.png",
-          "texture-repeat-x": 20,
-          "texture-repeat-y": 20,
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
-            20, 0, -20,
-            -20, 0, -20,
-            -20, 0, 20,
-            20, 0, 20
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         }
       ]
@@ -41,11 +41,12 @@
       "type": "webgl_primitive_frustum",
       "properties": {
         "character": "test-primitive-frustum",
-        "length": 10,
+        "length": -10,
         "prefix": "frustum-inverse",
         "size-bottom": -10,
         "size-top": -5,
-        "translate-x": 10
+        "translate-x": 10,
+        "translate-y": 10
       }
     }
   ]
