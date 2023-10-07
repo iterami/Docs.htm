@@ -131,9 +131,6 @@
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,
-          "spawn-entity": false,
-          "spawn-interval-current": 0,
-          "spawn-interval-max": 100,
           "speed": 1,
           "texture-align": [
             1, 1,
