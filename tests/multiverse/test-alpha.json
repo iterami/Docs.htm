@@ -5,28 +5,31 @@
   "spawn-translate-z": 10,
   "characters": [
     {
-      "id": "test-alpha"
+      "id": "test-alpha",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
     }
   ],
   "prefabs": [
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "solid",
-        "all": {
-          "texture-id": "grid.png"
-        },
-        "character": "test-alpha",
-        "size-x": -25,
-        "size-y": -25,
-        "size-z": -25,
-        "translate-y": 10
-      }
-    },
-    {
-      "type": "webgl_primitive_cuboid",
-      "properties": {
-        "prefix": "transparent",
+        "prefix": "transparent-inner",
         "all": {
           "alpha": 0.5,
           "collision": false,
@@ -36,7 +39,38 @@
         "size-x": 10,
         "size-y": 10,
         "size-z": 10,
-        "translate-y": 10
+        "translate-y": 15
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "solid",
+        "all": {
+          "collision": false,
+          "texture-id": "grid.png"
+        },
+        "character": "test-alpha",
+        "size-x": -25,
+        "size-y": -25,
+        "size-z": -25,
+        "translate-y": 15
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "transparent-outer",
+        "all": {
+          "alpha": 0.5,
+          "collision": false,
+          "texture-id": "grid.png"
+        },
+        "character": "test-alpha",
+        "size-x": 15,
+        "size-y": 15,
+        "size-z": 15,
+        "translate-y": 15
       }
     }
   ]
