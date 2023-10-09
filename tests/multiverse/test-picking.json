@@ -98,8 +98,8 @@
           "collision": false,
           "event-modify": [
             {
-              "self": true,
-              "stat": "vertex-colors"
+              "stat": "vertex-colors",
+              "target": "pick-color"
             }
           ],
           "event-range": 0,

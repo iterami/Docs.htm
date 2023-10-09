@@ -109,7 +109,6 @@
           "event-limit": false,
           "event-modify": [
             {
-              "self": false,
               "set": false,
               "stat": "health-current",
               "target": "example-entity-1",

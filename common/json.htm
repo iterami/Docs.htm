@@ -238,9 +238,6 @@
           // Optional. Array of stats to modify when event is triggered.
           "event-modify": [
             {
-              // Optional. If this event should affect this entity or the one that triggered it.
-              "self": false,
-
               // Optional. If this event should set the stat to a specific value,
               //   or add to the stat by a specific value.
               "set": false,
@@ -248,7 +245,7 @@
               // REQUIRED. ID of the stat that will be modified.
               "stat": "health-current",
 
-              // Optional. ID of the entity that will be affected.
+              // Optional. ID of the character or entity that will be affected.
               "target": "example-entity-1",
 
               // Optional. Value of change that occurs when this event is triggered.
