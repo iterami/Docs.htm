@@ -235,7 +235,7 @@
           // Optional. The number of times this event should occur, or false for unlimited.
           "event-limit": false,
 
-          // Optional. Array of stats to modify when event is triggered.
+          // Optional. Array of stats to modify when this event occurs.
           "event-modify": [
             {
               // Optional. If this event should set the stat to a specific value,
@@ -248,22 +248,23 @@
               // Optional. ID of the character or entity that will be affected.
               "target": "example-entity-1",
 
-              // Optional. Value of change that occurs when this event is triggered.
-              "value": -100,
+              // Optional. Which variable is used during modification, such as
+              //   "entity_entities" (default), "webgl_characters", or "webgl_properties".
+              "type": "entity_entities",
 
-              // Optional. If webgl_properties will be modified instead of an entity or character.
-              "webgl": false
+              // Optional. Value of change that occurs when this event occurs.
+              "value": -100
             }
           ],
 
-          // Optional. The range at which this event triggers, or false to disable.
+          // Optional. The range at which this event occurs, or false to disable.
           // If range is 0, only during collisions.
           "event-range": false,
 
-          // Optional. ID required to trigger event, or false to allow all.
+          // Optional. ID required for event to occur, or false to allow all.
           "event-target-id": "_me",
 
-          // Optional. Type required to trigger event, either "character" or "entity".
+          // Optional. Type required for this event to occur, either "character" or "entity".
           "event-target-type": "character",
 
           // Optional. String name of a function to run with "event-todo-args" passed,
@@ -290,7 +291,7 @@
           "path-id": "",
           "path-point": 0,
 
-          // Optional. Color used for picking identification to trigger entity event.
+          // Optional. Color used for picking identification during event handling.
           "pick-color": [0, 1, 0],
 
           // Optional. Rotation of entity in degrees between 0 inclusive and 360 exclusive.

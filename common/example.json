@@ -112,8 +112,8 @@
               "set": false,
               "stat": "health-current",
               "target": "example-entity-1",
-              "value": -100,
-              "webgl": false
+              "type": "entity_entities",
+              "value": -100
             }
           ],
           "event-range": false,
