@@ -1,13 +1,23 @@
 <!doctype html>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>core_escape()</title>
+<title>core_escape(force)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=core.htm>core.js</a>/core_escape()
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=core.htm>core.js</a>/core_escape(force)
 <ul>
-  <li>No args.
   <li>Pressing escape opens or closes the menu.
   <li>Pauses or resumes intervals depending on state.
   <li>Calls optional repo-specific <a href=repo_escape.htm>repo_escape()</a> function.
+  <li>State can be locked if "core_menu_lock" is true, with an optional arg to force state change.
 </ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>force
+    <td>void 0
+    <td>void 0 or boolean true
+</table>
