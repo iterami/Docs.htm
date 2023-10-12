@@ -31,7 +31,7 @@ function new_game(){
       },
     });
     webgl_character_random({
-      'id': '_me',
+      'id': webgl_character_id,
     });
 }
 
