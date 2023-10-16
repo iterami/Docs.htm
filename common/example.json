@@ -68,6 +68,7 @@
       "health-max": 1,
       "jump-height": 1,
       "level": 0,
+      "lives": -1,
       "path-direction": 1,
       "path-end": "default",
       "path-id": "",
