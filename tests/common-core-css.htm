@@ -12,36 +12,20 @@
     <td>Example
     <td class=tables-nosort>Test <input onclick=clear_elements() type=button value=Clear>
   <tr>
-    <td>Big Text
-    <td><span class=big>Big</span>
+    <td>Newline
+    <td><br>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Medium Text
-    <td><span class=medium>Medium</span>
+    <td>Box
+    <td><div class=box></div>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Default Text
-    <td>Default
+    <td>Grid Button
+    <td><input class=gridbutton disabled style="background-color:#2a2a2a" type=button value=G>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Left Aligned Text
-    <td><div class=left>Left</div>
-    <td><input onclick=add_element(this) type=button value=+>
-  <tr>
-    <td>Center Aligned Text
-    <td><div class=center>Center</div>
-    <td><input onclick=add_element(this) type=button value=+>
-  <tr>
-    <td>Right Aligned Text
-    <td><div class=right>Right</div>
-    <td><input onclick=add_element(this) type=button value=+>
-  <tr>
-    <td>External Link
-    <td><a class=external href=common-core-css.htm rel=noreferrer>External Link</a>
-    <td><input onclick=add_element(this) type=button value=+>
-  <tr>
-    <td>Internal Link
-    <td><a href=common-core-css.htm>Internal Link</a>
+    <td>Grid Button Clickable
+    <td><input class=gridbuttonclickable style="background-color:#2a2a2a" type=button value=C>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
     <td>Hidden
@@ -164,6 +148,14 @@
     <td><input type=week>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
+    <td>Link External
+    <td><a class=external href=common-core-css.htm rel=noreferrer>External Link</a>
+    <td><input onclick=add_element(this) type=button value=+>
+  <tr>
+    <td>Link Internal
+    <td><a href=common-core-css.htm>Internal Link</a>
+    <td><input onclick=add_element(this) type=button value=+>
+  <tr>
     <td>List Ordered
     <td><ol>
       <li>layer 1
@@ -260,39 +252,48 @@
     <td><textarea readonly>Textarea Readonly</textarea>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Newline
-    <td><br>
+    <td>Text Aligned Center
+    <td><div class=center>Center</div>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Box
-    <td><div class=box></div>
+    <td>Text Aligned Left
+    <td><div class=left>Left</div>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Grid Button
-    <td><input class=gridbutton disabled style="background-color:#2a2a2a" type=button value=G>
+    <td>Text Aligned Right
+    <td><div class=right>Right</div>
     <td><input onclick=add_element(this) type=button value=+>
   <tr>
-    <td>Grid Button Clickable
-    <td><input class=gridbuttonclickable style="background-color:#2a2a2a" type=button value=C>
+    <td>Text Default
+    <td>Default
+    <td><input onclick=add_element(this) type=button value=+>
+  <tr>
+    <td>Text Big
+    <td><span class=big>Big</span>
+    <td><input onclick=add_element(this) type=button value=+>
+  <tr>
+    <td>Text Medium
+    <td><span class=medium>Medium</span>
     <td><input onclick=add_element(this) type=button value=+>
 </table>
 
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/tables.js></script>
 <script>
-function repo_init(){
-    core_repo_init({
-      'title': 'Docs.htm',
-    });
-}
-
 function add_element(element){
     document.getElementById('custom-test').innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
 }
+
 function clear_elements(){
     const elements = document.getElementById('custom-test');
     while(elements.firstChild){
         elements.removeChild(elements.firstChild);
     }
+}
+
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
 }
 </script>
