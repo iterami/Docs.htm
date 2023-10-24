@@ -9,7 +9,6 @@
   <thead>
     <tr class=header>
       <td>Key
-      <td>Code
       <td>loop
       <td>preventDefault
       <td>solo
@@ -25,8 +24,8 @@ function repo_init(){
       'keybinds': {
         'all': {
           'todo': function(event){
-              if(!core_keys[event.keyCode]){
-                  core_keys[event.keyCode] = {
+              if(!core_keys[event.code]){
+                  core_keys[event.code] = {
                     'loop': false,
                     'preventDefault': false,
                     'solo': false,
@@ -50,8 +49,7 @@ function repo_init(){
 function update_keys(){
     let keys_html = '';
     for(const key in core_keys){
-        keys_html += '<tr><td>' + String.fromCharCode(key)
-          + '<td>' + key
+        keys_html += '<tr><td>' + key
           + '<td>' + core_keys[key]['loop']
           + '<td>' + core_keys[key]['preventDefault']
           + '<td>' + core_keys[key]['solo']
