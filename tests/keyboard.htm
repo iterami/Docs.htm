@@ -47,13 +47,16 @@ function repo_init(){
 }
 
 function update_keys(){
+    const sorted_keys = core_sort_strings({
+      'array': Object.keys(core_keys),
+    });
     let keys_html = '';
-    for(const key in core_keys){
-        keys_html += '<tr><td>' + key
-          + '<td>' + core_keys[key]['loop']
-          + '<td>' + core_keys[key]['preventDefault']
-          + '<td>' + core_keys[key]['solo']
-          + '<td>' + core_keys[key]['state'];
+    for(const key in sorted_keys){
+        keys_html += '<tr><td>' + sorted_keys[key]
+          + '<td>' + core_keys[sorted_keys[key]]['loop']
+          + '<td>' + core_keys[sorted_keys[key]]['preventDefault']
+          + '<td>' + core_keys[sorted_keys[key]]['solo']
+          + '<td>' + core_keys[sorted_keys[key]]['state'];
     }
     document.getElementById('keys').innerHTML = keys_html;
 }
