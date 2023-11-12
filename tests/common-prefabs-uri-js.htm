@@ -4,43 +4,108 @@
 <title>common prefabs/uri.js Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/prefabs/uri.htm>prefabs/uri.js</a>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/prefabs/uri.htm>prefabs/uri.js</a><br>
+<canvas id=canvas-animated></canvas>
+<select id=direction-x>
+  <option value=1>+1</option>
+  <option value=0>0</option>
+  <option value=-1>-1</option>
+</select>
+<select id=direction-y>
+  <option value=1>+1</option>
+  <option value=0>0</option>
+  <option value=-1>-1</option>
+</select>
 <table class=center>
   <thead>
     <tr class=header>
+      <td>Canvas
+      <td>ID
+      <td>Dimensions
+      <td>Size
       <td>URI
-      <td>Base64
+      <td>Animate
   <tbody id=results>
 </table>
 
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/prefabs/uri.js></script>
 <script>
+function animate_uri(){
+    const canvas_animated = document.getElementById('canvas-animated');
+    const height = core_images[uri]['height'];
+    const width = core_images[uri]['width'];
+
+    canvas_animated.height = height;
+    canvas_animated.width = width;
+
+    const canvas = canvas_animated.getContext('2d');
+    canvas.fillStyle = canvas.createPattern(
+      core_images[uri],
+      'repeat'
+    );
+    canvas.translate(
+      offset_x,
+      offset_y
+    );
+    canvas.fillRect(
+      -width,
+      -height,
+      width * 3,
+      height * 3
+    );
+
+    offset_x += Number(document.getElementById('direction-x').value);
+    if(offset_x <= 0){
+        offset_x = core_images[uri]['width'];
+
+    }else if(offset_x >= core_images[uri]['width']){
+        offset_x = 0;
+    }
+
+    offset_y += Number(document.getElementById('direction-y').value);
+    if(offset_y <= 0){
+        offset_y = core_images[uri]['height'];
+
+    }else if(offset_y >= core_images[uri]['height']){
+        offset_y = 0;
+    }
+}
+
 function repo_init(){
     core_repo_init({
+      'globals': {
+        'offset_x': 0,
+        'offset_y': 0,
+        'uri': '',
+      },
       'title': 'Docs.htm',
     });
 
     let results = '';
     for(let uri in uris){
-        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br><a href="#' + uri + '">' + uri + '</a><br><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br><span id="size-' + uri + '"></span> B'
-          + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
+        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas>'
+          + '<td><a href="#' + uri + '">' + uri + '</a>'
+          + '<td><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span>'
+          + '<td><span id="size-' + uri + '"></span> B'
+          + '<td><input id="' + uri + '" type=text value="' + uris[uri] + '">'
+          + '<td><input onclick=setup_uri("' + uri + '") type=button value=Animate>';
     }
     document.getElementById('results').innerHTML = results;
 
-    for(let uri in uris){
+    for(const uri in uris){
         core_image({
           'id': uri,
           'src': uris[uri],
           'todo': function(){
-              let canvas_element = document.getElementById('canvas-' + uri);
+              const canvas_element = document.getElementById('canvas-' + uri);
 
               canvas_element.height = core_images[uri]['height'];
               canvas_element.width = core_images[uri]['width'];
               canvas_element.style.border = 'solid 10px #000';
               canvas_element.style.display = 'inline';
 
-              let canvas = canvas_element.getContext('2d');
+              const canvas = canvas_element.getContext('2d');
               canvas.drawImage(
                 core_images[uri],
                 0,
@@ -53,5 +118,21 @@ function repo_init(){
           },
         });
     }
+
+    const canvas_animated = document.getElementById('canvas-animated');
+    canvas_animated.height = 1;
+    canvas_animated.width = 1;
+}
+
+function setup_uri(id){
+    offset_x = 0;
+    offset_y = 0;
+    uri = id;
+
+    core_interval_modify({
+      'id': 'interval',
+      'interval': 100,
+      'todo': animate_uri,
+    });
 }
 </script>
