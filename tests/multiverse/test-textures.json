@@ -238,6 +238,230 @@
         "translate-y": 10,
         "translate-z": -20
       }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "boost-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "boost.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "debug-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "debug.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -10,
+        "translate-y": 20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "default-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "default.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "door-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "door.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 10,
+        "translate-y": 20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "goal-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "goal.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 20,
+        "translate-y": 20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "grid-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 20,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "key-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "key.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -10,
+        "translate-y": 20,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "lavaleaf-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "lavaleaf.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 20,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "stone-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "stone.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 10,
+        "translate-y": 20,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "wall-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "wall.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": 20,
+        "translate-y": 20,
+        "translate-z": -10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "wood-animated",
+        "all": {
+          "collision": false,
+          "texture-animated": true,
+          "texture-id": "wood.png",
+          "vertex-colors": [
+            1, 1, 1, 1
+          ]
+        },
+        "character": "test-textures",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-x": -20,
+        "translate-y": 20,
+        "translate-z": -20
+      }
     }
   ]
 }
