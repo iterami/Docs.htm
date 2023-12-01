@@ -61,6 +61,34 @@
       ],
       "speed": 0.5
     },
+    "path-rotate": {
+      "end": "loop",
+      "points": [
+        {
+          "rotate-x": 90,
+          "rotate-y": 90,
+          "rotate-z": 90,
+          "translate-x": -15,
+          "translate-y": 5,
+          "translate-z": -35
+        },
+        {
+          "rotate-x": 0,
+          "rotate-y": 0,
+          "rotate-z": 0,
+          "translate-x": 15,
+          "translate-y": 5
+        },
+        {
+          "rotate-x": 45,
+          "rotate-y": 45,
+          "rotate-z": 45,
+          "translate-x": 15,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
     "path-speed": {
       "end": "loop",
       "points": [
@@ -68,7 +96,7 @@
           "speed": 2,
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -35
+          "translate-z": -40
         },
         {
           "translate-x": 15,
@@ -88,7 +116,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -40
+          "translate-z": -45
         },
         {
           "translate-x": 15,
@@ -274,6 +302,11 @@
       ],
       "level": 1,
       "path-id": "path-reverse"
+    },
+    {
+      "id": "path-rotate-user",
+      "level": 1,
+      "path-id": "path-rotate"
     },
     {
       "id": "path-speed-user",
@@ -472,6 +505,19 @@
   ],
   "prefabs": [
     {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "path-rotate-user-body",
+        "all": {
+          "texture-id": "grid.png"
+        },
+        "character": "path-rotate-user",
+        "size-x": 1,
+        "size-y": 1,
+        "size-z": 5
+      }
+    },
+    {
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
@@ -493,6 +539,14 @@
         "character": "test-paths",
         "path": "path-reverse",
         "prefix": "lines-reverse"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-rotate",
+        "prefix": "lines-rotate"
       }
     },
     {
