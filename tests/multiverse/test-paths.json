@@ -10,7 +10,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -16
+          "translate-z": -20
         },
         {
           "translate-x": 15,
@@ -29,7 +29,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -17
+          "translate-z": -25
         },
         {
           "translate-x": 15,
@@ -48,7 +48,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -18
+          "translate-z": -30
         },
         {
           "translate-x": 15,
@@ -68,7 +68,7 @@
           "speed": 2,
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -20
+          "translate-z": -35
         },
         {
           "translate-x": 15,
@@ -88,7 +88,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -19
+          "translate-z": -40
         },
         {
           "translate-x": 15,
@@ -491,16 +491,16 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
-        "path": "path-speed",
-        "prefix": "lines-speed"
+        "path": "path-reverse",
+        "prefix": "lines-reverse"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
-        "path": "path-warp",
-        "prefix": "lines-warp"
+        "path": "path-speed",
+        "prefix": "lines-speed"
       }
     },
     {
