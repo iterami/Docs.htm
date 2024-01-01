@@ -226,11 +226,29 @@ function repo_init(){
           'function': 'core_number_format',
         },
         {
+          'expect': function(result){
+              return typeof result === 'boolean';
+          },
+          'function': 'core_random_boolean',
+        },
+        {
           'args': {
             'chance': 0,
           },
           'expect': false,
           'function': 'core_random_boolean',
+        },
+        {
+          'expect': function(result){
+              return typeof result === 'string';
+          },
+          'function': 'core_random_hex',
+        },
+        {
+          'expect': function(result){
+              return Number.isInteger(result);
+          },
+          'function': 'core_random_integer',
         },
         {
           'args': {
@@ -248,6 +266,12 @@ function repo_init(){
           'function': 'core_random_integer',
         },
         {
+          'expect': function(result){
+              return typeof result === 'number';
+          },
+          'function': 'core_random_number',
+        },
+        {
           'args': {
             'object': {
               'test-key': 1,
@@ -255,6 +279,15 @@ function repo_init(){
           },
           'expect': 'test-key',
           'function': 'core_random_key',
+        },
+        {
+          'args': {
+            'length': 5,
+          },
+          'expect': function(result){
+              return typeof result === 'string';
+          },
+          'function': 'core_random_string',
         },
         {
           'args': {
