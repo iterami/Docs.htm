@@ -7,6 +7,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_primitive_stars(args)
 <ul>
   <li>Randomly creates points on a sphere.
+  <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Translation is the center of the sphere.
   <li>If the "color" arg is false then a random color will be used for each point.
   <li>The "radian" arg is used to determine on how much of the sphere points can be placed. For example: 2 would be the full sphere and 1 would be only half.
@@ -17,21 +18,9 @@
     <td>Default
     <td>Type
   <tr>
-    <td>character
-    <td>webgl_character_id
-    <td>string ID
-  <tr>
     <td>color
     <td>[1, 1, 1, 1]
     <td>array of numbers or boolean false
-  <tr>
-    <td>groups
-    <td>[]
-    <td>array of string IDs
-  <tr>
-    <td>prefix
-    <td>entity_id_count
-    <td>number or string
   <tr>
     <td>radian
     <td>2
@@ -47,17 +36,5 @@
   <tr>
     <td>stars
     <td>100
-    <td>number
-  <tr>
-    <td>translate-x
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-y
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-z
-    <td>0
     <td>number
 </table>

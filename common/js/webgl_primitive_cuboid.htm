@@ -7,6 +7,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_primitive_cuboid(args)
 <ul>
   <li>Creates a cuboid primitive with specified properties.
+  <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Translation is the center of the cuboid.
   <li>Each side can overwrite any of the properties applied to "all", or can be not created by setting "exclude" to true.
   <li>If the "vertex-colors" property of a side is empty then a random color will be used.
@@ -29,25 +30,13 @@
     <td>{}
     <td>object
   <tr>
-    <td>character
-    <td>webgl_character_id
-    <td>string ID
-  <tr>
     <td>front
     <td>{}
     <td>object
   <tr>
-    <td>groups
-    <td>[]
-    <td>array of string IDs
-  <tr>
     <td>left
     <td>{}
     <td>object
-  <tr>
-    <td>prefix
-    <td>entity_id_count
-    <td>number or string
   <tr>
     <td>properties
     <td>{}
@@ -72,16 +61,4 @@
     <td>top
     <td>{}
     <td>object
-  <tr>
-    <td>translate-x
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-y
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-z
-    <td>0
-    <td>number
 </table>
