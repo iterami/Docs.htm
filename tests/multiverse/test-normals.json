@@ -1,0 +1,102 @@
+{
+  "title": "Normals Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-normals",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "rotating-bottom",
+          "attach-x": -15,
+          "attach-y": 10,
+          "change-rotate-z": -1,
+          "collision": false,
+          "rotate-x": 180,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "rotating-top",
+          "attach-x": -15,
+          "attach-y": 10,
+          "change-rotate-z": 1,
+          "collision": false,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuboid-rotating",
+      "change-rotate-z": 1,
+      "translate-x": 15,
+      "translate-y": 10
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid",
+        "all": {
+          "collision": false,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ]
+        },
+        "character": "test-normals",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5,
+        "translate-y": 10
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid-rotating",
+        "all": {
+          "collision": false,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ]
+        },
+        "character": "cuboid-rotating",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5
+      }
+    }
+  ]
+}
