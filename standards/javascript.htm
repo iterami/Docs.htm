@@ -8,6 +8,8 @@
 <ul>
   <li>All files must start with 'use strict';
   <li>Functions must be in alphabetical order.
+  <li>Functions with 1 arg should pass it directly and unmodified.
+  <li>Functions with 2 or more args should pass an "args" arg object and utilize <a href=../common/js/core_args.htm>core_args(args)</a>.
   <li>Global object usage should be done via "globalThis".
   <li>Global variables should be alphabetically included at the bottom of the file.
   <li>Use Number.isNaN() instead of globalThis.isNaN() and do not use Number.NaN directly.
