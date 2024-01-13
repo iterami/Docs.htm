@@ -39,35 +39,54 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "prefix": "full",
-        "radius": 10,
-        "range": 0,
-        "translate-x": -15,
-        "translate-y": 10
-      }
-    },
-    {
-      "type": "webgl_primitive_stars",
-      "properties": {
-        "character": "test-primitive-stars",
-        "prefix": "half",
-        "radian": 1,
-        "radius": 10,
-        "range": 0,
-        "translate-x": 15,
-        "translate-y": 10
-      }
-    },
-    {
-      "type": "webgl_primitive_stars",
-      "properties": {
-        "character": "test-primitive-stars",
-        "prefix": "quarter",
+        "prefix": "0.5",
         "radian": 0.5,
-        "radius": 10,
+        "radius": 20,
         "range": 0,
+        "stars": 500,
+        "translate-x": -30,
+        "translate-z": -30
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "prefix": "1",
+        "radian": 1,
+        "radius": 20,
+        "range": 0,
+        "stars": 1000,
+        "translate-x": 30,
         "translate-y": 10,
         "translate-z": -30
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "prefix": "1.5",
+        "radian": 1.5,
+        "radius": 20,
+        "range": 0,
+        "stars": 1500,
+        "translate-x": 30,
+        "translate-y": 30,
+        "translate-z": 30
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "character": "test-primitive-stars",
+        "prefix": "2",
+        "radius": 20,
+        "range": 0,
+        "stars": 2000,
+        "translate-x": -30,
+        "translate-y": 30,
+        "translate-z": 30
       }
     }
   ]
