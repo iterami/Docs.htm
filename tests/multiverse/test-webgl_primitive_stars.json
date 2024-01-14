@@ -39,8 +39,8 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "prefix": "0.5",
-        "radian": 0.5,
+        "height-limit": 0.25,
+        "prefix": "0.25",
         "radius": 20,
         "range": 0,
         "stars": 500,
@@ -52,8 +52,8 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "prefix": "1",
-        "radian": 1,
+        "height-limit": 0.5,
+        "prefix": "0.5",
         "radius": 20,
         "range": 0,
         "stars": 1000,
@@ -66,8 +66,8 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "prefix": "1.5",
-        "radian": 1.5,
+        "height-limit": 0.75,
+        "prefix": "0.75",
         "radius": 20,
         "range": 0,
         "stars": 1500,
@@ -80,7 +80,8 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "character": "test-primitive-stars",
-        "prefix": "2",
+        "height-limit": 1,
+        "prefix": "1",
         "radius": 20,
         "range": 0,
         "stars": 2000,

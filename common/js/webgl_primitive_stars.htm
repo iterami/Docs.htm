@@ -10,7 +10,7 @@
   <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Translation is the center of the sphere.
   <li>If the "color" arg is false then a random color will be used for each point.
-  <li>The "radian" arg is used to determine on how much of the sphere points can be placed. For example: 2 would be the full sphere and 1 would be only half.
+  <li>The "height-limit" arg is used to determine allowed y-values, with 1 being all y-values and 0 being none.
 </ul>
 <table>
   <tr class=header>
@@ -22,8 +22,8 @@
     <td>[1, 1, 1, 1]
     <td>array of numbers or boolean false
   <tr>
-    <td>radian
-    <td>2
+    <td>height-limit
+    <td>1
     <td>number
   <tr>
     <td>radius
