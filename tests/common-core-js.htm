@@ -30,7 +30,7 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
-          'args': void 0,
+          'args': {},
           'expect': {},
           'function': 'core_args',
         },
@@ -220,6 +220,7 @@ function repo_init(){
           'function': 'core_number_format',
         },
         {
+          'args': void 0,
           'expect': function(result){
               return typeof result === 'boolean';
           },
@@ -231,12 +232,14 @@ function repo_init(){
           'function': 'core_random_boolean',
         },
         {
+          'args': void 0,
           'expect': function(result){
               return typeof result === 'string';
           },
           'function': 'core_random_hex',
         },
         {
+          'args': void 0,
           'expect': function(result){
               return Number.isInteger(result);
           },
