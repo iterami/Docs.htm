@@ -43,7 +43,7 @@
         "prefix": "0.25",
         "radius": 20,
         "range": 0,
-        "stars": 500,
+        "stars": 1000,
         "translate-x": -30,
         "translate-z": -30
       }
@@ -70,7 +70,7 @@
         "prefix": "0.75",
         "radius": 20,
         "range": 0,
-        "stars": 1500,
+        "stars": 1000,
         "translate-x": 30,
         "translate-y": 20,
         "translate-z": 30
@@ -84,7 +84,7 @@
         "prefix": "1",
         "radius": 20,
         "range": 0,
-        "stars": 2000,
+        "stars": 1000,
         "translate-x": -30,
         "translate-y": 30,
         "translate-z": 30
