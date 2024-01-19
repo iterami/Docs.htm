@@ -354,13 +354,18 @@ function repo_init(){
           'function': 'core_sort_strings',
         },
         {
+          'args': [1, 2, 3],
+          'expect': 'array',
+          'function': 'core_type',
+        },
+        {
           'args': 'core_type',
           'expect': 'function',
           'function': 'core_type',
         },
         {
-          'args': [1, 2, 3],
-          'expect': 'array',
+          'args': 7777,
+          'expect': 'number',
           'function': 'core_type',
         },
         {
@@ -368,6 +373,16 @@ function repo_init(){
             'property': 'value',
           },
           'expect': 'object',
+          'function': 'core_type',
+        },
+        {
+          'args': 'text goes here',
+          'expect': 'string',
+          'function': 'core_type',
+        },
+        {
+          'args': void 0,
+          'expect': 'undefined',
           'function': 'core_type',
         },
       ],
