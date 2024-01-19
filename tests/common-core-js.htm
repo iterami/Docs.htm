@@ -353,6 +353,23 @@ function repo_init(){
           ],
           'function': 'core_sort_strings',
         },
+        {
+          'args': 'core_type',
+          'expect': 'function',
+          'function': 'core_type',
+        },
+        {
+          'args': [1, 2, 3],
+          'expect': 'array',
+          'function': 'core_type',
+        },
+        {
+          'args': {
+            'property': 'value',
+          },
+          'expect': 'object',
+          'function': 'core_type',
+        },
       ],
     });
 }
