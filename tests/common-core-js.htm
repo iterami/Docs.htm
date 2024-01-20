@@ -369,6 +369,13 @@ function repo_init(){
           'function': 'core_type',
         },
         {
+          'args': function(){
+              return false;
+          },
+          'expect': 'function',
+          'function': 'core_type',
+        },
+        {
           'args': 7777,
           'expect': 'number',
           'function': 'core_type',
