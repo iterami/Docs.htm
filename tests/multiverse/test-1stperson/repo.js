@@ -62,7 +62,10 @@ function repo_init(){
           'todo': webgl_camera_zoom,
         },
       },
-      'info': '<input id=new-game type=button value="New Game">',
+      'info': '<button id=new-game type=button>New Game</button>',
       'title': 'Docs.htm',
     });
+}
+
+function repo_logic(){
 }
