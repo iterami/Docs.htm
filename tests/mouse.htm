@@ -25,6 +25,18 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
+    let mouse_html = '';
+    for(const value in core_mouse){
+        if(value === 'todo'){
+            continue;
+        }
+        mouse_html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
+    }
+    for(const value in core_mouse['todo']){
+        mouse_html += '<tr><td>todo: ' + value + '<td id=todo-' + value + '>' + core_mouse['todo'][value];
+    }
+    document.getElementById('mouse').innerHTML = mouse_html;
+
     core_interval_modify({
       'id': 'interval',
       'interval': 100,
@@ -33,10 +45,11 @@ function repo_init(){
 }
 
 function update_mouse(){
-    let mouse_html = '';
-    for(const value in core_mouse){
-        mouse_html += '<tr><td>' + value + '<td>' + core_mouse[value];
-    }
-    document.getElementById('mouse').innerHTML = mouse_html;
+    core_ui_update({
+      'ids': {
+        ...core_mouse,
+        ...core_mouse['todo'],
+      },
+    });
 }
 </script>
