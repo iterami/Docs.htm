@@ -35,16 +35,6 @@
             "attach-z": -100,
             "entities": [
               {
-                "attach-y": -3,
-                "draw": false,
-                "vertices": [
-                  100, 0, -100,
-                  -100, 0, -100,
-                  -100, 0, 100,
-                  100, 0, 100
-                ]
-              },
-              {
                 "attach-y": -10,
                 "texture-id": "grid.png",
                 "vertex-colors": [
@@ -116,16 +106,6 @@
           {
             "attach-z": -100,
             "entities": [
-              {
-                "attach-y": -3,
-                "draw": false,
-                "vertices": [
-                  100, 0, -100,
-                  -100, 0, -100,
-                  -100, 0, 100,
-                  100, 0, 100
-                ]
-              },
               {
                 "attach-x": -6,
                 "attach-y": -10,
@@ -324,16 +304,6 @@
             "attach-x": -100,
             "attach-rotate-y": 270,
             "entities": [
-              {
-                "attach-y": -3,
-                "draw": false,
-                "vertices": [
-                  100, 0, -100,
-                  -100, 0, -100,
-                  -100, 0, 100,
-                  100, 0, 100
-                ]
-              },
               {
                 "attach-y": -10,
                 "attach-z": 22,
