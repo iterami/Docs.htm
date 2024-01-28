@@ -1,0 +1,489 @@
+{
+  "title": "Tiles Prefab Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-tiles",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            25, 0, -25,
+            -25, 0, -25,
+            -25, 0, 25,
+            25, 0, 25
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_tiles",
+      "properties": {
+        "prefix": "tiles",
+        "character": "test-tiles",
+        "tiles": [
+          {
+            "attach-z": -100,
+            "entities": [
+              {
+                "attach-y": -3,
+                "draw": false,
+                "vertices": [
+                  100, 0, -100,
+                  -100, 0, -100,
+                  -100, 0, 100,
+                  100, 0, 100
+                ]
+              },
+              {
+                "attach-y": -10,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -50,
+                  -6, 0, -50,
+                  -6, 0, 50,
+                  6, 0, 50
+                ]
+              },
+              {
+                "attach-y": 10,
+                "rotate-z": 180,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -50,
+                  -6, 0, -50,
+                  -6, 0, 50,
+                  6, 0, 50
+                ]
+              },
+              {
+                "attach-x": -6,
+                "rotate-z": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50
+                ]
+              },
+              {
+                "attach-x": 6,
+                "rotate-z": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1,
+                  1, 0, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50
+                ]
+              }
+            ]
+          },
+          {
+            "attach-z": -100,
+            "entities": [
+              {
+                "attach-y": -3,
+                "draw": false,
+                "vertices": [
+                  100, 0, -100,
+                  -100, 0, -100,
+                  -100, 0, 100,
+                  100, 0, 100
+                ]
+              },
+              {
+                "attach-x": -6,
+                "attach-y": -10,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  12, 0, -50,
+                  -12, 0, -50,
+                  -12, 0, 50,
+                  12, 0, 50
+                ]
+              },
+              {
+                "attach-x": -6,
+                "attach-y": 10,
+                "rotate-z": 180,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  12, 0, -50,
+                  -12, 0, -50,
+                  -12, 0, 50,
+                  12, 0, 50
+                ]
+              },
+              {
+                "attach-x": -18,
+                "rotate-z": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50
+                ]
+              },
+              {
+                "attach-x": -6,
+                "attach-z": 46,
+                "rotate-z": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -4,
+                  -10, 0, -4,
+                  -10, 0, 4,
+                  10, 0, 4
+                ]
+              },
+              {
+                "attach-x": -6,
+                "attach-z": -46,
+                "rotate-z": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -4,
+                  -10, 0, -4,
+                  -10, 0, 4,
+                  10, 0, 4
+                ]
+              },
+              {
+                "attach-x": -6,
+                "rotate-z": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -30,
+                  -10, 0, -30,
+                  -10, 0, 30,
+                  10, 0, 30
+                ]
+              },
+              {
+                "attach-x": 6,
+                "rotate-z": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50
+                ]
+              },
+              {
+                "attach-x": -12,
+                "attach-z": 42,
+                "rotate-x": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -10,
+                  -6, 0, -10,
+                  -6, 0, 10,
+                  6, 0, 10
+                ]
+              },
+              {
+                "attach-z": 30,
+                "rotate-x": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -10,
+                  -6, 0, -10,
+                  -6, 0, 10,
+                  6, 0, 10
+                ]
+              },
+              {
+                "attach-x": -12,
+                "attach-z": -42,
+                "rotate-x": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -10,
+                  -6, 0, -10,
+                  -6, 0, 10,
+                  6, 0, 10
+                ]
+              },
+              {
+                "attach-z": -30,
+                "rotate-x": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1,
+                  0, 1, 0, 1
+                ],
+                "vertices": [
+                  6, 0, -10,
+                  -6, 0, -10,
+                  -6, 0, 10,
+                  6, 0, 10
+                ]
+              }
+            ]
+          },
+          {
+            "attach-x": -100,
+            "attach-rotate-y": 270,
+            "entities": [
+              {
+                "attach-y": -3,
+                "draw": false,
+                "vertices": [
+                  100, 0, -100,
+                  -100, 0, -100,
+                  -100, 0, 100,
+                  100, 0, 100
+                ]
+              },
+              {
+                "attach-y": -10,
+                "attach-z": 22,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  6, 0, -28,
+                  -6, 0, -28,
+                  -6, 0, 28,
+                  6, 0, 28
+                ]
+              },
+              {
+                "attach-y": 10,
+                "attach-z": 22,
+                "rotate-z": 180,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  6, 0, -28,
+                  -6, 0, -28,
+                  -6, 0, 28,
+                  6, 0, 28
+                ]
+              },
+              {
+                "attach-x": -28,
+                "attach-y": -10,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  22, 0, -6,
+                  -22, 0, -6,
+                  -22, 0, 6,
+                  22, 0, 6
+                ]
+              },
+              {
+                "attach-x": -28,
+                "attach-y": 10,
+                "rotate-z": 180,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  22, 0, -6,
+                  -22, 0, -6,
+                  -22, 0, 6,
+                  22, 0, 6
+                ]
+              },
+              {
+                "attach-x": -6,
+                "attach-z": 28,
+                "rotate-z": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  10, 0, -22,
+                  -10, 0, -22,
+                  -10, 0, 22,
+                  10, 0, 22
+                ]
+              },
+              {
+                "attach-x": -28,
+                "attach-z": 6,
+                "rotate-x": 270,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  22, 0, -10,
+                  -22, 0, -10,
+                  -22, 0, 10,
+                  22, 0, 10
+                ]
+              },
+              {
+                "attach-x": 6,
+                "attach-z": 22,
+                "rotate-z": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  10, 0, -28,
+                  -10, 0, -28,
+                  -10, 0, 28,
+                  10, 0, 28
+                ]
+              },
+              {
+                "attach-x": -22,
+                "attach-z": -6,
+                "rotate-x": 90,
+                "texture-id": "grid.png",
+                "vertex-colors": [
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1,
+                  0, 0, 1, 1
+                ],
+                "vertices": [
+                  28, 0, -10,
+                  -28, 0, -10,
+                  -28, 0, 10,
+                  28, 0, 10
+                ]
+              }
+            ]
+          }
+        ],
+        "tiles-max": 10,
+        "tiles-min": 5,
+        "translate-y": 10,
+        "translate-z": -75
+      }
+    }
+  ]
+}
