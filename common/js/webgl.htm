@@ -27,6 +27,7 @@
     <li><a href=webgl_character_init.htm>webgl_character_init(args)</a>
     <li><a href=webgl_character_jump.htm>webgl_character_jump(id)</a>
     <li><a href=webgl_character_level.htm>webgl_character_level(id)</a>
+    <li><a href=webgl_character_move.htm>webgl_character_move(args)</a>
     <li><a href=webgl_character_origin.htm>webgl_character_origin(id)</a>
     <li><a href=webgl_character_random.htm>webgl_character_random(args)</a>
     <li><a href=webgl_character_set.htm>webgl_character_set(id)</a>
@@ -43,7 +44,6 @@
     <li><a href=webgl_drawloop.htm>webgl_drawloop()</a>
     <li><a href=webgl_entity_create.htm>webgl_entity_create(args)</a>
     <li><a href=webgl_entity_init.htm>webgl_entity_init(entity)</a>
-    <li><a href=webgl_entity_move.htm>webgl_entity_move(args)</a>
     <li><a href=webgl_entity_move_to.htm>webgl_entity_move_to(args)</a>
     <li><a href=webgl_entity_normals.htm>webgl_entity_normals(entity)</a>
     <li><a href=webgl_event.htm>webgl_event(args)</a>
@@ -486,18 +486,6 @@
     <td>0
     <td>number
   <tr>
-    <td>change-translate-x
-    <td>0
-    <td>number
-  <tr>
-    <td>change-translate-y
-    <td>0
-    <td>number
-  <tr>
-    <td>change-translate-z
-    <td>0
-    <td>number
-  <tr>
     <td>collide-range-xz
     <td>2
     <td>number
@@ -505,10 +493,6 @@
     <td>collide-range-y
     <td>3
     <td>number
-  <tr>
-    <td>collides
-    <td>false
-    <td>boolean
   <tr>
     <td>collision
     <td>true
@@ -545,10 +529,6 @@
     <td>false
     <td>boolean false or string
   <tr>
-    <td>gravity
-    <td>false
-    <td>boolean
-  <tr>
     <td>normals
     <td>[]
     <td>array of numbers
@@ -579,10 +559,6 @@
   <tr>
     <td>scale-z
     <td>1
-    <td>number
-  <tr>
-    <td>speed
-    <td>0
     <td>number
   <tr>
     <td>texture-align
