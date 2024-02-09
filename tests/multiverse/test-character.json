@@ -26,9 +26,10 @@
     {
       "id": "character",
       "automove": true,
-      "change-rotate-y": 1,
-      "translate-y": 5,
-      "translate-z": -20
+      "change-rotate-y": 2,
+      "level": 1,
+      "translate-x": -25,
+      "translate-y": 5
     }
   ],
   "prefabs": [
