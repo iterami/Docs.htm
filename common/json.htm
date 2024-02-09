@@ -113,6 +113,9 @@
       // Optional. If this character is moving forward regardless of key states.
       "automove": false,
 
+      // Optional. If the camera is locked to the character's translation.
+      "camera-lock": true,
+
       // Optional. Current camera zoom value.
       // When 0, camera is in 1st person mode.
       "camera-zoom": 20,
@@ -133,6 +136,9 @@
 
       // Optional. If the character collides into other entities that have collision.
       "collides": true,
+
+      // Optional. Which controls this character will use.
+      "controls": "rpg",
 
       // Optional. Current character experience.
       "experience": 0,
@@ -275,24 +281,8 @@
           //   or false for no action.
           "event-todo": false,
 
-          // Optional. Args that should be passed to the todo function
-          //   or used as the new value of the "event-todo" variable.
-          "event-todo-args": {},
-
           // Optional. If this entity is affected by gravity.
           "gravity": false,
-
-          // Optional. Current assigned path or false, current path point target, and movement direction.
-          // What occurs when the end of the path is reached:
-          //   "" = use default end set by path.
-          //   exit = stop and exit path.
-          //   loop = loop from the beginning by moving towards 1st point.
-          //   reverse = return back along path.
-          //   warp = teleport back to 1st point.
-          "path-direction": 1,
-          "path-end": "",
-          "path-id": "",
-          "path-point": 0,
 
           // Optional. Color used for picking identification during event handling.
           "pick-color": [0, 1, 0],
