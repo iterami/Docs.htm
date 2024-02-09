@@ -45,11 +45,10 @@
   "fog-state": false,
 
   // Optional. Gravity acceleration and maxiumum downward terminal velocity.
-  // Only affects entities with "gravity" property true.
   "gravity-acceleration": -0.05,
   "gravity-max": -2,
 
-  // Optional. Paths that entities can move along.
+  // Optional. Paths that characters can move along.
   "paths": {
     "example-path": {
       // Optional. What occurs when the end of the path is reached:
@@ -62,7 +61,7 @@
       // REQUIRED. Path waypoints in order.
       "points": [
         {
-          // Optional. Speed multiplier when entities are approaching this point.
+          // Optional. Speed multiplier when characters are approaching this point.
           "speed": 2,
 
           // Optional. Waypoint translation relative to "0, 0, 0".
@@ -81,7 +80,7 @@
         }
       ],
 
-      // Optional. Speed multiplier applied to every entity on this path.
+      // Optional. Speed multiplier applied to every character on this path.
       "speed": 2
     }
   },
@@ -134,7 +133,7 @@
       "collide-range-xz": 2,
       "collide-range-y": 3,
 
-      // Optional. If the character collides into other entities that have collision.
+      // Optional. If the character collides into entities that have collision.
       "collides": true,
 
       // Optional. Which controls this character will use.
@@ -202,8 +201,7 @@
           // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
           "alpha": 1,
 
-          // Optional. ID of entity that this entity is attached to, or false if not attached.
-          // Entity needs to already exist.
+          // Optional. ID of character or entity that this entity is attached to, or false if not attached.
           "attach-to": false,
 
           // Optional. Variable that contains what this entity is attached to.
