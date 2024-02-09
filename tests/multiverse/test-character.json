@@ -1,0 +1,46 @@
+{
+  "title": "Character Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-character",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "automove": true,
+      "change-rotate-y": 1,
+      "translate-y": 5,
+      "translate-z": -20
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "body",
+        "character": "character",
+        "size-x": 5,
+        "size-y": 5,
+        "size-z": 5
+      }
+    }
+  ]
+}
