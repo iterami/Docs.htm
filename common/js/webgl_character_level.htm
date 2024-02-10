@@ -6,8 +6,12 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_character_level(id)
 <ul>
-  <li>If the specified character exists, return its level. Otherwise return -2.
-  <li>Level -1 is used for cameras and static characters that aren't affected by gravity.
+  <li>Attempt to return the specified character's level:<ul>
+    <li>-3: character does not exist.
+    <li>-2: default character level, used for characters that don't need controls, gravity, and movement without paths.
+    <li>-1: used by spectators and cameras that have access to special flying controls.
+    <li>0+: normal characters with controls, gravity, and their own movement.
+  </ul>
 </ul>
 <table>
   <tr class=header>
