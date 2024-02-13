@@ -27,7 +27,7 @@
           "event-modify": [
             {
               "set": true,
-              "stat": "health-current",
+              "stat": "health",
               "value": 0
             }
           ],
