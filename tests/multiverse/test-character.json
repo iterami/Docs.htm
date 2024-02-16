@@ -27,6 +27,9 @@
       "id": "character",
       "automove": true,
       "change-rotate-y": 2,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": true,
       "level": 1,
       "translate-x": -25,
       "translate-y": 5
