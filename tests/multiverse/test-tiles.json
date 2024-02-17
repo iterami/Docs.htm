@@ -26,7 +26,7 @@
   ],
   "prefabs": [
     {
-      "type": "prefabs_webgl_tiles",
+      "type": "webgl_tiles",
       "properties": {
         "prefix": "tiles",
         "character": "test-tiles",
