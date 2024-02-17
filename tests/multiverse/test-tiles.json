@@ -153,6 +153,30 @@
           },
           {
             "attach-z": -20,
+            "characters": [
+              {
+                "id": "tile-character",
+                "entities": [
+                  {
+                    "texture-id": "grid.png",
+                    "vertex-colors": [
+                      1, 1, 1, 1,
+                      1, 1, 1, 1,
+                      1, 1, 1, 1,
+                      1, 1, 1, 1
+                    ],
+                    "vertices": [
+                      2, 0, -2,
+                      -2, 0, -2,
+                      -2, 0, 2,
+                      2, 0, 2
+                    ]
+                  }
+                ],
+                "path-id": "tile-path",
+                "translate-y": -9
+              }
+            ],
             "entities": [
               {
                 "attach-x": -5,
@@ -171,7 +195,20 @@
                   10, 0, 10
                 ]
               }
-            ]
+            ],
+            "paths": {
+              "tile-path": {
+                "end": "loop",
+                "points": [
+                  {
+                    "translate-x": -10
+                  },
+                  {
+                    "translate-x": 10
+                  }
+                ]
+              }
+            }
           },
           {
             "attach-x": -30,
