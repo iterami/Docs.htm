@@ -306,7 +306,20 @@
                   }
                 ]
               }
-            }
+            },
+            "prefabs": [
+              {
+                "type": "webgl_primitive_cuboid",
+                "properties": {
+                  "prefix": "cuboid",
+                  "character": "test-tiles",
+                  "size-x": 2,
+                  "size-y": 2,
+                  "size-z": 2,
+                  "translate-y": 15
+                }
+              }
+            ]
           },
           {
             "attach-x": -30,
