@@ -205,6 +205,8 @@ function select_square(id){
         }
 
         if(override || move['valid']){
+            next = id;
+            previous = selected[0] + selected[1];
             selected = '';
 
             update_board();
@@ -241,12 +243,23 @@ function update_board(){
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
             const letters = 'abcdefgh';
-            document.getElementById(letters[x - 1] + (9 - y)).innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
+            const id = letters[x - 1] + (9 - y);
+            const square = document.getElementById(id);
+
+            square.innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
+            square.style.backgroundColor = (id === previous || id === next)
+              ? (x % 2 === y % 2
+                  ? '#afa'
+                  : '#7a7'
+                )
+              : '';
         }
     }
 }
 
+let next = '';
 let override = false;
+let previous = '';
 let selected = '';
 
 let board_html = '';
