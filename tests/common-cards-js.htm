@@ -6,12 +6,20 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/cards.htm>cards.js</a><br>
 
-<button onclick=draw_card() type=button>Draw Card</button><button onclick="cards_shuffle('test')" type=button>Shuffle Deck</button><button onclick=reset_deck() type=button>Reset Deck</button><br>
+<button onclick=draw_card() type=button>Draw Card</button><button onclick=draw_all() type=button>Draw All</button><button onclick="cards_shuffle('test')" type=button>Shuffle Deck</button><button onclick=reset_deck() type=button>Reset Deck</button><br>
 Cards in deck: <span id=count></span><br>
 Cards drawn: <span id=drawn></span>
 
 <script src=../../common/js/cards.js></script>
 <script>
+function draw_all(){
+    const remaining = cards_decks['test']['deck'].length;
+    for(let card = 0; card < remaining; card++){
+        cards_draw('test');
+    }
+    update_deck();
+}
+
 function draw_card(){
     cards_draw('test');
     update_deck();
