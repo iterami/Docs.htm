@@ -254,23 +254,6 @@
             "characters": [
               {
                 "id": "tile-character",
-                "entities": [
-                  {
-                    "texture-id": "grid.png",
-                    "vertex-colors": [
-                      1, 1, 1, 1,
-                      1, 1, 1, 1,
-                      1, 1, 1, 1,
-                      1, 1, 1, 1
-                    ],
-                    "vertices": [
-                      2, 0, -2,
-                      -2, 0, -2,
-                      -2, 0, 2,
-                      2, 0, 2
-                    ]
-                  }
-                ],
                 "path-id": "tile-path",
                 "translate-y": -9
               }
@@ -312,11 +295,10 @@
                 "type": "webgl_primitive_cuboid",
                 "properties": {
                   "prefix": "cuboid",
-                  "character": "test-tiles",
+                  "character": "tile-character",
                   "size-x": 2,
                   "size-y": 2,
-                  "size-z": 2,
-                  "translate-y": 15
+                  "size-z": 2
                 }
               }
             ]
