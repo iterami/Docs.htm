@@ -27,13 +27,10 @@ function repo_init(){
 
     let mouse_html = '';
     for(const value in core_mouse){
-        if(value === 'todo'){
-            continue;
-        }
         mouse_html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
     }
     for(const value in core_mouse['todo']){
-        mouse_html += '<tr><td>todo: ' + value + '<td id=todo-' + value + '>' + core_mouse['todo'][value];
+        mouse_html += '<tr><td>todo: ' + value + '<td id=' + value + '>' + core_mouse['todo'][value];
     }
     document.getElementById('mouse').innerHTML = mouse_html;
 
