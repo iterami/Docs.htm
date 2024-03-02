@@ -150,15 +150,11 @@ function remove_pawns(){
         return false;
     }
 
-    for(let y = 1; y < 9; y++){
-        for(let x = 1; x < 9; x++){
-
-            const piece = document.getElementById(chess_xy_to_fr(
-              x - 1,
-              y - 1
-            )).textContent;
+    for(let y = 0; y < 8; y++){
+        for(let x = 0; x < 8; x++){
+            const piece = document.getElementById(chess_xy_to_fr(x, y)).textContent;
             if(piece === chess_pieces[0][0] || piece === chess_pieces[1][0]){
-                chess_games['test']['board'][y - 1][x - 1] = '';
+                chess_games['test']['board'][y][x] = '';
             }
         }
     }
@@ -254,15 +250,12 @@ function update_board(){
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
-    for(let y = 1; y < 9; y++){
-        for(let x = 1; x < 9; x++){
-            const id = chess_xy_to_fr(
-              x - 1,
-              y - 1
-            );
+    for(let y = 0; y < 8; y++){
+        for(let x = 0; x < 8; x++){
+            const id = chess_xy_to_fr(x, y);
             const square = document.getElementById(id);
 
-            square.innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
+            square.innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
             square.style.backgroundColor = (id === previous || id === next)
               ? (x % 2 === y % 2
                   ? '#afa'
