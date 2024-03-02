@@ -150,10 +150,13 @@ function remove_pawns(){
         return false;
     }
 
-    const letters = 'abcdefgh';
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
-            const piece = document.getElementById(letters[x - 1] + (9 - y)).textContent;
+
+            const piece = document.getElementById(chess_xy_to_fr(
+              x - 1,
+              y - 1
+            )).textContent;
             if(piece === chess_pieces[0][0] || piece === chess_pieces[1][0]){
                 chess_games['test']['board'][y - 1][x - 1] = '';
             }
@@ -233,13 +236,19 @@ function update_board(){
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
-    document.getElementById('black-king').textContent = 'abcdefgh'[chess_games['test']['players'][1]['king-x']] + (8 - chess_games['test']['players'][1]['king-y']);
+    document.getElementById('black-king').textContent = chess_xy_to_fr(
+      chess_games['test']['players'][1]['king-x'],
+      chess_games['test']['players'][1]['king-y']
+    );
     document.getElementById('black-king-checked').textContent = chess_games['test']['players'][1]['king-checked'];
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
     document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
     document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
-    document.getElementById('white-king').textContent = 'abcdefgh'[chess_games['test']['players'][0]['king-x']] + (8 - chess_games['test']['players'][0]['king-y']);
+    document.getElementById('white-king').textContent = chess_xy_to_fr(
+      chess_games['test']['players'][0]['king-x'],
+      chess_games['test']['players'][0]['king-y']
+    );
     document.getElementById('white-king-checked').textContent = chess_games['test']['players'][0]['king-checked'];
     document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
@@ -247,8 +256,10 @@ function update_board(){
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
     for(let y = 1; y < 9; y++){
         for(let x = 1; x < 9; x++){
-            const letters = 'abcdefgh';
-            const id = letters[x - 1] + (9 - y);
+            const id = chess_xy_to_fr(
+              x - 1,
+              y - 1
+            );
             const square = document.getElementById(id);
 
             square.innerHTML = chess_games['test']['board'][y - 1][x - 1] || '&nbsp;';
@@ -271,8 +282,10 @@ let board_html = '';
 for(let y = 1; y < 9; y++){
     board_html += '<tr><td class="notation right">' + (9 - y);
     for(let x = 1; x < 9; x++){
-        const letters = 'abcdefgh';
-        board_html += '<td id="' + letters[x - 1] + (9 - y) + '" onclick="select_square(this.id)">';
+        board_html += '<td id="' + chess_xy_to_fr(
+          x - 1,
+          y - 1
+        ) + '" onclick="select_square(this.id)">';
     }
 }
 board_html += '<tr><td class="bottom notation"><td class="bottom notation">a<td class="bottom notation">b<td class="bottom notation">c<td class="bottom notation">d<td class="bottom notation">e<td class="bottom notation">f<td class="bottom notation">g<td class="bottom notation">h';
