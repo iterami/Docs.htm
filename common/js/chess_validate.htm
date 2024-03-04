@@ -9,12 +9,17 @@
   <li>Checks if the requested move is valid or not.
   <li>Returns an object of properties describing the requested move.
   <li>Can optionally ignore current turn and check hypothetical moves.
+  <li>Can optionally accept a specific board as an array of strings, or else will just use the board from the game id.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>board
+    <td>void 0
+    <td>array of strings
   <tr>
     <td>id
     <td>
