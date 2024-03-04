@@ -4,11 +4,6 @@
 <title>common chess.js Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
-.chess,
-.inline{
-    display: inline-block;
-    vertical-align: top;
-}
 .chess td{
     border: 0;
     color: #000;
@@ -24,14 +19,14 @@
 .chess td:hover{
     color: #070;
 }
-.chess td.selected{
-    color: #0b0;
-}
 .chess td.notation{
     background-color: #000 !important;
     color: #aaa;
     cursor: auto;
     font-size: 150%;
+}
+.chess td.selected{
+    color: #0b0;
 }
 .chess tr:nth-child(even) td:nth-child(even),
 .chess tr:nth-child(odd) td:nth-child(odd){
@@ -41,6 +36,10 @@
 .chess tr:nth-child(odd) td:nth-child(even){
     background-color: #fff;
 }
+table{
+    display: inline-block;
+    vertical-align: top;
+}
 .taken{
     background-color: #aaa;
     color: #000;
@@ -49,7 +48,7 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/chess.htm>chess.js</a><br>
 <table class="center chess" id=board></table>
-<table class=inline>
+<table>
   <tr>
     <td class=big colspan=2><span id=turn></span>'s Turn
   <tr class="big taken">
@@ -72,6 +71,9 @@
   <tr>
     <td>king-checked
     <td id=king-checked>
+  <tr>
+    <td>king-checked-enemy
+    <td id=king-checked-enemy>
   <tr>
     <td>king-moved
     <td id=king-moved>
