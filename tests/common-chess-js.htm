@@ -46,9 +46,9 @@ table{
 }
 </style>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/chess.htm>chess.js</a><br>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/chess.htm>chess.js</a> <button onclick="toggle_debug()" type=button>Toggle Debug</button><br>
 <table id=chess></table>
-<table>
+<table id=debug>
   <tr>
     <td class=big colspan=2><span id=turn></span>'s Turn
   <tr class="big taken">
@@ -142,7 +142,8 @@ table{
     <td>rook-short-moved
     <td id=white-rook-short-moved>
   <tr>
-    <td colspan=2><button onclick="reset_board(true)" type=button>Reset</button><button onclick="remove_pawns()" type=button>Remove Pawns</button><button onclick="update_board()" type=button>Update</button><br><input onclick="override=!override" type=checkbox> Override Rules
+    <td colspan=2><button onclick="reset_board(true)" type=button>Reset</button><button onclick="remove_pawns()" type=button>Remove Pawns</button><button onclick="update_board()" type=button>Update</button><br>
+<input onclick="override=!override" type=checkbox> Override Rules
 </table>
 
 <script src=../../common/js/chess.js></script>
@@ -225,6 +226,13 @@ function select_square(id){
     if(selected.length){
         document.getElementById(selected).classList.add('selected');
     }
+}
+
+function toggle_debug(){
+    const debug = document.getElementById('debug');
+    debug.style.display = debug.style.display === 'none'
+      ? 'inline-block'
+      : 'none';
 }
 
 function update_board(){
