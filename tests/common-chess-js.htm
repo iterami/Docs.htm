@@ -87,6 +87,9 @@ table{
     <td>rook-short-moved
     <td id=rook-short-moved>
   <tr>
+    <td>threefold
+    <td id=threefold>
+  <tr>
     <td>valid
     <td id=valid>
   <tr class=header>
@@ -143,7 +146,8 @@ table{
     <td id=white-rook-short-moved>
   <tr>
     <td colspan=2><button onclick="reset_board(true)" type=button>Reset</button><button onclick="remove_pawns()" type=button>Remove Pawns</button><button onclick="update_board()" type=button>Update</button><br>
-<input onclick="override=!override" type=checkbox> Override Rules
+<input onclick="override=!override" type=checkbox> Override Rules<br>
+<input checked onclick="threefold=!threefold" type=checkbox> Threefold Repetition
 </table>
 
 <script src=../../common/js/chess.js></script>
@@ -221,6 +225,10 @@ function select_square(id){
         }else{
             selected = '';
         }
+
+        if(!threefold){
+            chess_games['test']['threefold'] = {};
+        }
     }
 
     if(selected.length){
@@ -280,6 +288,7 @@ let next = '';
 let override = false;
 let previous = '';
 let selected = '';
+let threefold = true;
 
 let board_html = '';
 for(let y = 1; y < 9; y++){
