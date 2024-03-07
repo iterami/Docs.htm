@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>common audio.js Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/audio.htm>audio.js</a><br>
+<button class=big onclick="audio_start({'id': 'boop',});" type=button>Play Boop</button>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/audio.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'title': 'Docs.htm',
+    });
+    audio_create({
+      'audios': {
+        'boop': {
+          'duration': .1,
+        },
+      },
+    });
+}
+</script>
