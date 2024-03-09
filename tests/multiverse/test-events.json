@@ -117,6 +117,8 @@
             }
           ],
           "event-range": 0,
+          "event-todo": "audio_start",
+          "event-todo-args": "boop",
           "pick-color": [0, 1, 0],
           "rotate-z": 270,
           "texture-id": "grid.png",
