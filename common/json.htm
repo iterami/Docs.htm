@@ -142,6 +142,9 @@
       // Optional. Current character experience.
       "experience": 0,
 
+      // Optional. If this character is affected by gravity.
+      "gravity": true,
+
       // Optional. Current and maximum health.
       "health": 1,
       "health-max": 1,
@@ -184,6 +187,15 @@
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
+
+      // Optional. How many degrees this character turns at once.
+      "turn-speed": 5,
+
+      // Optional. Which vehicle this character is controlling, or false if not.
+      "vehicle": false,
+
+      // Optional. The stats of this character when used as a vehicle, or false if not possible.
+      "vehicle-stats": false,
 
       // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
       // Uses same format as level entities.

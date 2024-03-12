@@ -66,6 +66,7 @@
       "collides": true,
       "controls": "rpg",
       "experience": 0,
+      "gravity": true,
       "health": 1,
       "health-max": 1,
       "jump-height": 1,
@@ -83,6 +84,9 @@
       "translate-x": 0,
       "translate-y": 0,
       "translate-z": 0,
+      "turn-speed": 5,
+      "vehicle": false,
+      "vehicle-stats": false,
       "entities": []
     },
     {
