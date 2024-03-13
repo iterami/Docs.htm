@@ -123,7 +123,7 @@
           "event-target-id": "_me",
           "event-target-type": "character",
           "event-todo": false,
-          "pick-color": [0, 1, 0],
+          "pick-color": false,
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,
