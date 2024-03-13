@@ -10,6 +10,20 @@
         {
           "id": "base",
           "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "baser",
+          "attach-y": -50,
+          "texture-id": "grid.png",
           "texture-repeat-x": 100,
           "texture-repeat-y": 100,
           "vertex-colors": [
