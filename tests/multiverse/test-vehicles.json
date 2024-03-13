@@ -1,0 +1,51 @@
+{
+  "title": "Vehicles Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-vehicles",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            500, 0, -500,
+            -500, 0, -500,
+            -500, 0, 500,
+            500, 0, 500
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle",
+      "collides": true,
+      "gravity": true,
+      "level": 0,
+      "translate-y": 5,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "speed-deceleration": -0.05,
+        "speed-max": 2
+      },
+      "entities": [
+        {
+          "id": "body",
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    }
+  ]
+}
