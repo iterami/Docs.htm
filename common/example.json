@@ -66,7 +66,7 @@
       "collides": true,
       "controls": "rpg",
       "experience": 0,
-      "gravity": true,
+      "gravity": 1,
       "health": 1,
       "health-max": 1,
       "jump-height": 1,

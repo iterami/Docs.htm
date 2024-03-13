@@ -27,7 +27,7 @@
     {
       "id": "vehicle",
       "collides": true,
-      "gravity": true,
+      "gravity": 1,
       "level": 0,
       "translate-y": 5,
       "turn-speed": 2,
