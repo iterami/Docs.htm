@@ -72,7 +72,6 @@
           "id": "respawn",
           "attach-z": -20,
           "event-todo": "webgl_character_spawn",
-          "event-range": 0,
           "pick-color": [0, 0, 1],
           "rotate-x": 90,
           "texture-id": "grid.png",
