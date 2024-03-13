@@ -1,0 +1,89 @@
+{
+  "title": "Gravity Test",
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 45,
+  "characters": [
+    {
+      "id": "test-gravity",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravity-normal",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": -15,
+      "translate-y": 50,
+      "entities": [
+        {
+          "id": "gravity-normal-body",
+          "collision": false,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravity-strong",
+      "collides": true,
+      "gravity": 2,
+      "level": 0,
+      "translate-y": 50,
+      "entities": [
+        {
+          "id": "gravity-strong-body",
+          "collision": false,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravity-weak",
+      "collides": true,
+      "gravity": 0.1,
+      "level": 0,
+      "translate-x": 15,
+      "translate-y": 50,
+      "entities": [
+        {
+          "id": "gravity-weak-body",
+          "collision": false,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        }
+      ]
+    }
+  ]
+}
