@@ -46,7 +46,7 @@
             {
               "set": true,
               "stat": "translate-y",
-              "value": 20
+              "value": 10
             },
             {
               "set": true,
@@ -107,7 +107,7 @@
             {
               "set": true,
               "stat": "translate-y",
-              "value": 20
+              "value": 10
             },
             {
               "set": true,
