@@ -148,26 +148,55 @@ table{
     <td>rook-short-moved
     <td id=white-rook-short-moved>
   <tr>
-    <td colspan=2><button onclick="reset_board(true)" type=button>Reset</button><button onclick="remove_pawns()" type=button>Remove Pawns</button><button onclick="update_board()" type=button>Update</button><br>
+    <td colspan=2><button onclick="rotate_board()" type=button>Rotate Board</button><button onclick="reset_board(true)" type=button>Reset</button><button onclick="update_board()" type=button>Update</button><br>
 <input onclick="override=!override" type=checkbox> Override Rules<br>
-<input checked onclick="threefold=!threefold" type=checkbox> Threefold Repetition
+<input checked onclick="threefold=!threefold" type=checkbox> Threefold Repetition<br>
+<button onclick="remove_selected()" type=button>Remove Selected Piece</button>
 </table>
 
 <script src=../../common/js/chess.js></script>
 <script>
-function remove_pawns(){
-    if(!globalThis.confirm('Remove all pawns?')){
-        return false;
-    }
-
-    for(let y = 0; y < 8; y++){
-        for(let x = 0; x < 8; x++){
-            const piece = document.getElementById(chess_xy_to_fr(x, y)).textContent;
-            if(piece === chess_pieces[0][0] || piece === chess_pieces[1][0]){
-                chess_games['test']['board'][y][x] = '';
+function create_board(){
+    let board_html = '';
+    if(rotated){
+        for(let y = 8; y > 0; y--){
+            board_html += '<tr><td class="notation right">' + (9 - y);
+            for(let x = 8; x > 0; x--){
+                board_html += '<td id="' + chess_xy_to_fr(
+                  x - 1,
+                  y - 1
+                ) + '" onclick="select_square(this.id)">';
             }
         }
+        board_html += '<tr><td class="bottom notation"><td class="bottom notation">h<td class="bottom notation">g<td class="bottom notation">f<td class="bottom notation">e<td class="bottom notation">d<td class="bottom notation">c<td class="bottom notation">b<td class="bottom notation">a';
+
+    }else{
+        for(let y = 0; y < 8; y++){
+            board_html += '<tr><td class="notation right">' + (8 - y);
+            for(let x = 0; x < 8; x++){
+                board_html += '<td id="' + chess_xy_to_fr(
+                  x,
+                  y
+                ) + '" onclick="select_square(this.id)">';
+            }
+        }
+        board_html += '<tr><td class="bottom notation"><td class="bottom notation">a<td class="bottom notation">b<td class="bottom notation">c<td class="bottom notation">d<td class="bottom notation">e<td class="bottom notation">f<td class="bottom notation">g<td class="bottom notation">h';
     }
+    document.getElementById('chess').innerHTML = board_html;
+    update_board();
+}
+
+function remove_selected(){
+    if(selected.length === 0
+      || !globalThis.confirm('Remove selected piece?')){
+        return;
+    }
+
+    const square_x = Number('abcdefgh'.indexOf(selected[0]));
+    const square_y = Number(8 - selected[1]);
+
+    chess_games['test']['board'][square_y][square_x] = '';
+    selected = '';
 
     update_board();
 }
@@ -182,9 +211,16 @@ function reset_board(reset){
     });
     next = '';
     previous = '';
+    rotated = false;
     selected = '';
-    update_board();
+
+    create_board();
     document.getElementById('state').textContent = '';
+}
+
+function rotate_board(){
+    rotated = !rotated;
+    create_board();
 }
 
 function select_square(id){
@@ -265,6 +301,7 @@ function update_board(){
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
     document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
+
     for(let y = 0; y < 8; y++){
         for(let x = 0; x < 8; x++){
             const id = chess_xy_to_fr(x, y);
@@ -284,21 +321,9 @@ function update_board(){
 let next = '';
 let override = false;
 let previous = '';
+let rotated = false;
 let selected = '';
 let threefold = true;
-
-let board_html = '';
-for(let y = 1; y < 9; y++){
-    board_html += '<tr><td class="notation right">' + (9 - y);
-    for(let x = 1; x < 9; x++){
-        board_html += '<td id="' + chess_xy_to_fr(
-          x - 1,
-          y - 1
-        ) + '" onclick="select_square(this.id)">';
-    }
-}
-board_html += '<tr><td class="bottom notation"><td class="bottom notation">a<td class="bottom notation">b<td class="bottom notation">c<td class="bottom notation">d<td class="bottom notation">e<td class="bottom notation">f<td class="bottom notation">g<td class="bottom notation">h';
-document.getElementById('chess').innerHTML = board_html;
 
 reset_board(false);
 </script>
