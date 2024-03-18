@@ -13,7 +13,7 @@
     user-select: none;
     width: 64px;
 }
-#chess td.bottom{
+#chess td.file{
     line-height: 1em;
 }
 #chess td:hover{
@@ -159,7 +159,7 @@ table{
 function create_board(){
     let board_html = '';
     for(let y = 0; y < 8; y++){
-        board_html += '<tr><td class="notation right" id="left-' + y + '">' + (8 - y);
+        board_html += '<tr><td class="notation right" id="rank-' + y + '">' + (8 - y);
         for(let x = 0; x < 8; x++){
             board_html += '<td id="' + chess_xy_to_fr(
               x,
@@ -167,7 +167,7 @@ function create_board(){
             ) + '" onclick="select_square(this.id)">';
         }
     }
-    board_html += '<tr><td class="bottom notation"><td class="bottom notation" id="bottom-0">a<td class="bottom notation" id="bottom-1">b<td class="bottom notation" id="bottom-2">c<td class="bottom notation" id="bottom-3">d<td class="bottom notation" id="bottom-4">e<td class="bottom notation" id="bottom-5">f<td class="bottom notation" id="bottom-6">g<td class="bottom notation" id="bottom-7">h';
+    board_html += '<tr><td class="file notation"><td class="file notation" id="file-0">a<td class="file notation" id="file-1">b<td class="file notation" id="file-2">c<td class="file notation" id="file-3">d<td class="file notation" id="file-4">e<td class="file notation" id="file-5">f<td class="file notation" id="file-6">g<td class="file notation" id="file-7">h';
 
     document.getElementById('chess').innerHTML = board_html;
     update_board();
@@ -209,7 +209,7 @@ function rotate_board(){
     rotated = !rotated;
 
     for(let y = 0; y < 8; y++){
-        document.getElementById('left-' + y).textContent = rotated
+        document.getElementById('rank-' + y).textContent = rotated
           ? y + 1
           : 8 - y;
         for(let x = 0; x < 8; x++){
@@ -231,7 +231,7 @@ function rotate_board(){
             );
         }
 
-        document.getElementById('bottom-' + y).textContent = 'abcdefgh'[rotated
+        document.getElementById('file-' + y).textContent = 'abcdefgh'[rotated
           ? 7 - y
           : y];
     }
