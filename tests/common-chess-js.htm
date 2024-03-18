@@ -158,30 +158,17 @@ table{
 <script>
 function create_board(){
     let board_html = '';
-    if(rotated){
-        for(let y = 8; y > 0; y--){
-            board_html += '<tr><td class="notation right">' + (9 - y);
-            for(let x = 8; x > 0; x--){
-                board_html += '<td id="' + chess_xy_to_fr(
-                  x - 1,
-                  y - 1
-                ) + '" onclick="select_square(this.id)">';
-            }
+    for(let y = 0; y < 8; y++){
+        board_html += '<tr><td class="notation right" id="left-' + y + '">' + (8 - y);
+        for(let x = 0; x < 8; x++){
+            board_html += '<td id="' + chess_xy_to_fr(
+              x,
+              y
+            ) + '" onclick="select_square(this.id)">';
         }
-        board_html += '<tr><td class="bottom notation"><td class="bottom notation">h<td class="bottom notation">g<td class="bottom notation">f<td class="bottom notation">e<td class="bottom notation">d<td class="bottom notation">c<td class="bottom notation">b<td class="bottom notation">a';
-
-    }else{
-        for(let y = 0; y < 8; y++){
-            board_html += '<tr><td class="notation right">' + (8 - y);
-            for(let x = 0; x < 8; x++){
-                board_html += '<td id="' + chess_xy_to_fr(
-                  x,
-                  y
-                ) + '" onclick="select_square(this.id)">';
-            }
-        }
-        board_html += '<tr><td class="bottom notation"><td class="bottom notation">a<td class="bottom notation">b<td class="bottom notation">c<td class="bottom notation">d<td class="bottom notation">e<td class="bottom notation">f<td class="bottom notation">g<td class="bottom notation">h';
     }
+    board_html += '<tr><td class="bottom notation"><td class="bottom notation" id="bottom-0">a<td class="bottom notation" id="bottom-1">b<td class="bottom notation" id="bottom-2">c<td class="bottom notation" id="bottom-3">d<td class="bottom notation" id="bottom-4">e<td class="bottom notation" id="bottom-5">f<td class="bottom notation" id="bottom-6">g<td class="bottom notation" id="bottom-7">h';
+
     document.getElementById('chess').innerHTML = board_html;
     update_board();
 }
@@ -220,7 +207,36 @@ function reset_board(reset){
 
 function rotate_board(){
     rotated = !rotated;
-    create_board();
+
+    for(let y = 0; y < 8; y++){
+        document.getElementById('left-' + y).textContent = rotated
+          ? y + 1
+          : 8 - y;
+        for(let x = 0; x < 8; x++){
+            const square = document.getElementById(chess_xy_to_fr(
+              rotated
+                ? 7 - x
+                : x,
+              rotated
+                ? 7 - y
+                : y
+            ));
+            square.id = chess_xy_to_fr(
+              rotated
+                ? x
+                : 7 - x,
+              rotated
+                ? y
+                : 7 - y
+            );
+        }
+
+        document.getElementById('bottom-' + y).textContent = 'abcdefgh'[rotated
+          ? 7 - y
+          : y];
+    }
+
+    update_board();
 }
 
 function select_square(id){
