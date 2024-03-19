@@ -43,8 +43,8 @@
         "prefix": "arena",
         "all": {
           "texture-id": "grid.png",
-          "texture-repeat-x": 100,
-          "texture-repeat-y": 100
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 10
         },
         "bottom": {
           "exclude": true
