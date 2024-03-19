@@ -5,38 +5,7 @@
   "spawn-translate-z": 10,
   "characters": [
     {
-      "id": "test-vehicles",
-      "entities": [
-        {
-          "id": "base",
-          "texture-id": "grid.png",
-          "vertex-colors": [
-            0.2, 0.2, 0.2, 1
-          ],
-          "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
-          ]
-        },
-        {
-          "id": "baser",
-          "attach-y": -50,
-          "texture-id": "grid.png",
-          "texture-repeat-x": 100,
-          "texture-repeat-y": 100,
-          "vertex-colors": [
-            0.2, 0.2, 0.2, 1
-          ],
-          "vertices": [
-            500, 0, -500,
-            -500, 0, -500,
-            -500, 0, 500,
-            500, 0, 500
-          ]
-        }
-      ]
+      "id": "test-vehicles"
     },
     {
       "id": "vehicle",
@@ -65,6 +34,43 @@
           ]
         }
       ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "arena",
+        "all": {
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100
+        },
+        "bottom": {
+          "exclude": true
+        },
+        "character": "test-vehicles",
+        "size-x": -1000,
+        "size-y": -100,
+        "size-z": -1000
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "start",
+        "all": {
+          "texture-id": "grid.png"
+        },
+        "bottom": {
+          "exclude": true
+        },
+        "character": "test-vehicles",
+        "size-x": 100,
+        "size-y": 50,
+        "size-z": 100,
+        "translate-y": -25
+      }
     }
   ]
 }
