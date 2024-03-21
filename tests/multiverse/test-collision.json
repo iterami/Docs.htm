@@ -4,7 +4,78 @@
   "spawn-translate-y": 3,
   "characters": [
     {
-      "id": "test-collision"
+      "id": "test-collision",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "rotated-0",
+          "attach-x": -25,
+          "attach-y": 5,
+          "attach-z": 10,
+          "rotate-x": 90,
+          "rotate-z": 315,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "rotated-1",
+          "attach-x": -25,
+          "attach-y": 5,
+          "rotate-x": 90,
+          "rotate-z": 225,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "rotated-2",
+          "attach-x": -35,
+          "attach-y": 5,
+          "rotate-x": 90,
+          "rotate-z": 135,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "rotated-3",
+          "attach-x": -35,
+          "attach-y": 5,
+          "attach-z": 10,
+          "rotate-x": 90,
+          "rotate-z": 45,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
     }
   ],
   "prefabs": [
@@ -16,7 +87,8 @@
         "size-x": -20,
         "size-y": -20,
         "size-z": -20,
-        "translate-y": 10
+        "translate-y": 11,
+        "translate-z": -40
       }
     }
   ]
