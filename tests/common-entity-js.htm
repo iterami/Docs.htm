@@ -27,7 +27,7 @@ function repo_init(){
         {
           'args': void 0,
           'expect': 0,
-            'function': 'entity_create',
+          'function': 'entity_create',
         },
         {
           'args': {
@@ -39,7 +39,42 @@ function repo_init(){
         {
           'args': void 0,
           'expect': 2,
-            'function': 'entity_create',
+          'function': 'entity_create',
+        },
+        {
+          'args': ['testgroup'],
+          'expect': function(){
+              return entity_groups['_length']['testgroup'] === 0;
+          },
+          'function': 'entity_group_create',
+        },
+        {
+          'args': {
+            'entities': [
+              0,
+              2,
+              'test',
+            ],
+            'group': 'testgroup',
+          },
+          'expect': function(){
+              return entity_groups['_length']['testgroup'] === 3;
+          },
+          'function': 'entity_group_add',
+        },
+        {
+          'args': {
+            'groups': [
+              'testgroup',
+            ],
+            'todo': function(entity){
+                entity_entities[entity]['testproperty'] = 0;
+            },
+          },
+          'expect': function(){
+              return entity_entities['test']['testproperty'] === 0;
+          },
+          'function': 'entity_group_modify',
         },
       ],
     });
