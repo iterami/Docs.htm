@@ -16,7 +16,7 @@
       "turn-speed": 2,
       "vehicle-stats": {
         "speed-deceleration": -0.05,
-        "speed-max": 2
+        "speed-max": 3
       },
       "entities": [
         {
