@@ -5,7 +5,129 @@
   "spawn-translate-z": 10,
   "characters": [
     {
-      "id": "test-vehicles"
+      "id": "test-vehicles",
+      "entities": [
+        {
+          "id": "base",
+          "attach-y": -50,
+          "texture-id": "grid.png",
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            500, 0, -500,
+            -500, 0, -500,
+            -500, 0, 500,
+            500, 0, 500
+          ]
+        },
+        {
+          "id": "reset",
+          "attach-y": -100,
+          "draw": false,
+          "event-range": 0,
+          "event-todo": "webgl_character_spawn",
+          "event-todo-args": "vehicle",
+          "vertices": [
+            10000, 0, -10000,
+            -10000, 0, -10000,
+            -10000, 0, 10000,
+            10000, 0, 10000
+          ]
+        },
+        {
+          "id": "track-0-0",
+          "attach-x": 450,
+          "attach-y": -50,
+          "attach-z": -600,
+          "texture-id": "grid.png",
+          "vertices": [
+            50, 0, -100,
+            -50, 0, -100,
+            -50, 0, 100,
+            50, 0, 100
+          ]
+        },
+        {
+          "id": "track-0-1",
+          "attach-x": 200,
+          "attach-y": -50,
+          "attach-z": -750,
+          "texture-id": "grid.png",
+          "vertices": [
+            300, 0, -50,
+            -300, 0, -50,
+            -300, 0, 50,
+            300, 0, 50
+          ]
+        },
+        {
+          "id": "track-0-2",
+          "attach-x": -200,
+          "attach-y": -50,
+          "attach-z": -850,
+          "texture-id": "grid.png",
+          "vertices": [
+            100, 0, -150,
+            -100, 0, -150,
+            -100, 0, 150,
+            100, 0, 150
+          ]
+        },
+        {
+          "id": "track-0-3",
+          "attach-x": 200,
+          "attach-y": -50,
+          "attach-z": -950,
+          "texture-id": "grid.png",
+          "vertices": [
+            300, 0, -50,
+            -300, 0, -50,
+            -300, 0, 50,
+            300, 0, 50
+          ]
+        },
+        {
+          "id": "track-0-4",
+          "attach-x": 450,
+          "attach-y": -50,
+          "attach-z": -1100,
+          "texture-id": "grid.png",
+          "vertices": [
+            50, 0, -100,
+            -50, 0, -100,
+            -50, 0, 100,
+            50, 0, 100
+          ]
+        },
+        {
+          "id": "track-0-5",
+          "attach-y": -50,
+          "attach-z": -1250,
+          "texture-id": "grid.png",
+          "vertices": [
+            500, 0, -50,
+            -500, 0, -50,
+            -500, 0, 50,
+            500, 0, 50
+          ]
+        },
+        {
+          "id": "track-0-6",
+          "attach-x": -450,
+          "attach-y": -50,
+          "attach-z": -850,
+          "texture-id": "grid.png",
+          "vertices": [
+            50, 0, -350,
+            -50, 0, -350,
+            -50, 0, 350,
+            50, 0, 350
+          ]
+        }
+      ]
     },
     {
       "id": "vehicle",
@@ -37,24 +159,6 @@
     }
   ],
   "prefabs": [
-    {
-      "type": "webgl_primitive_cuboid",
-      "properties": {
-        "prefix": "arena",
-        "all": {
-          "texture-id": "grid.png",
-          "texture-repeat-x": 10,
-          "texture-repeat-y": 10
-        },
-        "bottom": {
-          "exclude": true
-        },
-        "character": "test-vehicles",
-        "size-x": -1000,
-        "size-y": -100,
-        "size-z": -1000
-      }
-    },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
