@@ -9,7 +9,7 @@
       "entities": [
         {
           "id": "base",
-          "attach-y": -50,
+          "attach-y": -20,
           "texture-id": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
@@ -25,22 +25,24 @@
         },
         {
           "id": "reset",
-          "attach-y": -100,
-          "draw": false,
+          "attach-y": -50,
           "event-range": 0,
           "event-todo": "webgl_character_spawn",
-          "event-todo-args": "vehicle",
+          "event-todo-args": "_target",
+          "vertex-colors": [
+            0.1, 0.1, 0.1, 1
+          ],
           "vertices": [
-            10000, 0, -10000,
-            -10000, 0, -10000,
-            -10000, 0, 10000,
-            10000, 0, 10000
+            2000, 0, -2000,
+            -2000, 0, -2000,
+            -2000, 0, 2000,
+            2000, 0, 2000
           ]
         },
         {
           "id": "track-0-0",
           "attach-x": 450,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -600,
           "texture-id": "grid.png",
           "vertices": [
@@ -53,7 +55,7 @@
         {
           "id": "track-0-1",
           "attach-x": 200,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -750,
           "texture-id": "grid.png",
           "vertices": [
@@ -66,7 +68,7 @@
         {
           "id": "track-0-2",
           "attach-x": -200,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -850,
           "texture-id": "grid.png",
           "vertices": [
@@ -79,7 +81,7 @@
         {
           "id": "track-0-3",
           "attach-x": 200,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -950,
           "texture-id": "grid.png",
           "vertices": [
@@ -92,7 +94,7 @@
         {
           "id": "track-0-4",
           "attach-x": 450,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -1100,
           "texture-id": "grid.png",
           "vertices": [
@@ -104,7 +106,7 @@
         },
         {
           "id": "track-0-5",
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -1250,
           "texture-id": "grid.png",
           "vertices": [
@@ -117,7 +119,7 @@
         {
           "id": "track-0-6",
           "attach-x": -450,
-          "attach-y": -50,
+          "attach-y": -20,
           "attach-z": -850,
           "texture-id": "grid.png",
           "vertices": [
@@ -130,24 +132,83 @@
       ]
     },
     {
-      "id": "vehicle",
+      "id": "vehicle-fast",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": -25,
+      "translate-y": 5,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "speed-deceleration": -0.01,
+        "speed-max": 6
+      },
+      "entities": [
+        {
+          "id": "fast-body",
+          "event-todo": "webgl_vehicle_toggle",
+          "event-todo-args": {
+            "vehicle": "vehicle-fast"
+          },
+          "pick-color": [0, 0, 1],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle-medium",
       "collides": true,
       "gravity": 1,
       "level": 0,
       "translate-y": 5,
       "turn-speed": 2,
       "vehicle-stats": {
-        "speed-deceleration": -0.05,
+        "speed-deceleration": -0.01,
         "speed-max": 3
       },
       "entities": [
         {
-          "id": "body",
+          "id": "medium-body",
           "event-todo": "webgl_vehicle_toggle",
           "event-todo-args": {
-            "vehicle": "vehicle"
+            "vehicle": "vehicle-medium"
           },
-          "pick-color": [0, 0, 1],
+          "pick-color": [0, 1, 0],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle-slow",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": 25,
+      "translate-y": 5,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "speed-acceleration": 0.01,
+        "speed-deceleration": -0.01,
+        "speed-max": 10
+      },
+      "entities": [
+        {
+          "id": "slow-body",
+          "event-todo": "webgl_vehicle_toggle",
+          "event-todo-args": {
+            "vehicle": "vehicle-slow"
+          },
+          "pick-color": [1, 0, 0],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -171,9 +232,9 @@
         },
         "character": "test-vehicles",
         "size-x": 100,
-        "size-y": 50,
+        "size-y": 20,
         "size-z": 100,
-        "translate-y": -25
+        "translate-y": -10
       }
     }
   ]
