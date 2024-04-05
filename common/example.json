@@ -39,6 +39,7 @@
       "speed": 2
     }
   },
+  "paused": false,
   "spawn-rotate-x": 45,
   "spawn-rotate-y": 0,
   "spawn-rotate-z": 0,
