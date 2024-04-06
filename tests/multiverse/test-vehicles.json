@@ -161,6 +161,33 @@
       ]
     },
     {
+      "id": "vehicle-locked",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": -75,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "locked": true
+      },
+      "entities": [
+        {
+          "id": "locked-body",
+          "event-todo": "webgl_vehicle_toggle",
+          "event-todo-args": {
+            "vehicle": "vehicle-locked"
+          },
+          "pick-color": [0, 1, 1],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
       "id": "vehicle-medium",
       "collides": true,
       "gravity": 1,
