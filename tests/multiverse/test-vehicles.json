@@ -195,6 +195,7 @@
       "translate-y": 5,
       "turn-speed": 2,
       "vehicle-stats": {
+        "character": "_me",
         "speed-deceleration": -0.01,
         "speed-max": 3
       },
