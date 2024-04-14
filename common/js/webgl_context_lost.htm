@@ -6,5 +6,10 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_context_lost(event)
 <ul>
-  <li>Pauses all intervals when WebGL context is lost.
+  <li>Handles WebGL context loss.
+  <li>When context is restored, <a href=webgl_context_restored.htm>webgl_context_restored()</a> is called.
 </ul>
+<code>const test = webgl.getExtension('WEBGL_lose_context');
+test.loseContext();
+test.restoreContext();
+</code>
