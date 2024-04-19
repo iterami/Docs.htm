@@ -335,6 +335,32 @@ function repo_init(){
         {
           'args': {
             'array': [
+              {
+                'test': 1,
+              },
+              {
+                'test': 0,
+              },
+              {
+                'test': 3,
+              },
+              {
+                'test': 2,
+              },
+            ],
+            'property': 'test',
+          },
+          'expect': function(result){
+              return result[0]['test'] === 0
+                && result[1]['test'] === 1
+                && result[2]['test'] === 2
+                && result[3]['test'] === 3;
+          },
+          'function': 'core_sort_property',
+        },
+        {
+          'args': {
+            'array': [
               'eight',
               'sixteen',
               'four',
@@ -349,7 +375,7 @@ function repo_init(){
             'fortytwo',
             'four',
             'sixteen',
-          'twentythree',
+            'twentythree',
           ],
           'function': 'core_sort_strings',
         },
