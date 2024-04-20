@@ -1,5 +1,7 @@
 {
   "title": "Prefab Repeat Test",
+  "fog-density": 0.0001,
+  "fog-state": true,
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
