@@ -39,7 +39,7 @@
         "size-x": 10,
         "size-y": 10,
         "size-z": 10,
-        "translate-y": 15
+        "translate-y": 20
       }
     },
     {
@@ -54,7 +54,7 @@
         "size-x": -25,
         "size-y": -25,
         "size-z": -25,
-        "translate-y": 15
+        "translate-y": 20
       }
     },
     {
@@ -70,7 +70,7 @@
         "size-x": 15,
         "size-y": 15,
         "size-z": 15,
-        "translate-y": 15
+        "translate-y": 20
       }
     }
   ]
