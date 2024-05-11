@@ -121,6 +121,9 @@ table{
   <tr>
     <td>rook-short-moved
     <td id=black-rook-short-moved>
+  <tr>
+    <td>time
+    <td id=black-time>
   <tr class=header>
     <td>White <select><option>Human</select>
     <td>State
@@ -148,9 +151,13 @@ table{
     <td>rook-short-moved
     <td id=white-rook-short-moved>
   <tr>
+    <td>time
+    <td id=white-time>
+  <tr>
     <td colspan=2><button onclick="rotate_board()" type=button>Rotate Board</button><button onclick="reset_board(true)" type=button>Reset</button><button onclick="update_board()" type=button>Update</button><br>
 <input onclick="override=!override" type=checkbox> Override Rules<br>
 <input checked onclick="threefold=!threefold" type=checkbox> Threefold Repetition<br>
+<input class=mini id=time min=-1 step=any type=number value=3600>+<input class=mini id=increment min=0 step=any type=number value=10>Time<br>
 <button onclick="remove_selected()" type=button>Remove Selected Piece</button>
 </table>
 
@@ -193,8 +200,13 @@ function reset_board(reset){
         return false;
     }
 
+    globalThis.clearInterval(clock);
+    clock_started = false;
+
     chess_new({
       'id': 'test',
+      'increment': document.getElementById('increment').value,
+      'time': document.getElementById('time').value,
     });
     next = '';
     previous = '';
@@ -237,6 +249,17 @@ function rotate_board(){
     }
 
     update_board();
+}
+
+function second(){
+    const player = chess_games['test']['player'];
+    if(chess_games['test']['players'][player]['time'] <= 0){
+        return;
+    }
+    chess_games['test']['players'][player]['time']--;
+    document.getElementById(player
+      ? 'black-time'
+      : 'white-time').textContent = chess_games['test']['players'][player]['time'];
 }
 
 function select_square(id){
@@ -285,6 +308,13 @@ function select_square(id){
         if(!threefold){
             chess_games['test']['threefold'] = {};
         }
+
+        if(!clock_started){
+            clock = globalThis.setInterval(
+              second,
+              1000
+            );
+        }
     }
 
     if(selected.length){
@@ -299,6 +329,9 @@ function update_board(){
     document.getElementById('turn').textContent = chess_games['test']['player']
       ? 'Black'
       : 'White';
+    document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
+    document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
+
     document.getElementById('black-king').textContent = chess_xy_to_fr(
       chess_games['test']['players'][1]['king-x'],
       chess_games['test']['players'][1]['king-y']
@@ -307,7 +340,8 @@ function update_board(){
     document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
     document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
     document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
-    document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
+    document.getElementById('black-time').textContent = chess_games['test']['players'][1]['time'];
+
     document.getElementById('white-king').textContent = chess_xy_to_fr(
       chess_games['test']['players'][0]['king-x'],
       chess_games['test']['players'][0]['king-y']
@@ -316,7 +350,7 @@ function update_board(){
     document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
     document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
     document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
-    document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
+    document.getElementById('white-time').textContent = chess_games['test']['players'][0]['time'];
 
     for(let y = 0; y < 8; y++){
         for(let x = 0; x < 8; x++){
@@ -334,6 +368,8 @@ function update_board(){
     }
 }
 
+let clock = 0;
+let clock_started = false;
 let next = '';
 let override = false;
 let previous = '';
