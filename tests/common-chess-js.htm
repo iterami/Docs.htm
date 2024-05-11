@@ -310,6 +310,7 @@ function select_square(id){
         }
 
         if(!clock_started){
+            clock_started = true;
             clock = globalThis.setInterval(
               second,
               1000
