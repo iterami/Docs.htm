@@ -234,7 +234,7 @@ function repo_init(){
         {
           'args': void 0,
           'expect': function(result){
-              return typeof result === 'string';
+              return typeof result === 'string' && result.length === 6;
           },
           'function': 'core_random_hex',
         },
