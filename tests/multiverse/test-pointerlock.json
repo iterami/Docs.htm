@@ -1,5 +1,6 @@
 {
   "title": "Pointerlock Test",
+  "camera-zoom-max": 0,
   "pointerlock": true,
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
