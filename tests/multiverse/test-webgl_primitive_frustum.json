@@ -49,6 +49,23 @@
         "translate-x": 10,
         "translate-y": 15
       }
+    },
+    {
+      "type": "webgl_primitive_frustum",
+      "properties": {
+        "character": "test-primitive-frustum",
+        "bottom": false,
+        "color-bottom": [0.1, 0.1, 0.1, 1],
+        "color-top": [0.1, 0.1, 0.1, 1],
+        "length": 25,
+        "points": 15,
+        "prefix": "pipe",
+        "size-bottom": 2,
+        "size-top": 2,
+        "top": false,
+        "translate-y": 5,
+        "translate-z": -25
+      }
     }
   ]
 }
