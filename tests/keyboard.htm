@@ -38,11 +38,15 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
-    core_interval_modify({
-      'id': 'interval',
-      'interval': 100,
-      'todo': update_keys,
-    });
+    update_keys();
+    globalThis.addEventListener(
+      'keydown',
+      update_keys
+    );
+    globalThis.addEventListener(
+      'keyup',
+      update_keys
+    );
 }
 
 function update_keys(){
@@ -60,4 +64,3 @@ function update_keys(){
     document.getElementById('keys').innerHTML = keys_html;
 }
 </script>
-

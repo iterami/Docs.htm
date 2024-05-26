@@ -34,11 +34,19 @@ function repo_init(){
     }
     document.getElementById('mouse').innerHTML = mouse_html;
 
-    core_interval_modify({
-      'id': 'interval',
-      'interval': 100,
-      'todo': update_mouse,
-    });
+    update_mouse();
+    globalThis.addEventListener(
+      'mousedown',
+      update_mouse
+    );
+    globalThis.addEventListener(
+      'mousemove',
+      update_mouse
+    );
+    globalThis.addEventListener(
+      'mouseup',
+      update_mouse
+    );
 }
 
 function update_mouse(){
