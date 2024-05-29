@@ -16,6 +16,7 @@
   "fog-density": 0.0001,
   "fog-state": false,
   "gravity-acceleration": -0.05,
+  "gravity-damage": false,
   "gravity-max": -2,
   "paths": {
     "example-path": {

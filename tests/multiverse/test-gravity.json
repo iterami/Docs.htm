@@ -1,7 +1,8 @@
 {
   "title": "Gravity Test",
+  "gravity-damage": true,
   "spawn-translate-y": 3,
-  "spawn-translate-z": 45,
+  "spawn-translate-z": 25,
   "characters": [
     {
       "id": "test-gravity",
@@ -15,10 +16,24 @@
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
+            30, 0, -30,
+            -30, 0, -30,
+            -30, 0, 30,
+            30, 0, 30
+          ]
+        },
+        {
+          "id": "lower",
+          "attach-y": -100,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            60, 0, -60,
+            -60, 0, -60,
+            -60, 0, 60,
+            60, 0, 60
           ]
         }
       ]
@@ -27,6 +42,8 @@
       "id": "gravity-normal",
       "collides": true,
       "gravity": 1,
+      "health": 100,
+      "health-max": 100,
       "level": 0,
       "translate-x": -15,
       "translate-y": 50,
@@ -48,6 +65,8 @@
       "id": "gravity-strong",
       "collides": true,
       "gravity": 2,
+      "health": 100,
+      "health-max": 100,
       "level": 0,
       "translate-y": 50,
       "entities": [
@@ -68,6 +87,8 @@
       "id": "gravity-weak",
       "collides": true,
       "gravity": 0.1,
+      "health": 100,
+      "health-max": 100,
       "level": 0,
       "translate-x": 15,
       "translate-y": 50,
