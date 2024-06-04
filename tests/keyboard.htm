@@ -36,6 +36,9 @@ function repo_init(){
         },
       },
       'title': 'Docs.htm',
+      'ui-elements': [
+        'keys',
+      ],
     });
 
     update_keys();
@@ -61,6 +64,6 @@ function update_keys(){
           + '<td>' + core_keys[sorted_keys[key]]['solo']
           + '<td>' + core_keys[sorted_keys[key]]['state'];
     }
-    document.getElementById('keys').innerHTML = keys_html;
+    core_elements['keys'].innerHTML = keys_html;
 }
 </script>

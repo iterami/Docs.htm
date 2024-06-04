@@ -32,14 +32,13 @@
 <script src=../../common/js/prefabs/uri.js></script>
 <script>
 function animate_uri(){
-    const canvas_animated = document.getElementById('canvas-animated');
     const height = core_images[uri]['height'];
     const width = core_images[uri]['width'];
 
-    canvas_animated.height = height;
-    canvas_animated.width = width;
+    core_elements['canvas-animated'].height = height;
+    core_elements['canvas-animated'].width = width;
 
-    const canvas = canvas_animated.getContext('2d');
+    const canvas = core_elements['canvas-animated'].getContext('2d');
     canvas.fillStyle = canvas.createPattern(
       core_images[uri],
       'repeat'
@@ -55,7 +54,7 @@ function animate_uri(){
       height * 2,
     );
 
-    offset_x += Number(document.getElementById('direction-x').value);
+    offset_x += Number(core_elements['direction-x'].value);
     if(offset_x <= 0){
         offset_x = core_images[uri]['width'];
 
@@ -63,7 +62,7 @@ function animate_uri(){
         offset_x = 0;
     }
 
-    offset_y += Number(document.getElementById('direction-y').value);
+    offset_y += Number(core_elements['direction-y'].value);
     if(offset_y <= 0){
         offset_y = core_images[uri]['height'];
 
@@ -80,6 +79,11 @@ function repo_init(){
         'uri': '',
       },
       'title': 'Docs.htm',
+      'ui-elements': [
+        'canvas-animated',
+        'direction-x',
+        'direction-y',
+      ],
     });
 
     let results = '';
@@ -119,9 +123,8 @@ function repo_init(){
         });
     }
 
-    const canvas_animated = document.getElementById('canvas-animated');
-    canvas_animated.height = 1;
-    canvas_animated.width = 1;
+    core_elements['canvas-animated'].height = 1;
+    core_elements['canvas-animated'].width = 1;
 }
 
 function setup_uri(id){
