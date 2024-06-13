@@ -1,0 +1,49 @@
+{
+  "title": "Particles Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-particles",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 100,
+          "texture-repeat-y": 100,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_particle",
+      "properties": {
+        "character": "test-particles",
+        "entities": [
+          {
+            "id": "rain",
+            "vertex-repeat": 100
+          }
+        ],
+        "id": "rain",
+        "translate-y": 25,
+        "x-max": 25,
+        "x-min": -25,
+        "y-max": 25,
+        "y-min": -25,
+        "z-max": 25,
+        "z-min": -25
+      }
+    }
+  ]
+}

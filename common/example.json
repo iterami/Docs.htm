@@ -129,6 +129,7 @@
           "event-target-id": "_me",
           "event-target-type": "character",
           "event-todo": false,
+          "particle": false,
           "pick-color": false,
           "rotate-x": 0,
           "rotate-y": 0,
