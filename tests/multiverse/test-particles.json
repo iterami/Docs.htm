@@ -33,10 +33,13 @@
           {
             "id": "rain",
             "point-size": 100,
-            "vertex-repeat": 100
+            "vertex-repeat": 200
           }
         ],
         "id": "rain",
+        "speed-x": 0.1,
+        "speed-y": -0.1,
+        "speed-z": 0.1,
         "translate-y": 25,
         "x-max": 25,
         "x-min": -25,
