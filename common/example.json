@@ -131,6 +131,7 @@
           "event-todo": false,
           "particle": false,
           "pick-color": false,
+          "point-size": 500,
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,

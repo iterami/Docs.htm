@@ -32,6 +32,7 @@
         "entities": [
           {
             "id": "rain",
+            "point-size": 100,
             "vertex-repeat": 100
           }
         ],
