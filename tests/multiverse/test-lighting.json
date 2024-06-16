@@ -1,0 +1,23 @@
+{
+  "title": "Lighting Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-lighting"
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid",
+        "character": "test-lighting",
+        "size-x": -50,
+        "size-y": -50,
+        "size-z": -50,
+        "translate-y": 20
+      }
+    }
+  ]
+}
