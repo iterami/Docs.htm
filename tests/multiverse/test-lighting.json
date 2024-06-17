@@ -2,6 +2,54 @@
   "title": "Lighting Test",
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
+  "paths": {
+    "loop": {
+      "end": "loop",
+      "points": [
+        {
+          "translate-x": -20,
+          "translate-y": 40,
+          "translate-z": -20
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 0,
+          "translate-z": 20
+        },
+        {
+          "translate-x": -20,
+          "translate-y": 0,
+          "translate-z": 20
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 40,
+          "translate-z": -20
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 40,
+          "translate-z": 20
+        },
+        {
+          "translate-x": -20,
+          "translate-y": 0,
+          "translate-z": -20
+        },
+        {
+          "translate-x": 20,
+          "translate-y": 0,
+          "translate-z": -20
+        },
+        {
+          "translate-x": -20,
+          "translate-y": 40,
+          "translate-z": 20
+        }
+      ],
+      "speed": 0.5
+    }
+  },
   "characters": [
     {
       "id": "test-lighting"
