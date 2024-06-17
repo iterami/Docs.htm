@@ -115,45 +115,6 @@ function repo_init(){
           'function': 'core_float_compare',
         },
         {
-          'args': void 0,
-          'expect': {},
-          'function': 'core_handle_defaults',
-        },
-        {
-          'args': {
-            'var': 5,
-          },
-          'expect': 5,
-          'function': 'core_handle_defaults',
-        },
-        {
-          'args': {
-            'default': {
-              'test': 5,
-            },
-            'var': {},
-          },
-          'expect': {
-            'test': 5,
-          },
-          'function': 'core_handle_defaults',
-        },
-        {
-          'args': {
-            'default': {
-              'test': 5,
-            },
-            'var': {
-              'other': 6,
-            },
-          },
-          'expect': {
-            'other': 6,
-            'test': 5,
-          },
-          'function': 'core_handle_defaults',
-        },
-        {
           'args': '#abc',
           'expect': {
             'blue': 204,
