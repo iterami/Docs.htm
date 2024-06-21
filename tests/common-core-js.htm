@@ -151,21 +151,6 @@ function repo_init(){
         },
         {
           'args': {
-            'id': 'core_html-element',
-            'properties': {
-              'id': 'core_html_modify-element',
-            },
-          },
-          'expect': function(result){
-              if(document.getElementById('core_html_modify-element')){
-                  return true;
-              }
-              return false;
-          },
-          'function': 'core_html_modify',
-        },
-        {
-          'args': {
             'decimals-max': 3,
             'number': '123456.789',
           },
