@@ -6,6 +6,7 @@ function new_game(){
       'character': 2,
       'json': {
         'camera-zoom-max': 0,
+        'pointerlock': true,
         'spawn-translate-y': 1,
         'characters': [
           {
