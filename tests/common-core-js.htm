@@ -145,8 +145,8 @@ function repo_init(){
           'function': 'core_html',
         },
         {
-          'args': '<u>test</u>',
-          'expect': '&lt;u&gt;test&lt;/u&gt;',
+          'args': '<u>\'"&</u>',
+          'expect': '&lt;u&gt;&#39;&#34;&amp;&lt;/u&gt;',
           'function': 'core_html_format',
         },
         {
