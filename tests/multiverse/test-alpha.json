@@ -47,6 +47,7 @@
       "properties": {
         "prefix": "solid",
         "all": {
+          "alpha": 0.5,
           "collision": false,
           "texture-id": "grid.png"
         },
