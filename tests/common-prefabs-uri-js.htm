@@ -19,12 +19,8 @@
 <table>
   <thead>
     <tr class=header>
-      <td>Canvas
-      <td>ID
-      <td>Dimensions
-      <td>Size
+      <td>Prefab
       <td>URI
-      <td>Animate
   <tbody id=results>
 </table>
 
@@ -88,12 +84,12 @@ function repo_init(){
 
     let results = '';
     for(let uri in uris){
-        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas>'
-          + '<td><a href="#' + uri + '">' + uri + '</a>'
-          + '<td><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span>'
-          + '<td><span id="size-' + uri + '"></span> B'
-          + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>'
-          + '<td><input onclick=setup_uri("' + uri + '") type=button value=Animate>';
+        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br>'
+          + uri + '<br>'
+          + '<span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br>'
+          + '<span id="size-' + uri + '"></span> B<br>'
+          + '<input onclick=setup_uri("' + uri + '") type=button value=Animate>'
+          + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
     document.getElementById('results').innerHTML = results;
 
