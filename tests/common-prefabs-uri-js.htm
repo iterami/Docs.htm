@@ -92,7 +92,7 @@ function repo_init(){
           + '<td><a href="#' + uri + '">' + uri + '</a>'
           + '<td><span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span>'
           + '<td><span id="size-' + uri + '"></span> B'
-          + '<td><input id="' + uri + '" type=text value="' + uris[uri] + '">'
+          + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>'
           + '<td><input onclick=setup_uri("' + uri + '") type=button value=Animate>';
     }
     document.getElementById('results').innerHTML = results;
