@@ -360,7 +360,7 @@ function update_board(){
 
             square.innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
             square.style.backgroundColor = (id === previous || id === next)
-              ? (x & 1 === y & 1
+              ? (x % 2 === y % 2
                   ? '#afa'
                   : '#7a7'
                 )
