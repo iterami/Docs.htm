@@ -125,7 +125,7 @@
     <td><button onclick=add_element(this) type=button>+</button>
   <tr>
     <td>Input type=radio Checked Disabled
-    <td><input checked disabled name=radio type=radio>
+    <td id=radio><input checked disabled name=radio type=radio>
     <td><button onclick=add_element(this) type=button>+</button>
   <tr>
     <td>Input type=radio Disabled
@@ -318,6 +318,7 @@ function clear_elements(){
     while(elements.firstChild){
         elements.removeChild(elements.firstChild);
     }
+    document.getElementById('radio').firstChild.checked = true;
 }
 
 function repo_init(){
