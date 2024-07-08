@@ -7,6 +7,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=canvas.htm>canvas.js</a>/canvas_draw_path(args)
 <ul>
   <li>Draws interesting things with various properties, such as polygons and spheres.
+  <li>Vertices are args in specific order depending on their type, which is the first arg as a string.
 </ul>
 <table>
   <tr class=header>
@@ -26,13 +27,9 @@
     <td>false
     <td>boolean
   <tr>
-    <td>type
-    <td>'lineTo'
-    <td>string
-  <tr>
     <td>vertices
     <td>
-    <td>array of numbers
+    <td>array of arrays of args
   <tr>
     <td>x
     <td>0
