@@ -59,7 +59,7 @@
           "rotate-z": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
-            1, 1, 1, 1
+            1, 0, 0, 1
           ],
           "vertices": [
             10, 0, -5,
@@ -76,7 +76,7 @@
           "rotate-x": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
-            1, 1, 1, 1
+            0, 1, 0, 1
           ],
           "vertices": [
             5, 0, -10,
@@ -122,7 +122,7 @@
           "rotate-z": 270,
           "texture-id": "grid.png",
           "vertex-colors": [
-            1, 1, 1, 1
+            0, 0, 1, 1
           ],
           "vertices": [
             10, 0, -5,

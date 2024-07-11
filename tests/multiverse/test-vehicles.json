@@ -151,6 +151,9 @@
             "vehicle": "vehicle-fast"
           },
           "pick-color": [0, 0, 1],
+          "vertex-colors": [
+            1, 0, 0, 1
+          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -207,6 +210,9 @@
             "vehicle": "vehicle-medium"
           },
           "pick-color": [0, 1, 0],
+          "vertex-colors": [
+            0, 0, 1, 1
+          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -237,6 +243,9 @@
             "vehicle": "vehicle-slow"
           },
           "pick-color": [1, 0, 0],
+          "vertex-colors": [
+            0, 1, 0, 1
+          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
