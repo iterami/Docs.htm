@@ -24,6 +24,52 @@
           ]
         },
         {
+          "id": "levelup-1000",
+          "attach-x": -25,
+          "attach-z": -50,
+          "event-modify": [
+            {
+              "stat": "level-xp",
+              "value": 1000
+            }
+          ],
+          "pick-color": [0, 1, 1],
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            0, 1, 1, 1
+          ],
+          "vertices": [
+            5, 0, -10,
+            -5, 0, -10,
+            -5, 0, 10,
+            5, 0, 10
+          ]
+        },
+        {
+          "id": "levelup-1000000",
+          "attach-x": 25,
+          "attach-z": -50,
+          "event-modify": [
+            {
+              "stat": "level-xp",
+              "value": 1000000
+            }
+          ],
+          "pick-color": [1, 0, 1],
+          "rotate-x": 90,
+          "texture-id": "grid.png",
+          "vertex-colors": [
+            1, 0, 1, 1
+          ],
+          "vertices": [
+            5, 0, -10,
+            -5, 0, -10,
+            -5, 0, 10,
+            5, 0, 10
+          ]
+        },
+        {
           "id": "limit",
           "attach-x": 20,
           "event-limit": 2,
