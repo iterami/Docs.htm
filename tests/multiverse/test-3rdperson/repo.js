@@ -5,6 +5,7 @@ function new_game(){
     webgl_level_load({
       'character': 2,
       'json': {
+        'camera-zoom-min': 10,
         'spawn-translate-y': 1,
         'characters': [
           {
