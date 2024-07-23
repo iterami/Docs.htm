@@ -1,6 +1,7 @@
 'use strict';
 
 function new_game(){
+    core_menu_lock = false;
     webgl_level_unload();
     webgl_level_load({
       'character': 2,
@@ -10,30 +11,38 @@ function new_game(){
         'spawn-translate-y': 1,
         'characters': [
           {
-            'id': 'test-game',
-            'entities': [
-              {
-                'id': 'base',
-                'texture-id': 'grid.png',
-                'texture-repeat-x': 20,
-                'texture-repeat-y': 20,
+            'id': 'fps-test',
+          },
+        ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'base',
+              'all': {
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1
+                  0.2, 0.2, 0.2, 1,
                 ],
-                'vertices': [
-                  20, 0, -20,
-                  -20, 0, -20,
-                  -20, 0, 20,
-                  20, 0, 20
-                ]
-              }
-            ]
+                'texture-id': 'grid.png',
+                'texture-repeat-x': 10,
+                'texture-repeat-y': 10,
+              },
+              'character': 'fps-test',
+              'size-x': -100,
+              'size-y': -50,
+              'size-z': -100,
+              'translate-y': 24,
+            },
           },
         ],
       },
     });
-    webgl_characters[webgl_character_id]['controls'] = 'rpg';
-    webgl_characters[webgl_character_id]['level'] = -1;
+    webgl_character_random({
+      'height-base': 5,
+      'height-random': 0,
+      'id': webgl_character_id,
+      'width-random': 0,
+    });
 }
 
 function repo_init(){
@@ -51,6 +60,7 @@ function repo_init(){
         },
       },
       'menu': true,
+      'menu-lock': true,
       'mousebinds': {
         'contextmenu': {
           'preventDefault': true,
@@ -73,6 +83,7 @@ function repo_init(){
         },
       },
       'info': '<button id=new-game type=button>New Game</button>',
+      'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
     });
 }
