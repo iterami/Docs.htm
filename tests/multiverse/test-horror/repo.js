@@ -48,6 +48,13 @@ function new_game(){
     });
 }
 
+function repo_escape(){
+    if(webgl === 0
+      && !core_menu_open){
+        new_game();
+    }
+}
+
 function repo_init(){
     core_repo_init({
       'events': {
@@ -62,7 +69,7 @@ function repo_init(){
           },
         },
       },
-      'menu-lock': true,
+      'menu': true,
       'mousebinds': {
         'contextmenu': {
           'preventDefault': true,
