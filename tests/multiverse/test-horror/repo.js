@@ -96,6 +96,3 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 }
-
-function repo_logic(){
-}
