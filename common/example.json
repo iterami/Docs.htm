@@ -19,6 +19,9 @@
   "gravity-acceleration": -0.05,
   "gravity-damage": false,
   "gravity-max": -2,
+  "lock": {
+    "translate-y": 10
+  },
   "paths": {
     "example-path": {
       "end": "loop",
@@ -79,6 +82,9 @@
       "level": 0,
       "level-xp": 0,
       "lives": -1,
+      "lock": {
+        "translate-y": 5
+      },
       "path-direction": 1,
       "path-end": "",
       "path-id": "",

@@ -50,6 +50,12 @@
   "gravity-damage": false,
   "gravity-max": -2,
 
+  // Optional. Locked properties that are applied to all characters before collision detection.
+  "lock": {
+    // This example prevents any characters from having any y translation other than 10.
+    "translate-y": 10
+  },
+
   // Optional. Paths that characters can move along.
   "paths": {
     "example-path": {
@@ -172,6 +178,12 @@
       // Optional. Remaining character lives.
       // -1 means character has unlimited lives.
       "lives": -1,
+
+      // Optional. Locked properties that are applied this character before collision detection.
+      "lock": {
+        // This example does nothing because this example level locks character y translation to 10.
+        "translate-y": 5
+      },
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
       // What occurs when the end of the path is reached:
