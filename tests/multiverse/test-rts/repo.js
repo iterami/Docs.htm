@@ -6,7 +6,9 @@ function new_game(){
       'character': 2,
       'json': {
         'camera-zoom-min': 20,
-        'spawn-rotate-x': 75,
+        'lock': {
+          'camera-rotate-x': 75,
+        },
         'characters': [
           {
             'id': 'rts-test',
