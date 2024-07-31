@@ -3,12 +3,9 @@
 function new_game(){
     webgl_level_unload();
     webgl_level_load({
-      'character': 2,
+      'character': -1,
       'json': {
         'camera-zoom-min': 20,
-        'lock': {
-          'camera-rotate-x': 75,
-        },
         'characters': [
           {
             'id': 'rts-test',
@@ -33,12 +30,16 @@ function new_game(){
         ],
       },
     });
-    webgl_character_random({
-      'gravity': 0,
-      'height-random': 0,
-      'id': webgl_character_id,
-      'width-random': 0,
+    webgl_character_init({
+      'controls': 'rpg',
+      'level': -1,
+      'lock': {
+        'camera-rotate-x': 75,
+        'translate-y': 5,
+      },
+      'speed': 2,
     });
+    webgl_character_spawn();
 }
 
 function repo_escape(){

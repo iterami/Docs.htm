@@ -37,12 +37,14 @@ function new_game(){
         ],
       },
     });
-    webgl_character_random({
-      'height-base': 5,
-      'height-random': 0,
-      'id': webgl_character_id,
-      'width-random': 0,
+    webgl_character_init({
+      'collide-range-y': 5,
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'level': 0,
     });
+    webgl_character_spawn();
 }
 
 function repo_escape(){

@@ -70,11 +70,14 @@ function new_game(){
         ],
       },
     });
-    webgl_character_random({
-      'height-random': 0,
-      'id': webgl_character_id,
-      'width-random': 0,
+    webgl_character_init({
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'level': 0,
+      'randomize': true,
     });
+    webgl_character_spawn();
 }
 
 function repo_escape(){
