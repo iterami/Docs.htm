@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>core_random_drop(args) Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/core_random_drop.htm>core_random_drop(args)</a><br>
+
+<textarea id=input>
+{
+  "nothing": 1,
+  "nothing-type": -1,
+  "options": {
+    "item-0": 0.1,
+    "item-1": 0.2
+  }
+}
+</textarea><br>
+<button id=drop>Drop</button>
+<div id=result></div>
+
+<script src=../../common/js/core.js></script>
+<script>
+function new_drop(){
+    const drop = core_random_drop(JSON.parse(core_elements['input'].value));
+    core_elements['result'].textContent = drop;
+}
+
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'drop': {
+          'onclick': new_drop,
+        },
+      },
+      'title': 'Docs.htm',
+      'ui-elements': [
+        'input',
+        'result',
+      ],
+    });
+}
+</script>
