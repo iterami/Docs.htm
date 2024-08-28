@@ -178,6 +178,32 @@ function repo_init(){
           'function': 'core_random_boolean',
         },
         {
+          'args': {
+            'options': {},
+          },
+          'expect': false,
+          'function': 'core_random_drop',
+        },
+        {
+          'args': {
+            'options': {
+              'guaranteed': 1,
+            },
+          },
+          'expect': 'guaranteed',
+          'function': 'core_random_drop',
+        },
+        {
+          'args': {
+            'nothing-type': -1,
+            'options': {
+              'guaranteed': .1,
+            },
+          },
+          'expect': 'guaranteed',
+          'function': 'core_random_drop',
+        },
+        {
           'args': void 0,
           'expect': function(result){
               return typeof result === 'string' && result.length === 6;
