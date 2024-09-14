@@ -220,7 +220,30 @@
       "vehicle": false,
 
       // Optional. The stats of this character when used as a vehicle, or false if not possible.
-      "vehicle-stats": false,
+      // If not false, then all properties within this object are required.
+      "vehicle-stats": {
+        // The ID of the character that is controlling this vehicle, or false if none.
+        "character": false,
+
+        // Current vehicle lock state:
+        //   0: unlocked. Characters may freely enter and exit this vehicle.
+        //   1: cannot enter. Characters may exit this vehicle but not enter it.
+        //   2: cannot exit. Characters may enter this vehicle but not exit it.
+        //   3: locked. Characters cannot enter or exit the vechile.
+        "lock": 0,
+
+        // Current vehicle movement speed.
+        "speed": 0,
+
+        // How quickly the vehicle accelerates when moving forward.
+        "speed-acceleration": 0.1,
+
+        // How quickly the vehicle decelerates when not moving forward.
+        "speed-deceleration": -0.1,
+
+        // The maximum speed that the vehicle can move.
+        "speed-max": 1
+      },
 
       // Optional. Array of entities that should be loaded and attached to the camera translation (without zoom).
       // Uses same format as level entities.

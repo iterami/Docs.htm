@@ -99,7 +99,14 @@
       "translate-z": 0,
       "turn-speed": 5,
       "vehicle": false,
-      "vehicle-stats": false,
+      "vehicle-stats": {
+        "character": false,
+        "lock": 0,
+        "speed": 0,
+        "speed-acceleration": 0.1,
+        "speed-deceleration": -0.1,
+        "speed-max": 1
+      },
       "entities": []
     },
     {
