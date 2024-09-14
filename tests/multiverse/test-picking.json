@@ -54,7 +54,7 @@
             }
           ],
           "event-range": 0,
-          "pick-color": [0, 1, 1],
+          "picking": true,
           "rotate-x": 90,
           "vertex-colors": [
             1, 0, 0, 1
@@ -79,7 +79,7 @@
             }
           ],
           "event-range": 0,
-          "pick-color": [1, 1, 0],
+          "picking": true,
           "rotate-x": 90,
           "vertex-colors": [
             0, 0, 1, 1
@@ -103,7 +103,7 @@
             }
           ],
           "event-range": 0,
-          "pick-color": [0, 1, 0],
+          "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
           "texture-repeat-x": 10,

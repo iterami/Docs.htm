@@ -144,7 +144,7 @@
           "event-target-type": "character",
           "event-todo": false,
           "particle": false,
-          "pick-color": false,
+          "picking": false,
           "point-size": 500,
           "rotate-x": 0,
           "rotate-y": 0,

@@ -150,7 +150,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-fast"
           },
-          "pick-color": [0, 0, 1],
+          "picking": true,
           "vertex-colors": [
             1, 0, 0, 1
           ],
@@ -180,7 +180,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-locked-enter"
           },
-          "pick-color": [0, 1, 1],
+          "picking": true,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -207,7 +207,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-locked-exit"
           },
-          "pick-color": [1, 0, 1],
+          "picking": true,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -234,7 +234,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-locked-both"
           },
-          "pick-color": [1, 1, 0],
+          "picking": true,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -263,7 +263,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-medium"
           },
-          "pick-color": [0, 1, 0],
+          "picking": true,
           "vertex-colors": [
             0, 0, 1, 1
           ],
@@ -296,7 +296,7 @@
           "event-todo-args": {
             "vehicle": "vehicle-slow"
           },
-          "pick-color": [1, 0, 0],
+          "picking": true,
           "vertex-colors": [
             0, 1, 0, 1
           ],

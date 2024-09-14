@@ -33,7 +33,7 @@ function new_game(){
                 'event-todo-args': {
                   'vehicle': 'vehicle',
                 },
-                'pick-color': [0, 1, 0],
+                'picking': true,
                 'vertex-colors': [
                   0, 0, 1, 1,
                 ],

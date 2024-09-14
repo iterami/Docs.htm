@@ -33,7 +33,7 @@
               "value": 1000
             }
           ],
-          "pick-color": [0, 1, 1],
+          "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
@@ -56,7 +56,7 @@
               "value": 1000000
             }
           ],
-          "pick-color": [1, 0, 1],
+          "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
@@ -101,7 +101,7 @@
             }
           ],
           "event-range": 0,
-          "pick-color": [1, 0, 0],
+          "picking": true,
           "rotate-z": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
@@ -118,7 +118,7 @@
           "id": "respawn",
           "attach-z": -20,
           "event-todo": "webgl_character_spawn",
-          "pick-color": [0, 0, 1],
+          "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
           "vertex-colors": [
@@ -164,7 +164,7 @@
           "event-range": 0,
           "event-todo": "audio_start",
           "event-todo-args": "boop",
-          "pick-color": [0, 1, 0],
+          "picking": true,
           "rotate-z": 270,
           "texture-id": "grid.png",
           "vertex-colors": [
