@@ -164,23 +164,77 @@
       ]
     },
     {
-      "id": "vehicle-locked",
+      "id": "vehicle-locked-enter",
       "collides": true,
       "gravity": 1,
       "level": 0,
       "translate-x": -75,
       "turn-speed": 2,
       "vehicle-stats": {
-        "locked": true
+        "lock": 1
       },
       "entities": [
         {
-          "id": "locked-body",
+          "id": "locked-enter-body",
           "event-todo": "webgl_vehicle_toggle",
           "event-todo-args": {
-            "vehicle": "vehicle-locked"
+            "vehicle": "vehicle-locked-enter"
           },
           "pick-color": [0, 1, 1],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle-locked-exit",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": -90,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "lock": 2
+      },
+      "entities": [
+        {
+          "id": "locked-exit-body",
+          "event-todo": "webgl_vehicle_toggle",
+          "event-todo-args": {
+            "vehicle": "vehicle-locked-exit"
+          },
+          "pick-color": [1, 0, 1],
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle-locked-both",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "translate-x": -105,
+      "turn-speed": 2,
+      "vehicle-stats": {
+        "lock": 3
+      },
+      "entities": [
+        {
+          "id": "locked-both-body",
+          "event-todo": "webgl_vehicle_toggle",
+          "event-todo-args": {
+            "vehicle": "vehicle-locked-both"
+          },
+          "pick-color": [1, 1, 0],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
