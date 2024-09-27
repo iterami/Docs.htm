@@ -161,10 +161,6 @@
       // Optional. Current character gravity multiplier.
       "gravity": 1,
 
-      // Optional. Current and maximum health.
-      "health": 1,
-      "health-max": 1,
-
       // Optional. "dy" set when the character jumps.
       "jump-height": 1,
 
@@ -174,6 +170,10 @@
 
       // Optional. Current character xp.
       "level-xp": 0,
+
+      // Optional. Current and maximum life.
+      "life": 1,
+      "life-max": 1,
 
       // Optional. Remaining character lives.
       // -1 means character has unlimited lives.
@@ -304,7 +304,7 @@
               "set": false,
 
               // REQUIRED. ID of the stat that will be modified.
-              "stat": "health",
+              "stat": "life",
 
               // Optional. ID of the character or entity that will be affected.
               "target": "example-entity-1",

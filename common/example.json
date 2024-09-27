@@ -76,11 +76,11 @@
       "collides": true,
       "controls": "rpg",
       "gravity": 1,
-      "health": 1,
-      "health-max": 1,
       "jump-height": 1,
       "level": 0,
       "level-xp": 0,
+      "life": 1,
+      "life-max": 1,
       "lives": -1,
       "lock": {
         "translate-y": 5
@@ -133,7 +133,7 @@
           "event-modify": [
             {
               "set": false,
-              "stat": "health",
+              "stat": "life",
               "target": "example-entity-1",
               "type": "entity_entities",
               "value": -100

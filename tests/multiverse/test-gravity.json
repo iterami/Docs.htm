@@ -42,9 +42,9 @@
       "id": "gravity-normal",
       "collides": true,
       "gravity": 1,
-      "health": 100,
-      "health-max": 100,
       "level": 0,
+      "life": 100,
+      "life-max": 100,
       "translate-x": -15,
       "translate-y": 50,
       "entities": [
@@ -65,9 +65,9 @@
       "id": "gravity-strong",
       "collides": true,
       "gravity": 2,
-      "health": 100,
-      "health-max": 100,
       "level": 0,
+      "life": 100,
+      "life-max": 100,
       "translate-y": 50,
       "entities": [
         {
@@ -87,9 +87,9 @@
       "id": "gravity-weak",
       "collides": true,
       "gravity": 0.1,
-      "health": 100,
-      "health-max": 100,
       "level": 0,
+      "life": 100,
+      "life-max": 100,
       "translate-x": 15,
       "translate-y": 50,
       "entities": [
