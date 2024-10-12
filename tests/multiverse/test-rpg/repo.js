@@ -9,30 +9,105 @@ function new_game(){
         'camera-zoom-min': 10,
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
+        'y-min': -200,
         'characters': [
           {
             'id': 'rpg-test',
-          },
-        ],
-        'prefabs': [
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'base',
-              'all': {
-                'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
-                ],
+            'entities': [
+              {
+                'id': 'home',
+                'attach-z': -25,
                 'texture-id': 'grid.png',
                 'texture-repeat-x': 10,
-                'texture-repeat-y': 10,
+                'texture-repeat-y': 15,
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'vertices': [
+                  50, 0, -75,
+                  -50, 0, -75,
+                  -50, 0, 75,
+                  50, 0, 75,
+                ],
               },
-              'character': 'rpg-test',
-              'size-x': -100,
-              'size-y': -50,
-              'size-z': -100,
-              'translate-y': 24,
-            },
+              {
+                'id': 'bridge',
+                'attach-x': 70,
+                'attach-z': 30,
+                'texture-id': 'grid.png',
+                'texture-repeat-x': 4,
+                'texture-repeat-y': 2,
+                'vertex-colors': [
+                  .4, .2, 0, 1,
+                ],
+                'vertices': [
+                  20, 0, -10,
+                  -20, 0, -10,
+                  -20, 0, 10,
+                  20, 0, 10,
+                ],
+              },
+              {
+                'id': 'forest',
+                'attach-x': 140,
+                'attach-z': -25,
+                'texture-id': 'lavaleaf.png',
+                'vertex-colors': [
+                  .05, .2, .05, 1,
+                ],
+                'vertices': [
+                  50, 0, -75,
+                  -50, 0, -75,
+                  -50, 0, 75,
+                  50, 0, 75,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'npc-friend',
+            'level': 1,
+            'entities': [
+              {
+                'id': 'npc-friend-body',
+                'collision': false,
+                'texture-id': 'grid.png',
+                'vertex-colors': [
+                  .4, .6, .4, 1,
+                ],
+                'vertices': [
+                  5, 0, -5,
+                  -5, 0, -5,
+                  -5, 0, 5,
+                  5, 0, 5,
+                ],
+              },
+            ],
+            'translate-y': 1,
+            'translate-z': -60,
+          },
+          {
+            'id': 'npc-enemy',
+            'level': 2,
+            'entities': [
+              {
+                'id': 'npc-enemy-body',
+                'collision': false,
+                'texture-id': 'grid.png',
+                'vertex-colors': [
+                  .6, .4, .4, 1,
+                ],
+                'vertices': [
+                  5, 0, -5,
+                  -5, 0, -5,
+                  -5, 0, 5,
+                  5, 0, 5,
+                ],
+              },
+            ],
+            'translate-x': 140,
+            'translate-y': 1,
+            'translate-z': -60,
           },
         ],
       },
@@ -41,6 +116,7 @@ function new_game(){
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
+      'jump-height': .6,
       'level': 0,
       'randomize': true,
     });

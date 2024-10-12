@@ -23,7 +23,7 @@ function new_game(){
             'translate-z': -25,
             'turn-speed': 2,
             'vehicle-stats': {
-              'speed-deceleration': -0.01,
+              'speed-deceleration': -.01,
               'speed-max': 3,
             },
             'entities': [
@@ -54,17 +54,42 @@ function new_game(){
               'prefix': 'base',
               'all': {
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
+                  .2, .2, .2, 1,
                 ],
                 'texture-id': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 10,
+                'texture-repeat-x': 5,
+                'texture-repeat-y': 5,
               },
               'character': 'racing-test',
               'size-x': -500,
               'size-y': -50,
               'size-z': -500,
               'translate-y': 24,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'racing-test',
+              'size-x': 20,
+              'size-y': 50,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-x': 100,
+              'translate-y': 24,
+              'translate-z': -100,
             },
           },
         ],

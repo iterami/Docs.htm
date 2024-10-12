@@ -9,56 +9,51 @@ function new_game(){
         'camera-zoom-min': 10,
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
+        'y-min': -200,
         'characters': [
           {
             'id': 'platformer-test',
-            'entities': [
-              {
-                'id': 'reset',
-                'attach-y': -100,
-                'draw': false,
-                'event-range': 0,
-                'event-todo': 'webgl_character_spawn',
-                'event-todo-args': '_target',
-                'vertices': [
-                  250, 0, -250,
-                  -250, 0, -250,
-                  -250, 0, 250,
-                  250, 0, 250,
+          },
+        ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'start',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
                 ],
-              },
-              {
-                'id': 'start',
                 'texture-id': 'grid.png',
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 4,
-                'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
-                ],
-                'vertices': [
-                  20, 0, -20,
-                  -20, 0, -20,
-                  -20, 0, 20,
-                  20, 0, 20,
-                ],
               },
-              {
-                'id': 'end',
-                'attach-z': -70,
+              'character': 'platformer-test',
+              'size-x': 40,
+              'size-y': 10,
+              'size-z': 40,
+              'translate-y': -5,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'end',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
                 'texture-id': 'grid.png',
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 4,
-                'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
-                ],
-                'vertices': [
-                  20, 0, -20,
-                  -20, 0, -20,
-                  -20, 0, 20,
-                  20, 0, 20,
-                ],
               },
-            ],
+              'character': 'platformer-test',
+              'size-x': 40,
+              'size-y': 10,
+              'size-z': 40,
+              'translate-y': -5,
+              'translate-z': -70,
+            },
           },
         ],
       },

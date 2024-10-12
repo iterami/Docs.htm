@@ -9,29 +9,68 @@ function new_game(){
         'camera-zoom-max': 0,
         'pointerlock': true,
         'spawn-translate-y': 1,
+        'y-min': -200,
         'characters': [
           {
             'id': 'fps-test',
+            'entities': [
+              {
+                'id': 'bridge',
+                'attach-z': -80,
+                'texture-id': 'grid.png',
+                'texture-repeat-x': 2,
+                'texture-repeat-y': 10,
+                'vertex-colors': [
+                  .4, .2, 0, 1,
+                ],
+                'vertices': [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50,
+                ],
+              },
+            ],
           },
         ],
         'prefabs': [
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'base',
+              'prefix': 'blue',
               'all': {
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
+                  .2, .2, .2, 1,
                 ],
                 'texture-id': 'grid.png',
                 'texture-repeat-x': 10,
-                'texture-repeat-y': 10,
+                'texture-repeat-y': 6,
               },
               'character': 'fps-test',
-              'size-x': -100,
-              'size-y': -50,
-              'size-z': -100,
-              'translate-y': 24,
+              'size-x': 100,
+              'size-y': 50,
+              'size-z': 60,
+              'translate-y': -25,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'red',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+                'texture-repeat-x': 10,
+                'texture-repeat-y': 6,
+              },
+              'character': 'fps-test',
+              'size-x': 100,
+              'size-y': 50,
+              'size-z': 60,
+              'translate-y': -25,
+              'translate-z': -160,
             },
           },
         ],

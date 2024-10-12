@@ -7,10 +7,11 @@ function new_game(){
       'character': 2,
       'json': {
         'camera-zoom-max': 0,
-        'fog-density': 0.0005,
+        'fog-density': .0005,
         'fog-state': true,
         'pointerlock': true,
         'spawn-translate-y': 1,
+        'spawn-translate-z': 45,
         'characters': [
           {
             'id': 'horror-test',
@@ -23,17 +24,140 @@ function new_game(){
               'prefix': 'base',
               'all': {
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
+                  .2, .2, .2, 1,
                 ],
                 'texture-id': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 10,
+                'texture-repeat-x': 20,
+                'texture-repeat-y': 20,
               },
               'character': 'horror-test',
               'size-x': -100,
-              'size-y': -50,
+              'size-y': -10,
               'size-z': -100,
-              'translate-y': 24,
+              'translate-y': 5,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'horror-test',
+              'size-x': 20,
+              'size-y': 10,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-y': 5,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar-nw',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'horror-test',
+              'size-x': 20,
+              'size-y': 10,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-x': -30,
+              'translate-y': 5,
+              'translate-z': -30,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar-ne',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'horror-test',
+              'size-x': 20,
+              'size-y': 10,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-x': 30,
+              'translate-y': 5,
+              'translate-z': -30,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar-sw',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'horror-test',
+              'size-x': 20,
+              'size-y': 10,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-x': -30,
+              'translate-y': 5,
+              'translate-z': 30,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'pillar-se',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'horror-test',
+              'size-x': 20,
+              'size-y': 10,
+              'size-z': 20,
+              'top': {
+                'exclude': true,
+              },
+              'translate-x': 30,
+              'translate-y': 5,
+              'translate-z': 30,
             },
           },
         ],
@@ -46,6 +170,7 @@ function new_game(){
       'gravity': 1,
       'level': 0,
       'jump-height': 0,
+      'speed': .4,
     });
     webgl_character_spawn();
 }

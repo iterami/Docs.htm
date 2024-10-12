@@ -3,6 +3,7 @@
   "gravity-damage": true,
   "spawn-translate-y": 3,
   "spawn-translate-z": 25,
+  "y-min": -150,
   "characters": [
     {
       "id": "test-gravity",
@@ -30,10 +31,10 @@
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
-            60, 0, -60,
-            -60, 0, -60,
-            -60, 0, 60,
-            60, 0, 60
+            90, 0, -90,
+            -90, 0, -90,
+            -90, 0, 90,
+            90, 0, 90
           ]
         }
       ]

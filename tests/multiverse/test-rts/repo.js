@@ -12,17 +12,47 @@ function new_game(){
             'entities': [
               {
                 'id': 'base',
-                'texture-id': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 10,
+                'texture-id': 'lavaleaf.png',
                 'vertex-colors': [
-                  0.2, 0.2, 0.2, 1,
+                  .1, .4, .1, 1,
                 ],
                 'vertices': [
-                  50, 0, -50,
-                  -50, 0, -50,
-                  -50, 0, 50,
-                  50, 0, 50,
+                  100, 0, -50,
+                  -100, 0, -50,
+                  -100, 0, 50,
+                  100, 0, 50,
+                ],
+              },
+              {
+                'id': 'wall-n',
+                'attach-y': 10,
+                'attach-z': -50,
+                'rotate-x': 90,
+                'texture-id': 'lavaleaf.png',
+                'vertex-colors': [
+                  .4, .2, 0, 1,
+                ],
+                'vertices': [
+                  100, 0, -10,
+                  -100, 0, -10,
+                  -100, 0, 10,
+                  100, 0, 10,
+                ],
+              },
+              {
+                'id': 'wall-w',
+                'attach-x': -100,
+                'attach-y': 10,
+                'rotate-z': 270,
+                'texture-id': 'lavaleaf.png',
+                'vertex-colors': [
+                  .4, .2, 0, 1,
+                ],
+                'vertices': [
+                  10, 0, -50,
+                  -10, 0, -50,
+                  -10, 0, 50,
+                  10, 0, 50,
                 ],
               },
             ],
@@ -34,7 +64,7 @@ function new_game(){
       'controls': 'rpg',
       'level': -1,
       'lock': {
-        'camera-rotate-x': 75,
+        'camera-rotate-x': 60,
         'translate-y': 5,
       },
       'speed': 2,
