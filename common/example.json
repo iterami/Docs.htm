@@ -52,6 +52,7 @@
   "spawn-translate-x": 0,
   "spawn-translate-y": 5,
   "spawn-translate-z": 5,
+  "y-min": -200,
   "groups": [
     "example-group-0",
     "example-group-1"
