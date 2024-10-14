@@ -133,6 +133,7 @@
     },
     {
       "id": "vehicle-fast",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
@@ -165,6 +166,7 @@
     },
     {
       "id": "vehicle-locked-enter",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
@@ -192,6 +194,7 @@
     },
     {
       "id": "vehicle-locked-exit",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
@@ -219,6 +222,7 @@
     },
     {
       "id": "vehicle-locked-both",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
@@ -246,6 +250,7 @@
     },
     {
       "id": "vehicle-medium",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
@@ -278,6 +283,7 @@
     },
     {
       "id": "vehicle-slow",
+      "collide-range-xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,

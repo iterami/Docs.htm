@@ -16,6 +16,7 @@ function new_game(){
           },
           {
             'id': 'vehicle',
+            'collide-range-xz': 5,
             'collides': true,
             'gravity': 1,
             'level': 0,
