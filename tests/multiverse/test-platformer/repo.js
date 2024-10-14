@@ -111,7 +111,7 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new-game type=button>New Game</button>',
+      'info': '<button id=new-game type=button>Start Platformer Test</button>',
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
     });
