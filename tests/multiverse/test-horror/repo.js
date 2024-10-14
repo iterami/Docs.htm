@@ -189,6 +189,7 @@ function repo_init(){
           'onclick': new_game,
         },
       },
+      'info': '<button id=new-game type=button>Start Horror Test</button>',
       'keybinds': {
         'Backquote': {
           'todo': function(){
@@ -218,7 +219,6 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new-game type=button>Start Horror Test</button>',
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
     });
