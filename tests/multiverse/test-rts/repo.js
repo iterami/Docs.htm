@@ -61,7 +61,7 @@ function new_game(){
       },
     });
     webgl_character_init({
-      'controls': 'rpg',
+      'controls': 'rts',
       'level': -1,
       'lock': {
         'camera-rotate-x': 60,
