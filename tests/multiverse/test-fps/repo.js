@@ -82,6 +82,8 @@ function new_game(){
       'controls': 'rpg',
       'gravity': 1,
       'level': 0,
+      'life-max': 100,
+      'lives': 5,
     });
     webgl_character_spawn();
 }
@@ -132,5 +134,25 @@ function repo_init(){
       'info': '<button id=new-game type=button>Start FPS Test</button>',
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
+      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+        + 'Lives: <span id=lives></span><br>'
+        + 'Weapon: <span id=weapon></span><br>'
+        + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span>',
+    });
+}
+
+function repo_logic(){
+    const character = webgl_characters[webgl_character_id];
+
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'ammo': 0,
+        'ammo-max': 10,
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'lives': character['lives'],
+        'weapon': 'Blapper',
+      },
     });
 }

@@ -7,7 +7,7 @@ function new_game(){
       'character': 2,
       'json': {
         'camera-zoom-max': 0,
-        'fog-density': .0005,
+        'fog-density': .001,
         'fog-state': true,
         'pointerlock': true,
         'spawn-translate-y': 1,
@@ -169,8 +169,9 @@ function new_game(){
       'controls': 'rpg',
       'gravity': 1,
       'level': 0,
+      'lives': 1,
       'jump-height': 0,
-      'speed': .4,
+      'speed': .25,
     });
     webgl_character_spawn();
 }
@@ -221,5 +222,16 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
+      'ui': 'Items Collected: <span id=items></span>/<span id=items-max></span>',
+    });
+}
+
+function repo_logic(){
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'items': 0,
+        'items-max': 0,
+      },
     });
 }

@@ -63,6 +63,8 @@ function new_game(){
       'controls': 'rpg',
       'gravity': 1,
       'level': 0,
+      'life-max': 10,
+      'lives': 3,
       'randomize': true,
     });
     webgl_character_spawn();
@@ -114,5 +116,25 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
+      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+        + 'Lives: <span id=lives></span><br>'
+        + 'Coins: <span id=coins></span><br>'
+        + 'Keys: <span id=keys></span>/<span id=keys-max></span>',
+    });
+}
+
+function repo_logic(){
+    const character = webgl_characters[webgl_character_id];
+
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'coins': 0,
+        'keys': 0,
+        'keys-max': 0,
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'lives': character['lives'],
+      },
     });
 }

@@ -30,6 +30,7 @@ function new_game(){
             'entities': [
               {
                 'id': 'vehicle-body',
+                'collision': false,
                 'event-todo': 'webgl_vehicle_toggle',
                 'event-todo-args': {
                   'vehicle': 'vehicle',
@@ -101,6 +102,8 @@ function new_game(){
       'controls': 'rpg',
       'gravity': 1,
       'level': 0,
+      'life-max': 100,
+      'lives': 1,
       'randomize': true,
     });
     webgl_character_spawn();
@@ -152,5 +155,33 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
+      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+        + 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
+        + 'Position: <span id=position></span>/<span id=position-max></span>'
+        + '<div id=vehicle></div>',
+    });
+}
+
+function repo_logic(){
+    const character = webgl_characters[webgl_character_id];
+    let vehicle = '';
+    if(character['vehicle'] !== false){
+        const stats = webgl_characters[character['vehicle']]['vehicle-stats'];
+        vehicle = 'Speed: ' + core_round({
+            'number': stats['speed'],
+          }) + '/' + stats['speed-max'];
+    }
+
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'lap': 0,
+        'lap-max': 3,
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'position': 1,
+        'position-max': 1,
+        'vehicle': vehicle,
+      },
     });
 }

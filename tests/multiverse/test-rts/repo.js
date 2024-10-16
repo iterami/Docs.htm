@@ -121,5 +121,15 @@ function repo_init(){
           webgl_character_spawn();
       },
       'title': 'Docs.htm',
+      'ui': 'Money: <span id=money></span>',
+    });
+}
+
+function repo_logic(){
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'money': 0,
+      },
     });
 }
