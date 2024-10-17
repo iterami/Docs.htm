@@ -7,10 +7,23 @@
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Mouse
 <table>
   <thead>
+    <tr>
+      <td>core_type(event)
+      <td id=event>
+    <tr>
+      <td>event.type
+      <td id=type>
     <tr class=header>
-      <td>Property
-      <td>Value
-  <tbody id=mouse>
+      <td>core_mouse
+      <td>Properties
+  <tbody id=core_mouse></tbody>
+    <tr>
+      <td>deltaY
+      <td id=deltaY>
+    <tr class=header>
+      <td>core_mouse['todo']
+      <td>Properties
+  <tbody id=core_mouse_todo>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -25,14 +38,16 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
-    let mouse_html = '';
+    let html = '';
     for(const value in core_mouse){
-        mouse_html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
+        html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
     }
+    document.getElementById('core_mouse').innerHTML = html;
+    html = '';
     for(const value in core_mouse['todo']){
-        mouse_html += '<tr><td>todo: ' + value + '<td id=' + value + '>' + core_mouse['todo'][value];
+        html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse['todo'][value];
     }
-    document.getElementById('mouse').innerHTML = mouse_html;
+    document.getElementById('core_mouse_todo').innerHTML = html;
 
     update_mouse();
     globalThis.addEventListener(
@@ -47,13 +62,32 @@ function repo_init(){
       'mouseup',
       update_mouse
     );
+    globalThis.addEventListener(
+      'touchend',
+      update_mouse
+    );
+    globalThis.addEventListener(
+      'touchmove',
+      update_mouse
+    );
+    globalThis.addEventListener(
+      'touchstart',
+      update_mouse
+    );
+    globalThis.addEventListener(
+      'wheel',
+      update_mouse
+    );
 }
 
-function update_mouse(){
+function update_mouse(event){
     core_ui_update({
       'ids': {
         ...core_mouse,
         ...core_mouse['todo'],
+        'deltaY': event?.deltaY,
+        'event': core_type(event),
+        'type': event?.type,
       },
     });
 }
