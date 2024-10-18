@@ -17,13 +17,12 @@
       <td>core_mouse
       <td>Properties
   <tbody id=core_mouse></tbody>
+    <tr class=header>
+      <td>Other
+      <td>Values
     <tr>
       <td>deltaY
       <td id=deltaY>
-    <tr class=header>
-      <td>core_mouse['todo']
-      <td>Properties
-  <tbody id=core_mouse_todo>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -43,11 +42,6 @@ function repo_init(){
         html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
     }
     document.getElementById('core_mouse').innerHTML = html;
-    html = '';
-    for(const value in core_mouse['todo']){
-        html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse['todo'][value];
-    }
-    document.getElementById('core_mouse_todo').innerHTML = html;
 
     update_mouse();
     globalThis.addEventListener(
@@ -84,7 +78,6 @@ function update_mouse(event){
     core_ui_update({
       'ids': {
         ...core_mouse,
-        ...core_mouse['todo'],
         'deltaY': event?.deltaY,
         'event': core_type(event),
         'type': event?.type,
