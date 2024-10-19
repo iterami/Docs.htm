@@ -102,13 +102,6 @@ function repo_init(){
           'onclick': new_game,
         },
       },
-      'keybinds': {
-        'Backquote': {
-          'todo': function(){
-              webgl_characters[webgl_character_id]['automove'] = !webgl_characters[webgl_character_id]['automove'];
-          },
-        },
-      },
       'menu': true,
       'mousebinds': {
         'contextmenu': {

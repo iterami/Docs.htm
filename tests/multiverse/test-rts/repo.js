@@ -87,13 +87,6 @@ function repo_init(){
         },
       },
       'info': '<button id=new-game type=button>Start RTS Test</button>',
-      'keybinds': {
-        'Backquote': {
-          'todo': function(){
-              webgl_characters[webgl_character_id]['automove'] = !webgl_characters[webgl_character_id]['automove'];
-          },
-        },
-      },
       'menu': true,
       'mousebinds': {
         'contextmenu': {
