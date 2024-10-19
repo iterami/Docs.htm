@@ -201,17 +201,6 @@ function repo_init(){
               webgl_controls_mouse(webgl_character_id);
           },
         },
-        'mouseup': {
-          'todo': webgl_pick_entity,
-        },
-        'wheel': {
-          'todo': function(event){
-              webgl_controls_wheel(
-                webgl_character_id,
-                event.deltaY
-              );
-          },
-        },
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
