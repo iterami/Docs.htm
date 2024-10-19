@@ -10,7 +10,7 @@
           "id": "base",
           "texture-id": "grid.png",
           "texture-repeat-x": 10,
-          "texture-repeat-y": 10,
+          "texture-repeat-y": 5,
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],
