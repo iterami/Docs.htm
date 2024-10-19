@@ -248,6 +248,7 @@
     },
     {
       "id": "path-exit-user",
+      "collides": true,
       "entities": [
         {
           "id": "path-exit-user-body",
@@ -262,6 +263,7 @@
           ]
         }
       ],
+      "gravity": 1,
       "level": 1,
       "path-id": "path-exit"
     },
