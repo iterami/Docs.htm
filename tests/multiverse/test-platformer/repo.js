@@ -24,7 +24,26 @@ function new_game(){
                 'attach-z': -80,
                 'billboard': true,
                 'collision': false,
+                'event-limit': 1,
                 'event-range': 5,
+                'event-todo': [
+                  {
+                    'todo': 'audio_start',
+                    'type': 'function',
+                    'value': 'boop',
+                  },
+                  {
+                    'set': true,
+                    'stat': 'attach-y',
+                    'todo': 'coin-0',
+                    'value': -1000,
+                  },
+                  {
+                    'todo': 'coins',
+                    'type': 'variable',
+                    'value': 1,
+                  },
+                ],
                 'vertex-colors': [
                   .7, .7, 0, 1,
                 ],
