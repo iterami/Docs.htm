@@ -24,85 +24,43 @@
         },
         {
           "id": "billboard-0",
-          "attach-x": -15,
-          "attach-y": 2,
-          "billboard": true,
-          "collision": false,
-          "texture-id": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "billboard-1",
-          "attach-x": -10,
-          "attach-y": 2,
-          "billboard": true,
-          "collision": false,
-          "texture-id": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "billboard-2",
           "attach-x": -5,
           "attach-y": 2,
           "billboard": true,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         },
         {
-          "id": "billboard-3",
+          "id": "billboard-1",
           "attach-y": 2,
           "billboard": true,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         },
         {
-          "id": "billboard-4",
+          "id": "billboard-2",
           "attach-x": 5,
           "attach-y": 2,
           "billboard": true,
           "collision": false,
           "texture-id": "grid.png",
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "billboard-5",
-          "attach-x": 10,
-          "attach-y": 2,
-          "billboard": true,
-          "collision": false,
-          "texture-id": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ]
