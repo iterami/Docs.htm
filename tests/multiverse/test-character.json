@@ -31,7 +31,7 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
-      "translate-x": -25,
+      "translate-x": 25,
       "translate-y": 5
     }
   ],
@@ -40,6 +40,9 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "body",
+        "all": {
+          "collision": false
+        },
         "character": "character",
         "size-x": 5,
         "size-y": 5,
