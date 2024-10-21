@@ -131,19 +131,17 @@
           "draw": true,
           "draw-mode": "TRIANGLE_FAN",
           "event-limit": false,
-          "event-modify": [
+          "event-range": false,
+          "event-todo": [
             {
+              "limit": false,
               "set": false,
               "stat": "life",
-              "target": "example-entity-1",
-              "type": "entity_entities",
+              "todo": "example-entity-1",
+              "type": "entity",
               "value": -100
             }
           ],
-          "event-range": false,
-          "event-target-id": "_me",
-          "event-target-type": "character",
-          "event-todo": false,
           "particle": false,
           "picking": false,
           "point-size": 500,

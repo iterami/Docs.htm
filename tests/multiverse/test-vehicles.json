@@ -3,6 +3,7 @@
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
+  "y-min": -100,
   "characters": [
     {
       "id": "test-vehicles",
@@ -21,22 +22,6 @@
             -500, 0, -500,
             -500, 0, 500,
             500, 0, 500
-          ]
-        },
-        {
-          "id": "reset",
-          "attach-y": -50,
-          "event-range": 0,
-          "event-todo": "webgl_character_spawn",
-          "event-todo-args": "_target",
-          "vertex-colors": [
-            0.1, 0.1, 0.1, 1
-          ],
-          "vertices": [
-            2000, 0, -2000,
-            -2000, 0, -2000,
-            -2000, 0, 2000,
-            2000, 0, 2000
           ]
         },
         {
@@ -147,10 +132,15 @@
       "entities": [
         {
           "id": "fast-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-fast"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-fast"
+              }
+            }
+          ],
           "picking": true,
           "vertex-colors": [
             1, 0, 0, 1
@@ -178,10 +168,15 @@
       "entities": [
         {
           "id": "locked-enter-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-locked-enter"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-locked-enter"
+              }
+            }
+          ],
           "picking": true,
           "vertices": [
             5, 0, -5,
@@ -206,10 +201,15 @@
       "entities": [
         {
           "id": "locked-exit-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-locked-exit"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-locked-exit"
+              }
+            }
+          ],
           "picking": true,
           "vertices": [
             5, 0, -5,
@@ -234,10 +234,15 @@
       "entities": [
         {
           "id": "locked-both-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-locked-both"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-locked-both"
+              }
+            }
+          ],
           "picking": true,
           "vertices": [
             5, 0, -5,
@@ -264,10 +269,15 @@
       "entities": [
         {
           "id": "medium-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-medium"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-medium"
+              }
+            }
+          ],
           "picking": true,
           "vertex-colors": [
             0, 0, 1, 1
@@ -298,10 +308,15 @@
       "entities": [
         {
           "id": "slow-body",
-          "event-todo": "webgl_vehicle_toggle",
-          "event-todo-args": {
-            "vehicle": "vehicle-slow"
-          },
+          "event-todo": [
+            {
+              "todo": "webgl_vehicle_toggle",
+              "type": "function",
+              "value": {
+                "vehicle": "vehicle-slow"
+              }
+            }
+          ],
           "picking": true,
           "vertex-colors": [
             0, 1, 0, 1

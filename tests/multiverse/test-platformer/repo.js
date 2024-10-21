@@ -3,6 +3,10 @@
 function new_game(){
     core_menu_lock = false;
     webgl_level_unload();
+
+    coins = 0;
+    keys = 0;
+
     webgl_level_load({
       'character': 2,
       'json': {
@@ -13,6 +17,25 @@ function new_game(){
         'characters': [
           {
             'id': 'platformer-test',
+            'entities': [
+              {
+                'id': 'coin-0',
+                'attach-y': 3,
+                'attach-z': -80,
+                'billboard': true,
+                'collision': false,
+                'event-range': 5,
+                'vertex-colors': [
+                  .7, .7, 0, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+            ],
           },
         ],
         'prefabs': [
@@ -84,6 +107,10 @@ function repo_init(){
           'onclick': new_game,
         },
       },
+      'globals': {
+        'coins': 0,
+        'keys': 0,
+      },
       'info': '<button id=new-game type=button>Start Platformer Test</button>',
       'menu': true,
       'mousebinds': {
@@ -122,8 +149,8 @@ function repo_logic(){
     core_ui_update({
       'class': true,
       'ids': {
-        'coins': 0,
-        'keys': 0,
+        'coins': coins,
+        'keys': keys,
         'keys-max': 0,
         'life': character['life'],
         'life-max': character['life-max'],

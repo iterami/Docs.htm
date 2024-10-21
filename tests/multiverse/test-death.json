@@ -24,14 +24,14 @@
         {
           "id": "death",
           "attach-y": -1,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "set": true,
               "stat": "life",
               "value": 0
             }
           ],
-          "event-range": 0,
           "texture-id": "lavaleaf.png",
           "vertex-colors": [
             0.3, 0, 0, 1

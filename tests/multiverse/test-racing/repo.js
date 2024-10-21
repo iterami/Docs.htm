@@ -31,10 +31,15 @@ function new_game(){
               {
                 'id': 'vehicle-body',
                 'collision': false,
-                'event-todo': 'webgl_vehicle_toggle',
-                'event-todo-args': {
-                  'vehicle': 'vehicle',
-                },
+                'event-todo': [
+                  {
+                    'todo': 'webgl_vehicle_toggle',
+                    'type': 'function',
+                    'value': {
+                      'vehicle': 'vehicle',
+                    },
+                  },
+                ],
                 'picking': true,
                 'vertex-colors': [
                   0, 0, 1, 1,

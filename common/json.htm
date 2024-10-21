@@ -299,42 +299,33 @@
           // Optional. The number of times this event should occur, or false for unlimited.
           "event-limit": false,
 
-          // Optional. Array of stats to modify when this event occurs.
-          "event-modify": [
+          // Optional. The range at which this event occurs, or false to disable.
+          // If range is 0, only during collisions.
+          "event-range": false,
+
+          // Optional. Array of things todo when this event occurs.
+          "event-todo": [
             {
-              // Optional. If this event should set the stat to a specific number value,
-              //   or add the value to the stat. Non-number values are always set.
+              // Optional. The number of times this todo should occur, or false for unlimited.
+              "limit": false,
+
+              // Optional. If this todo should add the value or overwrite the existing value.
               "set": false,
 
-              // REQUIRED. ID of the stat that will be modified.
+              // Optional. ID of the stat that will be modified if a character or entity is modified.
               "stat": "life",
 
-              // Optional. ID of the character or entity that will be affected.
-              "target": "example-entity-1",
+              // Optional. ID of the character/entity or the name of the function/variable that will be affected.
+              "todo": "example-entity-1",
 
-              // Optional. Which variable is used during modification, such as
-              //   "entity_entities" (default), "webgl_characters", or "webgl_properties".
-              "type": "entity_entities",
+              // Optional. What is being done during this todo, which includes:
+              //   "entity" (default), "character", "function", and "variable".
+              "type": "entity",
 
               // Optional. Value of change that occurs when this event occurs.
               "value": -100
             }
           ],
-
-          // Optional. The range at which this event occurs, or false to disable.
-          // If range is 0, only during collisions.
-          "event-range": false,
-
-          // Optional. ID required for event to occur, or false to allow all.
-          "event-target-id": "_me",
-
-          // Optional. Type required for this event to occur, either "character" or "entity".
-          "event-target-type": "character",
-
-          // Optional. String name of a function to run with "event-todo-args" passed,
-          //   or string name of a variable that has its value changed to "event-todo-args",
-          //   or false for no action.
-          "event-todo": false,
 
           // Optional. If this entity should have its vertices modified based upon particle properties.
           "particle": false,

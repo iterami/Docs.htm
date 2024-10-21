@@ -27,7 +27,7 @@
           "id": "levelup-1000",
           "attach-x": -25,
           "attach-z": -50,
-          "event-modify": [
+          "event-todo": [
             {
               "stat": "level-xp",
               "value": 1000
@@ -50,7 +50,7 @@
           "id": "levelup-1000000",
           "attach-x": 25,
           "attach-z": -50,
-          "event-modify": [
+          "event-todo": [
             {
               "stat": "level-xp",
               "value": 1000000
@@ -73,7 +73,8 @@
           "id": "limit",
           "attach-x": 20,
           "event-limit": 2,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "set": true,
               "stat": "camera-rotate-y",
@@ -100,7 +101,6 @@
               "value": 0
             }
           ],
-          "event-range": 0,
           "picking": true,
           "rotate-z": 90,
           "texture-id": "grid.png",
@@ -117,7 +117,12 @@
         {
           "id": "respawn",
           "attach-z": -20,
-          "event-todo": "webgl_character_spawn",
+          "event-todo": [
+            {
+              "todo": "webgl_character_spawn",
+              "type": "function"
+            }
+          ],
           "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
@@ -134,7 +139,8 @@
         {
           "id": "set",
           "attach-x": -20,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "set": true,
               "stat": "camera-rotate-y",
@@ -159,11 +165,13 @@
               "set": true,
               "stat": "translate-z",
               "value": 0
+            },
+            {
+              "todo": "audio_start",
+              "type": "function",
+              "value": "boop"
             }
           ],
-          "event-range": 0,
-          "event-todo": "audio_start",
-          "event-todo-args": "boop",
           "picking": true,
           "rotate-z": 270,
           "texture-id": "grid.png",

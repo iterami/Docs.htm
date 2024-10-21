@@ -46,14 +46,14 @@
           "attach-x": 25,
           "attach-y": 2,
           "attach-z": -25,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "stat": "attach-y",
-              "target": "pick-blocker",
+              "todo": "pick-blocker",
               "value": -1
             }
           ],
-          "event-range": 0,
           "picking": true,
           "rotate-x": 90,
           "vertex-colors": [
@@ -71,14 +71,14 @@
           "attach-x": 20,
           "attach-y": 2,
           "attach-z": -25,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "stat": "attach-y",
-              "target": "pick-blocker",
+              "todo": "pick-blocker",
               "value": 1
             }
           ],
-          "event-range": 0,
           "picking": true,
           "rotate-x": 90,
           "vertex-colors": [
@@ -96,13 +96,13 @@
           "attach-y": 10,
           "attach-z": -50,
           "collision": false,
-          "event-modify": [
+          "event-range": 0,
+          "event-todo": [
             {
               "stat": "vertex-colors",
-              "target": "pick-color"
+              "todo": "pick-color"
             }
           ],
-          "event-range": 0,
           "picking": true,
           "rotate-x": 90,
           "texture-id": "grid.png",
