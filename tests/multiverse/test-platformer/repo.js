@@ -1,5 +1,21 @@
 'use strict';
 
+function collect(args){
+    audio_start('boop');
+    entity_entities[args['id']]['attach-y'] = -1000;
+
+    if(args['type'] === 'life'){
+        webgl_stat_modify({
+          'stat': 'life',
+          'target': webgl_characters['_me'],
+          'value': 1,
+        });
+
+    }else{
+        globalThis[args['type']]++;
+    }
+}
+
 function new_game(){
     core_menu_lock = false;
     webgl_level_unload();
@@ -14,6 +30,19 @@ function new_game(){
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
         'y-min': -200,
+        'paths': {
+          'fireball-0': {
+            'end': 'warp',
+            'points': [
+              {
+                'translate-x': -50,
+              },
+              {
+                'translate-x': 50,
+              },
+            ],
+          },
+        },
         'characters': [
           {
             'id': 'platformer-test',
@@ -25,7 +54,121 @@ function new_game(){
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
-                'event-range': 5,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'coin-0',
+                      'type': 'coins',
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  .7, .7, 0, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+              {
+                'id': 'door-0',
+                'attach-z': -100,
+                'rotate-x': 90,
+                'texture-id': 'grid.png',
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'vertices': [
+                  30, 0, -20,
+                  -30, 0, -20,
+                  -30, 0, 20,
+                  30, 0, 20,
+                ],
+              },
+              {
+                'id': 'key-0',
+                'attach-x': -15,
+                'attach-y': 3,
+                'attach-z': -80,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'key-0',
+                      'type': 'keys',
+                    },
+                  },
+                  {
+                    'stat': 'attach-x',
+                    'todo': 'door-0',
+                    'value': -60,
+                  },
+                ],
+                'texture-id': 'key.png',
+                'vertex-colors': [
+                  1, 1, 1, 1,
+                ],
+                'vertices': [
+                  2, 2, -0,
+                  -2, 2, -0,
+                  -2, -2, 0,
+                  2, -2, 0,
+                ],
+              },
+              {
+                'id': 'life-0',
+                'attach-x': 15,
+                'attach-y': 3,
+                'attach-z': -80,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'life-0',
+                      'type': 'life',
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  0, .7, 0, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'fireball-0',
+            'level': 0,
+            'path-id': 'fireball-0',
+            'translate-x': -50,
+            'translate-y': 3,
+            'translate-z': -60,
+            'entities': [
+              {
+                'id': 'fireball-0-body',
+                'billboard': true,
+                'collision': false,
+                'event-range': 3,
                 'event-todo': [
                   {
                     'todo': 'audio_start',
@@ -33,19 +176,20 @@ function new_game(){
                     'value': 'boop',
                   },
                   {
-                    'set': true,
-                    'stat': 'attach-y',
-                    'todo': 'coin-0',
-                    'value': -1000,
+                    'stat': 'translate-x',
+                    'todo': 'fireball-0',
+                    'type': 'character',
+                    'value': -100,
                   },
                   {
-                    'todo': 'coins',
-                    'type': 'variable',
-                    'value': 1,
+                    'stat': 'life',
+                    'todo': '_me',
+                    'type': 'character',
+                    'value': -1,
                   },
                 ],
                 'vertex-colors': [
-                  .7, .7, 0, 1,
+                  .7, 0, 0, 1,
                 ],
                 'vertices': [
                   1, 1, -0,
@@ -61,7 +205,7 @@ function new_game(){
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'start',
+              'prefix': 'platform-0',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
@@ -80,7 +224,7 @@ function new_game(){
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'end',
+              'prefix': 'platform-1',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
@@ -95,6 +239,26 @@ function new_game(){
               'size-z': 40,
               'translate-y': -5,
               'translate-z': -70,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'platform-2',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture-id': 'grid.png',
+                'texture-repeat-x': 4,
+                'texture-repeat-y': 4,
+              },
+              'character': 'platformer-test',
+              'size-x': 40,
+              'size-y': 10,
+              'size-z': 40,
+              'translate-y': -5,
+              'translate-z': -135,
             },
           },
         ],
@@ -170,7 +334,7 @@ function repo_logic(){
       'ids': {
         'coins': coins,
         'keys': keys,
-        'keys-max': 0,
+        'keys-max': 1,
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
