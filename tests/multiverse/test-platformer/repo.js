@@ -42,6 +42,17 @@ function new_game(){
               },
             ],
           },
+          'wallmoving-0': {
+            'end': 'loop',
+            'points': [
+              {
+                'translate-z': -155,
+              },
+              {
+                'translate-z': -115,
+              },
+            ],
+          },
         },
         'characters': [
           {
@@ -196,6 +207,29 @@ function new_game(){
                   -1, 1, -0,
                   -1, -1, 0,
                   1, -1, 0,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'wallmoving-0',
+            'level': 0,
+            'path-id': 'wallmoving-0',
+            'translate-y': 10,
+            'translate-z': -155,
+            'entities': [
+              {
+                'id': 'wallmoving-0',
+                'rotate-x': 90,
+                'texture-id': 'grid.png',
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'vertices': [
+                  20, 0, -10,
+                  -20, 0, -10,
+                  -20, 0, 10,
+                  20, 0, 10,
                 ],
               },
             ],
