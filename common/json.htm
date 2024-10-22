@@ -306,8 +306,9 @@
           // Optional. Array of things todo when this event occurs.
           "event-todo": [
             {
-              // Optional. The number of times this todo should occur, or false for unlimited.
-              "limit": false,
+              // Optional. The number of times this todo should occur.
+              // Exclude this property for no limit.
+              "limit": 1,
 
               // Optional. If this todo should add the value or overwrite the existing value.
               "set": false,

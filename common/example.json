@@ -134,7 +134,7 @@
           "event-range": false,
           "event-todo": [
             {
-              "limit": false,
+              "limit": 1,
               "set": false,
               "stat": "life",
               "todo": "example-entity-1",
