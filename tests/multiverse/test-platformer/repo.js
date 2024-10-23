@@ -2,7 +2,9 @@
 
 function collect(args){
     audio_start('boop');
-    entity_entities[args['id']]['attach-y'] = -1000;
+    const item = entity_entities[args['id']];
+    item['attach-y'] = -500;
+    item['draw'] = false;
 
     if(args['type'] === 'life'){
         webgl_stat_modify({
