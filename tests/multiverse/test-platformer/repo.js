@@ -6,9 +6,10 @@ function collect(args){
     item['attach-y'] = -500;
     item['draw'] = false;
 
-    if(args['type'] === 'life'){
+    if(args['type'] === 'life'
+      || args['type'] === 'lives'){
         webgl_stat_modify({
-          'stat': 'life',
+          'stat': args['type'],
           'target': webgl_characters['_me'],
           'value': 1,
         });
@@ -186,6 +187,34 @@ function new_game(){
                 ],
                 'vertex-colors': [
                   0, .7, 0, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+              {
+                'id': 'lives-0',
+                'attach-y': 3,
+                'attach-z': -135,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'lives-0',
+                      'type': 'lives',
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  .2, .4, 8, 1,
                 ],
                 'vertices': [
                   1, 1, -0,
