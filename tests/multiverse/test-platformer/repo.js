@@ -42,6 +42,33 @@ function new_game(){
               },
             ],
           },
+          'platform-0': {
+            'end': 'loop',
+            'speed': .2,
+            'points': [
+              {
+                'translate-y': 0,
+              },
+              {
+                'translate-x': 15,
+              },
+              {
+                'translate-z': 15,
+              },
+              {
+                'translate-x': -15,
+              },
+              {
+                'translate-z': 0,
+              },
+              {
+                'translate-x': 0,
+              },
+              {
+                'translate-y': 15,
+              },
+            ],
+          },
           'wallmoving-0': {
             'end': 'loop',
             'points': [
@@ -212,6 +239,11 @@ function new_game(){
             ],
           },
           {
+            'id': 'platform-0',
+            'level': 0,
+            'path-id': 'platform-0',
+          },
+          {
             'id': 'wallmoving-0',
             'level': 0,
             'path-id': 'wallmoving-0',
@@ -248,7 +280,7 @@ function new_game(){
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 4,
               },
-              'character': 'platformer-test',
+              'character': 'platform-0',
               'size-x': 40,
               'size-y': 10,
               'size-z': 40,
