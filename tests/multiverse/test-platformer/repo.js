@@ -67,7 +67,7 @@ function new_game(){
                 'translate-x': 0,
               },
               {
-                'translate-y': 15,
+                'translate-y': -15,
               },
             ],
           },

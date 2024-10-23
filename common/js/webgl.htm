@@ -16,6 +16,7 @@
   <li><a href=#character-properties>Character Properties</a>
   <li><a href=#entity-properties>Entity Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
+  <li>Picking may not work properly for entities after "entity_id_count > 16,777,216".
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
     <li><a href=entity.htm>entity.js</a>
@@ -565,11 +566,7 @@
   <tr>
     <td>event-todo
     <td>[]
-    <td>array
-  <tr>
-    <td>event-todo
-    <td>false
-    <td>boolean false or string
+    <td>array of objects
   <tr>
     <td>normals
     <td>[]
