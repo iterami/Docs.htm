@@ -5,7 +5,6 @@
   "spawn-translate-z": 10,
   "paths": {
     "path-exit": {
-      "end": "exit",
       "points": [
         {
           "translate-x": -15,
