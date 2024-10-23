@@ -1,8 +1,13 @@
 'use strict';
 
 function new_game(){
-    core_menu_lock = false;
     webgl_level_unload();
+
+    lap = 0;
+    lap_max = 3;
+    position = 1;
+    position_max = 1;
+
     webgl_level_load({
       'character': 2,
       'json': {
@@ -111,6 +116,18 @@ function new_game(){
       'lives': 1,
       'randomize': true,
     });
+    const character = webgl_characters[webgl_character_id];
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'lap': lap,
+        'lap-max': lap_max,
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'position': position,
+        'position-max': position_max,
+      },
+    });
     webgl_character_spawn();
 }
 
@@ -127,6 +144,12 @@ function repo_init(){
         'new-game': {
           'onclick': new_game,
         },
+      },
+      'globals': {
+        'lap': 0,
+        'lap_max': 3,
+        'position': 1,
+        'position_max': 1,
       },
       'info': '<button id=new-game type=button>Start Racing Test</button>',
       'menu': true,
@@ -166,6 +189,7 @@ function repo_logic(){
     if(character['vehicle'] !== false){
         const stats = webgl_characters[character['vehicle']]['vehicle-stats'];
         vehicle = 'Speed: ' + core_round({
+            'decimals': 2,
             'number': stats['speed'],
           }) + '/' + stats['speed-max'];
     }
@@ -173,12 +197,6 @@ function repo_logic(){
     core_ui_update({
       'class': true,
       'ids': {
-        'lap': 0,
-        'lap-max': 3,
-        'life': character['life'],
-        'life-max': character['life-max'],
-        'position': 1,
-        'position-max': 1,
         'vehicle': vehicle,
       },
     });

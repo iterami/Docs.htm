@@ -1,15 +1,28 @@
 'use strict';
 
 function choose(choice){
-    const path = choice % 2
-      ? 'right'
-      : 'left';
+    const choicelist = [
+      [
+        'left',
+        'right',
+        'left',
+        'start',
+      ],
+    ];
+    if(choices >= choicelist.length){
+        return;
+    }
+    webgl_characters[webgl_character_id]['path-id'] = 'path-' + choicelist[choices][choice];
+    choices++;
 
-    webgl_characters[webgl_character_id]['path-id'] = 'path-' + path;
+    update_ui();
 }
 
 function new_game(){
     webgl_level_unload();
+
+    choices = 0;
+
     webgl_level_load({
       'character': -1,
       'json': {
@@ -87,6 +100,7 @@ function new_game(){
       'controls': '',
       'level': -1,
     });
+    update_ui();
     webgl_character_spawn();
 }
 
@@ -124,6 +138,9 @@ function repo_init(){
           'onclick': new_game,
         },
       },
+      'globals': {
+        'choices': 0,
+      },
       'info': '<button id=new-game type=button>Start Story Test</button>',
       'menu': true,
       'mousebinds': {
@@ -137,6 +154,16 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': '<div id=choice><button id=choose-0 type=button>Choice 0</button><button id=choose-1 type=button>Choice 1</button><br>'
-        + '<button id=choose-2 type=button>Choice 2</button><button id=choose-3 type=button>Choice 3</button></div>',
+        + '<button id=choose-2 type=button>Choice 2</button><button id=choose-3 type=button>Choice 3</button></div>'
+        + 'Choices: <span id=choices></span>',
+    });
+}
+
+function update_ui(){
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'choices': choices,
+      },
     });
 }

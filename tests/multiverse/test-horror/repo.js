@@ -1,8 +1,22 @@
 'use strict';
 
+function collect(args){
+    audio_start('boop');
+    const item = entity_entities[args['id']];
+    item['attach-y'] = -500;
+    item['draw'] = false;
+
+    globalThis[args['type']]++;
+
+    update_ui()
+}
+
 function new_game(){
-    core_menu_lock = false;
     webgl_level_unload();
+
+    items = 0;
+    items_max = 2;
+
     webgl_level_load({
       'character': 2,
       'json': {
@@ -15,6 +29,66 @@ function new_game(){
         'characters': [
           {
             'id': 'horror-test',
+            'entities': [
+              {
+                'id': 'item-0',
+                'attach-x': -45,
+                'attach-y': 3,
+                'attach-z': -45,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'item-0',
+                      'type': 'items',
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  1, 1, 1, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+              {
+                'id': 'item-1',
+                'attach-x': 45,
+                'attach-y': 3,
+                'attach-z': -45,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'item-1',
+                      'type': 'items',
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  1, 1, 1, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+            ],
           },
         ],
         'prefabs': [
@@ -173,6 +247,7 @@ function new_game(){
       'jump-height': 0,
       'speed': .25,
     });
+    update_ui();
     webgl_character_spawn();
 }
 
@@ -189,6 +264,10 @@ function repo_init(){
         'new-game': {
           'onclick': new_game,
         },
+      },
+      'globals': {
+        'items': 0,
+        'items_max': 0,
       },
       'info': '<button id=new-game type=button>Start Horror Test</button>',
       'menu': true,
@@ -208,12 +287,12 @@ function repo_init(){
     });
 }
 
-function repo_logic(){
+function update_ui(){
     core_ui_update({
       'class': true,
       'ids': {
-        'items': 0,
-        'items-max': 0,
+        'items': items,
+        'items-max': items_max,
       },
     });
 }

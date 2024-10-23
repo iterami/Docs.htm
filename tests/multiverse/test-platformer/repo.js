@@ -6,25 +6,29 @@ function collect(args){
     item['attach-y'] = -500;
     item['draw'] = false;
 
+    const value = args['value'] || 1;
+
     if(args['type'] === 'life'
       || args['type'] === 'lives'){
         webgl_stat_modify({
           'stat': args['type'],
           'target': webgl_characters['_me'],
-          'value': 1,
+          'value': value,
         });
 
     }else{
-        globalThis[args['type']]++;
+        globalThis[args['type']] += value;
     }
+
+    update_ui();
 }
 
 function new_game(){
-    core_menu_lock = false;
     webgl_level_unload();
 
     coins = 0;
     keys = 0;
+    keys_max = 1;
 
     webgl_level_load({
       'character': 2,
@@ -370,6 +374,7 @@ function new_game(){
       'lives': 3,
       'randomize': true,
     });
+    update_ui();
     webgl_character_spawn();
 }
 
@@ -390,6 +395,7 @@ function repo_init(){
       'globals': {
         'coins': 0,
         'keys': 0,
+        'keys_max': 0,
       },
       'info': '<button id=new-game type=button>Start Platformer Test</button>',
       'menu': true,
@@ -423,15 +429,14 @@ function repo_init(){
     });
 }
 
-function repo_logic(){
+function update_ui(){
     const character = webgl_characters[webgl_character_id];
-
     core_ui_update({
       'class': true,
       'ids': {
         'coins': coins,
         'keys': keys,
-        'keys-max': 1,
+        'keys-max': keys_max,
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],

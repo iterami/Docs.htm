@@ -1,7 +1,6 @@
 'use strict';
 
 function new_game(){
-    core_menu_lock = false;
     webgl_level_unload();
     webgl_level_load({
       'character': 2,
@@ -67,47 +66,49 @@ function new_game(){
           {
             'id': 'npc-friend',
             'level': 1,
+            'translate-y': 3,
+            'translate-z': -60,
             'entities': [
               {
                 'id': 'npc-friend-body',
+                'billboard': true,
                 'collision': false,
                 'texture-id': 'grid.png',
                 'vertex-colors': [
                   .4, .6, .4, 1,
                 ],
                 'vertices': [
-                  5, 0, -5,
-                  -5, 0, -5,
-                  -5, 0, 5,
-                  5, 0, 5,
+                  3, 3, 0,
+                  -3, 3, 0,
+                  -3, -3, 0,
+                  3, -3, 0,
                 ],
               },
             ],
-            'translate-y': 1,
-            'translate-z': -60,
           },
           {
             'id': 'npc-enemy',
             'level': 2,
+            'translate-x': 140,
+            'translate-y': 3,
+            'translate-z': -60,
             'entities': [
               {
                 'id': 'npc-enemy-body',
+                'billboard': true,
                 'collision': false,
                 'texture-id': 'grid.png',
                 'vertex-colors': [
                   .6, .4, .4, 1,
                 ],
                 'vertices': [
-                  5, 0, -5,
-                  -5, 0, -5,
-                  -5, 0, 5,
-                  5, 0, 5,
+                  3, 3, 0,
+                  -3, 3, 0,
+                  -3, -3, 0,
+                  3, -3, 0,
                 ],
               },
             ],
-            'translate-x': 140,
-            'translate-y': 1,
-            'translate-z': -60,
           },
         ],
       },
@@ -120,6 +121,14 @@ function new_game(){
       'level': 0,
       'lives': 1,
       'randomize': true,
+    });
+    const character = webgl_characters[webgl_character_id];
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'life': character['life'],
+        'life-max': character['life-max'],
+      },
     });
     webgl_character_spawn();
 }
@@ -164,17 +173,5 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span>',
-    });
-}
-
-function repo_logic(){
-    const character = webgl_characters[webgl_character_id];
-
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'life': character['life'],
-        'life-max': character['life-max'],
-      },
     });
 }

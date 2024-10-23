@@ -2,6 +2,9 @@
 
 function new_game(){
     webgl_level_unload();
+
+    money = 0;
+
     webgl_level_load({
       'character': -1,
       'json': {
@@ -69,6 +72,12 @@ function new_game(){
       },
       'speed': 2,
     });
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'money': money,
+      },
+    });
     webgl_character_spawn();
 }
 
@@ -85,6 +94,9 @@ function repo_init(){
         'new-game': {
           'onclick': new_game,
         },
+      },
+      'globals': {
+        'money': 0,
       },
       'info': '<button id=new-game type=button>Start RTS Test</button>',
       'menu': true,
@@ -115,14 +127,5 @@ function repo_init(){
       },
       'title': 'Docs.htm',
       'ui': 'Money: <span id=money></span>',
-    });
-}
-
-function repo_logic(){
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'money': 0,
-      },
     });
 }

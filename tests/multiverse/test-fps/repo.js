@@ -1,8 +1,27 @@
 'use strict';
 
+function collect(args){
+    audio_start('boop');
+    const item = entity_entities[args['id']];
+    item['attach-y'] = -500;
+    item['draw'] = false;
+
+    webgl_stat_modify({
+      'stat': args['type'],
+      'target': webgl_characters['_me'],
+      'value': args['value'],
+    });
+
+    update_ui();
+}
+
 function new_game(){
-    core_menu_lock = false;
     webgl_level_unload();
+
+    ammo = 0;
+    ammo_max = 0;
+    weapon = '';
+
     webgl_level_load({
       'character': 2,
       'json': {
@@ -28,6 +47,65 @@ function new_game(){
                   -10, 0, -50,
                   -10, 0, 50,
                   10, 0, 50,
+                ],
+              },
+              {
+                'id': 'life-0',
+                'attach-x': -40,
+                'attach-y': 3,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'life-0',
+                      'type': 'life',
+                      'value': 10,
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  0, .7, 0, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
+                ],
+              },
+              {
+                'id': 'lives-0',
+                'attach-x': -40,
+                'attach-y': 3,
+                'attach-z': -180,
+                'billboard': true,
+                'collision': false,
+                'event-limit': 1,
+                'event-range': 3,
+                'event-todo': [
+                  {
+                    'todo': 'collect',
+                    'type': 'function',
+                    'value': {
+                      'id': 'lives-0',
+                      'type': 'lives',
+                      'value': 1,
+                    },
+                  },
+                ],
+                'vertex-colors': [
+                  .2, .4, 8, 1,
+                ],
+                'vertices': [
+                  1, 1, -0,
+                  -1, 1, -0,
+                  -1, -1, 0,
+                  1, -1, 0,
                 ],
               },
             ],
@@ -85,6 +163,7 @@ function new_game(){
       'life-max': 100,
       'lives': 5,
     });
+    update_ui();
     webgl_character_spawn();
 }
 
@@ -101,6 +180,11 @@ function repo_init(){
         'new-game': {
           'onclick': new_game,
         },
+      },
+      'globals': {
+        'ammo': 0,
+        'ammo_max': 0,
+        'weapon': '',
       },
       'menu': true,
       'mousebinds': {
@@ -123,18 +207,17 @@ function repo_init(){
     });
 }
 
-function repo_logic(){
+function update_ui(){
     const character = webgl_characters[webgl_character_id];
-
     core_ui_update({
       'class': true,
       'ids': {
-        'ammo': 0,
-        'ammo-max': 10,
+        'ammo': ammo,
+        'ammo-max': ammo_max,
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
-        'weapon': 'Blapper',
+        'weapon': weapon,
       },
     });
 }
