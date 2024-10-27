@@ -510,6 +510,7 @@
       "properties": {
         "prefix": "path-rotate-user-body",
         "all": {
+          "collision": false,
           "texture-id": "grid.png"
         },
         "character": "path-rotate-user",

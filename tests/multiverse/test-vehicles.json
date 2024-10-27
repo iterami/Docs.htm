@@ -132,6 +132,7 @@
       "entities": [
         {
           "id": "fast-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",
@@ -168,6 +169,7 @@
       "entities": [
         {
           "id": "locked-enter-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",
@@ -201,6 +203,7 @@
       "entities": [
         {
           "id": "locked-exit-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",
@@ -234,6 +237,7 @@
       "entities": [
         {
           "id": "locked-both-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",
@@ -269,6 +273,7 @@
       "entities": [
         {
           "id": "medium-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",
@@ -308,6 +313,7 @@
       "entities": [
         {
           "id": "slow-body",
+          "collision": false,
           "event-todo": [
             {
               "todo": "webgl_vehicle_toggle",

@@ -265,6 +265,9 @@
                 "type": "webgl_primitive_cuboid",
                 "properties": {
                   "prefix": "cuboid",
+                  "all": {
+                    "collision": false
+                  },
                   "character": "tile-character",
                   "size-x": 2,
                   "size-y": 2,
