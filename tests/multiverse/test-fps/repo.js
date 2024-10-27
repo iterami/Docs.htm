@@ -11,8 +11,6 @@ function collect(args){
       'target': webgl_characters['_me'],
       'value': args['value'],
     });
-
-    update_ui();
 }
 
 function new_game(){
@@ -167,7 +165,6 @@ function new_game(){
       'life-max': 100,
       'lives': 5,
     });
-    update_ui();
     webgl_character_spawn();
 }
 
@@ -206,12 +203,13 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
+        + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
         + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span>',
     });
 }
 
-function update_ui(){
+function repo_logic(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
@@ -221,6 +219,7 @@ function update_ui(){
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
+        'speed': character['speed'],
         'weapon': weapon,
       },
     });

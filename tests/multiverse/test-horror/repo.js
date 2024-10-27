@@ -7,8 +7,7 @@ function collect(args){
     item['draw'] = false;
 
     globalThis[args['type']]++;
-
-    update_ui()
+    update_ui();
 }
 
 function new_game(){

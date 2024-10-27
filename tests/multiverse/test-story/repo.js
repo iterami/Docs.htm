@@ -5,14 +5,17 @@ function choose(choice){
       [
         'left',
         'right',
-        'left',
         'start',
+        '',
       ],
     ];
     if(choices >= choicelist.length){
         return;
     }
-    webgl_characters[webgl_character_id]['path-id'] = 'path-' + choicelist[choices][choice];
+    const path = choicelist[choices][choice];
+    if(path.length){
+        webgl_characters[webgl_character_id]['path-id'] = 'path-' + path;
+    }
     choices++;
 
     update_ui();
@@ -31,7 +34,6 @@ function new_game(){
         'spawn-translate-z': 50,
         'paths': {
           'path-start': {
-            'end': 'exit',
             'points': [
               {
                 'translate-z': 50,
@@ -42,7 +44,6 @@ function new_game(){
             ],
           },
           'path-left': {
-            'end': 'exit',
             'points': [
               {
                 'translate-z': 25,
@@ -57,7 +58,6 @@ function new_game(){
             ],
           },
           'path-right': {
-            'end': 'exit',
             'points': [
               {
                 'translate-z': 25,

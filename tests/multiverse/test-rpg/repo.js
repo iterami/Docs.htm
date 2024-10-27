@@ -120,15 +120,8 @@ function new_game(){
       'jump-height': .6,
       'level': 0,
       'lives': 1,
+      'speed': .5,
       'randomize': true,
-    });
-    const character = webgl_characters[webgl_character_id];
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'life': character['life'],
-        'life-max': character['life-max'],
-      },
     });
     webgl_character_spawn();
 }
@@ -172,6 +165,19 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': 'Life: <span id=life></span>/<span id=life-max></span>',
+      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+        + 'Speed: <span id=speed></span>',
+    });
+}
+
+function repo_logic(){
+    const character = webgl_characters[webgl_character_id];
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'speed': character['speed'],
+      },
     });
 }

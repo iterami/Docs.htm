@@ -19,8 +19,6 @@ function collect(args){
     }else{
         globalThis[args['type']] += value;
     }
-
-    update_ui();
 }
 
 function new_game(){
@@ -80,10 +78,10 @@ function new_game(){
             'end': 'loop',
             'points': [
               {
-                'translate-z': -155,
+                'translate-z': -140,
               },
               {
-                'translate-z': -115,
+                'translate-z': -100,
               },
             ],
           },
@@ -95,7 +93,7 @@ function new_game(){
               {
                 'id': 'coin-0',
                 'attach-y': 3,
-                'attach-z': -80,
+                'attach-z': -70,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -122,7 +120,7 @@ function new_game(){
               },
               {
                 'id': 'door-0',
-                'attach-z': -100,
+                'attach-z': -90,
                 'rotate-x': 90,
                 'texture-id': 'grid.png',
                 'vertex-colors': [
@@ -139,7 +137,7 @@ function new_game(){
                 'id': 'key-0',
                 'attach-x': -15,
                 'attach-y': 3,
-                'attach-z': -80,
+                'attach-z': -70,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -174,7 +172,7 @@ function new_game(){
                 'id': 'life-0',
                 'attach-x': 15,
                 'attach-y': 3,
-                'attach-z': -80,
+                'attach-z': -70,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -202,7 +200,7 @@ function new_game(){
               {
                 'id': 'lives-0',
                 'attach-y': 3,
-                'attach-z': -135,
+                'attach-z': -125,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -235,7 +233,7 @@ function new_game(){
             'path-id': 'fireball-0',
             'translate-x': -50,
             'translate-y': 3,
-            'translate-z': -60,
+            'translate-z': -50,
             'entities': [
               {
                 'id': 'fireball-0-body',
@@ -283,7 +281,7 @@ function new_game(){
             'level': 0,
             'path-id': 'wallmoving-0',
             'translate-y': 10,
-            'translate-z': -155,
+            'translate-z': -140,
             'entities': [
               {
                 'id': 'wallmoving-0',
@@ -343,7 +341,7 @@ function new_game(){
                 'texture-repeat-y': 10,
               },
               'translate-y': -5,
-              'translate-z': -100,
+              'translate-z': -90,
             },
           },
         ],
@@ -358,7 +356,6 @@ function new_game(){
       'lives': 3,
       'randomize': true,
     });
-    update_ui();
     webgl_character_spawn();
 }
 
@@ -408,12 +405,13 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
+        + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span id=coins></span><br>'
         + 'Keys: <span id=keys></span>/<span id=keys-max></span>',
     });
 }
 
-function update_ui(){
+function repo_logic(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
@@ -424,6 +422,7 @@ function update_ui(){
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
+        'speed': character['speed'],
       },
     });
 }

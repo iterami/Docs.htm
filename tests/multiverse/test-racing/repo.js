@@ -116,18 +116,6 @@ function new_game(){
       'lives': 1,
       'randomize': true,
     });
-    const character = webgl_characters[webgl_character_id];
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'lap': lap,
-        'lap-max': lap_max,
-        'life': character['life'],
-        'life-max': character['life-max'],
-        'position': position,
-        'position-max': position_max,
-      },
-    });
     webgl_character_spawn();
 }
 
@@ -197,6 +185,12 @@ function repo_logic(){
     core_ui_update({
       'class': true,
       'ids': {
+        'lap': lap,
+        'lap-max': lap_max,
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'position': position,
+        'position-max': position_max,
         'vehicle': vehicle,
       },
     });

@@ -72,12 +72,7 @@ function new_game(){
       },
       'speed': 2,
     });
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'money': money,
-      },
-    });
+    update_ui();
     webgl_character_spawn();
 }
 
@@ -127,5 +122,14 @@ function repo_init(){
       },
       'title': 'Docs.htm',
       'ui': 'Money: <span id=money></span>',
+    });
+}
+
+function update_ui(){
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'money': money,
+      },
     });
 }
