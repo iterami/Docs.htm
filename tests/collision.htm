@@ -110,20 +110,18 @@ function update_display(){
     };
 
     core_elements['collider'].style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
+    core_elements['collider-aligned'].style.transform = collider_transform;
     core_elements['wall'].style.transform = 'rotate(' + rotation + 'deg)';
     for(const axis in axes){
+         const aligned = core_elements['collider-' + axes[axis] + '-aligned'];
+         const collider = core_elements['collider-' + axes[axis]];
          const width = core_elements['change-' + axes[axis]].value * 10;
-         core_elements['collider-' + axes[axis]].style.left = (150 - width / 2) + 'px';
-         core_elements['collider-' + axes[axis]].style.width = width + 'px';
-         core_elements['collider-' + axes[axis]].style.transform = 'rotate(' + rotation + 'deg) ' + transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
-    }
+         const translate = transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
 
-    core_elements['collider-aligned'].style.transform = collider_transform;
-    for(const axis in axes){
-         const width = core_elements['change-' + axes[axis]].value * 10;
-         core_elements['collider-' + axes[axis] + '-aligned'].style.left = (150 - width / 2) + 'px';
-         core_elements['collider-' + axes[axis] + '-aligned'].style.width = width + 'px';
-         core_elements['collider-' + axes[axis] + '-aligned'].style.transform = transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
+         aligned.style.left = collider.style.left = (150 - width / 2) + 'px';
+         aligned.style.width = collider.style.width = width + 'px';
+         collider.style.transform = 'rotate(' + rotation + 'deg) ' + translate;
+         aligned.style.transform = translate;
     }
 }
 </script>
