@@ -4,8 +4,8 @@
 <title>Collision Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
-#collider,
-#collider-aligned{
+#aligned,
+#collider{
    background: #fff;
    border-radius: 10px;
    height: 20px;
@@ -14,10 +14,10 @@
    top: 140px;
    width: 20px;
 }
+#aligned-x,
+#aligned-y,
 #collider-x,
-#collider-y,
-#collider-x-aligned,
-#collider-y-aligned{
+#collider-y{
    background: #fff;
    height: 6px;
    left: 100px;
@@ -25,12 +25,12 @@
    top: 147px;
    width: 100px;
 }
-#collider-x,
-#collider-x-aligned{
+#aligned-x,
+#collider-x{
    background: #f00;
 }
-#collider-y,
-#collider-y-aligned{
+#aligned-y,
+#collider-y{
    background: #0f0;
 }
 .display{
@@ -58,7 +58,7 @@ table{
 <table>
   <tr class=display>
     <td><div id=wall></div><div id=collider></div><div id=collider-x></div><div id=collider-y></div>
-    <td><div id=wall-aligned></div><div id=collider-aligned></div><div id=collider-x-aligned></div><div id=collider-y-aligned></div>
+    <td><div id=wall-aligned></div><div id=aligned></div><div id=aligned-x></div><div id=aligned-y></div>
   <tr>
     <td colspan=2><input id=wall-rotation max=360 type=range value=0><div id=wall-rotation-value></div>
       X<input id=change-x step=any type=number value=5><br>
@@ -82,14 +82,14 @@ function repo_init(){
       },
       'title': 'Docs.htm',
       'ui-elements': [
+        'aligned',
+        'aligned-x',
+        'aligned-y',
         'change-x',
         'change-y',
         'collider',
-        'collider-aligned',
         'collider-x',
-        'collider-x-aligned',
         'collider-y',
-        'collider-y-aligned',
         'wall',
         'wall-rotation',
         'wall-rotation-value',
@@ -100,28 +100,32 @@ function repo_init(){
 }
 
 function update_display(){
-    const axes = 'xy';
     const rotation = core_elements['wall-rotation'].value;
     core_elements['wall-rotation-value'].textContent = rotation;
+    core_elements['wall'].style.transform = 'rotate(' + rotation + 'deg)';
+
     const collider_transform = ' translateY(-50px)';
-    const transform = {
+    core_elements['aligned'].style.transform = collider_transform;
+    core_elements['collider'].style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
+
+    const axes = {
       'x': 'translateY(-50px) rotate(' + (360 - rotation) + 'deg)',
       'y': 'translateY(-50px) rotate(' + (360 - rotation + 90) + 'deg)',
     };
-
-    core_elements['collider'].style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
-    core_elements['collider-aligned'].style.transform = collider_transform;
-    core_elements['wall'].style.transform = 'rotate(' + rotation + 'deg)';
     for(const axis in axes){
-         const aligned = core_elements['collider-' + axes[axis] + '-aligned'];
-         const collider = core_elements['collider-' + axes[axis]];
-         const width = core_elements['change-' + axes[axis]].value * 10;
-         const translate = transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
+         const aligned = core_elements['aligned-' + axis];
+         const change = core_elements['change-' + axis].value;
+         const collider = core_elements['collider-' + axis];
+
+         const width = Math.abs(change) * 10;
+         const transform = axes[axis] + ' translateX(' + (width / 2) + 'px)' + (Math.sign(change) > 0
+           ? ''
+           : ' translateX(' + -width + 'px)');
 
          aligned.style.left = collider.style.left = (150 - width / 2) + 'px';
          aligned.style.width = collider.style.width = width + 'px';
-         collider.style.transform = 'rotate(' + rotation + 'deg) ' + translate;
-         aligned.style.transform = translate;
+         collider.style.transform = 'rotate(' + rotation + 'deg) ' + transform;
+         aligned.style.transform = transform;
     }
 }
 </script>
