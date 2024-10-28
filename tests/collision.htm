@@ -1,0 +1,129 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Collision Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+<style>
+#collider,
+#collider-aligned{
+   background: #fff;
+   border-radius: 10px;
+   height: 20px;
+   left: 140px;
+   position: absolute;
+   top: 140px;
+   width: 20px;
+}
+#collider-x,
+#collider-y,
+#collider-x-aligned,
+#collider-y-aligned{
+   background: #fff;
+   height: 6px;
+   left: 100px;
+   position: absolute;
+   top: 147px;
+   width: 100px;
+}
+#collider-x,
+#collider-x-aligned{
+   background: #f00;
+}
+#collider-y,
+#collider-y-aligned{
+   background: #0f0;
+}
+.display{
+   height: 300px;
+}
+td{
+   border-width: 0;
+   position: relative;
+}
+#wall,
+#wall-aligned{
+   background: #fff;
+   height: 20px;
+   left: 0;
+   position: absolute;
+   top: 140px;
+   width: 300px;
+}
+table{
+   width: 600px;
+}
+</style>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Collision
+<table>
+  <tr class=display>
+    <td><div id=wall></div><div id=collider></div><div id=collider-x></div><div id=collider-y></div>
+    <td><div id=wall-aligned></div><div id=collider-aligned></div><div id=collider-x-aligned></div><div id=collider-y-aligned></div>
+  <tr>
+    <td colspan=2><input id=wall-rotation max=360 type=range value=0><div id=wall-rotation-value></div>
+      X<input id=change-x step=any type=number value=5><br>
+      Y<input id=change-y step=any type=number value=5>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'change-x': {
+          'oninput': update_display,
+        },
+        'change-y': {
+          'oninput': update_display,
+        },
+        'wall-rotation': {
+          'oninput': update_display,
+        },
+      },
+      'title': 'Docs.htm',
+      'ui-elements': [
+        'change-x',
+        'change-y',
+        'collider',
+        'collider-aligned',
+        'collider-x',
+        'collider-x-aligned',
+        'collider-y',
+        'collider-y-aligned',
+        'wall',
+        'wall-rotation',
+        'wall-rotation-value',
+      ],
+    });
+
+    update_display();
+}
+
+function update_display(){
+    const axes = 'xy';
+    const rotation = core_elements['wall-rotation'].value;
+    core_elements['wall-rotation-value'].textContent = rotation;
+    const collider_transform = ' translateY(-50px)';
+    const transform = {
+      'x': 'translateY(-50px) rotate(' + (360 - rotation) + 'deg)',
+      'y': 'translateY(-50px) rotate(' + (360 - rotation + 90) + 'deg)',
+    };
+
+    core_elements['collider'].style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
+    core_elements['wall'].style.transform = 'rotate(' + rotation + 'deg)';
+    for(const axis in axes){
+         const width = core_elements['change-' + axes[axis]].value * 10;
+         core_elements['collider-' + axes[axis]].style.left = (150 - width / 2) + 'px';
+         core_elements['collider-' + axes[axis]].style.width = width + 'px';
+         core_elements['collider-' + axes[axis]].style.transform = 'rotate(' + rotation + 'deg) ' + transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
+    }
+
+    core_elements['collider-aligned'].style.transform = collider_transform;
+    for(const axis in axes){
+         const width = core_elements['change-' + axes[axis]].value * 10;
+         core_elements['collider-' + axes[axis] + '-aligned'].style.left = (150 - width / 2) + 'px';
+         core_elements['collider-' + axes[axis] + '-aligned'].style.width = width + 'px';
+         core_elements['collider-' + axes[axis] + '-aligned'].style.transform = transform[axes[axis]] + ' translateX(' + (width / 2) + 'px)';
+    }
+}
+</script>
