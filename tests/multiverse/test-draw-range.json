@@ -1,0 +1,92 @@
+{
+  "title": "Billboard Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-billboard",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "entity-0",
+          "attach-x": -40,
+          "attach-y": 2,
+          "attach-z": -40,
+          "billboard": true,
+          "collision": false,
+          "draw-range": 10,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "entity-1",
+          "attach-x": 40,
+          "attach-y": 2,
+          "attach-z": -40,
+          "billboard": true,
+          "collision": false,
+          "draw-range": 20,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "entity-2",
+          "attach-x": 40,
+          "attach-y": 2,
+          "attach-z": 40,
+          "billboard": true,
+          "collision": false,
+          "draw-range": 30,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "entity-3",
+          "attach-x": -40,
+          "attach-y": 2,
+          "attach-z": 40,
+          "billboard": true,
+          "collision": false,
+          "draw-range": 40,
+          "texture-id": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ]
+    }
+  ]
+}
