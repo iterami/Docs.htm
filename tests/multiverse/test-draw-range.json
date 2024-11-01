@@ -1,11 +1,12 @@
 {
-  "title": "Billboard Test",
+  "title": "Draw Range Test",
+  "draw-range": 100,
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "characters": [
     {
-      "id": "test-billboard",
+      "id": "test-draw-range",
       "entities": [
         {
           "id": "base",

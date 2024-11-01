@@ -41,6 +41,9 @@
   "directional-state": true,
   "directional-vector": [0, 1, 0],
 
+  // Optional. The maximum distance at which entities are drawn, or false for unlimited.
+  "draw-range": 1000,
+
   // Optional. Fog density and if fog is enabled.
   "fog-density": 0.0001,
   "fog-state": false,
@@ -295,6 +298,10 @@
 
           // Optional. How the vertices should be drawn.
           "draw-mode": "TRIANGLE_FAN",
+
+          // Optional. The maximum distance at which this specific entity is drawn,
+          //   or false to use "draw-range" from "webgl_properties".
+          "draw-range": 500,
 
           // Optional. The number of times this event should occur, or false for unlimited.
           "event-limit": false,
