@@ -29,7 +29,7 @@
           "attach-z": -40,
           "billboard": true,
           "collision": false,
-          "draw-range": 10,
+          "draw-range": 80,
           "texture-id": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -45,7 +45,7 @@
           "attach-z": -40,
           "billboard": true,
           "collision": false,
-          "draw-range": 20,
+          "draw-range": 60,
           "texture-id": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -61,7 +61,7 @@
           "attach-z": 40,
           "billboard": true,
           "collision": false,
-          "draw-range": 30,
+          "draw-range": 40,
           "texture-id": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -77,7 +77,7 @@
           "attach-z": 40,
           "billboard": true,
           "collision": false,
-          "draw-range": 40,
+          "draw-range": 20,
           "texture-id": "grid.png",
           "vertices": [
             2, 2, 0,
