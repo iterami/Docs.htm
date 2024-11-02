@@ -1,8 +1,7 @@
 {
-  "title": "Vertices Stress Test",
+  "title": "Characters Stress Test",
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
-  "spawn-translate-z": 10,
   "characters": [
     {
       "id": "test-stress",
@@ -27,16 +26,24 @@
   ],
   "prefabs": [
     {
-      "type": "webgl_primitive_ellipsoid",
+      "type": "webgl_prefab_repeat",
       "properties": {
-        "prefix": "ellipsoid",
-        "character": "test-stress",
-        "radius-x": 10,
-        "radius-y": 10,
-        "radius-z": 10,
-        "slices-latitude": 1500,
-        "slices-longitude": 1500,
-        "translate-y": 15
+        "characters": {},
+        "count": 10000,
+        "prefix": "character",
+        "properties": {
+          "billboard": false,
+          "height": 20,
+          "height-range": 20,
+          "width-base": 6,
+          "width-leaf": 20
+        },
+        "x-max": 1000,
+        "x-min": -1000,
+        "y-max": -50,
+        "y-min": -50,
+        "z-max": 0,
+        "z-min": -2000
       }
     }
   ]
