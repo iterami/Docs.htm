@@ -1,0 +1,51 @@
+{
+  "title": "Particles Stress Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "stress-particles",
+      "entities": [
+        {
+          "id": "base",
+          "texture-id": "grid.png",
+          "texture-repeat-x": 10,
+          "texture-repeat-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_particle",
+      "properties": {
+        "character": "stress-particles",
+        "entities": [
+          {
+            "attach-y": 50,
+            "id": "storm-0",
+            "point-size": 150,
+            "vertex-repeat": 500000
+          }
+        ],
+        "id": "storm",
+        "speed-y": -1,
+        "x-max": 50,
+        "x-min": -50,
+        "y-max": 50,
+        "y-min": -50,
+        "z-max": 50,
+        "z-min": -50
+      }
+    }
+  ]
+}
