@@ -5,7 +5,7 @@
   "spawn-translate-z": 10,
   "characters": [
     {
-      "id": "test-stress",
+      "id": "stress-vertices",
       "entities": [
         {
           "id": "base",
@@ -30,7 +30,7 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "ellipsoid",
-        "character": "test-stress",
+        "character": "stress-vertices",
         "radius-x": 10,
         "radius-y": 10,
         "radius-z": 10,

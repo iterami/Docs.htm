@@ -4,7 +4,7 @@
   "spawn-translate-y": 3,
   "characters": [
     {
-      "id": "test-stress",
+      "id": "stress-entities",
       "entities": [
         {
           "id": "base",
@@ -33,7 +33,7 @@
         "prefix": "entity",
         "properties": {
           "billboard": false,
-          "character": "test-stress",
+          "character": "stress-entities",
           "height": 20,
           "height-range": 20,
           "width-base": 6,
