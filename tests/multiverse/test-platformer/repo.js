@@ -135,6 +135,7 @@ function new_game(){
               },
               {
                 'id': 'key-0',
+                'alpha': .99999,
                 'attach-x': -15,
                 'attach-y': 3,
                 'attach-z': -70,

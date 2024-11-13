@@ -294,6 +294,7 @@
       "properties": {
         "prefix": "key",
         "all": {
+          "alpha": 0.999999,
           "collision": false,
           "texture-id": "key.png",
           "vertex-colors": [
@@ -513,6 +514,7 @@
       "properties": {
         "prefix": "key-animated",
         "all": {
+          "alpha": 0.999999,
           "collision": false,
           "texture-animated": true,
           "texture-id": "key.png",
