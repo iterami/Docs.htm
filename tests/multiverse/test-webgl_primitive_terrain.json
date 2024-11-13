@@ -29,9 +29,36 @@
     {
       "type": "webgl_primitive_terrain",
       "properties": {
-        "prefix": "terrain",
+        "prefix": "default",
         "character": "test-primitive-terrain",
         "translate-y": 5
+      }
+    },
+    {
+      "type": "webgl_primitive_terrain",
+      "properties": {
+        "prefix": "terrain",
+        "character": "test-primitive-terrain",
+        "colors": [
+          0, 0, 1, 1,
+          0, 0, 1, 1,
+          0, 1, 0, 1,
+          0, 1, 0, 1,
+          0, 1, 0, 1,
+          0, 1, 0, 1,
+          0, 1, 0, 1,
+          1, 0, 0, 1,
+          1, 0, 0, 1,
+          1, 0, 0, 1,
+          0, 0, 0, 1
+        ],
+        "heights": [
+          -30, -30, -30, 0, 0, 0, 0, 0, 0, 60, 60, 60
+        ],
+        "tiles-x-size": 25,
+        "tiles-z": 1,
+        "tiles-z-size": 50,
+        "translate-z": -75
       }
     }
   ]
