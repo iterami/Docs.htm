@@ -30,6 +30,7 @@ function repo_init(){
     });
     webgl_character_init({
       'id': 'test-character-0',
+      'translate-x': 23,
     });
 
     document.getElementById('results').innerHTML = test_run({
@@ -61,6 +62,35 @@ function repo_init(){
           'function': 'webgl_character_level',
         },
         {
+          'args': {
+            'blue': .3,
+            'green': .2,
+            'red': .1,
+          },
+          'expect': function(result){
+              const clearcolor = webgl.getParameter(webgl.COLOR_CLEAR_VALUE);
+              return webgl_properties['clearcolor-blue'] === .3
+                && webgl_properties['clearcolor-green'] === .2
+                && webgl_properties['clearcolor-red'] === .1
+                && core_float_compare({
+                  'a': clearcolor[0],
+                  'b': .1,
+                  'precision': .001,
+                })
+                && core_float_compare({
+                  'a': clearcolor[1],
+                  'b': .2,
+                  'precision': .001,
+                })
+                && core_float_compare({
+                  'a': clearcolor[2],
+                  'b': .3,
+                  'precision': .001,
+                });
+          },
+          'function': 'webgl_clearcolor_set',
+        },
+        {
           'args': 'help',
           'expect': function(result){
               return webgl.canvas.style.cursor === 'help';
@@ -68,15 +98,21 @@ function repo_init(){
           'function': 'webgl_cursor',
         },
         {
+          'args': webgl_characters['test-character-0'],
+          'expect': function(result){
+              return result['x'] === 23;
+          },
+          'function': 'webgl_get_translation',
+        },
+        {
           'args': {
-            'green': 1,
+            'move': webgl_characters['test-character-0'],
+            'y': 23,
           },
           'expect': function(result){
-              return webgl_properties['clearcolor-blue'] === 0
-                && webgl_properties['clearcolor-green'] === 1
-                && webgl_properties['clearcolor-red'] === 0;
+              return webgl_characters['test-character-0']['translate-y'] === 23;
           },
-          'function': 'webgl_clearcolor_set',
+          'function': 'webgl_move_to',
         },
         {
           'args': {
@@ -104,6 +140,16 @@ function repo_init(){
             0,
           ],
           'function': 'webgl_pick_color',
+        },
+        {
+          'args': {
+            'stat': 'level',
+            'target': webgl_characters['test-character-0'],
+          },
+          'expect': function(result){
+              return webgl_characters['test-character-0']['level'] === -1;
+          },
+          'function': 'webgl_stat_modify',
         },
         {
           'args': {
