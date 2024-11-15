@@ -61,6 +61,13 @@ function repo_init(){
           'function': 'webgl_character_level',
         },
         {
+          'args': 'help',
+          'expect': function(result){
+              return webgl.canvas.style.cursor === 'help';
+          },
+          'function': 'webgl_cursor',
+        },
+        {
           'args': {
             'green': 1,
           },
