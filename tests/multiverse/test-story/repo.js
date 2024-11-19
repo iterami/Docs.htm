@@ -78,7 +78,7 @@ function new_game(){
             'entities': [
               {
                 'id': 'ground',
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 10,
                 'texture-repeat-y': 20,
                 'vertex-colors': [

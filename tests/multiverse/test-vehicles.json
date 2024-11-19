@@ -11,7 +11,7 @@
         {
           "id": "base",
           "attach-y": -20,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -29,7 +29,7 @@
           "attach-x": 450,
           "attach-y": -20,
           "attach-z": -600,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             50, 0, -100,
             -50, 0, -100,
@@ -42,7 +42,7 @@
           "attach-x": 200,
           "attach-y": -20,
           "attach-z": -750,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             300, 0, -50,
             -300, 0, -50,
@@ -55,7 +55,7 @@
           "attach-x": -200,
           "attach-y": -20,
           "attach-z": -850,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             100, 0, -150,
             -100, 0, -150,
@@ -68,7 +68,7 @@
           "attach-x": 200,
           "attach-y": -20,
           "attach-z": -950,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             300, 0, -50,
             -300, 0, -50,
@@ -81,7 +81,7 @@
           "attach-x": 450,
           "attach-y": -20,
           "attach-z": -1100,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             50, 0, -100,
             -50, 0, -100,
@@ -93,7 +93,7 @@
           "id": "track-0-5",
           "attach-y": -20,
           "attach-z": -1250,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             500, 0, -50,
             -500, 0, -50,
@@ -106,7 +106,7 @@
           "attach-x": -450,
           "attach-y": -20,
           "attach-z": -850,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             50, 0, -350,
             -50, 0, -350,
@@ -343,7 +343,7 @@
       "properties": {
         "prefix": "start",
         "all": {
-          "texture-id": "grid.png"
+          "texture": "grid.png"
         },
         "bottom": {
           "exclude": true

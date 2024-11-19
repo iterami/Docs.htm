@@ -8,7 +8,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 2,
           "texture-repeat-y": 2,
           "vertex-colors": [
@@ -32,7 +32,7 @@
               "value": 0
             }
           ],
-          "texture-id": "lavaleaf.png",
+          "texture": "lavaleaf.png",
           "vertex-colors": [
             0.3, 0, 0, 1
           ],

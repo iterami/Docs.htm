@@ -99,7 +99,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 20,
                 'texture-repeat-y': 20,
               },
@@ -118,7 +118,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,
@@ -141,7 +141,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,
@@ -166,7 +166,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,
@@ -191,7 +191,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,
@@ -216,7 +216,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,

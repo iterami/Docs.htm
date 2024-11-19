@@ -150,13 +150,14 @@
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,
+          "texture": "default.png",
           "texture-align": [
             1, 1,
             1, 0,
             0, 0,
             0, 1
           ],
-          "texture-id": "default.png",
+          "texture-animated": false,
           "texture-repeat-x": 1,
           "texture-repeat-y": 1,
           "vertex-colors": [

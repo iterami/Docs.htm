@@ -15,7 +15,7 @@ function new_game(){
             'entities': [
               {
                 'id': 'base',
-                'texture-id': 'lavaleaf.png',
+                'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .1, .4, .1, 1,
                 ],
@@ -31,7 +31,7 @@ function new_game(){
                 'attach-y': 10,
                 'attach-z': -50,
                 'rotate-x': 90,
-                'texture-id': 'lavaleaf.png',
+                'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .4, .2, 0, 1,
                 ],
@@ -47,7 +47,7 @@ function new_game(){
                 'attach-x': -100,
                 'attach-y': 10,
                 'rotate-z': 270,
-                'texture-id': 'lavaleaf.png',
+                'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .4, .2, 0, 1,
                 ],

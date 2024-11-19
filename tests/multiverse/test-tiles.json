@@ -8,7 +8,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 5,
           "vertex-colors": [
@@ -37,7 +37,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   1, 0, 0, 1
                 ],
@@ -56,7 +56,7 @@
               {
                 "attach-x": -5,
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 1, 0, 1
                 ],
@@ -76,7 +76,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],
@@ -91,7 +91,7 @@
                 "attach-x": -15,
                 "attach-y": -10,
                 "attach-z": -5,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],
@@ -123,7 +123,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   1, 0, 0, 1
                 ],
@@ -142,7 +142,7 @@
               {
                 "attach-x": -5,
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 1, 0, 1
                 ],
@@ -162,7 +162,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],
@@ -177,7 +177,7 @@
                 "attach-x": -15,
                 "attach-y": -10,
                 "attach-z": -5,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],
@@ -209,7 +209,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   1, 0, 0, 1
                 ],
@@ -235,7 +235,7 @@
               {
                 "attach-x": -5,
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 1, 0, 1
                 ],
@@ -283,7 +283,7 @@
             "entities": [
               {
                 "attach-y": -10,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],
@@ -298,7 +298,7 @@
                 "attach-x": -15,
                 "attach-y": -10,
                 "attach-z": -5,
-                "texture-id": "grid.png",
+                "texture": "grid.png",
                 "vertex-colors": [
                   0, 0, 1, 1
                 ],

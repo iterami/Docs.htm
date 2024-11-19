@@ -9,7 +9,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 100,
           "texture-repeat-y": 100,
           "vertex-colors": [
@@ -28,8 +28,8 @@
           "attach-z": -75,
           "collision": false,
           "rotate-x": 90,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             1, 0, 0, 1
           ],
@@ -45,8 +45,8 @@
           "attach-z": -75,
           "collision": false,
           "rotate-x": 90,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             1, 0, 0, 1
           ],
@@ -63,8 +63,8 @@
           "attach-z": -75,
           "collision": false,
           "rotate-x": 90,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             1, 0, 0, 1
           ],
@@ -83,8 +83,8 @@
           "collision": false,
           "rotate-x": 90,
           "rotate-y": 180,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             0, 0, 1, 1
           ],
@@ -102,8 +102,8 @@
           "collision": false,
           "rotate-x": 90,
           "rotate-y": 180,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             0, 0, 1, 1
           ],
@@ -122,8 +122,8 @@
           "collision": false,
           "rotate-x": 90,
           "rotate-y": 180,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             0, 0, 1, 1
           ],
@@ -140,8 +140,8 @@
           "attach-z": -87.5,
           "collision": false,
           "rotate-x": 90,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "texture-repeat-x": 20,
           "vertex-colors": [
             0, 1, 0, 1
@@ -159,8 +159,8 @@
           "attach-z": -92.5,
           "collision": false,
           "rotate-x": 90,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             0, 1, 0, 1
           ],
@@ -181,7 +181,7 @@
         "prefix": "boost",
         "all": {
           "collision": false,
-          "texture-id": "boost.png",
+          "texture": "boost.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -200,7 +200,7 @@
         "prefix": "debug",
         "all": {
           "collision": false,
-          "texture-id": "debug.png",
+          "texture": "debug.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -219,7 +219,7 @@
         "prefix": "default",
         "all": {
           "collision": false,
-          "texture-id": "default.png",
+          "texture": "default.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -237,7 +237,7 @@
         "prefix": "door",
         "all": {
           "collision": false,
-          "texture-id": "door.png",
+          "texture": "door.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -256,7 +256,7 @@
         "prefix": "goal",
         "all": {
           "collision": false,
-          "texture-id": "goal.png",
+          "texture": "goal.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -275,7 +275,7 @@
         "prefix": "grid",
         "all": {
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -296,7 +296,7 @@
         "all": {
           "alpha": 0.999999,
           "collision": false,
-          "texture-id": "key.png",
+          "texture": "key.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -316,7 +316,7 @@
         "prefix": "lavaleaf",
         "all": {
           "collision": false,
-          "texture-id": "lavaleaf.png",
+          "texture": "lavaleaf.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -335,7 +335,7 @@
         "prefix": "stone",
         "all": {
           "collision": false,
-          "texture-id": "stone.png",
+          "texture": "stone.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -355,7 +355,7 @@
         "prefix": "wall",
         "all": {
           "collision": false,
-          "texture-id": "wall.png",
+          "texture": "wall.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -375,7 +375,7 @@
         "prefix": "wood",
         "all": {
           "collision": false,
-          "texture-id": "wood.png",
+          "texture": "wood.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -395,8 +395,8 @@
         "prefix": "boost-animated",
         "all": {
           "collision": false,
+          "texture": "boost.png",
           "texture-animated": true,
-          "texture-id": "boost.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -415,8 +415,8 @@
         "prefix": "debug-animated",
         "all": {
           "collision": false,
+          "texture": "debug.png",
           "texture-animated": true,
-          "texture-id": "debug.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -435,8 +435,8 @@
         "prefix": "default-animated",
         "all": {
           "collision": false,
+          "texture": "default.png",
           "texture-animated": true,
-          "texture-id": "default.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -454,8 +454,8 @@
         "prefix": "door-animated",
         "all": {
           "collision": false,
+          "texture": "door.png",
           "texture-animated": true,
-          "texture-id": "door.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -474,8 +474,8 @@
         "prefix": "goal-animated",
         "all": {
           "collision": false,
+          "texture": "goal.png",
           "texture-animated": true,
-          "texture-id": "goal.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -494,8 +494,8 @@
         "prefix": "grid-animated",
         "all": {
           "collision": false,
+          "texture": "grid.png",
           "texture-animated": true,
-          "texture-id": "grid.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -516,8 +516,8 @@
         "all": {
           "alpha": 0.999999,
           "collision": false,
+          "texture": "key.png",
           "texture-animated": true,
-          "texture-id": "key.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -537,8 +537,8 @@
         "prefix": "lavaleaf-animated",
         "all": {
           "collision": false,
+          "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-id": "lavaleaf.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -557,8 +557,8 @@
         "prefix": "stone-animated",
         "all": {
           "collision": false,
+          "texture": "stone.png",
           "texture-animated": true,
-          "texture-id": "stone.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -578,8 +578,8 @@
         "prefix": "wall-animated",
         "all": {
           "collision": false,
+          "texture": "wall.png",
           "texture-animated": true,
-          "texture-id": "wall.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]
@@ -599,8 +599,8 @@
         "prefix": "wood-animated",
         "all": {
           "collision": false,
+          "texture": "wood.png",
           "texture-animated": true,
-          "texture-id": "wood.png",
           "vertex-colors": [
             1, 1, 1, 1
           ]

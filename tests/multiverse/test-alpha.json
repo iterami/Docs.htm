@@ -9,7 +9,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -33,7 +33,7 @@
         "all": {
           "alpha": 0.5,
           "collision": false,
-          "texture-id": "grid.png"
+          "texture": "grid.png"
         },
         "character": "test-alpha",
         "size-x": 10,
@@ -49,7 +49,7 @@
         "all": {
           "alpha": 0.5,
           "collision": false,
-          "texture-id": "grid.png"
+          "texture": "grid.png"
         },
         "character": "test-alpha",
         "size-x": 17,
@@ -65,7 +65,7 @@
         "all": {
           "alpha": 0.5,
           "collision": false,
-          "texture-id": "grid.png"
+          "texture": "grid.png"
         },
         "character": "test-alpha",
         "size-x": 24,

@@ -10,7 +10,7 @@
         {
           "id": "base",
           "attach-y": -10,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -35,7 +35,7 @@
           ],
           "picking": true,
           "rotate-x": 90,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             0, 1, 1, 1
           ],
@@ -58,7 +58,7 @@
           ],
           "picking": true,
           "rotate-x": 90,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             1, 0, 1, 1
           ],
@@ -103,7 +103,7 @@
           ],
           "picking": true,
           "rotate-z": 90,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             1, 0, 0, 1
           ],
@@ -125,7 +125,7 @@
           ],
           "picking": true,
           "rotate-x": 90,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             0, 1, 0, 1
           ],
@@ -174,7 +174,7 @@
           ],
           "picking": true,
           "rotate-z": 270,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             0, 0, 1, 1
           ],

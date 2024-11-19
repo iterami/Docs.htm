@@ -68,7 +68,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 5,
                 'texture-repeat-y': 5,
               },
@@ -87,7 +87,7 @@ function new_game(){
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
               },
               'bottom': {
                 'exclude': true,

@@ -10,7 +10,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -26,7 +26,7 @@
         {
           "id": "lower",
           "attach-y": -100,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],

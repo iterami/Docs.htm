@@ -16,7 +16,7 @@ function new_game(){
               {
                 'id': 'home',
                 'attach-z': -25,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 10,
                 'texture-repeat-y': 15,
                 'vertex-colors': [
@@ -33,7 +33,7 @@ function new_game(){
                 'id': 'bridge',
                 'attach-x': 70,
                 'attach-z': 30,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 2,
                 'vertex-colors': [
@@ -50,7 +50,7 @@ function new_game(){
                 'id': 'forest',
                 'attach-x': 140,
                 'attach-z': -25,
-                'texture-id': 'lavaleaf.png',
+                'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .05, .2, .05, 1,
                 ],
@@ -73,7 +73,7 @@ function new_game(){
                 'id': 'npc-friend-body',
                 'billboard': true,
                 'collision': false,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'vertex-colors': [
                   .4, .6, .4, 1,
                 ],
@@ -97,7 +97,7 @@ function new_game(){
                 'id': 'npc-enemy-body',
                 'billboard': true,
                 'collision': false,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'vertex-colors': [
                   .6, .4, .4, 1,
                 ],

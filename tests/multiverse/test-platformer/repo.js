@@ -122,7 +122,7 @@ function new_game(){
                 'id': 'door-0',
                 'attach-z': -90,
                 'rotate-x': 90,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
@@ -158,7 +158,7 @@ function new_game(){
                     'value': -60,
                   },
                 ],
-                'texture-id': 'key.png',
+                'texture': 'key.png',
                 'vertex-colors': [
                   1, 1, 1, 1,
                 ],
@@ -287,7 +287,7 @@ function new_game(){
               {
                 'id': 'wallmoving-0',
                 'rotate-x': 90,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
@@ -316,7 +316,7 @@ function new_game(){
               'size-y': 10,
               'size-z': 40,
               'top': {
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 4,
               },
@@ -337,7 +337,7 @@ function new_game(){
               'size-y': 10,
               'size-z': 100,
               'top': {
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 4,
                 'texture-repeat-y': 10,
               },

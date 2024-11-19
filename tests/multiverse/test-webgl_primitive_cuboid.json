@@ -9,7 +9,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -31,7 +31,7 @@
       "properties": {
         "prefix": "cuboid",
         "all": {
-          "texture-id": "debug.png"
+          "texture": "debug.png"
         },
         "character": "test-primitive-cuboid",
         "size-x": 5,
@@ -46,7 +46,7 @@
       "properties": {
         "prefix": "cuboid-inverse",
         "all": {
-          "texture-id": "debug.png"
+          "texture": "debug.png"
         },
         "character": "test-primitive-cuboid",
         "size-x": -5,

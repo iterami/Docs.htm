@@ -230,7 +230,7 @@
       "entities": [
         {
           "id": "base",
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "texture-repeat-x": 10,
           "texture-repeat-y": 10,
           "vertex-colors": [
@@ -253,7 +253,7 @@
           "id": "path-exit-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -273,7 +273,7 @@
           "id": "path-loop-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -292,7 +292,7 @@
           "id": "path-reverse-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -316,7 +316,7 @@
           "id": "path-speed-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -335,7 +335,7 @@
           "id": "path-warp-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -354,7 +354,7 @@
           "id": "path-xy-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -373,7 +373,7 @@
           "id": "path-xy-user-reverse-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -393,7 +393,7 @@
           "id": "path-xyz-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -412,7 +412,7 @@
           "id": "path-xyz-user-reverse-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -432,7 +432,7 @@
           "id": "path-xz-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -451,7 +451,7 @@
           "id": "path-xz-user-reverse-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -471,7 +471,7 @@
           "id": "path-yz-user-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -490,7 +490,7 @@
           "id": "path-yz-user-reverse-body",
           "billboard": true,
           "collision": false,
-          "texture-id": "grid.png",
+          "texture": "grid.png",
           "vertices": [
             2, 2, 0,
             -2, 2, 0,
@@ -511,7 +511,7 @@
         "prefix": "path-rotate-user-body",
         "all": {
           "collision": false,
-          "texture-id": "grid.png"
+          "texture": "grid.png"
         },
         "character": "path-rotate-user",
         "size-x": 1,

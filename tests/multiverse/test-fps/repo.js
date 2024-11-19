@@ -34,7 +34,7 @@ function new_game(){
               {
                 'id': 'bridge',
                 'attach-z': -80,
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 2,
                 'texture-repeat-y': 10,
                 'vertex-colors': [
@@ -124,7 +124,7 @@ function new_game(){
               'size-y': 10,
               'size-z': 60,
               'top': {
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 10,
                 'texture-repeat-y': 6,
               },
@@ -145,7 +145,7 @@ function new_game(){
               'size-y': 10,
               'size-z': 60,
               'top': {
-                'texture-id': 'grid.png',
+                'texture': 'grid.png',
                 'texture-repeat-x': 10,
                 'texture-repeat-y': 6,
               },
