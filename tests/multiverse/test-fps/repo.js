@@ -35,8 +35,8 @@ function new_game(){
                 'id': 'bridge',
                 'attach-z': -80,
                 'texture': 'grid.png',
-                'texture-repeat-x': 2,
-                'texture-repeat-y': 10,
+                'texture-x': 2,
+                'texture-y': 10,
                 'vertex-colors': [
                   .4, .2, 0, 1,
                 ],
@@ -125,8 +125,8 @@ function new_game(){
               'size-z': 60,
               'top': {
                 'texture': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 6,
+                'texture-x': 10,
+                'texture-y': 6,
               },
               'translate-y': -5,
             },
@@ -146,8 +146,8 @@ function new_game(){
               'size-z': 60,
               'top': {
                 'texture': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 6,
+                'texture-x': 10,
+                'texture-y': 6,
               },
               'translate-y': -5,
               'translate-z': -160,

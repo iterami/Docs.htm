@@ -17,8 +17,8 @@ function new_game(){
                 'id': 'home',
                 'attach-z': -25,
                 'texture': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 15,
+                'texture-x': 10,
+                'texture-y': 15,
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
@@ -34,8 +34,8 @@ function new_game(){
                 'attach-x': 70,
                 'attach-z': 30,
                 'texture': 'grid.png',
-                'texture-repeat-x': 4,
-                'texture-repeat-y': 2,
+                'texture-x': 4,
+                'texture-y': 2,
                 'vertex-colors': [
                   .4, .2, 0, 1,
                 ],

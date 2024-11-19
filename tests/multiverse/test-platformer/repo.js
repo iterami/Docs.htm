@@ -317,8 +317,8 @@ function new_game(){
               'size-z': 40,
               'top': {
                 'texture': 'grid.png',
-                'texture-repeat-x': 4,
-                'texture-repeat-y': 4,
+                'texture-x': 4,
+                'texture-y': 4,
               },
               'translate-y': -5,
             },
@@ -338,8 +338,8 @@ function new_game(){
               'size-z': 100,
               'top': {
                 'texture': 'grid.png',
-                'texture-repeat-x': 4,
-                'texture-repeat-y': 10,
+                'texture-x': 4,
+                'texture-y': 10,
               },
               'translate-y': -5,
               'translate-z': -90,

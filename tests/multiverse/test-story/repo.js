@@ -79,8 +79,8 @@ function new_game(){
               {
                 'id': 'ground',
                 'texture': 'grid.png',
-                'texture-repeat-x': 10,
-                'texture-repeat-y': 20,
+                'texture-x': 10,
+                'texture-y': 20,
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],

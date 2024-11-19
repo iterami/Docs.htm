@@ -10,8 +10,8 @@
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-repeat-x": 100,
-          "texture-repeat-y": 100,
+          "texture-x": 100,
+          "texture-y": 100,
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],
@@ -142,7 +142,7 @@
           "rotate-x": 90,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "texture-repeat-x": 20,
+          "texture-x": 20,
           "vertex-colors": [
             0, 1, 0, 1
           ],
