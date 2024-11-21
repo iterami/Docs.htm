@@ -29,6 +29,7 @@
     {
       "type": "prefabs_webgl_lines_tree",
       "properties": {
+        "billboard": true,
         "character": "test-lines-tree",
         "prefix": "tree"
       }

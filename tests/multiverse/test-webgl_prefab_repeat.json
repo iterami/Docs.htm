@@ -34,6 +34,7 @@
         "type": "prefabs_webgl_tree_2d",
         "count": 100,
         "properties": {
+          "billboard": true,
           "character": "test-prefab-repeat",
           "height": 20,
           "height-range": 20,
