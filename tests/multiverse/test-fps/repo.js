@@ -3,7 +3,7 @@
 function collect(args){
     audio_start('boop');
     const item = entity_entities[args['id']];
-    item['attach-y'] = -500;
+    item['attach-y'] = -999;
     item['draw'] = false;
 
     webgl_stat_modify({
