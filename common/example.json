@@ -3,6 +3,7 @@
   "ambient-blue": 1,
   "ambient-green": 1,
   "ambient-red": 1,
+  "camera-zoom": 25,
   "camera-zoom-max": 50,
   "camera-zoom-min": 0,
   "clearcolor-blue": 0,
