@@ -23,6 +23,7 @@ function new_game(){
     webgl_level_load({
       'character': 2,
       'json': {
+        'camera-zoom': 0,
         'camera-zoom-max': 0,
         'pointerlock': true,
         'spawn-translate-y': 1,

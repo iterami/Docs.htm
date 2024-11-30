@@ -8,6 +8,8 @@ function new_game(){
     webgl_level_load({
       'character': -1,
       'json': {
+        'camera-zoom': 50,
+        'camera-zoom-max': 50,
         'camera-zoom-min': 20,
         'characters': [
           {
