@@ -32,6 +32,7 @@ function new_game(){
       'character': 2,
       'json': {
         'camera-zoom-min': 10,
+        'pointerlock': true,
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
         'y-min': -200,
