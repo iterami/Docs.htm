@@ -26,6 +26,7 @@
   },
   "paths": {
     "example-path": {
+      "collision": true,
       "end": "loop",
       "points": [
         {
