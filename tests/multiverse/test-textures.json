@@ -2,7 +2,7 @@
   "title": "Textures Test",
   "spawn-rotate-x": 20,
   "spawn-translate-y": 3,
-  "spawn-translate-z": 10,
+  "spawn-translate-z": 20,
   "characters": [
     {
       "id": "test-textures",
@@ -23,6 +23,68 @@
           ]
         },
         {
+          "id": "align-back",
+          "attach-y": 1,
+          "attach-z": 30,
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "texture-align": "01001011",
+          "texture-animated": true,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "align-forward",
+          "attach-y": 1,
+          "attach-z": 10,
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "texture-align": "10110100",
+          "texture-animated": true,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "align-left",
+          "attach-x": -10,
+          "attach-y": 1,
+          "attach-z": 20,
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "texture-align": "00101101",
+          "texture-animated": true,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "align-right",
+          "attach-x": 10,
+          "attach-y": 1,
+          "attach-z": 20,
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "texture-align": "11010010",
+          "texture-animated": true,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
           "id": "river-0",
           "attach-x": -30,
           "attach-z": -75,
@@ -30,9 +92,6 @@
           "rotate-x": 90,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            1, 0, 0, 1
-          ],
           "vertices": [
             20, 0, -5,
             -20, 0, -20,
@@ -47,9 +106,6 @@
           "rotate-x": 90,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            1, 0, 0, 1
-          ],
           "vertices": [
             10, 0, -5,
             -10, 0, -5,
@@ -65,9 +121,6 @@
           "rotate-x": 90,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            1, 0, 0, 1
-          ],
           "vertices": [
             20, 0, -20,
             -20, 0, -5,
@@ -85,9 +138,6 @@
           "rotate-y": 180,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            0, 0, 1, 1
-          ],
           "vertices": [
             20, 0, -20,
             -20, 0, -5,
@@ -104,9 +154,6 @@
           "rotate-y": 180,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            0, 0, 1, 1
-          ],
           "vertices": [
             10, 0, -5,
             -10, 0, -5,
@@ -124,9 +171,6 @@
           "rotate-y": 180,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            0, 0, 1, 1
-          ],
           "vertices": [
             20, 0, -5,
             -20, 0, -20,
@@ -143,9 +187,6 @@
           "texture": "lavaleaf.png",
           "texture-animated": true,
           "texture-x": 20,
-          "vertex-colors": [
-            0, 1, 0, 1
-          ],
           "vertices": [
             50, 0, -5,
             -50, 0, -5,
@@ -161,9 +202,6 @@
           "rotate-x": 90,
           "texture": "lavaleaf.png",
           "texture-animated": true,
-          "vertex-colors": [
-            0, 1, 0, 1
-          ],
           "vertices": [
             50, 0, -5,
             -50, 0, -5,
