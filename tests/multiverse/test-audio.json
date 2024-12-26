@@ -1,0 +1,41 @@
+{
+  "title": "Audio Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 10,
+  "characters": [
+    {
+      "id": "test-events",
+      "entities": [
+        {
+          "id": "base",
+          "attach-y": -10,
+          "event-todo": [
+            {
+              "todo": "webgl_audio",
+              "type": "function",
+              "value": {
+                "id": "boop",
+                "target": "base",
+                "type": "entity_entities"
+              }
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "texture-x": 2,
+          "texture-y": 2,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            500, 0, -500,
+            -500, 0, -500,
+            -500, 0, 500,
+            500, 0, 500
+          ]
+        }
+      ]
+    }
+  ]
+}
