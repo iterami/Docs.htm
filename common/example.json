@@ -153,12 +153,7 @@
           "rotate-y": 0,
           "rotate-z": 0,
           "texture": "default.png",
-          "texture-align": [
-            1, 1,
-            1, 0,
-            0, 0,
-            0, 1
-          ],
+          "texture-align": "11010010",
           "texture-animated": false,
           "texture-x": 1,
           "texture-y": 1,
