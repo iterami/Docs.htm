@@ -31,8 +31,7 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
-      "translate-x": 25,
-      "translate-y": 5
+      "translate-z": -25
     }
   ],
   "prefabs": [
