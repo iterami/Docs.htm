@@ -6,8 +6,7 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_prefab_args(args)
 <ul>
-  <li>Function that handles default args that all prefabs and primitives share.
-  <li>Includes all default <a href=webgl.htm#entity-properties>entity properties</a> as args defaults too.
+  <li>Function that removes all args that aren't part of default <a href=webgl.htm#entity-properties>entity properties</a> and returns the remaining args applied over the defaults.
 </ul>
 <table>
   <tr class=header>
@@ -15,11 +14,7 @@
     <td>Default
     <td>Type
   <tr>
-    <td>character
-    <td>webgl_character_id
-    <td>string ID
-  <tr>
-    <td>prefix
-    <td>entity_id_count
-    <td>number or string
+    <td>args
+    <td>
+    <td>object
 </table>

@@ -7,14 +7,26 @@
 <a href=../../../../index.htm>iterami</a>/<a href=../../../index.htm>Docs.htm</a>/<a href=../../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js Prefabs</a>/prefabs_webgl_humanoid(args)
 <ul>
   <li>Creates a humanoid prefab with specified properties.
-  <li>Additional default args are handled by <a href=../webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Translation is the middle point between the feet.
+  <li>Args will be used in entity creation after being cleaned up by <a href=../webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>character
+    <td>webgl_character_id
+    <td>string ID
+  <tr>
+    <td>groups
+    <td>[]
+    <td>array of strings
+  <tr>
+    <td>prefix
+    <td>entity_id_count
+    <td>string ID
   <tr>
     <td>scale
     <td>1
