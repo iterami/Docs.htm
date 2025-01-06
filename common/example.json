@@ -30,6 +30,11 @@
       "end": "loop",
       "points": [
         {
+          "event-limit": false,
+          "event-todo": [],
+          "rotate-x": 0,
+          "rotate-y": 90,
+          "rotate-z": 0,
           "speed": 2,
           "translate-x": 0,
           "translate-y": 0,
@@ -38,10 +43,6 @@
         {
           "translate-x": -10,
           "translate-z": -10
-        },
-        {
-          "translate-x": 0,
-          "translate-y": 0
         }
       ],
       "speed": 2

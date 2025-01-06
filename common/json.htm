@@ -73,25 +73,33 @@
       //   warp = teleport back to 1st point.
       "end": "loop",
 
-      // REQUIRED. Path waypoints in order.
+      // REQUIRED. Path points in order.
       "points": [
         {
+          // Optional. Event handling when this point is reached.
+          // More event info can be found in the example entity below.
+          "event-limit": false,
+          "event-todo": [],
+
+          // Optional. Forced rotation that is applied to all characters that reach this point.
+          // Leave absent to maintain current rotation.
+          "rotate-x": 0,
+          "rotate-y": 90,
+          "rotate-z": 0,
+
           // Optional. Speed multiplier when characters are approaching this point.
           "speed": 2,
 
-          // Optional. Waypoint translation relative to "0, 0, 0".
+          // Optional. Point translation relative to "0, 0, 0".
           // Leave absent to use current translation of that axis.
           "translate-x": 0,
           "translate-y": 0,
           "translate-z": 0
         },
         {
+          // Optional. Paths can have unlimited points.
           "translate-x": -10,
           "translate-z": -10
-        },
-        {
-          "translate-x": 0,
-          "translate-y": 0
         }
       ],
 
