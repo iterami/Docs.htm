@@ -42,6 +42,7 @@
         {
           "id": "attached-x",
           "attach-x": 10,
+          "change-rotate-x": -5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -74,6 +75,7 @@
         {
           "id": "attached-y",
           "attach-x": 10,
+          "change-rotate-y": 5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -105,6 +107,7 @@
         {
           "id": "attached-z",
           "attach-x": 10,
+          "change-rotate-z": -5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [

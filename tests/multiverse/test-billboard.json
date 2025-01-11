@@ -25,42 +25,42 @@
         {
           "id": "billboard-0",
           "attach-x": -5,
-          "attach-y": 2,
+          "attach-y": 5,
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
           ]
         },
         {
           "id": "billboard-1",
-          "attach-y": 2,
+          "attach-y": 5,
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
           ]
         },
         {
           "id": "billboard-2",
           "attach-x": 5,
-          "attach-y": 2,
+          "attach-y": 5,
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
           ]
         }
       ]

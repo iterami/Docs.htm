@@ -80,6 +80,7 @@
           }
         ],
         "id": "snow",
+        "randomize": false,
         "speed-x": 0.1,
         "speed-y": -0.1,
         "speed-z": 0.1,

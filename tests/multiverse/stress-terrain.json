@@ -32,9 +32,9 @@
         "prefix": "terrain",
         "character": "stress-terrain",
         "height-random": 50,
-        "tiles-x": 1000,
+        "tiles-x": 1500,
         "tiles-x-size": 100,
-        "tiles-z": 1000,
+        "tiles-z": 1500,
         "tiles-z-size": 100,
         "translate-y": -50
       }

@@ -4,26 +4,45 @@
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "paths": {
-    "path-exit": {
+    "path-event": {
+      "end": "loop",
       "points": [
         {
+          "event-todo": [
+            {
+              "stat": "vertex-colors",
+              "todo": "path-event-user-body"
+            }
+          ],
           "translate-x": -15,
           "translate-y": 5,
           "translate-z": -20
         },
         {
+          "event-todo": [
+            {
+              "limit": 1,
+              "stat": "vertex-colors",
+              "todo": "path-event-user-body"
+            }
+          ],
           "translate-x": 15,
           "translate-y": 5
         },
         {
+          "event-todo": [
+            {
+              "stat": "vertex-colors",
+              "todo": "path-event-user-body"
+            }
+          ],
           "translate-x": 15,
           "translate-y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-loop": {
-      "end": "loop",
+    "path-exit": {
       "points": [
         {
           "translate-x": -15,
@@ -246,6 +265,25 @@
       ]
     },
     {
+      "id": "path-event-user",
+      "entities": [
+        {
+          "id": "path-event-user-body",
+          "billboard": true,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "level": 1,
+      "path-id": "path-event"
+    },
+    {
       "id": "path-exit-user",
       "collides": true,
       "entities": [
@@ -265,25 +303,6 @@
       "gravity": 1,
       "level": 1,
       "path-id": "path-exit"
-    },
-    {
-      "id": "path-loop-user",
-      "entities": [
-        {
-          "id": "path-loop-user-body",
-          "billboard": true,
-          "collision": false,
-          "texture": "grid.png",
-          "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
-          ]
-        }
-      ],
-      "level": 1,
-      "path-id": "path-loop"
     },
     {
       "id": "path-reverse-user",
@@ -523,16 +542,16 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
-        "path": "path-exit",
-        "prefix": "lines-exit"
+        "path": "path-event",
+        "prefix": "lines-event"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
-        "path": "path-loop",
-        "prefix": "lines-loop"
+        "path": "path-exit",
+        "prefix": "lines-exit"
       }
     },
     {
