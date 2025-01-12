@@ -30,7 +30,25 @@
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
         "character": "test-cuboid-tree",
-        "prefix": "tree"
+        "prefix": "tree-default"
+      }
+    },
+    {
+      "type": "prefabs_webgl_cuboid_tree",
+      "properties": {
+        "character": "test-cuboid-tree",
+        "leaf-color": [0.8, 0.4, 0, 1],
+        "leaf-size-x": 20,
+        "leaf-size-y": 40,
+        "leaf-size-z": 20,
+        "leaf-texture": "wood.png",
+        "prefix": "tree-modified",
+        "translate-z": -25,
+        "trunk-color": 	[0, 1, 0, 1],
+        "trunk-size-x": 5,
+        "trunk-size-y": 20,
+        "trunk-size-z": 10,
+        "trunk-texture": "grid.png"
       }
     }
   ]

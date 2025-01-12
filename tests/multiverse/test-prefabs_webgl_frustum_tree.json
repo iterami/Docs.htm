@@ -29,10 +29,8 @@
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "bottom": true,
         "character": "test-frustum-tree",
-        "prefix": "tree-0",
-        "translate-x": -10
+        "prefix": "tree-default"
       }
     },
     {
@@ -40,11 +38,19 @@
       "properties": {
         "bottom": true,
         "character": "test-frustum-tree",
+        "height": 40,
+        "height-range": 20,
+        "leaf-color-bottom": [0.1, 0.3, 0.1, 1],
+        "leaf-color-top": [0.05, 0.15, 0.05, 1],
         "leaf-count": 5,
         "leaf-points": 8,
-        "leaf-separate": 3,
+        "leaf-separate": 10,
+        "leaf-size": 10,
         "prefix": "tree-1",
-        "translate-x": 10
+        "trunk-color": [0.9, 0.7, 0.9, 1],
+        "trunk-points": 10,
+        "trunk-size": 5,
+        "translate-z": -20
       }
     }
   ]

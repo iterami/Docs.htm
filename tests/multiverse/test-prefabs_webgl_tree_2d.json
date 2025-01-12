@@ -29,11 +29,21 @@
     {
       "type": "prefabs_webgl_tree_2d",
       "properties": {
+        "character": "test-tree-2d",
+        "prefix": "tree-default"
+      }
+    },
+    {
+      "type": "prefabs_webgl_tree_2d",
+      "properties": {
+        "base-color": [0.1, 0.3, 0.1, 1],
         "billboard": true,
         "character": "test-tree-2d",
         "height": 10,
-        "height-range": 20,
-        "prefix": "tree",
+        "height-range": 40,
+        "leaf-color": [0.4, 0.2, 0, 1],
+        "prefix": "tree-modified",
+        "translate-z": -25,
         "width-base": 6,
         "width-leaf": 20
       }
