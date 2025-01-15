@@ -188,6 +188,11 @@ function repo_init(){
         'ammo_max': 0,
         'weapon': '',
       },
+      'info': '<button id=new-game type=button>Start FPS Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+        + 'Lives: <span class=lives></span><br>'
+        + 'Speed: <span id=speed></span><br>'
+        + 'Weapon: <span class=weapon></span><br>'
+        + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -199,12 +204,10 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new-game type=button>Start FPS Test</button>',
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
-        + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
         + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span>',
     });

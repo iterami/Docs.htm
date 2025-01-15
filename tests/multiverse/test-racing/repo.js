@@ -1,10 +1,28 @@
 'use strict';
 
+function lap_update(marker){
+    if(mark !== marker - 1){
+        return;
+    }
+
+    mark++;
+    if(mark >= mark_max){
+        audio_start('boop');
+        mark = 0;
+        lap++;
+        if(lap > lap_max){
+            lap = 1;
+        }
+    }
+}
+
 function new_game(){
     webgl_level_unload();
 
-    lap = 0;
+    lap = 1;
     lap_max = 3;
+    mark = 0;
+    mark_max = 4;
     position = 1;
     position_max = 1;
 
@@ -14,10 +32,118 @@ function new_game(){
         'camera-zoom-min': 10,
         'camera-zoom-max': 30,
         'spawn-rotate-x': 30,
+        'spawn-rotate-y': 90,
+        'spawn-translate-x': -50,
         'spawn-translate-y': 1,
+        'spawn-translate-z': 375,
         'characters': [
           {
             'id': 'racing-test',
+            'entities': [
+              {
+                'id': 'mark-0',
+                'attach-y': -.99,
+                'attach-z': 375,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'lap_update',
+                    'type': 'function',
+                    'value': 4,
+                  },
+                ],
+                'texture': 'grid.png',
+                'texture-x': 5,
+                'texture-y': 50,
+                'vertex-colors': [
+                  0, 1, 0, 1,
+                ],
+                'vertices': [
+                  10, 0, -125,
+                  -10, 0, -125,
+                  -10, 0, 125,
+                  10, 0, 125,
+                ],
+              },
+              {
+                'id': 'mark-1',
+                'attach-x': 210,
+                'attach-y': -.99,
+                'attach-z': 240,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'lap_update',
+                    'type': 'function',
+                    'value': 1,
+                  },
+                ],
+                'texture': 'grid.png',
+                'texture-x': 20,
+                'texture-y': 5,
+                'vertex-colors': [
+                  0, 0, 1, 1,
+                ],
+                'vertices': [
+                  40, 0, -10,
+                  -40, 0, -10,
+                  -40, 0, 10,
+                  40, 0, 10,
+                ],
+              },
+              {
+                'id': 'mark-2',
+                'attach-x': 210,
+                'attach-y': -.99,
+                'attach-z': -240,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'lap_update',
+                    'type': 'function',
+                    'value': 2,
+                  },
+                ],
+                'texture': 'grid.png',
+                'texture-x': 20,
+                'texture-y': 5,
+                'vertex-colors': [
+                  0, 0, 1, 1,
+                ],
+                'vertices': [
+                  40, 0, -10,
+                  -40, 0, -10,
+                  -40, 0, 10,
+                  40, 0, 10,
+                ],
+              },
+              {
+                'id': 'mark-3',
+                'attach-x': -170,
+                'attach-y': -.99,
+                'attach-z': -150,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'lap_update',
+                    'type': 'function',
+                    'value': 3,
+                  },
+                ],
+                'texture': 'grid.png',
+                'texture-x': 20,
+                'texture-y': 5,
+                'vertex-colors': [
+                  0, 0, 1, 1,
+                ],
+                'vertices': [
+                  80, 0, -10,
+                  -80, 0, -10,
+                  -80, 0, 10,
+                  80, 0, 10,
+                ],
+              },
+            ],
           },
           {
             'id': 'vehicle',
@@ -25,11 +151,13 @@ function new_game(){
             'collides': true,
             'gravity': 1,
             'level': 0,
+            'rotate-y': 90,
+            'translate-x': -25,
             'translate-y': 5,
-            'translate-z': -25,
+            'translate-z': 375,
             'turn-speed': 2,
             'vehicle-stats': {
-              'speed-deceleration': -.01,
+              'speed-deceleration': -.02,
               'speed-max': 3,
             },
             'entities': [
@@ -69,39 +197,124 @@ function new_game(){
                   .2, .2, .2, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 5,
-                'texture-y': 5,
+                'texture-x': 3,
+                'texture-y': 3,
               },
               'character': 'racing-test',
               'size-x': -500,
-              'size-y': -50,
-              'size-z': -500,
-              'translate-y': 24,
+              'size-y': -100,
+              'size-z': -1000,
+              'top': {
+                'texture-x': 3,
+                'texture-y': 4,
+              },
+              'translate-y': 49,
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'pillar',
+              'prefix': 'wall-0',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
                 'texture': 'grid.png',
+                'texture-x': 3,
+                'texture-y': 3,
               },
               'bottom': {
                 'exclude': true,
               },
               'character': 'racing-test',
               'size-x': 20,
-              'size-y': 50,
-              'size-z': 20,
+              'size-y': 100,
+              'size-z': 500,
               'top': {
                 'exclude': true,
               },
-              'translate-x': 100,
-              'translate-y': 24,
-              'translate-z': -100,
+              'translate-x': -83.3,
+              'translate-y': 49,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'wall-1',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture': 'grid.png',
+                'texture-x': 3,
+                'texture-y': 3,
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'racing-test',
+              'left': {
+                'exclude': true,
+              },
+              'size-x': 250,
+              'size-y': 20,
+              'size-z': 20,
+              'translate-x': 51.7,
+              'translate-y': 9,
+              'translate-z': 240,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'wall-2',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture': 'grid.png',
+                'texture-x': 3,
+                'texture-y': 3,
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'racing-test',
+              'right': {
+                'exclude': true,
+              },
+              'size-x': 250,
+              'size-y': 20,
+              'size-z': 20,
+              'translate-x': 125,
+              'translate-y': 9,
+            },
+          },
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'wall-3',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture': 'grid.png',
+                'texture-x': 3,
+                'texture-y': 3,
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'racing-test',
+              'left': {
+                'exclude': true,
+              },
+              'size-x': 250,
+              'size-y': 20,
+              'size-z': 20,
+              'translate-x': 51.7,
+              'translate-y': 9,
+              'translate-z': -240,
             },
           },
         ],
@@ -134,12 +347,18 @@ function repo_init(){
         },
       },
       'globals': {
-        'lap': 0,
+        'lap': 1,
         'lap_max': 3,
+        'mark': 0,
+        'mark_max': 4,
         'position': 1,
         'position_max': 1,
       },
-      'info': '<button id=new-game type=button>Start Racing Test</button>',
+      'info': '<button id=new-game type=button>Start Racing Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+        + 'Lap: <span class=lap></span>/<span class=lap-max></span><br>'
+        + 'Position: <span class=position></span>/<span class=position-max></span>'
+        + '<div class=vehicle></div>'
+        + 'Mark: <span class=mark></span>/<span class=mark-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -167,7 +386,8 @@ function repo_init(){
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
         + 'Position: <span id=position></span>/<span id=position-max></span>'
-        + '<div id=vehicle></div>',
+        + '<div id=vehicle></div>'
+        + 'Mark: <span id=mark></span>/<span id=mark-max></span>',
     });
 }
 
@@ -189,6 +409,8 @@ function repo_logic(){
         'lap-max': lap_max,
         'life': character['life'],
         'life-max': character['life-max'],
+        'mark': mark,
+        'mark-max': mark_max,
         'position': position,
         'position-max': position_max,
         'vehicle': vehicle,

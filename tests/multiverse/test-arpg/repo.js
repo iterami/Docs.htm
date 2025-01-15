@@ -17,7 +17,7 @@ function new_game(){
         'y-min': -200,
         'characters': [
           {
-            'id': 'rpg-test',
+            'id': 'arpg-test',
             'entities': [
               {
                 'id': 'home',
@@ -125,6 +125,10 @@ function new_game(){
       'gravity': 1,
       'jump-height': .6,
       'level': 0,
+      'lock': {
+        'camera-rotate-x': 60,
+        'camera-rotate-y': 0,
+      },
       'lives': 1,
       'speed': .5,
       'randomize': true,
@@ -152,7 +156,7 @@ function repo_init(){
         'mana': 0,
         'mana_max': 0,
       },
-      'info': '<button id=new-game type=button>Start RPG Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new-game type=button>Start ARPG Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana-max></span><br>'
         + 'Speed: <span id=speed></span>',
       'menu': true,

@@ -269,7 +269,7 @@ function repo_init(){
         'items': 0,
         'items_max': 0,
       },
-      'info': '<button id=new-game type=button>Start Horror Test</button>',
+      'info': '<button id=new-game type=button>Start Horror Test</button><hr>Items Collected: <span class=items></span>/<span class=items-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -283,7 +283,7 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': 'Items Collected: <span id=items></span>/<span id=items-max></span>',
+      'ui': '<span id=items></span>/<span id=items-max></span>',
     });
 }
 

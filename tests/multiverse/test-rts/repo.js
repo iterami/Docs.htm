@@ -3,7 +3,8 @@
 function new_game(){
     webgl_level_unload();
 
-    money = 0;
+    money = 1000;
+    selected = '';
 
     webgl_level_load({
       'character': -1,
@@ -94,8 +95,10 @@ function repo_init(){
       },
       'globals': {
         'money': 0,
+        'selected': '',
       },
-      'info': '<button id=new-game type=button>Start RTS Test</button>',
+      'info': '<button id=new-game type=button>Start RTS Test</button><hr>Money: <span class=money></span><br>'
+        + 'Selected: <span class=selected></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -123,7 +126,8 @@ function repo_init(){
           webgl_character_spawn();
       },
       'title': 'Docs.htm',
-      'ui': 'Money: <span id=money></span>',
+      'ui': 'Money: <span id=money></span><br>'
+        + 'Selected: <span id=selected></span>',
     });
 }
 
@@ -132,6 +136,7 @@ function update_ui(){
       'class': true,
       'ids': {
         'money': money,
+        'selected': selected,
       },
     });
 }

@@ -380,7 +380,11 @@ function repo_init(){
         'keys': 0,
         'keys_max': 0,
       },
-      'info': '<button id=new-game type=button>Start Platformer Test</button>',
+      'info': '<button id=new-game type=button>Start Platformer Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+        + 'Lives: <span class=lives></span><br>'
+        + 'Speed: <span id=speed></span><br>'
+        + 'Coins: <span class=coins></span><br>'
+        + 'Keys: <span class=keys></span>/<span class=keys-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -407,7 +411,6 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
-        + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span id=coins></span><br>'
         + 'Keys: <span id=keys></span>/<span id=keys-max></span>',
     });
