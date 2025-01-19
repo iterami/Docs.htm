@@ -1,0 +1,30 @@
+{
+  "title": "Zoom Test",
+  "camera-zoom": 50,
+  "camera-zoom-max": 100,
+  "camera-zoom-min": 10,
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "characters": [
+    {
+      "id": "test-zoom",
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ]
+}

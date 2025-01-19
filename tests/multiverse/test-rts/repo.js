@@ -7,7 +7,7 @@ function new_game(){
     selected = '';
 
     webgl_level_load({
-      'character': -1,
+      'character': 2,
       'json': {
         'camera-zoom': 50,
         'camera-zoom-max': 50,
@@ -67,6 +67,7 @@ function new_game(){
       },
     });
     webgl_character_init({
+      'camera-zoom': 50,
       'controls': 'rts',
       'level': -1,
       'lock': {
