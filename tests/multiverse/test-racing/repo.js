@@ -356,9 +356,9 @@ function repo_init(){
       },
       'info': '<button id=new-game type=button>Start Racing Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Lap: <span class=lap></span>/<span class=lap-max></span><br>'
-        + 'Position: <span class=position></span>/<span class=position-max></span>'
-        + '<div class=vehicle></div>'
-        + 'Mark: <span class=mark></span>/<span class=mark-max></span>',
+        + 'Mark: <span class=mark></span>/<span class=mark-max></span><br>'
+        + 'Position: <span class=position></span>/<span class=position-max></span><br>'
+        + 'Speed: <span class=speed></span>/<span class=speed-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -385,21 +385,23 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
-        + 'Position: <span id=position></span>/<span id=position-max></span>'
-        + '<div id=vehicle></div>'
-        + 'Mark: <span id=mark></span>/<span id=mark-max></span>',
+        + 'Mark: <span id=mark></span>/<span id=mark-max></span><br>'
+        + 'Position: <span id=position></span>/<span id=position-max></span><br>'
+        + 'Speed: <span id=speed></span>/<span id=speed-max></span>',
     });
 }
 
 function repo_logic(){
     const character = webgl_characters[webgl_character_id];
-    let vehicle = '';
+    let speed = '-';
+    let speed_max = '-';
     if(character['vehicle'] !== false){
         const stats = webgl_characters[character['vehicle']]['vehicle-stats'];
-        vehicle = 'Speed: ' + core_round({
-            'decimals': 2,
-            'number': stats['speed'],
-          }) + '/' + stats['speed-max'];
+        speed = core_round({
+          'decimals': 2,
+          'number': stats['speed'],
+        });
+        speed_max = stats['speed-max'];
     }
 
     core_ui_update({
@@ -413,7 +415,8 @@ function repo_logic(){
         'mark-max': mark_max,
         'position': position,
         'position-max': position_max,
-        'vehicle': vehicle,
+        'speed': speed,
+        'speed-max': speed_max,
       },
     });
 }

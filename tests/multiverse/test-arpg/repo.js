@@ -7,6 +7,9 @@ function new_game(){
     inventory = {};
     mana = 0;
     mana_max = 0;
+    talent_points = 0;
+    talent_points_max = 0;
+    talents = {};
 
     webgl_level_load({
       'character': {
@@ -137,8 +140,10 @@ function new_game(){
 }
 
 function repo_escape(){
-    if(webgl === 0
-      && !core_menu_open){
+    if(core_menu_open){
+        update_paused_ui();
+
+    }else if(webgl === 0){
         new_game();
     }
 }
@@ -155,10 +160,17 @@ function repo_init(){
         'inventory': {},
         'mana': 0,
         'mana_max': 0,
+        'talents': {},
+        'talent_points': 0,
+        'talent_points_max': 0,
       },
-      'info': '<button id=new-game type=button>Start ARPG Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new-game type=button>Start RPG Test</button><hr>Level: <span id=level></span><br>'
+        + 'Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana-max></span><br>'
-        + 'Speed: <span id=speed></span>',
+        + 'Speed: <span id=speed></span><br>'
+        + 'Equipment: <span id=equipment></span>'
+        + 'Inventory: <span id=inventory></span>'
+        + 'Talents (<span id=talent-points></span> points): <span id=talents></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -197,7 +209,45 @@ function repo_logic(){
         'life-max': character['life-max'],
         'mana': mana,
         'mana-max': mana_max,
-        'speed': character['speed'],
       },
+    });
+}
+
+function update_paused_ui(){
+    const character = webgl_characters[webgl_character_id];
+    if(!character){
+        return;
+    }
+
+    let equipment_ui = '<ul>';
+    for(const item in equipment){
+        equipment_ui += '<li>' + equipment[item]['id'];
+    }
+    equipment_ui += '</ul>';
+
+    let inventory_ui = '<ul>';
+    for(const item in inventory){
+        inventory_ui += '<li>' + inventory[item]['id'];
+    }
+    inventory_ui += '</ul>';
+
+    let talents_ui = '<ul>';
+    for(const item in talents){
+        talents_ui += '<li>' + talents[item]['id'];
+    }
+    talents_ui += '</ul>';
+    talent_points_max = character['level'];
+
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'equipment': equipment_ui,
+        'inventory': inventory_ui,
+        'level': character['level'],
+        'speed': character['speed'],
+        'talent-points': talent_points_max - talent_points,
+        'talents': talents_ui,
+      },
+      'todo': 'innerHTML',
     });
 }

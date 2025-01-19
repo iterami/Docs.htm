@@ -1,5 +1,15 @@
 'use strict';
 
+function build(args){
+    if(money < args['cost']){
+        return;
+    }
+
+    money -= args['cost'];
+
+    update_ui();
+}
+
 function new_game(){
     webgl_level_unload();
 

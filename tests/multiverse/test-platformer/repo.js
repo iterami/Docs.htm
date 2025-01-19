@@ -362,8 +362,10 @@ function new_game(){
 }
 
 function repo_escape(){
-    if(webgl === 0
-      && !core_menu_open){
+    if(core_menu_open){
+        update_paused_ui();
+
+    }else if(webgl === 0){
         new_game();
     }
 }
@@ -427,6 +429,18 @@ function repo_logic(){
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
+      },
+    });
+}
+
+function update_paused_ui(){
+    const character = webgl_characters[webgl_character_id];
+    if(!character){
+        return;
+    }
+    core_ui_update({
+      'class': true,
+      'ids': {
         'speed': character['speed'],
       },
     });
