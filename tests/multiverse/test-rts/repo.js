@@ -7,7 +7,16 @@ function new_game(){
     selected = '';
 
     webgl_level_load({
-      'character': 2,
+      'character': {
+        'camera-zoom': 50,
+        'controls': 'rts',
+        'level': -1,
+        'lock': {
+          'camera-rotate-x': 60,
+          'translate-y': 5,
+        },
+        'speed': 2,
+      },
       'json': {
         'camera-zoom': 50,
         'camera-zoom-max': 50,
@@ -65,16 +74,6 @@ function new_game(){
           },
         ],
       },
-    });
-    webgl_character_init({
-      'camera-zoom': 50,
-      'controls': 'rts',
-      'level': -1,
-      'lock': {
-        'camera-rotate-x': 60,
-        'translate-y': 5,
-      },
-      'speed': 2,
     });
     update_ui();
     webgl_character_spawn();

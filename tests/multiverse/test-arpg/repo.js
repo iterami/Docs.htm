@@ -9,7 +9,21 @@ function new_game(){
     mana_max = 0;
 
     webgl_level_load({
-      'character': 2,
+      'character': {
+        'camera-zoom': 25,
+        'collides': true,
+        'controls': 'rpg',
+        'gravity': 1,
+        'jump-height': .6,
+        'level': 0,
+        'lock': {
+          'camera-rotate-x': 60,
+          'camera-rotate-y': 0,
+        },
+        'lives': 1,
+        'speed': .5,
+        'randomize': true,
+      },
       'json': {
         'camera-zoom-min': 10,
         'spawn-rotate-x': 30,
@@ -118,20 +132,6 @@ function new_game(){
           },
         ],
       },
-    });
-    webgl_character_init({
-      'collides': true,
-      'controls': 'rpg',
-      'gravity': 1,
-      'jump-height': .6,
-      'level': 0,
-      'lock': {
-        'camera-rotate-x': 60,
-        'camera-rotate-y': 0,
-      },
-      'lives': 1,
-      'speed': .5,
-      'randomize': true,
     });
     webgl_character_spawn();
 }

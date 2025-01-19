@@ -17,7 +17,16 @@ function new_game(){
     items_max = 2;
 
     webgl_level_load({
-      'character': 2,
+      'character': {
+        'collide-range-y': 5,
+        'collides': true,
+        'controls': 'rpg',
+        'gravity': 1,
+        'level': 0,
+        'lives': 1,
+        'jump-height': 0,
+        'speed': .25,
+      },
       'json': {
         'camera-zoom': 0,
         'camera-zoom-max': 0,
@@ -236,16 +245,6 @@ function new_game(){
           },
         ],
       },
-    });
-    webgl_character_init({
-      'collide-range-y': 5,
-      'collides': true,
-      'controls': 'rpg',
-      'gravity': 1,
-      'level': 0,
-      'lives': 1,
-      'jump-height': 0,
-      'speed': .25,
     });
     update_ui();
     webgl_character_spawn();

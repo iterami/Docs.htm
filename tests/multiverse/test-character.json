@@ -4,6 +4,17 @@
   "spawn-translate-y": 3,
   "characters": [
     {
+      "id": "character",
+      "automove": true,
+      "camera-zoom": 25,
+      "change-rotate-y": 2,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": 1,
+      "level": 1,
+      "translate-z": -25
+    },
+    {
       "id": "test-character",
       "entities": [
         {
@@ -22,16 +33,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "character",
-      "automove": true,
-      "change-rotate-y": 2,
-      "collides": true,
-      "controls": "rpg",
-      "gravity": 1,
-      "level": 1,
-      "translate-z": -25
     }
   ],
   "prefabs": [

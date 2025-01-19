@@ -27,7 +27,10 @@ function new_game(){
     choices = 0;
 
     webgl_level_load({
-      'character': -1,
+      'character': {
+        'controls': '',
+        'level': -1,
+      },
       'json': {
         'camera-zoom-max': 0,
         'spawn-path-id': 'path-start',
@@ -95,10 +98,6 @@ function new_game(){
           },
         ],
       },
-    });
-    webgl_character_init({
-      'controls': '',
-      'level': -1,
     });
     update_ui();
     webgl_character_spawn();
