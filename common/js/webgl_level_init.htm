@@ -9,9 +9,9 @@
   <li>Calls <a href=webgl_init.htm>webgl_init()</a> if WebGL has not yet been set up.
   <li>Creates a level from a parsed <a href=../json.htm>JSON Level Format</a> file.
   <li>The "character" arg can have certain values:<ul>
-    <li>-1: create a new level -1 camera character.
-    <li>0: use existing character of at least level -1, or otherwise fail to load.
-    <li>1: set the first character in a level file to be the player character, or otherwise fail to load.
+    <li>-1: create a new level -1 camera character instead of a previously created character.
+    <li>0: use previously created character of at least level -1, or otherwise fail to load.
+    <li>1: use existing character in the level file with the same ID as "webgl_character_id", or set "webgl_character_id" to the first character in the file, or otherwise fail to load.
     <li>object: delete current "webgl_characters[webgl_character_id]" and create a new character with the object properties.
   </ul>
 </ul>
@@ -23,7 +23,7 @@
   <tr>
     <td>character
     <td>
-    <td>number
+    <td>number or object
   <tr>
     <td>json
     <td>{}
