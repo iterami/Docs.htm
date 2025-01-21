@@ -1,15 +1,15 @@
 'use strict';
 
 function collect(args){
-    audio_start('boop');
-    const item = entity_entities[args['id']];
-    item['attach-y'] = -999;
-    item['draw'] = false;
-
     webgl_stat_modify({
       'stat': args['type'],
       'target': webgl_characters['_me'],
       'value': args['value'],
+    });
+
+    audio_start('boop');
+    entity_remove({
+      'entities': [args['id']],
     });
 }
 

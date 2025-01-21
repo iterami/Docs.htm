@@ -1,12 +1,13 @@
 'use strict';
 
 function collect(args){
-    audio_start('boop');
-    const item = entity_entities[args['id']];
-    item['attach-y'] = -999;
-    item['draw'] = false;
-
     globalThis[args['type']]++;
+
+    audio_start('boop');
+    entity_remove({
+      'entities': [args['id']],
+    });
+
     update_ui();
 }
 

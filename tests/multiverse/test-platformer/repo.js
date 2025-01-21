@@ -1,13 +1,7 @@
 'use strict';
 
 function collect(args){
-    audio_start('boop');
-    const item = entity_entities[args['id']];
-    item['attach-y'] = -999;
-    item['draw'] = false;
-
     const value = args['value'] || 1;
-
     if(args['type'] === 'life'
       || args['type'] === 'lives'){
         webgl_stat_modify({
@@ -19,6 +13,11 @@ function collect(args){
     }else{
         globalThis[args['type']] += value;
     }
+
+    audio_start('boop');
+    entity_remove({
+      'entities': [args['id']],
+    });
 }
 
 function new_game(){
