@@ -12,41 +12,31 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
+      "randomize": true,
       "translate-z": -25
     },
     {
-      "id": "test-character",
-      "entities": [
-        {
-          "id": "base",
-          "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
-            0.2, 0.2, 0.2, 1
-          ],
-          "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
-          ]
-        }
-      ]
+      "id": "test-character"
     }
   ],
   "prefabs": [
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "body",
+        "prefix": "base",
         "all": {
-          "collision": false
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ]
         },
-        "character": "character",
-        "size-x": 5,
-        "size-y": 5,
-        "size-z": 5
+        "character": "test-character",
+        "size-x": -100,
+        "size-y": -100,
+        "size-z": -100,
+        "translate-y": 47
       }
     }
   ]
