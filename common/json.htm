@@ -368,13 +368,13 @@
           "rotate-z": 0,
 
           // Optional. ID of texture within core_images.
+          // If the texture is not animated, only include the image name.
+          // If the texture is animated, include movement in the texture ID separated by commas,
+          //   such as "gear.png,0.1,0.2", with the 1st number being X movement and the 2nd being Y movement.
           "texture": "gear.png",
 
           // Optional. Texture alignment string.
           "texture-align": "11010010",
-
-          // Optional. Enable animated texture handling for this entity.
-          "texture-animated": false,
 
           // Optional. How many times the texture will repeat.
           "texture-x": 1,

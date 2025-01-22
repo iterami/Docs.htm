@@ -158,7 +158,6 @@
           "rotate-z": 0,
           "texture": "gear.png",
           "texture-align": "11010010",
-          "texture-animated": false,
           "texture-x": 1,
           "texture-y": 1,
           "vertex-colors": [
