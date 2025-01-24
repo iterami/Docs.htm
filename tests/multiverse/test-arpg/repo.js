@@ -7,7 +7,7 @@ function add_npc(args){
 
     webgl_character_init({
       'collides': true,
-      'controls': 'rpg',
+      'controls': 'arpg',
       'gravity': 1,
       'level': 0,
       'life-max': 100,
@@ -33,21 +33,17 @@ function new_game(){
       'character': {
         'camera-zoom': 25,
         'collides': true,
-        'controls': 'rpg',
+        'controls': 'arpg',
         'gravity': 1,
         'jump-height': .6,
         'level': 0,
-        'lock': {
-          'camera-rotate-x': 60,
-          'camera-rotate-y': 0,
-        },
         'lives': 1,
         'speed': .5,
         'randomize': true,
       },
       'json': {
         'camera-zoom-min': 10,
-        'spawn-rotate-x': 30,
+        'spawn-rotate-x': 60,
         'spawn-translate-y': 1,
         'y-min': -100,
         'characters': [
@@ -161,11 +157,6 @@ function repo_init(){
       'mousebinds': {
         'contextmenu': {
           'preventDefault': true,
-        },
-        'mousemove': {
-          'todo': function(event){
-              webgl_controls_mouse(webgl_character_id);
-          },
         },
         'mouseup': {
           'todo': webgl_pick_entity,
