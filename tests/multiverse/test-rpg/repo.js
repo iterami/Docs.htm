@@ -1,5 +1,22 @@
 'use strict';
 
+function add_npc(args){
+    npcs[args['id']] = {
+      ...args,
+    };
+
+    webgl_character_init({
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'level': 0,
+      'life-max': 100,
+      'lives': 5,
+      'randomize': true,
+      ...args,
+    });
+}
+
 function new_game(){
     webgl_level_unload();
 
@@ -7,6 +24,7 @@ function new_game(){
     inventory = {};
     mana = 0;
     mana_max = 0;
+    npcs = {};
     talent_points = 0;
     talent_points_max = 0;
     talents = {};
@@ -27,7 +45,7 @@ function new_game(){
         'camera-zoom-min': 10,
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
-        'y-min': -200,
+        'y-min': -100,
         'characters': [
           {
             'id': 'rpg-test',
@@ -82,57 +100,24 @@ function new_game(){
               },
             ],
           },
-          {
-            'id': 'npc-friend',
-            'level': 1,
-            'translate-y': 3,
-            'translate-z': -60,
-            'entities': [
-              {
-                'id': 'npc-friend-body',
-                'billboard': true,
-                'collision': false,
-                'texture': 'grid.png',
-                'vertex-colors': [
-                  .4, .6, .4, 1,
-                ],
-                'vertices': [
-                  3, 3, 0,
-                  -3, 3, 0,
-                  -3, -3, 0,
-                  3, -3, 0,
-                ],
-              },
-            ],
-          },
-          {
-            'id': 'npc-enemy',
-            'level': 2,
-            'translate-x': 140,
-            'translate-y': 3,
-            'translate-z': -60,
-            'entities': [
-              {
-                'id': 'npc-enemy-body',
-                'billboard': true,
-                'collision': false,
-                'texture': 'grid.png',
-                'vertex-colors': [
-                  .6, .4, .4, 1,
-                ],
-                'vertices': [
-                  3, 3, 0,
-                  -3, 3, 0,
-                  -3, -3, 0,
-                  3, -3, 0,
-                ],
-              },
-            ],
-          },
         ],
       },
     });
     webgl_character_spawn();
+
+    add_npc({
+      'id': 'npc-friend',
+      'level': 1,
+      'translate-y': 3,
+      'translate-z': -60,
+    });
+    add_npc({
+      'id': 'npc-enemy',
+      'level': 2,
+      'translate-x': 140,
+      'translate-y': 3,
+      'translate-z': -60,
+    });
 }
 
 function repo_escape(){
@@ -156,6 +141,7 @@ function repo_init(){
         'inventory': {},
         'mana': 0,
         'mana_max': 0,
+        'npcs': {},
         'talents': {},
         'talent_points': 0,
         'talent_points_max': 0,

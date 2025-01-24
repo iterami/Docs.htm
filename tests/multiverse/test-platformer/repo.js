@@ -43,7 +43,7 @@ function new_game(){
         'pointerlock': true,
         'spawn-rotate-x': 30,
         'spawn-translate-y': 1,
-        'y-min': -200,
+        'y-min': -100,
         'paths': {
           'fireball-0': {
             'end': 'warp',

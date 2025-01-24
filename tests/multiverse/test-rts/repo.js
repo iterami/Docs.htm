@@ -1,20 +1,57 @@
 'use strict';
 
-function build(args){
-    if(money < args['cost']){
+function add_player(id){
+    players[id] = {
+      'building': {},
+      'money': 1000,
+    };
+    webgl_character_spawn(id);
+}
+
+function build(id){
+    const player = players[webgl_character_id];
+
+    if(player['building'][id]
+      || player['money'] < buildings[id]['cost']){
         return;
     }
 
-    money -= args['cost'];
-
-    update_ui();
+    document.getElementById('build-' + id).disabled = true;
+    player['money'] -= buildings[id]['cost'];
+    player['building'][id] = {
+      'time': 0,
+      'time-max': buildings[id]['time'],
+    };
 }
 
 function new_game(){
     webgl_level_unload();
 
-    money = 1000;
+    buildings = {
+      'test-building-0': {
+        'cost': 100,
+        'time': 100,
+      },
+      'test-building-1': {
+        'cost': 1000,
+        'time': 200,
+      },
+    };
+    players = {};
     selected = '';
+
+    let build_ui = '';
+    for(const building in buildings){
+        build_ui += '<button id=build-' + building + ' onclick="build(\'' + building + '\')" type=button>' + building
+          + ' (' + buildings[building]['cost']
+          + ', ' + buildings[building]['time'] + ')</button><br>';
+    }
+    core_ui_update({
+      'ids': {
+        'build': build_ui,
+      },
+      'todo': 'innerHTML',
+    });
 
     webgl_level_load({
       'character': {
@@ -85,8 +122,8 @@ function new_game(){
         ],
       },
     });
-    update_ui();
-    webgl_character_spawn();
+
+    add_player(webgl_character_id);
 }
 
 function repo_escape(){
@@ -104,7 +141,8 @@ function repo_init(){
         },
       },
       'globals': {
-        'money': 0,
+        'buildings': {},
+        'players': {},
         'selected': '',
       },
       'info': '<button id=new-game type=button>Start RTS Test</button><hr>Money: <span class=money></span><br>'
@@ -131,21 +169,35 @@ function repo_init(){
           },
         },
       },
-      'root': '../../common-webgl-standalone.htm',
       'reset': function(){
           webgl_character_spawn();
       },
+      'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Money: <span id=money></span><br>'
-        + 'Selected: <span id=selected></span>',
+        + 'Selected: <span id=selected></span><br>'
+        + '<div id=build></div>',
     });
 }
 
-function update_ui(){
+function repo_logic(){
+    for(const player in players){
+        for(const building in players[player]['building']){
+            const build = players[player]['building'][building];
+            build['time']++;
+            if(build['time'] >= build['time-max']){
+                delete players[player]['building'][building];
+                document.getElementById('build-' + building).disabled = false;
+            }
+        }
+
+        players[player]['money']++;
+    }
+
     core_ui_update({
       'class': true,
       'ids': {
-        'money': money,
+        'money': players[webgl_character_id]['money'],
         'selected': selected,
       },
     });

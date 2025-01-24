@@ -7,15 +7,10 @@ function collect(args){
     entity_remove({
       'entities': [args['id']],
     });
-
-    update_ui();
 }
 
 function new_game(){
     webgl_level_unload();
-
-    items = 0;
-    items_max = 2;
 
     webgl_level_load({
       'character': {
@@ -34,112 +29,38 @@ function new_game(){
         'fog-density': .001,
         'fog-state': true,
         'pointerlock': true,
-        'spawn-translate-y': 1,
-        'spawn-translate-z': 45,
+        'spawn-rotate-y': 180,
+        'spawn-translate-y': -1,
+        'spawn-translate-z': 35,
         'characters': [
           {
             'id': 'horror-test',
-            'entities': [
-              {
-                'id': 'item-0',
-                'attach-x': -45,
-                'attach-y': 3,
-                'attach-z': -45,
-                'billboard': true,
-                'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
-                  {
-                    'todo': 'collect',
-                    'type': 'function',
-                    'value': {
-                      'id': 'item-0',
-                      'type': 'items',
-                    },
-                  },
-                ],
-                'vertex-colors': [
-                  1, 1, 1, 1,
-                ],
-                'vertices': [
-                  1, 1, -0,
-                  -1, 1, -0,
-                  -1, -1, 0,
-                  1, -1, 0,
-                ],
-              },
-              {
-                'id': 'item-1',
-                'attach-x': 45,
-                'attach-y': 3,
-                'attach-z': -45,
-                'billboard': true,
-                'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
-                  {
-                    'todo': 'collect',
-                    'type': 'function',
-                    'value': {
-                      'id': 'item-1',
-                      'type': 'items',
-                    },
-                  },
-                ],
-                'vertex-colors': [
-                  1, 1, 1, 1,
-                ],
-                'vertices': [
-                  1, 1, -0,
-                  -1, 1, -0,
-                  -1, -1, 0,
-                  1, -1, 0,
-                ],
-              },
-            ],
           },
         ],
         'prefabs': [
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'base',
+              'prefix': 'hallway-0',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 20,
-                'texture-y': 20,
+              },
+              'back': {
+                'texture': 'door.png',
               },
               'character': 'horror-test',
-              'size-x': -100,
+              'front': {
+                'exclude': true,
+              },
+              'size-x': -10,
               'size-y': -10,
-              'size-z': -100,
-              'translate-y': 5,
-            },
-          },
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'pillar',
-              'all': {
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-                'texture': 'grid.png',
-              },
-              'bottom': {
-                'exclude': true,
-              },
-              'character': 'horror-test',
-              'size-x': 20,
-              'size-y': 10,
-              'size-z': 20,
+              'size-z': -80,
               'top': {
-                'exclude': true,
+                'texture-x': 2,
+                'texture-y': 16,
               },
               'translate-y': 5,
             },
@@ -147,107 +68,55 @@ function new_game(){
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'pillar-nw',
+              'prefix': 'hallway-1',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
                 'texture': 'grid.png',
               },
-              'bottom': {
-                'exclude': true,
-              },
               'character': 'horror-test',
-              'size-x': 20,
-              'size-y': 10,
-              'size-z': 20,
-              'top': {
+              'left': {
                 'exclude': true,
               },
-              'translate-x': -30,
+              'size-x': -50,
+              'size-y': -10,
+              'size-z': -10,
+              'top': {
+                'texture-x': 10,
+                'texture-y': 2,
+              },
+              'translate-x': 20,
               'translate-y': 5,
-              'translate-z': -30,
+              'translate-z': -45,
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'pillar-ne',
+              'prefix': 'room-1',
               'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
                 'texture': 'grid.png',
               },
-              'bottom': {
-                'exclude': true,
-              },
               'character': 'horror-test',
-              'size-x': 20,
-              'size-y': 10,
-              'size-z': 20,
+              'size-x': -40,
+              'size-y': -20,
+              'size-z': -40,
               'top': {
-                'exclude': true,
+                'texture-x': 8,
+                'texture-y': 8,
               },
-              'translate-x': 30,
-              'translate-y': 5,
-              'translate-z': -30,
-            },
-          },
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'pillar-sw',
-              'all': {
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-                'texture': 'grid.png',
-              },
-              'bottom': {
-                'exclude': true,
-              },
-              'character': 'horror-test',
-              'size-x': 20,
-              'size-y': 10,
-              'size-z': 20,
-              'top': {
-                'exclude': true,
-              },
-              'translate-x': -30,
-              'translate-y': 5,
-              'translate-z': 30,
-            },
-          },
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'pillar-se',
-              'all': {
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-                'texture': 'grid.png',
-              },
-              'bottom': {
-                'exclude': true,
-              },
-              'character': 'horror-test',
-              'size-x': 20,
-              'size-y': 10,
-              'size-z': 20,
-              'top': {
-                'exclude': true,
-              },
-              'translate-x': 30,
-              'translate-y': 5,
-              'translate-z': 30,
+              'translate-x': 65,
+              'translate-y': 10,
+              'translate-z': -45,
             },
           },
         ],
       },
     });
-    update_ui();
     webgl_character_spawn();
 }
 
@@ -265,11 +134,7 @@ function repo_init(){
           'onclick': new_game,
         },
       },
-      'globals': {
-        'items': 0,
-        'items_max': 0,
-      },
-      'info': '<button id=new-game type=button>Start Horror Test</button><hr>Items Collected: <span class=items></span>/<span class=items-max></span>',
+      'info': '<button id=new-game type=button>Start Horror Test</button>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -283,16 +148,5 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': '<span id=items></span>/<span id=items-max></span>',
-    });
-}
-
-function update_ui(){
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'items': items,
-        'items-max': items_max,
-      },
     });
 }
