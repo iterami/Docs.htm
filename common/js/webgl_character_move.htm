@@ -8,12 +8,17 @@
 <ul>
   <li>Handles moving a character within 3D space.
   <li>Maintains y position unless specifically changed.
+  <li>The "angle" arg is either true and uses the character's "rotate-y" to determine movement direction, or specifies the angle that should be used instead.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>angle
+    <td>true
+    <td>boolean true or number 0-360
   <tr>
     <td>id
     <td>webgl_character_id
