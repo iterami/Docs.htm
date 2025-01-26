@@ -145,6 +145,7 @@
               "limit": 1,
               "set": false,
               "stat": "life",
+              "target": false,
               "todo": "example-entity-1",
               "type": "entity",
               "value": -100

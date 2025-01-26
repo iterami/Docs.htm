@@ -26,7 +26,11 @@ function add_racer(id){
 }
 
 function lap_update(args){
-    const racer = racers[args['id']];
+    const vehicle = webgl_characters[args['id']];
+    if(!vehicle['vehicle-stats']){
+        return;
+    }
+    const racer = racers[vehicle['vehicle-stats']['character']];
 
     if(racer['mark'] !== args['mark'] - 1){
         return;
@@ -103,10 +107,11 @@ function new_game(){
                 'event-range': 0,
                 'event-todo': [
                   {
+                    'target': true,
                     'todo': 'lap_update',
                     'type': 'function',
                     'value': {
-                      'id': webgl_character_id,
+                      'id': '_target',
                       'mark': 4,
                     },
                   },
@@ -132,10 +137,11 @@ function new_game(){
                 'event-range': 0,
                 'event-todo': [
                   {
+                    'target': true,
                     'todo': 'lap_update',
                     'type': 'function',
                     'value': {
-                      'id': webgl_character_id,
+                      'id': '_target',
                       'mark': 1,
                     },
                   },
@@ -161,10 +167,11 @@ function new_game(){
                 'event-range': 0,
                 'event-todo': [
                   {
+                    'target': true,
                     'todo': 'lap_update',
                     'type': 'function',
                     'value': {
-                      'id': webgl_character_id,
+                      'id': '_target',
                       'mark': 2,
                     },
                   },
@@ -190,10 +197,11 @@ function new_game(){
                 'event-range': 0,
                 'event-todo': [
                   {
+                    'target': true,
                     'todo': 'lap_update',
                     'type': 'function',
                     'value': {
-                      'id': webgl_character_id,
+                      'id': '_target',
                       'mark': 3,
                     },
                   },
