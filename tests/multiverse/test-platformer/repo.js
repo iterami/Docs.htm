@@ -396,9 +396,6 @@ function repo_init(){
               webgl_controls_mouse(webgl_character_id);
           },
         },
-        'mouseup': {
-          'todo': webgl_pick_entity,
-        },
         'wheel': {
           'todo': function(event){
               webgl_controls_wheel(

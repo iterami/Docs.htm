@@ -1,20 +1,12 @@
 'use strict';
 
-function add_npc(args){
-    npcs[args['id']] = {
-      ...args,
-    };
+function item_drop(item){
+}
 
-    webgl_character_init({
-      'collides': true,
-      'controls': 'rpg',
-      'gravity': 1,
-      'level': 0,
-      'life-max': 100,
-      'lives': 5,
-      'randomize': true,
-      ...args,
-    });
+function item_pickup(item){
+}
+
+function item_toggle(item){
 }
 
 function new_game(){
@@ -25,6 +17,7 @@ function new_game(){
     mana = 0;
     mana_max = 0;
     npcs = {};
+    skill = '';
     talent_points = 0;
     talent_points_max = 0;
     talents = {};
@@ -105,19 +98,65 @@ function new_game(){
     });
     webgl_character_spawn();
 
-    add_npc({
+    npc_add({
       'id': 'npc-friend',
       'level': 1,
+      'team': 0,
       'translate-y': 3,
       'translate-z': -60,
     });
-    add_npc({
+    npc_add({
+      'drop-chance': .1,
+      'drops': [
+        {
+          'id': 'test-item',
+        },
+      ],
       'id': 'npc-enemy',
       'level': 2,
       'translate-x': 140,
       'translate-y': 3,
       'translate-z': -60,
     });
+}
+
+function npc_add(args){
+    npcs[args['id']] = {
+      'drop-chance': 0,
+      'drops': [],
+      'skill': '',
+      'team': 1,
+      ...args,
+    };
+
+    webgl_character_init({
+      'collides': true,
+      'controls': 'arpg',
+      'gravity': 1,
+      'level': 0,
+      'life-max': 100,
+      'lives': 1,
+      'randomize': true,
+      ...npcs[args['id']],
+    });
+}
+
+function npc_kill(id){
+    if(npcs[id]['team'] !== 0
+      && webgl_characters[id]['level'] >= webgl_characters[webgl_character_id]['level'] - 10){
+        webgl_stat_modify({
+          'stat': 'level-xp',
+        });
+    }
+
+    if(Math.random() < npcs[id]['drop-chance']){
+        item_drop(npcs[id]['drops'][core_random_integer({
+          'max': npcs[id]['drops'].length,
+        })]);
+    }
+}
+
+function npc_skill_use(id){
 }
 
 function repo_escape(){
@@ -142,14 +181,16 @@ function repo_init(){
         'mana': 0,
         'mana_max': 0,
         'npcs': {},
+        'skill': '',
         'talents': {},
         'talent_points': 0,
         'talent_points_max': 0,
       },
-      'info': '<button id=new-game type=button>Start RPG Test</button><hr>Level: <span id=level></span><br>'
+      'info': '<button id=new-game type=button>Start RPG Test</button><hr>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
         + 'Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana-max></span><br>'
         + 'Speed: <span id=speed></span><br>'
+        + 'Skill: <span id=skill></span><br>'
         + 'Equipment: <span id=equipment></span>'
         + 'Inventory: <span id=inventory></span>'
         + 'Talents (<span id=talent-points></span> points): <span id=talents></span>',
@@ -158,13 +199,13 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
+        'mousedown': {
+          'todo': webgl_pick_entity,
+        },
         'mousemove': {
           'todo': function(event){
               webgl_controls_mouse(webgl_character_id);
           },
-        },
-        'mouseup': {
-          'todo': webgl_pick_entity,
         },
         'wheel': {
           'todo': function(event){
@@ -178,7 +219,8 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
-        + 'Mana: <span id=mana></span>/<span id=mana-max></span>',
+        + 'Mana: <span id=mana></span>/<span id=mana-max></span><br>'
+        + 'Skill: <span id=skill></span>',
     });
 }
 
@@ -191,8 +233,15 @@ function repo_logic(){
         'life-max': character['life-max'],
         'mana': mana,
         'mana-max': mana_max,
+        'skill': skill,
       },
     });
+}
+
+function skill_use(){
+    if(skill.length === 0){
+        return;
+    }
 }
 
 function update_paused_ui(){
@@ -205,30 +254,28 @@ function update_paused_ui(){
     for(const item in equipment){
         equipment_ui += '<li>' + equipment[item]['id'];
     }
-    equipment_ui += '</ul>';
 
     let inventory_ui = '<ul>';
     for(const item in inventory){
         inventory_ui += '<li>' + inventory[item]['id'];
     }
-    inventory_ui += '</ul>';
 
     let talents_ui = '<ul>';
     for(const item in talents){
         talents_ui += '<li>' + talents[item]['id'];
     }
-    talents_ui += '</ul>';
     talent_points_max = character['level'];
 
     core_ui_update({
       'class': true,
       'ids': {
-        'equipment': equipment_ui,
-        'inventory': inventory_ui,
+        'equipment': equipment_ui + '</ul>',
+        'inventory': inventory_ui + '</ul>',
         'level': character['level'],
+        'level-xp': character['level-xp'],
         'speed': character['speed'],
         'talent-points': talent_points_max - talent_points,
-        'talents': talents_ui,
+        'talents': talents_ui + '</ul>',
       },
       'todo': 'innerHTML',
     });

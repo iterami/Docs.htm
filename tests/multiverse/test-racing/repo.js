@@ -1,30 +1,5 @@
 'use strict';
 
-function add_racer(id){
-    racers[id] = {
-      'lap': 1,
-      'mark': 0,
-      'position': 1,
-    };
-
-    position_max++;
-
-    if(!webgl_characters[id]){
-        webgl_character_init({
-          'camera-zoom': 25,
-          'collides': true,
-          'controls': 'rpg',
-          'gravity': 1,
-          'id': id,
-          'level': 0,
-          'life-max': 100,
-          'lives': 1,
-          'randomize': true,
-        });
-    }
-    webgl_character_spawn(id);
-}
-
 function lap_update(args){
     const vehicle = webgl_characters[args['id']];
     if(!vehicle['vehicle-stats']){
@@ -52,6 +27,8 @@ function new_game(){
 
     lap_max = 3;
     mark_max = 4;
+    position_max = 0;
+    racers = {};
 
     webgl_level_load({
       'character': {
@@ -221,47 +198,6 @@ function new_game(){
               },
             ],
           },
-          {
-            'id': 'vehicle',
-            'collide-range-xz': 5,
-            'collides': true,
-            'gravity': 1,
-            'level': 0,
-            'rotate-y': 90,
-            'translate-x': -25,
-            'translate-y': 5,
-            'translate-z': 375,
-            'turn-speed': 2,
-            'vehicle-stats': {
-              'speed-deceleration': -.02,
-              'speed-max': 3,
-            },
-            'entities': [
-              {
-                'id': 'vehicle-body',
-                'collision': false,
-                'event-todo': [
-                  {
-                    'todo': 'webgl_vehicle_toggle',
-                    'type': 'function',
-                    'value': {
-                      'vehicle': 'vehicle',
-                    },
-                  },
-                ],
-                'picking': true,
-                'vertex-colors': [
-                  0, 0, 1, 1,
-                ],
-                'vertices': [
-                  5, 0, -5,
-                  -5, 0, -5,
-                  -5, 0, 5,
-                  5, 0, 5,
-                ],
-              },
-            ],
-          },
         ],
         'prefabs': [
           {
@@ -397,8 +333,68 @@ function new_game(){
       },
     });
 
-    add_racer(webgl_character_id);
-    add_racer('test-racer');
+    racer_add(webgl_character_id);
+    racer_add('test-racer');
+}
+
+function racer_add(id){
+    racers[id] = {
+      'lap': 1,
+      'mark': 0,
+      'position': 1,
+    };
+
+    position_max++;
+
+    const vehicle = id + '-vehicle';
+    if(!webgl_characters[vehicle]){
+        webgl_character_init({
+          'collides': true,
+          'entities': [
+            {
+              'id': vehicle + '-body',
+              'collision': false,
+              'vertices': [
+                5, 0, -5,
+                -5, 0, -5,
+                -5, 0, 5,
+                5, 0, 5,
+              ],
+            },
+          ],
+          'gravity': 1,
+          'id': vehicle,
+          'level': 0,
+          'rotate-y': 90,
+          'translate-x': -25,
+          'translate-y': 5,
+          'translate-z': 250 + 25 * position_max,
+          'turn-speed': 2,
+          'vehicle-stats': {
+            //'lock': 2,
+            'speed-deceleration': -.02,
+            'speed-max': 3,
+          },
+        });
+    }
+    if(!webgl_characters[id]){
+        webgl_character_init({
+          'camera-zoom': 25,
+          'collides': true,
+          'controls': 'rpg',
+          'gravity': 1,
+          'id': id,
+          'level': 0,
+          'life-max': 100,
+          'lives': 1,
+          'randomize': true,
+        });
+    }
+    webgl_character_spawn(id);
+    webgl_vehicle_toggle({
+      'id': id,
+      'vehicle': vehicle,
+    });
 }
 
 function repo_escape(){
@@ -435,9 +431,6 @@ function repo_init(){
           'todo': function(event){
               webgl_controls_mouse(webgl_character_id);
           },
-        },
-        'mouseup': {
-          'todo': webgl_pick_entity,
         },
         'wheel': {
           'todo': function(event){

@@ -1,33 +1,24 @@
 'use strict';
 
-function add_player(id){
-    players[id] = {
-      'building': {},
-      'money': 1000,
-    };
-    webgl_character_spawn(id);
-}
-
 function build(id){
     const player = players[webgl_character_id];
 
     if(player['building'][id]
-      || player['money'] < buildings[id]['cost']){
+      || player['money'] < tech[id]['cost']){
         return;
     }
 
-    document.getElementById('build-' + id).disabled = true;
-    player['money'] -= buildings[id]['cost'];
+    player['money'] -= tech[id]['cost'];
     player['building'][id] = {
       'time': 0,
-      'time-max': buildings[id]['time'],
+      'time-max': tech[id]['time'],
     };
 }
 
 function new_game(){
     webgl_level_unload();
 
-    buildings = {
+    tech = {
       'test-building-0': {
         'cost': 100,
         'time': 100,
@@ -41,10 +32,10 @@ function new_game(){
     selected = '';
 
     let build_ui = '';
-    for(const building in buildings){
-        build_ui += '<button id=build-' + building + ' onclick="build(\'' + building + '\')" type=button>' + building
-          + ' (' + buildings[building]['cost']
-          + ', ' + buildings[building]['time'] + ')</button><br>';
+    for(const build in tech){
+        build_ui += '<button id=build-' + build + ' onclick="build(\'' + build + '\')" type=button>' + build
+          + ' (' + tech[build]['cost']
+          + ', ' + tech[build]['time'] + ')</button><br>';
     }
     core_ui_update({
       'ids': {
@@ -86,6 +77,26 @@ function new_game(){
                 ],
               },
               {
+                'id': 'building-test',
+                'attach-y': 1,
+                'event-todo': [
+                  {
+                    'set': true,
+                    'todo': 'selected',
+                    'type': 'variable',
+                    'value': 'building-test',
+                  },
+                ],
+                'picking': true,
+                'texture': 'grid.png',
+                'vertices': [
+                  10, 0, -10,
+                  -10, 0, -10,
+                  -10, 0, 10,
+                  10, 0, 10,
+                ],
+              },
+              {
                 'id': 'wall-n',
                 'attach-y': 10,
                 'attach-z': -50,
@@ -123,7 +134,15 @@ function new_game(){
       },
     });
 
-    add_player(webgl_character_id);
+    player_add(webgl_character_id);
+}
+
+function player_add(id){
+    players[id] = {
+      'building': {},
+      'money': 1000,
+    };
+    webgl_character_spawn(id);
 }
 
 function repo_escape(){
@@ -141,9 +160,9 @@ function repo_init(){
         },
       },
       'globals': {
-        'buildings': {},
         'players': {},
         'selected': '',
+        'tech': {},
       },
       'info': '<button id=new-game type=button>Start RTS Test</button><hr>Money: <span class=money></span><br>'
         + 'Selected: <span class=selected></span>',
@@ -152,13 +171,13 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
+        'mousedown': {
+          'todo': select,
+        },
         'mousemove': {
           'todo': function(event){
               webgl_controls_mouse(webgl_character_id);
           },
-        },
-        'mouseup': {
-          'todo': webgl_pick_entity,
         },
         'wheel': {
           'todo': function(event){
@@ -187,7 +206,6 @@ function repo_logic(){
             build['time']++;
             if(build['time'] >= build['time-max']){
                 delete players[player]['building'][building];
-                document.getElementById('build-' + building).disabled = false;
             }
         }
 
@@ -201,4 +219,11 @@ function repo_logic(){
         'selected': selected,
       },
     });
+}
+
+function select(){
+    if(core_mouse['down-0']
+      && !webgl_pick_entity()){
+        selected = '';
+    }
 }

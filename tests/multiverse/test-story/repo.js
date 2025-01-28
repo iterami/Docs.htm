@@ -146,7 +146,7 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
-        'mouseup': {
+        'mousedown': {
           'todo': webgl_pick_entity,
         },
       },

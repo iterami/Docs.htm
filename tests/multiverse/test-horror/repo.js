@@ -1,14 +1,5 @@
 'use strict';
 
-function collect(args){
-    globalThis[args['type']]++;
-
-    audio_start('boop');
-    entity_remove({
-      'entities': [args['id']],
-    });
-}
-
 function new_game(){
     webgl_level_unload();
 
