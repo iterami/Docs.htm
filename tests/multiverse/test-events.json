@@ -36,9 +36,6 @@
           "picking": true,
           "rotate-x": 90,
           "texture": "grid.png",
-          "vertex-colors": [
-            0, 1, 1, 1
-          ],
           "vertices": [
             5, 0, -10,
             -5, 0, -10,
@@ -59,9 +56,6 @@
           "picking": true,
           "rotate-x": 90,
           "texture": "grid.png",
-          "vertex-colors": [
-            1, 0, 1, 1
-          ],
           "vertices": [
             5, 0, -10,
             -5, 0, -10,
@@ -104,9 +98,6 @@
           "picking": true,
           "rotate-z": 90,
           "texture": "grid.png",
-          "vertex-colors": [
-            1, 0, 0, 1
-          ],
           "vertices": [
             10, 0, -5,
             -10, 0, -5,
@@ -126,9 +117,6 @@
           "picking": true,
           "rotate-x": 90,
           "texture": "grid.png",
-          "vertex-colors": [
-            0, 1, 0, 1
-          ],
           "vertices": [
             5, 0, -10,
             -5, 0, -10,
@@ -175,9 +163,6 @@
           "picking": true,
           "rotate-z": 270,
           "texture": "grid.png",
-          "vertex-colors": [
-            0, 0, 1, 1
-          ],
           "vertices": [
             10, 0, -5,
             -10, 0, -5,

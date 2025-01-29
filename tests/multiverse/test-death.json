@@ -33,9 +33,6 @@
             }
           ],
           "texture": "lavaleaf.png",
-          "vertex-colors": [
-            0.3, 0, 0, 1
-          ],
           "vertices": [
             50, 0, -50,
             -50, 0, -50,

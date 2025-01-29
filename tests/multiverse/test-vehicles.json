@@ -143,9 +143,6 @@
             }
           ],
           "picking": true,
-          "vertex-colors": [
-            1, 0, 0, 1
-          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -284,9 +281,6 @@
             }
           ],
           "picking": true,
-          "vertex-colors": [
-            0, 0, 1, 1
-          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -324,9 +318,6 @@
             }
           ],
           "picking": true,
-          "vertex-colors": [
-            0, 1, 0, 1
-          ],
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
