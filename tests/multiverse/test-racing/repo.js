@@ -20,6 +20,23 @@ function lap_update(args){
             racer['lap'] = 1;
         }
     }
+
+    const positions = [];
+    for(const id in racers){
+        positions.push({
+          'progress': racers[id]['lap'] * mark_max + racers[id]['mark'],
+          'racer': id,
+        });
+    }
+    core_sort_property({
+      'array': positions,
+      'clone': false,
+      'property': 'progress',
+      'reverse': true,
+    });
+    for(const position in positions){
+        racers[positions[position]['racer']]['position'] = Number(position) + 1;
+    }
 }
 
 function new_game(){
@@ -37,7 +54,6 @@ function new_game(){
         'controls': 'rpg',
         'gravity': 1,
         'level': 0,
-        'life-max': 100,
         'lives': 1,
         'randomize': true,
       },
@@ -385,7 +401,6 @@ function racer_add(id){
           'gravity': 1,
           'id': id,
           'level': 0,
-          'life-max': 100,
           'lives': 1,
           'randomize': true,
         });
@@ -417,8 +432,7 @@ function repo_init(){
         'position_max': 0,
         'racers': {},
       },
-      'info': '<button id=new-game type=button>Start Racing Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
-        + 'Lap: <span class=lap></span>/<span class=lap-max></span><br>'
+      'info': '<button id=new-game type=button>Start Racing Test</button><hr>Lap: <span class=lap></span>/<span class=lap-max></span><br>'
         + 'Mark: <span class=mark></span>/<span class=mark-max></span><br>'
         + 'Position: <span class=position></span>/<span class=position-max></span><br>'
         + 'Speed: <span class=speed></span>/<span class=speed-max></span>',
@@ -443,8 +457,7 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
-        + 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
+      'ui': 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
         + 'Mark: <span id=mark></span>/<span id=mark-max></span><br>'
         + 'Position: <span id=position></span>/<span id=position-max></span><br>'
         + 'Speed: <span id=speed></span>/<span id=speed-max></span>',
@@ -470,8 +483,6 @@ function repo_logic(){
       'ids': {
         'lap': racer['lap'],
         'lap-max': lap_max,
-        'life': character['life'],
-        'life-max': character['life-max'],
         'mark': racer['mark'],
         'mark-max': mark_max,
         'position': racer['position'],

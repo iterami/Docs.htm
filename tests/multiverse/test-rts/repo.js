@@ -171,13 +171,13 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousedown': {
-          'todo': select,
-        },
         'mousemove': {
           'todo': function(event){
               webgl_controls_mouse(webgl_character_id);
           },
+        },
+        'mouseup': {
+          'todo': select,
         },
         'wheel': {
           'todo': function(event){

@@ -199,13 +199,13 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousedown': {
-          'todo': webgl_pick_entity,
-        },
         'mousemove': {
           'todo': function(event){
               webgl_controls_mouse(webgl_character_id);
           },
+        },
+        'mouseup': {
+          'todo': webgl_pick_entity,
         },
         'wheel': {
           'todo': function(event){
