@@ -36,13 +36,19 @@ function repo_init(){
 }
 
 function update_keys(event){
-    if(event){
-        if(!core_keys[event.code]){
-            core_keys[event.code] = {
-              'preventDefault': false,
-              'state': true,
-            };
-        }
+    if(event
+      && !event.ctrlKey
+      && !event.altKey
+      && !event.metaKey
+      && event.code !== 'ControlLeft'
+      && event.code !== 'ControlRight'
+      && event.code !== 'AltLeft'
+      && event.code !== 'AltRight'
+      && !core_keys[event.code]){
+        core_keys[event.code] = {
+          'preventDefault': false,
+          'state': true,
+        };
     }
 
     const sorted_keys = core_sort_strings({
