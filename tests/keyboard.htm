@@ -10,7 +10,6 @@
     <tr class=header>
       <td>Key
       <td>preventDefault
-      <td>solo
       <td>state
   <tbody id=keys>
 </table>
@@ -19,19 +18,6 @@
 <script>
 function repo_init(){
     core_repo_init({
-      'keybinds': {
-        'all': {
-          'todo': function(event){
-              if(!core_keys[event.code]){
-                  core_keys[event.code] = {
-                    'preventDefault': false,
-                    'solo': false,
-                    'state': true,
-                  };
-              }
-          },
-        },
-      },
       'title': 'Docs.htm',
       'ui-elements': [
         'keys',
@@ -49,7 +35,16 @@ function repo_init(){
     );
 }
 
-function update_keys(){
+function update_keys(event){
+    if(event){
+        if(!core_keys[event.code]){
+            core_keys[event.code] = {
+              'preventDefault': false,
+              'state': true,
+            };
+        }
+    }
+
     const sorted_keys = core_sort_strings({
       'array': Object.keys(core_keys),
     });
@@ -57,7 +52,6 @@ function update_keys(){
     for(const key in sorted_keys){
         keys_html += '<tr><td>' + sorted_keys[key]
           + '<td>' + core_keys[sorted_keys[key]]['preventDefault']
-          + '<td>' + core_keys[sorted_keys[key]]['solo']
           + '<td>' + core_keys[sorted_keys[key]]['state'];
     }
     core_elements['keys'].innerHTML = keys_html;
