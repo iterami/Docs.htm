@@ -9,7 +9,6 @@
   <thead>
     <tr class=header>
       <td>Key
-      <td>loop
       <td>preventDefault
       <td>solo
       <td>state
@@ -25,7 +24,6 @@ function repo_init(){
           'todo': function(event){
               if(!core_keys[event.code]){
                   core_keys[event.code] = {
-                    'loop': false,
                     'preventDefault': false,
                     'solo': false,
                     'state': true,
@@ -58,7 +56,6 @@ function update_keys(){
     let keys_html = '';
     for(const key in sorted_keys){
         keys_html += '<tr><td>' + sorted_keys[key]
-          + '<td>' + core_keys[sorted_keys[key]]['loop']
           + '<td>' + core_keys[sorted_keys[key]]['preventDefault']
           + '<td>' + core_keys[sorted_keys[key]]['solo']
           + '<td>' + core_keys[sorted_keys[key]]['state'];
