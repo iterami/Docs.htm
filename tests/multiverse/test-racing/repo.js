@@ -40,10 +40,14 @@ function lap_update(args){
 }
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new race? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
     lap_max = 3;
-    mark_max = 4;
+    mark_max = 5;
     position_max = 0;
     racers = {};
 
@@ -94,7 +98,7 @@ function new_game(){
                 ],
               },
               {
-                'id': 'mark-0',
+                'id': 'mark-goal',
                 'attach-y': -.99,
                 'attach-z': 375,
                 'event-range': 0,
@@ -105,7 +109,7 @@ function new_game(){
                     'type': 'function',
                     'value': {
                       'id': '_target',
-                      'mark': 4,
+                      'mark': 5,
                     },
                   },
                 ],
@@ -154,9 +158,8 @@ function new_game(){
               },
               {
                 'id': 'mark-2',
-                'attach-x': 210,
+                'attach-x': -33,
                 'attach-y': -.99,
-                'attach-z': -240,
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -184,9 +187,9 @@ function new_game(){
               },
               {
                 'id': 'mark-3',
-                'attach-x': -170,
+                'attach-x': 210,
                 'attach-y': -.99,
-                'attach-z': -150,
+                'attach-z': -240,
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -196,6 +199,36 @@ function new_game(){
                     'value': {
                       'id': '_target',
                       'mark': 3,
+                    },
+                  },
+                ],
+                'texture': 'grid.png',
+                'texture-x': 20,
+                'texture-y': 5,
+                'vertex-colors': [
+                  0, 0, 1, 1,
+                ],
+                'vertices': [
+                  40, 0, -10,
+                  -40, 0, -10,
+                  -40, 0, 10,
+                  40, 0, 10,
+                ],
+              },
+              {
+                'id': 'mark-4',
+                'attach-x': -170,
+                'attach-y': -.99,
+                'attach-z': -240,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'target': true,
+                    'todo': 'lap_update',
+                    'type': 'function',
+                    'value': {
+                      'id': '_target',
+                      'mark': 4,
                     },
                   },
                 ],

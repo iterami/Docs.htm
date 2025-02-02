@@ -10,17 +10,44 @@ function item_toggle(item){
 }
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new adventure? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
-    equipment = {};
-    inventory = {};
+    equipment = {
+      'head': void 0,
+      'neck': void 0,
+      'body': void 0,
+      'wrist-left': void 0,
+      'wrist-right': void 0,
+      'hand-left': void 0,
+      'holding-left': void 0,
+      'hand-right': void 0,
+      'holding-right': void 0,
+      'rings': [],
+      'legs': void 0,
+      'foot-left': void 0,
+      'foot-right': void 0,
+    };
+    inventory = [
+      {
+        'id': 'Test Item',
+      },
+    ];
     mana = 0;
     mana_max = 0;
     npcs = {};
     skill = '';
     talent_points = 0;
     talent_points_max = 0;
-    talents = {};
+    talents = {
+      'life': {
+        'stat': 'life',
+        'value': 1,
+      },
+    };
 
     webgl_level_load({
       'character': {
@@ -177,7 +204,7 @@ function repo_init(){
       },
       'globals': {
         'equipment': {},
-        'inventory': {},
+        'inventory': [],
         'mana': 0,
         'mana_max': 0,
         'npcs': {},
@@ -188,12 +215,8 @@ function repo_init(){
       },
       'info': '<button id=new-game type=button>Start RPG Test</button><hr>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
         + 'Life: <span class=life></span>/<span class=life-max></span><br>'
-        + 'Mana: <span class=mana></span>/<span class=mana-max></span><br>'
-        + 'Speed: <span id=speed></span><br>'
-        + 'Skill: <span id=skill></span><br>'
-        + 'Equipment: <span id=equipment></span>'
-        + 'Inventory: <span id=inventory></span>'
-        + 'Talents (<span id=talent-points></span> points): <span id=talents></span>',
+        + 'Mana: <span class=mana></span>/<span class=mana-max></span>'
+        + '<div id=rpg-tabs></div><div id=rpg-tabcontent></div>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -218,9 +241,35 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
-        + 'Mana: <span id=mana></span>/<span id=mana-max></span><br>'
-        + 'Skill: <span id=skill></span>',
+      'ui': 'Skill: <span id=skill></span><br>'
+        + 'Life: <span id=life></span>/<span id=life-max></span><br>'
+        + 'Mana: <span id=mana></span>/<span id=mana-max></span>',
+    });
+    core_tab_create({
+      'content': 'Jump Height: <span id=jump-height></span><br>'
+        + 'Speed: <span id=speed></span>',
+      'group': 'rpg',
+      'id': 'stats',
+      'label': 'Stats',
+    });
+    core_tab_create({
+      'content': '<div id=equipment></div>'
+        + 'Inventory: <span id=inventory></span>',
+      'group': 'rpg',
+      'id': 'inventory',
+      'label': 'Inventory',
+    });
+    core_tab_create({
+      'content': 'Selected Skill: <span id=skill></span>',
+      'group': 'rpg',
+      'id': 'skills',
+      'label': 'Skills',
+    });
+    core_tab_create({
+      'content': 'Talents (<span id=talent-points></span> points): <span id=talents></span>',
+      'group': 'rpg',
+      'id': 'talents',
+      'label': 'Talents',
     });
 }
 
@@ -244,6 +293,16 @@ function skill_use(){
     }
 }
 
+function talent_modify(talent){
+    if(talent_points <= 0){
+        return;
+    }
+
+    talent_points--;
+    webgl_stat_modify(talents[talent]);
+    update_paused_ui();
+}
+
 function update_paused_ui(){
     const character = webgl_characters[webgl_character_id];
     if(!character){
@@ -251,8 +310,11 @@ function update_paused_ui(){
     }
 
     let equipment_ui = '<ul>';
-    for(const item in equipment){
-        equipment_ui += '<li>' + equipment[item]['id'];
+    for(const slot in equipment){
+        const item = equipment[slot] !== void 0
+          ? equipment[slot]
+          : '';
+        equipment_ui += '<li>' + slot + ': ' + item;
     }
 
     let inventory_ui = '<ul>';
@@ -261,8 +323,8 @@ function update_paused_ui(){
     }
 
     let talents_ui = '<ul>';
-    for(const item in talents){
-        talents_ui += '<li>' + talents[item]['id'];
+    for(const talent in talents){
+        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(' + talent + ')" type=button>+</button>';
     }
     talent_points_max = character['level'];
 
@@ -271,6 +333,7 @@ function update_paused_ui(){
       'ids': {
         'equipment': equipment_ui + '</ul>',
         'inventory': inventory_ui + '</ul>',
+        'jump-height': character['jump-height'],
         'level': character['level'],
         'level-xp': character['level-xp'],
         'speed': character['speed'],

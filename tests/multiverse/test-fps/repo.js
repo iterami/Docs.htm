@@ -22,6 +22,10 @@ function collect(args){
 }
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new match? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
     weapons = {

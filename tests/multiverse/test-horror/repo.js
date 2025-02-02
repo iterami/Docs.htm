@@ -1,6 +1,10 @@
 'use strict';
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new experience? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
     webgl_level_load({

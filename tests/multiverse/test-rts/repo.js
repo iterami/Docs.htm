@@ -16,33 +16,53 @@ function build(id){
 }
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new base? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
+    players = {};
     tech = {
-      'test-building-0': {
+      'builder': {
+        'builds': [
+          'factory',
+          'turret',
+        ],
         'cost': 100,
         'time': 100,
+        'type': 'unit',
       },
-      'test-building-1': {
+      'factory': {
+        'builds': ['builder'],
         'cost': 1000,
         'time': 200,
+        'type': 'building',
+      },
+      'turret': {
+        'builds': [],
+        'cost': 250,
+        'time': 150,
+        'type': 'building',
       },
     };
-    players = {};
-    selected = '';
 
-    let build_ui = '';
-    for(const build in tech){
-        build_ui += '<button id=build-' + build + ' onclick="build(\'' + build + '\')" type=button>' + build
-          + ' (' + tech[build]['cost']
-          + ', ' + tech[build]['time'] + ')</button><br>';
+    for(const id in tech){
+        core_html({
+          'parent': core_elements['build'],
+          'properties': {
+            'id': 'build-' + id,
+            'onclick': function(){
+                build(id);
+            },
+            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
+            'type': 'button',
+          },
+          'store': 'build-' + id,
+          'type': 'button',
+        });
     }
-    core_ui_update({
-      'ids': {
-        'build': build_ui,
-      },
-      'todo': 'innerHTML',
-    });
+    select();
 
     webgl_level_load({
       'character': {
@@ -57,7 +77,7 @@ function new_game(){
       },
       'json': {
         'camera-zoom': 50,
-        'camera-zoom-max': 50,
+        'camera-zoom-max': 100,
         'camera-zoom-min': 20,
         'characters': [
           {
@@ -77,14 +97,39 @@ function new_game(){
                 ],
               },
               {
-                'id': 'building-test',
+                'id': 'fake-builder',
+                'attach-x': 25,
                 'attach-y': 1,
                 'event-todo': [
                   {
-                    'set': true,
-                    'todo': 'selected',
-                    'type': 'variable',
-                    'value': 'building-test',
+                    'todo': 'select',
+                    'type': 'function',
+                    'value': {
+                      'id': 'fake-builder',
+                      'type': 'builder',
+                    },
+                  },
+                ],
+                'picking': true,
+                'texture': 'grid.png',
+                'vertices': [
+                  4, 0, -4,
+                  -4, 0, -4,
+                  -4, 0, 4,
+                  4, 0, 4,
+                ],
+              },
+              {
+                'id': 'fake-factory',
+                'attach-y': 1,
+                'event-todo': [
+                  {
+                    'todo': 'select',
+                    'type': 'function',
+                    'value': {
+                      'id': 'fake-factory',
+                      'type': 'factory',
+                    },
                   },
                 ],
                 'picking': true,
@@ -177,7 +222,14 @@ function repo_init(){
           },
         },
         'mouseup': {
-          'todo': select,
+          'todo': function(event){
+              if(!core_menu_open
+                && event.button === 0
+                && event.target.id === 'canvas'
+                && !webgl_pick_entity()){
+                  select();
+              }
+          },
         },
         'wheel': {
           'todo': function(event){
@@ -194,8 +246,11 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Money: <span id=money></span><br>'
-        + 'Selected: <span id=selected></span><br>'
+        + 'Selected: <span id=selected></span>'
         + '<div id=build></div>',
+      'ui-elements': [
+        'build',
+      ],
     });
 }
 
@@ -221,9 +276,22 @@ function repo_logic(){
     });
 }
 
-function select(){
-    if(core_mouse['down-0']
-      && !webgl_pick_entity()){
+function select(args){
+    if(args === void 0){
         selected = '';
+        for(const id in tech){
+            core_elements['build-' + id].style.display = 'none';
+        }
+        return;
+    }
+
+    selected = args['id'];
+
+    const builds = tech[args['type']]['builds'];
+    for(const id in tech){
+        const element = core_elements['build-' + id];
+        element.style.display = builds.includes(id)
+          ? 'inline-block'
+          : 'none';
     }
 }

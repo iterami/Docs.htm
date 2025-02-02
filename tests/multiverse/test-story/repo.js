@@ -22,6 +22,10 @@ function choose(choice){
 }
 
 function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new story? Progress will be lost.')){
+        return;
+    }
     webgl_level_unload();
 
     choices = 0;
