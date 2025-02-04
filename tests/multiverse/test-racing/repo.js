@@ -54,11 +54,8 @@ function new_game(){
     webgl_level_load({
       'character': {
         'camera-zoom': 25,
-        'collides': true,
         'controls': 'rpg',
-        'gravity': 1,
         'level': 0,
-        'lives': 1,
         'randomize': true,
       },
       'json': {
@@ -395,6 +392,17 @@ function racer_add(id){
 
     position_max++;
 
+    if(!webgl_characters[id]){
+        webgl_character_init({
+          'automove': true,
+          'camera-zoom': 25,
+          'controls': 'rpg',
+          'id': id,
+          'level': 0,
+          'randomize': true,
+        });
+    }
+
     const vehicle = id + '-vehicle';
     if(!webgl_characters[vehicle]){
         webgl_character_init({
@@ -420,29 +428,13 @@ function racer_add(id){
           'translate-z': 250 + 25 * position_max,
           'turn-speed': 2,
           'vehicle-stats': {
+            'character': id,
             //'lock': 2,
             'speed-deceleration': -.02,
             'speed-max': 3,
           },
         });
     }
-    if(!webgl_characters[id]){
-        webgl_character_init({
-          'camera-zoom': 25,
-          'collides': true,
-          'controls': 'rpg',
-          'gravity': 1,
-          'id': id,
-          'level': 0,
-          'lives': 1,
-          'randomize': true,
-        });
-    }
-    webgl_character_spawn(id);
-    webgl_vehicle_toggle({
-      'id': id,
-      'vehicle': vehicle,
-    });
 }
 
 function repo_escape(){
