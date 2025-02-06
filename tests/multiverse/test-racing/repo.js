@@ -96,7 +96,7 @@ function new_game(){
               },
               {
                 'id': 'mark-goal',
-                'attach-y': -.99,
+                'attach-y': -.9,
                 'attach-z': 375,
                 'event-range': 0,
                 'event-todo': [
@@ -111,22 +111,22 @@ function new_game(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 5,
+                'texture-x': 10,
                 'texture-y': 50,
                 'vertex-colors': [
                   0, 1, 0, 1,
                 ],
                 'vertices': [
-                  10, 0, -125,
-                  -10, 0, -125,
-                  -10, 0, 125,
-                  10, 0, 125,
+                  20, 0, -125,
+                  -20, 0, -125,
+                  -20, 0, 125,
+                  20, 0, 125,
                 ],
               },
               {
                 'id': 'mark-1',
                 'attach-x': 210,
-                'attach-y': -.99,
+                'attach-y': -.9,
                 'attach-z': 240,
                 'event-range': 0,
                 'event-todo': [
@@ -156,7 +156,7 @@ function new_game(){
               {
                 'id': 'mark-2',
                 'attach-x': -33,
-                'attach-y': -.99,
+                'attach-y': -.9,
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -185,7 +185,7 @@ function new_game(){
               {
                 'id': 'mark-3',
                 'attach-x': 210,
-                'attach-y': -.99,
+                'attach-y': -.9,
                 'attach-z': -240,
                 'event-range': 0,
                 'event-todo': [
@@ -215,7 +215,7 @@ function new_game(){
               {
                 'id': 'mark-4',
                 'attach-x': -170,
-                'attach-y': -.99,
+                'attach-y': -.9,
                 'attach-z': -240,
                 'event-range': 0,
                 'event-todo': [
@@ -430,6 +430,7 @@ function racer_add(id){
           'vehicle-stats': {
             'character': id,
             //'lock': 2,
+            'speed-acceleration': .04,
             'speed-deceleration': -.02,
             'speed-max': 3,
           },
@@ -467,7 +468,7 @@ function repo_init(){
           'preventDefault': true,
         },
         'mousemove': {
-          'todo': function(event){
+          'todo': function(){
               webgl_controls_mouse(webgl_character_id);
           },
         },

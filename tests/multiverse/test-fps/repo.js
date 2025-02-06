@@ -268,12 +268,12 @@ function repo_init(){
           'preventDefault': true,
         },
         'mousedown': {
-          'todo': function(event){
+          'todo': function(){
               weapon_fire(webgl_character_id);
           },
         },
         'mousemove': {
-          'todo': function(event){
+          'todo': function(){
               webgl_controls_mouse(webgl_character_id);
           },
         },
