@@ -20,32 +20,41 @@
             -50, 0, 50,
             50, 0, 50
           ]
+        },
+        {
+          "id": "pick-stress",
+          "attach-y": 2,
+          "attach-z": -25,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_prefab_repeat",
+              "type": "function",
+              "value": {
+                "characters": true,
+                "count": 500,
+                "properties": {
+                  "character": "stress-entities"
+                },
+                "type": "prefabs_webgl_tree_2d"
+              }
+            },
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(entity_id_count)"
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
         }
       ]
-    }
-  ],
-  "prefabs": [
-    {
-      "type": "webgl_prefab_repeat",
-      "properties": {
-        "type": "prefabs_webgl_tree_2d",
-        "count": 2000,
-        "prefix": "entity",
-        "properties": {
-          "billboard": false,
-          "character": "stress-entities",
-          "height": 20,
-          "height-range": 20,
-          "width-base": 6,
-          "width-leaf": 20
-        },
-        "x-max": 1000,
-        "x-min": -1000,
-        "y-max": -50,
-        "y-min": -50,
-        "z-max": 0,
-        "z-min": -2000
-      }
     }
   ]
 }

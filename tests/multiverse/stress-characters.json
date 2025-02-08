@@ -20,31 +20,37 @@
             -50, 0, 50,
             50, 0, 50
           ]
+        },
+        {
+          "id": "pick-stress",
+          "attach-y": 2,
+          "attach-z": -25,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_prefab_repeat",
+              "type": "function",
+              "value": {
+                "characters": true,
+                "count": 1000
+              }
+            },
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(webgl_character_count)"
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
         }
       ]
-    }
-  ],
-  "prefabs": [
-    {
-      "type": "webgl_prefab_repeat",
-      "properties": {
-        "characters": {},
-        "count": 10000,
-        "prefix": "character",
-        "properties": {
-          "billboard": false,
-          "height": 20,
-          "height-range": 20,
-          "width-base": 6,
-          "width-leaf": 20
-        },
-        "x-max": 1000,
-        "x-min": -1000,
-        "y-max": -50,
-        "y-min": -50,
-        "z-max": 0,
-        "z-min": -2000
-      }
     }
   ]
 }
