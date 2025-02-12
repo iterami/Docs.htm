@@ -4,6 +4,28 @@
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "paths": {
+    "path-distance": {
+      "end": "loop",
+      "points": [
+        {
+          "distance": 5,
+          "translate-x": -15,
+          "translate-y": 5,
+          "translate-z": -20
+        },
+        {
+          "distance": 5,
+          "translate-x": 15,
+          "translate-y": 5
+        },
+        {
+          "distance": 5,
+          "translate-x": 15,
+          "translate-y": 15
+        }
+      ],
+      "speed": 0.5
+    },
     "path-event": {
       "end": "loop",
       "points": [
@@ -16,7 +38,7 @@
           ],
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -20
+          "translate-z": -25
         },
         {
           "event-todo": [
@@ -47,7 +69,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -25
+          "translate-z": -30
         },
         {
           "translate-x": 15,
@@ -66,7 +88,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -30
+          "translate-z": -35
         },
         {
           "translate-x": 15,
@@ -88,7 +110,7 @@
           "rotate-z": 90,
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -35
+          "translate-z": -40
         },
         {
           "rotate-x": 0,
@@ -114,7 +136,7 @@
           "speed": 2,
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -40
+          "translate-z": -45
         },
         {
           "translate-x": 15,
@@ -134,7 +156,7 @@
         {
           "translate-x": -15,
           "translate-y": 5,
-          "translate-z": -45
+          "translate-z": -50
         },
         {
           "translate-x": 15,
@@ -263,6 +285,25 @@
           ]
         }
       ]
+    },
+    {
+      "id": "path-distance-user",
+      "entities": [
+        {
+          "id": "path-distance-user-body",
+          "billboard": true,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ],
+      "level": 1,
+      "path-id": "path-distance"
     },
     {
       "id": "path-event-user",
@@ -536,6 +577,14 @@
         "size-x": 1,
         "size-y": 1,
         "size-z": 5
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-paths",
+        "path": "path-distance",
+        "prefix": "lines-distance"
       }
     },
     {

@@ -30,6 +30,7 @@
       "end": "loop",
       "points": [
         {
+          "distance": 0,
           "event-limit": false,
           "event-todo": [],
           "rotate-x": 0,
