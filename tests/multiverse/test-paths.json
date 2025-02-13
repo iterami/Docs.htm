@@ -583,6 +583,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[1, 0, 0, 1]],
         "path": "path-distance",
         "prefix": "lines-distance"
       }
@@ -591,6 +592,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0, 1, 0, 1]],
         "path": "path-event",
         "prefix": "lines-event"
       }
@@ -599,6 +601,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0, 0, 1, 1]],
         "path": "path-exit",
         "prefix": "lines-exit"
       }
@@ -607,6 +610,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[1, 1, 0, 1]],
         "path": "path-reverse",
         "prefix": "lines-reverse"
       }
@@ -615,6 +619,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[1, 0, 1, 1]],
         "path": "path-rotate",
         "prefix": "lines-rotate"
       }
@@ -623,6 +628,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0, 1, 1, 1]],
         "path": "path-speed",
         "prefix": "lines-speed"
       }
@@ -639,6 +645,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[1, 0.2, 0.2, 1]],
         "path": "path-xy",
         "prefix": "lines-xy"
       }
@@ -647,6 +654,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0.2, 1, 0.2, 1]],
         "path": "path-xyz",
         "prefix": "lines-xyz"
       }
@@ -655,6 +663,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0.2, 0.2, 1, 1]],
         "path": "path-xz",
         "prefix": "lines-xz"
       }
@@ -663,6 +672,7 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-paths",
+        "colors": [[0.2, 0.2, 0.2, 1]],
         "path": "path-yz",
         "prefix": "lines-yz"
       }

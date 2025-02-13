@@ -70,6 +70,11 @@
       "type": "prefabs_webgl_lines_path",
       "properties": {
         "character": "test-lines-path",
+        "colors": [
+          [0, 1, 0, 1],
+          [1, 0, 0, 1],
+          [0, 0, 1, 1]
+        ],
         "path": "test-path",
         "prefix": "lines"
       }

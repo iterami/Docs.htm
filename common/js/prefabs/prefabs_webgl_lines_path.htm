@@ -8,6 +8,8 @@
 <ul>
   <li>Creates a line loop connecting all points in the specified path.
   <li>Args will be used in entity creation after being cleaned up by <a href=../webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
+  <li>The "colors" arg defaults to [[1, 1, 1, 1]] if it remains empty.
+  <li>Each color in the "colors" arg will be used sequentially and loop if there are more points than colors.
 </ul>
 <table>
   <tr class=header>
@@ -15,13 +17,13 @@
     <td>Default
     <td>Type
   <tr>
-    <td>color
-    <td>[1, 1, 1, 1]
-    <td>array of numbers
-  <tr>
     <td>character
     <td>webgl_character_id
     <td>string ID
+  <tr>
+    <td>colors
+    <td>[]
+    <td>array of array of numbers 0-1
   <tr>
     <td>groups
     <td>[]
