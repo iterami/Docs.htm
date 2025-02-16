@@ -103,8 +103,8 @@ function new_game(){
         ],
       },
     });
-    update_ui();
     webgl_character_spawn();
+    update_ui();
 }
 
 function repo_escape(){

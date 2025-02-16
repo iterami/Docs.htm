@@ -37,6 +37,7 @@ function lap_update(args){
     for(const position in positions){
         racers[positions[position]['racer']]['position'] = Number(position) + 1;
     }
+    update_ui();
 }
 
 function new_game(){
@@ -386,6 +387,7 @@ function new_game(){
 
     racer_add(webgl_character_id);
     racer_add('test-racer');
+    update_ui();
 }
 
 function racer_add(id){
@@ -507,7 +509,20 @@ function repo_logic(){
         });
         speed_max = stats['speed-max'];
     }
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'speed': speed,
+        'speed-max': speed_max,
+      },
+    });
+}
 
+function repo_stat_modify(){
+    update_ui();
+}
+
+function update_ui(){
     const racer = racers[webgl_character_id];
     core_ui_update({
       'class': true,
@@ -518,8 +533,6 @@ function repo_logic(){
         'mark-max': mark_max,
         'position': racer['position'],
         'position-max': position_max,
-        'speed': speed,
-        'speed-max': speed_max,
       },
     });
 }

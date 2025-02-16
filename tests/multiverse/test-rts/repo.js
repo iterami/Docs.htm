@@ -13,6 +13,7 @@ function build(id){
       'time': 0,
       'time-max': tech[id]['time'],
     };
+    update_ui();
 }
 
 function new_game(){
@@ -62,7 +63,6 @@ function new_game(){
           'type': 'button',
         });
     }
-    select();
 
     webgl_level_load({
       'character': {
@@ -180,6 +180,8 @@ function new_game(){
     });
 
     player_add(webgl_character_id);
+    select();
+    update_ui();
 }
 
 function player_add(id){
@@ -263,17 +265,11 @@ function repo_logic(){
                 delete players[player]['building'][building];
             }
         }
-
-        players[player]['money']++;
     }
+}
 
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'money': players[webgl_character_id]['money'],
-        'selected': selected,
-      },
-    });
+function repo_stat_modify(){
+    update_ui();
 }
 
 function select(args){
@@ -282,16 +278,27 @@ function select(args){
         for(const id in tech){
             core_elements['build-' + id].style.display = 'none';
         }
-        return;
-    }
 
-    selected = args['id'];
+    }else{
+        selected = args['id'];
 
-    const builds = tech[args['type']]['builds'];
-    for(const id in tech){
-        const element = core_elements['build-' + id];
-        element.style.display = builds.includes(id)
-          ? 'inline-block'
-          : 'none';
+        const builds = tech[args['type']]['builds'];
+        for(const id in tech){
+            const element = core_elements['build-' + id];
+            element.style.display = builds.includes(id)
+              ? 'inline-block'
+              : 'none';
+        }
     }
+    update_ui();
+}
+
+function update_ui(){
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'money': players[webgl_character_id]['money'],
+        'selected': selected,
+      },
+    });
 }

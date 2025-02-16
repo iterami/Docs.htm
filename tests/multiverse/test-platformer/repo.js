@@ -18,6 +18,7 @@ function collect(args){
     entity_remove({
       'entities': [args['id']],
     });
+    update_ui();
 }
 
 function new_game(){
@@ -362,13 +363,12 @@ function new_game(){
       },
     });
     webgl_character_spawn();
+    update_ui();
 }
 
 function repo_escape(){
-    if(core_menu_open){
-        update_paused_ui();
-
-    }else if(webgl === 0){
+    if(webgl === 0
+      && !core_menu_open){
         new_game();
     }
 }
@@ -418,7 +418,11 @@ function repo_init(){
     });
 }
 
-function repo_logic(){
+function repo_stat_modify(){
+    update_ui();
+}
+
+function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
@@ -429,18 +433,6 @@ function repo_logic(){
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
-      },
-    });
-}
-
-function update_paused_ui(){
-    const character = webgl_characters[webgl_character_id];
-    if(!character){
-        return;
-    }
-    core_ui_update({
-      'class': true,
-      'ids': {
         'speed': character['speed'],
       },
     });

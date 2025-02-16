@@ -145,6 +145,8 @@ function new_game(){
       'translate-y': 3,
       'translate-z': -60,
     });
+
+    update_ui();
 }
 
 function npc_add(args){
@@ -187,10 +189,8 @@ function npc_skill_use(id){
 }
 
 function repo_escape(){
-    if(core_menu_open){
-        update_paused_ui();
-
-    }else if(webgl === 0){
+    if(webgl === 0
+      && !core_menu_open){
         new_game();
     }
 }
@@ -287,6 +287,10 @@ function repo_logic(){
     });
 }
 
+function repo_stat_modify(){
+    update_ui();
+}
+
 function skill_use(){
     if(skill.length === 0){
         return;
@@ -300,10 +304,9 @@ function talent_modify(talent){
 
     talent_points--;
     webgl_stat_modify(talents[talent]);
-    update_paused_ui();
 }
 
-function update_paused_ui(){
+function update_ui(){
     const character = webgl_characters[webgl_character_id];
     if(!character){
         return;
