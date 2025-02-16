@@ -82,6 +82,11 @@ function new_game(){
                     'stat': 'change-translate-y',
                     'value': 3,
                   },
+                  {
+                    'set': true,
+                    'stat': 'change-translate-z',
+                    'value': 3,
+                  },
                 ],
                 'texture': 'grid.png',
                 'vertex-colors': [
