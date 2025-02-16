@@ -4,7 +4,7 @@
   "spawn-translate-y": 3,
   "spawn-translate-z": 10,
   "paths": {
-    "test-path": {
+    "path-loop": {
       "end": "loop",
       "points": [
         {
@@ -21,8 +21,34 @@
         {
           "translate-x": -10
         }
-      ],
-      "speed": 0.5
+      ]
+    },
+    "path-point": {
+      "points": [
+        {
+          "translate-y": 15,
+          "translate-z": -25
+        }
+      ]
+    },
+    "path-reverse": {
+      "end": "reverse",
+      "points": [
+        {
+          "translate-x": -10,
+          "translate-y": 25,
+          "translate-z": -20
+        },
+        {
+          "translate-x": 10
+        },
+        {
+          "translate-y": 5
+        },
+        {
+          "translate-x": -10
+        }
+      ]
     }
   },
   "characters": [
@@ -45,24 +71,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "path-user",
-      "entities": [
-        {
-          "id": "path-user-body",
-          "billboard": true,
-          "collision": false,
-          "texture": "grid.png",
-          "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
-          ]
-        }
-      ],
-      "path-id": "test-path"
     }
   ],
   "prefabs": [
@@ -71,12 +79,31 @@
       "properties": {
         "character": "test-lines-path",
         "colors": [
-          [0, 1, 0, 1],
           [1, 0, 0, 1],
           [0, 0, 1, 1]
         ],
-        "path": "test-path",
-        "prefix": "lines"
+        "path": "path-loop",
+        "prefix": "loop"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-lines-path",
+        "path": "path-point",
+        "prefix": "point"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_path",
+      "properties": {
+        "character": "test-lines-path",
+        "colors": [
+          [1, 0, 0, 1],
+          [0, 0, 1, 1]
+        ],
+        "path": "path-reverse",
+        "prefix": "reverse"
       }
     }
   ]
