@@ -24,6 +24,32 @@
           ]
         },
         {
+          "id": "delete",
+          "attach-y": -5,
+          "attach-z": -25,
+          "event-range": 0,
+          "event-todo": [
+            {
+              "todo": "entity_remove",
+              "type": "function",
+              "value": {
+                "entities": [
+                  "delete"
+                ]
+              }
+            }
+          ],
+          "picking": true,
+          "rotate-x": 90,
+          "texture": "lavaleaf.png",
+          "vertices": [
+            50, 0, -5,
+            -50, 0, -5,
+            -50, 0, 5,
+            50, 0, 5
+          ]
+        },
+        {
           "id": "levelup-1000",
           "attach-x": -25,
           "attach-z": -50,
