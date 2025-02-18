@@ -6,9 +6,13 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_character_init(args)
 <ul>
-  <li>Sets up the character and camera.
+  <li>Creates a character, its entities, and its vehicle.
+  <li>Args will be passed directly to the character object to allow for custom properties.
+  <li>Some args are deleted before becoming character properties:<ul>
+    <li>The "entities" arg contains the entities that should be created after this character is created.
+    <li>The "randomize" arg will create a randomized body for the newly created character.
+  </ul>
   <li>If the "character" property in <a href=webgl.htm#vehicle-properties>"vehicle-stats"</a> is not false, then the specified character will enter the vehicle automatically.
-  <li>The "randomize" arg will create a randomized body for the newly created character.
 </ul>
 <table>
   <tr class=header>

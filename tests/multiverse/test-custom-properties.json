@@ -1,0 +1,88 @@
+{
+  "title": "Custom Properties Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "spawn-translate-z": 20,
+  "characters": [
+    {
+      "id": "test-custom-properties",
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "entity-custom",
+          "attach-x": -10,
+          "attach-y": 5,
+          "billboard": true,
+          "collision": false,
+          "custom-property": "set",
+          "event-todo": [
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log('entity-custom:',entity_entities['entity-custom']['custom-property']);console.log('character-custom:',webgl_characters['character-custom']['custom-property'])"
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        },
+        {
+          "id": "entity-not-custom",
+          "attach-x": 10,
+          "attach-y": 5,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log('entity-not-custom:',entity_entities['entity-not-custom']['custom-property']);console.log('character-not-custom:',webgl_characters['character-not-custom']['custom-property'])"
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "character-custom",
+      "custom-property": "set",
+      "randomize": true,
+      "translate-x": 10,
+      "translate-y": 5,
+      "translate-z": -20
+    },
+    {
+      "id": "character-not-custom",
+      "randomize": true,
+      "translate-x": -10,
+      "translate-y": 5,
+      "translate-z": -20
+    }
+  ]
+}
