@@ -21,7 +21,6 @@ function new_game(){
       && !globalThis.confirm('Start a new base? Progress will be lost.')){
         return;
     }
-    webgl_level_unload();
     webgl_character_id = '_me';
 
     tech = {

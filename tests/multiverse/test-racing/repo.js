@@ -49,7 +49,6 @@ function new_game(){
       && !globalThis.confirm('Start a new race? Progress will be lost.')){
         return;
     }
-    webgl_level_unload();
     webgl_character_id = '_me';
 
     lap_max = 3;

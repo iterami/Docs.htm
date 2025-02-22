@@ -26,7 +26,6 @@ function new_game(){
       && !globalThis.confirm('Start a new story? Progress will be lost.')){
         return;
     }
-    webgl_level_unload();
     webgl_character_id = '_me';
 
     choices = 0;

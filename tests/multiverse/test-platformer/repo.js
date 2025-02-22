@@ -4,7 +4,7 @@ function collect(args){
     const value = args['value'] || 1;
     webgl_stat_modify({
       'stat': args['type'],
-      'target': webgl_characters['_me'],
+      'target': webgl_characters[webgl_character_id],
       'value': value,
     });
 
@@ -19,7 +19,6 @@ function new_game(){
       && !globalThis.confirm('Start a new game? Progress will be lost.')){
         return;
     }
-    webgl_level_unload();
     webgl_character_id = '_me';
 
     webgl_level_load({
