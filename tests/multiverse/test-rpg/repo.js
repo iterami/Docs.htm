@@ -30,6 +30,7 @@ function new_game(){
         return;
     }
     webgl_level_unload();
+    webgl_character_id = '_me';
 
     webgl_level_load({
       'character': {

@@ -50,6 +50,7 @@ function new_game(){
         return;
     }
     webgl_level_unload();
+    webgl_character_id = '_me';
 
     lap_max = 3;
     mark_max = 5;
