@@ -2,23 +2,16 @@
 
 function collect(args){
     const value = args['value'] || 1;
-    if(args['type'] === 'life'
-      || args['type'] === 'lives'){
-        webgl_stat_modify({
-          'stat': args['type'],
-          'target': webgl_characters['_me'],
-          'value': value,
-        });
-
-    }else{
-        globalThis[args['type']] += value;
-    }
+    webgl_stat_modify({
+      'stat': args['type'],
+      'target': webgl_characters['_me'],
+      'value': value,
+    });
 
     audio_start('boop');
     entity_remove({
       'entities': [args['id']],
     });
-    update_ui();
 }
 
 function new_game(){
@@ -28,12 +21,9 @@ function new_game(){
     }
     webgl_level_unload();
 
-    coins = 0;
-    keys = 0;
-    keys_max = 1;
-
     webgl_level_load({
       'character': {
+        ...stats(),
         'camera-zoom': 25,
         'collides': true,
         'controls': 'rpg',
@@ -362,7 +352,6 @@ function new_game(){
         ],
       },
     });
-    webgl_character_spawn();
     update_ui();
 }
 
@@ -380,16 +369,11 @@ function repo_init(){
           'onclick': new_game,
         },
       },
-      'globals': {
-        'coins': 0,
-        'keys': 0,
-        'keys_max': 0,
-      },
       'info': '<button id=new-game type=button>Start Platformer Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span class=coins></span><br>'
-        + 'Keys: <span class=keys></span>/<span class=keys-max></span>',
+        + 'Keys: <span class=keys></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -414,7 +398,7 @@ function repo_init(){
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
         + 'Coins: <span id=coins></span><br>'
-        + 'Keys: <span id=keys></span>/<span id=keys-max></span>',
+        + 'Keys: <span id=keys></span>',
     });
 }
 
@@ -422,14 +406,20 @@ function repo_stat_modify(){
     update_ui();
 }
 
+function stats(){
+    return {
+      'coins': 0,
+      'keys': 0,
+    };
+}
+
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
       'ids': {
-        'coins': coins,
-        'keys': keys,
-        'keys-max': keys_max,
+        'coins': character['coins'],
+        'keys': character['keys'],
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],

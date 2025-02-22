@@ -5,26 +5,30 @@ function lap_update(args){
     if(!vehicle['vehicle-stats']){
         return;
     }
-    const racer = racers[vehicle['vehicle-stats']['character']];
+    const character = webgl_characters[vehicle['vehicle-stats']['character']];
 
-    if(racer['mark'] !== args['mark'] - 1){
+    if(character['mark'] !== args['mark'] - 1){
         return;
     }
 
-    racer['mark']++;
-    if(racer['mark'] >= mark_max){
+    character['mark']++;
+    if(character['mark'] >= mark_max){
         audio_start('boop');
-        racer['mark'] = 0;
-        racer['lap']++;
-        if(racer['lap'] > lap_max){
-            racer['lap'] = 1;
+        character['mark'] = 0;
+        character['lap']++;
+        if(character['lap'] > lap_max){
+            character['lap'] = 1;
         }
     }
 
     const positions = [];
-    for(const id in racers){
+    for(const id in webgl_characters){
+        const racer = webgl_characters[id];
+        if(!racer['mark']){
+            continue;
+        }
         positions.push({
-          'progress': racers[id]['lap'] * mark_max + racers[id]['mark'],
+          'progress': racer['lap'] * mark_max + racer['mark'],
           'racer': id,
         });
     }
@@ -35,7 +39,7 @@ function lap_update(args){
       'reverse': true,
     });
     for(const position in positions){
-        racers[positions[position]['racer']]['position'] = Number(position) + 1;
+        webgl_characters[positions[position]['racer']]['position'] = Number(position) + 1;
     }
     update_ui();
 }
@@ -50,10 +54,10 @@ function new_game(){
     lap_max = 3;
     mark_max = 5;
     position_max = 0;
-    racers = {};
 
     webgl_level_load({
       'character': {
+        ...stats(),
         'camera-zoom': 25,
         'controls': 'rpg',
         'level': 0,
@@ -391,16 +395,11 @@ function new_game(){
 }
 
 function racer_add(id){
-    racers[id] = {
-      'lap': 1,
-      'mark': 0,
-      'position': 1,
-    };
-
     position_max++;
 
     if(!webgl_characters[id]){
         webgl_character_init({
+          ...stats(),
           'automove': true,
           'camera-zoom': 25,
           'controls': 'rpg',
@@ -463,7 +462,6 @@ function repo_init(){
         'lap_max': 0,
         'mark_max': 0,
         'position_max': 0,
-        'racers': {},
       },
       'info': '<button id=new-game type=button>Start Racing Test</button><hr>Lap: <span class=lap></span>/<span class=lap-max></span><br>'
         + 'Mark: <span class=mark></span>/<span class=mark-max></span><br>'
@@ -522,16 +520,24 @@ function repo_stat_modify(){
     update_ui();
 }
 
+function stats(){
+    return {
+      'lap': 1,
+      'mark': 0,
+      'position': 1,
+    };
+}
+
 function update_ui(){
-    const racer = racers[webgl_character_id];
+    const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
       'ids': {
-        'lap': racer['lap'],
+        'lap': character['lap'],
         'lap-max': lap_max,
-        'mark': racer['mark'],
+        'mark': character['mark'],
         'mark-max': mark_max,
-        'position': racer['position'],
+        'position': character['position'],
         'position-max': position_max,
       },
     });

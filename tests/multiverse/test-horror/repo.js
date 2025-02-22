@@ -112,7 +112,6 @@ function new_game(){
         ],
       },
     });
-    webgl_character_spawn();
 }
 
 function repo_escape(){

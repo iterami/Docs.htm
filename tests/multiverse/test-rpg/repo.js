@@ -9,6 +9,21 @@ function item_pickup(item){
 function item_toggle(item){
 }
 
+function kill(id){
+    if(webgl_characters[id]['team'] !== 0
+      && webgl_characters[id]['level'] >= webgl_characters[webgl_character_id]['level'] - 10){
+        webgl_stat_modify({
+          'stat': 'level-xp',
+        });
+    }
+
+    if(Math.random() < webgl_characters[id]['drop-chance']){
+        item_drop(webgl_characters[id]['drops'][core_random_integer({
+          'max': webgl_characters[id]['drops'].length,
+        })]);
+    }
+}
+
 function new_game(){
     if(webgl !== 0
       && !globalThis.confirm('Start a new adventure? Progress will be lost.')){
@@ -16,41 +31,9 @@ function new_game(){
     }
     webgl_level_unload();
 
-    equipment = {
-      'head': void 0,
-      'neck': void 0,
-      'body': void 0,
-      'wrist-left': void 0,
-      'wrist-right': void 0,
-      'hand-left': void 0,
-      'holding-left': void 0,
-      'hand-right': void 0,
-      'holding-right': void 0,
-      'rings': [],
-      'legs': void 0,
-      'foot-left': void 0,
-      'foot-right': void 0,
-    };
-    inventory = [
-      {
-        'id': 'Test Item',
-      },
-    ];
-    mana = 0;
-    mana_max = 0;
-    npcs = {};
-    skill = '';
-    talent_points = 0;
-    talent_points_max = 0;
-    talents = {
-      'life': {
-        'stat': 'life',
-        'value': 1,
-      },
-    };
-
     webgl_level_load({
       'character': {
+        ...stats(),
         'camera-zoom': 25,
         'collides': true,
         'controls': 'rpg',
@@ -123,69 +106,38 @@ function new_game(){
         ],
       },
     });
-    webgl_character_spawn();
 
-    npc_add({
+    webgl_character_init({
+      ...stats(),
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
       'id': 'npc-friend',
       'level': 1,
+      'life-max': 100,
+      'lives': 1,
+      'randomize': true,
       'team': 0,
       'translate-y': 3,
       'translate-z': -60,
     });
-    npc_add({
-      'drop-chance': .1,
-      'drops': [
-        {
-          'id': 'test-item',
-        },
-      ],
+    webgl_character_init({
+      ...stats(),
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
       'id': 'npc-enemy',
-      'level': 2,
+      'level': 1,
+      'life-max': 100,
+      'lives': 1,
+      'randomize': true,
+      'team': 1,
       'translate-x': 140,
       'translate-y': 3,
       'translate-z': -60,
     });
 
     update_ui();
-}
-
-function npc_add(args){
-    npcs[args['id']] = {
-      'drop-chance': 0,
-      'drops': [],
-      'skill': '',
-      'team': 1,
-      ...args,
-    };
-
-    webgl_character_init({
-      'collides': true,
-      'controls': 'arpg',
-      'gravity': 1,
-      'level': 0,
-      'life-max': 100,
-      'lives': 1,
-      'randomize': true,
-      ...npcs[args['id']],
-    });
-}
-
-function npc_kill(id){
-    if(npcs[id]['team'] !== 0
-      && webgl_characters[id]['level'] >= webgl_characters[webgl_character_id]['level'] - 10){
-        webgl_stat_modify({
-          'stat': 'level-xp',
-        });
-    }
-
-    if(Math.random() < npcs[id]['drop-chance']){
-        item_drop(npcs[id]['drops'][core_random_integer({
-          'max': npcs[id]['drops'].length,
-        })]);
-    }
-}
-
-function npc_skill_use(id){
 }
 
 function repo_escape(){
@@ -203,15 +155,12 @@ function repo_init(){
         },
       },
       'globals': {
-        'equipment': {},
-        'inventory': [],
-        'mana': 0,
-        'mana_max': 0,
-        'npcs': {},
-        'skill': '',
-        'talents': {},
-        'talent_points': 0,
-        'talent_points_max': 0,
+        'talents': {
+          'life': {
+            'stat': 'life',
+            'value': 1,
+          },
+        },
       },
       'info': '<button id=new-game type=button>Start RPG Test</button><hr>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
         + 'Life: <span class=life></span>/<span class=life-max></span><br>'
@@ -265,25 +214,16 @@ function repo_init(){
       'id': 'skills',
       'label': 'Skills',
     });
+
+    let talents_ui = '<ul>';
+    for(const talent in talents){
+        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(' + talent + ')" type=button>+</button>';
+    }
     core_tab_create({
-      'content': 'Talents (<span id=talent-points></span> points): <span id=talents></span>',
+      'content': 'Talents (<span id=talent-points></span> points): ' + talents_ui + '</ul>',
       'group': 'rpg',
       'id': 'talents',
       'label': 'Talents',
-    });
-}
-
-function repo_logic(){
-    const character = webgl_characters[webgl_character_id];
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'life': character['life'],
-        'life-max': character['life-max'],
-        'mana': mana,
-        'mana-max': mana_max,
-        'skill': skill,
-      },
     });
 }
 
@@ -291,18 +231,53 @@ function repo_stat_modify(){
     update_ui();
 }
 
-function skill_use(){
-    if(skill.length === 0){
+function skill_use(id){
+    if(webgl_characters[id]['skill'].length === 0){
         return;
     }
 }
 
+function stats(){
+    return {
+      'drop-chance': 0,
+      'drops': [],
+      'equipment': {
+        'head': void 0,
+        'neck': void 0,
+        'body': void 0,
+        'wrist-left': void 0,
+        'wrist-right': void 0,
+        'hand-left': void 0,
+        'holding-left': void 0,
+        'hand-right': void 0,
+        'holding-right': void 0,
+        'rings': [],
+        'legs': void 0,
+        'foot-left': void 0,
+        'foot-right': void 0,
+      },
+      'inventory': [
+        {
+          'id': 'Test Item',
+        },
+      ],
+      'mana': 0,
+      'mana-max': 0,
+      'npcs': {},
+      'skill': '',
+      'talent-points': 0,
+      'talent-points-max': 0,
+    };
+}
+
 function talent_modify(talent){
-    if(talent_points <= 0){
+    const character = webgl_characters[webgl_character_id];
+    if(!character
+      || character['talent-points'] <= 0){
         return;
     }
 
-    talent_points--;
+    character['talent-points']--;
     webgl_stat_modify(talents[talent]);
 }
 
@@ -313,23 +288,19 @@ function update_ui(){
     }
 
     let equipment_ui = '<ul>';
-    for(const slot in equipment){
-        const item = equipment[slot] !== void 0
-          ? equipment[slot]
+    for(const slot in character['equipment']){
+        const item = character['equipment'][slot] !== void 0
+          ? character['equipment'][slot]
           : '';
         equipment_ui += '<li>' + slot + ': ' + item;
     }
 
     let inventory_ui = '<ul>';
-    for(const item in inventory){
-        inventory_ui += '<li>' + inventory[item]['id'];
+    for(const item in character['inventory']){
+        inventory_ui += '<li>' + character['inventory'][item]['id'];
     }
 
-    let talents_ui = '<ul>';
-    for(const talent in talents){
-        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(' + talent + ')" type=button>+</button>';
-    }
-    talent_points_max = character['level'];
+    character['talent-points-max'] = character['level'];
 
     core_ui_update({
       'class': true,
@@ -339,9 +310,13 @@ function update_ui(){
         'jump-height': character['jump-height'],
         'level': character['level'],
         'level-xp': character['level-xp'],
+        'life': character['life'],
+        'life-max': character['life-max'],
+        'mana': character['mana'],
+        'mana-max': character['mana-max'],
+        'skill': character['skill'],
         'speed': character['speed'],
-        'talent-points': talent_points_max - talent_points,
-        'talents': talents_ui + '</ul>',
+        'talent-points': character['talent-points-max'] - character['talent-points'],
       },
       'todo': 'innerHTML',
     });

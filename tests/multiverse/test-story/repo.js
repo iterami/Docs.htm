@@ -103,7 +103,6 @@ function new_game(){
         ],
       },
     });
-    webgl_character_spawn();
     update_ui();
 }
 

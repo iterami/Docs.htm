@@ -3,7 +3,7 @@
 function collect(args){
     if(args['type'] === 'weapon'){
         weapon_equip({
-          'player': webgl_character_id,
+          'id': webgl_character_id,
           'weapon': args['value'],
         });
 
@@ -19,7 +19,6 @@ function collect(args){
     entity_remove({
       'entities': [args['id']],
     });
-    update_ui();
 }
 
 function new_game(){
@@ -34,10 +33,10 @@ function new_game(){
         'ammo-max': 10,
       },
     };
-    players = {};
 
     webgl_level_load({
       'character': {
+        ...stats(),
         'collide-range-y': 5,
         'collides': true,
         'controls': 'rpg',
@@ -211,32 +210,19 @@ function new_game(){
       },
     });
 
-    player_add(webgl_character_id);
-    player_add('test-player');
+    webgl_character_init({
+      ...stats(),
+      'collide-range-y': 5,
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'id': 'test-enemy',
+      'level': 0,
+      'life-max': 100,
+      'lives': 5,
+      'randomize': true,
+    });
     update_ui();
-}
-
-function player_add(id){
-    players[id] = {
-      'ammo': 0,
-      'ammo-max': 0,
-      'weapon': '',
-    };
-
-    if(!webgl_characters[id]){
-        webgl_character_init({
-          'collide-range-y': 5,
-          'collides': true,
-          'controls': 'rpg',
-          'gravity': 1,
-          'id': id,
-          'level': 0,
-          'life-max': 100,
-          'lives': 5,
-          'randomize': true,
-        });
-    }
-    webgl_character_spawn(id);
 }
 
 function repo_escape(){
@@ -254,7 +240,6 @@ function repo_init(){
         },
       },
       'globals': {
-        'players': {},
         'weapons': {},
       },
       'info': '<button id=new-game type=button>Start FPS Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
@@ -287,41 +272,55 @@ function repo_init(){
     });
 }
 
+function repo_stat_modify(){
+    update_ui();
+}
+
+function stats(){
+    return {
+      'ammo': 0,
+      'ammo-max': 0,
+      'weapon': '',
+    };
+}
+
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
       'class': true,
       'ids': {
-        'ammo': players[webgl_character_id]['ammo'],
-        'ammo-max': players[webgl_character_id]['ammo-max'],
+        'ammo': character['ammo'],
+        'ammo-max': character['ammo-max'],
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
         'speed': character['speed'],
-        'weapon': players[webgl_character_id]['weapon'],
+        'weapon': character['weapon'],
       },
     });
 }
 
 function weapon_equip(args){
-    const player = players[args['player']];
+    const character = webgl_characters[args['id']];
     const weapon = weapons[args['weapon']];
 
-    if(player['weapon'] !== args['weapon']){
-        player['weapon'] = args['weapon'];
-        player['ammo-max'] = weapon['ammo-max'];
+    if(character['weapon'] !== args['weapon']){
+        character['weapon'] = args['weapon'];
+        character['ammo-max'] = weapon['ammo-max'];
     }
 
-    player['ammo'] = weapon['ammo-max'];
+    character['ammo'] = weapon['ammo-max'];
+    update_ui();
 }
 
 function weapon_fire(id){
-    if(players[id]['weapon'].length === 0
-      || players[id]['ammo'] === 0){
+    const character = webgl_characters[webgl_character_id];
+    if(character['weapon'].length === 0
+      || character['ammo'] === 0){
         return;
     }
 
+    character['ammo']--;
     audio_start('boop');
-    players[id]['ammo']--;
     update_ui();
 }
