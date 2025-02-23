@@ -35,16 +35,7 @@ function new_game(){
     };
 
     webgl_level_load({
-      'character': {
-        ...stats(),
-        'collide-range-y': 5,
-        'collides': true,
-        'controls': 'rpg',
-        'gravity': 1,
-        'level': 0,
-        'life-max': 100,
-        'lives': 5,
-      },
+      'character': stats(),
       'json': {
         'camera-zoom': 0,
         'camera-zoom-max': 0,
@@ -212,15 +203,7 @@ function new_game(){
 
     webgl_character_init({
       ...stats(),
-      'collide-range-y': 5,
-      'collides': true,
-      'controls': 'rpg',
-      'gravity': 1,
       'id': 'test-enemy',
-      'level': 0,
-      'life-max': 100,
-      'lives': 5,
-      'randomize': true,
     });
     update_ui();
 }
@@ -280,6 +263,14 @@ function stats(){
     return {
       'ammo': 0,
       'ammo-max': 0,
+      'collide-range-y': 5,
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'level': 0,
+      'life-max': 100,
+      'lives': 5,
+      'randomize': true,
       'weapon': '',
     };
 }

@@ -65,7 +65,7 @@ function new_game(){
 
     webgl_level_load({
       'character': {
-        ...stats(),
+        'building': {},
         'camera-zoom': 50,
         'controls': 'rts',
         'level': -1,
@@ -73,6 +73,8 @@ function new_game(){
           'camera-rotate-x': 60,
           'translate-y': 5,
         },
+        'money': 1000,
+        'selected': '',
         'speed': 2,
       },
       'json': {
@@ -287,14 +289,6 @@ function select(args){
         }
     }
     update_ui();
-}
-
-function stats(){
-    return {
-      'building': {},
-      'money': 1000,
-      'selected': '',
-    };
 }
 
 function update_ui(){

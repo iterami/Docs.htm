@@ -23,11 +23,12 @@ function new_game(){
 
     webgl_level_load({
       'character': {
-        ...stats(),
         'camera-zoom': 25,
+        'coins': 0,
         'collides': true,
         'controls': 'rpg',
         'gravity': 1,
+        'keys': 0,
         'level': 0,
         'life-max': 10,
         'lives': 3,
@@ -404,13 +405,6 @@ function repo_init(){
 
 function repo_stat_modify(){
     update_ui();
-}
-
-function stats(){
-    return {
-      'coins': 0,
-      'keys': 0,
-    };
 }
 
 function update_ui(){

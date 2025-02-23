@@ -34,15 +34,8 @@ function new_game(){
     webgl_level_load({
       'character': {
         ...stats(),
-        'camera-zoom': 25,
-        'collides': true,
-        'controls': 'arpg',
-        'gravity': 1,
-        'jump-height': .6,
         'level': 0,
-        'lives': 1,
-        'speed': .5,
-        'randomize': true,
+        'team': 0,
       },
       'json': {
         'camera-zoom-min': 10,
@@ -109,29 +102,14 @@ function new_game(){
 
     webgl_character_init({
       ...stats(),
-      'collides': true,
-      'controls': 'arpg',
-      'gravity': 1,
       'id': 'npc-friend',
-      'level': 1,
-      'life-max': 100,
-      'lives': 1,
-      'randomize': true,
       'team': 0,
       'translate-y': 3,
       'translate-z': -60,
     });
     webgl_character_init({
       ...stats(),
-      'collides': true,
-      'controls': 'arpg',
-      'gravity': 1,
       'id': 'npc-enemy',
-      'level': 1,
-      'life-max': 100,
-      'lives': 1,
-      'randomize': true,
-      'team': 1,
       'translate-x': 140,
       'translate-y': 3,
       'translate-z': -60,
@@ -234,6 +212,9 @@ function skill_use(id){
 
 function stats(){
     return {
+      'camera-zoom': 25,
+      'collides': true,
+      'controls': 'arpg',
       'drop-chance': 0,
       'drops': [],
       'equipment': {
@@ -251,17 +232,24 @@ function stats(){
         'foot-left': void 0,
         'foot-right': void 0,
       },
+      'gravity': 1,
       'inventory': [
         {
           'id': 'Test Item',
         },
       ],
+      'jump-height': .6,
+      'level': 1,
+      'lives': 1,
       'mana': 0,
       'mana-max': 0,
       'npcs': {},
+      'randomize': true,
       'skill': '',
+      'speed': .5,
       'talent-points': 0,
       'talent-points-max': 0,
+      'team': 1,
     };
 }
 

@@ -56,13 +56,7 @@ function new_game(){
     position_max = 0;
 
     webgl_level_load({
-      'character': {
-        ...stats(),
-        'camera-zoom': 25,
-        'controls': 'rpg',
-        'level': 0,
-        'randomize': true,
-      },
+      'character': stats(),
       'json': {
         'camera-zoom-min': 10,
         'camera-zoom-max': 30,
@@ -401,11 +395,7 @@ function racer_add(id){
         webgl_character_init({
           ...stats(),
           'automove': true,
-          'camera-zoom': 25,
-          'controls': 'rpg',
           'id': id,
-          'level': 0,
-          'randomize': true,
         });
     }
 
@@ -522,9 +512,13 @@ function repo_stat_modify(){
 
 function stats(){
     return {
+      'camera-zoom': 25,
+      'controls': 'rpg',
       'lap': 1,
+      'level': 0,
       'mark': 0,
       'position': 1,
+      'randomize': true,
     };
 }
 
