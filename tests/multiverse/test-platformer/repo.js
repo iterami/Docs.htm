@@ -365,6 +365,13 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
+      'beforeunload': {
+        'todo': function(event){
+            if(webgl !== 0){
+                event.preventDefault();
+            }
+        },
+      },
       'events': {
         'new-game': {
           'onclick': new_game,
