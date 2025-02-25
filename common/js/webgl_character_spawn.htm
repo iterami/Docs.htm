@@ -6,8 +6,11 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_character_spawn(id)
 <ul>
-  <li>Resets character current life to max life.
-  <li>Resets character rotation and translation to current level spawn coordinates.
+  <li>Resets various character properties:<ul>
+    <li>Rotation and translation change are set to 0.
+    <li>Current life is set to max life.
+  </ul>
+  <li>Character rotation/translation and camera rotation are set to the character's optional spawn properties, or to the level's default spawn properties.
 </ul>
 <table>
   <tr class=header>
