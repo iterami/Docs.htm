@@ -1,0 +1,39 @@
+{
+  "title": "Characters Test",
+  "spawn-rotate-x": 20,
+  "spawn-translate-y": 3,
+  "y-min": -20,
+  "characters": [
+    {
+      "id": "test-characters",
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "automove": true,
+      "camera-zoom": 25,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": 1,
+      "level": 1,
+      "randomize": true,
+      "spawn-translate-z": -25
+    }
+  ]
+}
