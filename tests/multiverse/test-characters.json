@@ -1,11 +1,12 @@
 {
   "title": "Characters Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-rotate-x": 30,
+  "spawn-translate-y": 5,
   "y-min": -20,
   "characters": [
     {
       "id": "test-characters",
+      "spawn-translate-y": 0,
       "entities": [
         {
           "id": "base",

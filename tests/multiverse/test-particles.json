@@ -1,10 +1,10 @@
 {
   "title": "Particles Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "characters": [
     {
       "id": "test-particles",
+      "spawn-translate-y": 0,
       "entities": [
         {
           "id": "base",

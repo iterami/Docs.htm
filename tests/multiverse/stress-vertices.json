@@ -1,11 +1,12 @@
 {
   "title": "Vertices Stress Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "spawn-translate-z": 10,
   "characters": [
     {
       "id": "stress-vertices",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",

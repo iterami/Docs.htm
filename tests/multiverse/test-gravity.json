@@ -1,12 +1,14 @@
 {
   "title": "Gravity Test",
   "gravity-damage": true,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "spawn-translate-z": 25,
   "y-min": -150,
   "characters": [
     {
       "id": "test-gravity",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",
@@ -46,8 +48,9 @@
       "level": 0,
       "life": 100,
       "life-max": 100,
-      "translate-x": -15,
-      "translate-y": 50,
+      "spawn-translate-x": -15,
+      "spawn-translate-y": 50,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "gravity-normal-body",
@@ -69,7 +72,8 @@
       "level": 0,
       "life": 100,
       "life-max": 100,
-      "translate-y": 50,
+      "spawn-translate-y": 50,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "gravity-strong-body",
@@ -91,8 +95,9 @@
       "level": 0,
       "life": 100,
       "life-max": 100,
-      "translate-x": 15,
-      "translate-y": 50,
+      "spawn-translate-x": 15,
+      "spawn-translate-y": 50,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "gravity-weak-body",

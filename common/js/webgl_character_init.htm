@@ -7,6 +7,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_character_init(args)
 <ul>
   <li>Creates a character, its entities, and its vehicle.
+  <li>Characters are spawned upon init via <a href=webgl_character_spawn.htm>webgl_character_spawn(id)</a>, which sets rotation and translation.
   <li>Args will be passed directly to the character object to allow for custom properties.
   <li>Some args are deleted before becoming character properties:<ul>
     <li>The "entities" arg contains the entities that should be created after this character is created.
@@ -27,18 +28,6 @@
     <td>camera-lock
     <td>true
     <td>boolean
-  <tr>
-    <td>camera-rotate-x
-    <td>0
-    <td>number
-  <tr>
-    <td>camera-rotate-y
-    <td>0
-    <td>number
-  <tr>
-    <td>camera-rotate-z
-    <td>0
-    <td>number
   <tr>
     <td>camera-zoom
     <td>0
@@ -148,32 +137,32 @@
     <td>'#fff'
     <td>boolean false or string
   <tr>
-    <td>rotate-x
+    <td>spawn-rotate-x
     <td>0
     <td>number
   <tr>
-    <td>rotate-y
+    <td>spawn-rotate-y
     <td>0
     <td>number
   <tr>
-    <td>rotate-z
+    <td>spawn-rotate-z
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-x
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-y
+    <td>0
+    <td>number
+  <tr>
+    <td>spawn-translate-z
     <td>0
     <td>number
   <tr>
     <td>speed
     <td>1
-    <td>number
-  <tr>
-    <td>translate-x
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-y
-    <td>0
-    <td>number
-  <tr>
-    <td>translate-z
-    <td>0
     <td>number
   <tr>
     <td>turn-speed

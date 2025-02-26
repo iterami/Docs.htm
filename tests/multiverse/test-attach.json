@@ -1,11 +1,12 @@
 {
   "title": "Attach Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "spawn-translate-z": 10,
   "characters": [
     {
       "id": "test-attach",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",
@@ -53,9 +54,8 @@
           ]
         }
       ],
-      "translate-x": -15,
-      "translate-y": 2,
-      "translate-z": -15
+      "spawn-translate-x": -15,
+      "spawn-translate-z": -15
     },
     {
       "id": "rotate-y",
@@ -86,8 +86,7 @@
           ]
         }
       ],
-      "translate-y": 2,
-      "translate-z": -15
+      "spawn-translate-z": -15
     },
     {
       "id": "rotate-z",
@@ -118,9 +117,8 @@
           ]
         }
       ],
-      "translate-x": 15,
-      "translate-y": 2,
-      "translate-z": -15
+      "spawn-translate-x": 15,
+      "spawn-translate-z": -15
     }
   ]
 }

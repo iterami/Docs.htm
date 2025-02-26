@@ -60,11 +60,6 @@ function new_game(){
       'json': {
         'camera-zoom-min': 10,
         'camera-zoom-max': 30,
-        'spawn-rotate-x': 30,
-        'spawn-rotate-y': 90,
-        'spawn-translate-x': -50,
-        'spawn-translate-y': 1,
-        'spawn-translate-z': 375,
         'characters': [
           {
             'id': 'racing-test',
@@ -418,10 +413,10 @@ function racer_add(id){
           'gravity': 1,
           'id': vehicle,
           'level': 0,
-          'rotate-y': 90,
-          'translate-x': -25,
-          'translate-y': 5,
-          'translate-z': 250 + 25 * position_max,
+          'spawn-rotate-y': 90,
+          'spawn-translate-x': -25,
+          'spawn-translate-y': 5,
+          'spawn-translate-z': 250 + 25 * position_max,
           'turn-speed': 2,
           'vehicle-stats': {
             'character': id,
@@ -526,6 +521,8 @@ function stats(){
       'mark': 0,
       'position': 1,
       'randomize': true,
+      'spawn-rotate-x': 30,
+      'spawn-rotate-y': 90,
     };
 }
 

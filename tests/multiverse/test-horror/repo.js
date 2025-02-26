@@ -16,6 +16,8 @@ function new_game(){
         'level': 0,
         'lives': 1,
         'jump-height': 0,
+        'spawn-rotate-y': 180,
+        'spawn-translate-z': 35,
         'speed': .25,
       },
       'json': {
@@ -24,9 +26,6 @@ function new_game(){
         'fog-density': .001,
         'fog-state': true,
         'pointerlock': true,
-        'spawn-rotate-y': 180,
-        'spawn-translate-y': -1,
-        'spawn-translate-z': 35,
         'characters': [
           {
             'id': 'horror-test',

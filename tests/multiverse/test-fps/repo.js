@@ -40,7 +40,6 @@ function new_game(){
         'camera-zoom': 0,
         'camera-zoom-max': 0,
         'pointerlock': true,
-        'spawn-translate-y': 1,
         'y-min': -100,
         'characters': [
           {
@@ -204,6 +203,7 @@ function new_game(){
     webgl_character_init({
       ...stats(),
       'id': 'test-enemy',
+      'spawn-translate-z': -150,
     });
     update_ui();
 }
@@ -278,6 +278,7 @@ function stats(){
       'life-max': 100,
       'lives': 5,
       'randomize': true,
+      'spawn-translate-y': 6,
       'weapon': '',
     };
 }

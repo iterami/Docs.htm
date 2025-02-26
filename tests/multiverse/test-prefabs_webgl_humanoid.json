@@ -1,11 +1,12 @@
 {
   "title": "Humanoid Prefab Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "spawn-translate-z": 10,
   "characters": [
     {
       "id": "test-humanoid",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",

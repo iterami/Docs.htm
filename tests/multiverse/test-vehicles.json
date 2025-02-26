@@ -1,12 +1,13 @@
 {
   "title": "Vehicles Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "spawn-translate-z": 10,
   "y-min": -100,
   "characters": [
     {
       "id": "test-vehicles",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",
@@ -122,8 +123,7 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-x": -25,
-      "translate-y": 5,
+      "spawn-translate-x": -25,
       "turn-speed": 2,
       "vehicle-stats": {
         "speed-deceleration": -0.01,
@@ -158,7 +158,7 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-x": -75,
+      "spawn-translate-x": -75,
       "turn-speed": 2,
       "vehicle-stats": {
         "lock": 1
@@ -192,7 +192,7 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-x": -90,
+      "spawn-translate-x": -90,
       "turn-speed": 2,
       "vehicle-stats": {
         "lock": 2
@@ -226,7 +226,7 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-x": -105,
+      "spawn-translate-x": -105,
       "turn-speed": 2,
       "vehicle-stats": {
         "lock": 3
@@ -260,7 +260,6 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-y": 5,
       "turn-speed": 2,
       "vehicle-stats": {
         "character": "_me",
@@ -296,8 +295,7 @@
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "translate-x": 25,
-      "translate-y": 5,
+      "spawn-translate-x": 25,
       "turn-speed": 2,
       "vehicle-stats": {
         "speed-acceleration": 0.01,

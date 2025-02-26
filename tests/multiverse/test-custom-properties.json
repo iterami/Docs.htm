@@ -1,11 +1,10 @@
 {
   "title": "Custom Properties Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
-  "spawn-translate-z": 20,
+  "spawn-translate-y": 5,
   "characters": [
     {
       "id": "test-custom-properties",
+      "spawn-translate-y": 0,
       "entities": [
         {
           "id": "base",
@@ -71,18 +70,10 @@
     },
     {
       "id": "character-custom",
-      "custom-property": "set",
-      "randomize": true,
-      "translate-x": 10,
-      "translate-y": 5,
-      "translate-z": -20
+      "custom-property": "set"
     },
     {
-      "id": "character-not-custom",
-      "randomize": true,
-      "translate-x": -10,
-      "translate-y": 5,
-      "translate-z": -20
+      "id": "character-not-custom"
     }
   ]
 }

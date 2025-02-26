@@ -34,11 +34,12 @@ function new_game(){
       'character': {
         'controls': '',
         'level': -1,
+        'spawn-path-id': 'path-start',
+        'spawn-translate-y': 5,
+        'spawn-translate-z': 50,
       },
       'json': {
         'camera-zoom-max': 0,
-        'spawn-path-id': 'path-start',
-        'spawn-translate-z': 50,
         'paths': {
           'path-start': {
             'points': [

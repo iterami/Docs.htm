@@ -1,11 +1,12 @@
 {
   "title": "Alpha Test",
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
-  "spawn-translate-z": 20,
+  "spawn-translate-y": 5,
+  "spawn-translate-z": 25,
   "characters": [
     {
       "id": "test-alpha",
+      "spawn-translate-y": 0,
+      "spawn-translate-z": 0,
       "entities": [
         {
           "id": "base",

@@ -1,12 +1,11 @@
 {
   "title": "Draw Range Test",
   "draw-range": 100,
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
-  "spawn-translate-z": 10,
+  "spawn-translate-y": 5,
   "characters": [
     {
       "id": "test-draw-range",
+      "spawn-translate-y": 0,
       "entities": [
         {
           "id": "base",

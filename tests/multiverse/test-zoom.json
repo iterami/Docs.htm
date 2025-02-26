@@ -3,11 +3,11 @@
   "camera-zoom": 50,
   "camera-zoom-max": 100,
   "camera-zoom-min": 10,
-  "spawn-rotate-x": 20,
-  "spawn-translate-y": 3,
+  "spawn-translate-y": 5,
   "characters": [
     {
       "id": "test-zoom",
+      "spawn-translate-y": 0,
       "entities": [
         {
           "id": "base",
