@@ -63,6 +63,7 @@ function new_game(){
         'characters': [
           {
             'id': 'racing-test',
+            'static': true,
             'entities': [
               {
                 'id': 'jump',

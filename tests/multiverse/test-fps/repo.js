@@ -44,6 +44,7 @@ function new_game(){
         'characters': [
           {
             'id': 'fps-test',
+            'static': true,
             'entities': [
               {
                 'id': 'bridge',

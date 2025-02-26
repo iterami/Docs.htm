@@ -43,6 +43,7 @@ function new_game(){
         'characters': [
           {
             'id': 'arpg-test',
+            'static': true,
             'entities': [
               {
                 'id': 'home',

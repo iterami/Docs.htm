@@ -7,7 +7,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_character_init(args)
 <ul>
   <li>Creates a character, its entities, and its vehicle.
-  <li>Characters are spawned upon init via <a href=webgl_character_spawn.htm>webgl_character_spawn(id)</a>, which sets rotation and translation.
+  <li>Characters that aren't "static" are spawned upon init via <a href=webgl_character_spawn.htm>webgl_character_spawn(id)</a>, which sets rotation and translation.
   <li>Args will be passed directly to the character object to allow for custom properties.
   <li>Some args are deleted before becoming character properties:<ul>
     <li>The "entities" arg contains the entities that should be created after this character is created.
@@ -164,6 +164,10 @@
     <td>speed
     <td>1
     <td>number
+  <tr>
+    <td>static
+    <td>false
+    <td>boolean
   <tr>
     <td>turn-speed
     <td>5

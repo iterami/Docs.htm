@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "test-zoom",
-      "spawn-translate-y": 0,
+      "static": true,
       "entities": [
         {
           "id": "base",

@@ -5,8 +5,7 @@
   "characters": [
     {
       "id": "test-primitive-terrain",
-      "spawn-translate-y": 0,
-      "spawn-translate-z": 0,
+      "static": true,
       "entities": [
         {
           "id": "base",

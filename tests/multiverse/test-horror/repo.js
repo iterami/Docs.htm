@@ -29,6 +29,7 @@ function new_game(){
         'characters': [
           {
             'id': 'horror-test',
+            'static': true,
           },
         ],
         'prefabs': [

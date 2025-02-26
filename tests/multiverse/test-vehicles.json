@@ -6,8 +6,7 @@
   "characters": [
     {
       "id": "test-vehicles",
-      "spawn-translate-y": 0,
-      "spawn-translate-z": 0,
+      "static": true,
       "entities": [
         {
           "id": "base",

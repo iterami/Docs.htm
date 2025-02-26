@@ -4,7 +4,7 @@
   "characters": [
     {
       "id": "test-collision",
-      "spawn-translate-y": 0,
+      "static": true,
       "entities": [
         {
           "id": "base",

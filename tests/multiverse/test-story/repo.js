@@ -83,6 +83,7 @@ function new_game(){
         'characters': [
           {
             'id': 'story-test',
+            'static': true,
             'entities': [
               {
                 'id': 'ground',

@@ -50,7 +50,8 @@
   },
   "characters": [
     {
-      "id": "test-lighting"
+      "id": "test-lighting",
+      "static": true
     }
   ],
   "prefabs": [

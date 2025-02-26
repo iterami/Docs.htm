@@ -94,6 +94,7 @@ function new_game(){
         'characters': [
           {
             'id': 'platformer-test',
+            'static': true,
             'entities': [
               {
                 'id': 'coin-0',

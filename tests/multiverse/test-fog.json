@@ -6,7 +6,7 @@
   "characters": [
     {
       "id": "test-fog",
-      "spawn-translate-y": 0,
+      "static": true,
       "entities": [
         {
           "id": "base",

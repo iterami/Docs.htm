@@ -84,6 +84,7 @@ function new_game(){
         'characters': [
           {
             'id': 'rts-test',
+            'static': true,
             'entities': [
               {
                 'id': 'base',
