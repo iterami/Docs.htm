@@ -1,7 +1,9 @@
 {
   "title": "Alpha Test",
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 25,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 25
+  },
   "characters": [
     {
       "id": "test-alpha",

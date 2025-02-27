@@ -34,9 +34,11 @@ function new_game(){
       'character': {
         'controls': '',
         'level': -1,
-        'spawn-path-id': 'path-start',
-        'spawn-translate-y': 5,
-        'spawn-translate-z': 50,
+        'spawn': {
+          'path-id': 'path-start',
+          'translate-y': 5,
+          'translate-z': 50,
+        },
       },
       'json': {
         'camera-zoom-max': 0,

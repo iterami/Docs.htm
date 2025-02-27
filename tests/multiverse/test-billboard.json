@@ -1,7 +1,9 @@
 {
   "title": "Billboard Test",
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 20,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 20
+  },
   "characters": [
     {
       "id": "test-billboard",

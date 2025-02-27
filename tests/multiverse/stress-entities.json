@@ -1,6 +1,8 @@
 {
   "title": "Entities Stress Test",
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "stress-entities",

@@ -1,7 +1,9 @@
 {
   "title": "Normals Test",
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 10,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 10
+  },
   "characters": [
     {
       "id": "test-normals",
@@ -59,10 +61,12 @@
     },
     {
       "id": "cuboid-rotating",
-      "change-rotate-z": 1,
-      "spawn-translate-x": 15,
-      "spawn-translate-y": 10,
-      "spawn-translate-z": 0
+      "spawn": {
+        "change-rotate-z": 1,
+        "translate-x": 15,
+        "translate-y": 10,
+        "translate-z": 0
+      }
     }
   ],
   "prefabs": [

@@ -1,6 +1,8 @@
 {
   "title": "Collision Test",
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-collision",

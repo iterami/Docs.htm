@@ -414,10 +414,12 @@ function racer_add(id){
           'gravity': 1,
           'id': vehicle,
           'level': 0,
-          'spawn-rotate-y': 90,
-          'spawn-translate-x': -25,
-          'spawn-translate-y': 5,
-          'spawn-translate-z': 250 + 25 * position_max,
+          'spawn': {
+            'rotate-y': 90,
+            'translate-x': -25,
+            'translate-y': 5,
+            'translate-z': 250 + 25 * position_max,
+          },
           'turn-speed': 2,
           'vehicle-stats': {
             'character': id,
@@ -522,8 +524,11 @@ function stats(){
       'mark': 0,
       'position': 1,
       'randomize': true,
-      'spawn-rotate-x': 30,
-      'spawn-rotate-y': 90,
+      'spawn': {
+        'camera-rotate-x': 30,
+        'camera-rotate-y': 90,
+        'rotate-y': 90,
+      },
     };
 }
 

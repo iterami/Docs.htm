@@ -1,7 +1,9 @@
 {
   "title": "Draw Range Test",
   "draw-range": 100,
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-draw-range",

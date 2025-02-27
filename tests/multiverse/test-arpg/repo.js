@@ -102,14 +102,18 @@ function new_game(){
     webgl_character_init({
       ...stats(),
       'id': 'npc-friend',
-      'spawn-translate-z': -60,
+      'spawn': {
+        'translate-z': -60,
+      },
       'team': 0,
     });
     webgl_character_init({
       ...stats(),
       'id': 'npc-enemy',
-      'spawn-translate-x': 140,
-      'spawn-translate-z': -60,
+      'spawn': {
+        'translate-x': 140,
+        'translate-z': -60,
+      },
     });
 
     update_ui();
@@ -250,9 +254,13 @@ function stats(){
       'npcs': {},
       'randomize': true,
       'skill': '',
+      'spawn': {
+        'camera-rotate-x': 65,
+        'translate-x': 0,
+        'translate-y': 5,
+        'translate-z': 0,
+      },
       'speed': .5,
-      'spawn-rotate-x': 65,
-      'spawn-translate-y': 5,
       'talent-points': 0,
       'talent-points-max': 0,
       'team': 1,

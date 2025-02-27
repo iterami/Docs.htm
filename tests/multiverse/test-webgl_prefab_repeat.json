@@ -2,8 +2,10 @@
   "title": "Prefab Repeat Test",
   "fog-density": 0.0001,
   "fog-state": true,
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 10,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 10
+  },
   "characters": [
     {
       "id": "test-prefab-repeat",

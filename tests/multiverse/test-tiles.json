@@ -1,6 +1,8 @@
 {
   "title": "Tiles Prefab Test",
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-tiles",

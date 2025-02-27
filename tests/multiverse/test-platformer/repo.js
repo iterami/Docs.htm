@@ -33,8 +33,12 @@ function new_game(){
         'life-max': 10,
         'lives': 3,
         'randomize': true,
-        'spawn-rotate-x': 30,
-        'spawn-translate-y': 5,
+        'spawn': {
+          'camera-rotate-x': 30,
+          'translate-x': 0,
+          'translate-y': 5,
+          'translate-z': 0,
+        },
       },
       'json': {
         'camera-zoom-min': 10,
@@ -238,9 +242,11 @@ function new_game(){
             'id': 'fireball-0',
             'level': 0,
             'path-id': 'fireball-0',
-            'spawn-translate-x': -50,
-            'spawn-translate-y': 3,
-            'spawn-translate-z': -50,
+            'spawn': {
+              'translate-x': -50,
+              'translate-y': 3,
+              'translate-z': -50,
+            },
             'entities': [
               {
                 'id': 'fireball-0-body',
@@ -287,8 +293,10 @@ function new_game(){
             'id': 'wallmoving-0',
             'level': 0,
             'path-id': 'wallmoving-0',
-            'spawn-translate-y': 10,
-            'spawn-translate-z': -140,
+            'spawn': {
+              'translate-y': 10,
+              'translate-z': -140,
+            },
             'entities': [
               {
                 'id': 'wallmoving-0',

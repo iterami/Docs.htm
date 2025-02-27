@@ -204,7 +204,9 @@ function new_game(){
     webgl_character_init({
       ...stats(),
       'id': 'test-enemy',
-      'spawn-translate-z': -150,
+      'spawn': {
+        'translate-z': -150,
+      },
     });
     update_ui();
 }
@@ -279,7 +281,11 @@ function stats(){
       'life-max': 100,
       'lives': 5,
       'randomize': true,
-      'spawn-translate-y': 6,
+      'spawn': {
+        'translate-x': 0,
+        'translate-y': 6,
+        'translate-z': 0,
+      },
       'weapon': '',
     };
 }

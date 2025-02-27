@@ -2,7 +2,9 @@
   "title": "Fog Test",
   "fog-density": 0.001,
   "fog-state": true,
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-fog",

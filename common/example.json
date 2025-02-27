@@ -51,12 +51,10 @@
   },
   "paused": false,
   "pointerlock": false,
-  "spawn-rotate-x": 45,
-  "spawn-rotate-y": 0,
-  "spawn-rotate-z": 0,
-  "spawn-translate-x": 0,
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 5,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 5
+  },
   "textures": {
     "gear.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEVCQkLb29sGyERuAAAAgklEQVQY04XQsQ2AQAgFUIyJlNfa3SImbqZ2rnUbuIIjWFJc/ILJb4xGmtcQ4CP/pfZqr9aFg1oKJ7W8uFAbi0iD1eY93CpcgVdxZzf6RteRDJxhAmqoZ7Zb09t0tDXA3qCGtMi3z37O4Vzu4V7ewbt4J+9mDuZiTubmH/iXj7/91wWexXU3xpBXrwAAAABJRU5ErkJggg=="
   },
@@ -70,16 +68,7 @@
       "id": "_me",
       "automove": false,
       "camera-lock": true,
-      "camera-rotate-x": 0,
-      "camera-rotate-y": 0,
-      "camera-rotate-z": 0,
       "camera-zoom": 20,
-      "change-rotate-x": 0,
-      "change-rotate-y": 0,
-      "change-rotate-z": 0,
-      "change-translate-x": 0,
-      "change-translate-y": 0,
-      "change-translate-z": 0,
       "collide-range-xz": 2,
       "collide-range-y": 3,
       "collides": true,
@@ -98,14 +87,12 @@
       "path-end": "",
       "path-id": "",
       "path-point": 0,
+      "randomize": true,
       "reticle": "#fff",
-      "rotate-x": 0,
-      "rotate-y": 0,
-      "rotate-z": 0,
+      "spawn": {
+        "camera-rotate-x": 45
+      },
       "speed": 1,
-      "translate-x": 0,
-      "translate-y": 0,
-      "translate-z": 0,
       "turn-speed": 5,
       "vehicle": false,
       "vehicle-stats": {

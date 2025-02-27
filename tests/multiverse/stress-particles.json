@@ -1,6 +1,8 @@
 {
   "title": "Particles Stress Test",
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "stress-particles",

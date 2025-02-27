@@ -118,15 +118,11 @@
   // Optional. If this level will request the pointer remain locked to the canvas.
   "pointerlock": false,
 
-  // Optional. Rotation of newly spawned character in degrees between 0 inclusive and 360 exclusive.
-  "spawn-rotate-x": 45,
-  "spawn-rotate-y": 0,
-  "spawn-rotate-z": 0,
-
-  // Optional. Translation of newly spawned character relative to "0, 0, 0".
-  "spawn-translate-x": 0,
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 5,
+  // Optional. Properties that are applied to all non-static characters when they spawn.
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 5
+  },
 
   // Optional. Custom texture URIs.
   "textures": {
@@ -156,24 +152,9 @@
       // Optional. If the camera is locked to the character's translation.
       "camera-lock": true,
 
-      // Optional. Camera rotation. Can be overwritten by spawn rotation.
-      "camera-rotate-x": 0,
-      "camera-rotate-y": 0,
-      "camera-rotate-z": 0,
-
       // Optional. Current camera zoom value.
       // When 0, camera is in 1st person mode.
       "camera-zoom": 20,
-
-      // Optional. Amount that character rotation/translation should change by when the character is updated.
-      // Player rotation changes affect the camera rotation as well.
-      // Player translations are reset after each movement to allow stopping.
-      "change-rotate-x": 0,
-      "change-rotate-y": 0,
-      "change-rotate-z": 0,
-      "change-translate-x": 0,
-      "change-translate-y": 0,
-      "change-translate-z": 0,
 
       // Optional. The maximum distance that collision can occur.
       "collide-range-xz": 2,
@@ -224,21 +205,19 @@
       "path-id": "",
       "path-point": 0,
 
+      // Optional. If this character should get a randomized cuboid body upon creation.
+      "randomize": true,
+
       // Optional. The color of the character's reticle, or false is none should be visible.
       "reticle": "#fff",
 
-      // Optional. Rotation of character in degrees between 0 inclusive and 360 exclusive.
-      "rotate-x": 0,
-      "rotate-y": 0,
-      "rotate-z": 0,
+      // Optional. Properties that are applied to this character when it spawns.
+      "spawn": {
+        "camera-rotate-x": 45
+      },
 
       // Optional. Character movement speed.
       "speed": 1,
-
-      // Optional. Translation of the character relative to "0, 0, 0".
-      "translate-x": 0,
-      "translate-y": 0,
-      "translate-z": 0,
 
       // Optional. How many degrees this character turns at once.
       "turn-speed": 5,

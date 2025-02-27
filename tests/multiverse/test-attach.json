@@ -1,7 +1,9 @@
 {
   "title": "Attach Test",
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 10,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 10
+  },
   "characters": [
     {
       "id": "test-attach",
@@ -26,7 +28,6 @@
     },
     {
       "id": "rotate-x",
-      "change-rotate-x": 5,
       "entities": [
         {
           "id": "body-x",
@@ -42,7 +43,6 @@
         {
           "id": "attached-x",
           "attach-x": 10,
-          "change-rotate-x": -5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -53,12 +53,14 @@
           ]
         }
       ],
-      "spawn-translate-x": -15,
-      "spawn-translate-z": -15
+      "spawn": {
+        "change-rotate-x": 5,
+        "translate-x": -15,
+        "translate-z": -15
+      }
     },
     {
       "id": "rotate-y",
-      "change-rotate-y": 5,
       "entities": [
         {
           "id": "body-y",
@@ -74,7 +76,6 @@
         {
           "id": "attached-y",
           "attach-x": 10,
-          "change-rotate-y": 5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -85,11 +86,13 @@
           ]
         }
       ],
-      "spawn-translate-z": -15
+      "spawn": {
+        "change-rotate-y": 5,
+        "translate-z": -15
+      }
     },
     {
       "id": "rotate-z",
-      "change-rotate-z": 5,
       "entities": [
         {
           "id": "body-z",
@@ -105,7 +108,6 @@
         {
           "id": "attached-z",
           "attach-x": 10,
-          "change-rotate-z": -5,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -116,8 +118,11 @@
           ]
         }
       ],
-      "spawn-translate-x": 15,
-      "spawn-translate-z": -15
+      "spawn": {
+        "change-rotate-z": 5,
+        "translate-x": 15,
+        "translate-z": -15
+      }
     }
   ]
 }

@@ -1,7 +1,9 @@
 {
   "title": "Characters Test",
-  "spawn-rotate-x": 30,
-  "spawn-translate-y": 5,
+  "spawn": {
+    "camera-rotate-x": 30,
+    "translate-y": 5
+  },
   "y-min": -20,
   "characters": [
     {
@@ -34,7 +36,9 @@
       "gravity": 1,
       "level": 1,
       "randomize": true,
-      "spawn-translate-z": -25
+      "spawn": {
+        "translate-z": -25
+      }
     }
   ]
 }

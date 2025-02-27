@@ -16,8 +16,11 @@ function new_game(){
         'level': 0,
         'lives': 1,
         'jump-height': 0,
-        'spawn-rotate-y': 180,
-        'spawn-translate-z': 35,
+        'spawn': {
+          'camera-rotate-y': 180,
+          'rotate-y': 180,
+          'translate-z': 35,
+        },
         'speed': .25,
       },
       'json': {

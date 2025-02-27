@@ -2,7 +2,9 @@
   "title": "Pointer Lock Test",
   "camera-zoom-max": 0,
   "pointerlock": true,
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-pointerlock",

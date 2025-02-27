@@ -1,7 +1,9 @@
 {
   "title": "Primitive Frustum Test",
-  "spawn-translate-y": 5,
-  "spawn-translate-z": 10,
+  "spawn": {
+    "translate-y": 5,
+    "translate-z": 10
+  },
   "characters": [
     {
       "id": "test-primitive-frustum",

@@ -3,7 +3,9 @@
   "camera-zoom": 50,
   "camera-zoom-max": 100,
   "camera-zoom-min": 10,
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-zoom",

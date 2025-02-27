@@ -1,6 +1,8 @@
 {
   "title": "Lines Shrub Prefab Test",
-  "spawn-translate-y": 5,
+  "spawn": {
+    "translate-y": 5
+  },
   "characters": [
     {
       "id": "test-lines-shrub",
