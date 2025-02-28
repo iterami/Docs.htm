@@ -1,10 +1,10 @@
 <!doctype html>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>Mouse Tests</title>
+<title>Event Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Mouse
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events
 <table>
   <thead>
     <tr>
@@ -23,6 +23,10 @@
     <tr>
       <td>deltaY
       <td id=deltaY>
+    <tr class=header>
+      <td>Key
+      <td>state
+  <tbody id=keys>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -35,14 +39,21 @@ function repo_init(){
         },
       },
       'title': 'Docs.htm',
+      'ui-elements': [
+        'keys',
+      ],
     });
+
+    update_keys();
+    globalThis.addEventListener('blur', update_keys);
+    globalThis.addEventListener('keydown', update_keys);
+    globalThis.addEventListener('keyup', update_keys);
 
     let html = '';
     for(const value in core_mouse){
         html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
     }
     document.getElementById('core_mouse').innerHTML = html;
-
     update_mouse();
     globalThis.addEventListener('blur', update_mouse);
     globalThis.addEventListener('contextmenu', update_mouse);
@@ -54,6 +65,41 @@ function repo_init(){
     globalThis.addEventListener('touchmove', update_mouse);
     globalThis.addEventListener('touchstart', update_mouse);
     globalThis.addEventListener('wheel', update_mouse);
+}
+
+function update_keys(event){
+    if(event
+      && event.code
+      && !event.ctrlKey
+      && !event.altKey
+      && !event.metaKey
+      && event.code !== 'ControlLeft'
+      && event.code !== 'ControlRight'
+      && event.code !== 'AltLeft'
+      && event.code !== 'AltRight'
+      && !core_keys[event.code]){
+        core_keys[event.code] = {
+          'preventDefault': false,
+          'state': true,
+        };
+    }
+
+    const sorted_keys = core_sort_strings({
+      'array': Object.keys(core_keys),
+    });
+    let keys_html = '';
+    for(const key in sorted_keys){
+        keys_html += '<tr><td>' + sorted_keys[key]
+          + '<td>' + core_keys[sorted_keys[key]]['state'];
+    }
+    core_elements['keys'].innerHTML = keys_html;
+
+    core_ui_update({
+      'ids': {
+        'event': core_type(event),
+        'type': event?.type,
+      },
+    });
 }
 
 function update_mouse(event){
