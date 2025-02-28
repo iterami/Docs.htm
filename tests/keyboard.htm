@@ -25,14 +25,9 @@ function repo_init(){
     });
 
     update_keys();
-    globalThis.addEventListener(
-      'keydown',
-      update_keys
-    );
-    globalThis.addEventListener(
-      'keyup',
-      update_keys
-    );
+    globalThis.addEventListener('blur', update_keys);
+    globalThis.addEventListener('keydown', update_keys);
+    globalThis.addEventListener('keyup', update_keys);
 }
 
 function update_keys(event){
