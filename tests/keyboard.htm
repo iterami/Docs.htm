@@ -6,18 +6,15 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Keyboard
 <table>
-  <tr>
-    <td>core_type(event)
-    <td id=event>
-  <tr>
-    <td>event.type
-    <td id=type>
-</table>
-<table>
   <thead>
+    <tr>
+      <td>core_type(event)
+      <td id=event>
+    <tr>
+      <td>event.type
+      <td id=type>
     <tr class=header>
       <td>Key
-      <td>preventDefault
       <td>state
   <tbody id=keys>
 </table>
@@ -40,6 +37,7 @@ function repo_init(){
 
 function update_keys(event){
     if(event
+      && event.code
       && !event.ctrlKey
       && !event.altKey
       && !event.metaKey
@@ -60,7 +58,6 @@ function update_keys(event){
     let keys_html = '';
     for(const key in sorted_keys){
         keys_html += '<tr><td>' + sorted_keys[key]
-          + '<td>' + core_keys[sorted_keys[key]]['preventDefault']
           + '<td>' + core_keys[sorted_keys[key]]['state'];
     }
     core_elements['keys'].innerHTML = keys_html;
