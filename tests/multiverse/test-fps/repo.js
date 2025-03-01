@@ -28,11 +28,15 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
-    weapons = {
-      'test-weapon': {
-        'ammo-max': 10,
-      },
-    };
+    core_object_reset(weapons);
+    Object.assign(
+      weapons,
+      {
+        'test-weapon': {
+          'ammo-max': 10,
+        },
+      }
+    );
 
     webgl_level_load({
       'character': stats(),

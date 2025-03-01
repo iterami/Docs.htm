@@ -23,29 +23,33 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
-    tech = {
-      'builder': {
-        'builds': [
-          'factory',
-          'turret',
-        ],
-        'cost': 100,
-        'time': 100,
-        'type': 'unit',
-      },
-      'factory': {
-        'builds': ['builder'],
-        'cost': 1000,
-        'time': 200,
-        'type': 'building',
-      },
-      'turret': {
-        'builds': [],
-        'cost': 250,
-        'time': 150,
-        'type': 'building',
-      },
-    };
+    core_object_reset(tech);
+    Object.assign(
+      tech,
+      {
+        'builder': {
+          'builds': [
+            'factory',
+            'turret',
+          ],
+          'cost': 100,
+          'time': 100,
+          'type': 'unit',
+        },
+        'factory': {
+          'builds': ['builder'],
+          'cost': 1000,
+          'time': 200,
+          'type': 'building',
+        },
+        'turret': {
+          'builds': [],
+          'cost': 250,
+          'time': 150,
+          'type': 'building',
+        },
+      }
+    );
 
     for(const id in tech){
         core_html({
