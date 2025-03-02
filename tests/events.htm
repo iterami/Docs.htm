@@ -15,17 +15,14 @@
       <td>event.type
       <td id=type>
     <tr class=header>
-      <td>core_mouse
+      <td><input checked id=check-mouse type=checkbox>Mouse
       <td>Properties
+    <tr>
+      <td>deltaY Wheel
+      <td id=deltaY>
   <tbody id=core_mouse></tbody>
     <tr class=header>
-      <td>Other
-      <td>Values
-    <tr>
-      <td>deltaY
-      <td id=deltaY>
-    <tr class=header>
-      <td>Key
+      <td><input checked id=check-keys type=checkbox>Keys
       <td>state
   <tbody id=keys>
 </table>
@@ -47,6 +44,7 @@ function repo_init(){
           },
         },
       },
+      'menu-block-events': false,
       'mousebinds': {
         'contextmenu': {
           'preventDefault': true,
@@ -54,6 +52,9 @@ function repo_init(){
       },
       'title': 'Docs.htm',
       'ui-elements': [
+        'check-keys',
+        'check-mouse',
+        'deltaY',
         'keys',
       ],
     });
@@ -91,6 +92,9 @@ function update(event){
 }
 
 function update_keys(event){
+    if(!core_elements['check-keys'].checked){
+        return;
+    }
     if(event
       && event.code
       && !event.ctrlKey
@@ -120,11 +124,14 @@ function update_keys(event){
 }
 
 function update_mouse(event){
+    if(!core_elements['check-mouse'].checked){
+        return;
+    }
     update(event);
     core_ui_update({
       'ids': {
         ...core_mouse,
-        'deltaY': event?.deltaY,
+        'deltaY': event?.deltaY || Number(core_elements['deltaY']?.textContent),
       },
     });
 }
