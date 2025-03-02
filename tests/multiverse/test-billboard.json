@@ -29,6 +29,7 @@
           "attach-x": -5,
           "attach-y": 5,
           "billboard": true,
+          "change-rotate-x": 1,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -56,6 +57,7 @@
           "attach-x": 5,
           "attach-y": 5,
           "billboard": true,
+          "change-rotate-z": 1,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
