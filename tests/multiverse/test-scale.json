@@ -1,0 +1,97 @@
+{
+  "title": "Scaling Test",
+  "spawn": {
+    "translate-y": 5
+  },
+  "characters": [
+    {
+      "id": "test-scaling",
+      "static": true,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "scale-down",
+          "attach-x": 20,
+          "attach-y": 2,
+          "attach-z": -25,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_scale",
+              "type": "function",
+              "value": {
+                "entity": "wall",
+                "x": -0.1,
+                "y": -0.1,
+                "z": -0.1
+              }
+            }
+          ],
+          "picking": true,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "scale-up",
+          "attach-x": 20,
+          "attach-y": 6,
+          "attach-z": -25,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_scale",
+              "type": "function",
+              "value": {
+                "entity": "wall",
+                "x": 0.1,
+                "y": 0.1,
+                "z": 0.1
+              }
+            }
+          ],
+          "picking": true,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "wall",
+          "attach-z": -40,
+          "rotate-x": 90,
+          "texture": "grid.png",
+          "texture-x": 2,
+          "texture-y": 2,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        }
+      ]
+    }
+  ]
+}
