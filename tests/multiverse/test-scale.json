@@ -150,7 +150,7 @@
       ]
     },
     {
-      "id": "character-tree",
+      "id": "character",
       "scale-x": 2,
       "scale-y": 2,
       "scale-z": 2,
@@ -165,7 +165,7 @@
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "character": "character-tree",
+        "character": "character",
         "prefix": "tree"
       }
     }
