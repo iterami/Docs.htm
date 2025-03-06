@@ -10,6 +10,7 @@
   <li>1 is the default scale and axes with a value of false are not scaled.
   <li>If "update" is false, then the entity will be scaled without updating its scale properties.
   <li>To scale all entities attached to a specific character, use <a href=webgl_character_scale.htm>webgl_character_scale(args)</a>.
+  <li>If "init" is true, then the entity is scaled regardless of previous scale properties.
 </ul>
 <table>
   <tr class=header>
@@ -20,6 +21,10 @@
     <td>entity
     <td>
     <td>string ID
+  <tr>
+    <td>init
+    <td>false
+    <td>boolean
   <tr>
     <td>set
     <td>false
