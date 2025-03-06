@@ -1,7 +1,8 @@
 {
   "title": "Scaling Test",
   "spawn": {
-    "translate-y": 5
+    "translate-y": 5,
+    "translate-z": 25
   },
   "characters": [
     {
@@ -24,17 +25,16 @@
           ]
         },
         {
-          "id": "scale-down",
-          "attach-x": 20,
+          "id": "tree-smaller",
+          "attach-x": -10,
           "attach-y": 2,
-          "attach-z": -25,
           "collision": false,
           "event-todo": [
             {
-              "todo": "webgl_entity_scale",
+              "todo": "webgl_character_scale",
               "type": "function",
               "value": {
-                "entity": "wall",
+                "id": "character",
                 "x": -0.1,
                 "y": -0.1,
                 "z": -0.1
@@ -51,17 +51,16 @@
           ]
         },
         {
-          "id": "scale-up",
-          "attach-x": 20,
+          "id": "tree-bigger",
+          "attach-x": -10,
           "attach-y": 6,
-          "attach-z": -25,
           "collision": false,
           "event-todo": [
             {
-              "todo": "webgl_entity_scale",
+              "todo": "webgl_character_scale",
               "type": "function",
               "value": {
-                "entity": "wall",
+                "id": "character",
                 "x": 0.1,
                 "y": 0.1,
                 "z": 0.1
@@ -90,8 +89,78 @@
             -10, 0, 10,
             10, 0, 10
           ]
+        },
+        {
+          "id": "wall-smaller",
+          "attach-x": 20,
+          "attach-y": 2,
+          "attach-z": -35,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_entity_scale",
+              "type": "function",
+              "value": {
+                "entity": "wall",
+                "x": -0.1,
+                "y": -0.1,
+                "z": -0.1
+              }
+            }
+          ],
+          "picking": true,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "wall-bigger",
+          "attach-x": 20,
+          "attach-y": 6,
+          "attach-z": -35,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_entity_scale",
+              "type": "function",
+              "value": {
+                "entity": "wall",
+                "x": 0.1,
+                "y": 0.1,
+                "z": 0.1
+              }
+            }
+          ],
+          "picking": true,
+          "rotate-x": 90,
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
         }
       ]
+    },
+    {
+      "id": "character",
+      "spawn": {
+        "translate-x": -25,
+        "translate-z": 0
+      }
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_cuboid_tree",
+      "properties": {
+        "character": "character",
+        "prefix": "tree"
+      }
     }
   ]
 }
