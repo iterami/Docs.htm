@@ -1,13 +1,14 @@
 <!doctype html>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>webgl_scale(args)</title>
+<title>webgl_entity_scale(args)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_scale(args)
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_entity_scale(args)
 <ul>
   <li>Scales an entity by modifying its vertices, either to a specific value or by a specific amount.
   <li>1 is the default scale and axes with a value of false are not scaled.
+  <li>If "update" is false, then the entity will be scaled without updating its scale properties.
 </ul>
 <table>
   <tr class=header>
@@ -24,6 +25,10 @@
     <td>boolean
   <tr>
     <td>todo
+    <td>true
+    <td>boolean
+  <tr>
+    <td>update
     <td>true
     <td>boolean
   <tr>

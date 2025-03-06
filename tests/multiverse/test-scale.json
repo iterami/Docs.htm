@@ -31,7 +31,7 @@
           "collision": false,
           "event-todo": [
             {
-              "todo": "webgl_scale",
+              "todo": "webgl_entity_scale",
               "type": "function",
               "value": {
                 "entity": "wall",
@@ -58,7 +58,7 @@
           "collision": false,
           "event-todo": [
             {
-              "todo": "webgl_scale",
+              "todo": "webgl_entity_scale",
               "type": "function",
               "value": {
                 "entity": "wall",
