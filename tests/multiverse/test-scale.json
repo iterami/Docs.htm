@@ -148,6 +148,9 @@
     },
     {
       "id": "character",
+      "scale-x": 2,
+      "scale-y": 2,
+      "scale-z": 2,
       "spawn": {
         "translate-x": -25,
         "translate-z": 0
