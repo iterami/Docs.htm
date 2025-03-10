@@ -30,7 +30,6 @@
           "attach-y": 10,
           "attach-z": -49,
           "collision": false,
-          "rotate-x": 90,
           "vertex-colors": [
             1, 1, 1, 1,
             1, 1, 1, 1,
@@ -38,17 +37,18 @@
             0, 0, 0, 1
           ],
           "vertices": [
-            50, 0, -5,
-            -50, 0, -5,
-            -50, 0, 5,
-            50, 0, 5
+            50, 5, 0,
+            -50, 5, 0,
+            -50, -5, 0,
+            50, -5, 0
           ]
         },
         {
           "id": "pick-blocker-down",
-          "attach-x": 24,
+          "attach-x": 20,
           "attach-y": 2,
           "attach-z": -25,
+          "billboard": true,
           "collision": false,
           "event-todo": [
             {
@@ -58,19 +58,19 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         },
         {
           "id": "pick-blocker-up",
           "attach-x": 20,
-          "attach-y": 2,
+          "attach-y": 6,
           "attach-z": -25,
+          "billboard": true,
           "collision": false,
           "event-todo": [
             {
@@ -80,18 +80,18 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         },
         {
           "id": "pick-color",
           "attach-y": 10,
           "attach-z": -50,
+          "collision": false,
           "event-todo": [
             {
               "stat": "vertex-colors",
@@ -99,15 +99,14 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
           "texture": "grid.png",
           "texture-x": 10,
           "texture-y": 2,
           "vertices": [
-            50, 0, -10,
-            -50, 0, -10,
-            -50, 0, 10,
-            50, 0, 10
+            50, 10, 0,
+            -50, 10, 0,
+            -50, -10, 0,
+            50, -10, 0
           ]
         }
       ]

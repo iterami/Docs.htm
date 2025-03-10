@@ -25,35 +25,10 @@
           ]
         },
         {
-          "id": "tree-smaller",
-          "attach-x": -10,
-          "attach-y": 2,
-          "collision": false,
-          "event-todo": [
-            {
-              "todo": "webgl_character_scale",
-              "type": "function",
-              "value": {
-                "id": "character",
-                "x": -0.1,
-                "y": -0.1,
-                "z": -0.1
-              }
-            }
-          ],
-          "picking": true,
-          "rotate-x": 90,
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "tree-bigger",
+          "id": "tree-big",
           "attach-x": -10,
           "attach-y": 6,
+          "billboard": true,
           "collision": false,
           "event-todo": [
             {
@@ -68,12 +43,37 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "tree-small",
+          "attach-x": -10,
+          "attach-y": 2,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_character_scale",
+              "type": "function",
+              "value": {
+                "id": "character",
+                "x": -0.1,
+                "y": -0.1,
+                "z": -0.1
+              }
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         },
         {
@@ -94,37 +94,11 @@
           ]
         },
         {
-          "id": "wall-smaller",
-          "attach-x": 20,
-          "attach-y": 2,
-          "attach-z": -35,
-          "collision": false,
-          "event-todo": [
-            {
-              "todo": "webgl_entity_scale",
-              "type": "function",
-              "value": {
-                "entity": "wall",
-                "x": -0.1,
-                "y": -0.1,
-                "z": -0.1
-              }
-            }
-          ],
-          "picking": true,
-          "rotate-x": 90,
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "wall-bigger",
+          "id": "wall-big",
           "attach-x": 20,
           "attach-y": 6,
           "attach-z": -35,
+          "billboard": true,
           "collision": false,
           "event-todo": [
             {
@@ -139,22 +113,48 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
           "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        },
+        {
+          "id": "wall-small",
+          "attach-x": 20,
+          "attach-y": 2,
+          "attach-z": -35,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_entity_scale",
+              "type": "function",
+              "value": {
+                "entity": "wall",
+                "x": -0.1,
+                "y": -0.1,
+                "z": -0.1
+              }
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ]
     },
     {
       "id": "character",
-      "scale-x": 2,
-      "scale-y": 2,
-      "scale-z": 2,
       "spawn": {
+        "scale-x": 2,
+        "scale-y": 2,
+        "scale-z": 2,
         "translate-x": -25,
         "translate-y": 0,
         "translate-z": 0
