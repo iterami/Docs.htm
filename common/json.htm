@@ -132,15 +132,13 @@
   // Optional. Minimum character Y translation before forced death and respawn.
   "y-min": -200,
 
-  // Optional. Array of groups to create.
-  // Do not include automatically created groups, such as "skybox".
+  // Optional. Array of groups to create, excluding automatically created groups such as "skybox".
   "groups": [
     "example-group-0",
     "example-group-1"
   ],
 
-  // Optional. "characters" that is array of objects.
-  // Set to false to create no new characters.
+  // Optional. Array of character objects to use to create new characters.
   "characters": [
     {
       // Optional. ID of character.
@@ -152,8 +150,7 @@
       // Optional. If the camera is locked to the character's translation.
       "camera-lock": true,
 
-      // Optional. Current camera zoom value.
-      // When 0, camera is in 1st person mode.
+      // Optional. Current camera zoom value.  When 0, camera is in 1st person mode.
       "camera-zoom": 20,
 
       // Optional. The maximum distance that collision can occur.
@@ -169,11 +166,10 @@
       // Optional. Current character gravity multiplier.
       "gravity": 1,
 
-      // Optional. "dy" set when the character jumps.
+      // Optional. "change-translate-y" set when the character jumps.
       "jump-height": 1,
 
       // Optional. Current character level.
-      // -1 means character is just a camera and cannot gain xp.
       "level": 0,
 
       // Optional. Current character xp.
@@ -183,8 +179,7 @@
       "life": 1,
       "life-max": 1,
 
-      // Optional. Remaining character lives.
-      // -1 means character has unlimited lives.
+      // Optional. Remaining character lives, or -1 for unlimited lives.
       "lives": -1,
 
       // Optional. Locked properties that are applied this character before collision detection.
@@ -290,10 +285,6 @@
           "change-rotate-x": 0,
           "change-rotate-y": 0,
           "change-rotate-z": 0,
-
-          // Optional. The maximum distance that collision can occur.
-          "collide-range-xz": 2,
-          "collide-range-y": 3,
 
           // Optional. If characters can collide with this entity.
           "collision": true,
@@ -464,7 +455,6 @@
   ],
 
   // Optional. Array of objects indicating which character or entity properties should be randomized.
-  // Leave as [] to not randomize any properties.
   "randomized": [
     {
       // Optional. True if this affects character property, or false if this affects entity property.
