@@ -13,22 +13,22 @@
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
+          "texture-x": 20,
+          "texture-y": 20,
           "vertex-colors": [
             0.2, 0.2, 0.2, 1
           ],
           "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
+            100, 0, -100,
+            -100, 0, -100,
+            -100, 0, 100,
+            100, 0, 100
           ]
         }
       ]
     },
     {
-      "id": "character",
+      "id": "character-moving",
       "automove": true,
       "camera-zoom": 25,
       "collides": true,
@@ -39,6 +39,39 @@
       "spawn": {
         "translate-z": -25
       }
+    },
+    {
+      "id": "character-hit",
+      "camera-zoom": 25,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": 1,
+      "level": 1,
+      "randomize": true,
+      "spawn": {
+        "translate-x": -10
+      },
+      "entities": [
+        {
+          "id": "hitter",
+          "draw": false,
+          "event-range": 5,
+          "event-todo": [
+            {
+              "todo": "webgl_character_hit",
+              "type": "function",
+              "value": {
+                "id": "character-hit",
+                "xz": 0.3,
+                "y": 0.5
+              }
+            }
+          ],
+          "vertices": [
+            0, 0, 0
+          ]
+        }
+      ]
     }
   ]
 }
