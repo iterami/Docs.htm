@@ -161,12 +161,7 @@ function repo_init(){
           'todo': webgl_pick_entity,
         },
         'wheel': {
-          'todo': function(event){
-              webgl_controls_wheel(
-                webgl_character_id,
-                event.deltaY
-              );
-          },
+          'todo': webgl_controls_wheel,
         },
       },
       'root': '../../common-webgl-standalone.htm',

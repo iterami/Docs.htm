@@ -223,7 +223,7 @@ function repo_init(){
         },
         'mousemove': {
           'todo': function(){
-              webgl_controls_mouse(webgl_character_id);
+              webgl_controls_mouse();
           },
         },
         'mouseup': {
@@ -237,12 +237,7 @@ function repo_init(){
           },
         },
         'wheel': {
-          'todo': function(event){
-              webgl_controls_wheel(
-                webgl_character_id,
-                event.deltaY
-              );
-          },
+          'todo': webgl_controls_wheel,
         },
       },
       'reset': function(){

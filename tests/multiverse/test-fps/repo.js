@@ -256,7 +256,7 @@ function repo_init(){
         },
         'mousemove': {
           'todo': function(){
-              webgl_controls_mouse(webgl_character_id);
+              webgl_controls_mouse();
           },
         },
       },
