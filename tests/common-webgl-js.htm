@@ -30,7 +30,9 @@ function repo_init(){
     });
     webgl_character_init({
       'id': 'test-character-0',
-      'translate-x': 23,
+      'spawn':{
+        'translate-x': 23,
+      },
     });
 
     document.getElementById('results').innerHTML = test_run({

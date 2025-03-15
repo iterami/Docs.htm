@@ -26,19 +26,27 @@ function repo_init(){
       'tests': [
         {
           'args': void 0,
-          'expect': 0,
+          'expect': function(){
+              const id = entity_id_count - 1;
+              return entity_entities[id]['id'] === id;
+          },
           'function': 'entity_create',
         },
         {
           'args': {
             'id': 'test',
           },
-          'expect': 'test',
+          'expect': function(){
+              return entity_entities['test']['id'] === 'test';
+          },
           'function': 'entity_create',
         },
         {
           'args': void 0,
-          'expect': 2,
+          'expect': function(){
+              const id = entity_id_count - 1;
+              return entity_entities[id]['id'] === id;
+          },
           'function': 'entity_create',
         },
         {
@@ -68,7 +76,7 @@ function repo_init(){
               'testgroup',
             ],
             'todo': function(entity){
-                entity_entities[entity]['testproperty'] = 0;
+                entity['testproperty'] = 0;
             },
           },
           'expect': function(){
