@@ -35,8 +35,8 @@
     <li><a href=webgl_character_set.htm>webgl_character_set(id)</a>
     <li><a href=webgl_character_spawn.htm>webgl_character_spawn(id)</a>
     <li><a href=webgl_character_strafe.htm>webgl_character_strafe(character)</a>
-    <li><a href=webgl_clearcolor_set.htm>webgl_clearcolor_set(args)</a>
     <li><a href=webgl_collision.htm>webgl_collision(args)</a>
+    <li><a href=webgl_color_set.htm>webgl_color_set(args)</a>
     <li><a href=webgl_context_lost.htm>webgl_context_lost(event)</a>
     <li><a href=webgl_context_restored.htm>webgl_context_restored()</a>
     <li><a href=webgl_controls_keyboard.htm>webgl_controls_keyboard(character)</a>
@@ -176,17 +176,9 @@
     <td>Default
     <td>Type
   <tr>
-    <td>ambient-blue
-    <td>1
-    <td>number
-  <tr>
-    <td>ambient-green
-    <td>1
-    <td>number
-  <tr>
-    <td>ambient-red
-    <td>1
-    <td>number
+    <td>ambient-color
+    <td>[1, 1, 1]
+    <td>array of numbers 0-1
   <tr>
     <td>camera-zoom
     <td>25
@@ -200,33 +192,17 @@
     <td>0
     <td>number
   <tr>
-    <td>clearcolor-blue
-    <td>0
-    <td>number
-  <tr>
-    <td>clearcolor-green
-    <td>0
-    <td>number
-  <tr>
-    <td>clearcolor-red
-    <td>0
-    <td>number
+    <td>clear-color
+    <td>[0, 0, 0]
+    <td>array of numbers 0-1
   <tr>
     <td>cursor
     <td>'pointer'
     <td>string
   <tr>
-    <td>directional-blue
-    <td>1
-    <td>number
-  <tr>
-    <td>directional-green
-    <td>1
-    <td>number
-  <tr>
-    <td>directional-red
-    <td>1
-    <td>number
+    <td>directional-color
+    <td>[1, 1, 1]
+    <td>array of numbers 0-1
   <tr>
     <td>directional-state
     <td>true

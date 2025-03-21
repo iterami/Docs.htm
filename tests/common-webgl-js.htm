@@ -71,9 +71,9 @@ function repo_init(){
           },
           'expect': function(result){
               const clearcolor = webgl.getParameter(webgl.COLOR_CLEAR_VALUE);
-              return webgl_properties['clearcolor-blue'] === .3
-                && webgl_properties['clearcolor-green'] === .2
-                && webgl_properties['clearcolor-red'] === .1
+              return webgl_properties['clear-color'][0] === .1
+                && webgl_properties['clear-color'][1] === .2
+                && webgl_properties['clear-color'][2] === .3
                 && core_float_compare({
                   'a': clearcolor[0],
                   'b': .1,
@@ -90,7 +90,7 @@ function repo_init(){
                   'precision': .001,
                 });
           },
-          'function': 'webgl_clearcolor_set',
+          'function': 'webgl_color_set',
         },
         {
           'args': 'help',
