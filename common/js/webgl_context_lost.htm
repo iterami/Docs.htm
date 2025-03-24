@@ -8,8 +8,9 @@
 <ul>
   <li>Handles WebGL context loss.
   <li>When context is restored, <a href=webgl_context_restored.htm>webgl_context_restored()</a> is called.
-</ul>
-<code>const test = webgl.getExtension('WEBGL_lose_context');
+  <li>Context loss can be tested in the <a href=../../../MultiverseEditor.htm/index.htm>MultiverseEditor.htm</a> UI, or the following lines pasted into the browser console:
+<code>test = webgl.getExtension('WEBGL_lose_context');
 test.loseContext();
 test.restoreContext();
 </code>
+</ul>
