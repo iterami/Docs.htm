@@ -18,6 +18,20 @@
   "lock": {
     "translate-y": 10
   },
+  "particles": {
+    "example-particle": {
+      "randomize": true,
+      "speed-x": 0,
+      "speed-y": 0,
+      "speed-z": 0,
+      "x-max": 100,
+      "x-min": -100,
+      "y-max": 100,
+      "y-min": -100,
+      "z-max": 100,
+      "z-min": -100
+    }
+  },
   "paths": {
     "example-path": {
       "collision": true,

@@ -36,6 +36,7 @@
             "attach-x": -25,
             "attach-y": 50,
             "attach-z": 25,
+            "draw-mode": "POINTS",
             "id": "rain-0",
             "point-size": 150,
             "vertex-repeat": 100
@@ -44,19 +45,22 @@
             "attach-x": 25,
             "attach-y": 50,
             "attach-z": -25,
+            "draw-mode": "POINTS",
             "id": "rain-1",
             "point-size": 150,
             "vertex-repeat": 100
           }
         ],
         "id": "rain",
-        "speed-y": -2,
-        "x-max": 25,
-        "x-min": -25,
-        "y-max": 50,
-        "y-min": -50,
-        "z-max": 25,
-        "z-min": -25
+        "particle": {
+          "speed-y": -2,
+          "x-max": 25,
+          "x-min": -25,
+          "y-max": 50,
+          "y-min": -50,
+          "z-max": 25,
+          "z-min": -25
+        }
       }
     },
     {
@@ -68,6 +72,7 @@
             "attach-x": 25,
             "attach-y": 25,
             "attach-z": 25,
+            "draw-mode": "POINTS",
             "id": "snow-0",
             "point-size": 100,
             "vertex-repeat": 200
@@ -76,22 +81,25 @@
             "attach-x": -25,
             "attach-y": 25,
             "attach-z": -25,
+            "draw-mode": "POINTS",
             "id": "snow-1",
             "point-size": 100,
             "vertex-repeat": 200
           }
         ],
         "id": "snow",
-        "randomize": false,
-        "speed-x": 0.1,
-        "speed-y": -0.1,
-        "speed-z": 0.1,
-        "x-max": 25,
-        "x-min": -25,
-        "y-max": 25,
-        "y-min": -25,
-        "z-max": 25,
-        "z-min": -25
+        "particle": {
+          "randomize": false,
+          "speed-x": 0.1,
+          "speed-y": -0.1,
+          "speed-z": 0.1,
+          "x-max": 25,
+          "x-min": -25,
+          "y-max": 25,
+          "y-min": -25,
+          "z-max": 25,
+          "z-min": -25
+        }
       }
     }
   ]

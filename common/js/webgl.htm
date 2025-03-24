@@ -15,6 +15,7 @@
   <li><a href=#webgl-properties>WebGL_Properties</a>
   <li><a href=#character-properties>Character Properties</a>
   <li><a href=#entity-properties>Entity Properties</a>
+  <li><a href=#particle-properties>Particle Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
   <li>Picking may not work properly for entities after "entity_id_count > 16,777,216".
   <li>Requires:<ul>
@@ -63,6 +64,7 @@
     <li><a href=webgl_logic_particle.htm>webgl_logic_particle(args)</a>
     <li><a href=webgl_move_to.htm>webgl_move_to(args)</a>
     <li><a href=webgl_normals.htm>webgl_normals(args)</a>
+    <li><a href=webgl_particle_create.htm>webgl_particle_create(id, args)</a>
     <li><a href=webgl_path_move.htm>webgl_path_move(id)</a>
     <li><a href=webgl_path_use.htm>webgl_path_use(args)</a>
     <li><a href=webgl_pick_color.htm>webgl_pick_color(args)</a>
@@ -606,6 +608,52 @@
     <td>visible
     <td>true
     <td>boolean
+</table>
+<table id=particle-properties>
+  <tr class=header>
+    <td>Particle Properties
+    <td>Default
+    <td>Type
+  <tr>
+    <td>randomize
+    <td>true
+    <td>boolean
+  <tr>
+    <td>speed-x
+    <td>0
+    <td>number
+  <tr>
+    <td>speed-y
+    <td>0
+    <td>number
+  <tr>
+    <td>speed-z
+    <td>0
+    <td>number
+  <tr>
+    <td>x-max
+    <td>100
+    <td>number
+  <tr>
+    <td>x-min
+    <td>-100
+    <td>number
+  <tr>
+    <td>y-max
+    <td>100
+    <td>number
+  <tr>
+    <td>y-min
+    <td>-100
+    <td>number
+  <tr>
+    <td>z-max
+    <td>100
+    <td>number
+  <tr>
+    <td>z-min
+    <td>-100
+    <td>number
 </table>
 <table id=vehicle-properties>
   <tr class=header>

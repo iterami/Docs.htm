@@ -6,7 +6,9 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_primitive_particle(args)
 <ul>
-  <li>Creates a particle type and optional entities with that particle type.
+  <li><a href=webgl_particle_create.htm>webgl_particle_create(id, args)</a> to creates a particle type.
+  <li>The "particle" arg contains the optional <a href=../webgl.htm#particle-properties>particle properties</a>.
+  <li>Creates the entities in the "entities" arg, which have a special "vertex-repeat" property for a specific number of vertices.
   <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Translation is the center of the cuboid in which the particles are created.
 </ul>
@@ -20,10 +22,6 @@
     <td>webgl_character_id
     <td>string ID
   <tr>
-    <td>draw-mode
-    <td>'POINTS'
-    <td>string
-  <tr>
     <td>entities
     <td>[]
     <td>array of objects
@@ -36,47 +34,11 @@
     <td>
     <td>string ID
   <tr>
+    <td>particle
+    <td>{}
+    <td>object
+  <tr>
     <td>prefix
     <td>entity_id_count
     <td>string ID
-  <tr>
-    <td>randomize
-    <td>true
-    <td>boolean
-  <tr>
-    <td>speed-x
-    <td>0
-    <td>number
-  <tr>
-    <td>speed-y
-    <td>0
-    <td>number
-  <tr>
-    <td>speed-z
-    <td>0
-    <td>number
-  <tr>
-    <td>x-max
-    <td>100
-    <td>number
-  <tr>
-    <td>x-min
-    <td>-100
-    <td>number
-  <tr>
-    <td>y-max
-    <td>100
-    <td>number
-  <tr>
-    <td>y-min
-    <td>-100
-    <td>number
-  <tr>
-    <td>z-max
-    <td>100
-    <td>number
-  <tr>
-    <td>z-min
-    <td>-100
-    <td>number
 </table>

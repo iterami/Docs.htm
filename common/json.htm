@@ -54,6 +54,28 @@
     "translate-y": 10
   },
 
+  // Optional. Particle types to be created when the level is loaded.
+  "particles": {
+    "example-particle": {
+      // Optional. False if the vertex translation should just wrap upon reaching max/min,
+      //   or true if the vertex translation wrap should be randomized instead.
+      "randomize": true,
+
+      // Optional. Vertex movement speed upon each axis.
+      "speed-x": 0,
+      "speed-y": 0,
+      "speed-z": 0,
+
+      // Optional. Maximum and minimum vertex translation values before the vertex is wrapped.
+      "x-max": 100,
+      "x-min": -100,
+      "y-max": 100,
+      "y-min": -100,
+      "z-max": 100,
+      "z-min": -100
+    }
+  },
+
   // Optional. Paths that characters can move along.
   "paths": {
     "example-path": {
