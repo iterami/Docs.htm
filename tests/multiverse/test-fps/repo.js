@@ -239,7 +239,7 @@ function repo_init(){
       'globals': {
         'weapons': {},
       },
-      'info': '<button id=new-game type=button>Start FPS Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new-game type=button>Start FPS Test</button><br><br>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span class=weapon></span><br>'

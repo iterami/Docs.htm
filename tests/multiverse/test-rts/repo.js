@@ -214,7 +214,7 @@ function repo_init(){
       'globals': {
         'tech': {},
       },
-      'info': '<button id=new-game type=button>Start RTS Test</button><hr>Money: <span class=money></span><br>'
+      'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Money: <span class=money></span><br>'
         + 'Selected: <span class=selected></span>',
       'menu': true,
       'mousebinds': {

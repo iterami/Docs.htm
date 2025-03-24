@@ -386,7 +386,7 @@ function repo_init(){
           'onclick': new_game,
         },
       },
-      'info': '<button id=new-game type=button>Start Platformer Test</button><hr>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new-game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span class=coins></span><br>'
