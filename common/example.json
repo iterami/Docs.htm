@@ -91,11 +91,11 @@
       "lock": {
         "translate-y": 5
       },
+      "model": {},
       "path-direction": 1,
       "path-end": "",
       "path-id": "",
       "path-point": 0,
-      "randomize": true,
       "reticle": "#fff",
       "scale-x": 1,
       "scale-y": 1,

@@ -518,7 +518,7 @@ function stats(){
       'level': 0,
       'mark': 0,
       'position': 1,
-      'randomize': true,
+      'model': {},
       'spawn': {
         'camera-rotate-x': 30,
         'camera-rotate-y': 90,

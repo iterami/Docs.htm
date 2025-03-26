@@ -246,8 +246,12 @@ function stats(){
       'lives': 1,
       'mana': 0,
       'mana-max': 0,
+      'model': {
+        'bottom': {
+          'exclude': true,
+        },
+      },
       'npcs': {},
-      'randomize': true,
       'skill': '',
       'spawn': {
         'camera-rotate-x': 65,

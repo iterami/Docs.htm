@@ -204,6 +204,11 @@
         "translate-y": 5
       },
 
+      // Optional. Either boolean false when no model is created,
+      //   or an object of properties that are passed to the character model creator.
+      //
+      "model": {},
+
       // Optional. Current assigned path or false, current path point target, and movement direction.
       // What occurs when the end of the path is reached:
       //   "" = use default end set by path.
@@ -215,9 +220,6 @@
       "path-end": "",
       "path-id": "",
       "path-point": 0,
-
-      // Optional. If this character should get a randomized cuboid body upon creation.
-      "randomize": true,
 
       // Optional. The color of the character's reticle, or false is none should be visible.
       "reticle": "#fff",

@@ -11,7 +11,7 @@
   <li>Args will be passed directly to the character object to allow for custom properties.
   <li>Some args are deleted before becoming character properties:<ul>
     <li>The "entities" arg contains the entities that should be created after this character is created.
-    <li>The "randomize" arg will create a randomized body for the newly created character.
+    <li>The "model" arg contains the properties that the character model creator will use.
   </ul>
   <li>If the "character" property in <a href=webgl.htm#vehicle-properties>"vehicle-stats"</a> is not false, then the specified character will enter the vehicle automatically.
 </ul>
@@ -89,6 +89,10 @@
     <td>{}
     <td>object
   <tr>
+    <td>model
+    <td>false
+    <td>boolean false or object
+  <tr>
     <td>path-direction
     <td>1
     <td>number
@@ -104,10 +108,6 @@
     <td>path-point
     <td>0
     <td>number
-  <tr>
-    <td>randomize
-    <td>false
-    <td>boolean
   <tr>
     <td>reticle
     <td>'#fff'

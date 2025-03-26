@@ -35,7 +35,7 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
-      "randomize": true,
+      "model": {},
       "spawn": {
         "translate-z": -25
       }
@@ -47,7 +47,7 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
-      "randomize": true,
+      "model": {},
       "spawn": {
         "translate-x": -10
       },

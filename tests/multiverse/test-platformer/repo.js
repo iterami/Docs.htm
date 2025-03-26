@@ -32,7 +32,7 @@ function new_game(){
         'level': 0,
         'life-max': 10,
         'lives': 3,
-        'randomize': true,
+        'model': {},
         'spawn': {
           'camera-rotate-x': 30,
           'translate-x': 0,

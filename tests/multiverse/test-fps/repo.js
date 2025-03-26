@@ -284,7 +284,7 @@ function stats(){
       'level': 0,
       'life-max': 100,
       'lives': 5,
-      'randomize': true,
+      'model': {},
       'spawn': {
         'translate-x': 0,
         'translate-y': 6,
