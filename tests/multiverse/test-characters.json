@@ -47,14 +47,8 @@
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
-      "model": {},
-      "spawn": {
-        "translate-x": -10
-      },
-      "entities": [
-        {
-          "id": "hitter",
-          "draw": false,
+      "model": {
+        "top": {
           "event-range": 5,
           "event-todo": [
             {
@@ -66,12 +60,12 @@
                 "y": 0.5
               }
             }
-          ],
-          "vertices": [
-            0, 0, 0
           ]
         }
-      ]
+      },
+      "spawn": {
+        "translate-x": -10
+      }
     }
   ]
 }

@@ -33,9 +33,8 @@ function new_game(){
 
     webgl_level_load({
       'character': {
-        ...stats(),
+        ...stats(0),
         'level': 0,
-        'team': 0,
       },
       'json': {
         'camera-zoom-min': 10,
@@ -100,16 +99,31 @@ function new_game(){
     });
 
     webgl_character_init({
-      ...stats(),
+      ...stats(0),
       'id': 'npc-friend',
       'spawn': {
         'translate-z': -60,
       },
-      'team': 0,
     });
     webgl_character_init({
-      ...stats(),
+      ...stats(1),
       'id': 'npc-enemy',
+      'model': {
+        'top': {
+          'event-range': 5,
+          'event-todo': [
+            {
+              'todo': 'webgl_character_hit',
+              'type': 'function',
+              'value': {
+                'id': 'npc-enemy',
+                'xz': 0.3,
+                'y': 0.5
+              }
+            }
+          ],
+        },
+      },
       'spawn': {
         'translate-x': 140,
         'translate-z': -60,
@@ -218,7 +232,7 @@ function skill_use(id){
     }
 }
 
-function stats(){
+function stats(team){
     return {
       'camera-zoom': 25,
       'collides': true,
@@ -261,7 +275,7 @@ function stats(){
       'speed': .5,
       'talent-points': 0,
       'talent-points-max': 0,
-      'team': 1,
+      'team': team,
     };
 }
 

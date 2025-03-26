@@ -255,6 +255,15 @@ function new_game(){
                 'event-range': 3,
                 'event-todo': [
                   {
+                    'todo': 'webgl_character_hit',
+                    'type': 'function',
+                    'value': {
+                      'id': 'fireball-0',
+                      'xz': 0.3,
+                      'y': 0.5
+                    }
+                  },
+                  {
                     'todo': 'audio_start',
                     'type': 'function',
                     'value': 'boop',
