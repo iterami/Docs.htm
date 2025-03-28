@@ -26,11 +26,11 @@ function load_hallway(){
                 ],
                 'texture': 'grid.png',
               },
-              'back': {
+              'front': {
                 'texture': 'door.png',
               },
               'character': 'horror-hallway',
-              'front': {
+              'back': {
                 'exclude': true,
               },
               'size-x': -10,
