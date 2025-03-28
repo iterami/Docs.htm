@@ -46,7 +46,7 @@ function lap_update(args){
 
 function load_testtrack(){
     webgl_level_load({
-      'character': stats(),
+      'character': 0,
       'json': {
         'camera-zoom-min': 10,
         'camera-zoom-max': 30,
@@ -390,13 +390,10 @@ function new_game(){
 function racer_add(id){
     position_max++;
 
-    if(!webgl_characters[id]){
-        webgl_character_init({
-          ...stats(),
-          'automove': true,
-          'id': id,
-        });
-    }
+    webgl_character_init({
+      ...stats(),
+      'id': id,
+    });
 
     const vehicle = id + '-vehicle';
     if(!webgl_characters[vehicle]){

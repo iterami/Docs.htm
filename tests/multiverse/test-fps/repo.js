@@ -23,7 +23,7 @@ function collect(args){
 
 function load_bridge(){
     webgl_level_load({
-      'character': stats(),
+      'character': 0,
       'json': {
         'camera-zoom': 0,
         'camera-zoom-max': 0,
@@ -215,6 +215,7 @@ function new_game(){
     );
 
     load_bridge();
+    webgl_character_init(stats());
     update_ui();
 }
 

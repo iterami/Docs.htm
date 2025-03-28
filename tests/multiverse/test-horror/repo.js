@@ -2,21 +2,7 @@
 
 function load_hallway(){
     webgl_level_load({
-      'character': {
-        'collide-range-y': 5,
-        'collides': true,
-        'controls': 'rpg',
-        'gravity': 1,
-        'level': 0,
-        'lives': 1,
-        'jump-height': 0,
-        'spawn': {
-          'camera-rotate-y': 180,
-          'rotate-y': 180,
-          'translate-z': 35,
-        },
-        'speed': .25,
-      },
+      'character': 0,
       'json': {
         'camera-zoom': 0,
         'camera-zoom-max': 0,
@@ -25,7 +11,7 @@ function load_hallway(){
         'pointerlock': true,
         'characters': [
           {
-            'id': 'horror-test',
+            'id': 'horror-hallway',
             'static': true,
           },
         ],
@@ -43,7 +29,7 @@ function load_hallway(){
               'back': {
                 'texture': 'door.png',
               },
-              'character': 'horror-test',
+              'character': 'horror-hallway',
               'front': {
                 'exclude': true,
               },
@@ -67,7 +53,7 @@ function load_hallway(){
                 ],
                 'texture': 'grid.png',
               },
-              'character': 'horror-test',
+              'character': 'horror-hallway',
               'left': {
                 'exclude': true,
               },
@@ -119,6 +105,21 @@ function new_game(){
     webgl_character_id = '_me';
 
     load_hallway();
+    webgl_character_init({
+      'collide-range-y': 5,
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'level': 0,
+      'lives': 1,
+      'jump-height': 0,
+      'spawn': {
+        'camera-rotate-y': 180,
+        'rotate-y': 180,
+        'translate-z': 35,
+      },
+      'speed': .25,
+    });
 }
 
 function repo_escape(){

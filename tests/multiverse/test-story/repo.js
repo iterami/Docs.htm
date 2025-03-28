@@ -23,15 +23,7 @@ function choose(choice){
 
 function load_start(spawn){
     webgl_level_load({
-      'character': {
-        'controls': '',
-        'level': -1,
-        'spawn': {
-          'path-id': 'path-start',
-          'translate-y': 5,
-          'translate-z': 50,
-        },
-      },
+      'character': 0,
       'json': {
         'camera-zoom-max': 0,
         'paths': {
@@ -111,6 +103,15 @@ function new_game(){
     choices = 0;
 
     load_start(0);
+    webgl_character_init({
+      'controls': '',
+      'level': -1,
+      'spawn': {
+        'path-id': 'path-start',
+        'translate-y': 5,
+        'translate-z': 50,
+      },
+    });
     update_ui();
 }
 

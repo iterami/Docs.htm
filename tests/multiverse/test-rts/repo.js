@@ -18,19 +18,7 @@ function build(id, building){
 
 function load_testmap(){
     webgl_level_load({
-      'character': {
-        'building': {},
-        'camera-zoom': 50,
-        'controls': 'rts',
-        'level': -1,
-        'lock': {
-          'camera-rotate-x': 60,
-          'translate-y': 5,
-        },
-        'money': 1000,
-        'selected': '',
-        'speed': 2,
-      },
+      'character': 0,
       'json': {
         'camera-zoom': 50,
         'camera-zoom-max': 100,
@@ -189,6 +177,19 @@ function new_game(){
     }
 
     load_testmap();
+    webgl_character_init({
+      'building': {},
+      'camera-zoom': 50,
+      'controls': 'rts',
+      'level': -1,
+      'lock': {
+        'camera-rotate-x': 60,
+        'translate-y': 5,
+      },
+      'money': 1000,
+      'selected': '',
+      'speed': 2,
+    });
     select();
 
     update_ui();

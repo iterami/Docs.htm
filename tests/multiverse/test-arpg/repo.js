@@ -24,77 +24,53 @@ function kill(id){
     }
 }
 
-function load_town(spawn){
+function load_cave(){
     webgl_level_load({
-      'character': {
-        ...stats(0),
-        'level': 0,
-      },
+      'character': 0,
       'json': {
         'camera-zoom-min': 10,
-        'clear-color': [0, .2, 0],
         'y-min': -100,
         'characters': [
           {
-            'id': 'arpg-town',
+            'id': 'arpg-cave',
             'static': true,
             'entities': [
               {
-                'id': 'home',
+                'id': 'cave',
                 'attach-z': -25,
-                'texture': 'grid.png',
-                'texture-x': 10,
-                'texture-y': 15,
+                'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
                 'vertices': [
-                  50, 0, -75,
-                  -50, 0, -75,
-                  -50, 0, 75,
-                  50, 0, 75,
+                  20, 0, -30,
+                  -20, 0, -30,
+                  -20, 0, 30,
+                  20, 0, 30,
                 ],
               },
               {
-                'id': 'bridge',
-                'attach-x': 70,
-                'attach-z': 30,
-                'texture': 'grid.png',
-                'texture-x': 4,
-                'texture-y': 2,
-                'vertex-colors': [
-                  .4, .2, 0, 1,
+                'id': 'exit',
+                'attach-y': 5,
+                'attach-z': 5,
+                'draw': false,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'load_town',
+                    'type': 'function',
+                    'value': 1,
+                  },
                 ],
+                'rotate-x': 270,
                 'vertices': [
-                  20, 0, -10,
-                  -20, 0, -10,
-                  -20, 0, 10,
-                  20, 0, 10,
-                ],
-              },
-              {
-                'id': 'forest',
-                'attach-x': 140,
-                'attach-z': -25,
-                'texture': 'lavaleaf.png',
-                'vertex-colors': [
-                  .05, .2, .05, 1,
-                ],
-                'vertices': [
-                  50, 0, -75,
-                  -50, 0, -75,
-                  -50, 0, 75,
-                  50, 0, 75,
+                  15, 0, -5,
+                  -15, 0, -5,
+                  -15, 0, 5,
+                   15, 0, 5,
                 ],
               },
             ],
-          },
-          {
-            ...stats(0),
-            'id': 'npc-friend',
-            'spawn': {
-              'translate-z': -60,
-            },
           },
           {
             ...stats(1),
@@ -116,8 +92,112 @@ function load_town(spawn){
               },
             },
             'spawn': {
-              'translate-x': 140,
-              'translate-z': -60,
+              'translate-z': -40,
+            },
+          },
+        ],
+      },
+    });
+}
+
+function load_town(spawn){
+    const spawners = [
+      {},
+      {
+        'translate-x': 100,
+        'translate-z': -65,
+      }
+    ];
+    webgl_level_load({
+      'character': 0,
+      'json': {
+        'camera-zoom-min': 10,
+        'clear-color': [0, .2, 0],
+        'spawn': spawners[spawn],
+        'y-min': -100,
+        'characters': [
+          {
+            'id': 'arpg-town',
+            'static': true,
+            'entities': [
+              {
+                'id': 'home',
+                'attach-z': -25,
+                'texture': 'grid.png',
+                'texture-x': 6,
+                'texture-y': 9,
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'vertices': [
+                  30, 0, -45,
+                  -30, 0, -45,
+                  -30, 0, 45,
+                  30, 0, 45,
+                ],
+              },
+              {
+                'id': 'bridge',
+                'attach-x': 50,
+                'texture': 'grid.png',
+                'texture-x': 4,
+                'texture-y': 2,
+                'vertex-colors': [
+                  .4, .2, 0, 1,
+                ],
+                'vertices': [
+                  20, 0, -10,
+                  -20, 0, -10,
+                  -20, 0, 10,
+                  20, 0, 10,
+                ],
+              },
+              {
+                'id': 'forest',
+                'attach-x': 100,
+                'attach-z': -25,
+                'texture': 'lavaleaf.png',
+                'vertex-colors': [
+                  .05, .2, .05, 1,
+                ],
+                'vertices': [
+                  30, 0, -45,
+                  -30, 0, -45,
+                  -30, 0, 45,
+                  30, 0, 45,
+                ],
+              },
+              {
+                'id': 'cave',
+                'attach-x': 100,
+                'attach-y': 5,
+                'attach-z': -70,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'load_cave',
+                    'type': 'function',
+                  },
+                ],
+                'rotate-x': 90,
+                'vertex-colors': [
+                  0, 0, 0, 1,
+                ],
+                'vertices': [
+                  15, 0, -5,
+                  -15, 0, -5,
+                  -15, 0, 5,
+                   15, 0, 5,
+                ],
+              },
+            ],
+          },
+          {
+            ...stats(0),
+            'id': 'npc-friend',
+            'spawn': {
+              'translate-x': 0,
+              'translate-z': -50,
             },
           },
         ],
@@ -133,6 +213,10 @@ function new_game(){
     webgl_character_id = '_me';
 
     load_town(0);
+    webgl_character_init({
+      ...stats(0),
+      'level': 0,
+    });
     update_ui();
 }
 
@@ -165,7 +249,7 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new-game type=button>Start RPG Test</button><br><br>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
+      'info': '<button id=new-game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
         + 'Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana-max></span>'
         + '<div id=rpg-tabs></div><div id=rpg-tabcontent></div>',
@@ -272,9 +356,7 @@ function stats(team){
       'skill': '',
       'spawn': {
         'camera-rotate-x': 65,
-        'translate-x': 0,
         'translate-y': 5,
-        'translate-z': 0,
       },
       'speed': .5,
       'talent-points': 0,

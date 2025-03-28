@@ -14,30 +14,79 @@ function collect(args){
     });
 }
 
-function load_skymap(spawn){
+function load_cave(){
     webgl_level_load({
-      'character': {
-        'camera-zoom': 25,
-        'coins': 0,
-        'collides': true,
-        'controls': 'rpg',
-        'gravity': 1,
-        'keys': 0,
-        'level': 0,
-        'life-max': 10,
-        'lives': 3,
-        'model': {},
-        'spawn': {
-          'camera-rotate-x': 30,
-          'translate-x': 0,
-          'translate-y': 5,
-          'translate-z': 0,
-        },
+      'character': 0,
+      'json': {
+        'camera-zoom-min': 10,
+        'pointerlock': true,
+        'y-min': -100,
+        'characters': [
+          {
+            'id': 'platformer-cave',
+            'static': true,
+            'entities': [
+              {
+                'id': 'base',
+                'texture': 'grid.png',
+                'texture-x': 2,
+                'texture-y': 2,
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'vertices': [
+                  10, 0, -10,
+                  -10, 0, -10,
+                  -10, 0, 10,
+                  10, 0, 10,
+                ],
+              },
+              {
+                'id': 'door',
+                'attach-y': 10,
+                'attach-z': 10,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'load_skymap',
+                    'type': 'function',
+                    'value': 1,
+                  },
+                ],
+                'rotate-x': 270,
+                'texture': 'door.png',
+                'vertex-colors': [
+                  1, 1, 1, 1,
+                ],
+                'vertices': [
+                  10, 0, -10,
+                  -10, 0, -10,
+                  -10, 0, 10,
+                   10, 0, 10,
+                ],
+              },
+            ],
+          },
+        ],
       },
+    });
+}
+
+function load_skymap(spawn){
+    const spawners = [
+      {},
+      {
+        'translate-x': -10,
+        'translate-z': -120,
+      }
+    ];
+    webgl_level_load({
+      'character': 0,
       'json': {
         'camera-zoom-min': 10,
         'clear-color': [0, 0, .2],
         'pointerlock': true,
+        'spawn': spawners[spawn],
         'y-min': -100,
         'paths': {
           'fireball-0': {
@@ -124,7 +173,32 @@ function load_skymap(spawn){
                 ],
               },
               {
-                'id': 'door-0',
+                'id': 'door',
+                'attach-x': -20,
+                'attach-y': 10,
+                'attach-z': -120,
+                'event-range': 0,
+                'event-todo': [
+                  {
+                    'todo': 'load_cave',
+                    'type': 'function',
+                  },
+                ],
+                'rotate-z': 270,
+                'texture': 'door.png',
+                'texture-align': '10110100',
+                'vertex-colors': [
+                  1, 1, 1, 1,
+                ],
+                'vertices': [
+                  10, 0, -10,
+                  -10, 0, -10,
+                  -10, 0, 10,
+                   10, 0, 10,
+                ],
+              },
+              {
+                'id': 'gate-0',
                 'attach-z': -90,
                 'rotate-x': 90,
                 'texture': 'grid.png',
@@ -159,7 +233,7 @@ function load_skymap(spawn){
                   },
                   {
                     'stat': 'attach-x',
-                    'todo': 'door-0',
+                    'todo': 'gate-0',
                     'value': -60,
                   },
                 ],
@@ -292,12 +366,17 @@ function load_skymap(spawn){
             'id': 'platform-0',
             'level': 0,
             'path-id': 'platform-0',
+            'spawn': {
+              'translate-x': 0,
+              'translate-z': 0,
+            },
           },
           {
             'id': 'wallmoving-0',
             'level': 0,
             'path-id': 'wallmoving-0',
             'spawn': {
+              'translate-x': 0,
               'translate-y': 10,
               'translate-z': -140,
             },
@@ -376,6 +455,24 @@ function new_game(){
     webgl_character_id = '_me';
 
     load_skymap(0);
+    webgl_character_init({
+      'camera-zoom': 25,
+      'coins': 0,
+      'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
+      'keys': 0,
+      'level': 0,
+      'life-max': 10,
+      'lives': 3,
+      'model': {},
+      'spawn': {
+        'camera-rotate-x': 30,
+        'translate-x': 0,
+        'translate-y': 5,
+        'translate-z': 0,
+      },
+    });
     update_ui();
 }
 
