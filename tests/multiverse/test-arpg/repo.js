@@ -94,39 +94,38 @@ function new_game(){
               },
             ],
           },
+          {
+            ...stats(0),
+            'id': 'npc-friend',
+            'spawn': {
+              'translate-z': -60,
+            },
+          },
+          {
+            ...stats(1),
+            'id': 'npc-enemy',
+            'model': {
+              'top': {
+                'event-range': 5,
+                'event-todo': [
+                  {
+                    'todo': 'webgl_character_hit',
+                    'type': 'function',
+                    'value': {
+                      'id': 'npc-enemy',
+                      'xz': 0.3,
+                      'y': 0.5
+                    }
+                  }
+                ],
+              },
+            },
+            'spawn': {
+              'translate-x': 140,
+              'translate-z': -60,
+            },
+          },
         ],
-      },
-    });
-
-    webgl_character_init({
-      ...stats(0),
-      'id': 'npc-friend',
-      'spawn': {
-        'translate-z': -60,
-      },
-    });
-    webgl_character_init({
-      ...stats(1),
-      'id': 'npc-enemy',
-      'model': {
-        'top': {
-          'event-range': 5,
-          'event-todo': [
-            {
-              'todo': 'webgl_character_hit',
-              'type': 'function',
-              'value': {
-                'id': 'npc-enemy',
-                'xz': 0.3,
-                'y': 0.5
-              }
-            }
-          ],
-        },
-      },
-      'spawn': {
-        'translate-x': 140,
-        'translate-z': -60,
       },
     });
 

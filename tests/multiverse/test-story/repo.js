@@ -107,6 +107,7 @@ function new_game(){
         ],
       },
     });
+
     update_ui();
 }
 

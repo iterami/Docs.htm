@@ -156,6 +156,13 @@ function new_game(){
               },
             ],
           },
+          {
+            ...stats(),
+            'id': 'test-enemy',
+            'spawn': {
+              'translate-z': -150,
+            },
+          },
         ],
         'prefabs': [
           {
@@ -205,13 +212,6 @@ function new_game(){
       },
     });
 
-    webgl_character_init({
-      ...stats(),
-      'id': 'test-enemy',
-      'spawn': {
-        'translate-z': -150,
-      },
-    });
     update_ui();
 }
 
