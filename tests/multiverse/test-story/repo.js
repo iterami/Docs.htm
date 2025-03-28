@@ -21,15 +21,7 @@ function choose(choice){
     update_ui();
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new story? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
-    choices = 0;
-
+function load_start(spawn){
     webgl_level_load({
       'character': {
         'controls': '',
@@ -84,7 +76,7 @@ function new_game(){
         },
         'characters': [
           {
-            'id': 'story-test',
+            'id': 'story-start',
             'static': true,
             'entities': [
               {
@@ -107,7 +99,18 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new story? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    choices = 0;
+
+    load_start(0);
     update_ui();
 }
 

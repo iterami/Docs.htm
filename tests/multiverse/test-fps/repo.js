@@ -21,23 +21,7 @@ function collect(args){
     });
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new match? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
-    core_object_reset(weapons);
-    Object.assign(
-      weapons,
-      {
-        'test-weapon': {
-          'ammo-max': 10,
-        },
-      }
-    );
-
+function load_bridge(){
     webgl_level_load({
       'character': stats(),
       'json': {
@@ -47,7 +31,7 @@ function new_game(){
         'y-min': -100,
         'characters': [
           {
-            'id': 'fps-test',
+            'id': 'map-bridge',
             'static': true,
             'entities': [
               {
@@ -174,7 +158,7 @@ function new_game(){
                   .2, .2, .2, 1,
                 ],
               },
-              'character': 'fps-test',
+              'character': 'map-bridge',
               'size-x': 100,
               'size-y': 10,
               'size-z': 60,
@@ -195,7 +179,7 @@ function new_game(){
                   .2, .2, .2, 1,
                 ],
               },
-              'character': 'fps-test',
+              'character': 'map-bridge',
               'size-x': 100,
               'size-y': 10,
               'size-z': 60,
@@ -211,7 +195,26 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new match? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    core_object_reset(weapons);
+    Object.assign(
+      weapons,
+      {
+        'test-weapon': {
+          'ammo-max': 10,
+        },
+      }
+    );
+
+    load_bridge();
     update_ui();
 }
 

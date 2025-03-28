@@ -1,12 +1,6 @@
 'use strict';
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new experience? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
+function load_hallway(){
     webgl_level_load({
       'character': {
         'collide-range-y': 5,
@@ -99,7 +93,7 @@ function new_game(){
                 ],
                 'texture': 'grid.png',
               },
-              'character': 'horror-test',
+              'character': 'horror-hallway',
               'size-x': -40,
               'size-y': -20,
               'size-z': -40,
@@ -115,6 +109,16 @@ function new_game(){
         ],
       },
     });
+}
+
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new experience? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    load_hallway();
 }
 
 function repo_escape(){

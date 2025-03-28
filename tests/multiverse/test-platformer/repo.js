@@ -14,13 +14,7 @@ function collect(args){
     });
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new game? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
+function load_skymap(spawn){
     webgl_level_load({
       'character': {
         'camera-zoom': 25,
@@ -42,6 +36,7 @@ function new_game(){
       },
       'json': {
         'camera-zoom-min': 10,
+        'clear-color': [0, 0, .2],
         'pointerlock': true,
         'y-min': -100,
         'paths': {
@@ -97,7 +92,7 @@ function new_game(){
         },
         'characters': [
           {
-            'id': 'platformer-test',
+            'id': 'platformer-skymap',
             'static': true,
             'entities': [
               {
@@ -355,7 +350,7 @@ function new_game(){
                   .2, .2, .2, 1,
                 ],
               },
-              'character': 'platformer-test',
+              'character': 'platformer-skymap',
               'size-x': 40,
               'size-y': 10,
               'size-z': 100,
@@ -371,7 +366,16 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new game? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    load_skymap(0);
     update_ui();
 }
 

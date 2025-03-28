@@ -44,17 +44,7 @@ function lap_update(args){
     update_ui();
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new race? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
-    lap_max = 3;
-    mark_max = 5;
-    position_max = 0;
-
+function load_testtrack(){
     webgl_level_load({
       'character': stats(),
       'json': {
@@ -62,7 +52,7 @@ function new_game(){
         'camera-zoom-max': 30,
         'characters': [
           {
-            'id': 'racing-test',
+            'id': 'racing-testtrack',
             'static': true,
             'entities': [
               {
@@ -258,7 +248,7 @@ function new_game(){
                 'texture-x': 3,
                 'texture-y': 3,
               },
-              'character': 'racing-test',
+              'character': 'racing-testtrack',
               'size-x': -500,
               'size-y': -100,
               'size-z': -1000,
@@ -284,7 +274,7 @@ function new_game(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-test',
+              'character': 'racing-testtrack',
               'size-x': 20,
               'size-y': 100,
               'size-z': 500,
@@ -310,7 +300,7 @@ function new_game(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-test',
+              'character': 'racing-testtrack',
               'left': {
                 'exclude': true,
               },
@@ -337,7 +327,7 @@ function new_game(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-test',
+              'character': 'racing-testtrack',
               'right': {
                 'exclude': true,
               },
@@ -363,7 +353,7 @@ function new_game(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-test',
+              'character': 'racing-testtrack',
               'left': {
                 'exclude': true,
               },
@@ -378,7 +368,20 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new race? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    lap_max = 3;
+    mark_max = 5;
+    position_max = 0;
+
+    load_testtrack();
     racer_add(webgl_character_id);
     racer_add('test-racer');
     update_ui();

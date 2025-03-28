@@ -16,57 +16,7 @@ function build(id, building){
     update_ui();
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new base? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
-    core_object_reset(tech);
-    Object.assign(
-      tech,
-      {
-        'builder': {
-          'builds': [
-            'factory',
-            'turret',
-          ],
-          'cost': 100,
-          'time': 100,
-          'type': 'unit',
-        },
-        'factory': {
-          'builds': ['builder'],
-          'cost': 1000,
-          'time': 200,
-          'type': 'building',
-        },
-        'turret': {
-          'builds': [],
-          'cost': 250,
-          'time': 150,
-          'type': 'building',
-        },
-      }
-    );
-
-    for(const id in tech){
-        core_html({
-          'parent': core_elements['build'],
-          'properties': {
-            'id': 'build-' + id,
-            'onclick': function(){
-                build(webgl_character_id, id);
-            },
-            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
-            'type': 'button',
-          },
-          'store': 'build-' + id,
-          'type': 'button',
-        });
-    }
-
+function load_testmap(){
     webgl_level_load({
       'character': {
         'building': {},
@@ -87,7 +37,7 @@ function new_game(){
         'camera-zoom-min': 20,
         'characters': [
           {
-            'id': 'rts-test',
+            'id': 'rts-testmap',
             'static': true,
             'entities': [
               {
@@ -185,8 +135,62 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new base? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    core_object_reset(tech);
+    Object.assign(
+      tech,
+      {
+        'builder': {
+          'builds': [
+            'factory',
+            'turret',
+          ],
+          'cost': 100,
+          'time': 100,
+          'type': 'unit',
+        },
+        'factory': {
+          'builds': ['builder'],
+          'cost': 1000,
+          'time': 200,
+          'type': 'building',
+        },
+        'turret': {
+          'builds': [],
+          'cost': 250,
+          'time': 150,
+          'type': 'building',
+        },
+      }
+    );
+
+    for(const id in tech){
+        core_html({
+          'parent': core_elements['build'],
+          'properties': {
+            'id': 'build-' + id,
+            'onclick': function(){
+                build(webgl_character_id, id);
+            },
+            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
+            'type': 'button',
+          },
+          'store': 'build-' + id,
+          'type': 'button',
+        });
+    }
+
+    load_testmap();
     select();
+
     update_ui();
 }
 

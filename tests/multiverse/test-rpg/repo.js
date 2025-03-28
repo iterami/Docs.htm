@@ -24,13 +24,7 @@ function kill(id){
     }
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Start a new adventure? Progress will be lost.')){
-        return;
-    }
-    webgl_character_id = '_me';
-
+function load_town(spawn){
     webgl_level_load({
       'character': {
         ...stats(0),
@@ -38,10 +32,11 @@ function new_game(){
       },
       'json': {
         'camera-zoom-min': 10,
+        'clear-color': [0, .2, 0],
         'y-min': -100,
         'characters': [
           {
-            'id': 'rpg-test',
+            'id': 'rpg-town',
             'static': true,
             'entities': [
               {
@@ -128,7 +123,16 @@ function new_game(){
         ],
       },
     });
+}
 
+function new_game(){
+    if(webgl !== 0
+      && !globalThis.confirm('Start a new adventure? Progress will be lost.')){
+        return;
+    }
+    webgl_character_id = '_me';
+
+    load_town(0);
     update_ui();
 }
 
