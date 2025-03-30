@@ -23,7 +23,7 @@
   <tbody id=core_mouse></tbody>
     <tr class=header>
       <td><input checked id=check-keys type=checkbox>Keys
-      <td>state
+      <td id=code>
   <tbody id=keys>
 </table>
 
@@ -54,6 +54,7 @@ function repo_init(){
       'ui-elements': [
         'check-keys',
         'check-mouse',
+        'code',
         'deltaY',
         'keys',
       ],
@@ -96,19 +97,22 @@ function update_keys(event){
         return;
     }
     if(event
-      && event.code
-      && !event.ctrlKey
-      && !event.altKey
-      && !event.metaKey
-      && event.code !== 'ControlLeft'
-      && event.code !== 'ControlRight'
-      && event.code !== 'AltLeft'
-      && event.code !== 'AltRight'
-      && !core_keys[event.code]){
-        core_keys[event.code] = {
-          'preventDefault': false,
-          'state': true,
-        };
+      && event.code){
+        core_elements['code'].textContent = event.code;
+
+        if(!event.ctrlKey
+          && !event.altKey
+          && !event.metaKey
+          && event.code !== 'ControlLeft'
+          && event.code !== 'ControlRight'
+          && event.code !== 'AltLeft'
+          && event.code !== 'AltRight'
+          && !core_keys[event.code]){
+            core_keys[event.code] = {
+              'preventDefault': false,
+              'state': true,
+            };
+        }
     }
     update(event);
 
