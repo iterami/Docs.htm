@@ -1,48 +1,16 @@
 {
   "title": "Lighting Test",
+  "ambient-color": [0, 0, 0],
+  "directional-state": false,
   "paths": {
     "loop": {
       "end": "loop",
       "points": [
         {
-          "translate-x": -20,
-          "translate-y": 40,
-          "translate-z": -20
+          "translate-z": -100
         },
         {
-          "translate-x": 20,
-          "translate-y": 0,
-          "translate-z": 20
-        },
-        {
-          "translate-x": -20,
-          "translate-y": 0,
-          "translate-z": 20
-        },
-        {
-          "translate-x": 20,
-          "translate-y": 40,
-          "translate-z": -20
-        },
-        {
-          "translate-x": 20,
-          "translate-y": 40,
-          "translate-z": 20
-        },
-        {
-          "translate-x": -20,
-          "translate-y": 0,
-          "translate-z": -20
-        },
-        {
-          "translate-x": 20,
-          "translate-y": 0,
-          "translate-z": -20
-        },
-        {
-          "translate-x": -20,
-          "translate-y": 40,
-          "translate-z": 20
+          "translate-z": 0
         }
       ],
       "speed": 0.5
@@ -52,6 +20,27 @@
     {
       "id": "test-lighting",
       "static": true
+    },
+    {
+      "id": "light",
+      "path-id": "loop",
+      "entities": [
+        {
+          "id": "light",
+          "billboard": true,
+          "collision": false,
+          "light-range": 25,
+          "vertex-colors": [
+            0.7, 0, 0, 1
+          ],
+          "vertices": [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0
+          ]
+        }
+      ]
     }
   ],
   "prefabs": [
@@ -59,10 +48,16 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid",
+        "all": {
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ]
+        },
         "character": "test-lighting",
-        "size-x": -50,
-        "size-y": -50,
-        "size-z": -50
+        "size-x": -20,
+        "size-y": -20,
+        "size-z": -100,
+        "translate-z": -50
       }
     }
   ]
