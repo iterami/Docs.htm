@@ -148,6 +148,8 @@
               "value": -100
             }
           ],
+          "light-color": [1, 1, 1],
+          "light-range": 0,
           "particle": false,
           "picking": false,
           "point-size": 500,
