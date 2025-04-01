@@ -1,7 +1,7 @@
 {
   "title": "Terrain Stress Test",
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {
@@ -33,11 +33,11 @@
         "prefix": "terrain",
         "character": "stress-terrain",
         "height-random": 50,
+        "position-y": -50,
         "tiles-x": 1500,
         "tiles-x-size": 100,
         "tiles-z": 1500,
-        "tiles-z-size": 100,
-        "translate-y": -50
+        "tiles-z-size": 100
       }
     }
   ]

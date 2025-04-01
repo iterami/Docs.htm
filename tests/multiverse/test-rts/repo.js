@@ -184,7 +184,7 @@ function new_game(){
       'level': -1,
       'lock': {
         'camera-rotate-x': 60,
-        'translate-y': 5,
+        'position-y': 5,
       },
       'money': 1000,
       'selected': '',

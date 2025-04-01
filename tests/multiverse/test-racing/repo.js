@@ -64,12 +64,12 @@ function load_testtrack(){
                 'event-todo': [
                   {
                     'set': true,
-                    'stat': 'change-translate-y',
+                    'stat': 'change-position-y',
                     'value': 3,
                   },
                   {
                     'set': true,
-                    'stat': 'change-translate-z',
+                    'stat': 'change-position-z',
                     'value': 3,
                   },
                 ],
@@ -249,6 +249,7 @@ function load_testtrack(){
                 'texture-y': 3,
               },
               'character': 'racing-testtrack',
+              'position-y': 49,
               'size-x': -500,
               'size-y': -100,
               'size-z': -1000,
@@ -256,7 +257,6 @@ function load_testtrack(){
                 'texture-x': 3,
                 'texture-y': 4,
               },
-              'translate-y': 49,
             },
           },
           {
@@ -275,14 +275,14 @@ function load_testtrack(){
                 'exclude': true,
               },
               'character': 'racing-testtrack',
+              'position-x': -83.3,
+              'position-y': 49,
               'size-x': 20,
               'size-y': 100,
               'size-z': 500,
               'top': {
                 'exclude': true,
               },
-              'translate-x': -83.3,
-              'translate-y': 49,
             },
           },
           {
@@ -304,12 +304,12 @@ function load_testtrack(){
               'left': {
                 'exclude': true,
               },
+              'position-x': 51.7,
+              'position-y': 9,
+              'position-z': 240,
               'size-x': 250,
               'size-y': 20,
               'size-z': 20,
-              'translate-x': 51.7,
-              'translate-y': 9,
-              'translate-z': 240,
             },
           },
           {
@@ -331,11 +331,11 @@ function load_testtrack(){
               'right': {
                 'exclude': true,
               },
+              'position-x': 125,
+              'position-y': 9,
               'size-x': 250,
               'size-y': 20,
               'size-z': 20,
-              'translate-x': 125,
-              'translate-y': 9,
             },
           },
           {
@@ -357,12 +357,12 @@ function load_testtrack(){
               'left': {
                 'exclude': true,
               },
+              'position-x': 51.7,
+              'position-y': 9,
+              'position-z': -240,
               'size-x': 250,
               'size-y': 20,
               'size-z': 20,
-              'translate-x': 51.7,
-              'translate-y': 9,
-              'translate-z': -240,
             },
           },
         ],
@@ -415,10 +415,10 @@ function racer_add(id){
           'id': vehicle,
           'level': 0,
           'spawn': {
+            'position-x': -25,
+            'position-y': 5,
+            'position-z': 250 + 25 * position_max,
             'rotate-y': 90,
-            'translate-x': -25,
-            'translate-y': 5,
-            'translate-z': 250 + 25 * position_max,
           },
           'turn-speed': 2,
           'vehicle-stats': {

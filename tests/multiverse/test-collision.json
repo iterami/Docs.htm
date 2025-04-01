@@ -1,7 +1,7 @@
 {
   "title": "Collision Test",
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {
@@ -86,12 +86,12 @@
       "properties": {
         "prefix": "cuboid-0",
         "character": "test-collision",
+        "position-x": 30,
+        "position-y": 5,
+        "position-z": -20,
         "size-x": 10,
         "size-y": 10,
-        "size-z": 10,
-        "translate-x": 30,
-        "translate-y": 5,
-        "translate-z": -20
+        "size-z": 10
       }
     },
     {
@@ -99,12 +99,12 @@
       "properties": {
         "prefix": "cuboid-1",
         "character": "test-collision",
+        "position-x": 30,
+        "position-y": 15,
+        "position-z": -30,
         "size-x": 10,
         "size-y": 10,
-        "size-z": 10,
-        "translate-x": 30,
-        "translate-y": 15,
-        "translate-z": -30
+        "size-z": 10
       }
     },
     {
@@ -112,11 +112,11 @@
       "properties": {
         "prefix": "cuboid-inverted",
         "character": "test-collision",
+        "position-y": 11,
+        "position-z": -30,
         "size-x": -20,
         "size-y": -20,
-        "size-z": -20,
-        "translate-y": 11,
-        "translate-z": -30
+        "size-z": -20
       }
     }
   ]

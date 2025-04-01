@@ -1,8 +1,8 @@
 {
   "title": "Scaling Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 25
+    "position-y": 5,
+    "position-z": 25
   },
   "characters": [
     {
@@ -152,12 +152,12 @@
     {
       "id": "character",
       "spawn": {
+        "position-x": -25,
+        "position-y": 0,
+        "position-z": 0,
         "scale-x": 2,
         "scale-y": 2,
-        "scale-z": 2,
-        "translate-x": -25,
-        "translate-y": 0,
-        "translate-z": 0
+        "scale-z": 2
       }
     }
   ],

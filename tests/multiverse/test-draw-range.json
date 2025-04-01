@@ -2,7 +2,7 @@
   "title": "Draw Range Test",
   "draw-range": 100,
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {

@@ -26,13 +26,14 @@ function load_hallway(){
                 ],
                 'texture': 'grid.png',
               },
-              'front': {
-                'texture': 'door.png',
-              },
-              'character': 'horror-hallway',
               'back': {
                 'exclude': true,
               },
+              'character': 'horror-hallway',
+              'front': {
+                'texture': 'door.png',
+              },
+              'position-y': 5,
               'size-x': -10,
               'size-y': -10,
               'size-z': -80,
@@ -40,7 +41,6 @@ function load_hallway(){
                 'texture-x': 2,
                 'texture-y': 16,
               },
-              'translate-y': 5,
             },
           },
           {
@@ -57,6 +57,9 @@ function load_hallway(){
               'left': {
                 'exclude': true,
               },
+              'position-x': 20,
+              'position-y': 5,
+              'position-z': -45,
               'size-x': -50,
               'size-y': -10,
               'size-z': -10,
@@ -64,9 +67,6 @@ function load_hallway(){
                 'texture-x': 10,
                 'texture-y': 2,
               },
-              'translate-x': 20,
-              'translate-y': 5,
-              'translate-z': -45,
             },
           },
           {
@@ -80,6 +80,9 @@ function load_hallway(){
                 'texture': 'grid.png',
               },
               'character': 'horror-hallway',
+              'position-x': 65,
+              'position-y': 10,
+              'position-z': -45,
               'size-x': -40,
               'size-y': -20,
               'size-z': -40,
@@ -87,9 +90,6 @@ function load_hallway(){
                 'texture-x': 8,
                 'texture-y': 8,
               },
-              'translate-x': 65,
-              'translate-y': 10,
-              'translate-z': -45,
             },
           },
         ],
@@ -115,8 +115,8 @@ function new_game(){
       'jump-height': 0,
       'spawn': {
         'camera-rotate-y': 180,
+        'position-z': 35,
         'rotate-y': 180,
-        'translate-z': 35,
       },
       'speed': .25,
     });

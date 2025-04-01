@@ -1,8 +1,8 @@
 {
   "title": "Primitive Stars Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -40,56 +40,56 @@
     {
       "type": "webgl_primitive_stars",
       "properties": {
+        "prefix": "0.25",
         "character": "test-primitive-stars",
         "height-limit": 0.25,
-        "prefix": "0.25",
+        "position-x": -30,
+        "position-z": -30,
         "radius": 20,
         "range": 0,
-        "stars": 1000,
-        "translate-x": -30,
-        "translate-z": -30
+        "stars": 1000
       }
     },
     {
       "type": "webgl_primitive_stars",
       "properties": {
+        "prefix": "0.5",
         "character": "test-primitive-stars",
         "height-limit": 0.5,
-        "prefix": "0.5",
+        "position-x": 30,
+        "position-y": 10,
+        "position-z": -30,
         "radius": 20,
         "range": 0,
-        "stars": 1000,
-        "translate-x": 30,
-        "translate-y": 10,
-        "translate-z": -30
+        "stars": 1000
       }
     },
     {
       "type": "webgl_primitive_stars",
       "properties": {
+        "prefix": "0.75",
         "character": "test-primitive-stars",
         "height-limit": 0.75,
-        "prefix": "0.75",
+        "position-x": 30,
+        "position-y": 20,
+        "position-z": 30,
         "radius": 20,
         "range": 0,
-        "stars": 1000,
-        "translate-x": 30,
-        "translate-y": 20,
-        "translate-z": 30
+        "stars": 1000
       }
     },
     {
       "type": "webgl_primitive_stars",
       "properties": {
+        "prefix": "1",
         "character": "test-primitive-stars",
         "height-limit": 1,
-        "prefix": "1",
+        "position-x": -30,
+        "position-y": 30,
+        "position-z": 30,
         "radius": 20,
         "range": 0,
-        "stars": 1000,
-        "translate-x": -30,
-        "translate-y": 30,
-        "translate-z": 30
+        "stars": 1000
       }
     }
   ]

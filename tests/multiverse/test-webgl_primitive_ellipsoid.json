@@ -1,8 +1,8 @@
 {
   "title": "Primitive Ellipsoid Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -33,11 +33,11 @@
       "properties": {
         "prefix": "ellipsoid",
         "character": "test-primitive-ellipsoid",
+        "position-x": -10,
+        "position-y": 15,
         "radius-x": 5,
         "radius-y": 10,
-        "radius-z": 15,
-        "translate-x": -10,
-        "translate-y": 15
+        "radius-z": 15
       }
     },
     {
@@ -45,11 +45,11 @@
       "properties": {
         "prefix": "ellipsoid-inverse",
         "character": "test-primitive-ellipsoid",
+        "position-x": 10,
+        "position-y": 15,
         "radius-x": -5,
         "radius-y": -10,
-        "radius-z": -15,
-        "translate-x": 10,
-        "translate-y": 15
+        "radius-z": -15
       }
     }
   ]

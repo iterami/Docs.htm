@@ -1,8 +1,8 @@
 {
   "title": "Frustum Tree Prefab Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -38,6 +38,7 @@
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
+        "prefix": "tree-1",
         "bottom": true,
         "character": "test-frustum-tree",
         "height": 40,
@@ -48,11 +49,10 @@
         "leaf-points": 8,
         "leaf-separate": 10,
         "leaf-size": 10,
-        "prefix": "tree-1",
+        "position-z": -20,
         "trunk-color": [0.9, 0.7, 0.9, 1],
         "trunk-points": 10,
-        "trunk-size": 5,
-        "translate-z": -20
+        "trunk-size": 5
       }
     }
   ]

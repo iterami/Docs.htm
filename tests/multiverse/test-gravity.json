@@ -2,8 +2,8 @@
   "title": "Gravity Test",
   "gravity-damage": true,
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 25
+    "position-y": 5,
+    "position-z": 25
   },
   "y-min": -150,
   "characters": [
@@ -50,9 +50,9 @@
       "life": 100,
       "life-max": 100,
       "spawn": {
-        "translate-x": -15,
-        "translate-y": 50,
-        "translate-z": 0
+        "position-x": -15,
+        "position-y": 50,
+        "position-z": 0
       },
       "entities": [
         {
@@ -76,8 +76,8 @@
       "life": 100,
       "life-max": 100,
       "spawn": {
-        "translate-y": 50,
-        "translate-z": 0
+        "position-y": 50,
+        "position-z": 0
       },
       "entities": [
         {
@@ -101,9 +101,9 @@
       "life": 100,
       "life-max": 100,
       "spawn": {
-        "translate-x": 15,
-        "translate-y": 50,
-        "translate-z": 0
+        "position-x": 15,
+        "position-y": 50,
+        "position-z": 0
       },
       "entities": [
         {

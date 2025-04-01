@@ -1,8 +1,8 @@
 {
   "title": "Vehicles Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "y-min": -100,
   "characters": [
@@ -125,7 +125,7 @@
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "translate-x": -25
+        "position-x": -25
       },
       "turn-speed": 2,
       "vehicle-stats": {
@@ -162,7 +162,7 @@
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "translate-x": -75
+        "position-x": -75
       },
       "turn-speed": 2,
       "vehicle-stats": {
@@ -198,7 +198,7 @@
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "translate-x": -90
+        "position-x": -90
       },
       "turn-speed": 2,
       "vehicle-stats": {
@@ -234,7 +234,7 @@
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "translate-x": -105
+        "position-x": -105
       },
       "turn-speed": 2,
       "vehicle-stats": {
@@ -305,7 +305,7 @@
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "translate-x": 25
+        "position-x": 25
       },
       "turn-speed": 2,
       "vehicle-stats": {
@@ -349,10 +349,10 @@
           "exclude": true
         },
         "character": "test-vehicles",
+        "position-y": -10,
         "size-x": 100,
         "size-y": 20,
-        "size-z": 100,
-        "translate-y": -10
+        "size-z": 100
       }
     }
   ]

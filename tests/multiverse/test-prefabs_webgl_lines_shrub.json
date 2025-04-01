@@ -1,7 +1,7 @@
 {
   "title": "Lines Shrub Prefab Test",
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {
@@ -30,6 +30,7 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
+        "prefix": "shrub-short",
         "base-color": [
           0.3, 0.15, 0, 1
         ],
@@ -39,9 +40,8 @@
         ],
         "leaf-distance": 10,
         "points": 100,
-        "prefix": "shrub-short",
-        "translate-x": -30,
-        "translate-z": -20,
+        "position-x": -30,
+        "position-z": -20,
         "x-max": 10,
         "x-min": -10,
         "y-max": 10,
@@ -52,6 +52,7 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
+        "prefix": "shrub-tall",
         "base-color": [
           0.3, 0.15, 0, 1
         ],
@@ -61,9 +62,8 @@
         ],
         "leaf-distance": 10,
         "points": 100,
-        "prefix": "shrub-tall",
-        "translate-x": -10,
-        "translate-z": -20,
+        "position-x": -10,
+        "position-z": -20,
         "x-max": 5,
         "x-min": -5,
         "y-max": 30,
@@ -74,6 +74,7 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
+        "prefix": "shrub-filled",
         "base-color": [
           0.3, 0.15, 0, 1
         ],
@@ -84,9 +85,8 @@
         ],
         "leaf-distance": 10,
         "points": 100,
-        "prefix": "shrub-filled",
-        "translate-x": 10,
-        "translate-z": -20,
+        "position-x": 10,
+        "position-z": -20,
         "x-max": 5,
         "x-min": -5,
         "y-max": 30,
@@ -97,6 +97,7 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
+        "prefix": "shrub-line",
         "base-color": [
           0.3, 0.15, 0, 1
         ],
@@ -106,9 +107,8 @@
         ],
         "leaf-distance": 10,
         "points": 25,
-        "prefix": "shrub-line",
-        "translate-x": 30,
-        "translate-z": -20,
+        "position-x": 30,
+        "position-z": -20,
         "type": "offset",
         "x-max": 4,
         "x-min": -4,

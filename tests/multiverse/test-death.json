@@ -1,7 +1,7 @@
 {
   "title": "Death Test",
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {

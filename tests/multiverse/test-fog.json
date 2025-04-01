@@ -3,7 +3,7 @@
   "fog-density": 0.001,
   "fog-state": true,
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {

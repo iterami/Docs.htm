@@ -1,8 +1,8 @@
 {
   "title": "Attach Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -55,8 +55,8 @@
       ],
       "spawn": {
         "change-rotate-x": 5,
-        "translate-x": -15,
-        "translate-z": -15
+        "position-x": -15,
+        "position-z": -15
       }
     },
     {
@@ -88,7 +88,7 @@
       ],
       "spawn": {
         "change-rotate-y": 5,
-        "translate-z": -15
+        "position-z": -15
       }
     },
     {
@@ -120,8 +120,8 @@
       ],
       "spawn": {
         "change-rotate-z": 5,
-        "translate-x": 15,
-        "translate-z": -15
+        "position-x": 15,
+        "position-z": -15
       }
     }
   ]

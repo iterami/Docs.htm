@@ -1,8 +1,8 @@
 {
   "title": "Primitive Terrain Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -33,7 +33,7 @@
       "properties": {
         "prefix": "default",
         "character": "test-primitive-terrain",
-        "translate-y": 5
+        "position-y": 5
       }
     },
     {
@@ -57,10 +57,10 @@
         "heights": [
           -30, -30, -30, 0, 0, 0, 0, 0, 0, 60, 60, 60
         ],
+        "position-z": -75,
         "tiles-x-size": 25,
         "tiles-z": 1,
-        "tiles-z-size": 50,
-        "translate-z": -75
+        "tiles-z-size": 50
       }
     }
   ]

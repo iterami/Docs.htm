@@ -96,7 +96,7 @@ function load_cave(){
               },
             },
             'spawn': {
-              'translate-z': -40,
+              'position-z': -40,
             },
           },
         ],
@@ -109,9 +109,9 @@ function load_town(spawn){
       {},
       {
         'camera-rotate-y': 180,
+        'position-x': 100,
+        'position-z': -65,
         'rotate-y': 180,
-        'translate-x': 100,
-        'translate-z': -65,
       }
     ];
     webgl_level_load({
@@ -202,9 +202,9 @@ function load_town(spawn){
             ...stats(0),
             'id': 'npc-friend',
             'spawn': {
+              'position-x': 0,
+              'position-z': -50,
               'rotate-y': 0,
-              'translate-x': 0,
-              'translate-z': -50,
             },
           },
         ],
@@ -364,7 +364,7 @@ function stats(team){
       'skill': '',
       'spawn': {
         'camera-rotate-x': 30,
-        'translate-y': 5,
+        'position-y': 5,
       },
       'speed': .5,
       'talent-points': 0,

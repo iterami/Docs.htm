@@ -7,10 +7,10 @@
       "end": "loop",
       "points": [
         {
-          "translate-z": -100
+          "position-z": -100
         },
         {
-          "translate-z": 0
+          "position-z": 0
         }
       ],
       "speed": 0.5
@@ -56,10 +56,10 @@
           ]
         },
         "character": "test-lighting",
+        "position-z": -50,
         "size-x": -20,
         "size-y": -20,
-        "size-z": -100,
-        "translate-z": -50
+        "size-z": -100
       }
     }
   ]

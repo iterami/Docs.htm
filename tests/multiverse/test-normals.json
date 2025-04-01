@@ -1,8 +1,8 @@
 {
   "title": "Normals Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -63,9 +63,9 @@
       "id": "cuboid-rotating",
       "spawn": {
         "change-rotate-z": 1,
-        "translate-x": 15,
-        "translate-y": 10,
-        "translate-z": 0
+        "position-x": 15,
+        "position-y": 10,
+        "position-z": 0
       }
     }
   ],
@@ -81,10 +81,10 @@
           ]
         },
         "character": "test-normals",
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {

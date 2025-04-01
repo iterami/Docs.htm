@@ -1,8 +1,8 @@
 {
   "title": "Humanoid Prefab Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {

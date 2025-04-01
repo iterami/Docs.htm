@@ -1,8 +1,8 @@
 {
   "title": "Tree 2D Prefab Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -38,14 +38,14 @@
     {
       "type": "prefabs_webgl_tree_2d",
       "properties": {
+        "prefix": "tree-modified",
         "base-color": [0.1, 0.3, 0.1, 1],
         "billboard": true,
         "character": "test-tree-2d",
         "height": 10,
         "height-range": 40,
         "leaf-color": [0.4, 0.2, 0, 1],
-        "prefix": "tree-modified",
-        "translate-z": -25,
+        "position-z": -25,
         "width-base": 6,
         "width-leaf": 20
       }

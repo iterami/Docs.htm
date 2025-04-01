@@ -1,7 +1,7 @@
 {
   "title": "Tiles Prefab Test",
   "spawn": {
-    "translate-y": 5
+    "position-y": 5
   },
   "characters": [
     {
@@ -33,6 +33,9 @@
         "prefix": "tiles-order",
         "character": "test-tiles",
         "order": [2, 2, 2, 2, 2, 0, 1, 0, 1],
+        "position-x": -50,
+        "position-y": 10,
+        "position-z": -35,
         "tiles": [
           {
             "attach-z": -20,
@@ -108,10 +111,7 @@
           }
         ],
         "tiles-max": 20,
-        "tiles-min": 2,
-        "translate-x": -50,
-        "translate-y": 10,
-        "translate-z": -35
+        "tiles-min": 2
       }
     },
     {
@@ -119,6 +119,8 @@
       "properties": {
         "prefix": "tiles-random",
         "character": "test-tiles",
+        "position-y": 10,
+        "position-z": -35,
         "tiles": [
           {
             "attach-z": -20,
@@ -194,9 +196,7 @@
           }
         ],
         "tiles-max": 20,
-        "tiles-min": 2,
-        "translate-y": 10,
-        "translate-z": -35
+        "tiles-min": 2
       }
     },
     {
@@ -204,6 +204,9 @@
       "properties": {
         "prefix": "tiles-repeat",
         "character": "test-tiles",
+        "position-x": 50,
+        "position-y": 10,
+        "position-z": -35,
         "repeat": 2,
         "tiles": [
           {
@@ -230,7 +233,7 @@
               {
                 "id": "tile-character",
                 "path-id": "tile-path",
-                "translate-y": -9
+                "position-y": -9
               }
             ],
             "entities": [
@@ -254,10 +257,10 @@
                 "end": "loop",
                 "points": [
                   {
-                    "translate-x": -10
+                    "position-x": -10
                   },
                   {
-                    "translate-x": 10
+                    "position-x": 10
                   }
                 ]
               }
@@ -313,10 +316,7 @@
               }
             ]
           }
-        ],
-        "translate-x": 50,
-        "translate-y": 10,
-        "translate-z": -35
+        ]
       }
     }
   ]

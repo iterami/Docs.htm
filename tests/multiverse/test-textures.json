@@ -1,8 +1,8 @@
 {
   "title": "Textures Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 20
+    "position-y": 5,
+    "position-z": 20
   },
   "textures": {
     "gear.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEVCQkLb29sGyERuAAAAgklEQVQY04XQsQ2AQAgFUIyJlNfa3SImbqZ2rnUbuIIjWFJc/ILJb4xGmtcQ4CP/pfZqr9aFg1oKJ7W8uFAbi0iD1eY93CpcgVdxZzf6RteRDJxhAmqoZ7Zb09t0tDXA3qCGtMi3z37O4Vzu4V7ewbt4J+9mDuZiTubmH/iXj7/91wWexXU3xpBXrwAAAABJRU5ErkJggg=="
@@ -231,11 +231,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {
@@ -250,11 +250,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -10,
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -10,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {
@@ -269,10 +269,10 @@
           ]
         },
         "character": "test-textures",
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {
@@ -287,11 +287,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 10,
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 10,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {
@@ -306,11 +306,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 20,
+        "position-y": 10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 20,
-        "translate-y": 10
+        "size-z": 5
       }
     },
     {
@@ -325,12 +325,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 10,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 10,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -346,12 +346,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -10,
+        "position-y": 10,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -10,
-        "translate-y": 10,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -366,11 +366,11 @@
           ]
         },
         "character": "test-textures",
+        "position-y": 10,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-y": 10,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -385,12 +385,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 10,
+        "position-y": 10,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 10,
-        "translate-y": 10,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -405,12 +405,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 20,
+        "position-y": 10,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 20,
-        "translate-y": 10,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -425,12 +425,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 10,
+        "position-z": -20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 10,
-        "translate-z": -20
+        "size-z": 5
       }
     },
     {
@@ -445,11 +445,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 20
+        "size-z": 5
       }
     },
     {
@@ -464,11 +464,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -10,
+        "position-y": 20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -10,
-        "translate-y": 20
+        "size-z": 5
       }
     },
     {
@@ -483,10 +483,10 @@
           ]
         },
         "character": "test-textures",
+        "position-y": 20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-y": 20
+        "size-z": 5
       }
     },
     {
@@ -501,11 +501,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 10,
+        "position-y": 20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 10,
-        "translate-y": 20
+        "size-z": 5
       }
     },
     {
@@ -520,11 +520,11 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 20,
+        "position-y": 20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 20,
-        "translate-y": 20
+        "size-z": 5
       }
     },
     {
@@ -539,12 +539,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 20,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 20,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -560,12 +560,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -10,
+        "position-y": 20,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -10,
-        "translate-y": 20,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -580,11 +580,11 @@
           ]
         },
         "character": "test-textures",
+        "position-y": 20,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-y": 20,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -599,12 +599,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 10,
+        "position-y": 20,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 10,
-        "translate-y": 20,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -619,12 +619,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": 20,
+        "position-y": 20,
+        "position-z": -10,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": 20,
-        "translate-y": 20,
-        "translate-z": -10
+        "size-z": 5
       }
     },
     {
@@ -639,12 +639,12 @@
           ]
         },
         "character": "test-textures",
+        "position-x": -20,
+        "position-y": 20,
+        "position-z": -20,
         "size-x": 5,
         "size-y": 5,
-        "size-z": 5,
-        "translate-x": -20,
-        "translate-y": 20,
-        "translate-z": -20
+        "size-z": 5
       }
     }
   ]

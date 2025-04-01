@@ -76,8 +76,8 @@ function load_skymap(spawn){
     const spawners = [
       {},
       {
-        'translate-x': -10,
-        'translate-z': -120,
+        'position-x': -10,
+        'position-z': -120,
       }
     ];
     webgl_level_load({
@@ -93,10 +93,10 @@ function load_skymap(spawn){
             'end': 'warp',
             'points': [
               {
-                'translate-x': -50,
+                'position-x': -50,
               },
               {
-                'translate-x': 50,
+                'position-x': 50,
               },
             ],
           },
@@ -105,25 +105,25 @@ function load_skymap(spawn){
             'speed': .2,
             'points': [
               {
-                'translate-y': 0,
+                'position-y': 0,
               },
               {
-                'translate-x': 15,
+                'position-x': 15,
               },
               {
-                'translate-z': 15,
+                'position-z': 15,
               },
               {
-                'translate-x': -15,
+                'position-x': -15,
               },
               {
-                'translate-z': 0,
+                'position-z': 0,
               },
               {
-                'translate-x': 0,
+                'position-x': 0,
               },
               {
-                'translate-y': -15,
+                'position-y': -15,
               },
             ],
           },
@@ -131,10 +131,10 @@ function load_skymap(spawn){
             'end': 'loop',
             'points': [
               {
-                'translate-z': -140,
+                'position-z': -140,
               },
               {
-                'translate-z': -100,
+                'position-z': -100,
               },
             ],
           },
@@ -312,9 +312,9 @@ function load_skymap(spawn){
             'level': 0,
             'path-id': 'fireball-0',
             'spawn': {
-              'translate-x': -50,
-              'translate-y': 3,
-              'translate-z': -50,
+              'position-x': -50,
+              'position-y': 3,
+              'position-z': -50,
             },
             'entities': [
               {
@@ -338,7 +338,7 @@ function load_skymap(spawn){
                     'value': 'boop',
                   },
                   {
-                    'stat': 'translate-x',
+                    'stat': 'position-x',
                     'todo': 'fireball-0',
                     'type': 'character',
                     'value': -100,
@@ -367,8 +367,8 @@ function load_skymap(spawn){
             'level': 0,
             'path-id': 'platform-0',
             'spawn': {
-              'translate-x': 0,
-              'translate-z': 0,
+              'position-x': 0,
+              'position-z': 0,
             },
           },
           {
@@ -376,9 +376,9 @@ function load_skymap(spawn){
             'level': 0,
             'path-id': 'wallmoving-0',
             'spawn': {
-              'translate-x': 0,
-              'translate-y': 10,
-              'translate-z': -140,
+              'position-x': 0,
+              'position-y': 10,
+              'position-z': -140,
             },
             'entities': [
               {
@@ -409,6 +409,7 @@ function load_skymap(spawn){
                 ],
               },
               'character': 'platform-0',
+              'position-y': -5,
               'size-x': 40,
               'size-y': 10,
               'size-z': 40,
@@ -417,7 +418,6 @@ function load_skymap(spawn){
                 'texture-x': 4,
                 'texture-y': 4,
               },
-              'translate-y': -5,
             },
           },
           {
@@ -430,6 +430,8 @@ function load_skymap(spawn){
                 ],
               },
               'character': 'platformer-skymap',
+              'position-y': -5,
+              'position-z': -90,
               'size-x': 40,
               'size-y': 10,
               'size-z': 100,
@@ -438,8 +440,6 @@ function load_skymap(spawn){
                 'texture-x': 4,
                 'texture-y': 10,
               },
-              'translate-y': -5,
-              'translate-z': -90,
             },
           },
         ],
@@ -468,9 +468,9 @@ function new_game(){
       'model': {},
       'spawn': {
         'camera-rotate-x': 30,
-        'translate-x': 0,
-        'translate-y': 5,
-        'translate-z': 0,
+        'position-x': 0,
+        'position-y': 5,
+        'position-z': 0,
       },
     });
     update_ui();

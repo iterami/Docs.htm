@@ -2,7 +2,7 @@
   "title": "Characters Test",
   "spawn": {
     "camera-rotate-x": 30,
-    "translate-y": 5
+    "position-y": 5
   },
   "y-min": -20,
   "characters": [
@@ -37,7 +37,7 @@
       "level": 1,
       "model": {},
       "spawn": {
-        "translate-z": -25
+        "position-z": -25
       }
     },
     {
@@ -64,7 +64,7 @@
         }
       },
       "spawn": {
-        "translate-x": -10
+        "position-x": -10
       }
     }
   ]

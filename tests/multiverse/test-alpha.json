@@ -1,8 +1,8 @@
 {
   "title": "Alpha Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 25
+    "position-y": 5,
+    "position-z": 25
   },
   "characters": [
     {
@@ -38,10 +38,10 @@
           "texture": "grid.png"
         },
         "character": "test-alpha",
+        "position-y": 20,
         "size-x": 10,
         "size-y": 10,
-        "size-z": 10,
-        "translate-y": 20
+        "size-z": 10
       }
     },
     {
@@ -54,10 +54,10 @@
           "texture": "grid.png"
         },
         "character": "test-alpha",
+        "position-y": 20,
         "size-x": 17,
         "size-y": 17,
-        "size-z": 17,
-        "translate-y": 20
+        "size-z": 17
       }
     },
     {
@@ -70,10 +70,10 @@
           "texture": "grid.png"
         },
         "character": "test-alpha",
+        "position-y": 20,
         "size-x": 24,
         "size-y": 24,
-        "size-z": 24,
-        "translate-y": 20
+        "size-z": 24
       }
     }
   ]

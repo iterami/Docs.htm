@@ -1,8 +1,8 @@
 {
   "title": "Primitive Cuboid Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -36,11 +36,11 @@
           "texture": "debug.png"
         },
         "character": "test-primitive-cuboid",
+        "position-x": -10,
+        "position-y": 15,
         "size-x": 5,
         "size-y": 10,
-        "size-z": 15,
-        "translate-x": -10,
-        "translate-y": 15
+        "size-z": 15
       }
     },
     {
@@ -51,11 +51,11 @@
           "texture": "debug.png"
         },
         "character": "test-primitive-cuboid",
+        "position-x": 10,
+        "position-y": 15,
         "size-x": -5,
         "size-y": -10,
-        "size-z": -15,
-        "translate-x": 10,
-        "translate-y": 15
+        "size-z": -15
       }
     }
   ]

@@ -1,8 +1,8 @@
 {
   "title": "Vertices Stress Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -33,12 +33,12 @@
       "properties": {
         "prefix": "ellipsoid",
         "character": "stress-vertices",
+        "position-y": 15,
         "radius-x": 10,
         "radius-y": 10,
         "radius-z": 10,
         "slices-latitude": 1500,
-        "slices-longitude": 1500,
-        "translate-y": 15
+        "slices-longitude": 1500
       }
     }
   ]

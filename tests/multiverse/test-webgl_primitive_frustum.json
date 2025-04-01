@@ -1,8 +1,8 @@
 {
   "title": "Primitive Frustum Test",
   "spawn": {
-    "translate-y": 5,
-    "translate-z": 10
+    "position-y": 5,
+    "position-z": 10
   },
   "characters": [
     {
@@ -31,42 +31,42 @@
     {
       "type": "webgl_primitive_frustum",
       "properties": {
+        "prefix": "frustum",
         "character": "test-primitive-frustum",
         "length": 10,
-        "prefix": "frustum",
+        "position-x": -10,
+        "position-y": 5,
         "size-bottom": 10,
-        "size-top": 5,
-        "translate-x": -10,
-        "translate-y": 5
+        "size-top": 5
       }
     },
     {
       "type": "webgl_primitive_frustum",
       "properties": {
+        "prefix": "frustum-inverse",
         "character": "test-primitive-frustum",
         "length": -10,
-        "prefix": "frustum-inverse",
+        "position-x": 10,
+        "position-y": 15,
         "size-bottom": -10,
-        "size-top": -5,
-        "translate-x": 10,
-        "translate-y": 15
+        "size-top": -5
       }
     },
     {
       "type": "webgl_primitive_frustum",
       "properties": {
+        "prefix": "pipe",
         "character": "test-primitive-frustum",
         "bottom": false,
         "color-bottom": [0.1, 0.1, 0.1, 1],
         "color-top": [0.1, 0.1, 0.1, 1],
         "length": 25,
         "points": 15,
-        "prefix": "pipe",
+        "position-y": 5,
+        "position-z": -25,
         "size-bottom": 2,
         "size-top": 2,
-        "top": false,
-        "translate-y": 5,
-        "translate-z": -25
+        "top": false
       }
     }
   ]

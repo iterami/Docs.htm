@@ -30,38 +30,38 @@ function load_start(spawn){
           'path-start': {
             'points': [
               {
-                'translate-z': 50,
+                'position-z': 50,
               },
               {
-                'translate-z': 25,
+                'position-z': 25,
               },
             ],
           },
           'path-left': {
             'points': [
               {
-                'translate-z': 25,
+                'position-z': 25,
               },
               {
-                'translate-x': -25,
-                'translate-z': 0,
+                'position-x': -25,
+                'position-z': 0,
               },
               {
-                'translate-z': -40,
+                'position-z': -40,
               },
             ],
           },
           'path-right': {
             'points': [
               {
-                'translate-z': 25,
+                'position-z': 25,
               },
               {
-                'translate-x': 25,
-                'translate-z': 0,
+                'position-x': 25,
+                'position-z': 0,
               },
               {
-                'translate-z': -40,
+                'position-z': -40,
               },
             ],
           },
@@ -108,8 +108,8 @@ function new_game(){
       'level': -1,
       'spawn': {
         'path-id': 'path-start',
-        'translate-y': 5,
-        'translate-z': 50,
+        'position-y': 5,
+        'position-z': 50,
       },
     });
     update_ui();
