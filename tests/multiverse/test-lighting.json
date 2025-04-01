@@ -29,6 +29,7 @@
           "id": "light",
           "billboard": true,
           "collision": false,
+          "light-color": [0, 1, 0],
           "light-range": 25,
           "vertex-colors": [
             0.7, 0, 0, 1
