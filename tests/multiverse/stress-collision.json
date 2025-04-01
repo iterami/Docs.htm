@@ -1,0 +1,65 @@
+{
+  "title": "Collision Stress Test",
+  "spawn": {
+    "position-y": 5
+  },
+  "characters": [
+    {
+      "id": "stress-collision",
+      "static": true,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.2, 0.2, 0.2, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "pick-stress",
+          "attach-y": 5,
+          "attach-z": -25,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_prefab_repeat",
+              "type": "function",
+              "value": {
+                "characters": true,
+                "count": 100,
+                "properties": {
+                  "character": "stress-collision",
+                  "all": {
+                    "draw": false
+                  }
+                },
+                "type": "webgl_primitive_cuboid"
+              }
+            },
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(entity_id_count)"
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        }
+      ]
+    }
+  ]
+}
