@@ -49,6 +49,7 @@
       "properties": {
         "prefix": "cuboid",
         "all": {
+          "texture": "lavaleaf.png",
           "vertex-colors": [
             0.5, 0.5, 0.5, 1
           ]
