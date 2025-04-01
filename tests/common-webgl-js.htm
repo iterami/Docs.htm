@@ -30,6 +30,7 @@ function repo_init(){
     });
     webgl_character_init({
       'id': 'test-character-0',
+      'level': 1,
       'spawn':{
         'position-x': 23,
       },
@@ -59,8 +60,8 @@ function repo_init(){
           'function': 'webgl_character_level',
         },
         {
-          'args': 'test-character-1',
-          'expect': 5,
+          'args': webgl_characters['test-character-0'],
+          'expect': 1,
           'function': 'webgl_character_level',
         },
         {
