@@ -6,8 +6,7 @@ function load_hallway(){
       'json': {
         'camera-zoom': 0,
         'camera-zoom-max': 0,
-        'fog-density': .001,
-        'fog-state': true,
+        'fog': 50,
         'pointerlock': true,
         'characters': [
           {

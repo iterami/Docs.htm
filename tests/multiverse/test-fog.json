@@ -1,7 +1,6 @@
 {
   "title": "Fog Test",
-  "fog-density": 0.001,
-  "fog-state": true,
+  "fog": 100,
   "spawn": {
     "position-y": 5
   },
