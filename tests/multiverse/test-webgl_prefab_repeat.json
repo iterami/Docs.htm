@@ -1,6 +1,6 @@
 {
   "title": "Prefab Repeat Test",
-  "fog": 100,
+  "fog-end": 100,
   "spawn": {
     "position-y": 5,
     "position-z": 10

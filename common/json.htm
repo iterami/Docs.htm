@@ -39,8 +39,10 @@
   // Optional. The maximum distance at which entities are drawn, or false for unlimited.
   "draw-range": 1000,
 
-  // Optional. Fog distance until entities are completely obscurbed by "clear-color", or 0 for no fog.
-  "fog": 100,
+  // Optional. Distance at which entites start getting obscurbed by the "clear-color"
+  //   until the end up being completely obscured. If "fog-end" is 0, no fog is computed.
+  "fog-end": 100,
+  "fog-start": 0,
 
   // Optional. Gravity acceleration, maxiumum downward terminal velocity, and if fall damage occurs.
   "gravity-acceleration": -0.05,
