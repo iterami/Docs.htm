@@ -105,7 +105,8 @@ function new_game(){
 
     load_hallway();
     webgl_character_init({
-      'collide-range-y': 5,
+      'collide-bottom': 5,
+      'collide-top': 5,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
