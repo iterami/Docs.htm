@@ -1,12 +1,7 @@
 'use strict';
 
 function lap_update(args){
-    const vehicle = webgl_characters[args['id']];
-    if(!vehicle['vehicle-stats']){
-        return;
-    }
-    const character = webgl_characters[vehicle['vehicle-stats']['character']];
-
+    const character = webgl_characters[args['id']];
     if(character['mark'] !== args['mark'] - 1){
         return;
     }
@@ -48,7 +43,6 @@ function load_testtrack(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-min': 10,
         'camera-zoom-max': 30,
         'characters': [
           {
@@ -88,7 +82,8 @@ function load_testtrack(){
                 'id': 'mark-goal',
                 'attach-y': -.9,
                 'attach-z': 375,
-                'event-range': 0,
+                'collision': false,
+                'event-range': [20, 100, 125],
                 'event-todo': [
                   {
                     'target': true,
@@ -118,7 +113,8 @@ function load_testtrack(){
                 'attach-x': 210,
                 'attach-y': -.9,
                 'attach-z': 240,
-                'event-range': 0,
+                'collision': false,
+                'event-range': [40, 100, 10],
                 'event-todo': [
                   {
                     'target': true,
@@ -147,7 +143,8 @@ function load_testtrack(){
                 'id': 'mark-2',
                 'attach-x': -33,
                 'attach-y': -.9,
-                'event-range': 0,
+                'collision': false,
+                'event-range': [40, 100, 10],
                 'event-todo': [
                   {
                     'target': true,
@@ -177,7 +174,8 @@ function load_testtrack(){
                 'attach-x': 210,
                 'attach-y': -.9,
                 'attach-z': -240,
-                'event-range': 0,
+                'collision': false,
+                'event-range': [40, 100, 10],
                 'event-todo': [
                   {
                     'target': true,
@@ -207,7 +205,8 @@ function load_testtrack(){
                 'attach-x': -170,
                 'attach-y': -.9,
                 'attach-z': -240,
-                'event-range': 0,
+                'collision': false,
+                'event-range': [80, 100, 10],
                 'event-todo': [
                   {
                     'target': true,
@@ -513,6 +512,8 @@ function repo_stat_modify(){
 function stats(){
     return {
       'camera-zoom': 25,
+      'collide-bottom': 5,
+      'collide-top': 1,
       'controls': 'rpg',
       'lap': 1,
       'level': 0,

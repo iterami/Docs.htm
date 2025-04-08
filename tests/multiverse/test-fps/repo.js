@@ -281,8 +281,8 @@ function stats(){
     return {
       'ammo': 0,
       'ammo-max': 0,
-      'collide-bottom': 5,
-      'collide-top': 5,
+      'collide-bottom': 6,
+      'collide-top': 2,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,

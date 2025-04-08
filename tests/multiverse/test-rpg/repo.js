@@ -117,7 +117,6 @@ function load_town(spawn){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-min': 10,
         'clear-color': [0, .2, 0],
         'spawn': spawners[spawn],
         'y-min': -100,
@@ -329,6 +328,8 @@ function skill_use(id){
 function stats(team){
     return {
       'camera-zoom': 25,
+      'collide-bottom': 5,
+      'collide-top': 1,
       'collides': true,
       'controls': 'rpg',
       'drop-chance': 0,

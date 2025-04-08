@@ -83,7 +83,6 @@ function load_skymap(spawn){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-min': 10,
         'clear-color': [0, 0, .2],
         'pointerlock': true,
         'spawn': spawners[spawn],
@@ -458,6 +457,8 @@ function new_game(){
     webgl_character_init({
       'camera-zoom': 25,
       'coins': 0,
+      'collide-bottom': 5,
+      'collide-top': 1,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
