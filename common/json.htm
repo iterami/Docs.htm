@@ -325,6 +325,8 @@
 
           // Optional. The range at which this event occurs, or false to disable.
           // If range is 0, only during collisions.
+          // If range is a number &gt; 0, only within a certain radius.
+          // If range is an array of 3 numbers, only within a cuboid of that size.
           "event-range": false,
 
           // Optional. Array of things todo when this event occurs.

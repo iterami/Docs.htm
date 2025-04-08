@@ -25,6 +25,31 @@
           ]
         },
         {
+          "id": "cuboid",
+          "attach-x": -40,
+          "attach-y": -9.99,
+          "attach-z": -40,
+          "event-range": [20, 1e5, 20],
+          "event-todo": [
+            {
+              "todo": "entity_remove",
+              "type": "function",
+              "value": {
+                "entities": [
+                  "cuboid"
+                ]
+              }
+            }
+          ],
+          "texture": "grid.png",
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
           "id": "delete",
           "attach-y": -5,
           "attach-z": -25,
@@ -52,7 +77,7 @@
         },
         {
           "id": "levelup-1000",
-          "attach-x": -25,
+          "attach-x": 25,
           "attach-z": -50,
           "event-todo": [
             {
@@ -77,7 +102,7 @@
         },
         {
           "id": "levelup-1000000",
-          "attach-x": 25,
+          "attach-x": 35,
           "attach-z": -50,
           "event-todo": [
             {
