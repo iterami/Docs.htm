@@ -33,7 +33,7 @@ function load_cave(){
         'characters': [
           {
             'id': 'arpg-cave',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'cave',
@@ -118,7 +118,7 @@ function load_town(spawn){
         'characters': [
           {
             'id': 'arpg-town',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'home',

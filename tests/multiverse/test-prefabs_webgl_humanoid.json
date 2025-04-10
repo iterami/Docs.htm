@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "test-humanoid",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

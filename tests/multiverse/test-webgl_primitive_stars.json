@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "test-primitive-stars",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

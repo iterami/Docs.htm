@@ -10,7 +10,7 @@
   "characters": [
     {
       "id": "test-textures",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

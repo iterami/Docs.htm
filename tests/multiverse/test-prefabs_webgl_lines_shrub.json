@@ -6,7 +6,7 @@
   "characters": [
     {
       "id": "test-lines-shrub",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

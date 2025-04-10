@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "test-lines-tree",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

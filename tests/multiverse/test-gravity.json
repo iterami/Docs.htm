@@ -9,7 +9,7 @@
   "characters": [
     {
       "id": "test-gravity",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

@@ -55,7 +55,7 @@
   "characters": [
     {
       "id": "test-lines-path",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

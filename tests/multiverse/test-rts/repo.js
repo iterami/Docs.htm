@@ -26,7 +26,7 @@ function load_testmap(){
         'characters': [
           {
             'id': 'rts-testmap',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'base',

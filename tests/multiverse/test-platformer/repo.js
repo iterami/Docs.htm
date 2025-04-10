@@ -24,7 +24,7 @@ function load_cave(){
         'characters': [
           {
             'id': 'platformer-cave',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'base',
@@ -141,7 +141,7 @@ function load_skymap(spawn){
         'characters': [
           {
             'id': 'platformer-skymap',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'coin-0',

@@ -11,7 +11,7 @@ function load_hallway(){
         'characters': [
           {
             'id': 'horror-hallway',
-            'static': true,
+            'spawn': false,
           },
         ],
         'prefabs': [

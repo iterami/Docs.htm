@@ -7,7 +7,7 @@
   "characters": [
     {
       "id": "test-attach",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

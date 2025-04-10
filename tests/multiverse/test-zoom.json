@@ -9,7 +9,7 @@
   "characters": [
     {
       "id": "test-zoom",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

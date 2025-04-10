@@ -8,7 +8,7 @@
   "characters": [
     {
       "id": "test-vehicles",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

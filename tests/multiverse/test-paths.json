@@ -269,7 +269,7 @@
   "characters": [
     {
       "id": "test-paths",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

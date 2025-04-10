@@ -19,7 +19,7 @@
   "characters": [
     {
       "id": "test-lighting",
-      "static": true
+      "spawn": false
     },
     {
       "id": "light",

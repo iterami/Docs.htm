@@ -6,7 +6,7 @@
   "characters": [
     {
       "id": "test-death",
-      "static": true,
+      "spawn": false,
       "entities": [
         {
           "id": "base",

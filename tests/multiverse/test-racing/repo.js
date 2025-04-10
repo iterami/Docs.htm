@@ -47,7 +47,7 @@ function load_testtrack(){
         'characters': [
           {
             'id': 'racing-testtrack',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'jump',

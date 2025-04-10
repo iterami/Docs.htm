@@ -32,7 +32,7 @@ function load_bridge(){
         'characters': [
           {
             'id': 'map-bridge',
-            'static': true,
+            'spawn': false,
             'entities': [
               {
                 'id': 'bridge',
