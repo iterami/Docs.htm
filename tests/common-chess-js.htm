@@ -97,7 +97,7 @@ table{
     <td id=valid>
   <tr class=header>
     <td>Black <select><option>Human</select>
-    <td>State
+    <td><input class=mini id=order-black type=text value=31245213>
   <tr>
     <td>king
     <td id=black-king>
@@ -126,7 +126,7 @@ table{
     <td id=black-time>
   <tr class=header>
     <td>White <select><option>Human</select>
-    <td>State
+    <td><input class=mini id=order-white type=text value=31245213>
   <tr>
     <td>king
     <td id=white-king>
@@ -205,6 +205,8 @@ function reset_board(reset){
 
     chess_new({
       'id': 'test',
+      'order-black': document.getElementById('order-black').value,
+      'order-white': document.getElementById('order-white').value,
       'increment': document.getElementById('increment').value,
       'time': document.getElementById('time').value,
     });
