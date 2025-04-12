@@ -1,17 +1,20 @@
 'use strict';
 
-function build(id, building){
-    const player = webgl_characters[id];
+// Required args: id, build
+function build(args){
+    const player = webgl_characters[args['id']];
+    const cost = tech[args['build']]['cost'];
 
-    if(player['building'][building]
-      || player['money'] < tech[building]['cost']){
+    if(player['building'][args['build']]
+      || player['power'] < cost){
         return;
     }
 
-    player['money'] -= tech[building]['cost'];
-    player['building'][building] = {
+    player['power'] -= cost;
+    player['building'][args['build']] = {
+      'id': args['build'],
       'time': 0,
-      'time-max': tech[building]['time'],
+      'time-max': tech[args['build']]['time'],
     };
     update_ui();
 }
@@ -39,51 +42,6 @@ function load_testmap(){
                   -100, 0, -50,
                   -100, 0, 50,
                   100, 0, 50,
-                ],
-              },
-              {
-                'id': 'fake-builder',
-                'attach-x': 25,
-                'attach-y': 1,
-                'event-todo': [
-                  {
-                    'todo': 'select',
-                    'type': 'function',
-                    'value': {
-                      'id': 'fake-builder',
-                      'type': 'builder',
-                    },
-                  },
-                ],
-                'picking': true,
-                'texture': 'grid.png',
-                'vertices': [
-                  4, 0, -4,
-                  -4, 0, -4,
-                  -4, 0, 4,
-                  4, 0, 4,
-                ],
-              },
-              {
-                'id': 'fake-factory',
-                'attach-y': 1,
-                'event-todo': [
-                  {
-                    'todo': 'select',
-                    'type': 'function',
-                    'value': {
-                      'id': 'fake-factory',
-                      'type': 'factory',
-                    },
-                  },
-                ],
-                'picking': true,
-                'texture': 'grid.png',
-                'vertices': [
-                  10, 0, -10,
-                  -10, 0, -10,
-                  -10, 0, 10,
-                  10, 0, 10,
                 ],
               },
               {
@@ -123,6 +81,38 @@ function load_testmap(){
         ],
       },
     });
+
+    webgl_characters[webgl_character_id]['power'] = 10000;
+
+    make('Builder');
+    make('Factory');
+    make('Turret');
+}
+
+function make(type){
+    const id = type + entity_id_count;
+    webgl_entity_create({
+      'character': 'rts-testmap',
+      'entities': [{
+        'attach-to': 'rts-testmap',
+        'attach-x': Math.random() * 200 - 100,
+        'attach-y': 1,
+        'attach-z': Math.random() * 100 - 50,
+        'event-todo': [
+          {
+            'todo': 'select',
+            'type': 'function',
+            'value': {
+              'id': id,
+              'type': type,
+            },
+          },
+        ],
+        'id': id,
+        'picking': true,
+        ...tech[type]['properties'],
+      }],
+    });
 }
 
 function new_game(){
@@ -136,47 +126,57 @@ function new_game(){
     Object.assign(
       tech,
       {
-        'builder': {
+        'Builder': {
           'builds': [
-            'factory',
-            'turret',
+            'Factory',
+            'Turret',
           ],
           'cost': 100,
           'time': 100,
           'type': 'unit',
+          'properties': {
+            'texture': 'grid.png',
+            'vertices': [
+              4, 0, -4,
+              -4, 0, -4,
+              -4, 0, 4,
+              4, 0, 4,
+            ],
+          },
         },
-        'factory': {
-          'builds': ['builder'],
+        'Factory': {
+          'builds': ['Builder'],
           'cost': 1000,
           'time': 200,
           'type': 'building',
+          'properties': {
+            'texture': 'grid.png',
+            'vertices': [
+              10, 0, -10,
+              -10, 0, -10,
+              -10, 0, 10,
+              10, 0, 10,
+            ],
+          },
         },
-        'turret': {
+        'Turret': {
           'builds': [],
           'cost': 250,
           'time': 150,
           'type': 'building',
+          'properties': {
+            'texture': 'grid.png',
+            'vertices': [
+              5, 0, -5,
+              -5, 0, -5,
+              -5, 0, 5,
+              5, 0, 5,
+            ],
+          },
         },
       }
     );
 
-    for(const id in tech){
-        core_html({
-          'parent': core_elements['build'],
-          'properties': {
-            'id': 'build-' + id,
-            'onclick': function(){
-                build(webgl_character_id, id);
-            },
-            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
-            'type': 'button',
-          },
-          'store': 'build-' + id,
-          'type': 'button',
-        });
-    }
-
-    load_testmap();
     webgl_character_init({
       'building': {},
       'camera-zoom': 50,
@@ -186,12 +186,30 @@ function new_game(){
         'camera-rotate-x': 60,
         'position-y': 5,
       },
-      'money': 1000,
+      'power': 0,
       'selected': '',
       'speed': 2,
     });
-    select();
-
+    for(const id in tech){
+        core_html({
+          'parent': core_elements['build'],
+          'properties': {
+            'id': 'build-' + id,
+            'onclick': function(){
+                build({
+                  'id': webgl_character_id,
+                  'build': id,
+                });
+            },
+            'style': 'display:none',
+            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
+            'type': 'button',
+          },
+          'store': 'build-' + id,
+          'type': 'button',
+        });
+    }
+    load_testmap();
     update_ui();
 }
 
@@ -219,7 +237,7 @@ function repo_init(){
       'globals': {
         'tech': {},
       },
-      'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Money: <span class=money></span><br>'
+      'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span>',
       'menu': true,
       'mousebinds': {
@@ -250,11 +268,13 @@ function repo_init(){
       },
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
-      'ui': 'Money: <span id=money></span><br>'
+      'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span>'
-        + '<div id=build></div>',
+        + '<div id=build></div>'
+        + '<div id=progress></div>',
       'ui-elements': [
         'build',
+        'progress',
       ],
     });
 }
@@ -270,14 +290,24 @@ function repo_logic(){
             const build = character['building'][building];
             build['time']++;
             if(build['time'] >= build['time-max']){
+                make(build['id']);
                 delete character['building'][building];
             }
         }
     }
-}
 
-function repo_stat_modify(){
-    update_ui();
+    let progress_ui = '';
+    const building = webgl_characters[webgl_character_id]['building'];
+    for(const progress in building){
+        progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '/' + building[progress]['time-max'] + '<br>';
+    }
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'progress': progress_ui,
+      },
+      'todo': 'innerHTML',
+    });
 }
 
 function select(args){
@@ -308,7 +338,7 @@ function update_ui(){
     core_ui_update({
       'class': true,
       'ids': {
-        'money': character['money'],
+        'power': character['power'],
         'selected': character['selected'],
       },
     });
