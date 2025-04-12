@@ -84,8 +84,8 @@ function load_cave(){
                     'type': 'function',
                     'value': {
                       'id': 'npc-enemy',
-                      'xz': 0.3,
-                      'y': 0.5
+                      'xz': .3,
+                      'y': .5
                     }
                   }
                 ],
