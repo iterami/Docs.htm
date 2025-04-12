@@ -76,6 +76,7 @@ function load_skymap(spawn){
     const spawners = [
       {},
       {
+        'camera-rotate-y': 90,
         'position-x': -10,
         'position-z': -120,
       }
@@ -469,9 +470,7 @@ function new_game(){
       'model': {},
       'spawn': {
         'camera-rotate-x': 30,
-        'position-x': 0,
         'position-y': 5,
-        'position-z': 0,
       },
     });
     update_ui();
