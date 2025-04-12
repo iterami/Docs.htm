@@ -78,7 +78,8 @@ function load_skymap(spawn){
       {
         'camera-rotate-y': 90,
         'position-x': -10,
-        'position-z': -120,
+        'position-z': -130,
+        'rotate-y': 90,
       }
     ];
     webgl_level_load({
@@ -131,10 +132,10 @@ function load_skymap(spawn){
             'end': 'loop',
             'points': [
               {
-                'position-z': -140,
+                'position-z': -150,
               },
               {
-                'position-z': -100,
+                'position-z': -110,
               },
             ],
           },
@@ -147,7 +148,7 @@ function load_skymap(spawn){
               {
                 'id': 'coin-0',
                 'attach-y': 3,
-                'attach-z': -70,
+                'attach-z': -80,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -176,7 +177,7 @@ function load_skymap(spawn){
                 'id': 'door',
                 'attach-x': -20,
                 'attach-y': 10,
-                'attach-z': -120,
+                'attach-z': -130,
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -199,7 +200,7 @@ function load_skymap(spawn){
               },
               {
                 'id': 'gate-0',
-                'attach-z': -90,
+                'attach-z': -100,
                 'rotate-x': 90,
                 'texture': 'grid.png',
                 'vertex-colors': [
@@ -217,7 +218,7 @@ function load_skymap(spawn){
                 'alpha': .99999,
                 'attach-x': -15,
                 'attach-y': 3,
-                'attach-z': -70,
+                'attach-z': -80,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -252,7 +253,7 @@ function load_skymap(spawn){
                 'id': 'life-0',
                 'attach-x': 15,
                 'attach-y': 3,
-                'attach-z': -70,
+                'attach-z': -80,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -280,7 +281,7 @@ function load_skymap(spawn){
               {
                 'id': 'lives-0',
                 'attach-y': 3,
-                'attach-z': -125,
+                'attach-z': -135,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -311,11 +312,10 @@ function load_skymap(spawn){
             'id': 'fireball-0',
             'level': 0,
             'path-id': 'fireball-0',
-            'spawn': {
-              'position-x': -50,
-              'position-y': 3,
-              'position-z': -50,
-            },
+            'position-x': -50,
+            'position-y': 3,
+            'position-z': -60,
+            'spawn': false,
             'entities': [
               {
                 'id': 'fireball-0-body',
@@ -328,8 +328,8 @@ function load_skymap(spawn){
                     'type': 'function',
                     'value': {
                       'id': 'fireball-0',
-                      'xz': 0.3,
-                      'y': 0.5
+                      'xz': .3,
+                      'y': .5
                     }
                   },
                   {
@@ -366,20 +366,15 @@ function load_skymap(spawn){
             'id': 'platform-0',
             'level': 0,
             'path-id': 'platform-0',
-            'spawn': {
-              'position-x': 0,
-              'position-z': 0,
-            },
+            'spawn': false,
           },
           {
             'id': 'wallmoving-0',
             'level': 0,
             'path-id': 'wallmoving-0',
-            'spawn': {
-              'position-x': 0,
-              'position-y': 10,
-              'position-z': -140,
-            },
+            'position-y': 10,
+            'position-z': -150,
+            'spawn': false,
             'entities': [
               {
                 'id': 'wallmoving-0',
@@ -400,46 +395,26 @@ function load_skymap(spawn){
         ],
         'prefabs': [
           {
-            'type': 'webgl_primitive_cuboid',
+            'type': 'prefab_platform',
             'properties': {
               'prefix': 'platform-0',
-              'all': {
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-              },
               'character': 'platform-0',
               'position-y': -5,
               'size-x': 40,
               'size-y': 10,
               'size-z': 40,
-              'top': {
-                'texture': 'grid.png',
-                'texture-x': 4,
-                'texture-y': 4,
-              },
             },
           },
           {
-            'type': 'webgl_primitive_cuboid',
+            'type': 'prefab_platform',
             'properties': {
               'prefix': 'platform-1',
-              'all': {
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-              },
               'character': 'platformer-skymap',
               'position-y': -5,
-              'position-z': -90,
+              'position-z': -100,
               'size-x': 40,
               'size-y': 10,
               'size-z': 100,
-              'top': {
-                'texture': 'grid.png',
-                'texture-x': 4,
-                'texture-y': 10,
-              },
             },
           },
         ],
@@ -470,10 +445,26 @@ function new_game(){
       'model': {},
       'spawn': {
         'camera-rotate-x': 30,
-        'position-y': 5,
+        'position-y': 6,
       },
     });
     update_ui();
+}
+
+function prefab_platform(args){
+    webgl_primitive_cuboid({
+      ...args,
+      'all': {
+        'vertex-colors': [
+          .2, .2, .2, 1,
+        ],
+      },
+      'top': {
+        'texture': 'grid.png',
+        'texture-x': Math.floor(args['size-x'] / 10),
+        'texture-y': Math.floor(args['size-z'] / 10),
+      },
+    });
 }
 
 function repo_escape(){
