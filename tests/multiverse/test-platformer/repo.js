@@ -29,26 +29,21 @@ function load_cave(){
           {
             'id': 'platformer-cave',
             'spawn': false,
-            'entities': [
-              {
-                'id': 'base',
-                'texture': 'grid.png',
-                'texture-x': 2,
-                'texture-y': 2,
+          },
+        ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'cave',
+              'all': {
                 'vertex-colors': [
                   .2, .2, .2, 1,
                 ],
-                'vertices': [
-                  10, 0, -10,
-                  -10, 0, -10,
-                  -10, 0, 10,
-                  10, 0, 10,
-                ],
+                'texture': 'lavaleaf.png',
               },
-              {
-                'id': 'door',
-                'attach-y': 10,
-                'attach-z': 10,
+              'character': 'platformer-cave',
+              'front': {
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -57,19 +52,16 @@ function load_cave(){
                     'value': 1,
                   },
                 ],
-                'rotate-x': 270,
                 'texture': 'door.png',
                 'vertex-colors': [
                   1, 1, 1, 1,
                 ],
-                'vertices': [
-                  10, 0, -10,
-                  -10, 0, -10,
-                  -10, 0, 10,
-                   10, 0, 10,
-                ],
               },
-            ],
+              'position-y': 10,
+              'size-x': -20,
+              'size-y': -20,
+              'size-z': -20,
+            },
           },
         ],
       },

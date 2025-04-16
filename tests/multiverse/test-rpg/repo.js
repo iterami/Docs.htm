@@ -36,23 +36,9 @@ function load_cave(){
             'spawn': false,
             'entities': [
               {
-                'id': 'cave',
-                'attach-z': -25,
-                'texture': 'lavaleaf.png',
-                'vertex-colors': [
-                  .2, .2, .2, 1,
-                ],
-                'vertices': [
-                  20, 0, -30,
-                  -20, 0, -30,
-                  -20, 0, 30,
-                  20, 0, 30,
-                ],
-              },
-              {
                 'id': 'exit',
                 'attach-y': 5,
-                'attach-z': 5,
+                'attach-z': 4.99,
                 'event-range': 0,
                 'event-todo': [
                   {
@@ -97,6 +83,26 @@ function load_cave(){
             },
             'spawn': {
               'position-z': -40,
+            },
+          },
+        ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'cave',
+              'all': {
+                'vertex-colors': [
+                  .2, .2, .2, 1,
+                ],
+                'texture': 'lavaleaf.png',
+              },
+              'character': 'rpg-cave',
+              'position-y': 5,
+              'position-z': -25,
+              'size-x': -40,
+              'size-y': -10,
+              'size-z': -60,
             },
           },
         ],
@@ -326,9 +332,10 @@ function skill_use(id){
 }
 
 function stats(team){
+    const collide_bottom = 5;
     return {
       'camera-zoom': 25,
-      'collide-bottom': 5,
+      'collide-bottom': collide_bottom,
       'collide-top': 1,
       'collides': true,
       'controls': 'rpg',
@@ -365,7 +372,7 @@ function stats(team){
       'skill': '',
       'spawn': {
         'camera-rotate-x': 30,
-        'position-y': 5,
+        'position-y': collide_bottom,
       },
       'speed': .5,
       'talent-points': 0,
