@@ -89,15 +89,6 @@ function load_testmap(){
       'type': 'Builder',
     });
     make({
-      'team': 0,
-      'type': 'Factory',
-    });
-    make({
-      'team': 0,
-      'type': 'Turret',
-    });
-
-    make({
       'team': 1,
       'type': 'Builder',
     });
@@ -192,21 +183,6 @@ function new_game(){
         },
       }
     );
-
-    webgl_character_init({
-      'building': {},
-      'camera-zoom': 50,
-      'controls': 'rts',
-      'level': -1,
-      'lock': {
-        'camera-rotate-x': 60,
-        'position-y': 5,
-      },
-      'power': 0,
-      'selected': '',
-      'speed': 2,
-      'team': 0,
-    });
     for(const id in tech){
         core_html({
           'parent': core_elements['build'],
@@ -226,6 +202,10 @@ function new_game(){
           'type': 'button',
         });
     }
+
+    webgl_character_init({
+      ...stats(0)
+    });
     load_testmap();
     update_ui();
 }
@@ -356,6 +336,23 @@ function select(args){
         }
     }
     update_ui();
+}
+
+function stats(team){
+    return {
+      'building': {},
+      'camera-zoom': 50,
+      'controls': 'rts',
+      'level': -1,
+      'lock': {
+        'camera-rotate-x': 60,
+        'position-y': 5,
+      },
+      'power': 0,
+      'selected': '',
+      'speed': 2,
+      'team': team,
+    };
 }
 
 function update_ui(){
