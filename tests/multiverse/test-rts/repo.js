@@ -323,6 +323,9 @@ function repo_logic(){
     for(const progress in building){
         progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '/' + building[progress]['time-max'] + '<br>';
     }
+    if(!progress_ui.length){
+        return;
+    }
     core_ui_update({
       'class': true,
       'ids': {
