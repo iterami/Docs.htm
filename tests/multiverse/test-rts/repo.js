@@ -84,13 +84,28 @@ function load_testmap(){
 
     webgl_characters[webgl_character_id]['power'] = 10000;
 
-    make('Builder');
-    make('Factory');
-    make('Turret');
+    make({
+      'team': 0,
+      'type': 'Builder',
+    });
+    make({
+      'team': 0,
+      'type': 'Factory',
+    });
+    make({
+      'team': 0,
+      'type': 'Turret',
+    });
+
+    make({
+      'team': 1,
+      'type': 'Builder',
+    });
 }
 
-function make(type){
-    const id = type + entity_id_count;
+// Required args: team, type
+function make(args){
+    const id = args['type'] + entity_id_count;
     webgl_entity_create({
       'character': 'rts-testmap',
       'entities': [{
@@ -104,13 +119,14 @@ function make(type){
             'type': 'function',
             'value': {
               'id': id,
-              'type': type,
+              'type': args['type'],
             },
           },
         ],
         'id': id,
         'picking': true,
-        ...tech[type]['properties'],
+        'team': args['team'],
+        ...tech[args['type']]['properties'],
       }],
     });
 }
@@ -189,6 +205,7 @@ function new_game(){
       'power': 0,
       'selected': '',
       'speed': 2,
+      'team': 0,
     });
     for(const id in tech){
         core_html({
@@ -238,7 +255,8 @@ function repo_init(){
         'tech': {},
       },
       'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
-        + 'Selected: <span class=selected></span>',
+        + 'Selected: <span class=selected></span><br>'
+        + 'Team: <span class=team></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -269,7 +287,8 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
-        + 'Selected: <span id=selected></span>'
+        + 'Selected: <span id=selected></span><br>'
+        + 'Team: <span id=team></span>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
       'ui-elements': [
@@ -290,7 +309,10 @@ function repo_logic(){
             const build = character['building'][building];
             build['time']++;
             if(build['time'] >= build['time-max']){
-                make(build['id']);
+                make({
+                  'team': character['team'],
+                  'type': build['id'],
+                });
                 delete character['building'][building];
             }
         }
@@ -312,20 +334,20 @@ function repo_logic(){
 
 function select(args){
     const character = webgl_characters[webgl_character_id];
+    character['selected'] = args === void 0
+      ? ''
+      : args['id'];
 
-    if(args === void 0){
-        character['selected'] = '';
+    if(character['selected'] === ''
+      || entity_entities[character['selected']]['team'] !== character['team']){
         for(const id in tech){
             core_elements['build-' + id].style.display = 'none';
         }
 
     }else{
-        character['selected'] = args['id'];
-
         const builds = tech[args['type']]['builds'];
         for(const id in tech){
-            const element = core_elements['build-' + id];
-            element.style.display = builds.includes(id)
+            core_elements['build-' + id].style.display = builds.includes(id)
               ? 'inline-block'
               : 'none';
         }
@@ -335,11 +357,13 @@ function select(args){
 
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
+    const selected = entity_entities[character['selected']];
     core_ui_update({
       'class': true,
       'ids': {
         'power': character['power'],
         'selected': character['selected'],
+        'team': selected ? selected['team'] : '',
       },
     });
 }
