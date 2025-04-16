@@ -1,6 +1,10 @@
 'use strict';
 
 function collect(args){
+    if(args['flag']){
+        delete flags['skymap'][args['flag']];
+    }
+
     const value = args['value'] || 1;
     webgl_stat_modify({
       'stat': args['type'],
@@ -82,6 +86,69 @@ function load_skymap(spawn){
         'rotate-y': 90,
       }
     ];
+    const flagged = [];
+    if(flags['skymap']['coin-0']){
+        flagged.push({
+          'id': 'coin-0',
+          'attach-y': 3,
+          'attach-z': -80,
+          'billboard': true,
+          'collision': false,
+          'event-limit': 1,
+          'event-range': 3,
+          'event-todo': [
+            {
+              'todo': 'collect',
+              'type': 'function',
+              'value': {
+                'flag': 'coin-0',
+                'id': 'coin-0',
+                'type': 'coins',
+              },
+            },
+          ],
+          'vertex-colors': [
+            .7, .7, 0, 1,
+          ],
+          'vertices': [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0,
+          ],
+        });
+    }
+    if(flags['skymap']['lives-0']){
+        flagged.push({
+          'id': 'lives-0',
+          'attach-y': 3,
+          'attach-z': -135,
+          'billboard': true,
+          'collision': false,
+          'event-limit': 1,
+          'event-range': 3,
+          'event-todo': [
+            {
+              'todo': 'collect',
+              'type': 'function',
+              'value': {
+                'flag': 'lives-0',
+                'id': 'lives-0',
+                'type': 'lives',
+              },
+            },
+          ],
+          'vertex-colors': [
+            .2, .4, 8, 1,
+          ],
+          'vertices': [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0,
+          ],
+        });
+    }
     webgl_level_load({
       'character': 0,
       'json': {
@@ -145,34 +212,7 @@ function load_skymap(spawn){
             'id': 'platformer-skymap',
             'spawn': false,
             'entities': [
-              {
-                'id': 'coin-0',
-                'attach-y': 3,
-                'attach-z': -80,
-                'billboard': true,
-                'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
-                  {
-                    'todo': 'collect',
-                    'type': 'function',
-                    'value': {
-                      'id': 'coin-0',
-                      'type': 'coins',
-                    },
-                  },
-                ],
-                'vertex-colors': [
-                  .7, .7, 0, 1,
-                ],
-                'vertices': [
-                  1, 1, -0,
-                  -1, 1, -0,
-                  -1, -1, 0,
-                  1, -1, 0,
-                ],
-              },
+              ...flagged,
               {
                 'id': 'door',
                 'attach-x': -20,
@@ -270,34 +310,6 @@ function load_skymap(spawn){
                 ],
                 'vertex-colors': [
                   0, .7, 0, 1,
-                ],
-                'vertices': [
-                  1, 1, -0,
-                  -1, 1, -0,
-                  -1, -1, 0,
-                  1, -1, 0,
-                ],
-              },
-              {
-                'id': 'lives-0',
-                'attach-y': 3,
-                'attach-z': -135,
-                'billboard': true,
-                'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
-                  {
-                    'todo': 'collect',
-                    'type': 'function',
-                    'value': {
-                      'id': 'lives-0',
-                      'type': 'lives',
-                    },
-                  },
-                ],
-                'vertex-colors': [
-                  .2, .4, 8, 1,
                 ],
                 'vertices': [
                   1, 1, -0,
@@ -429,6 +441,13 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
+    flags = {
+      'skymap': {
+        'coin-0': true,
+        'lives-0': true,
+      },
+    };
+
     load_skymap(0);
     webgl_character_init({
       'camera-zoom': 25,
@@ -487,6 +506,9 @@ function repo_init(){
         'new-game': {
           'onclick': new_game,
         },
+      },
+      'globals': {
+        'flags': {},
       },
       'info': '<button id=new-game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life-max></span><br>'
         + 'Lives: <span class=lives></span><br>'
