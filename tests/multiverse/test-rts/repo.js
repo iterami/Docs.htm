@@ -316,6 +316,10 @@ function repo_logic(){
 }
 
 function select(args){
+    if(core_key_shift){
+        return;
+    }
+
     const character = webgl_characters[webgl_character_id];
     character['selected'] = args === void 0
       ? ''
