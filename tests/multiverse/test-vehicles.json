@@ -129,8 +129,9 @@
       },
       "turn-speed": 2,
       "vehicle-stats": {
-        "speed-deceleration": -0.01,
-        "speed-max": 6
+        "speed-backwards": -0.01,
+        "speed-max-backward": -3,
+        "speed-max-forward": 6
       },
       "entities": [
         {
@@ -272,8 +273,9 @@
       "turn-speed": 2,
       "vehicle-stats": {
         "character": "_me",
-        "speed-deceleration": -0.01,
-        "speed-max": 3
+        "speed-backwards": -0.01,
+        "speed-max-backward": -1.5,
+        "speed-max-forward": 3
       },
       "entities": [
         {
@@ -309,9 +311,10 @@
       },
       "turn-speed": 2,
       "vehicle-stats": {
-        "speed-acceleration": 0.01,
-        "speed-deceleration": -0.01,
-        "speed-max": 10
+        "speed-forward": 0.01,
+        "speed-backward": -0.01,
+        "speed-max-backward": -5,
+        "speed-max-forward": 10
       },
       "entities": [
         {

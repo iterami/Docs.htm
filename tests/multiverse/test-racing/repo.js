@@ -423,9 +423,10 @@ function racer_add(id){
           'vehicle-stats': {
             'character': id,
             //'lock': 2,
-            'speed-acceleration': .04,
-            'speed-deceleration': -.02,
-            'speed-max': 3,
+            'speed-backward': -.02,
+            'speed-forward': .04,
+            'speed-max-backward': -1.5,
+            'speed-max-forward': 3,
           },
         });
     }
@@ -494,7 +495,7 @@ function repo_logic(){
           'decimals': 2,
           'number': stats['speed'],
         });
-        speed_max = stats['speed-max'];
+        speed_max = stats['speed-max-forward'];
     }
     core_ui_update({
       'class': true,
