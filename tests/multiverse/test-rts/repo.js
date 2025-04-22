@@ -3,20 +3,25 @@
 // Required args: id, build
 function build(args){
     const player = webgl_characters[args['id']];
-    const cost = tech[args['build']]['cost'];
-
-    if(player['building'][args['build']]
-      || player['power'] < cost){
+    if(player['building'][args['build']]){
         return;
     }
 
+    const cost = tech[args['build']]['cost'];
+    if(player['power'] < cost){
+        return;
+    }
+
+    const position = webgl_get_position(entity_entities[player['selected']]);
     player['power'] -= cost;
     player['building'][args['build']] = {
       'id': args['build'],
       'time': 0,
       'time-max': tech[args['build']]['time'],
+      'x': position['x'] + 20,
+      'y': position['y'],
+      'z': position['z'],
     };
-    update_ui();
 }
 
 function load_testmap(){
@@ -33,6 +38,7 @@ function load_testmap(){
             'entities': [
               {
                 'id': 'base',
+                'attach-x': 75,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .1, .4, .1, 1,
@@ -46,6 +52,7 @@ function load_testmap(){
               },
               {
                 'id': 'wall-n',
+                'attach-x': 75,
                 'attach-y': 10,
                 'attach-z': -50,
                 'rotate-x': 90,
@@ -62,7 +69,7 @@ function load_testmap(){
               },
               {
                 'id': 'wall-w',
-                'attach-x': -100,
+                'attach-x': -25,
                 'attach-y': 10,
                 'rotate-z': 270,
                 'texture': 'lavaleaf.png',
@@ -91,19 +98,29 @@ function load_testmap(){
     make({
       'team': 1,
       'type': 'Builder',
+      'x': 150,
     });
 }
 
-// Required args: team, type
+// Required args: team, type, x, y, z
 function make(args){
+    args = core_args({
+      'args': args,
+      'defaults': {
+        'x': 0,
+        'y': 1,
+        'z': 0,
+      },
+    });
+
     const id = args['type'] + entity_id_count;
     webgl_entity_create({
       'character': 'rts-testmap',
       'entities': [{
         'attach-to': 'rts-testmap',
-        'attach-x': Math.random() * 200 - 100,
-        'attach-y': 1,
-        'attach-z': Math.random() * 100 - 50,
+        'attach-x': args['x'],
+        'attach-y': args['y'],
+        'attach-z': args['z'],
         'event-todo': [
           {
             'todo': 'select',
@@ -292,6 +309,9 @@ function repo_logic(){
                 make({
                   'team': character['team'],
                   'type': build['id'],
+                  'x': build['x'],
+                  'y': build['y'],
+                  'z': build['z'],
                 });
                 delete character['building'][building];
             }
@@ -302,9 +322,6 @@ function repo_logic(){
     const building = webgl_characters[webgl_character_id]['building'];
     for(const progress in building){
         progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '/' + building[progress]['time-max'] + '<br>';
-    }
-    if(!progress_ui.length){
-        return;
     }
     core_ui_update({
       'class': true,
