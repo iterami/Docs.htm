@@ -53,7 +53,7 @@ function load_bridge(){
               {
                 'id': 'life-0',
                 'attach-x': -40,
-                'attach-y': 3,
+                'attach-y': 6,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -82,7 +82,7 @@ function load_bridge(){
               {
                 'id': 'lives-0',
                 'attach-x': -40,
-                'attach-y': 3,
+                'attach-y': 6,
                 'attach-z': -180,
                 'billboard': true,
                 'collision': false,
@@ -112,7 +112,7 @@ function load_bridge(){
               {
                 'id': 'weapon-0',
                 'attach-x': 40,
-                'attach-y': 3,
+                'attach-y': 6,
                 'billboard': true,
                 'collision': false,
                 'event-limit': 1,
@@ -210,6 +210,7 @@ function new_game(){
       {
         'test-weapon': {
           'ammo-max': 10,
+          'reload': 50,
         },
       }
     );
@@ -247,7 +248,8 @@ function repo_init(){
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span class=weapon></span><br>'
-        + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span>',
+        + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span><br>'
+        + 'Reload: <span class=reload></span>/<span class=reload-max></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -269,7 +271,24 @@ function repo_init(){
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
-        + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span>',
+        + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span><br>'
+        + 'Reload: <span id=reload></span>/<span id=reload-max></span>',
+    });
+}
+
+function repo_logic(){
+    for(const id in webgl_characters){
+        const character = webgl_characters[id];
+        if(character['reload'] < character['reload-max']){
+            character['reload']++;
+        }
+    }
+
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'reload': webgl_characters[webgl_character_id]['reload'],
+      },
     });
 }
 
@@ -290,6 +309,8 @@ function stats(){
       'life-max': 100,
       'lives': 5,
       'model': {},
+      'reload': 0,
+      'reload-max': 0,
       'spawn': {
         'position-x': 0,
         'position-y': 6,
@@ -309,6 +330,8 @@ function update_ui(){
         'life': character['life'],
         'life-max': character['life-max'],
         'lives': character['lives'],
+        'reload': character['reload'],
+        'reload-max': character['reload-max'],
         'speed': character['speed'],
         'weapon': character['weapon'],
       },
@@ -322,19 +345,23 @@ function weapon_equip(args){
     if(character['weapon'] !== args['weapon']){
         character['weapon'] = args['weapon'];
         character['ammo-max'] = weapon['ammo-max'];
+        character['reload-max'] = weapon['reload'];
     }
 
     character['ammo'] = weapon['ammo-max'];
+    character['reload'] = character['reload-max'];
     update_ui();
 }
 
 function weapon_fire(id){
     const character = webgl_characters[webgl_character_id];
     if(character['weapon'].length === 0
-      || character['ammo'] === 0){
+      || character['ammo'] === 0
+      || character['reload'] !== character['reload-max']){
         return;
     }
 
+    character['reload'] = 0;
     character['ammo']--;
     audio_start('boop');
     update_ui();
