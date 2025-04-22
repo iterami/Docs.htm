@@ -21,6 +21,7 @@ function build(args){
       'y': position['y'],
       'z': position['z'],
     };
+    update_ui();
 }
 
 function load_testmap(){
@@ -199,6 +200,7 @@ function new_game(){
           'parent': core_elements['build'],
           'properties': {
             'id': 'build-' + id,
+            'innerHTML': id + '<br>' + tech[id]['cost'] + ', ' + tech[id]['time'],
             'onclick': function(){
                 build({
                   'id': webgl_character_id,
@@ -206,7 +208,6 @@ function new_game(){
                 });
             },
             'style': 'display:none',
-            'textContent': 'Build ' + id + ' ' + tech[id]['cost'],
             'type': 'button',
           },
           'store': 'build-' + id,
