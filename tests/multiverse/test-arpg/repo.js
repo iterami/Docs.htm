@@ -267,8 +267,14 @@ function repo_init(){
         },
       },
       'globals': {
+        'skills': {
+          'Bolt': {
+            'damage': 1,
+            'mana': 1,
+          },
+        },
         'talents': {
-          'life': {
+          'Life': {
             'stat': 'life',
             'value': 1,
           },
@@ -310,8 +316,13 @@ function repo_init(){
       'id': 'inventory',
       'label': 'Inventory',
     });
+
+    let skills_ui = '<ul>';
+    for(const skill in skills){
+        skills_ui += '<li><button onclick="skill_select(\'' + skill + '\')" type=button>' + skill + '</button>';
+    }
     core_tab_create({
-      'content': 'Selected Skill: <span id=skill></span>',
+      'content': 'Selected Skill: <span class=skill></span><br>' + skills_ui + '</ul>',
       'group': 'rpg',
       'id': 'skills',
       'label': 'Skills',
@@ -319,7 +330,7 @@ function repo_init(){
 
     let talents_ui = '<ul>';
     for(const talent in talents){
-        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(' + talent + ')" type=button>+</button>';
+        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(\'' + talent + '\')" type=button>+</button>';
     }
     core_tab_create({
       'content': 'Talents (<span id=talent-points></span> points): ' + talents_ui + '</ul>',
@@ -333,10 +344,33 @@ function repo_stat_modify(){
     update_ui();
 }
 
-function skill_use(id){
-    if(webgl_characters[id]['skill'].length === 0){
+function skill_select(id){
+    const character = webgl_characters[webgl_character_id];
+    if(!character){
         return;
     }
+
+    character['skill'] = id;
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'skill': id,
+      },
+    });
+}
+
+function skill_use(id){
+    const character = webgl_characters[id];
+    const skill = character['skill'];
+    if(skill.length === 0){
+        return;
+    }
+
+    if(character['mana'] < skill['mana']){
+        return;
+    }
+
+    character['mana'] -= skill['mana'];
 }
 
 function stats(team){
