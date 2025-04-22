@@ -16,8 +16,7 @@ function build(args){
     player['power'] -= cost;
     player['building'][args['build']] = {
       'id': args['build'],
-      'time': 0,
-      'time-max': tech[args['build']]['time'],
+      'time': tech[args['build']]['time'],
       'x': position['x'] + 20,
       'y': position['y'],
       'z': position['z'],
@@ -38,7 +37,6 @@ function load_testmap(){
             'entities': [
               {
                 'id': 'base',
-                'attach-x': 75,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .1, .4, .1, 1,
@@ -52,7 +50,6 @@ function load_testmap(){
               },
               {
                 'id': 'wall-n',
-                'attach-x': 75,
                 'attach-y': 10,
                 'attach-z': -50,
                 'rotate-x': 90,
@@ -69,7 +66,7 @@ function load_testmap(){
               },
               {
                 'id': 'wall-w',
-                'attach-x': -25,
+                'attach-x': -100,
                 'attach-y': 10,
                 'rotate-z': 270,
                 'texture': 'lavaleaf.png',
@@ -89,16 +86,13 @@ function load_testmap(){
       },
     });
 
-    webgl_characters[webgl_character_id]['power'] = 10000;
-
-    make({
-      'team': 0,
-      'type': 'Builder',
+    team_create({
+      'power': 10000,
+      'x': -75,
     });
-    make({
-      'team': 1,
-      'type': 'Builder',
-      'x': 150,
+    team_create({
+      'id': 'enemy',
+      'x': 75,
     });
 }
 
@@ -220,9 +214,6 @@ function new_game(){
         });
     }
 
-    webgl_character_init({
-      ...stats(0)
-    });
     load_testmap();
     update_ui();
 }
@@ -304,10 +295,10 @@ function repo_logic(){
 
         for(const building in character['building']){
             const build = character['building'][building];
-            build['time']++;
-            if(build['time'] >= build['time-max']){
+            build['time']--;
+            if(build['time'] <= 0){
                 make({
-                  'team': character['team'],
+                  'team': character['id'],
                   'type': build['id'],
                   'x': build['x'],
                   'y': build['y'],
@@ -321,7 +312,7 @@ function repo_logic(){
     let progress_ui = '';
     const building = webgl_characters[webgl_character_id]['building'];
     for(const progress in building){
-        progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '/' + building[progress]['time-max'] + '<br>';
+        progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '<br>';
     }
     core_ui_update({
       'class': true,
@@ -343,7 +334,7 @@ function select(args){
       : args['id'];
 
     if(character['selected'] === ''
-      || entity_entities[character['selected']]['team'] !== character['team']){
+      || entity_entities[character['selected']]['team'] !== character['id']){
         for(const id in tech){
             core_elements['build-' + id].style.display = 'none';
         }
@@ -359,7 +350,7 @@ function select(args){
     update_ui();
 }
 
-function stats(team){
+function stats(){
     return {
       'building': {},
       'camera-zoom': 50,
@@ -369,11 +360,40 @@ function stats(team){
         'camera-rotate-x': 60,
         'position-y': 5,
       },
-      'power': 0,
       'selected': '',
       'speed': 2,
-      'team': team,
     };
+}
+
+function team_create(args){
+    args = core_args({
+      'args': args,
+      'defaults': {
+        'id': webgl_character_id,
+        'power': 0,
+        'x': 0,
+        'y': 1,
+        'z': 0,
+      },
+    });
+
+    webgl_character_init({
+      ...stats(),
+      'id': args['id'],
+      'power': args['power'],
+      'spawn': {
+        'position-x': args['x'],
+        'position-y': args['y'],
+        'position-z': args['z'],
+      },
+    });
+    make({
+      'team': args['id'],
+      'type': 'Builder',
+      'x': args['x'],
+      'y': args['y'],
+      'z': args['z'],
+    });
 }
 
 function update_ui(){
