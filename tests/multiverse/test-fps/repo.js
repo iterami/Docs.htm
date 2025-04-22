@@ -209,7 +209,7 @@ function new_game(){
       weapons,
       {
         'test-weapon': {
-          'ammo-max': 10,
+          'ammo': 10,
           'reload': 50,
         },
       }
@@ -249,7 +249,7 @@ function repo_init(){
         + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span class=weapon></span><br>'
         + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span><br>'
-        + 'Reload: <span class=reload></span>/<span class=reload-max></span>',
+        + 'Reload: <span class=reload></span></span>',
       'menu': true,
       'mousebinds': {
         'contextmenu': {
@@ -272,15 +272,15 @@ function repo_init(){
         + 'Lives: <span id=lives></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
         + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span><br>'
-        + 'Reload: <span id=reload></span>/<span id=reload-max></span>',
+        + 'Reload: <span id=reload></span></span>',
     });
 }
 
 function repo_logic(){
     for(const id in webgl_characters){
         const character = webgl_characters[id];
-        if(character['reload'] < character['reload-max']){
-            character['reload']++;
+        if(character['reload'] > 0){
+            character['reload']--;
         }
     }
 
@@ -310,7 +310,6 @@ function stats(){
       'lives': 5,
       'model': {},
       'reload': 0,
-      'reload-max': 0,
       'spawn': {
         'position-x': 0,
         'position-y': 6,
@@ -331,7 +330,6 @@ function update_ui(){
         'life-max': character['life-max'],
         'lives': character['lives'],
         'reload': character['reload'],
-        'reload-max': character['reload-max'],
         'speed': character['speed'],
         'weapon': character['weapon'],
       },
@@ -344,12 +342,11 @@ function weapon_equip(args){
 
     if(character['weapon'] !== args['weapon']){
         character['weapon'] = args['weapon'];
-        character['ammo-max'] = weapon['ammo-max'];
-        character['reload-max'] = weapon['reload'];
+        character['ammo-max'] = weapon['ammo'];
+        character['reload'] = weapon['reload'];
     }
 
-    character['ammo'] = weapon['ammo-max'];
-    character['reload'] = character['reload-max'];
+    character['ammo'] = weapon['ammo'];
     update_ui();
 }
 
@@ -357,11 +354,11 @@ function weapon_fire(id){
     const character = webgl_characters[webgl_character_id];
     if(character['weapon'].length === 0
       || character['ammo'] === 0
-      || character['reload'] !== character['reload-max']){
+      || character['reload'] !== 0){
         return;
     }
 
-    character['reload'] = 0;
+    character['reload'] = weapons[character['weapon']]['reload'];
     character['ammo']--;
     audio_start('boop');
     update_ui();
