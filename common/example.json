@@ -84,6 +84,7 @@
       "controls": "rpg",
       "gravity": 1,
       "jump-height": 1,
+      "keys": false,
       "level": 0,
       "level-xp": 0,
       "life": 1,
@@ -93,6 +94,7 @@
         "position-y": 5
       },
       "model": {},
+      "mouse": false,
       "path-direction": 1,
       "path-end": "",
       "path-id": "",

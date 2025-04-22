@@ -188,6 +188,10 @@
       // Optional. "change-position-y" set when the character jumps.
       "jump-height": 1,
 
+      // Optional. Optional object with values that NPC characters can use to control themselves.
+      // Object property labels match <a href=js/core.htm#keybinds>core.js keybinds</a> stored in localStorage.
+      "keys": false,
+
       // Optional. Current character level.
       "level": 0,
 
@@ -211,6 +215,10 @@
       //   or an object of properties that are passed to the character model creator.
       //
       "model": {},
+
+      // Optional. Optional object with values that NPC characters can use to control themselves.
+      // Object property labels match <a href=js/core.htm#mouse-properties>core.js mouse properties</a> stored in "globalThis.core_mouse".
+      "mouse": false,
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
       // What occurs when the end of the path is reached:

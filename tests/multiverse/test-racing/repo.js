@@ -389,10 +389,17 @@ function new_game(){
 function racer_add(id){
     position_max++;
 
+    const properties = {};
+    if(id !== webgl_character_id){
+        properties['automove'] = true;
+        properties['keys'] = {
+          'move-←': true,
+        };
+    }
     webgl_character_init({
       ...stats(),
-      'automove': id !== webgl_character_id,
       'id': id,
+      ...properties,
     });
 
     const vehicle = id + '-vehicle';
