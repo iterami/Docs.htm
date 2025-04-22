@@ -391,6 +391,7 @@ function racer_add(id){
 
     webgl_character_init({
       ...stats(),
+      'automove': id !== webgl_character_id,
       'id': id,
     });
 
