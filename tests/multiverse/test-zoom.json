@@ -1,6 +1,5 @@
 {
   "title": "Zoom Test",
-  "camera-zoom": 50,
   "camera-zoom-max": 100,
   "camera-zoom-min": 10,
   "spawn": {
