@@ -1,7 +1,6 @@
 {
   "title": "Example Level",
   "ambient-color": [1, 1, 1],
-  "camera-zoom": 25,
   "camera-zoom-max": 50,
   "camera-zoom-min": 0,
   "clear-color": [0, 0, 0],
@@ -156,7 +155,7 @@
           "light-range": 0,
           "particle": false,
           "picking": false,
-          "point-size": 500,
+          "point-size": 0,
           "rotate-x": 0,
           "rotate-y": 0,
           "rotate-z": 0,
