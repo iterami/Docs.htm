@@ -241,7 +241,7 @@ function load_testtrack(){
               'prefix': 'base',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
                 'texture-x': 3,
@@ -264,7 +264,7 @@ function load_testtrack(){
               'prefix': 'wall-0',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
                 'texture-x': 3,
@@ -290,7 +290,7 @@ function load_testtrack(){
               'prefix': 'wall-1',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
                 'texture-x': 3,
@@ -317,7 +317,7 @@ function load_testtrack(){
               'prefix': 'wall-2',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
                 'texture-x': 3,
@@ -343,7 +343,7 @@ function load_testtrack(){
               'prefix': 'wall-3',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
                 'texture-x': 3,

@@ -77,7 +77,7 @@ function load_start(spawn){
                 'texture-x': 10,
                 'texture-y': 20,
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'vertices': [
                   50, 0, -50,

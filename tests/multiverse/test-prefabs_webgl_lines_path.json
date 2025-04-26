@@ -63,7 +63,7 @@
           "texture-x": 10,
           "texture-y": 10,
           "vertex-colors": [
-            0.2, 0.2, 0.2, 1
+            0.5, 0.5, 0.5, 1
           ],
           "vertices": [
             50, 0, -50,

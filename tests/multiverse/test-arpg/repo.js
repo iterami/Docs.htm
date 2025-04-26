@@ -105,7 +105,7 @@ function load_cave(){
               'prefix': 'cave',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .3, .3, .3, 1,
                 ],
                 'texture': 'lavaleaf.png',
               },
@@ -152,7 +152,7 @@ function load_town(spawn){
                 'texture-x': 6,
                 'texture-y': 9,
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'vertices': [
                   30, 0, -45,
@@ -168,7 +168,7 @@ function load_town(spawn){
                 'texture-x': 4,
                 'texture-y': 2,
                 'vertex-colors': [
-                  .4, .2, 0, 1,
+                  .8, .4, 0, 1,
                 ],
                 'vertices': [
                   20, 0, -10,
@@ -183,7 +183,7 @@ function load_town(spawn){
                 'attach-z': -25,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
-                  .05, .2, .05, 1,
+                  .1, .4, .1, 1,
                 ],
                 'vertices': [
                   30, 0, -45,

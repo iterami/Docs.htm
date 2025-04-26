@@ -40,7 +40,7 @@ function load_testmap(){
                 'id': 'base',
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
-                  .1, .4, .1, 1,
+                  .2, .8, .2, 1,
                 ],
                 'vertices': [
                   100, 0, -50,
@@ -56,7 +56,7 @@ function load_testmap(){
                 'rotate-x': 90,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
-                  .4, .2, 0, 1,
+                  .8, .4, 0, 1,
                 ],
                 'vertices': [
                   100, 0, -10,
@@ -72,7 +72,7 @@ function load_testmap(){
                 'rotate-z': 270,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
-                  .4, .2, 0, 1,
+                  .8, .4, 0, 1,
                 ],
                 'vertices': [
                   10, 0, -50,

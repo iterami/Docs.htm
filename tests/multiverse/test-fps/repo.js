@@ -41,7 +41,7 @@ function load_bridge(){
                 'texture-x': 2,
                 'texture-y': 10,
                 'vertex-colors': [
-                  .4, .2, 0, 1,
+                  .8, .4, 0, 1,
                 ],
                 'vertices': [
                   10, 0, -50,
@@ -155,7 +155,7 @@ function load_bridge(){
               'prefix': 'blue',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
               },
               'character': 'map-bridge',
@@ -176,7 +176,7 @@ function load_bridge(){
               'prefix': 'red',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
               },
               'character': 'map-bridge',

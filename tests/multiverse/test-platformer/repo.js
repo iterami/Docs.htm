@@ -38,7 +38,7 @@ function load_cave(){
               'prefix': 'cave',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .3, .3, .3, 1,
                 ],
                 'texture': 'lavaleaf.png',
               },
@@ -236,7 +236,7 @@ function load_skymap(spawn){
                 'rotate-x': 90,
                 'texture': 'grid.png',
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'vertices': [
                   30, 0, -20,
@@ -385,7 +385,7 @@ function load_skymap(spawn){
                 'rotate-x': 90,
                 'texture': 'grid.png',
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .5, .5, .5, 1,
                 ],
                 'vertices': [
                   20, 0, -10,
@@ -474,6 +474,9 @@ function prefab_platform(args){
         'texture': 'grid.png',
         'texture-x': Math.floor(args['size-x'] / 10),
         'texture-y': Math.floor(args['size-z'] / 10),
+        'vertex-colors': [
+          .5, .5, .5, 1,
+        ],
       },
     });
 }

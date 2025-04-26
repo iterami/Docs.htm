@@ -1,7 +1,6 @@
 {
   "title": "Lighting Test",
   "ambient-color": [0, 0, 0],
-  "directional-state": false,
   "paths": {
     "loop": {
       "end": "loop",

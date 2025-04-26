@@ -21,7 +21,7 @@ function load_hallway(){
               'prefix': 'hallway-0',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .4, .4, .4, 1,
                 ],
                 'texture': 'grid.png',
               },
@@ -48,7 +48,7 @@ function load_hallway(){
               'prefix': 'hallway-1',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .4, .4, .4, 1,
                 ],
                 'texture': 'grid.png',
               },
@@ -74,7 +74,7 @@ function load_hallway(){
               'prefix': 'room-1',
               'all': {
                 'vertex-colors': [
-                  .2, .2, .2, 1,
+                  .4, .4, .4, 1,
                 ],
                 'texture': 'grid.png',
               },
