@@ -9,6 +9,7 @@
   <li>Called by repo-specific <a href=repo_init.htm>repo_init()</a> function.
   <li>Sets up various repo-specific things needed for project function.
   <li>If "menu" or "menu-lock" are true, then the menu is open when the repo loads.
+  <li>If "storage-controls" is true, then a tab with settings for keyboard and mouse controls will be created.
 </ul>
 <table>
   <tr class=header>
@@ -64,10 +65,6 @@
     <td>'iterami'
     <td>string ID
   <tr>
-    <td>reset
-    <td>false
-    <td>boolean false or function
-  <tr>
     <td>root
     <td>'../index.htm'
     <td>string
@@ -75,6 +72,10 @@
     <td>storage
     <td>false
     <td>boolean false or object
+  <tr>
+    <td>storage-controls
+    <td>false
+    <td>boolean
   <tr>
     <td>storage-menu
     <td>''

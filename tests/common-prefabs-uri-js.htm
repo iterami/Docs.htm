@@ -88,7 +88,7 @@ function repo_init(){
           + uri + '<br>'
           + '<span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br>'
           + '<span id="size-' + uri + '"></span> B<br>'
-          + '<input onclick=setup_uri("' + uri + '") type=button value=Animate>'
+          + '<button onclick=setup_uri("' + uri + '") type=button>Animate</button>'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
     document.getElementById('results').innerHTML = results;

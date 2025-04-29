@@ -170,6 +170,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
+      'storage-controls': true,
       'title': 'Docs.htm',
       'ui': '<div id=choice><button id=choose-0 type=button>Choice 0</button><button id=choose-1 type=button>Choice 1</button><br>'
         + '<button id=choose-2 type=button>Choice 2</button><button id=choose-3 type=button>Choice 3</button></div>'

@@ -270,10 +270,8 @@ function repo_init(){
           'todo': webgl_controls_wheel,
         },
       },
-      'reset': function(){
-          webgl_character_spawn();
-      },
       'root': '../../common-webgl-standalone.htm',
+      'storage-controls': true,
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'

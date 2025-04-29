@@ -297,6 +297,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
+      'storage-controls': true,
       'title': 'Docs.htm',
       'ui': 'Skill: <span id=skill></span><br>'
         + 'Life: <span id=life></span>/<span id=life-max></span><br>'
