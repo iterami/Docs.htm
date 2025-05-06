@@ -106,17 +106,22 @@ function update_keys(event){
     }
     if(event
       && event.code){
-        core_elements['code'].textContent = event.code;
+        const code = event.code.length
+          ? event.code
+          : event.key;
+        core_elements['code'].textContent = event.code.length
+          ? 'code: ' + code
+          : 'key: ' + code;
 
         if(!event.ctrlKey
           && !event.altKey
           && !event.metaKey
-          && event.code !== 'ControlLeft'
-          && event.code !== 'ControlRight'
-          && event.code !== 'AltLeft'
-          && event.code !== 'AltRight'
-          && !core_keys[event.code]){
-            core_keys[event.code] = {
+          && code !== 'ControlLeft'
+          && code !== 'ControlRight'
+          && code !== 'AltLeft'
+          && code !== 'AltRight'
+          && !core_keys[code]){
+            core_keys[code] = {
               'preventDefault': false,
               'state': true,
             };
