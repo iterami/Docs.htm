@@ -4,7 +4,7 @@
 <title>Event Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events<br>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events: <span id=count></span><br>
 <button id=pointerLock type=button>pointerLock</button><input id=text type=text>
 <table>
   <thead>
@@ -36,6 +36,9 @@ function repo_init(){
             update(event);
             event.preventDefault();
         },
+      },
+      'globals': {
+        'count': -2,
       },
       'events': {
         'pointerLock': {
@@ -94,6 +97,7 @@ function repo_init(){
 function update(event){
     core_ui_update({
       'ids': {
+        'count': ++count,
         'event': core_type(event),
         'type': event?.type,
       },
@@ -101,7 +105,8 @@ function update(event){
 }
 
 function update_keys(event){
-    if(!core_elements['check-keys'].checked){
+    if(core_menu_open
+      || !core_elements['check-keys'].checked){
         return;
     }
     if(event
@@ -141,7 +146,8 @@ function update_keys(event){
 }
 
 function update_mouse(event){
-    if(!core_elements['check-mouse'].checked){
+    if(core_menu_open
+      || !core_elements['check-mouse'].checked){
         return;
     }
     update(event);
