@@ -105,7 +105,7 @@ function update_keys(event){
         return;
     }
     if(event
-      && event.code){
+      && (event.code || event.key)){
         const code = event.code.length
           ? event.code
           : event.key;
