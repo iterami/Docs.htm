@@ -61,6 +61,15 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
+        'mousedown': {
+          'todo': update_mouse,
+        },
+        'mousemove': {
+          'todo': update_mouse,
+        },
+        'mouseup': {
+          'todo': update_mouse,
+        },
       },
       'root': 'index.htm',
       'title': 'Docs.htm',
@@ -87,13 +96,6 @@ function repo_init(){
     update_mouse();
     globalThis.addEventListener('blur', update_mouse);
     globalThis.addEventListener('contextmenu', update_mouse);
-    globalThis.addEventListener('mousedown', update_mouse);
-    globalThis.addEventListener('mousemove', update_mouse);
-    globalThis.addEventListener('mouseup', update_mouse);
-    globalThis.addEventListener('touchcancel', update_mouse);
-    globalThis.addEventListener('touchend', update_mouse);
-    globalThis.addEventListener('touchmove', update_mouse);
-    globalThis.addEventListener('touchstart', update_mouse);
     globalThis.addEventListener('wheel', update_mouse);
 }
 
