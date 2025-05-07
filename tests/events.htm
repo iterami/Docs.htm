@@ -4,9 +4,9 @@
 <title>Event Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events: <span id=count></span><br>
-<button id=pointerLock type=button>pointerLock</button><input id=text type=text>
-<table>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events<br>
+<button id=pointerLock type=button>pointerLock</button><input id=text type=text><br>
+<table style="display:inline-block">
   <thead>
     <tr>
       <td>core_type(event)
@@ -26,6 +26,7 @@
       <td id=code>
   <tbody id=keys>
 </table>
+<ul id=totals style="display:inline-block;vertical-align:top"></ul>
 
 <script src=../../common/js/core.js></script>
 <script>
@@ -38,7 +39,7 @@ function repo_init(){
         },
       },
       'globals': {
-        'count': -2,
+        'totals': {},
       },
       'events': {
         'pointerLock': {
@@ -68,6 +69,7 @@ function repo_init(){
         'code',
         'deltaY',
         'keys',
+        'totals',
       ],
     });
 
@@ -95,11 +97,22 @@ function repo_init(){
 }
 
 function update(event){
+    if(!event){
+        return;
+    }
+
+    if(!totals[event.type]){
+        totals[event.type] = 0;
+        const li = document.createElement('li');
+        li.innerHTML = event.type + ': <span id=' + event.type + '></span>';
+        core_elements['totals'].appendChild(li);
+    }
+
     core_ui_update({
       'ids': {
-        'count': ++count,
+        [event.type]: ++totals[event.type],
         'event': core_type(event),
-        'type': event?.type,
+        'type': event.type,
       },
     });
 }
