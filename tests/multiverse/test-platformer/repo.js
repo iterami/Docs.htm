@@ -511,13 +511,13 @@ function repo_init(){
         + 'Coins: <span class=coins></span><br>'
         + 'Keys: <span class=keys></span>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
         'wheel': {

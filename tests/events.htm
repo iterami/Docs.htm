@@ -15,12 +15,12 @@
       <td>event.type
       <td id=type>
     <tr class=header>
-      <td><input checked id=check-mouse type=checkbox>Mouse
+      <td><input checked id=check-pointer type=checkbox>Pointer
       <td>Properties
     <tr>
       <td>deltaY Wheel
       <td id=deltaY>
-  <tbody id=core_mouse></tbody>
+  <tbody id=core_pointer></tbody>
     <tr class=header>
       <td><input checked id=check-keys type=checkbox>Keys
       <td id=code>
@@ -57,25 +57,25 @@ function repo_init(){
         },
       },
       'menu-block-events': false,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousedown': {
-          'todo': update_mouse,
+        'pointerdown': {
+          'todo': update_pointer,
         },
-        'mousemove': {
-          'todo': update_mouse,
+        'pointermove': {
+          'todo': update_pointer,
         },
-        'mouseup': {
-          'todo': update_mouse,
+        'pointerup': {
+          'todo': update_pointer,
         },
       },
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui-elements': [
         'check-keys',
-        'check-mouse',
+        'check-pointer',
         'code',
         'deltaY',
         'keys',
@@ -89,14 +89,14 @@ function repo_init(){
     globalThis.addEventListener('keyup', update_keys);
 
     let html = '';
-    for(const value in core_mouse){
-        html += '<tr><td>' + value + '<td id=' + value + '>' + core_mouse[value];
+    for(const value in core_pointer){
+        html += '<tr><td>' + value + '<td id=' + value + '>' + core_pointer[value];
     }
-    document.getElementById('core_mouse').innerHTML = html;
-    update_mouse();
-    globalThis.addEventListener('blur', update_mouse);
-    globalThis.addEventListener('contextmenu', update_mouse);
-    globalThis.addEventListener('wheel', update_mouse);
+    document.getElementById('core_pointer').innerHTML = html;
+    update_pointer();
+    globalThis.addEventListener('blur', update_pointer);
+    globalThis.addEventListener('contextmenu', update_pointer);
+    globalThis.addEventListener('wheel', update_pointer);
 }
 
 function update(event){
@@ -161,15 +161,15 @@ function update_keys(event){
     core_elements['keys'].innerHTML = keys_html;
 }
 
-function update_mouse(event){
+function update_pointer(event){
     if(core_menu_open
-      || !core_elements['check-mouse'].checked){
+      || !core_elements['check-pointer'].checked){
         return;
     }
     update(event);
     core_ui_update({
       'ids': {
-        ...core_mouse,
+        ...core_pointer,
         'deltaY': event?.deltaY || Number(core_elements['deltaY']?.textContent),
       },
     });

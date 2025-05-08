@@ -251,18 +251,18 @@ function repo_init(){
         + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span><br>'
         + 'Reload: <span class=reload></span></span>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousedown': {
+        'pointerdown': {
           'todo': function(){
               weapon_fire(webgl_character_id);
           },
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
       },

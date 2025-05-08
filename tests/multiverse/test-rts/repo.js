@@ -247,16 +247,16 @@ function repo_init(){
         + 'Selected: <span class=selected></span><br>'
         + 'Team: <span class=team></span>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
-        'mouseup': {
+        'pointerup': {
           'todo': function(event){
               if(!core_menu_open
                 && event.button === 0

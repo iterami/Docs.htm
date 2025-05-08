@@ -272,16 +272,16 @@ function repo_init(){
         + 'Mana: <span class=mana></span>/<span class=mana-max></span>'
         + '<div id=rpg-tabs></div><div id=rpg-tabcontent></div>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
-        'mouseup': {
+        'pointerup': {
           'todo': webgl_pick_entity,
         },
         'wheel': {

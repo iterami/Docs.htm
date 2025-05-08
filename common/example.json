@@ -93,7 +93,7 @@
         "position-y": 5
       },
       "model": {},
-      "mouse": false,
+      "pointer": false,
       "path-direction": 1,
       "path-end": "",
       "path-id": "",

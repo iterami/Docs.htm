@@ -161,11 +161,11 @@ function repo_init(){
       },
       'info': '<button id=new-game type=button>Start Story Test</button>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mouseup': {
+        'pointerup': {
           'todo': webgl_pick_entity,
         },
       },

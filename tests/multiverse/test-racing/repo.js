@@ -471,13 +471,13 @@ function repo_init(){
         + 'Position: <span class=position></span>/<span class=position-max></span><br>'
         + 'Speed: <span class=speed></span>/<span class=speed-max></span>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
         'wheel': {

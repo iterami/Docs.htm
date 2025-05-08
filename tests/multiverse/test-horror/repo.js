@@ -143,13 +143,13 @@ function repo_init(){
       },
       'info': '<button id=new-game type=button>Start Horror Test</button>',
       'menu': true,
-      'mousebinds': {
+      'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
-        'mousemove': {
+        'pointermove': {
           'todo': function(){
-              webgl_controls_mouse();
+              webgl_controls_pointer();
           },
         },
       },
