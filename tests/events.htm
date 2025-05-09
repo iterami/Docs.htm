@@ -121,8 +121,7 @@ function update(event){
 }
 
 function update_keys(event){
-    if(core_menu_open
-      || !core_elements['check-keys'].checked){
+    if(!core_elements['check-keys'].checked){
         return;
     }
     if(event
@@ -162,8 +161,7 @@ function update_keys(event){
 }
 
 function update_pointer(event){
-    if(core_menu_open
-      || !core_elements['check-pointer'].checked){
+    if(!core_elements['check-pointer'].checked){
         return;
     }
     update(event);
