@@ -30,6 +30,11 @@
 
 <script src=../../common/js/core.js></script>
 <script>
+function repo_escape(){
+    update_keys();
+    update_pointer();
+}
+
 function repo_init(){
     core_repo_init({
       'beforeunload': {
@@ -56,7 +61,6 @@ function repo_init(){
           },
         },
       },
-      'menu-block-events': false,
       'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
@@ -121,7 +125,8 @@ function update(event){
 }
 
 function update_keys(event){
-    if(!core_elements['check-keys'].checked){
+    if((core_menu_open && event)
+      || !core_elements['check-keys'].checked){
         return;
     }
     if(event
@@ -161,7 +166,8 @@ function update_keys(event){
 }
 
 function update_pointer(event){
-    if(!core_elements['check-pointer'].checked){
+    if((core_menu_open && event)
+      || !core_elements['check-pointer'].checked){
         return;
     }
     update(event);
