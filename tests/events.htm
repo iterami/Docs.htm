@@ -64,6 +64,10 @@ function repo_init(){
       'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
+          'todo': update_pointer,
+        },
+        'pointercancel': {
+          'todo': update_pointer,
         },
         'pointerdown': {
           'todo': update_pointer,
@@ -99,7 +103,6 @@ function repo_init(){
     document.getElementById('core_pointer').innerHTML = html;
     update_pointer();
     globalThis.addEventListener('blur', update_pointer);
-    globalThis.addEventListener('contextmenu', update_pointer);
     globalThis.addEventListener('wheel', update_pointer);
 }
 
