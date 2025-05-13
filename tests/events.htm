@@ -6,27 +6,29 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events<br>
 <button id=pointerLock type=button>pointerLock</button><input id=text type=text><br>
-<table style="display:inline-block">
-  <thead>
-    <tr>
-      <td>core_type(event)
-      <td id=event>
-    <tr>
-      <td>event.type
-      <td id=type>
-    <tr class=header>
-      <td><input checked id=check-pointer type=checkbox>Pointer
-      <td>Properties
-    <tr>
-      <td>deltaY Wheel
-      <td id=deltaY>
+<table>
+  <tr>
+    <td>core_type(event)
+    <td id=event>
+  <tr>
+    <td>event.type
+    <td id=type>
+  <tr class=header>
+    <td>Events
+    <td>Totals
+  <tbody id=totals></tbody>
+  <tr class=header>
+    <td><input checked id=check-pointer type=checkbox>Pointer
+    <td>Properties
+  <tr>
+    <td>deltaY Wheel
+    <td id=deltaY>
   <tbody id=core_pointer></tbody>
-    <tr class=header>
-      <td><input checked id=check-keys type=checkbox>Keys
-      <td id=code>
+  <tr class=header>
+    <td><input checked id=check-keys type=checkbox>Keys
+    <td id=code>
   <tbody id=keys>
 </table>
-<ul id=totals style="display:inline-block;vertical-align:top"></ul>
 
 <script src=../../common/js/core.js></script>
 <script>
@@ -113,9 +115,10 @@ function update(event){
 
     if(!totals[event.type]){
         totals[event.type] = 0;
-        const li = document.createElement('li');
-        li.innerHTML = event.type + ': <span id=' + event.type + '></span>';
-        core_elements['totals'].appendChild(li);
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a>'
+          + '<td id=' + event.type + '>';
+        core_elements['totals'].appendChild(tr);
     }
 
     core_ui_update({
