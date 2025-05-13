@@ -17,24 +17,31 @@
   <tr class=header>
     <td>Element
     <td><button id=update type=button>core_ui_update()</button>
+    <td>Classes
   <tr>
     <td>Input Color
     <td><input id=input-color type=color>
+    <td><input class=input-color type=color>
   <tr>
     <td>Input Number
     <td><input id=input-number step=any type=number>
+    <td><input class=input-number step=any type=number>
   <tr>
     <td>Input Text
     <td><input id=input-text type=text>
+    <td><input class=input-text type=text>
   <tr>
     <td>Progress
     <td><progress id=progress max=100 value=0></progress>
+    <td><progress class=progress max=100 value=0></progress>
   <tr>
     <td>Text
     <td id=text>
+    <td class=text>
   <tr>
     <td>Textarea
-    <td><textarea id=textarea></textarea>
+    <td><textarea class=mini id=textarea></textarea>
+    <td><textarea class="mini textarea"></textarea>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -56,6 +63,7 @@ function repo_init(){
 
 function update(){
     core_ui_update({
+      'class': true,
       'ids': JSON.parse(core_elements['values'].value)
     });
 }
