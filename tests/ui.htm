@@ -6,10 +6,14 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/UI<br>
 <textarea id=values>{
+  "button": "button text",
+  "input-checkbox": true,
   "input-color": "#00ff00",
   "input-number": 123.456,
+  "input-range": 23,
   "input-text": "input text",
   "progress": 23,
+  "select": 1,
   "text": "text",
   "textarea": "text area"
 }</textarea>
@@ -19,6 +23,14 @@
     <td><button id=update type=button>core_ui_update()</button>
     <td>Class
   <tr>
+    <td>Button
+    <td><button id=button type=button>
+    <td><button class=button type=button>
+  <tr>
+    <td>Input Checkbox
+    <td><input id=input-checkbox type=checkbox>
+    <td><input class=input-checkbox type=checkbox>
+  <tr>
     <td>Input Color
     <td><input id=input-color type=color>
     <td><input class=input-color type=color>
@@ -27,6 +39,10 @@
     <td><input id=input-number step=any type=number>
     <td><input class=input-number step=any type=number>
   <tr>
+    <td>Input Range
+    <td><input id=input-range type=range>
+    <td><input class=input-range type=range>
+  <tr>
     <td>Input Text
     <td><input id=input-text type=text>
     <td><input class=input-text type=text>
@@ -34,6 +50,10 @@
     <td>Progress
     <td><progress id=progress max=100 value=0></progress>
     <td><progress class=progress max=100 value=0></progress>
+  <tr>
+    <td>Select
+    <td><select id=select><option value=0>Default<option value=1>Not Default</select>
+    <td><select class=select><option value=0>Default<option value=1>Not Default</select>
   <tr>
     <td>Text
     <td id=text>
