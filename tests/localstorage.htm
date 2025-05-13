@@ -1,0 +1,57 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Localstorage Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Localstorage<br>
+<button id=save type=button>core_storage_save()</button><button id=update type=button>core_storage_update()</button>
+<table>
+  <tr class=header>
+    <td>Type
+    <td>Value
+  <tr>
+    <td>Checkbox
+    <td><input id=checkbox type=checkbox>
+  <tr>
+    <td>Color
+    <td><input id=color type=color>
+  <tr>
+    <td>Input Number
+    <td><input id=number step=any type=number>
+  <tr>
+    <td>Input Text
+    <td><input id=text type=text>
+  <tr>
+    <td>Select
+    <td><select id=select><option value=0>Not Default<option value=1>Default</select>
+  <tr>
+    <td>Textarea
+    <td><textarea id=textarea></textarea>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'save': {
+          'onclick': core_storage_save,
+        },
+        'update': {
+          'onclick': core_storage_update,
+        },
+      },
+      'root': 'index.htm',
+      'storage': {
+        'checkbox': true,
+        'color': '#00ff00',
+        'number': 123.456,
+        'select': 1,
+        'text': 'text',
+        'textarea': 'textarea',
+      },
+      'title': 'Docs.htm',
+    });
+}
+</script>
