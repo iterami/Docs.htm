@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>UI Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/UI<br>
+<textarea id=values>{
+  "input-color": "#00ff00",
+  "input-number": 123.456,
+  "input-text": "input text",
+  "progress": 23,
+  "text": "text",
+  "textarea": "textarea"
+}</textarea><br>
+<table>
+  <tr class=header>
+    <td>Element
+    <td><button id=update type=button>core_ui_update()</button>
+  <tr>
+    <td>Input Color
+    <td><input id=input-color type=color>
+  <tr>
+    <td>Input Number
+    <td><input id=input-number step=any type=number>
+  <tr>
+    <td>Input Text
+    <td><input id=input-text type=text>
+  <tr>
+    <td>Progress
+    <td><progress id=progress max=100 value=0></progress>
+  <tr>
+    <td>Text
+    <td id=text>
+  <tr>
+    <td>Textarea
+    <td><textarea id=textarea></textarea>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'update': {
+          'onclick': update,
+        },
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui-elements': [
+        'values',
+      ],
+    });
+}
+
+function update(){
+    core_ui_update({
+      'ids': JSON.parse(core_elements['values'].value)
+    });
+}
+</script>
