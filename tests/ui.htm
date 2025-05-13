@@ -11,13 +11,13 @@
   "input-text": "input text",
   "progress": 23,
   "text": "text",
-  "textarea": "textarea"
-}</textarea><br>
+  "textarea": "text area"
+}</textarea>
 <table>
   <tr class=header>
-    <td>Element
+    <td>Type
     <td><button id=update type=button>core_ui_update()</button>
-    <td>Classes
+    <td>Class
   <tr>
     <td>Input Color
     <td><input id=input-color type=color>
@@ -64,7 +64,7 @@ function repo_init(){
 function update(){
     core_ui_update({
       'class': true,
-      'ids': JSON.parse(core_elements['values'].value)
+      'ids': JSON.parse(core_elements['values'].value),
     });
 }
 </script>

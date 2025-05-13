@@ -10,26 +10,26 @@
     <td>Type
     <td><button id=save type=button>core_storage_save()</button><button id=update type=button>core_storage_update()</button>
   <tr>
-    <td>Checkbox
-    <td><input id=checkbox type=checkbox>
+    <td>Input Checkbox
+    <td><input id=input-checkbox type=checkbox>
   <tr>
-    <td>Color
-    <td><input id=color type=color>
+    <td>Input Color
+    <td><input id=input-color type=color>
   <tr>
     <td>Input Number
-    <td><input id=number step=any type=number>
+    <td><input id=input-number step=any type=number>
   <tr>
     <td>Input Range
-    <td><input id=range type=range>
+    <td><input id=input-range type=range>
   <tr>
     <td>Input Text
-    <td><input id=text type=text>
+    <td><input id=input-text type=text>
   <tr>
     <td>Select
     <td><select id=select><option value=0>Not Default<option value=1>Default</select>
   <tr>
     <td>Textarea
-    <td><textarea id=textarea></textarea>
+    <td><textarea class=mini id=textarea></textarea>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -46,13 +46,13 @@ function repo_init(){
       },
       'root': 'index.htm',
       'storage': {
-        'checkbox': true,
-        'color': '#00ff00',
-        'number': 123.456,
-        'range': 23,
+        'input-checkbox': true,
+        'input-color': '#00ff00',
+        'input-number': 123.456,
+        'input-range': 23,
+        'input-text': 'text',
         'select': 1,
-        'text': 'text',
-        'textarea': 'textarea',
+        'textarea': 'text area',
       },
       'title': 'Docs.htm',
     });
