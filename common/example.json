@@ -143,6 +143,8 @@
           "event-todo": [
             {
               "limit": 1,
+              "random-max": 0,
+              "random-min": 0,
               "set": false,
               "stat": "life",
               "target": false,
