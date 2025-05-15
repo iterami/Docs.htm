@@ -6,5 +6,7 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=core.htm>core.js</a>/core_handle_blur()
 <ul>
-  <li>Resets all key and pointer states to false.
+  <li>Exits pointerlock if it is enabled and resets all key states and pointer buttons to false.
+  <li>Gets called by <a href=core_escape.htm>core_escape(force)</a> when the menu becomes opened.
+  <li>Calls "blur" event todo().
 </ul>

@@ -8,6 +8,7 @@
 <ul>
   <li>Pressing escape opens or closes the menu.
   <li>Pauses or resumes intervals depending on state.
+  <li>When the menu becomes opened, calls <a href=core_handle_blur.htm>core_handle_blur()</a>.
   <li>Calls optional repo-specific <a href=repo_escape.htm>repo_escape()</a> function.
   <li>State can be locked if "core_menu_lock" is true, with an optional arg to force state change to either true or false.
 </ul>

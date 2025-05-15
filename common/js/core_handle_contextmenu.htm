@@ -6,5 +6,7 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=core.htm>core.js</a>/core_handle_contextmenu(event)
 <ul>
-  <li>If the result of the "contextmenu" event doesn't return anything, this function returns false.
+  <li>Can be used to prevent the context menu from appearing by setting "preventDefault" to true.
+  <li>Context menus always appear when the menu is open, or when "shift + right click" is used.
+  <li>Calls "contextmenu" event todo(), and if it doesn't return anything, this function returns false.
 </ul>
