@@ -46,6 +46,12 @@ function repo_init(){
             event.preventDefault();
         },
       },
+      'blur': {
+        'todo': function(event){
+            update_keys(event);
+            update_pointer(event);
+        },
+      },
       'globals': {
         'totals': {},
       },
@@ -81,6 +87,9 @@ function repo_init(){
         'pointerup': {
           'todo': update_pointer,
         },
+        'wheel': {
+          'todo': update_pointer,
+        },
       },
       'root': 'index.htm',
       'title': 'Docs.htm',
@@ -95,7 +104,6 @@ function repo_init(){
     });
 
     update_keys();
-    globalThis.addEventListener('blur', update_keys);
     globalThis.addEventListener('keydown', update_keys);
     globalThis.addEventListener('keyup', update_keys);
 
@@ -105,8 +113,6 @@ function repo_init(){
     }
     document.getElementById('core_pointer').innerHTML = html;
     update_pointer();
-    globalThis.addEventListener('blur', update_pointer);
-    globalThis.addEventListener('wheel', update_pointer);
 }
 
 function update(event){
