@@ -122,10 +122,7 @@ function update(event){
 
     if(!totals[event.type]){
         totals[event.type] = 0;
-        const tr = document.createElement('tr');
-        tr.innerHTML = '<td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a>'
-          + '<td id=' + event.type + '>';
-        core_elements['totals'].appendChild(tr);
+        core_elements['totals'].innerHTML += '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a><td id=' + event.type + '>';
     }
 
     core_ui_update({
@@ -172,8 +169,7 @@ function update_keys(event){
     });
     let keys_html = '';
     for(const key in sorted_keys){
-        keys_html += '<tr><td>' + sorted_keys[key]
-          + '<td>' + core_keys[sorted_keys[key]]['state'];
+        keys_html += '<tr><td>' + sorted_keys[key] + '<td>' + core_keys[sorted_keys[key]]['state'];
     }
     core_elements['keys'].innerHTML = keys_html;
 }
