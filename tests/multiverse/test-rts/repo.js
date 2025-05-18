@@ -47,15 +47,39 @@ function handle_picking(event){
             });
         }
 
-    }else if(core_pointer['down-1']
-      && pick
-      && webgl_characters[webgl_character_id]['selected']){
-        if(team
-          && team !== webgl_character_id){
-            attack(pick);
+    }else if(pick
+      && core_pointer['down-1']){
+        const selected = webgl_characters[webgl_character_id]['selected'];
+        if(!selected){
+            return;
+        }
 
-        }else{
-            move(pick);
+        const properties = tech[entity_entities[selected]['type']];
+        if(!team){
+            if(properties['type'] === 'unit'){
+                move(pick);
+
+            }else if(properties['builds'].length){
+                rally(pick);
+            }
+
+            return;
+        }
+
+        const owned = team && team === webgl_character_id;
+        if(properties['type'] === 'unit'){
+            if(owned){
+                move(pick);
+
+            }else{
+                attack(pick);
+            }
+
+        }else if(properties['builds'].length){
+            rally(pick);
+
+        }else if(!owned){
+            attack(pick);
         }
     }
 }
@@ -249,6 +273,10 @@ function new_game(){
 
     load_testmap();
     update_ui();
+}
+
+function rally(pick){
+    console.log('Set rally of', webgl_characters[webgl_character_id]['selected'], 'to', pick['id']);
 }
 
 function repo_escape(){
