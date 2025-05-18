@@ -29,31 +29,25 @@ function build(args){
 }
 
 function handle_picking(event){
-    if(core_menu_open
+    if(core_key_shift
       || event.target.id !== 'canvas'){
+        return;
+    }
+
+    const character = webgl_characters[webgl_character_id];
+    const selected = character['selected'];
+    if(core_pointer['down-1']
+      && !selected){
         return;
     }
 
     const pick = webgl_pick_entity();
     const team = pick?.['team'];
     if(core_pointer['down-0']){
-        if(!pick || !team){
-            select();
-
-        }else{
-            select({
-              'id': pick['id'],
-              'type': pick['type'],
-            });
-        }
+        select((pick && team) ? pick['id'] : '');
 
     }else if(pick
       && core_pointer['down-1']){
-        const selected = webgl_characters[webgl_character_id]['selected'];
-        if(!selected){
-            return;
-        }
-
         const properties = tech[entity_entities[selected]['type']];
         if(!team){
             if(properties['type'] === 'unit'){
@@ -66,7 +60,7 @@ function handle_picking(event){
             return;
         }
 
-        const owned = team && team === webgl_character_id;
+        const owned = team && team === character['id'];
         if(properties['type'] === 'unit'){
             if(owned){
                 move(pick);
@@ -377,15 +371,9 @@ function repo_logic(){
     });
 }
 
-function select(args){
-    if(core_key_shift){
-        return;
-    }
-
+function select(id){
     const character = webgl_characters[webgl_character_id];
-    character['selected'] = args === void 0
-      ? ''
-      : args['id'];
+    character['selected'] = id;
 
     if(character['selected'] === ''
       || entity_entities[character['selected']]['team'] !== character['id']){
@@ -394,7 +382,7 @@ function select(args){
         }
 
     }else{
-        const builds = tech[args['type']]['builds'];
+        const builds = tech[entity_entities[character['selected']]['type']]['builds'];
         for(const id in tech){
             core_elements['build-' + id].style.display = builds.includes(id)
               ? 'inline-block'
