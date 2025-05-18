@@ -28,6 +28,38 @@ function build(args){
     update_ui();
 }
 
+function handle_picking(event){
+    if(core_menu_open
+      || event.target.id !== 'canvas'){
+        return;
+    }
+
+    const pick = webgl_pick_entity();
+    const team = pick?.['team'];
+    if(core_pointer['down-0']){
+        if(!pick || !team){
+            select();
+
+        }else{
+            select({
+              'id': pick['id'],
+              'type': pick['type'],
+            });
+        }
+
+    }else if(core_pointer['down-1']
+      && pick
+      && webgl_characters[webgl_character_id]['selected']){
+        if(team
+          && team !== webgl_character_id){
+            attack(pick);
+
+        }else{
+            move(pick);
+        }
+    }
+}
+
 function load_testmap(){
     webgl_level_load({
       'character': 0,
@@ -253,36 +285,7 @@ function repo_init(){
           'preventDefault': true,
         },
         'pointerdown': {
-          'todo': function(event){
-              if(core_menu_open
-                || event.target.id !== 'canvas'){
-                  return;
-              }
-
-              const pick = webgl_pick_entity();
-              const team = pick?.['team'];
-              if(core_pointer['down-0']){
-                  if(!pick || !team){
-                      select();
-
-                  }else{
-                      select({
-                        'id': pick['id'],
-                        'type': pick['type'],
-                      });
-                  }
-
-              }else if(core_pointer['down-1']
-                && pick
-                && webgl_characters[webgl_character_id]['selected']){
-                  if(!team){
-                      move(pick);
-
-                  }else if(team !== webgl_character_id){
-                      attack(pick);
-                  }
-              }
-          },
+          'todo': handle_picking,
         },
         'pointermove': {
           'todo': function(){
