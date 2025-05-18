@@ -1,5 +1,9 @@
 'use strict';
 
+function attack(pick){
+    console.log('Attacking', pick['id'], 'with', webgl_characters[webgl_character_id]['selected']);
+}
+
 // Required args: id, build
 function build(args){
     const player = webgl_characters[args['id']];
@@ -38,6 +42,7 @@ function load_testmap(){
             'entities': [
               {
                 'id': 'base',
+                'picking': true,
                 'texture': 'lavaleaf.png',
                 'vertex-colors': [
                   .2, .8, .2, 1,
@@ -116,22 +121,17 @@ function make(args){
         'attach-x': args['x'],
         'attach-y': args['y'],
         'attach-z': args['z'],
-        'event-todo': [
-          {
-            'todo': 'select',
-            'type': 'function',
-            'value': {
-              'id': id,
-              'type': args['type'],
-            },
-          },
-        ],
         'id': id,
         'picking': true,
         'team': args['team'],
+        'type': args['type'],
         ...tech[args['type']]['properties'],
       }],
     });
+}
+
+function move(pick){
+    console.log('Moving', webgl_characters[webgl_character_id]['selected'], 'to', pick['id']);
 }
 
 function new_game(){
@@ -245,25 +245,48 @@ function repo_init(){
       },
       'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
-        + 'Team: <span class=team></span>',
+        + 'Team: <span class=team></span><br>'
+        + 'Type: <span class=type></span>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
         },
+        'pointerdown': {
+          'todo': function(event){
+              if(core_menu_open
+                || event.target.id !== 'canvas'){
+                  return;
+              }
+
+              const pick = webgl_pick_entity();
+              const team = pick?.['team'];
+              if(core_pointer['down-0']){
+                  if(!pick || !team){
+                      select();
+
+                  }else{
+                      select({
+                        'id': pick['id'],
+                        'type': pick['type'],
+                      });
+                  }
+
+              }else if(core_pointer['down-1']
+                && pick
+                && webgl_characters[webgl_character_id]['selected']){
+                  if(!team){
+                      move(pick);
+
+                  }else if(team !== webgl_character_id){
+                      attack(pick);
+                  }
+              }
+          },
+        },
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();
-          },
-        },
-        'pointerup': {
-          'todo': function(event){
-              if(!core_menu_open
-                && event.button === 0
-                && event.target.id === 'canvas'
-                && !webgl_pick_entity()){
-                  select();
-              }
           },
         },
         'wheel': {
@@ -275,7 +298,8 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'
-        + 'Team: <span id=team></span>'
+        + 'Team: <span id=team></span><br>'
+        + 'Type: <span id=type></span>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
       'ui-elements': [
@@ -403,7 +427,8 @@ function update_ui(){
       'ids': {
         'power': character['power'],
         'selected': character['selected'],
-        'team': selected ? selected['team'] : '',
+        'team': selected?.['team'],
+        'type': selected?.['type'],
       },
     });
 }
