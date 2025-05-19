@@ -35,7 +35,7 @@ function handle_picking(event){
     }
 
     const character = webgl_characters[webgl_character_id];
-    const selected = character['selected'];
+    const selected = entity_entities[character['selected']];
     if(core_pointer['down-1']
       && !selected){
         return;
@@ -47,8 +47,9 @@ function handle_picking(event){
         select((pick && team) ? pick['id'] : '');
 
     }else if(pick
-      && core_pointer['down-1']){
-        const properties = tech[entity_entities[selected]['type']];
+      && core_pointer['down-1']
+      && selected['team'] === character['id']){
+        const properties = tech[selected['type']];
         if(!team){
             if(properties['type'] === 'unit'){
                 move(pick);
