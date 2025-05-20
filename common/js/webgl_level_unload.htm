@@ -8,7 +8,7 @@
 <ul>
   <li>No args.
   <li>Deletes all characters, entities, particles, and paths.
-  <li>If "base" is true, returns entities and properties of "webgl_characters[webgl_character_id]" for optional use in <a href=webgl_level_init.htm>webgl_level_init(args)</a>, or otherwise returns an empty object.
+  <li>If "base" is true and "webgl_characters[webgl_character_id]" exists: applies locked properties, deletes locks, and returns its entities and properties for optional use in <a href=webgl_level_init.htm>webgl_level_init(args)</a>, or otherwise returns an empty object.
 </ul>
 <table>
   <tr class=header>
