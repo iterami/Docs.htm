@@ -30,6 +30,15 @@
           "attach-y": 10,
           "attach-z": -49,
           "collision": false,
+          "event-todo": [
+            {
+              "stat": "position-y",
+              "todo": "_target",
+              "type": "character",
+              "value": 1
+            }
+          ],
+          "picking": true,
           "vertex-colors": [
             1, 1, 1, 1,
             1, 1, 1, 1,
@@ -95,7 +104,7 @@
           "event-todo": [
             {
               "stat": "vertex-colors",
-              "todo": "pick-color"
+              "todo": "_self"
             }
           ],
           "picking": true,

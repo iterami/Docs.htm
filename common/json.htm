@@ -336,6 +336,8 @@
           "event-range": false,
 
           // Optional. Array of things todo when this event occurs.
+          // If a property === "_self" then the event parent ID is used.
+          // If a property === "_target" then the event target ID is used.
           "event-todo": [
             {
               // Optional. The number of times this todo should occur.
@@ -351,10 +353,6 @@
 
               // Optional. ID of the stat that will be modified if a character or entity is modified.
               "stat": "life",
-
-              // Optional. If the "value" property should be checked for "_target", which is then replaced
-              //   by the target ID.
-              "target": false,
 
               // Optional. ID of the character/entity or the name of the function/variable that will be affected.
               "todo": "example-entity-1",

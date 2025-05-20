@@ -86,7 +86,6 @@ function load_testtrack(){
                 'event-range': [20, 100, 125],
                 'event-todo': [
                   {
-                    'target': true,
                     'todo': 'lap_update',
                     'type': 'function',
                     'value': {
