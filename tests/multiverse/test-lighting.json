@@ -21,14 +21,63 @@
       "spawn": false
     },
     {
-      "id": "light",
+      "id": "light-blue",
       "path-id": "loop",
+      "position-z": -50,
+      "spawn": false,
       "entities": [
         {
-          "id": "light",
+          "id": "light-blue",
+          "billboard": true,
+          "collision": false,
+          "light-color": [0, 0, 1],
+          "light-range": 25,
+          "vertex-colors": [
+            0, 0, 0.7, 1
+          ],
+          "vertices": [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-green",
+      "path-id": "loop",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "light-green",
           "billboard": true,
           "collision": false,
           "light-color": [0, 1, 0],
+          "light-range": 25,
+          "vertex-colors": [
+            0, 0.7, 0, 1
+          ],
+          "vertices": [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-red",
+      "path-id": "loop",
+      "position-z": -100,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "light-red",
+          "billboard": true,
+          "collision": false,
+          "light-color": [1, 0, 0],
           "light-range": 25,
           "vertex-colors": [
             0.7, 0, 0, 1
