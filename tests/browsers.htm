@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Browser Tests</title>
+<link href=../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Browsers
+<table>
+  <tr class=header>
+    <td>Feature
+    <td>Status
+  <tbody id=results></tbody>
+</table>
+<canvas id=canvas></canvas>
+
+<script>
+function test_localStorage(){
+    try{
+        const id = 'iterami-browser-test';
+        globalThis.localStorage.setItem(id, 'test');
+        globalThis.localStorage.removeItem(id);
+        return true;
+
+    }catch(error){
+        return error;
+    }
+}
+
+globalThis.onload = function(){
+    let result = '';
+
+    const features = {
+      'addEventListener': !!globalThis.addEventListener,
+      'canvas': !!document.getElementById('canvas').getContext('2d'),
+      'CSS Rotation Transform': CSS.supports('transform', 'rotate(90deg)'),
+      'localStorage': test_localStorage(),
+      'webgl2': !!globalThis.WebGLRenderingContext,
+    };
+    for(const feature in features){
+        result += '<tr><td>' + feature + '<td>' + features[feature];
+    }
+
+    document.getElementById('results').innerHTML = result;
+};
+</script>
