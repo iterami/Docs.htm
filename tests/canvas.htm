@@ -1,0 +1,52 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport>
+<title>Canvas Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/canvas.js></script>
+<script src=../../common/js/entity.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'reset-camera': {
+          'onclick': reset_camera,
+        },
+      },
+      'globals': {
+        'camera_x': 0,
+        'camera_y': 0,
+      },
+      'info': '<button id=reset-camera type=button>Reset Camera</button>',
+      'pointerbinds': {},
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui': '<table><tr><td>Camera X<td id=camera-x><tr><td>Camera Y<td id=camera-y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down-x<td id=down-x><tr><td>down-y<td id=down-y><tr><td>movement-x<td id=movement-x><tr><td>movement-y<td id=movement-y><tr><td>down-0<td id=down-0><tr><td>down-1<td id=down-1><tr><td>down-2<td id=down-2><tr><td>down-3<td id=down-3><tr><td>down-4<td id=down-4></table><span id=todo style="display:none"></span>',
+    });
+    canvas_init();
+}
+
+function repo_logic(){
+    if(core_pointer['down-0']){
+        camera_x += core_pointer['movement-x'];
+        camera_y += core_pointer['movement-y'];
+    }
+
+    core_ui_update({
+      'ids': core_pointer,
+    });
+    core_ui_update({
+      'ids': {
+        'camera-x': camera_x,
+        'camera-y': camera_y,
+      },
+    });
+}
+
+function reset_camera(){
+    camera_x = 0;
+    camera_y = 0;
+    core_escape();
+}
+</script>
