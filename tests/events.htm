@@ -20,7 +20,7 @@
   </tbody>
   <tr class=header>
     <td><input checked id=check-pointer type=checkbox>Pointer
-    <td>Properties
+    <td><input checked id=check-scroll type=checkbox>Scroll
   <tr>
     <td>deltaY Wheel
     <td id=deltaY>
@@ -56,6 +56,13 @@ function repo_init(){
         'totals': {},
       },
       'events': {
+        'check-scroll': {
+          'onchange': function(event){
+              document.body.style.overflow = event.target.checked
+                ? 'visible'
+                : 'hidden';
+          },
+        },
         'pointerLock': {
           'onclick': function(){
               core_requestpointerlock(document.body);
