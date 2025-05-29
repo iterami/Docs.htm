@@ -1,0 +1,74 @@
+{
+  "title": "Lighting Stress Test",
+  "spawn": {
+    "position-y": 5
+  },
+  "characters": [
+    {
+      "id": "stress-lighting",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture-x": 10,
+          "texture-y": 10,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "pick-stress",
+          "attach-y": 5,
+          "attach-z": -25,
+          "billboard": true,
+          "collision": false,
+          "event-todo": [
+            {
+              "todo": "webgl_prefab_repeat",
+              "type": "function",
+              "value": {
+                "properties": {
+                  "character": "stress-lighting",
+                  "entities": [
+                    {
+                      "attach-y": 5,
+                      "collision": false,
+                      "light-color": [1, 1, 1],
+                      "light-range": 25,
+                      "vertices": [
+                        1, 1, -0,
+                        -1, 1, -0,
+                        -1, -1, 0,
+                        1, -1, 0
+                      ]
+                    }
+                  ]
+                },
+                "type": "webgl_entity_create"
+              }
+            },
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(webgl_shader_light_range.length)"
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        }
+      ]
+    }
+  ]
+}
