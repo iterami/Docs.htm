@@ -14,6 +14,19 @@
 <canvas id=canvas></canvas>
 
 <script>
+function test_canvaspicking(){
+    const pixel = document.getElementById('canvas').getContext('2d').getImageData(0, 0, 1, 1).data;
+    return pixel[0] === 0 && pixel[1] === 0 && pixel[2] === 0;
+}
+
+function test_images(){
+    const image = new Image();
+    image.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==';
+    image.onload = function(){
+        document.getElementById('Images').textContent = true;
+    };
+}
+
 function test_localStorage(){
     try{
         const id = 'iterami-browser-test';
@@ -26,18 +39,37 @@ function test_localStorage(){
     }
 }
 
+function test_mediadevices(){
+    navigator.mediaDevices.getUserMedia({
+      'audio': false,
+      'video': false,
+    }).then(function(stream){
+        document.getElementById('MediaDevices').textContent = true;
+
+    }).catch(function(error){
+        document.getElementById('MediaDevices').textContent = error;
+    });
+}
+
 globalThis.onload = function(){
     let result = '';
 
     const features = {
       'addEventListener': !!globalThis.addEventListener,
+      'AudioAPI': 'AudioContext' in globalThis,
       'canvas': !!document.getElementById('canvas').getContext('2d'),
+      'Canvas Picking': test_canvaspicking(),
+      'contextmenu': 'oncontextmenu' in globalThis,
+      'CSS Supports': 'CSS' in globalThis,
       'CSS Rotation Transform': CSS.supports('transform', 'rotate(90deg)'),
+      'Images': test_images(),
       'localStorage': test_localStorage(),
+      'MediaDevices': test_mediadevices(),
+      'PointerAPI': 'PointerEvent' in globalThis,
       'webgl2': !!globalThis.WebGLRenderingContext,
     };
     for(const feature in features){
-        result += '<tr><td>' + feature + '<td>' + features[feature];
+        result += '<tr><td>' + feature + '<td id="' + feature + '">' + features[feature];
     }
 
     document.getElementById('results').innerHTML = result;
