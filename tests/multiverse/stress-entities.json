@@ -34,21 +34,32 @@
               "todo": "webgl_prefab_repeat",
               "type": "function",
               "value": {
-                "characters": true,
                 "count": 500,
                 "properties": {
                   "character": "stress-entities",
-                  "event-todo": [
+                  "entities": [
                     {
-                      "random-max": 99,
-                      "stat": "attach-y",
-                      "todo": "_self",
-                      "value": 1
+                      "attach-y": 5,
+                      "collision": false,
+                      "event-todo": [
+                        {
+                          "random-max": 99,
+                          "stat": "attach-y",
+                          "todo": "_self",
+                          "value": 1
+                        }
+                      ],
+                      "picking": true,
+                      "vertices": [
+                        1, 1, -0,
+                        -1, 1, -0,
+                        -1, -1, 0,
+                        1, -1, 0
+                      ]
                     }
-                  ],
-                  "picking": true
+                  ]
                 },
-                "type": "prefabs_webgl_tree_2d"
+                "type": "webgl_entity_create"
               }
             },
             {
