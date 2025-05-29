@@ -1,15 +1,23 @@
 {
   "title": "Lighting Test",
-  "ambient-color": [0, 0, 0],
+  "ambient-color": [0.5, 0.5, 0.5],
   "paths": {
     "loop": {
       "end": "loop",
       "points": [
         {
-          "position-z": -100
+          "position-x": -45,
+          "position-z": -45
         },
         {
-          "position-z": 0
+          "position-x": 45
+        },
+        {
+          "position-x": -45,
+          "position-z": 45
+        },
+        {
+          "position-x": 45
         }
       ],
       "speed": 0.5
@@ -21,9 +29,34 @@
       "spawn": false
     },
     {
+      "id": "light-black",
+      "path-id": "loop",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "light-black",
+          "billboard": true,
+          "collision": false,
+          "light-color": [0, 0, 0],
+          "light-range": 25,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0
+          ]
+        }
+      ]
+    },
+    {
       "id": "light-blue",
       "path-id": "loop",
-      "position-z": -50,
+      "path-point": 2,
+      "position-x": -45,
+      "position-z": 45,
       "spawn": false,
       "entities": [
         {
@@ -33,7 +66,7 @@
           "light-color": [0, 0, 1],
           "light-range": 25,
           "vertex-colors": [
-            0, 0, 1, 1
+            0.5, 0.5, 0.5, 1
           ],
           "vertices": [
             1, 1, -0,
@@ -47,6 +80,9 @@
     {
       "id": "light-green",
       "path-id": "loop",
+      "path-point": 1,
+      "position-x": 45,
+      "position-z": -45,
       "spawn": false,
       "entities": [
         {
@@ -56,7 +92,7 @@
           "light-color": [0, 1, 0],
           "light-range": 25,
           "vertex-colors": [
-            0, 1, 0, 1
+            0.5, 0.5, 0.5, 1
           ],
           "vertices": [
             1, 1, -0,
@@ -70,7 +106,8 @@
     {
       "id": "light-red",
       "path-id": "loop",
-      "position-z": -100,
+      "position-x": -45,
+      "position-z": -45,
       "spawn": false,
       "entities": [
         {
@@ -80,7 +117,33 @@
           "light-color": [1, 0, 0],
           "light-range": 25,
           "vertex-colors": [
-            1, 0, 0, 1
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            1, 1, -0,
+            -1, 1, -0,
+            -1, -1, 0,
+            1, -1, 0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-white",
+      "path-id": "loop",
+      "path-point": 3,
+      "position-x": 45,
+      "position-z": 45,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "light-white",
+          "billboard": true,
+          "collision": false,
+          "light-color": [1, 1, 1],
+          "light-range": 25,
+          "vertex-colors": [
+            0.5, 0.5, 0.5, 1
           ],
           "vertices": [
             1, 1, -0,
@@ -104,8 +167,7 @@
           ]
         },
         "character": "test-lighting",
-        "position-z": -50,
-        "size-x": -20,
+        "size-x": -100,
         "size-y": -20,
         "size-z": -100
       }
