@@ -8,7 +8,7 @@
 <script src=../../common/js/entity.js></script>
 <script>
 function repo_escape(){
-    core_elements['repo-ui'].style.display = 'block';
+    core_elements['repo-ui'].style.display = 'inline';
 }
 
 function repo_init(){
@@ -22,7 +22,6 @@ function repo_init(){
         'camera_x': 0,
         'camera_y': 0,
       },
-      'info': '<button id=reset-camera type=button>Reset Camera</button>',
       'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
@@ -30,7 +29,7 @@ function repo_init(){
       },
       'root': 'index.htm',
       'title': 'Docs.htm',
-      'ui': '<table><tr><td>Camera X<td id=camera-x><tr><td>Camera Y<td id=camera-y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down-x<td id=down-x><tr><td>down-y<td id=down-y><tr><td>movement-x<td id=movement-x><tr><td>movement-y<td id=movement-y><tr><td>down-0<td id=down-0><tr><td>down-1<td id=down-1><tr><td>down-2<td id=down-2><tr><td>down-3<td id=down-3><tr><td>down-4<td id=down-4></table><span id=todo style="display:none"></span>',
+      'ui': '<button id=reset-camera type=button>Reset Camera</button><table><tr><td>Camera X<td id=camera-x><tr><td>Camera Y<td id=camera-y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down-x<td id=down-x><tr><td>down-y<td id=down-y><tr><td>movement-x<td id=movement-x><tr><td>movement-y<td id=movement-y><tr><td>down-0<td id=down-0><tr><td>down-1<td id=down-1><tr><td>down-2<td id=down-2><tr><td>down-3<td id=down-3><tr><td>down-4<td id=down-4></table><span id=todo style="display:none"></span>',
     });
     canvas_init();
 }
@@ -55,6 +54,5 @@ function repo_logic(){
 function reset_camera(){
     camera_x = 0;
     camera_y = 0;
-    core_escape();
 }
 </script>
