@@ -4,8 +4,7 @@
 <title>Pointer Control Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
-#direction-2,
-#direction-4{
+.direction{
     background: #fff;
     height: 20px;
     left: 50%;
@@ -16,20 +15,32 @@
 #direction-2{
     top: 25%;
 }
+#direction-2-relative{
+    left: 25%;
+    top: 25%;
+}
 #direction-4{
     top: 50%;
+}
+#direction-4-relative{
+    left: 25%;
+    top: 75%;
 }
 </style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Pointer Controls
-<div id=direction-2></div>
-<div id=direction-4></div>
+<div class=direction id=direction-2></div>
+<div class=direction id=direction-2-relative></div>
+<div class=direction id=direction-4></div>
+<div class=direction id=direction-4-relative></div>
 
 <script src=../../common/js/core.js></script>
 <script>
 function direction_reset(){
     core_elements['direction-2'].style.width = '30px';
+    core_elements['direction-2-relative'].style.width = '30px';
     core_elements['direction-4'].style.width = '30px';
+    core_elements['direction-4-relative'].style.width = '30px';
 }
 
 function direction_update(){
@@ -37,43 +48,82 @@ function direction_update(){
         return;
     }
 
+    const angles = [0, 90, 180, 270]; // 0=right, 1=down, 2=left, 3=up
+    let direction = 0;
     const style_2 = core_elements['direction-2'].style;
+    const style_2_relative = core_elements['direction-2-relative'].style;
     const style_4 = core_elements['direction-4'].style;
+    const style_4_relative = core_elements['direction-4-relative'].style;
+    const x = core_pointer['x'];
+    const y = core_pointer['y'];
 
     style_2.width = '100px';
+    if(x > globalThis.innerWidth / 2){
+        direction = 0;
+
+    }else{
+        direction = 2;
+    }
+    style_2.transform = 'rotate(' + angles[direction] + 'deg)';
+
+    style_2_relative.width = '100px';
+    if(x > core_elements['direction-2-relative'].offsetLeft){
+        direction = 0;
+
+    }else{
+        direction = 2;
+    }
+    style_2_relative.transform = 'rotate(' + angles[direction] + 'deg)';
+
     style_4.width = '100px';
-
-    const rotate_2 = core_pointer['x'] > globalThis.innerWidth / 2
-      ? 0
-      : 180;
-    style_2.transform = 'rotate(' + rotate_2 + 'deg)';
-
-    // 0=right, 1=down, 2=left, 3=up
-    const angles = [0, 90, 180, 270];
-    let direction = false;
-    const x = core_pointer['x'] / globalThis.innerWidth;
-    const y = core_pointer['y'] / globalThis.innerHeight;
-    if(x < .5){
-        if(y < x){
+    const x_normalized = x / globalThis.innerWidth;
+    const y_normalized = y / globalThis.innerHeight;
+    if(x_normalized < .5){
+        if(y_normalized < x_normalized){
             direction = 3;
 
-        }else if(y > 1 - x){
+        }else if(y_normalized > 1 - x_normalized){
             direction = 1;
 
         }else{
             direction = 2;
         }
 
-    }else if(x < y){
+    }else if(x_normalized < y_normalized){
         direction = 1;
 
-    }else if(x < 1 - y){
+    }else if(x_normalized < 1 - y_normalized){
         direction = 3;
 
     }else{
         direction = 0;
     }
     style_4.transform = 'rotate(' + angles[direction] + 'deg)';
+
+    style_4_relative.width = '100px';
+    const x_relative = x - core_elements['direction-4-relative'].offsetLeft;
+    const y_relative = y - core_elements['direction-4-relative'].offsetTop;
+    if(x_relative < 0){
+        if(y_relative < x_relative){
+            direction = 3;
+
+        }else if(y_relative > 0 && -y_relative < x_relative){
+            direction = 1;
+
+        }else{
+            direction = 2;
+        }
+
+    }else if(x_relative < y_relative){
+        direction = 1;
+
+    }else if(y_relative < 0 && -y_relative > x_relative){
+        direction = 3;
+
+    }else{
+        direction = 0;
+    }
+    style_4_relative.transform = 'rotate(' + angles[direction] + 'deg)';
 }
 
 function repo_init(){
@@ -93,7 +143,9 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui-elements': [
         'direction-2',
+        'direction-2-relative',
         'direction-4',
+        'direction-4-relative',
       ],
     });
 }
