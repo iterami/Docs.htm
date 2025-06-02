@@ -7,6 +7,21 @@
 <script src=../../common/js/canvas.js></script>
 <script src=../../common/js/entity.js></script>
 <script>
+function repo_drawlogic(){
+    const half_x = globalThis.innerWidth / 2;
+    const half_y = globalThis.innerHeight / 2;
+
+    canvas_setproperties({
+      'fillStyle': '#206620',
+    });
+    canvas.fillRect(
+      half_x - 10 - camera_x,
+      half_y - 10 - camera_y,
+      20,
+      20
+    );
+}
+
 function repo_escape(){
     core_elements['repo-ui'].style.display = 'inline';
 }
@@ -36,8 +51,8 @@ function repo_init(){
 
 function repo_logic(){
     if(core_pointer['down-0']){
-        camera_x += core_pointer['movement-x'];
-        camera_y += core_pointer['movement-y'];
+        camera_x -= core_pointer['movement-x'];
+        camera_y -= core_pointer['movement-y'];
     }
 
     core_ui_update({
