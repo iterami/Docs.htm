@@ -8,7 +8,7 @@
 <table>
   <tr class=header>
     <td>Type
-    <td><button id=save type=button>core_storage_save()</button><button id=update type=button>core_storage_update()</button>
+    <td><button id=update type=button>core_storage_update()</button>
   <tr>
     <td>Input Checkbox
     <td><input id=input-checkbox type=checkbox>
@@ -40,9 +40,6 @@
 function repo_init(){
     core_repo_init({
       'events': {
-        'save': {
-          'onclick': core_storage_save,
-        },
         'update': {
           'onclick': core_storage_update,
         },
