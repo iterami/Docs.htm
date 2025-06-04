@@ -3,6 +3,11 @@
 <meta content="width=device-width,initial-scale=1" name=viewport>
 <title>Browser Feature Tests</title>
 <link href=../../common/css/writings.css rel=stylesheet>
+<style>
+canvas{
+    display: none;
+}
+</style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Browser Features
 <table>
@@ -12,6 +17,7 @@
   <tbody id=results></tbody>
 </table>
 <canvas id=canvas></canvas>
+<canvas id=webgl></canvas>
 
 <script>
 function test_canvaspicking(){
@@ -29,7 +35,7 @@ function test_images(){
 
 function test_localStorage(){
     try{
-        const id = 'iterami-browser-test';
+        const id = 'iterami-localstorage-test';
         globalThis.localStorage.setItem(id, 'test');
         globalThis.localStorage.removeItem(id);
         return true;
@@ -52,7 +58,15 @@ function test_mediadevices(){
 }
 
 globalThis.onload = function(){
-    let result = '';
+    let css = 'CSS' in globalThis;
+    if(css){
+        css = CSS.supports('transform', 'rotate(90deg)');
+    }
+    let webgl = !!globalThis.WebGLRenderingContext;
+    if(webgl){
+        const context = document.getElementById('webgl').getContext('webgl2');
+        webgl = context.getParameter(context.VERSION) + ', ' + context.getParameter(context.SHADING_LANGUAGE_VERSION);
+    }
 
     const features = {
       'addEventListener': !!globalThis.addEventListener,
@@ -60,18 +74,17 @@ globalThis.onload = function(){
       'canvas': !!document.getElementById('canvas').getContext('2d'),
       'Canvas Picking': test_canvaspicking(),
       'contextmenu': 'oncontextmenu' in globalThis,
-      'CSS Supports': 'CSS' in globalThis,
-      'CSS Rotation Transform': CSS.supports('transform', 'rotate(90deg)'),
+      'CSS Rotation Transform': css,
       'Images': test_images(),
       'localStorage': test_localStorage(),
       'MediaDevices': test_mediadevices(),
       'PointerAPI': 'PointerEvent' in globalThis,
-      'webgl2': !!globalThis.WebGLRenderingContext,
+      'WebGL': webgl,
     };
+    let result = '';
     for(const feature in features){
         result += '<tr><td>' + feature + '<td id="' + feature + '">' + features[feature];
     }
-
     document.getElementById('results').innerHTML = result;
 };
 </script>
