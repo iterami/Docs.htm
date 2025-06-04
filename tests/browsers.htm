@@ -62,7 +62,7 @@ globalThis.onload = function(){
     if(css){
         css = CSS.supports('transform', 'rotate(90deg)');
     }
-    let webgl = !!globalThis.WebGLRenderingContext;
+    let webgl = !!globalThis.WebGL2RenderingContext;
     if(webgl){
         const context = document.getElementById('webgl').getContext('webgl2');
         webgl = context.getParameter(context.VERSION) + ', ' + context.getParameter(context.SHADING_LANGUAGE_VERSION);
@@ -79,7 +79,7 @@ globalThis.onload = function(){
       'localStorage': test_localStorage(),
       'MediaDevices': test_mediadevices(),
       'PointerAPI': 'PointerEvent' in globalThis,
-      'WebGL': webgl,
+      'WebGL2': webgl,
     };
     let result = '';
     for(const feature in features){
