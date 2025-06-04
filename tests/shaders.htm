@@ -1,0 +1,44 @@
+<!doctype html>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Shader Tests</title>
+<link href=../../common/css/writings.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Shaders
+<ul>
+  <li>Shaders can be tested by inputting them into <a href=../../MultiverseEditor.htm/index.htm>MultiverseEditor.htm</a>.
+</ul>
+<table>
+  <tr class=header>
+    <td>Shader
+    <td>Fragment
+    <td>Vertex
+    <td>Notes
+  <tr>
+    <td>Minimum
+    <td><textarea readonly>#version 300 es
+precision mediump float;
+
+in vec4 color;
+out vec4 fragment;
+
+void main(void){
+    fragment = color;
+}
+</textarea>
+    <td><textarea readonly>#version 300 es
+
+in vec3 vertexPosition;
+in vec4 vertexColor;
+out vec4 color;
+uniform mat4 camera;
+uniform mat4 perspective;
+
+void main(void){
+    color = vertexColor;
+    gl_Position = perspective * camera
+      * vec4(vertexPosition, 1.0);
+}
+</textarea>
+    <td>
+</table>
