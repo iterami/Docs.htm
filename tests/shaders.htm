@@ -13,7 +13,6 @@
     <td>Shader
     <td>Fragment
     <td>Vertex
-    <td>Notes
   <tr>
     <td>Minimum
     <td><textarea readonly>#version 300 es
@@ -40,5 +39,30 @@ void main(void){
       * vec4(vertexPosition, 1.0);
 }
 </textarea>
-    <td>
+  <tr>
+    <td>Picking
+    <td><textarea readonly>#version 300 es
+precision mediump float;
+
+in vec4 color;
+out vec4 fragment;
+
+void main(void){
+    fragment = vec4(vec3(1,1,1) - color.rgb, 1);
+}
+</textarea>
+    <td><textarea readonly>#version 300 es
+
+in vec3 vertexPosition;
+in vec4 pickColor;
+out vec4 color;
+uniform mat4 camera;
+uniform mat4 perspective;
+
+void main(void){
+    color = pickColor;
+    gl_Position = perspective * camera
+      * vec4(vertexPosition, 1.0);
+}
+</textarea>
 </table>
