@@ -66,6 +66,7 @@ function load_start(spawn){
             ],
           },
         },
+        'picking': 2,
         'characters': [
           {
             'id': 'story-start',

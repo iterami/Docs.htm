@@ -86,6 +86,7 @@ function load_testmap(){
         'camera-zoom': 50,
         'camera-zoom-max': 100,
         'camera-zoom-min': 20,
+        'picking': 2,
         'characters': [
           {
             'id': 'rts-testmap',

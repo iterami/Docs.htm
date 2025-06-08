@@ -1,5 +1,6 @@
 {
   "title": "Picking Test",
+  "picking": 2,
   "spawn": {
     "position-y": 5,
     "position-z": 10

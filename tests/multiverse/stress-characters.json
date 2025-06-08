@@ -1,5 +1,6 @@
 {
   "title": "Characters Stress Test",
+  "picking": 2,
   "spawn": {
     "position-y": 5
   },

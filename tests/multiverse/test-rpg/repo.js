@@ -29,6 +29,7 @@ function load_cave(){
       'character': 0,
       'json': {
         'camera-zoom-min': 10,
+        'picking': 2,
         'y-min': -100,
         'characters': [
           {
@@ -124,6 +125,7 @@ function load_town(spawn){
       'character': 0,
       'json': {
         'clear-color': [0, .2, 0],
+        'picking': 2,
         'spawn': spawners[spawn],
         'y-min': -100,
         'characters': [

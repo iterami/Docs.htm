@@ -6,8 +6,10 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_pick_entity(args)
 <ul>
+  <li>Requires the "webgl_propreties['picking']" to be at least 1 before picking can be done.
   <li>Temporarily draws entities using their "picking" color and determines which entity is picked.
-  <li>Returns false if no entity is picked.
+  <li>The "cursor" arg dictates if the cursor should be changed to "pointer" when hovering over a pickable entity.
+  <li>Returns picked entity or false if no entity is picked.
   <li>Triggers optional events and returns the entity object if an entity is picked.
 </ul>
 <table>
@@ -15,6 +17,10 @@
     <td>Arg
     <td>Default
     <td>Type
+  <tr>
+    <td>cursor
+    <td>false
+    <td>boolean
   <tr>
     <td>x
     <td>core_pointer['x']
