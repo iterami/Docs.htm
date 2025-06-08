@@ -1,13 +1,20 @@
 'use strict';
 
+function level_properties(){
+    return {
+      'camera-zoom': 0,
+      'camera-zoom-max': 0,
+      'pointerlock': true,
+      'y-min': -100,
+    };
+}
+
 function load_hallway(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom': 0,
-        'camera-zoom-max': 0,
+        ...level_properties(),
         'fog-end': 50,
-        'pointerlock': true,
         'characters': [
           {
             'id': 'horror-hallway',

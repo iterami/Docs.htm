@@ -79,14 +79,20 @@ function handle_picking(event){
     }
 }
 
+function level_properties(){
+    return {
+      'camera-zoom': 50,
+      'camera-zoom-max': 100,
+      'camera-zoom-min': 20,
+      'picking': 2,
+    };
+}
+
 function load_testmap(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom': 50,
-        'camera-zoom-max': 100,
-        'camera-zoom-min': 20,
-        'picking': 2,
+        ...level_properties(),
         'characters': [
           {
             'id': 'rts-testmap',

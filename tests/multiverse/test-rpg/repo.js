@@ -24,13 +24,19 @@ function kill(id){
     }
 }
 
+function level_properties(){
+    return {
+      'camera-zoom-min': 10,
+      'picking': 2,
+      'y-min': -100,
+    };
+}
+
 function load_cave(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-min': 10,
-        'picking': 2,
-        'y-min': -100,
+        ...level_properties(),
         'characters': [
           {
             'id': 'rpg-cave',
@@ -124,10 +130,9 @@ function load_town(spawn){
     webgl_level_load({
       'character': 0,
       'json': {
+        ...level_properties(),
         'clear-color': [0, .2, 0],
-        'picking': 2,
         'spawn': spawners[spawn],
-        'y-min': -100,
         'characters': [
           {
             'id': 'rpg-town',

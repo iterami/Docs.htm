@@ -39,11 +39,17 @@ function lap_update(args){
     update_ui();
 }
 
+function level_properties(){
+    return {
+      'camera-zoom-max': 30,
+    };
+}
+
 function load_testtrack(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-max': 30,
+        ...level_properties(),
         'characters': [
           {
             'id': 'racing-testtrack',

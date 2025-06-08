@@ -21,14 +21,20 @@ function collect(args){
     });
 }
 
+function level_properties(){
+    return {
+      'camera-zoom': 0,
+      'camera-zoom-max': 0,
+      'pointerlock': true,
+      'y-min': -100,
+    };
+}
+
 function load_bridge(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom': 0,
-        'camera-zoom-max': 0,
-        'pointerlock': true,
-        'y-min': -100,
+        ...level_properties(),
         'characters': [
           {
             'id': 'map-bridge',

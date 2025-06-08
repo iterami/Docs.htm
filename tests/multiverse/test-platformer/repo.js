@@ -18,13 +18,19 @@ function collect(args){
     });
 }
 
+function level_properties(){
+    return {
+      'camera-zoom-min': 10,
+      'pointerlock': true,
+      'y-min': -100,
+    };
+}
+
 function load_cave(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-min': 10,
-        'pointerlock': true,
-        'y-min': -100,
+        ...level_properties(),
         'characters': [
           {
             'id': 'platformer-cave',
@@ -144,10 +150,9 @@ function load_skymap(spawn){
     webgl_level_load({
       'character': 0,
       'json': {
+        ...level_properties(),
         'clear-color': [0, 0, .2],
-        'pointerlock': true,
         'spawn': spawners[spawn],
-        'y-min': -100,
         'paths': {
           'fireball-0': {
             'end': 'warp',
