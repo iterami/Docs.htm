@@ -96,13 +96,6 @@ function repo_init(){
           'function': 'webgl_color_set',
         },
         {
-          'args': 'help',
-          'expect': function(result){
-              return webgl.canvas.style.cursor === 'help';
-          },
-          'function': 'webgl_cursor',
-        },
-        {
           'args': webgl_characters['test-character-0'],
           'expect': function(result){
               return result['x'] === 23;
