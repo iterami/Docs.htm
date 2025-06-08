@@ -166,10 +166,27 @@
             0.5, 0.5, 0.5, 1
           ]
         },
+        "bottom": {
+          "collision": false
+        },
         "character": "test-lighting",
         "size-x": -100,
         "size-y": -20,
         "size-z": -100
+      }
+    },
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "prefix": "skybox",
+        "groups": [
+          "skybox"
+        ],
+        "radius-x": -5,
+        "radius-y": -5,
+        "radius-z": -5,
+        "slices-latitude": 4,
+        "slices-longitude": 2
       }
     }
   ]
