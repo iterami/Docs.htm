@@ -4,7 +4,6 @@
   "camera-zoom-max": 50,
   "camera-zoom-min": 0,
   "clear-color": [0, 0, 0],
-  "cursor": "pointer",
   "directional-color": [1, 1, 1],
   "directional-state": true,
   "directional-vector": [0, 1, 0],
