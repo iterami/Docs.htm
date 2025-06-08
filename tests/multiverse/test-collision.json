@@ -24,6 +24,58 @@
           ]
         },
         {
+          "id": "ramp-0",
+          "attach-x": 25,
+          "attach-y": 3,
+          "attach-z": 15,
+          "rotate-x": 315,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "ramp-1",
+          "attach-x": 35,
+          "attach-y": 3,
+          "attach-z": 25,
+          "rotate-z": 315,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "ramp-2",
+          "attach-x": 25,
+          "attach-y": 3,
+          "attach-z": 35,
+          "rotate-x": 45,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "ramp-3",
+          "attach-x": 15,
+          "attach-y": 3,
+          "attach-z": 25,
+          "rotate-z": 45,
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
           "id": "rotated-0",
           "attach-x": -25,
           "attach-y": 5,
@@ -117,6 +169,22 @@
         "size-x": -20,
         "size-y": -20,
         "size-z": -20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid-ramps",
+        "bottom": {
+          "exclude": true
+        },
+        "character": "test-collision",
+        "position-x": 25,
+        "position-y": 3,
+        "position-z": 25,
+        "size-x": 10,
+        "size-y": 6,
+        "size-z": 10
       }
     }
   ]
