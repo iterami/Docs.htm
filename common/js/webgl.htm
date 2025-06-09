@@ -79,10 +79,12 @@
     <li><a href=webgl_primitive_stars.htm>webgl_primitive_stars(args)</a>
     <li><a href=webgl_primitive_terrain.htm>webgl_primitive_terrain(args)</a>
     <li><a href=webgl_random_vertex.htm>webgl_random_vertex(id)</a>
+    <li><a href=webgl_renderbuffer_init.htm>webgl_renderbuffer_init()</a>
     <li><a href=webgl_resize.htm>webgl_resize()</a>
     <li><a href=webgl_scissor.htm>webgl_scissor(args)</a>
     <li><a href=webgl_screenshot.htm>webgl_screenshot(args)</a>
     <li><a href=webgl_shader.htm>webgl_shader(args)</a>
+    <li><a href=webgl_shader_use.htm>webgl_shader_use(id)</a>
     <li><a href=webgl_stat_modify.htm>webgl_stat_modify(args)</a>
     <li><a href=webgl_texture_animate.htm>webgl_texture_animate(id)</a>
     <li><a href=webgl_texture_init.htm>webgl_texture_init(args)</a>
@@ -141,6 +143,10 @@
     <td>'default.png'
     <td>string
   <tr>
+    <td>webgl_framebuffer
+    <td>0
+    <td>placeholder, WebGLFramebuffer
+  <tr>
     <td>webgl_uris
     <td>globalThis.uris || {[webgl_default_texture]: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==',}
     <td>object
@@ -153,9 +159,9 @@
     <td>{}
     <td>object
   <tr>
-    <td>webgl_shader_attributes
-    <td>{}
-    <td>object
+    <td>webgl_shader_id
+    <td>'default'
+    <td>string
   <tr>
     <td>webgl_shader_light_color
     <td>[]
@@ -169,9 +175,9 @@
     <td>[]
     <td>array of numbers
   <tr>
-    <td>webgl_shader_uniforms
+    <td>webgl_shaders
     <td>{}
-    <td>object
+    <td>object of objects
   <tr>
     <td>webgl_textures
     <td>{}
