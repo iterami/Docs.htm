@@ -80,6 +80,7 @@
     <li><a href=webgl_primitive_terrain.htm>webgl_primitive_terrain(args)</a>
     <li><a href=webgl_random_vertex.htm>webgl_random_vertex(id)</a>
     <li><a href=webgl_renderbuffer_init.htm>webgl_renderbuffer_init()</a>
+    <li><a href=webgl_renderbuffer_resize.htm>webgl_renderbuffer_resize()</a>
     <li><a href=webgl_resize.htm>webgl_resize()</a>
     <li><a href=webgl_scissor.htm>webgl_scissor(args)</a>
     <li><a href=webgl_screenshot.htm>webgl_screenshot(args)</a>
@@ -143,14 +144,6 @@
     <td>'default.png'
     <td>string
   <tr>
-    <td>webgl_framebuffer
-    <td>0
-    <td>placeholder, WebGLFramebuffer
-  <tr>
-    <td>webgl_uris
-    <td>globalThis.uris || {[webgl_default_texture]: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==',}
-    <td>object
-  <tr>
     <td>webgl_paths
     <td>{}
     <td>object
@@ -158,6 +151,18 @@
     <td>webgl_properties
     <td>{}
     <td>object
+  <tr>
+    <td>webgl_renderbuffer
+    <td>0
+    <td>placeholder, WebGLRenderbuffer
+  <tr>
+    <td>webgl_renderbuffer_framebuffer
+    <td>0
+    <td>placeholder, WebGLFramebuffer
+  <tr>
+    <td>webgl_renderbuffer_texture
+    <td>0
+    <td>placeholder, WebGLTexture
   <tr>
     <td>webgl_shader_id
     <td>'default'
@@ -185,6 +190,10 @@
   <tr>
     <td>webgl_textures_animated
     <td>{}
+    <td>object
+  <tr>
+    <td>webgl_uris
+    <td>globalThis.uris || {[webgl_default_texture]: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==',}
     <td>object
 </table>
 <table id=webgl-properties>
