@@ -212,25 +212,15 @@ function repo_init(){
           'function': 'core_random_hex',
         },
         {
-          'args': void 0,
+          'args': 100,
           'expect': function(result){
               return Number.isInteger(result);
           },
           'function': 'core_random_integer',
         },
         {
-          'args': {
-            'max': 1,
-          },
+          'args': 1,
           'expect': 0,
-          'function': 'core_random_integer',
-        },
-        {
-          'args': {
-            'max': 1,
-            'todo': 'ceil',
-          },
-          'expect': 1,
           'function': 'core_random_integer',
         },
         {

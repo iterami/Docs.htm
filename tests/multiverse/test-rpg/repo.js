@@ -18,9 +18,7 @@ function kill(id){
     }
 
     if(Math.random() < webgl_characters[id]['drop-chance']){
-        item_drop(webgl_characters[id]['drops'][core_random_integer({
-          'max': webgl_characters[id]['drops'].length,
-        })]);
+        item_drop(webgl_characters[id]['drops'][core_random_integer(webgl_characters[id]['drops'].length)]);
     }
 }
 

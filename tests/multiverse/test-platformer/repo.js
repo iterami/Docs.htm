@@ -276,6 +276,7 @@ function load_skymap(spawn){
                   },
                 ],
                 'texture': 'key.png',
+                'texture-align': '00101101',
                 'vertex-colors': [
                   1, 1, 1, 1,
                 ],
