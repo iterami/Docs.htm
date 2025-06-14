@@ -13,7 +13,7 @@ Cards drawn: <code id=drawn></code>
 <script src=../../common/js/cards.js></script>
 <script>
 function draw_all(){
-    const remaining = cards_decks['test']['deck'].length;
+    const remaining = cards_decks.test.deck.length;
     for(let card = 0; card < remaining; card++){
         cards_draw('test');
     }
@@ -31,10 +31,10 @@ function reset_deck(){
 }
 
 function update_deck(){
-    document.getElementById('count').textContent = cards_decks['test']['deck'].length;
+    document.getElementById('count').textContent = cards_decks.test.deck.length;
     let drawn = '';
-    for(const card in cards_decks['test']['drawn']){
-        drawn += cards_decks['test']['drawn'][card] + '<br>';
+    for(const card in cards_decks.test.drawn){
+        drawn += cards_decks.test.drawn[card] + '<br>';
     }
     document.getElementById('drawn').innerHTML = drawn;
 }
