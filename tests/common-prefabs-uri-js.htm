@@ -5,13 +5,13 @@
 <link href=../../common/css/core.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/prefabs/uri.htm>prefabs/uri.js</a><br>
-<canvas id=canvas-animated></canvas>
-<select id=direction-x>
+<canvas id=canvas_animated></canvas>
+<select id=direction_x>
   <option value=1>+1
   <option value=0>0
   <option value=-1>-1
 </select>
-<select id=direction-y>
+<select id=direction_y>
   <option value=1>+1
   <option value=0>0
   <option value=-1>-1
@@ -28,13 +28,13 @@
 <script src=../../common/js/prefabs/uri.js></script>
 <script>
 function animate_uri(){
-    const height = core_images[uri]['height'];
-    const width = core_images[uri]['width'];
+    const height = core_images[uri].height;
+    const width = core_images[uri].width;
 
-    core_elements['canvas-animated'].height = height;
-    core_elements['canvas-animated'].width = width;
+    core_elements.canvas_animated.height = height;
+    core_elements.canvas_animated.width = width;
 
-    const canvas = core_elements['canvas-animated'].getContext('2d');
+    const canvas = core_elements.canvas_animated.getContext('2d');
     canvas.fillStyle = canvas.createPattern(
       core_images[uri],
       'repeat'
@@ -50,19 +50,19 @@ function animate_uri(){
       height * 2,
     );
 
-    offset_x += Number(core_elements['direction-x'].value);
+    offset_x += Number(core_elements.direction_x.value);
     if(offset_x <= 0){
-        offset_x = core_images[uri]['width'];
+        offset_x = core_images[uri].width;
 
-    }else if(offset_x >= core_images[uri]['width']){
+    }else if(offset_x >= core_images[uri].width){
         offset_x = 0;
     }
 
-    offset_y += Number(core_elements['direction-y'].value);
+    offset_y += Number(core_elements.direction_y.value);
     if(offset_y <= 0){
-        offset_y = core_images[uri]['height'];
+        offset_y = core_images[uri].height;
 
-    }else if(offset_y >= core_images[uri]['height']){
+    }else if(offset_y >= core_images[uri].height){
         offset_y = 0;
     }
 }
@@ -77,18 +77,18 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui-elements': [
-        'canvas-animated',
-        'direction-x',
-        'direction-y',
+        'canvas_animated',
+        'direction_x',
+        'direction_y',
       ],
     });
 
     let results = '';
     for(let uri in uris){
-        results += '<tr><td><canvas id="canvas-' + uri + '"></canvas><br>'
+        results += '<tr><td><canvas id="canvas_' + uri + '"></canvas><br>'
           + uri + '<br>'
-          + '<span id="height-' + uri + '"></span> x <span id="width-' + uri + '"></span><br>'
-          + '<span id="size-' + uri + '"></span> B<br>'
+          + '<span id="height_' + uri + '"></span> x <span id="width_' + uri + '"></span><br>'
+          + '<span id="size_' + uri + '"></span> B<br>'
           + '<button onclick=setup_uri("' + uri + '") type=button>Animate</button>'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
@@ -99,10 +99,10 @@ function repo_init(){
           'id': uri,
           'src': uris[uri],
           'todo': function(){
-              const canvas_element = document.getElementById('canvas-' + uri);
+              const canvas_element = document.getElementById('canvas_' + uri);
 
-              canvas_element.height = core_images[uri]['height'];
-              canvas_element.width = core_images[uri]['width'];
+              canvas_element.height = core_images[uri].height;
+              canvas_element.width = core_images[uri].width;
               canvas_element.style.border = 'solid 10px #000';
               canvas_element.style.display = 'inline';
 
@@ -113,15 +113,15 @@ function repo_init(){
                 0
               );
 
-              document.getElementById('height-' + uri).textContent = core_images[uri]['height'];
-              document.getElementById('width-' + uri).textContent = core_images[uri]['width'];
-              document.getElementById('size-' + uri).textContent = document.getElementById(uri).value.length;
+              document.getElementById('height_' + uri).textContent = core_images[uri].height;
+              document.getElementById('width_' + uri).textContent = core_images[uri].width;
+              document.getElementById('size_' + uri).textContent = document.getElementById(uri).value.length;
           },
         });
     }
 
-    core_elements['canvas-animated'].height = 1;
-    core_elements['canvas-animated'].width = 1;
+    core_elements.canvas_animated.height = 1;
+    core_elements.canvas_animated.width = 1;
 }
 
 function setup_uri(id){

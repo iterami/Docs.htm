@@ -314,10 +314,10 @@ function repo_init(){
             'property': 'test',
           },
           'expect': function(result){
-              return result[0]['test'] === 0
-                && result[1]['test'] === 1
-                && result[2]['test'] === 2
-                && result[3]['test'] === 3;
+              return result[0].test === 0
+                && result[1].test === 1
+                && result[2].test === 2
+                && result[3].test === 3;
           },
           'function': 'core_sort_property',
         },
