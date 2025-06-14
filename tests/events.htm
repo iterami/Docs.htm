@@ -19,14 +19,14 @@
       <td>Totals
   </tbody>
   <tr class=header>
-    <td><input checked id=check-pointer type=checkbox>Pointer
-    <td><input checked id=check-scroll type=checkbox>Scroll
+    <td><input checked id=check_pointer type=checkbox>Pointer
+    <td><input checked id=check_scroll type=checkbox>Scroll
   <tr>
     <td>deltaY Wheel
     <td id=deltaY>
   <tbody id=core_pointer></tbody>
   <tr class=header>
-    <td><input checked id=check-keys type=checkbox>Keys
+    <td><input checked id=check_keys type=checkbox>Keys
     <td id=code>
   <tbody id=keys>
 </table>
@@ -56,7 +56,7 @@ function repo_init(){
         'totals': {},
       },
       'events': {
-        'check-scroll': {
+        'check_scroll': {
           'onchange': function(event){
               document.body.style.overflow = event.target.checked
                 ? 'visible'
@@ -101,8 +101,8 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui-elements': [
-        'check-keys',
-        'check-pointer',
+        'check_keys',
+        'check_pointer',
         'code',
         'deltaY',
         'keys',
@@ -129,7 +129,7 @@ function update(event){
 
     if(!totals[event.type]){
         totals[event.type] = 0;
-        core_elements['totals'].innerHTML += '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a><td id=' + event.type + '>';
+        core_elements.totals.innerHTML += '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a><td id=' + event.type + '>';
     }
 
     core_ui_update({
@@ -143,7 +143,7 @@ function update(event){
 
 function update_keys(event){
     if((core_menu_open && event)
-      || !core_elements['check-keys'].checked){
+      || !core_elements.check_keys.checked){
         return;
     }
     if(event
@@ -151,7 +151,7 @@ function update_keys(event){
         const code = event.code.length
           ? event.code
           : event.key;
-        core_elements['code'].textContent = event.code.length
+        core_elements.code.textContent = event.code.length
           ? 'code: ' + code
           : 'key: ' + code;
 
@@ -176,21 +176,21 @@ function update_keys(event){
     });
     let keys_html = '';
     for(const key in sorted_keys){
-        keys_html += '<tr><td>' + sorted_keys[key] + '<td>' + core_keys[sorted_keys[key]]['state'];
+        keys_html += '<tr><td>' + sorted_keys[key] + '<td>' + core_keys[sorted_keys[key]].state;
     }
-    core_elements['keys'].innerHTML = keys_html;
+    core_elements.keys.innerHTML = keys_html;
 }
 
 function update_pointer(event){
     if((core_menu_open && event)
-      || !core_elements['check-pointer'].checked){
+      || !core_elements.check_pointer.checked){
         return;
     }
     update(event);
     core_ui_update({
       'ids': {
         ...core_pointer,
-        'deltaY': event?.deltaY || Number(core_elements['deltaY']?.textContent),
+        'deltaY': event?.deltaY || Number(core_elements.deltaY?.textContent),
       },
     });
 }
