@@ -53,42 +53,42 @@ table{
   <tr>
     <td class=big colspan=2><span id=turn></span>'s Turn<br>State: <span id=state></span>
   <tr class=taken>
-    <td class=big colspan=2 id=black-pieces-taken>
+    <td class=big colspan=2 id=black_pieces_taken>
   <tr class=taken>
-    <td class=big colspan=2 id=white-pieces-taken>
+    <td class=big colspan=2 id=white_pieces_taken>
   <tr class=header>
     <td>chess_move()
     <td>Response
   <tr>
-    <td>50-moves
-    <td id=50-moves>
+    <td>50_moves
+    <td id=50_moves>
   <tr>
     <td>castling
     <td id=castling>
   <tr>
-    <td>en-passant
-    <td id=en-passant>
+    <td>en_passant
+    <td id=en_passant>
   <tr>
-    <td>en-passant-taken
-    <td id=en-passant-taken>
+    <td>en_passant_taken
+    <td id=en_passant_taken>
   <tr>
-    <td>king-checked
-    <td id=king-checked>
+    <td>king_checked
+    <td id=king_checked>
   <tr>
-    <td>king-checked-enemy
-    <td id=king-checked-enemy>
+    <td>king_checked_enemy
+    <td id=king_checked_enemy>
   <tr>
-    <td>king-moved
-    <td id=king-moved>
+    <td>king_moved
+    <td id=king_moved>
   <tr>
-    <td>pawn-promote
-    <td id=pawn-promote>
+    <td>pawn_promote
+    <td id=pawn_promote>
   <tr>
-    <td>rook-long-moved
-    <td id=rook-long-moved>
+    <td>rook_long_moved
+    <td id=rook_long_moved>
   <tr>
-    <td>rook-short-moved
-    <td id=rook-short-moved>
+    <td>rook_short_moved
+    <td id=rook_short_moved>
   <tr>
     <td>threefold
     <td id=threefold>
@@ -97,62 +97,62 @@ table{
     <td id=valid>
   <tr class=header>
     <td>Black <select><option>Human</select>
-    <td><input class=mini id=order-black maxlength=8 type=text value=31245213>
+    <td><input class=mini id=order_black maxlength=8 type=text value=31245213>
   <tr>
     <td>king
-    <td id=black-king>
+    <td id=black_king>
   <tr>
-    <td>king-checked
-    <td id=black-king-checked>
+    <td>king_checked
+    <td id=black_king_checked>
   <tr>
-    <td>king-moved
-    <td id=black-king-moved>
+    <td>king_moved
+    <td id=black_king_moved>
   <tr>
-    <td>pawn-promote
-    <td><select onchange="update_board()" id=black-pawn-promote>
+    <td>pawn_promote
+    <td><select onchange="update_board()" id=black_pawn_promote>
       <option value=2>Bishop
       <option value=1>Knight
       <option value=4 selected>Queen
       <option value=3>Rook
     </select>
   <tr>
-    <td>rook-long-moved
-    <td id=black-rook-long-moved>
+    <td>rook_long_moved
+    <td id=black_rook_long_moved>
   <tr>
-    <td>rook-short-moved
-    <td id=black-rook-short-moved>
+    <td>rook_short_moved
+    <td id=black_rook_short_moved>
   <tr>
     <td>time
-    <td id=black-time>
+    <td id=black_time>
   <tr class=header>
     <td>White <select><option>Human</select>
-    <td><input class=mini id=order-white maxlength=8 type=text value=31245213>
+    <td><input class=mini id=order_white maxlength=8 type=text value=31245213>
   <tr>
     <td>king
-    <td id=white-king>
+    <td id=white_king>
   <tr>
-    <td>king-checked
-    <td id=white-king-checked>
+    <td>king_checked
+    <td id=white_king_checked>
   <tr>
-    <td>king-moved
-    <td id=white-king-moved>
+    <td>king_moved
+    <td id=white_king_moved>
   <tr>
-    <td>pawn-promote
-    <td><select onchange="update_board()" id=white-pawn-promote>
+    <td>pawn_promote
+    <td><select onchange="update_board()" id=white_pawn_promote>
       <option value=2>Bishop
       <option value=1>Knight
       <option value=4 selected>Queen
       <option value=3>Rook
     </select>
   <tr>
-    <td>rook-long-moved
-    <td id=white-rook-long-moved>
+    <td>rook_long_moved
+    <td id=white_rook_long_moved>
   <tr>
-    <td>rook-short-moved
-    <td id=white-rook-short-moved>
+    <td>rook_short_moved
+    <td id=white_rook_short_moved>
   <tr>
     <td>time
-    <td id=white-time>
+    <td id=white_time>
   <tr>
     <td colspan=2><button onclick="rotate_board()" type=button>Rotate Board</button><button onclick="reset_board(true)" type=button>Reset</button><button onclick="update_board()" type=button>Update</button><br>
 <input onclick="override=!override" type=checkbox> Override Rules<br>
@@ -166,7 +166,7 @@ table{
 function create_board(){
     let board_html = '';
     for(let y = 0; y < 8; y++){
-        board_html += '<tr><td class="notation right" id="rank-' + y + '">' + (8 - y);
+        board_html += '<tr><td class="notation right" id="rank_' + y + '">' + (8 - y);
         for(let x = 0; x < 8; x++){
             board_html += '<td id="' + chess_xy_to_fr(
               x,
@@ -174,7 +174,7 @@ function create_board(){
             ) + '" onclick="select_square(this.id)">';
         }
     }
-    board_html += '<tr><td class="file notation"><td class="file notation" id="file-0">a<td class="file notation" id="file-1">b<td class="file notation" id="file-2">c<td class="file notation" id="file-3">d<td class="file notation" id="file-4">e<td class="file notation" id="file-5">f<td class="file notation" id="file-6">g<td class="file notation" id="file-7">h';
+    board_html += '<tr><td class="file notation"><td class="file notation" id="file_0">a<td class="file notation" id="file_1">b<td class="file notation" id="file_2">c<td class="file notation" id="file_3">d<td class="file notation" id="file_4">e<td class="file notation" id="file_5">f<td class="file notation" id="file_6">g<td class="file notation" id="file_7">h';
 
     document.getElementById('chess').innerHTML = board_html;
     update_board();
@@ -189,7 +189,7 @@ function remove_selected(){
     const square_x = Number('abcdefgh'.indexOf(selected[0]));
     const square_y = Number(8 - selected[1]);
 
-    chess_games['test']['board'][square_y][square_x] = '';
+    chess_games.test.board[square_y][square_x] = '';
     selected = '';
 
     update_board();
@@ -205,8 +205,8 @@ function reset_board(reset){
 
     chess_new({
       'id': 'test',
-      'order-black': document.getElementById('order-black').value,
-      'order-white': document.getElementById('order-white').value,
+      'order_black': document.getElementById('order_black').value,
+      'order_white': document.getElementById('order_white').value,
       'increment': document.getElementById('increment').value,
       'time': document.getElementById('time').value,
     });
@@ -223,7 +223,7 @@ function rotate_board(){
     rotated = !rotated;
 
     for(let y = 0; y < 8; y++){
-        document.getElementById('rank-' + y).textContent = rotated
+        document.getElementById('rank_' + y).textContent = rotated
           ? y + 1
           : 8 - y;
         for(let x = 0; x < 8; x++){
@@ -245,7 +245,7 @@ function rotate_board(){
             );
         }
 
-        document.getElementById('file-' + y).textContent = 'abcdefgh'[rotated
+        document.getElementById('file_' + y).textContent = 'abcdefgh'[rotated
           ? 7 - y
           : y];
     }
@@ -254,14 +254,14 @@ function rotate_board(){
 }
 
 function second(){
-    const player = chess_games['test']['player'];
-    if(chess_games['test']['players'][player]['time'] <= 0){
+    const player = chess_games.test.player;
+    if(chess_games.test.players[player].time <= 0){
         return;
     }
-    chess_games['test']['players'][player]['time']--;
+    chess_games.test.players[player].time--;
     document.getElementById(player
-      ? 'black-time'
-      : 'white-time').textContent = chess_games['test']['players'][player]['time'];
+      ? 'black_time'
+      : 'white_time').textContent = chess_games.test.players[player].time;
 }
 
 function select_square(id){
@@ -276,7 +276,7 @@ function select_square(id){
         selected = '';
 
     }else if(!selected.length){
-        if(chess_games['test']['board'][square_y][square_x].length === 1){
+        if(chess_games.test.board[square_y][square_x].length === 1){
             selected = id;
         }
 
@@ -284,10 +284,10 @@ function select_square(id){
         const move = chess_move({
           'id': 'test',
           'override': override,
-          'piece-x': Number('abcdefgh'.indexOf(selected[0])),
-          'piece-y': Number(8 - selected[1]),
-          'target-x': square_x,
-          'target-y': square_y,
+          'piece_x': Number('abcdefgh'.indexOf(selected[0])),
+          'piece_y': Number(8 - selected[1]),
+          'target_x': square_x,
+          'target_y': square_y,
         });
         for(const property in move){
             const element = document.getElementById(property);
@@ -296,7 +296,7 @@ function select_square(id){
             }
         }
 
-        if(override || move['valid']){
+        if(override || move.valid){
             next = id;
             previous = selected[0] + selected[1];
             selected = '';
@@ -308,7 +308,7 @@ function select_square(id){
         }
 
         if(!threefold){
-            chess_games['test']['threefold'] = {};
+            chess_games.test.threefold = {};
         }
 
         if(!clock_started){
@@ -326,41 +326,41 @@ function select_square(id){
 }
 
 function update_board(){
-    chess_games['test']['players'][1]['pawn-promote'] = Number(document.getElementById('black-pawn-promote').value);
-    chess_games['test']['players'][0]['pawn-promote'] = Number(document.getElementById('white-pawn-promote').value);
+    chess_games.test.players[1].pawn_promote = Number(document.getElementById('black_pawn_promote').value);
+    chess_games.test.players[0].pawn_promote = Number(document.getElementById('white_pawn_promote').value);
 
-    document.getElementById('turn').textContent = chess_games['test']['player']
+    document.getElementById('turn').textContent = chess_games.test.player
       ? 'Black'
       : 'White';
-    document.getElementById('black-pieces-taken').textContent = chess_games['test']['players'][1]['pieces-taken'];
-    document.getElementById('white-pieces-taken').textContent = chess_games['test']['players'][0]['pieces-taken'];
+    document.getElementById('black_pieces_taken').textContent = chess_games.test.players[1].pieces_taken;
+    document.getElementById('white_pieces_taken').textContent = chess_games.test.players[0].pieces_taken;
 
-    document.getElementById('black-king').textContent = chess_xy_to_fr(
-      chess_games['test']['players'][1]['king-x'],
-      chess_games['test']['players'][1]['king-y']
+    document.getElementById('black_king').textContent = chess_xy_to_fr(
+      chess_games.test.players[1].king_x,
+      chess_games.test.players[1].king_y
     );
-    document.getElementById('black-king-checked').textContent = chess_games['test']['players'][1]['king-checked'];
-    document.getElementById('black-king-moved').textContent = chess_games['test']['players'][1]['king-moved'];
-    document.getElementById('black-rook-long-moved').textContent = chess_games['test']['players'][1]['rook-long-moved'];
-    document.getElementById('black-rook-short-moved').textContent = chess_games['test']['players'][1]['rook-short-moved'];
-    document.getElementById('black-time').textContent = chess_games['test']['players'][1]['time'];
+    document.getElementById('black_king_checked').textContent = chess_games.test.players[1].king_checked;
+    document.getElementById('black_king_moved').textContent = chess_games.test.players[1].king_moved;
+    document.getElementById('black_rook_long_moved').textContent = chess_games.test.players[1].rook_long_moved;
+    document.getElementById('black_rook_short_moved').textContent = chess_games.test.players[1].rook_short_moved;
+    document.getElementById('black_time').textContent = chess_games.test.players[1].time;
 
-    document.getElementById('white-king').textContent = chess_xy_to_fr(
-      chess_games['test']['players'][0]['king-x'],
-      chess_games['test']['players'][0]['king-y']
+    document.getElementById('white_king').textContent = chess_xy_to_fr(
+      chess_games.test.players[0].king_x,
+      chess_games.test.players[0].king_y
     );
-    document.getElementById('white-king-checked').textContent = chess_games['test']['players'][0]['king-checked'];
-    document.getElementById('white-king-moved').textContent = chess_games['test']['players'][0]['king-moved'];
-    document.getElementById('white-rook-long-moved').textContent = chess_games['test']['players'][0]['rook-long-moved'];
-    document.getElementById('white-rook-short-moved').textContent = chess_games['test']['players'][0]['rook-short-moved'];
-    document.getElementById('white-time').textContent = chess_games['test']['players'][0]['time'];
+    document.getElementById('white_king_checked').textContent = chess_games.test.players[0].king_checked;
+    document.getElementById('white_king_moved').textContent = chess_games.test.players[0].king_moved;
+    document.getElementById('white_rook_long_moved').textContent = chess_games.test.players[0].rook_long_moved;
+    document.getElementById('white_rook_short_moved').textContent = chess_games.test.players[0].rook_short_moved;
+    document.getElementById('white_time').textContent = chess_games.test.players[0].time;
 
     for(let y = 0; y < 8; y++){
         for(let x = 0; x < 8; x++){
             const id = chess_xy_to_fr(x, y);
             const square = document.getElementById(id);
 
-            square.innerHTML = chess_games['test']['board'][y][x] || '&nbsp;';
+            square.innerHTML = chess_games.test.board[y][x] || '&nbsp;';
             square.style.backgroundColor = (id === previous || id === next)
               ? (x % 2 === y % 2
                   ? '#afa'
