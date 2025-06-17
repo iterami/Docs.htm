@@ -10,15 +10,15 @@ function item_toggle(item){
 }
 
 function kill(id){
-    if(webgl_characters[id]['team'] !== 0
-      && webgl_characters[id]['level'] >= webgl_characters[webgl_character_id]['level'] - 10){
+    if(webgl_characters[id].team !== 0
+      && webgl_characters[id].level >= webgl_characters[webgl_character_id].level - 10){
         webgl_stat_modify({
           'stat': 'level-xp',
         });
     }
 
     if(Math.random() < webgl_characters[id]['drop-chance']){
-        item_drop(webgl_characters[id]['drops'][core_random_integer(webgl_characters[id]['drops'].length)]);
+        item_drop(webgl_characters[id].drops[core_random_integer(webgl_characters[id].drops.length)]);
     }
 }
 
@@ -328,10 +328,10 @@ function repo_init(){
 
     let talents_ui = '<ul>';
     for(const talent in talents){
-        talents_ui += '<li>+' + talents[talent]['value'] + ' ' + talent + ' <button onclick="talent_modify(\'' + talent + '\')" type=button>+</button>';
+        talents_ui += '<li>+' + talents[talent].value + ' ' + talent + ' <button onclick="talent_modify(\'' + talent + '\')" type=button>+</button>';
     }
     core_tab_create({
-      'content': 'Talents (<span id=talent-points></span> points): ' + talents_ui + '</ul>',
+      'content': 'Talents (<span id=talent_points></span> points): ' + talents_ui + '</ul>',
       'group': 'rpg',
       'id': 'talents',
       'label': 'Talents',
@@ -348,7 +348,7 @@ function skill_select(id){
         return;
     }
 
-    character['skill'] = id;
+    character.skill = id;
     core_ui_update({
       'class': true,
       'ids': {
@@ -359,16 +359,16 @@ function skill_select(id){
 
 function skill_use(id){
     const character = webgl_characters[id];
-    const skill = character['skill'];
+    const skill = character.skill;
     if(skill.length === 0){
         return;
     }
 
-    if(character['mana'] < skill['mana']){
+    if(character.mana < skill.mana){
         return;
     }
 
-    character['mana'] -= skill['mana'];
+    character.mana -= skill.mana;
 }
 
 function stats(team){
@@ -415,8 +415,8 @@ function stats(team){
         'position-y': collide_bottom,
       },
       'speed': .5,
-      'talent-points': 0,
-      'talent-points-max': 0,
+      'talent_points': 0,
+      'talent_points_max': 0,
       'team': team,
     };
 }
@@ -424,11 +424,11 @@ function stats(team){
 function talent_modify(talent){
     const character = webgl_characters[webgl_character_id];
     if(!character
-      || character['talent-points'] <= 0){
+      || character.talent_points <= 0){
         return;
     }
 
-    character['talent-points']--;
+    character.talent_points--;
     webgl_stat_modify(talents[talent]);
 }
 
@@ -439,19 +439,19 @@ function update_ui(){
     }
 
     let equipment_ui = '<ul>';
-    for(const slot in character['equipment']){
-        const item = character['equipment'][slot] !== void 0
-          ? character['equipment'][slot]
+    for(const slot in character.equipment){
+        const item = character.equipment[slot] !== void 0
+          ? character.equipment[slot]
           : '';
         equipment_ui += '<li>' + slot + ': ' + item;
     }
 
     let inventory_ui = '<ul>';
-    for(const item in character['inventory']){
-        inventory_ui += '<li>' + character['inventory'][item]['id'];
+    for(const item in character.inventory){
+        inventory_ui += '<li>' + character.inventory[item].id;
     }
 
-    character['talent-points-max'] = character['level'];
+    character.talent_points_max = character.level;
 
     core_ui_update({
       'class': true,
@@ -459,15 +459,15 @@ function update_ui(){
         'equipment': equipment_ui + '</ul>',
         'inventory': inventory_ui + '</ul>',
         'jump-height': character['jump-height'],
-        'level': character['level'],
+        'level': character.level,
         'level-xp': character['level-xp'],
-        'life': character['life'],
+        'life': character.life,
         'life-max': character['life-max'],
-        'mana': character['mana'],
+        'mana': character.mana,
         'mana-max': character['mana-max'],
-        'skill': character['skill'],
-        'speed': character['speed'],
-        'talent-points': character['talent-points-max'] - character['talent-points'],
+        'skill': character.skill,
+        'speed': character.speed,
+        'talent_points': character.talent_points_max - character.talent_points,
       },
       'todo': 'innerHTML',
     });

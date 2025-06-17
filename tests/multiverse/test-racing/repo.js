@@ -1,29 +1,29 @@
 'use strict';
 
 function lap_update(args){
-    const character = webgl_characters[args['id']];
-    if(character['mark'] !== args['mark'] - 1){
+    const character = webgl_characters[args.id];
+    if(character.mark !== args.mark - 1){
         return;
     }
 
-    character['mark']++;
-    if(character['mark'] >= mark_max){
+    character.mark++;
+    if(character.mark >= mark_max){
         audio_start('boop');
-        character['mark'] = 0;
-        character['lap']++;
-        if(character['lap'] > lap_max){
-            character['lap'] = 1;
+        character.mark = 0;
+        character.lap++;
+        if(character.lap > lap_max){
+            character.lap = 1;
         }
     }
 
     const positions = [];
     for(const id in webgl_characters){
         const racer = webgl_characters[id];
-        if(!racer['mark']){
+        if(!racer.mark){
             continue;
         }
         positions.push({
-          'progress': racer['lap'] * mark_max + racer['mark'],
+          'progress': racer.lap * mark_max + racer.mark,
           'racer': id,
         });
     }
@@ -34,7 +34,7 @@ function lap_update(args){
       'reverse': true,
     });
     for(const position in positions){
-        webgl_characters[positions[position]['racer']]['position'] = Number(position) + 1;
+        webgl_characters[positions[position].racer].position = Number(position) + 1;
     }
     update_ui();
 }
@@ -396,8 +396,8 @@ function racer_add(id){
 
     const properties = {};
     if(id !== webgl_character_id){
-        properties['automove'] = true;
-        properties['keys'] = {
+        properties.automove = true;
+        properties.keys = {
           'move-←': true,
         };
     }
@@ -503,11 +503,11 @@ function repo_logic(){
     const character = webgl_characters[webgl_character_id];
     let speed = '-';
     let speed_max = '-';
-    if(character['vehicle'] !== false){
-        const stats = webgl_characters[character['vehicle']]['vehicle-stats'];
+    if(character.vehicle !== false){
+        const stats = webgl_characters[character.vehicle]['vehicle-stats'];
         speed = core_round({
           'decimals': 2,
-          'number': stats['speed'],
+          'number': stats.speed,
         });
         speed_max = stats['speed-max-forward'];
     }
@@ -548,11 +548,11 @@ function update_ui(){
     core_ui_update({
       'class': true,
       'ids': {
-        'lap': character['lap'],
+        'lap': character.lap,
         'lap-max': lap_max,
-        'mark': character['mark'],
+        'mark': character.mark,
         'mark-max': mark_max,
-        'position': character['position'],
+        'position': character.position,
         'position-max': position_max,
       },
     });

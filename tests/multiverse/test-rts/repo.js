@@ -1,29 +1,29 @@
 'use strict';
 
 function attack(pick){
-    console.log('Attacking', pick['id'], 'with', webgl_characters[webgl_character_id]['selected']);
+    console.log('Attacking', pick.id, 'with', webgl_characters[webgl_character_id].selected);
 }
 
 // Required args: id, build
 function build(args){
-    const player = webgl_characters[args['id']];
-    if(player['building'][args['build']]){
+    const player = webgl_characters[args.id];
+    if(player.building[args.build]){
         return;
     }
 
-    const cost = tech[args['build']]['cost'];
-    if(player['power'] < cost){
+    const cost = tech[args.build].cost;
+    if(player.power < cost){
         return;
     }
 
-    const position = webgl_get_position(entity_entities[player['selected']]);
-    player['power'] -= cost;
-    player['building'][args['build']] = {
-      'id': args['build'],
-      'time': tech[args['build']]['time'],
-      'x': position['x'] + 20,
-      'y': position['y'],
-      'z': position['z'],
+    const position = webgl_get_position(entity_entities[player.selected]);
+    player.power -= cost;
+    player.building[args.build] = {
+      'id': args.build,
+      'time': tech[args.build].time,
+      'x': position.x + 20,
+      'y': position.y,
+      'z': position.z,
     };
     update_ui();
 }
@@ -35,34 +35,34 @@ function handle_picking(event){
     }
 
     const character = webgl_characters[webgl_character_id];
-    const selected = entity_entities[character['selected']];
+    const selected = entity_entities[character.selected];
     if(core_pointer['down-1']
       && !selected){
         return;
     }
 
     const pick = webgl_pick_entity();
-    const team = pick?.['team'];
+    const team = pick?.team;
     if(core_pointer['down-0']){
-        select((pick && team) ? pick['id'] : '');
+        select((pick && team) ? pick.id : '');
 
     }else if(pick
       && core_pointer['down-1']
-      && selected['team'] === character['id']){
-        const properties = tech[selected['type']];
+      && selected.team === character.id){
+        const properties = tech[selected.type];
         if(!team){
-            if(properties['type'] === 'unit'){
+            if(properties.type === 'unit'){
                 move(pick);
 
-            }else if(properties['builds'].length){
+            }else if(properties.builds.length){
                 rally(pick);
             }
 
             return;
         }
 
-        const owned = team && team === character['id'];
-        if(properties['type'] === 'unit'){
+        const owned = team && team === character.id;
+        if(properties.type === 'unit'){
             if(owned){
                 move(pick);
 
@@ -70,7 +70,7 @@ function handle_picking(event){
                 attack(pick);
             }
 
-        }else if(properties['builds'].length){
+        }else if(properties.builds.length){
             rally(pick);
 
         }else if(!owned){
@@ -171,25 +171,25 @@ function make(args){
       },
     });
 
-    const id = args['type'] + entity_id_count;
+    const id = args.type + entity_id_count;
     webgl_entity_create({
       'character': 'rts-testmap',
       'entities': [{
         'attach-to': 'rts-testmap',
-        'attach-x': args['x'],
-        'attach-y': args['y'],
-        'attach-z': args['z'],
+        'attach-x': args.x,
+        'attach-y': args.y,
+        'attach-z': args.z,
         'id': id,
         'picking': true,
-        'team': args['team'],
-        'type': args['type'],
-        ...tech[args['type']]['properties'],
+        'team': args.team,
+        'type': args.type,
+        ...tech[args.type].properties,
       }],
     });
 }
 
 function move(pick){
-    console.log('Moving', webgl_characters[webgl_character_id]['selected'], 'to', pick['id']);
+    console.log('Moving', webgl_characters[webgl_character_id].selected, 'to', pick.id);
 }
 
 function new_game(){
@@ -255,10 +255,10 @@ function new_game(){
     );
     for(const id in tech){
         core_html({
-          'parent': core_elements['build'],
+          'parent': core_elements.build,
           'properties': {
             'id': 'build-' + id,
-            'innerHTML': id + '<br>' + tech[id]['cost'] + ', ' + tech[id]['time'],
+            'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
                 build({
                   'id': webgl_character_id,
@@ -278,7 +278,7 @@ function new_game(){
 }
 
 function rally(pick){
-    console.log('Set rally of', webgl_characters[webgl_character_id]['selected'], 'to', pick['id']);
+    console.log('Set rally of', webgl_characters[webgl_character_id].selected, 'to', pick.id);
 }
 
 function repo_escape(){
@@ -345,30 +345,30 @@ function repo_init(){
 function repo_logic(){
     for(const id in webgl_characters){
         const character = webgl_characters[id];
-        if(!character['building']){
+        if(!character.building){
             continue;
         }
 
-        for(const building in character['building']){
-            const build = character['building'][building];
-            build['time']--;
-            if(build['time'] <= 0){
+        for(const building in character.building){
+            const build = character.building[building];
+            build.time--;
+            if(build.time <= 0){
                 make({
-                  'team': character['id'],
-                  'type': build['id'],
-                  'x': build['x'],
-                  'y': build['y'],
-                  'z': build['z'],
+                  'team': character.id,
+                  'type': build.id,
+                  'x': build.x,
+                  'y': build.y,
+                  'z': build.z,
                 });
-                delete character['building'][building];
+                delete character.building[building];
             }
         }
     }
 
     let progress_ui = '';
-    const building = webgl_characters[webgl_character_id]['building'];
+    const building = webgl_characters[webgl_character_id].building;
     for(const progress in building){
-        progress_ui += building[progress]['id'] + ': ' + building[progress]['time'] + '<br>';
+        progress_ui += building[progress].id + ': ' + building[progress].time + '<br>';
     }
     core_ui_update({
       'class': true,
@@ -381,16 +381,16 @@ function repo_logic(){
 
 function select(id){
     const character = webgl_characters[webgl_character_id];
-    character['selected'] = id;
+    character.selected = id;
 
-    if(character['selected'] === ''
-      || entity_entities[character['selected']]['team'] !== character['id']){
+    if(character.selected === ''
+      || entity_entities[character.selected].team !== character.id){
         for(const id in tech){
             core_elements['build-' + id].style.display = 'none';
         }
 
     }else{
-        const builds = tech[entity_entities[character['selected']]['type']]['builds'];
+        const builds = tech[entity_entities[character.selected].type].builds;
         for(const id in tech){
             core_elements['build-' + id].style.display = builds.includes(id)
               ? 'inline-block'
@@ -429,33 +429,33 @@ function team_create(args){
 
     webgl_character_init({
       ...stats(),
-      'id': args['id'],
-      'power': args['power'],
+      'id': args.id,
+      'power': args.power,
       'spawn': {
-        'position-x': args['x'],
-        'position-y': args['y'],
-        'position-z': args['z'],
+        'position-x': args.x,
+        'position-y': args.y,
+        'position-z': args.z,
       },
     });
     make({
-      'team': args['id'],
+      'team': args.id,
       'type': 'Builder',
-      'x': args['x'],
-      'y': args['y'],
-      'z': args['z'],
+      'x': args.x,
+      'y': args.y,
+      'z': args.z,
     });
 }
 
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
-    const selected = entity_entities[character['selected']];
+    const selected = entity_entities[character.selected];
     core_ui_update({
       'class': true,
       'ids': {
-        'power': character['power'],
-        'selected': character['selected'],
-        'team': selected?.['team'],
-        'type': selected?.['type'],
+        'power': character.power,
+        'selected': character.selected,
+        'team': selected?.team,
+        'type': selected?.type,
       },
     });
 }

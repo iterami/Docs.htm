@@ -1,23 +1,23 @@
 'use strict';
 
 function collect(args){
-    if(args['type'] === 'weapon'){
+    if(args.type === 'weapon'){
         weapon_equip({
           'id': webgl_character_id,
-          'weapon': args['value'],
+          'weapon': args.value,
         });
 
     }else{
         webgl_stat_modify({
-          'stat': args['type'],
+          'stat': args.type,
           'target': webgl_characters[webgl_character_id],
-          'value': args['value'],
+          'value': args.value,
         });
     }
 
     audio_start('boop');
     entity_remove({
-      'entities': [args['id']],
+      'entities': [args.id],
     });
 }
 
@@ -254,7 +254,7 @@ function repo_init(){
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span class=weapon></span><br>'
-        + 'Ammo: <span class=ammo></span>/<span class=ammo-max></span><br>'
+        + 'Ammo: <span class=ammo></span>/<span class=ammo_max></span><br>'
         + 'Reload: <span class=reload></span></span>',
       'menu': true,
       'pointerbinds': {
@@ -278,7 +278,7 @@ function repo_init(){
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
-        + 'Ammo: <span id=ammo></span>/<span id=ammo-max></span><br>'
+        + 'Ammo: <span id=ammo></span>/<span id=ammo_max></span><br>'
         + 'Reload: <span id=reload></span></span>',
     });
 }
@@ -286,15 +286,15 @@ function repo_init(){
 function repo_logic(){
     for(const id in webgl_characters){
         const character = webgl_characters[id];
-        if(character['reload'] > 0){
-            character['reload']--;
+        if(character.reload > 0){
+            character.reload--;
         }
     }
 
     core_ui_update({
       'class': true,
       'ids': {
-        'reload': webgl_characters[webgl_character_id]['reload'],
+        'reload': webgl_characters[webgl_character_id].reload,
       },
     });
 }
@@ -306,7 +306,7 @@ function repo_stat_modify(){
 function stats(){
     return {
       'ammo': 0,
-      'ammo-max': 0,
+      'ammo_max': 0,
       'collide-bottom': 8,
       'collide-top': 2,
       'collides': true,
@@ -331,42 +331,42 @@ function update_ui(){
     core_ui_update({
       'class': true,
       'ids': {
-        'ammo': character['ammo'],
-        'ammo-max': character['ammo-max'],
-        'life': character['life'],
+        'ammo': character.ammo,
+        'ammo_max': character.ammo_max,
+        'life': character.life,
         'life-max': character['life-max'],
-        'lives': character['lives'],
-        'reload': character['reload'],
-        'speed': character['speed'],
-        'weapon': character['weapon'],
+        'lives': character.lives,
+        'reload': character.reload,
+        'speed': character.speed,
+        'weapon': character.weapon,
       },
     });
 }
 
 function weapon_equip(args){
-    const character = webgl_characters[args['id']];
-    const weapon = weapons[args['weapon']];
+    const character = webgl_characters[args.id];
+    const weapon = weapons[args.weapon];
 
-    if(character['weapon'] !== args['weapon']){
-        character['weapon'] = args['weapon'];
-        character['ammo-max'] = weapon['ammo'];
-        character['reload'] = weapon['reload'];
+    if(character.weapon !== args.weapon){
+        character.weapon = args.weapon;
+        character.ammo_max = weapon.ammo;
+        character.reload = weapon.reload;
     }
 
-    character['ammo'] = weapon['ammo'];
+    character.ammo = weapon.ammo;
     update_ui();
 }
 
 function weapon_fire(id){
     const character = webgl_characters[webgl_character_id];
-    if(character['weapon'].length === 0
-      || character['ammo'] === 0
-      || character['reload'] !== 0){
+    if(character.weapon.length === 0
+      || character.ammo === 0
+      || character.reload !== 0){
         return;
     }
 
-    character['reload'] = weapons[character['weapon']]['reload'];
-    character['ammo']--;
+    character.reload = weapons[character.weapon].reload;
+    character.ammo--;
     audio_start('boop');
     update_ui();
 }

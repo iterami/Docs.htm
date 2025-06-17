@@ -1,20 +1,20 @@
 'use strict';
 
 function collect(args){
-    if(args['flag']){
-        delete flags['skymap'][args['flag']];
+    if(args.flag){
+        delete flags.skymap[args.flag];
     }
 
-    const value = args['value'] || 1;
+    const value = args.value || 1;
     webgl_stat_modify({
-      'stat': args['type'],
+      'stat': args.type,
       'target': webgl_characters[webgl_character_id],
       'value': value,
     });
 
     audio_start('boop');
     entity_remove({
-      'entities': [args['id']],
+      'entities': [args.id],
     });
 }
 
@@ -85,9 +85,9 @@ function load_skymap(spawn){
       }
     ];
     const flagged = [];
-    if(flags['skymap']['coin-0']){
+    if(flags.skymap.coin_0){
         flagged.push({
-          'id': 'coin-0',
+          'id': 'coin_0',
           'attach-y': 3,
           'attach-z': -80,
           'billboard': true,
@@ -99,8 +99,8 @@ function load_skymap(spawn){
               'todo': 'collect',
               'type': 'function',
               'value': {
-                'flag': 'coin-0',
-                'id': 'coin-0',
+                'flag': 'coin_0',
+                'id': 'coin_0',
                 'type': 'coins',
               },
             },
@@ -116,9 +116,9 @@ function load_skymap(spawn){
           ],
         });
     }
-    if(flags['skymap']['lives-0']){
+    if(flags.skymap.lives_0){
         flagged.push({
-          'id': 'lives-0',
+          'id': 'lives_0',
           'attach-y': 3,
           'attach-z': -135,
           'billboard': true,
@@ -130,8 +130,8 @@ function load_skymap(spawn){
               'todo': 'collect',
               'type': 'function',
               'value': {
-                'flag': 'lives-0',
-                'id': 'lives-0',
+                'flag': 'lives_0',
+                'id': 'lives_0',
                 'type': 'lives',
               },
             },
@@ -154,7 +154,7 @@ function load_skymap(spawn){
         'clear-color': [0, 0, .2],
         'spawn': spawners[spawn],
         'paths': {
-          'fireball-0': {
+          'fireball_0': {
             'end': 'warp',
             'points': [
               {
@@ -165,7 +165,7 @@ function load_skymap(spawn){
               },
             ],
           },
-          'platform-0': {
+          'platform_0': {
             'end': 'loop',
             'speed': .2,
             'points': [
@@ -192,7 +192,7 @@ function load_skymap(spawn){
               },
             ],
           },
-          'wallmoving-0': {
+          'wallmoving_0': {
             'end': 'loop',
             'points': [
               {
@@ -236,7 +236,7 @@ function load_skymap(spawn){
                 ],
               },
               {
-                'id': 'gate-0',
+                'id': 'gate_0',
                 'attach-z': -100,
                 'rotate-x': 90,
                 'texture': 'grid.png',
@@ -251,7 +251,7 @@ function load_skymap(spawn){
                 ],
               },
               {
-                'id': 'key-0',
+                'id': 'key_0',
                 'alpha': .99999,
                 'attach-x': -15,
                 'attach-y': 3,
@@ -265,13 +265,13 @@ function load_skymap(spawn){
                     'todo': 'collect',
                     'type': 'function',
                     'value': {
-                      'id': 'key-0',
+                      'id': 'key_0',
                       'type': 'keys',
                     },
                   },
                   {
                     'stat': 'attach-x',
-                    'todo': 'gate-0',
+                    'todo': 'gate_0',
                     'value': -60,
                   },
                 ],
@@ -288,7 +288,7 @@ function load_skymap(spawn){
                 ],
               },
               {
-                'id': 'life-0',
+                'id': 'life_0',
                 'attach-x': 15,
                 'attach-y': 3,
                 'attach-z': -80,
@@ -301,7 +301,7 @@ function load_skymap(spawn){
                     'todo': 'collect',
                     'type': 'function',
                     'value': {
-                      'id': 'life-0',
+                      'id': 'life_0',
                       'type': 'life',
                     },
                   },
@@ -319,16 +319,16 @@ function load_skymap(spawn){
             ],
           },
           {
-            'id': 'fireball-0',
+            'id': 'fireball_0',
             'level': 0,
-            'path-id': 'fireball-0',
+            'path-id': 'fireball_0',
             'position-x': -50,
             'position-y': 3,
             'position-z': -60,
             'spawn': false,
             'entities': [
               {
-                'id': 'fireball-0-body',
+                'id': 'fireball_0_body',
                 'billboard': true,
                 'collision': false,
                 'event-range': 3,
@@ -337,7 +337,7 @@ function load_skymap(spawn){
                     'todo': 'webgl_character_hit',
                     'type': 'function',
                     'value': {
-                      'id': 'fireball-0',
+                      'id': 'fireball_0',
                       'xz': .3,
                       'y': .5
                     }
@@ -349,7 +349,7 @@ function load_skymap(spawn){
                   },
                   {
                     'stat': 'position-x',
-                    'todo': 'fireball-0',
+                    'todo': 'fireball_0',
                     'type': 'character',
                     'value': -100,
                   },
@@ -373,21 +373,21 @@ function load_skymap(spawn){
             ],
           },
           {
-            'id': 'platform-0',
+            'id': 'platform_0',
             'level': 0,
-            'path-id': 'platform-0',
+            'path-id': 'platform_0',
             'spawn': false,
           },
           {
-            'id': 'wallmoving-0',
+            'id': 'wallmoving_0',
             'level': 0,
-            'path-id': 'wallmoving-0',
+            'path-id': 'wallmoving_0',
             'position-y': 10,
             'position-z': -150,
             'spawn': false,
             'entities': [
               {
-                'id': 'wallmoving-0',
+                'id': 'wallmoving_0',
                 'rotate-x': 90,
                 'texture': 'grid.png',
                 'vertex-colors': [
@@ -407,8 +407,8 @@ function load_skymap(spawn){
           {
             'type': 'prefab_platform',
             'properties': {
-              'prefix': 'platform-0',
-              'character': 'platform-0',
+              'prefix': 'platform_0',
+              'character': 'platform_0',
               'position-y': -5,
               'size-x': 40,
               'size-y': 10,
@@ -441,8 +441,8 @@ function new_game(){
 
     flags = {
       'skymap': {
-        'coin-0': true,
-        'lives-0': true,
+        'coin_0': true,
+        'lives_0': true,
       },
     };
 
@@ -549,12 +549,12 @@ function update_ui(){
     core_ui_update({
       'class': true,
       'ids': {
-        'coins': character['coins'],
-        'keys': character['keys'],
-        'life': character['life'],
+        'coins': character.coins,
+        'keys': character.keys,
+        'life': character.life,
         'life-max': character['life-max'],
-        'lives': character['lives'],
-        'speed': character['speed'],
+        'lives': character.lives,
+        'speed': character.speed,
       },
     });
 }
