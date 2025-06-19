@@ -531,7 +531,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
-      'storage-controls': true,
+      'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
         + 'Lives: <span id=lives></span><br>'

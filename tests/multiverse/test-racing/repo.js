@@ -490,7 +490,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
-      'storage-controls': true,
+      'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
         + 'Mark: <span id=mark></span>/<span id=mark-max></span><br>'

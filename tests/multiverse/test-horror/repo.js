@@ -161,7 +161,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
-      'storage-controls': true,
+      'storage_controls': true,
       'title': 'Docs.htm',
     });
 }

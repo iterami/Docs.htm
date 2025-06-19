@@ -327,7 +327,7 @@ function repo_init(){
         },
       },
       'root': '../../common-webgl-standalone.htm',
-      'storage-controls': true,
+      'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'
