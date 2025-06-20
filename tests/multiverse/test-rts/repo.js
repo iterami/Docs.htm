@@ -335,7 +335,7 @@ function repo_init(){
         + 'Type: <span id=type></span>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
-      'ui-elements': [
+      'ui_elements': [
         'build',
         'progress',
       ],
