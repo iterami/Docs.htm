@@ -11,20 +11,20 @@
     transform-origin: left;
     width: 30px;
 }
-#direction-2{
+#direction_2{
     background: #f00;
     top: 20%;
 }
-#direction-2-relative{
+#direction_2_relative{
     background: #0f0;
     left: 25%;
     top: 23%;
 }
-#direction-4{
+#direction_4{
     background: #00f;
     top: 50%;
 }
-#direction-4-relative{
+#direction_4_relative{
     background: #f0f;
     left: 25%;
     top: 75%;
@@ -32,33 +32,33 @@
 </style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Pointer Controls
-<div class=direction id=direction-2></div>
-<div class=direction id=direction-2-relative></div>
-<div class=direction id=direction-4></div>
-<div class=direction id=direction-4-relative></div>
+<div class=direction id=direction_2></div>
+<div class=direction id=direction_2_relative></div>
+<div class=direction id=direction_4></div>
+<div class=direction id=direction_4_relative></div>
 
 <script src=../../common/js/core.js></script>
 <script>
 function direction_reset(){
-    core_elements['direction-2'].style.width = '30px';
-    core_elements['direction-2-relative'].style.width = '30px';
-    core_elements['direction-4'].style.width = '30px';
-    core_elements['direction-4-relative'].style.width = '30px';
+    core_elements.direction_2.style.width = '30px';
+    core_elements.direction_2_relative.style.width = '30px';
+    core_elements.direction_4.style.width = '30px';
+    core_elements.direction_4_relative.style.width = '30px';
 }
 
 function direction_update(){
-    if(!core_pointer['down-0']){
+    if(!core_pointer.down_0){
         return;
     }
 
     const angles = [0, 90, 180, 270]; // 0=right, 1=down, 2=left, 3=up
     let direction = 0;
-    const style_2 = core_elements['direction-2'].style;
-    const style_2_relative = core_elements['direction-2-relative'].style;
-    const style_4 = core_elements['direction-4'].style;
-    const style_4_relative = core_elements['direction-4-relative'].style;
-    const x = core_pointer['x'];
-    const y = core_pointer['y'];
+    const style_2 = core_elements.direction_2.style;
+    const style_2_relative = core_elements.direction_2_relative.style;
+    const style_4 = core_elements.direction_4.style;
+    const style_4_relative = core_elements.direction_4_relative.style;
+    const x = core_pointer.x;
+    const y = core_pointer.y;
 
     style_2.width = '100px';
     if(x > globalThis.innerWidth / 2){
@@ -70,7 +70,7 @@ function direction_update(){
     style_2.transform = 'rotate(' + angles[direction] + 'deg)';
 
     style_2_relative.width = '100px';
-    if(x > core_elements['direction-2-relative'].offsetLeft){
+    if(x > core_elements.direction_2_relative.offsetLeft){
         direction = 0;
 
     }else{
@@ -104,8 +104,8 @@ function direction_update(){
     style_4.transform = 'rotate(' + angles[direction] + 'deg)';
 
     style_4_relative.width = '100px';
-    const x_relative = x - core_elements['direction-4-relative'].offsetLeft;
-    const y_relative = y - core_elements['direction-4-relative'].offsetTop;
+    const x_relative = x - core_elements.direction_4_relative.offsetLeft;
+    const y_relative = y - core_elements.direction_4_relative.offsetTop;
     if(x_relative < 0){
         if(y_relative < x_relative){
             direction = 3;
@@ -145,10 +145,10 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
-        'direction-2',
-        'direction-2-relative',
-        'direction-4',
-        'direction-4-relative',
+        'direction_2',
+        'direction_2_relative',
+        'direction_4',
+        'direction_4_relative',
       ],
     });
 }

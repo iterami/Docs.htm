@@ -45,15 +45,15 @@ function repo_init(){
       'root': 'index.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': '<button id=reset-camera type=button>Reset Camera</button><table><tr><td>Camera X<td id=camera-x><tr><td>Camera Y<td id=camera-y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down-x<td id=down-x><tr><td>down-y<td id=down-y><tr><td>movement-x<td id=movement-x><tr><td>movement-y<td id=movement-y><tr><td>down-0<td id=down-0><tr><td>down-1<td id=down-1><tr><td>down-2<td id=down-2><tr><td>down-3<td id=down-3><tr><td>down-4<td id=down-4></table><span id=todo style="display:none"></span>',
+      'ui': '<button id=reset-camera type=button>Reset Camera</button><table><tr><td>Camera X<td id=camera-x><tr><td>Camera Y<td id=camera-y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down_x<td id=down_x><tr><td>down_y<td id=down_y><tr><td>movement_x<td id=movement_x><tr><td>movement_y<td id=movement_y><tr><td>down_0<td id=down_0><tr><td>down_1<td id=down_1><tr><td>down_2<td id=down_2><tr><td>down_3<td id=down_3><tr><td>down_4<td id=down_4></table><span id=todo style="display:none"></span>',
     });
     canvas_init();
 }
 
 function repo_logic(){
-    if(core_pointer['down-0']){
-        camera_x -= core_pointer['movement-x'];
-        camera_y -= core_pointer['movement-y'];
+    if(core_pointer.down_0){
+        camera_x -= core_pointer.movement_x;
+        camera_y -= core_pointer.movement_y;
     }
     if(core_keys[core_storage_data['move-←']]['state']){
         camera_x -= 10;

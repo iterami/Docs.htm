@@ -14,10 +14,10 @@
     top: 140px;
     width: 20px;
 }
-#aligned-x,
-#aligned-y,
-#collider-x,
-#collider-y{
+#aligned_x,
+#aligned_y,
+#collider_x,
+#collider_y{
     background: #fff;
     height: 6px;
     left: 100px;
@@ -25,12 +25,12 @@
     top: 147px;
     width: 100px;
 }
-#aligned-x,
-#collider-x{
+#aligned_x,
+#collider_x{
     background: #f00;
 }
-#aligned-y,
-#collider-y{
+#aligned_y,
+#collider_y{
     background: #0f0;
 }
 .display{
@@ -44,7 +44,7 @@ td{
     position: relative;
 }
 #wall,
-#wall-aligned{
+#wall_aligned{
     background: #fff;
     height: 20px;
     left: 0;
@@ -57,12 +57,12 @@ td{
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Collision
 <table>
   <tr class=display>
-    <td><div id=wall></div><div id=collider></div><div id=collider-x></div><div id=collider-y></div>
-    <td><div id=wall-aligned></div><div id=aligned></div><div id=aligned-x></div><div id=aligned-y></div>
+    <td><div id=wall></div><div id=collider></div><div id=collider_x></div><div id=collider_y></div>
+    <td><div id=wall_aligned></div><div id=aligned></div><div id=aligned_x></div><div id=aligned_y></div>
   <tr>
-    <td colspan=2><input id=wall-rotation max=360 type=range value=0><div id=wall-rotation-value></div>
-      X<input id=change-x step=any type=number value=5><br>
-      Y<input id=change-y step=any type=number value=5>
+    <td colspan=2><input id=wall_rotation max=360 type=range value=0><div id=wall_rotation_value></div>
+      X<input id=change_x step=any type=number value=5><br>
+      Y<input id=change_y step=any type=number value=5>
 </table>
 
 <script src=../../common/js/core.js></script>
@@ -70,13 +70,13 @@ td{
 function repo_init(){
     core_repo_init({
       'events': {
-        'change-x': {
+        'change_x': {
           'oninput': update_display,
         },
-        'change-y': {
+        'change_y': {
           'oninput': update_display,
         },
-        'wall-rotation': {
+        'wall_rotation': {
           'oninput': update_display,
         },
       },
@@ -84,16 +84,16 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui_elements': [
         'aligned',
-        'aligned-x',
-        'aligned-y',
-        'change-x',
-        'change-y',
+        'aligned_x',
+        'aligned_y',
+        'change_x',
+        'change_y',
         'collider',
-        'collider-x',
-        'collider-y',
+        'collider_x',
+        'collider_y',
         'wall',
-        'wall-rotation',
-        'wall-rotation-value',
+        'wall_rotation',
+        'wall_rotation_value',
       ],
     });
 
@@ -101,22 +101,22 @@ function repo_init(){
 }
 
 function update_display(){
-    const rotation = core_elements['wall-rotation'].value;
-    core_elements['wall-rotation-value'].textContent = rotation;
-    core_elements['wall'].style.transform = 'rotate(' + rotation + 'deg)';
+    const rotation = core_elements.wall_rotation.value;
+    core_elements.wall_rotation_value.textContent = rotation;
+    core_elements.wall.style.transform = 'rotate(' + rotation + 'deg)';
 
     const collider_transform = ' translateY(-50px)';
-    core_elements['aligned'].style.transform = collider_transform;
-    core_elements['collider'].style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
+    core_elements.aligned.style.transform = collider_transform;
+    core_elements.collider.style.transform = 'rotate(' + rotation + 'deg)' + collider_transform;
 
     const axes = {
       'x': 'translateY(-50px) rotate(' + (360 - rotation) + 'deg)',
       'y': 'translateY(-50px) rotate(' + (360 - rotation + 90) + 'deg)',
     };
     for(const axis in axes){
-         const aligned = core_elements['aligned-' + axis];
-         const change = core_elements['change-' + axis].value;
-         const collider = core_elements['collider-' + axis];
+         const aligned = core_elements['aligned_' + axis];
+         const change = core_elements['change_' + axis].value;
+         const collider = core_elements['collider_' + axis];
 
          const width = Math.abs(change) * 10;
          const transform = axes[axis] + ' translateX(' + (width / 2) + 'px)' + (Math.sign(change) > 0

@@ -47,7 +47,7 @@ function repo_init(){
             'level': 5,
           },
           'expect': function(result){
-              return webgl_characters['test-character-1']['life'] > 0;
+              return webgl_characters['test-character-1'].life > 0;
           },
           'function': 'webgl_character_init',
         },
@@ -98,7 +98,7 @@ function repo_init(){
         {
           'args': webgl_characters['test-character-0'],
           'expect': function(result){
-              return result['x'] === 23;
+              return result.x === 23;
           },
           'function': 'webgl_get_position',
         },
@@ -145,7 +145,7 @@ function repo_init(){
             'target': webgl_characters['test-character-0'],
           },
           'expect': function(result){
-              return webgl_characters['test-character-0']['level'] === -1;
+              return webgl_characters['test-character-0'].level === -1;
           },
           'function': 'webgl_stat_modify',
         },
