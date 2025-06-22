@@ -5,11 +5,11 @@
 <link href=../../../common/css/writings.css rel=stylesheet>
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=core.htm>core.js</a>/core_storage_element_property(args)
-<ul>
-  <li>Returns "checked" when modifying checkboxes.
-  <li>Returns "innerHTML" when modifying "div" or "span".
-  <li>Returns "value" when modifying everything else.
-</ul>
+<ol>
+  <li>If the localStorage value at "key" is a boolean, returns "checked".
+  <li>If the passed in "element" has a "value" property, returns "value".
+  <li>Otherwise returns "textContent".
+</ol>
 <table>
   <tr class=header>
     <td>Arg
