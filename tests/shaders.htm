@@ -40,7 +40,7 @@ void main(void){
 }
 </textarea>
   <tr>
-    <td>Picking
+    <td>Picking Color
     <td><textarea readonly>#version 300 es
 precision mediump float;
 
@@ -48,7 +48,7 @@ in vec4 color;
 out vec4 fragment;
 
 void main(void){
-    fragment = vec4(vec3(1,1,1) - color.rgb, 1);
+    fragment = color;
 }
 </textarea>
     <td><textarea readonly>#version 300 es
@@ -61,6 +61,32 @@ uniform mat4 perspective;
 
 void main(void){
     color = pickColor;
+    gl_Position = perspective * camera
+      * vec4(vertexPosition, 1.0);
+}
+</textarea>
+  <tr>
+    <td>Picking XYZ
+    <td><textarea readonly>#version 300 es
+precision mediump float;
+
+in vec4 color;
+out vec4 fragment;
+
+void main(void){
+    fragment = color;
+}
+</textarea>
+    <td><textarea readonly>#version 300 es
+
+in vec3 vertexPosition;
+in vec4 vertexColor;
+out vec4 color;
+uniform mat4 camera;
+uniform mat4 perspective;
+
+void main(void){
+    color = normalize(perspective * vec4(vertexPosition, 1.0));
     gl_Position = perspective * camera
       * vec4(vertexPosition, 1.0);
 }
