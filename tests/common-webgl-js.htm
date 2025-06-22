@@ -31,7 +31,7 @@ function repo_init(){
       'character': -1,
     });
     webgl_character_init({
-      'id': 'test-character-0',
+      'id': 'test_character_0',
       'level': 1,
       'spawn':{
         'position-x': 23,
@@ -43,11 +43,11 @@ function repo_init(){
       'tests': [
         {
           'args': {
-            'id': 'test-character-1',
+            'id': 'test_character_1',
             'level': 5,
           },
           'expect': function(result){
-              return webgl_characters['test-character-1'].life > 0;
+              return webgl_characters.test_character_1.life > 0;
           },
           'function': 'webgl_character_init',
         },
@@ -57,12 +57,12 @@ function repo_init(){
           'function': 'webgl_character_level',
         },
         {
-          'args': 'fake-character',
+          'args': 'fake_character',
           'expect': -3,
           'function': 'webgl_character_level',
         },
         {
-          'args': webgl_characters['test-character-0'],
+          'args': webgl_characters.test_character_0,
           'expect': 1,
           'function': 'webgl_character_level',
         },
@@ -96,7 +96,7 @@ function repo_init(){
           'function': 'webgl_color_set',
         },
         {
-          'args': webgl_characters['test-character-0'],
+          'args': webgl_characters.test_character_0,
           'expect': function(result){
               return result.x === 23;
           },
@@ -104,19 +104,19 @@ function repo_init(){
         },
         {
           'args': {
-            'move': webgl_characters['test-character-0'],
+            'move': webgl_characters.test_character_0,
             'y': 23,
           },
           'expect': function(result){
-              return webgl_characters['test-character-0']['position-y'] === 23;
+              return webgl_characters.test_character_0['position-y'] === 23;
           },
           'function': 'webgl_move_to',
         },
         {
           'args': {
-            'rotate-x': webgl_characters['test-character-0']['rotate-x'],
-            'rotate-y': webgl_characters['test-character-0']['rotate-y'],
-            'rotate-z': webgl_characters['test-character-0']['rotate-z'],
+            'rotate-x': webgl_characters.test_character_0['rotate-x'],
+            'rotate-y': webgl_characters.test_character_0['rotate-y'],
+            'rotate-z': webgl_characters.test_character_0['rotate-z'],
             'vertices-length': 1,
           },
           'expect': [
@@ -142,10 +142,10 @@ function repo_init(){
         {
           'args': {
             'stat': 'level',
-            'target': webgl_characters['test-character-0'],
+            'target': webgl_characters.test_character_0,
           },
           'expect': function(result){
-              return webgl_characters['test-character-0'].level === -1;
+              return webgl_characters.test_character_0.level === -1;
           },
           'function': 'webgl_stat_modify',
         },
