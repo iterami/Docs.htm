@@ -109,6 +109,7 @@
             }
           ],
           "picking": true,
+          "picking_range": 75,
           "texture": "grid.png",
           "texture-x": 10,
           "texture-y": 2,

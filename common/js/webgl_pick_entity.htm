@@ -8,9 +8,9 @@
 <ul>
   <li>Requires the "webgl_properties.picking" to be at least 1 before picking can be done.
   <li>Uses the framebuffer and picking shader created by <a href=webgl_framebuffer_init.htm>webgl_framebuffer_init()</a> to determine which entity was picked.
+  <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_character_id]" is checked.
   <li>The "cursor" arg dictates if the cursor should be changed to "pointer" when hovering over a pickable entity instead of triggering picking event.
-  <li>Triggers optional events and returns the entity object if an entity is picked.
-  <li>Returns picked entity or false if no entity is picked.
+  <li>Triggers optional events and returns the entity object if an entity is picked, or returns false is no entity is picked.
 </ul>
 <table>
   <tr class=header>
