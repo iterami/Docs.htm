@@ -398,7 +398,7 @@ function racer_add(id){
     if(id !== webgl_character_id){
         properties.automove = true;
         properties.keys = {
-          'move-←': true,
+          'move_left': true,
         };
     }
     webgl_character_init({
