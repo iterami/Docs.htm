@@ -23,10 +23,10 @@ function collect(args){
 
 function level_properties(){
     return {
-      'camera-zoom': 0,
-      'camera-zoom-max': 0,
+      'camera_zoom': 0,
+      'camera_zoom_max': 0,
       'pointerlock': true,
-      'y-min': -100,
+      'y_min': -100,
     };
 }
 
@@ -37,16 +37,16 @@ function load_bridge(){
         ...level_properties(),
         'characters': [
           {
-            'id': 'map-bridge',
+            'id': 'map_bridge',
             'spawn': false,
             'entities': [
               {
                 'id': 'bridge',
-                'attach-z': -80,
+                'attach_z': -80,
                 'texture': 'grid.png',
-                'texture-x': 2,
-                'texture-y': 10,
-                'vertex-colors': [
+                'texture_x': 2,
+                'texture_y': 10,
+                'vertex_colors': [
                   .8, .4, 0, 1,
                 ],
                 'vertices': [
@@ -57,25 +57,25 @@ function load_bridge(){
                 ],
               },
               {
-                'id': 'life-0',
-                'attach-x': -40,
-                'attach-y': 6,
+                'id': 'life_0',
+                'attach_x': -40,
+                'attach_y': 6,
                 'billboard': true,
                 'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
+                'event_limit': 1,
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'collect',
                     'type': 'function',
                     'value': {
-                      'id': 'life-0',
+                      'id': 'life_0',
                       'type': 'life',
                       'value': 10,
                     },
                   },
                 ],
-                'vertex-colors': [
+                'vertex_colors': [
                   0, .7, 0, 1,
                 ],
                 'vertices': [
@@ -86,26 +86,26 @@ function load_bridge(){
                 ],
               },
               {
-                'id': 'lives-0',
-                'attach-x': -40,
-                'attach-y': 6,
-                'attach-z': -180,
+                'id': 'lives_0',
+                'attach_x': -40,
+                'attach_y': 6,
+                'attach_z': -180,
                 'billboard': true,
                 'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
+                'event_limit': 1,
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'collect',
                     'type': 'function',
                     'value': {
-                      'id': 'lives-0',
+                      'id': 'lives_0',
                       'type': 'lives',
                       'value': 1,
                     },
                   },
                 ],
-                'vertex-colors': [
+                'vertex_colors': [
                   .2, .4, 8, 1,
                 ],
                 'vertices': [
@@ -116,25 +116,25 @@ function load_bridge(){
                 ],
               },
               {
-                'id': 'weapon-0',
-                'attach-x': 40,
-                'attach-y': 6,
+                'id': 'weapon_0',
+                'attach_x': 40,
+                'attach_y': 6,
                 'billboard': true,
                 'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
+                'event_limit': 1,
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'collect',
                     'type': 'function',
                     'value': {
-                      'id': 'weapon-0',
+                      'id': 'weapon_0',
                       'type': 'weapon',
-                      'value': 'test-weapon',
+                      'value': 'test_weapon',
                     },
                   },
                 ],
-                'vertex-colors': [
+                'vertex_colors': [
                   .7, 0, 0, 1,
                 ],
                 'vertices': [
@@ -148,9 +148,9 @@ function load_bridge(){
           },
           {
             ...stats(),
-            'id': 'test-enemy',
+            'id': 'test_enemy',
             'spawn': {
-              'position-z': -150,
+              'position_z': -150,
             },
           },
         ],
@@ -160,19 +160,19 @@ function load_bridge(){
             'properties': {
               'prefix': 'blue',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
               },
-              'character': 'map-bridge',
-              'position-y': -5,
-              'size-x': 100,
-              'size-y': 10,
-              'size-z': 60,
+              'character': 'map_bridge',
+              'position_y': -5,
+              'size_x': 100,
+              'size_y': 10,
+              'size_z': 60,
               'top': {
                 'texture': 'grid.png',
-                'texture-x': 10,
-                'texture-y': 6,
+                'texture_x': 10,
+                'texture_y': 6,
               },
             },
           },
@@ -181,20 +181,20 @@ function load_bridge(){
             'properties': {
               'prefix': 'red',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
               },
-              'character': 'map-bridge',
-              'position-y': -5,
-              'position-z': -160,
-              'size-x': 100,
-              'size-y': 10,
-              'size-z': 60,
+              'character': 'map_bridge',
+              'position_y': -5,
+              'position_z': -160,
+              'size_x': 100,
+              'size_y': 10,
+              'size_z': 60,
               'top': {
                 'texture': 'grid.png',
-                'texture-x': 10,
-                'texture-y': 6,
+                'texture_x': 10,
+                'texture_y': 6,
               },
             },
           },
@@ -214,7 +214,7 @@ function new_game(){
     Object.assign(
       weapons,
       {
-        'test-weapon': {
+        'test_weapon': {
           'ammo': 10,
           'reload': 50,
         },
@@ -243,14 +243,14 @@ function repo_init(){
         },
       },
       'events': {
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
       'globals': {
         'weapons': {},
       },
-      'info': '<button id=new-game type=button>Start FPS Test</button><br><br>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new_game type=button>Start FPS Test</button><br><br>Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Weapon: <span class=weapon></span><br>'
@@ -275,7 +275,7 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+      'ui': 'Life: <span id=life></span>/<span id=life_max></span><br>'
         + 'Lives: <span id=lives></span><br>'
         + 'Weapon: <span id=weapon></span><br>'
         + 'Ammo: <span id=ammo></span>/<span id=ammo_max></span><br>'
@@ -307,20 +307,20 @@ function stats(){
     return {
       'ammo': 0,
       'ammo_max': 0,
-      'collide-bottom': 8,
-      'collide-top': 2,
+      'collide_bottom': 8,
+      'collide_top': 2,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
       'level': 0,
-      'life-max': 100,
+      'life_max': 100,
       'lives': 5,
       'model': {},
       'reload': 0,
       'spawn': {
-        'position-x': 0,
-        'position-y': 6,
-        'position-z': 0,
+        'position_x': 0,
+        'position_y': 6,
+        'position_z': 0,
       },
       'weapon': '',
     };
@@ -334,7 +334,7 @@ function update_ui(){
         'ammo': character.ammo,
         'ammo_max': character.ammo_max,
         'life': character.life,
-        'life-max': character['life-max'],
+        'life_max': character.life_max,
         'lives': character.lives,
         'reload': character.reload,
         'speed': character.speed,

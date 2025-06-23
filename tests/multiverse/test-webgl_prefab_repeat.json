@@ -1,21 +1,21 @@
 {
   "title": "Prefab Repeat Test",
-  "fog-end": 100,
+  "fog_end": 100,
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-prefab-repeat",
+      "id": "test_prefab_repeat",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -36,16 +36,16 @@
         "count": 100,
         "properties": {
           "billboard": true,
-          "character": "test-prefab-repeat",
+          "character": "test_prefab_repeat",
           "height": 20,
-          "height-range": 20,
-          "width-base": 6,
-          "width-leaf": 20
+          "height_range": 20,
+          "width_base": 6,
+          "width_leaf": 20
         },
-        "x-max": 100,
-        "x-min": -100,
-        "z-max": 100,
-        "z-min": -100
+        "x_max": 100,
+        "x_min": -100,
+        "z_max": 100,
+        "z_min": -100
       }
     }
   ]

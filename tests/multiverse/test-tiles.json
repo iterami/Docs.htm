@@ -1,19 +1,19 @@
 {
   "title": "Tiles Prefab Test",
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-tiles",
+      "id": "test_tiles",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 5,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 5,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -30,20 +30,20 @@
     {
       "type": "webgl_tiles",
       "properties": {
-        "prefix": "tiles-order",
-        "character": "test-tiles",
+        "prefix": "tiles_order",
+        "character": "test_tiles",
         "order": [2, 2, 2, 2, 2, 0, 1, 0, 1],
-        "position-x": -50,
-        "position-y": 10,
-        "position-z": -35,
+        "position_x": -50,
+        "position_y": 10,
+        "position_z": -35,
         "tiles": [
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   1, 0, 0, 1
                 ],
                 "vertices": [
@@ -56,13 +56,13 @@
             ]
           },
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "entities": [
               {
-                "attach-x": -5,
-                "attach-y": -10,
+                "attach_x": -5,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 1, 0, 1
                 ],
                 "vertices": [
@@ -75,14 +75,14 @@
             ]
           },
           {
-            "attach-x": -30,
-            "attach-z": -10,
-            "attach-rotate-y": 270,
+            "attach_x": -30,
+            "attach_z": -10,
+            "attach_rotate_y": 270,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [
@@ -93,11 +93,11 @@
                 ]
               },
               {
-                "attach-x": -15,
-                "attach-y": -10,
-                "attach-z": -5,
+                "attach_x": -15,
+                "attach_y": -10,
+                "attach_z": -5,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [
@@ -110,25 +110,25 @@
             ]
           }
         ],
-        "tiles-max": 20,
-        "tiles-min": 2
+        "tiles_max": 20,
+        "tiles_min": 2
       }
     },
     {
       "type": "webgl_tiles",
       "properties": {
-        "prefix": "tiles-random",
-        "character": "test-tiles",
-        "position-y": 10,
-        "position-z": -35,
+        "prefix": "tiles_random",
+        "character": "test_tiles",
+        "position_y": 10,
+        "position_z": -35,
         "tiles": [
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   1, 0, 0, 1
                 ],
                 "vertices": [
@@ -141,13 +141,13 @@
             ]
           },
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "entities": [
               {
-                "attach-x": -5,
-                "attach-y": -10,
+                "attach_x": -5,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 1, 0, 1
                 ],
                 "vertices": [
@@ -160,14 +160,14 @@
             ]
           },
           {
-            "attach-x": -30,
-            "attach-z": -10,
-            "attach-rotate-y": 270,
+            "attach_x": -30,
+            "attach_z": -10,
+            "attach_rotate_y": 270,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [
@@ -178,11 +178,11 @@
                 ]
               },
               {
-                "attach-x": -15,
-                "attach-y": -10,
-                "attach-z": -5,
+                "attach_x": -15,
+                "attach_y": -10,
+                "attach_z": -5,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [
@@ -195,27 +195,27 @@
             ]
           }
         ],
-        "tiles-max": 20,
-        "tiles-min": 2
+        "tiles_max": 20,
+        "tiles_min": 2
       }
     },
     {
       "type": "webgl_tiles",
       "properties": {
-        "prefix": "tiles-repeat",
-        "character": "test-tiles",
-        "position-x": 50,
-        "position-y": 10,
-        "position-z": -35,
+        "prefix": "tiles_repeat",
+        "character": "test_tiles",
+        "position_x": 50,
+        "position_y": 10,
+        "position_z": -35,
         "repeat": 2,
         "tiles": [
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   1, 0, 0, 1
                 ],
                 "vertices": [
@@ -228,20 +228,20 @@
             ]
           },
           {
-            "attach-z": -20,
+            "attach_z": -20,
             "characters": [
               {
-                "id": "tile-character",
-                "path-id": "tile-path",
-                "position-y": -9
+                "id": "tile_character",
+                "path_id": "tile_path",
+                "position_y": -9
               }
             ],
             "entities": [
               {
-                "attach-x": -5,
-                "attach-y": -10,
+                "attach_x": -5,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 1, 0, 1
                 ],
                 "vertices": [
@@ -253,14 +253,14 @@
               }
             ],
             "paths": {
-              "tile-path": {
+              "tile_path": {
                 "end": "loop",
                 "points": [
                   {
-                    "position-x": -10
+                    "position_x": -10
                   },
                   {
-                    "position-x": 10
+                    "position_x": 10
                   }
                 ]
               }
@@ -273,23 +273,23 @@
                   "all": {
                     "collision": false
                   },
-                  "character": "tile-character",
-                  "size-x": 2,
-                  "size-y": 2,
-                  "size-z": 2
+                  "character": "tile_character",
+                  "size_x": 2,
+                  "size_y": 2,
+                  "size_z": 2
                 }
               }
             ]
           },
           {
-            "attach-x": -30,
-            "attach-z": -10,
-            "attach-rotate-y": 270,
+            "attach_x": -30,
+            "attach_z": -10,
+            "attach_rotate_y": 270,
             "entities": [
               {
-                "attach-y": -10,
+                "attach_y": -10,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [
@@ -300,11 +300,11 @@
                 ]
               },
               {
-                "attach-x": -15,
-                "attach-y": -10,
-                "attach-z": -5,
+                "attach_x": -15,
+                "attach_y": -10,
+                "attach_z": -5,
                 "texture": "grid.png",
-                "vertex-colors": [
+                "vertex_colors": [
                   0, 0, 1, 1
                 ],
                 "vertices": [

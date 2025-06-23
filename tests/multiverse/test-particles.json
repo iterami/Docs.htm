@@ -1,19 +1,19 @@
 {
   "title": "Particles Test",
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-particles",
+      "id": "test_particles",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -30,75 +30,75 @@
     {
       "type": "webgl_primitive_particle",
       "properties": {
-        "character": "test-particles",
+        "character": "test_particles",
         "entities": [
           {
-            "attach-x": -25,
-            "attach-y": 50,
-            "attach-z": 25,
-            "draw-mode": "POINTS",
-            "id": "rain-0",
-            "point-size": 150,
-            "vertex-repeat": 100
+            "attach_x": -25,
+            "attach_y": 50,
+            "attach_z": 25,
+            "draw_mode": "POINTS",
+            "id": "rain_0",
+            "point_size": 150,
+            "vertex_repeat": 100
           },
           {
-            "attach-x": 25,
-            "attach-y": 50,
-            "attach-z": -25,
-            "draw-mode": "POINTS",
-            "id": "rain-1",
-            "point-size": 150,
-            "vertex-repeat": 100
+            "attach_x": 25,
+            "attach_y": 50,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "id": "rain_1",
+            "point_size": 150,
+            "vertex_repeat": 100
           }
         ],
         "id": "rain",
         "particle": {
-          "speed-y": -2,
-          "x-max": 25,
-          "x-min": -25,
-          "y-max": 50,
-          "y-min": -50,
-          "z-max": 25,
-          "z-min": -25
+          "speed_y": -2,
+          "x_max": 25,
+          "x_min": -25,
+          "y_max": 50,
+          "y_min": -50,
+          "z_max": 25,
+          "z_min": -25
         }
       }
     },
     {
       "type": "webgl_primitive_particle",
       "properties": {
-        "character": "test-particles",
+        "character": "test_particles",
         "entities": [
           {
-            "attach-x": 25,
-            "attach-y": 25,
-            "attach-z": 25,
-            "draw-mode": "POINTS",
-            "id": "snow-0",
-            "point-size": 100,
-            "vertex-repeat": 200
+            "attach_x": 25,
+            "attach_y": 25,
+            "attach_z": 25,
+            "draw_mode": "POINTS",
+            "id": "snow_0",
+            "point_size": 100,
+            "vertex_repeat": 200
           },
           {
-            "attach-x": -25,
-            "attach-y": 25,
-            "attach-z": -25,
-            "draw-mode": "POINTS",
-            "id": "snow-1",
-            "point-size": 100,
-            "vertex-repeat": 200
+            "attach_x": -25,
+            "attach_y": 25,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "id": "snow_1",
+            "point_size": 100,
+            "vertex_repeat": 200
           }
         ],
         "id": "snow",
         "particle": {
           "randomize": false,
-          "speed-x": 0.1,
-          "speed-y": -0.1,
-          "speed-z": 0.1,
-          "x-max": 25,
-          "x-min": -25,
-          "y-max": 25,
-          "y-min": -25,
-          "z-max": 25,
-          "z-min": -25
+          "speed_x": 0.1,
+          "speed_y": -0.1,
+          "speed_z": 0.1,
+          "x_max": 25,
+          "x_min": -25,
+          "y_max": 25,
+          "y_min": -25,
+          "z_max": 25,
+          "z_min": -25
         }
       }
     }

@@ -2,20 +2,20 @@
   "title": "Events Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-events",
+      "id": "test_events",
       "spawn": false,
       "entities": [
         {
           "id": "base",
-          "attach-y": -10,
+          "attach_y": -10,
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -27,11 +27,11 @@
         },
         {
           "id": "cuboid",
-          "attach-x": -40,
-          "attach-y": -9.99,
-          "attach-z": -40,
-          "event-range": [20, 1e5, 20],
-          "event-todo": [
+          "attach_x": -40,
+          "attach_y": -9.99,
+          "attach_z": -40,
+          "event_range": [20, 1e5, 20],
+          "event_todo": [
             {
               "todo": "entity_remove",
               "type": "function",
@@ -52,10 +52,10 @@
         },
         {
           "id": "delete",
-          "attach-y": -5,
-          "attach-z": -25,
-          "event-range": 0,
-          "event-todo": [
+          "attach_y": -5,
+          "attach_z": -25,
+          "event_range": 0,
+          "event_todo": [
             {
               "todo": "entity_remove",
               "type": "function",
@@ -67,7 +67,7 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "texture": "lavaleaf.png",
           "vertices": [
             50, 0, -5,
@@ -77,12 +77,12 @@
           ]
         },
         {
-          "id": "levelup-1000",
-          "attach-x": 25,
-          "attach-z": -50,
-          "event-todo": [
+          "id": "levelup_1000",
+          "attach_x": 25,
+          "attach_z": -50,
+          "event_todo": [
             {
-              "stat": "level-xp",
+              "stat": "level_xp",
               "value": 1000
             },
             {
@@ -92,7 +92,7 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "texture": "grid.png",
           "vertices": [
             5, 0, -10,
@@ -102,12 +102,12 @@
           ]
         },
         {
-          "id": "levelup-1000000",
-          "attach-x": 35,
-          "attach-z": -50,
-          "event-todo": [
+          "id": "levelup_1000000",
+          "attach_x": 35,
+          "attach_z": -50,
+          "event_todo": [
             {
-              "stat": "level-xp",
+              "stat": "level_xp",
               "value": 1000000
             },
             {
@@ -117,7 +117,7 @@
             }
           ],
           "picking": true,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "texture": "grid.png",
           "vertices": [
             5, 0, -10,
@@ -128,38 +128,38 @@
         },
         {
           "id": "limit",
-          "attach-x": 20,
-          "event-limit": 2,
-          "event-range": 0,
-          "event-todo": [
+          "attach_x": 20,
+          "event_limit": 2,
+          "event_range": 0,
+          "event_todo": [
             {
               "set": true,
-              "stat": "camera-rotate-y",
+              "stat": "camera_rotate_y",
               "value": 90
             },
             {
               "set": true,
-              "stat": "rotate-y",
+              "stat": "rotate_y",
               "value": 90
             },
             {
               "set": true,
-              "stat": "translate-x",
+              "stat": "translate_x",
               "value": 0
             },
             {
               "set": true,
-              "stat": "translate-y",
+              "stat": "translate_y",
               "value": 10
             },
             {
               "set": true,
-              "stat": "translate-z",
+              "stat": "translate_z",
               "value": 0
             }
           ],
           "picking": true,
-          "rotate-z": 90,
+          "rotate_z": 90,
           "texture": "grid.png",
           "vertices": [
             10, 0, -5,
@@ -170,15 +170,15 @@
         },
         {
           "id": "respawn",
-          "attach-z": -20,
-          "event-todo": [
+          "attach_z": -20,
+          "event_todo": [
             {
               "todo": "webgl_character_spawn",
               "type": "function"
             }
           ],
           "picking": true,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "texture": "grid.png",
           "vertices": [
             5, 0, -10,
@@ -189,32 +189,32 @@
         },
         {
           "id": "set",
-          "attach-x": -20,
-          "event-range": 0,
-          "event-todo": [
+          "attach_x": -20,
+          "event_range": 0,
+          "event_todo": [
             {
               "set": true,
-              "stat": "camera-rotate-y",
+              "stat": "camera_rotate_y",
               "value": 270
             },
             {
               "set": true,
-              "stat": "rotate-y",
+              "stat": "rotate_y",
               "value": 270
             },
             {
               "set": true,
-              "stat": "translate-x",
+              "stat": "translate_x",
               "value": 0
             },
             {
               "set": true,
-              "stat": "translate-y",
+              "stat": "translate_y",
               "value": 10
             },
             {
               "set": true,
-              "stat": "translate-z",
+              "stat": "translate_z",
               "value": 0
             },
             {
@@ -224,7 +224,7 @@
             }
           ],
           "picking": true,
-          "rotate-z": 270,
+          "rotate_z": 270,
           "texture": "grid.png",
           "vertices": [
             10, 0, -5,

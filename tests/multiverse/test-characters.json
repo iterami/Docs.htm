@@ -1,21 +1,21 @@
 {
   "title": "Characters Test",
   "spawn": {
-    "camera-rotate-x": 30,
-    "position-y": 5
+    "camera_rotate_x": 30,
+    "position_y": 5
   },
-  "y-min": -20,
+  "y_min": -20,
   "characters": [
     {
-      "id": "test-characters",
+      "id": "test_characters",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 20,
-          "texture-y": 20,
-          "vertex-colors": [
+          "texture_x": 20,
+          "texture_y": 20,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -28,34 +28,34 @@
       ]
     },
     {
-      "id": "character-moving",
+      "id": "character_moving",
       "automove": true,
-      "camera-zoom": 25,
+      "camera_zoom": 25,
       "collides": true,
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
       "model": {},
       "spawn": {
-        "position-z": -25
+        "position_z": -25
       }
     },
     {
-      "id": "character-hit",
-      "camera-zoom": 25,
+      "id": "character_hit",
+      "camera_zoom": 25,
       "collides": true,
       "controls": "rpg",
       "gravity": 1,
       "level": 1,
       "model": {
         "top": {
-          "event-range": 5,
-          "event-todo": [
+          "event_range": 5,
+          "event_todo": [
             {
               "todo": "webgl_character_hit",
               "type": "function",
               "value": {
-                "id": "character-hit",
+                "id": "character_hit",
                 "xz": 0.3,
                 "y": 0.5
               }
@@ -64,7 +64,7 @@
         }
       },
       "spawn": {
-        "position-x": -10
+        "position_x": -10
       }
     }
   ]

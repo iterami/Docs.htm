@@ -1,20 +1,20 @@
 {
   "title": "Alpha Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 25
+    "position_y": 5,
+    "position_z": 25
   },
   "characters": [
     {
-      "id": "test-alpha",
+      "id": "test_alpha",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -31,33 +31,33 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "transparent-inner",
+        "prefix": "transparent_inner",
         "all": {
           "alpha": 0.5,
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test-alpha",
-        "position-y": 20,
-        "size-x": 10,
-        "size-y": 10,
-        "size-z": 10
+        "character": "test_alpha",
+        "position_y": 20,
+        "size_x": 10,
+        "size_y": 10,
+        "size_z": 10
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "transparent-outer",
+        "prefix": "transparent_outer",
         "all": {
           "alpha": 0.5,
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test-alpha",
-        "position-y": 20,
-        "size-x": 17,
-        "size-y": 17,
-        "size-z": 17
+        "character": "test_alpha",
+        "position_y": 20,
+        "size_x": 17,
+        "size_y": 17,
+        "size_z": 17
       }
     },
     {
@@ -69,11 +69,11 @@
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test-alpha",
-        "position-y": 20,
-        "size-x": 24,
-        "size-y": 24,
-        "size-z": 24
+        "character": "test_alpha",
+        "position_y": 20,
+        "size_x": 24,
+        "size_y": 24,
+        "size_z": 24
       }
     }
   ]

@@ -2,20 +2,20 @@
   "title": "Picking Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-picking",
+      "id": "test_picking",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -26,21 +26,21 @@
           ]
         },
         {
-          "id": "pick-blocker",
+          "id": "pick_blocker",
           "alpha": 0.6,
-          "attach-y": 10,
-          "attach-z": -49,
+          "attach_y": 10,
+          "attach_z": -49,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "position-y",
+              "stat": "position_y",
               "todo": "_target",
               "type": "character",
               "value": 1
             }
           ],
           "picking": true,
-          "vertex-colors": [
+          "vertex_colors": [
             1, 1, 1, 1,
             1, 1, 1, 1,
             0, 0, 0, 1,
@@ -54,16 +54,16 @@
           ]
         },
         {
-          "id": "pick-blocker-down",
-          "attach-x": 20,
-          "attach-y": 2,
-          "attach-z": -25,
+          "id": "pick_blocker_down",
+          "attach_x": 20,
+          "attach_y": 2,
+          "attach_z": -25,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "attach-y",
-              "todo": "pick-blocker",
+              "stat": "attach_y",
+              "todo": "pick_blocker",
               "value": -1
             }
           ],
@@ -76,16 +76,16 @@
           ]
         },
         {
-          "id": "pick-blocker-up",
-          "attach-x": 20,
-          "attach-y": 6,
-          "attach-z": -25,
+          "id": "pick_blocker_up",
+          "attach_x": 20,
+          "attach_y": 6,
+          "attach_z": -25,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "attach-y",
-              "todo": "pick-blocker",
+              "stat": "attach_y",
+              "todo": "pick_blocker",
               "value": 1
             }
           ],
@@ -98,21 +98,21 @@
           ]
         },
         {
-          "id": "pick-color",
-          "attach-y": 10,
-          "attach-z": -50,
+          "id": "pick_color",
+          "attach_y": 10,
+          "attach_z": -50,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "vertex-colors",
+              "stat": "vertex_colors",
               "todo": "_self"
             }
           ],
           "picking": true,
           "picking_range": 75,
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 2,
+          "texture_x": 10,
+          "texture_y": 2,
           "vertices": [
             50, 10, 0,
             -50, 10, 0,

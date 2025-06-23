@@ -1,55 +1,55 @@
 {
   "title": "Example Level",
-  "ambient-color": [1, 1, 1],
-  "camera-zoom-max": 50,
-  "camera-zoom-min": 0,
-  "clear-color": [0, 0, 0],
-  "directional-color": [1, 1, 1],
-  "directional-state": true,
-  "directional-vector": [0, 1, 0],
-  "draw-range": 1000,
-  "fog-end": 100,
-  "fog-start": 0,
-  "gravity-acceleration": -0.05,
-  "gravity-damage": false,
-  "gravity-max": -2,
+  "ambient_color": [1, 1, 1],
+  "camera_zoom_max": 50,
+  "camera_zoom_min": 0,
+  "clear_color": [0, 0, 0],
+  "directional_color": [1, 1, 1],
+  "directional_state": true,
+  "directional_vector": [0, 1, 0],
+  "draw_range": 1000,
+  "fog_end": 100,
+  "fog_start": 0,
+  "gravity_acceleration": -0.05,
+  "gravity_damage": false,
+  "gravity_max": -2,
   "lock": {
-    "position-y": 10
+    "position_y": 10
   },
   "particles": {
-    "example-particle": {
+    "example_particle": {
       "randomize": true,
-      "speed-x": 0,
-      "speed-y": 0,
-      "speed-z": 0,
-      "x-max": 100,
-      "x-min": -100,
-      "y-max": 100,
-      "y-min": -100,
-      "z-max": 100,
-      "z-min": -100
+      "speed_x": 0,
+      "speed_y": 0,
+      "speed_z": 0,
+      "x_max": 100,
+      "x_min": -100,
+      "y_max": 100,
+      "y_min": -100,
+      "z_max": 100,
+      "z_min": -100
     }
   },
   "paths": {
-    "example-path": {
+    "example_path": {
       "collision": true,
       "end": "loop",
       "points": [
         {
           "distance": 0,
-          "event-limit": false,
-          "event-todo": [],
-          "position-x": 0,
-          "position-y": 0,
-          "position-z": 0,
-          "rotate-x": 0,
-          "rotate-y": 90,
-          "rotate-z": 0,
+          "event_limit": false,
+          "event_todo": [],
+          "position_x": 0,
+          "position_y": 0,
+          "position_z": 0,
+          "rotate_x": 0,
+          "rotate_y": 90,
+          "rotate_z": 0,
           "speed": 2
         },
         {
-          "position-x": -10,
-          "position-z": -10
+          "position_x": -10,
+          "position_z": -10
         }
       ],
       "speed": 2
@@ -59,116 +59,116 @@
   "picking": 2,
   "pointerlock": false,
   "spawn": {
-    "position-y": 5,
-    "position-z": 5
+    "position_y": 5,
+    "position_z": 5
   },
   "textures": {
     "gear.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEVCQkLb29sGyERuAAAAgklEQVQY04XQsQ2AQAgFUIyJlNfa3SImbqZ2rnUbuIIjWFJc/ILJb4xGmtcQ4CP/pfZqr9aFg1oKJ7W8uFAbi0iD1eY93CpcgVdxZzf6RteRDJxhAmqoZ7Zb09t0tDXA3qCGtMi3z37O4Vzu4V7ewbt4J+9mDuZiTubmH/iXj7/91wWexXU3xpBXrwAAAABJRU5ErkJggg=="
   },
-  "y-min": -200,
+  "y_min": -200,
   "groups": [
-    "example-group-0",
-    "example-group-1"
+    "example_group_0",
+    "example_group_1"
   ],
   "characters": [
     {
       "id": "_me",
       "automove": false,
-      "camera-lock": true,
-      "camera-zoom": 20,
-      "collide-bottom": 3,
-      "collide-top": 3,
-      "collide-xz": 2,
+      "camera_lock": true,
+      "camera_zoom": 20,
+      "collide_bottom": 3,
+      "collide_top": 3,
+      "collide_xz": 2,
       "collides": true,
       "controls": "rpg",
       "gravity": 1,
-      "jump-height": 1,
+      "jump_height": 1,
       "keys": false,
       "level": 0,
-      "level-xp": 0,
+      "level_xp": 0,
       "life": 1,
-      "life-max": 1,
+      "life_max": 1,
       "lives": -1,
       "lock": {
-        "position-y": 5
+        "position_y": 5
       },
       "model": {},
       "pointer": false,
-      "path-direction": 1,
-      "path-end": "",
-      "path-id": "",
-      "path-point": 0,
+      "path_direction": 1,
+      "path_end": "",
+      "path_id": "",
+      "path_point": 0,
       "reticle": "#fff",
-      "scale-x": 1,
-      "scale-y": 1,
-      "scale-z": 1,
+      "scale_x": 1,
+      "scale_y": 1,
+      "scale_z": 1,
       "spawn": {
-        "camera-rotate-x": 45
+        "camera_rotate_x": 45
       },
       "speed": 1,
-      "turn-speed": 5,
+      "turn_speed": 5,
       "vehicle": false,
-      "vehicle-stats": {
+      "vehicle_stats": {
         "character": false,
         "lock": 0,
         "speed": 0,
-        "speed-backward": -0.1,
-        "speed-forward": 0.1,
-        "speed-max-backward": -0.5,
-        "speed-max-forward": 1
+        "speed_backward": -0.1,
+        "speed_forward": 0.1,
+        "speed_max_backward": -0.5,
+        "speed_max_forward": 1
       },
       "entities": []
     },
     {
-      "id": "world-static",
+      "id": "world_static",
       "entities": [
         {
-          "id": "example-entity-0",
+          "id": "example_entity_0",
           "alpha": 1,
-          "attach-to": false,
-          "attach-type": "entity_entities",
-          "attach-x": 0,
-          "attach-y": -2,
-          "attach-z": 0,
+          "attach_to": false,
+          "attach_type": "entity_entities",
+          "attach_x": 0,
+          "attach_y": -2,
+          "attach_z": 0,
           "billboard": false,
-          "change-rotate-x": 0,
-          "change-rotate-y": 0,
-          "change-rotate-z": 0,
+          "change_rotate_x": 0,
+          "change_rotate_y": 0,
+          "change_rotate_z": 0,
           "collision": true,
           "draw": true,
-          "draw-mode": "TRIANGLE_FAN",
-          "draw-range": 500,
-          "event-limit": false,
-          "event-range": false,
-          "event-todo": [
+          "draw_mode": "TRIANGLE_FAN",
+          "draw_range": 500,
+          "event_limit": false,
+          "event_range": false,
+          "event_todo": [
             {
               "limit": 1,
-              "random-max": 0,
-              "random-min": 0,
+              "random_max": 0,
+              "random_min": 0,
               "set": false,
               "stat": "life",
-              "todo": "example-entity-1",
+              "todo": "example_entity_1",
               "type": "entity",
               "value": -100
             }
           ],
-          "light-color": [1, 1, 1],
-          "light-range": 0,
+          "light_color": [1, 1, 1],
+          "light_range": 0,
           "particle": false,
           "picking": false,
-          "picking-range": 0,
-          "point-size": 0,
-          "rotate-x": 0,
-          "rotate-y": 0,
-          "rotate-z": 0,
-          "scale-x": 1,
-          "scale-y": 1,
-          "scale-z": 1,
+          "picking_range": 0,
+          "point_size": 0,
+          "rotate_x": 0,
+          "rotate_y": 0,
+          "rotate_z": 0,
+          "scale_x": 1,
+          "scale_y": 1,
+          "scale_z": 1,
           "texture": "gear.png",
-          "texture-align": "11010010",
-          "texture-x": 1,
-          "texture-y": 1,
-          "vertex-colors": [
+          "texture_align": "11010010",
+          "texture_x": 1,
+          "texture_y": 1,
+          "vertex_colors": [
             1, 1, 1, 1,
             1, 0, 0, 1,
             0, 1, 0, 1,
@@ -181,8 +181,8 @@
             -10, 0, 10
           ],
           "groups": [
-            "example-group-0",
-            "example-group-1"
+            "example_group_0",
+            "example_group_1"
           ]
         }
       ]
@@ -192,20 +192,20 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "example-cuboid",
+        "prefix": "example_cuboid",
         "all": {},
         "back": {},
         "bottom": {},
-        "character": "world-static",
+        "character": "world_static",
         "front": {},
         "left": {},
-        "position-x": 0,
-        "position-y": 0,
-        "position-z": 0,
+        "position_x": 0,
+        "position_y": 0,
+        "position_z": 0,
         "right": {},
-        "size-x": 1,
-        "size-y": 1,
-        "size-z": 1,
+        "size_x": 1,
+        "size_y": 1,
+        "size_z": 1,
         "top": {}
       }
     }
@@ -214,11 +214,11 @@
     {
       "character": false,
       "ids": [
-        "example-entity-0"
+        "example_entity_0"
       ],
       "max": 100,
       "min": -100,
-      "property": "position-z"
+      "property": "position_z"
     }
   ]
 }

@@ -1,20 +1,20 @@
 {
   "title": "Billboard Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 20
+    "position_y": 5,
+    "position_z": 20
   },
   "characters": [
     {
-      "id": "test-billboard",
+      "id": "test_billboard",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -25,11 +25,11 @@
           ]
         },
         {
-          "id": "billboard-0",
-          "attach-x": -5,
-          "attach-y": 5,
+          "id": "billboard_0",
+          "attach_x": -5,
+          "attach_y": 5,
           "billboard": true,
-          "change-rotate-x": 1,
+          "change_rotate_x": 1,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -40,8 +40,8 @@
           ]
         },
         {
-          "id": "billboard-1",
-          "attach-y": 5,
+          "id": "billboard_1",
+          "attach_y": 5,
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -53,11 +53,11 @@
           ]
         },
         {
-          "id": "billboard-2",
-          "attach-x": 5,
-          "attach-y": 5,
+          "id": "billboard_2",
+          "attach_x": 5,
+          "attach_y": 5,
           "billboard": true,
-          "change-rotate-z": 1,
+          "change_rotate_z": 1,
           "collision": false,
           "texture": "grid.png",
           "vertices": [

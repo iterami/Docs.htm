@@ -1,19 +1,19 @@
 {
   "title": "Terrain Stress Test",
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "stress-terrain",
+      "id": "stress_terrain",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -31,13 +31,13 @@
       "type": "webgl_primitive_terrain",
       "properties": {
         "prefix": "terrain",
-        "character": "stress-terrain",
-        "height-random": 50,
-        "position-y": -50,
-        "tiles-x": 1500,
-        "tiles-x-size": 100,
-        "tiles-z": 1500,
-        "tiles-z-size": 100
+        "character": "stress_terrain",
+        "height_random": 50,
+        "position_y": -50,
+        "tiles_x": 1500,
+        "tiles_x_size": 100,
+        "tiles_z": 1500,
+        "tiles_z_size": 100
       }
     }
   ]

@@ -1,20 +1,20 @@
 {
   "title": "Primitive Cuboid Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-primitive-cuboid",
+      "id": "test_primitive_cuboid",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -35,27 +35,27 @@
         "all": {
           "texture": "debug.png"
         },
-        "character": "test-primitive-cuboid",
-        "position-x": -10,
-        "position-y": 15,
-        "size-x": 5,
-        "size-y": 10,
-        "size-z": 15
+        "character": "test_primitive_cuboid",
+        "position_x": -10,
+        "position_y": 15,
+        "size_x": 5,
+        "size_y": 10,
+        "size_z": 15
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-inverse",
+        "prefix": "cuboid_inverse",
         "all": {
           "texture": "debug.png"
         },
-        "character": "test-primitive-cuboid",
-        "position-x": 10,
-        "position-y": 15,
-        "size-x": -5,
-        "size-y": -10,
-        "size-z": -15
+        "character": "test_primitive_cuboid",
+        "position_x": 10,
+        "position_y": 15,
+        "size_x": -5,
+        "size_y": -10,
+        "size_z": -15
       }
     }
   ]

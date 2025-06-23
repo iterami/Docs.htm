@@ -1,68 +1,68 @@
 {
   "title": "Lines Path Prefab Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "paths": {
-    "path-loop": {
+    "path_loop": {
       "end": "loop",
       "points": [
         {
-          "position-x": -10,
-          "position-y": 25,
-          "position-z": -25
+          "position_x": -10,
+          "position_y": 25,
+          "position_z": -25
         },
         {
-          "position-x": 10
+          "position_x": 10
         },
         {
-          "position-y": 5
+          "position_y": 5
         },
         {
-          "position-x": -10
+          "position_x": -10
         }
       ]
     },
-    "path-point": {
+    "path_point": {
       "points": [
         {
-          "position-y": 15,
-          "position-z": -25
+          "position_y": 15,
+          "position_z": -25
         }
       ]
     },
-    "path-reverse": {
+    "path_reverse": {
       "end": "reverse",
       "points": [
         {
-          "position-x": -10,
-          "position-y": 25,
-          "position-z": -20
+          "position_x": -10,
+          "position_y": 25,
+          "position_z": -20
         },
         {
-          "position-x": 10
+          "position_x": 10
         },
         {
-          "position-y": 5
+          "position_y": 5
         },
         {
-          "position-x": -10
+          "position_x": -10
         }
       ]
     }
   },
   "characters": [
     {
-      "id": "test-lines-path",
+      "id": "test_lines_path",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -79,32 +79,32 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-lines-path",
+        "character": "test_lines_path",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]
         ],
-        "path": "path-loop",
+        "path": "path_loop",
         "prefix": "loop"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-lines-path",
-        "path": "path-point",
+        "character": "test_lines_path",
+        "path": "path_point",
         "prefix": "point"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-lines-path",
+        "character": "test_lines_path",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]
         ],
-        "path": "path-reverse",
+        "path": "path_reverse",
         "prefix": "reverse"
       }
     }

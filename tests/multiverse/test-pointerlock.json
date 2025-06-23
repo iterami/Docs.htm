@@ -1,21 +1,21 @@
 {
   "title": "Pointer Lock Test",
-  "camera-zoom-max": 0,
+  "camera_zoom_max": 0,
   "pointerlock": true,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-pointerlock",
+      "id": "test_pointerlock",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [

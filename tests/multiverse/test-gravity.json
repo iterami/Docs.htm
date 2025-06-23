@@ -1,22 +1,22 @@
 {
   "title": "Gravity Test",
-  "gravity-damage": true,
+  "gravity_damage": true,
   "spawn": {
-    "position-y": 5,
-    "position-z": 25
+    "position_y": 5,
+    "position_z": 25
   },
-  "y-min": -150,
+  "y_min": -150,
   "characters": [
     {
-      "id": "test-gravity",
+      "id": "test_gravity",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -28,9 +28,9 @@
         },
         {
           "id": "lower",
-          "attach-y": -100,
+          "attach_y": -100,
           "texture": "grid.png",
-          "vertex-colors": [
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -43,22 +43,22 @@
       ]
     },
     {
-      "id": "gravity-normal",
+      "id": "gravity_normal",
       "collides": true,
       "gravity": 1,
       "level": 0,
       "life": 100,
-      "life-max": 100,
+      "life_max": 100,
       "spawn": {
-        "position-x": -15,
-        "position-y": 50,
-        "position-z": 0
+        "position_x": -15,
+        "position_y": 50,
+        "position_z": 0
       },
       "entities": [
         {
-          "id": "gravity-normal-body",
+          "id": "gravity_normal_body",
           "collision": false,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "vertices": [
             2, 0, -2,
             -2, 0, -2,
@@ -69,21 +69,21 @@
       ]
     },
     {
-      "id": "gravity-strong",
+      "id": "gravity_strong",
       "collides": true,
       "gravity": 2,
       "level": 0,
       "life": 100,
-      "life-max": 100,
+      "life_max": 100,
       "spawn": {
-        "position-y": 50,
-        "position-z": 0
+        "position_y": 50,
+        "position_z": 0
       },
       "entities": [
         {
-          "id": "gravity-strong-body",
+          "id": "gravity_strong_body",
           "collision": false,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "vertices": [
             2, 0, -2,
             -2, 0, -2,
@@ -94,22 +94,22 @@
       ]
     },
     {
-      "id": "gravity-weak",
+      "id": "gravity_weak",
       "collides": true,
       "gravity": 0.1,
       "level": 0,
       "life": 100,
-      "life-max": 100,
+      "life_max": 100,
       "spawn": {
-        "position-x": 15,
-        "position-y": 50,
-        "position-z": 0
+        "position_x": 15,
+        "position_y": 50,
+        "position_z": 0
       },
       "entities": [
         {
-          "id": "gravity-weak-body",
+          "id": "gravity_weak_body",
           "collision": false,
-          "rotate-x": 90,
+          "rotate_x": 90,
           "vertices": [
             2, 0, -2,
             -2, 0, -2,

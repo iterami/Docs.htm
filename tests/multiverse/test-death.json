@@ -1,19 +1,19 @@
 {
   "title": "Death Test",
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-death",
+      "id": "test_death",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 2,
-          "texture-y": 2,
-          "vertex-colors": [
+          "texture_x": 2,
+          "texture_y": 2,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -25,9 +25,9 @@
         },
         {
           "id": "death",
-          "attach-y": -1,
-          "event-range": 0,
-          "event-todo": [
+          "attach_y": -1,
+          "event_range": 0,
+          "event_todo": [
             {
               "set": true,
               "stat": "life",

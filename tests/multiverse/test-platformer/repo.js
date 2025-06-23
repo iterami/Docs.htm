@@ -20,9 +20,9 @@ function collect(args){
 
 function level_properties(){
     return {
-      'camera-zoom-min': 10,
+      'camera_zoom_min': 10,
       'pointerlock': true,
-      'y-min': -100,
+      'y_min': -100,
     };
 }
 
@@ -33,7 +33,7 @@ function load_cave(){
         ...level_properties(),
         'characters': [
           {
-            'id': 'platformer-cave',
+            'id': 'platformer_cave',
             'spawn': false,
           },
         ],
@@ -43,15 +43,15 @@ function load_cave(){
             'properties': {
               'prefix': 'cave',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .3, .3, .3, 1,
                 ],
                 'texture': 'lavaleaf.png',
               },
-              'character': 'platformer-cave',
+              'character': 'platformer_cave',
               'front': {
-                'event-range': 0,
-                'event-todo': [
+                'event_range': 0,
+                'event_todo': [
                   {
                     'todo': 'load_skymap',
                     'type': 'function',
@@ -59,14 +59,14 @@ function load_cave(){
                   },
                 ],
                 'texture': 'door.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   1, 1, 1, 1,
                 ],
               },
-              'position-y': 10,
-              'size-x': -20,
-              'size-y': -20,
-              'size-z': -20,
+              'position_y': 10,
+              'size_x': -20,
+              'size_y': -20,
+              'size_z': -20,
             },
           },
         ],
@@ -78,23 +78,23 @@ function load_skymap(spawn){
     const spawners = [
       {},
       {
-        'camera-rotate-y': 90,
-        'position-x': -10,
-        'position-z': -130,
-        'rotate-y': 90,
+        'camera_rotate_y': 90,
+        'position_x': -10,
+        'position_z': -130,
+        'rotate_y': 90,
       }
     ];
     const flagged = [];
     if(flags.skymap.coin_0){
         flagged.push({
           'id': 'coin_0',
-          'attach-y': 3,
-          'attach-z': -80,
+          'attach_y': 3,
+          'attach_z': -80,
           'billboard': true,
           'collision': false,
-          'event-limit': 1,
-          'event-range': 3,
-          'event-todo': [
+          'event_limit': 1,
+          'event_range': 3,
+          'event_todo': [
             {
               'todo': 'collect',
               'type': 'function',
@@ -105,7 +105,7 @@ function load_skymap(spawn){
               },
             },
           ],
-          'vertex-colors': [
+          'vertex_colors': [
             .7, .7, 0, 1,
           ],
           'vertices': [
@@ -119,13 +119,13 @@ function load_skymap(spawn){
     if(flags.skymap.lives_0){
         flagged.push({
           'id': 'lives_0',
-          'attach-y': 3,
-          'attach-z': -135,
+          'attach_y': 3,
+          'attach_z': -135,
           'billboard': true,
           'collision': false,
-          'event-limit': 1,
-          'event-range': 3,
-          'event-todo': [
+          'event_limit': 1,
+          'event_range': 3,
+          'event_todo': [
             {
               'todo': 'collect',
               'type': 'function',
@@ -136,7 +136,7 @@ function load_skymap(spawn){
               },
             },
           ],
-          'vertex-colors': [
+          'vertex_colors': [
             .2, .4, 8, 1,
           ],
           'vertices': [
@@ -151,17 +151,17 @@ function load_skymap(spawn){
       'character': 0,
       'json': {
         ...level_properties(),
-        'clear-color': [0, 0, .2],
+        'clear_color': [0, 0, .2],
         'spawn': spawners[spawn],
         'paths': {
           'fireball_0': {
             'end': 'warp',
             'points': [
               {
-                'position-x': -50,
+                'position_x': -50,
               },
               {
-                'position-x': 50,
+                'position_x': 50,
               },
             ],
           },
@@ -170,25 +170,25 @@ function load_skymap(spawn){
             'speed': .2,
             'points': [
               {
-                'position-y': 0,
+                'position_y': 0,
               },
               {
-                'position-x': 15,
+                'position_x': 15,
               },
               {
-                'position-z': 15,
+                'position_z': 15,
               },
               {
-                'position-x': -15,
+                'position_x': -15,
               },
               {
-                'position-z': 0,
+                'position_z': 0,
               },
               {
-                'position-x': 0,
+                'position_x': 0,
               },
               {
-                'position-y': -15,
+                'position_y': -15,
               },
             ],
           },
@@ -196,36 +196,36 @@ function load_skymap(spawn){
             'end': 'loop',
             'points': [
               {
-                'position-z': -150,
+                'position_z': -150,
               },
               {
-                'position-z': -110,
+                'position_z': -110,
               },
             ],
           },
         },
         'characters': [
           {
-            'id': 'platformer-skymap',
+            'id': 'platformer_skymap',
             'spawn': false,
             'entities': [
               ...flagged,
               {
                 'id': 'door',
-                'attach-x': -20,
-                'attach-y': 10,
-                'attach-z': -130,
-                'event-range': 0,
-                'event-todo': [
+                'attach_x': -20,
+                'attach_y': 10,
+                'attach_z': -130,
+                'event_range': 0,
+                'event_todo': [
                   {
                     'todo': 'load_cave',
                     'type': 'function',
                   },
                 ],
-                'rotate-z': 270,
+                'rotate_z': 270,
                 'texture': 'door.png',
-                'texture-align': '10110100',
-                'vertex-colors': [
+                'texture_align': '10110100',
+                'vertex_colors': [
                   1, 1, 1, 1,
                 ],
                 'vertices': [
@@ -237,10 +237,10 @@ function load_skymap(spawn){
               },
               {
                 'id': 'gate_0',
-                'attach-z': -100,
-                'rotate-x': 90,
+                'attach_z': -100,
+                'rotate_x': 90,
                 'texture': 'grid.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'vertices': [
@@ -253,14 +253,14 @@ function load_skymap(spawn){
               {
                 'id': 'key_0',
                 'alpha': .99999,
-                'attach-x': -15,
-                'attach-y': 3,
-                'attach-z': -80,
+                'attach_x': -15,
+                'attach_y': 3,
+                'attach_z': -80,
                 'billboard': true,
                 'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
+                'event_limit': 1,
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'collect',
                     'type': 'function',
@@ -270,14 +270,14 @@ function load_skymap(spawn){
                     },
                   },
                   {
-                    'stat': 'attach-x',
+                    'stat': 'attach_x',
                     'todo': 'gate_0',
                     'value': -60,
                   },
                 ],
                 'texture': 'key.png',
-                'texture-align': '00101101',
-                'vertex-colors': [
+                'texture_align': '00101101',
+                'vertex_colors': [
                   1, 1, 1, 1,
                 ],
                 'vertices': [
@@ -289,14 +289,14 @@ function load_skymap(spawn){
               },
               {
                 'id': 'life_0',
-                'attach-x': 15,
-                'attach-y': 3,
-                'attach-z': -80,
+                'attach_x': 15,
+                'attach_y': 3,
+                'attach_z': -80,
                 'billboard': true,
                 'collision': false,
-                'event-limit': 1,
-                'event-range': 3,
-                'event-todo': [
+                'event_limit': 1,
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'collect',
                     'type': 'function',
@@ -306,7 +306,7 @@ function load_skymap(spawn){
                     },
                   },
                 ],
-                'vertex-colors': [
+                'vertex_colors': [
                   0, .7, 0, 1,
                 ],
                 'vertices': [
@@ -321,18 +321,18 @@ function load_skymap(spawn){
           {
             'id': 'fireball_0',
             'level': 0,
-            'path-id': 'fireball_0',
-            'position-x': -50,
-            'position-y': 3,
-            'position-z': -60,
+            'path_id': 'fireball_0',
+            'position_x': -50,
+            'position_y': 3,
+            'position_z': -60,
             'spawn': false,
             'entities': [
               {
                 'id': 'fireball_0_body',
                 'billboard': true,
                 'collision': false,
-                'event-range': 3,
-                'event-todo': [
+                'event_range': 3,
+                'event_todo': [
                   {
                     'todo': 'webgl_character_hit',
                     'type': 'function',
@@ -348,7 +348,7 @@ function load_skymap(spawn){
                     'value': 'boop',
                   },
                   {
-                    'stat': 'position-x',
+                    'stat': 'position_x',
                     'todo': 'fireball_0',
                     'type': 'character',
                     'value': -100,
@@ -360,7 +360,7 @@ function load_skymap(spawn){
                     'value': -1,
                   },
                 ],
-                'vertex-colors': [
+                'vertex_colors': [
                   .7, 0, 0, 1,
                 ],
                 'vertices': [
@@ -375,22 +375,22 @@ function load_skymap(spawn){
           {
             'id': 'platform_0',
             'level': 0,
-            'path-id': 'platform_0',
+            'path_id': 'platform_0',
             'spawn': false,
           },
           {
             'id': 'wallmoving_0',
             'level': 0,
-            'path-id': 'wallmoving_0',
-            'position-y': 10,
-            'position-z': -150,
+            'path_id': 'wallmoving_0',
+            'position_y': 10,
+            'position_z': -150,
             'spawn': false,
             'entities': [
               {
                 'id': 'wallmoving_0',
-                'rotate-x': 90,
+                'rotate_x': 90,
                 'texture': 'grid.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'vertices': [
@@ -409,22 +409,22 @@ function load_skymap(spawn){
             'properties': {
               'prefix': 'platform_0',
               'character': 'platform_0',
-              'position-y': -5,
-              'size-x': 40,
-              'size-y': 10,
-              'size-z': 40,
+              'position_y': -5,
+              'size_x': 40,
+              'size_y': 10,
+              'size_z': 40,
             },
           },
           {
             'type': 'prefab_platform',
             'properties': {
-              'prefix': 'platform-1',
-              'character': 'platformer-skymap',
-              'position-y': -5,
-              'position-z': -100,
-              'size-x': 40,
-              'size-y': 10,
-              'size-z': 100,
+              'prefix': 'platform_1',
+              'character': 'platformer_skymap',
+              'position_y': -5,
+              'position_z': -100,
+              'size_x': 40,
+              'size_y': 10,
+              'size_z': 100,
             },
           },
         ],
@@ -448,21 +448,21 @@ function new_game(){
 
     load_skymap(0);
     webgl_character_init({
-      'camera-zoom': 25,
+      'camera_zoom': 25,
       'coins': 0,
-      'collide-bottom': 5,
-      'collide-top': 1,
+      'collide_bottom': 5,
+      'collide_top': 1,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
       'keys': 0,
       'level': 0,
-      'life-max': 10,
+      'life_max': 10,
       'lives': 3,
       'model': {},
       'spawn': {
-        'camera-rotate-x': 30,
-        'position-y': 6,
+        'camera_rotate_x': 30,
+        'position_y': 6,
       },
     });
     update_ui();
@@ -472,15 +472,15 @@ function prefab_platform(args){
     webgl_primitive_cuboid({
       ...args,
       'all': {
-        'vertex-colors': [
+        'vertex_colors': [
           .2, .2, .2, 1,
         ],
       },
       'top': {
         'texture': 'grid.png',
-        'texture-x': Math.floor(args['size-x'] / 10),
-        'texture-y': Math.floor(args['size-z'] / 10),
-        'vertex-colors': [
+        'texture_x': Math.floor(args.size_x / 10),
+        'texture_y': Math.floor(args.size_z / 10),
+        'vertex_colors': [
           .5, .5, .5, 1,
         ],
       },
@@ -504,14 +504,14 @@ function repo_init(){
         },
       },
       'events': {
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
       'globals': {
         'flags': {},
       },
-      'info': '<button id=new-game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life-max></span><br>'
+      'info': '<button id=new_game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span class=coins></span><br>'
@@ -533,7 +533,7 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': 'Life: <span id=life></span>/<span id=life-max></span><br>'
+      'ui': 'Life: <span id=life></span>/<span id=life_max></span><br>'
         + 'Lives: <span id=lives></span><br>'
         + 'Coins: <span id=coins></span><br>'
         + 'Keys: <span id=keys></span>',
@@ -552,7 +552,7 @@ function update_ui(){
         'coins': character.coins,
         'keys': character.keys,
         'life': character.life,
-        'life-max': character['life-max'],
+        'life_max': character.life_max,
         'lives': character.lives,
         'speed': character.speed,
       },

@@ -1,266 +1,266 @@
 {
   "title": "Paths Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "paths": {
-    "path-distance": {
+    "path_distance": {
       "end": "loop",
       "points": [
         {
           "distance": 5,
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -20
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -20
         },
         {
           "distance": 5,
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
           "distance": 5,
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-event": {
+    "path_event": {
       "end": "loop",
       "points": [
         {
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "vertex-colors",
-              "todo": "path-event-user-body"
+              "stat": "vertex_colors",
+              "todo": "path_event_user_body"
             }
           ],
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -25
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -25
         },
         {
-          "event-todo": [
+          "event_todo": [
             {
               "limit": 1,
-              "stat": "vertex-colors",
-              "todo": "path-event-user-body"
+              "stat": "vertex_colors",
+              "todo": "path_event_user_body"
             }
           ],
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
-          "event-todo": [
+          "event_todo": [
             {
-              "stat": "vertex-colors",
-              "todo": "path-event-user-body"
+              "stat": "vertex_colors",
+              "todo": "path_event_user_body"
             }
           ],
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-exit": {
+    "path_exit": {
       "points": [
         {
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -30
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -30
         },
         {
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-reverse": {
+    "path_reverse": {
       "end": "reverse",
       "points": [
         {
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -35
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -35
         },
         {
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-rotate": {
+    "path_rotate": {
       "end": "loop",
       "points": [
         {
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -40,
-          "rotate-x": 90,
-          "rotate-y": 90,
-          "rotate-z": 90
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -40,
+          "rotate_x": 90,
+          "rotate_y": 90,
+          "rotate_z": 90
         },
         {
-          "position-x": 15,
-          "position-y": 5,
-          "rotate-x": 0,
-          "rotate-y": 0,
-          "rotate-z": 0
+          "position_x": 15,
+          "position_y": 5,
+          "rotate_x": 0,
+          "rotate_y": 0,
+          "rotate_z": 0
         },
         {
-          "position-x": 15,
-          "position-y": 15,
-          "rotate-x": 45,
-          "rotate-y": 45,
-          "rotate-z": 45
+          "position_x": 15,
+          "position_y": 15,
+          "rotate_x": 45,
+          "rotate_y": 45,
+          "rotate_z": 45
         }
       ],
       "speed": 0.5
     },
-    "path-speed": {
+    "path_speed": {
       "end": "loop",
       "points": [
         {
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -45,
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -45,
           "speed": 2
         },
         {
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15,
+          "position_x": 15,
+          "position_y": 15,
           "speed": 0.1
         }
       ],
       "speed": 0.5
     },
-    "path-warp": {
+    "path_warp": {
       "end": "warp",
       "points": [
         {
-          "position-x": -15,
-          "position-y": 5,
-          "position-z": -50
+          "position_x": -15,
+          "position_y": 5,
+          "position_z": -50
         },
         {
-          "position-x": 15,
-          "position-y": 5
+          "position_x": 15,
+          "position_y": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-xy": {
+    "path_xy": {
       "end": "loop",
       "points": [
         {
-          "position-x": 0,
-          "position-y": 5,
-          "position-z": 0
+          "position_x": 0,
+          "position_y": 5,
+          "position_z": 0
         },
         {
-          "position-x": 10,
-          "position-y": 5
+          "position_x": 10,
+          "position_y": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15
+          "position_x": 15,
+          "position_y": 15
         },
         {
-          "position-x": -5,
-          "position-y": 15
+          "position_x": -5,
+          "position_y": 15
         }
       ],
       "speed": 0.5
     },
-    "path-xyz": {
+    "path_xyz": {
       "end": "loop",
       "points": [
         {
-          "position-x": 0,
-          "position-y": 5,
-          "position-z": 0
+          "position_x": 0,
+          "position_y": 5,
+          "position_z": 0
         },
         {
-          "position-x": -5,
-          "position-y": 15,
-          "position-z": 5
+          "position_x": -5,
+          "position_y": 15,
+          "position_z": 5
         },
         {
-          "position-x": 15,
-          "position-y": 15,
-          "position-z": -15
+          "position_x": 15,
+          "position_y": 15,
+          "position_z": -15
         },
         {
-          "position-x": 10,
-          "position-y": 5,
-          "position-z": -10
+          "position_x": 10,
+          "position_y": 5,
+          "position_z": -10
         }
       ],
       "speed": 0.5
     },
-    "path-xz": {
+    "path_xz": {
       "end": "loop",
       "points": [
         {
-          "position-x": 0,
-          "position-y": 5,
-          "position-z": 0
+          "position_x": 0,
+          "position_y": 5,
+          "position_z": 0
         },
         {
-          "position-x": 10,
-          "position-z": 0
+          "position_x": 10,
+          "position_z": 0
         },
         {
-          "position-x": 10,
-          "position-z": -10
+          "position_x": 10,
+          "position_z": -10
         },
         {
-          "position-x": 0,
-          "position-z": -10
+          "position_x": 0,
+          "position_z": -10
         }
       ],
       "speed": 0.5
     },
-    "path-yz": {
+    "path_yz": {
       "end": "loop",
       "points": [
         {
-          "position-x": 0,
-          "position-y": 5,
-          "position-z": 0
+          "position_x": 0,
+          "position_y": 5,
+          "position_z": 0
         },
         {
-          "position-y": 15,
-          "position-z": 5
+          "position_y": 15,
+          "position_z": 5
         },
         {
-          "position-y": 15,
-          "position-z": -15
+          "position_y": 15,
+          "position_z": -15
         },
         {
-          "position-y": 5,
-          "position-z": -10
+          "position_y": 5,
+          "position_z": -10
         }
       ],
       "speed": 0.5
@@ -268,15 +268,15 @@
   },
   "characters": [
     {
-      "id": "test-paths",
+      "id": "test_paths",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -289,10 +289,10 @@
       ]
     },
     {
-      "id": "path-distance-user",
+      "id": "path_distance_user",
       "entities": [
         {
-          "id": "path-distance-user-body",
+          "id": "path_distance_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -305,13 +305,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-distance"
+      "path_id": "path_distance"
     },
     {
-      "id": "path-event-user",
+      "id": "path_event_user",
       "entities": [
         {
-          "id": "path-event-user-body",
+          "id": "path_event_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -324,14 +324,14 @@
         }
       ],
       "level": 1,
-      "path-id": "path-event"
+      "path_id": "path_event"
     },
     {
-      "id": "path-exit-user",
+      "id": "path_exit_user",
       "collides": true,
       "entities": [
         {
-          "id": "path-exit-user-body",
+          "id": "path_exit_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -345,13 +345,13 @@
       ],
       "gravity": 1,
       "level": 1,
-      "path-id": "path-exit"
+      "path_id": "path_exit"
     },
     {
-      "id": "path-reverse-user",
+      "id": "path_reverse_user",
       "entities": [
         {
-          "id": "path-reverse-user-body",
+          "id": "path_reverse_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -364,18 +364,18 @@
         }
       ],
       "level": 1,
-      "path-id": "path-reverse"
+      "path_id": "path_reverse"
     },
     {
-      "id": "path-rotate-user",
+      "id": "path_rotate_user",
       "level": 1,
-      "path-id": "path-rotate"
+      "path_id": "path_rotate"
     },
     {
-      "id": "path-speed-user",
+      "id": "path_speed_user",
       "entities": [
         {
-          "id": "path-speed-user-body",
+          "id": "path_speed_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -388,13 +388,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-speed"
+      "path_id": "path_speed"
     },
     {
-      "id": "path-warp-user",
+      "id": "path_warp_user",
       "entities": [
         {
-          "id": "path-warp-user-body",
+          "id": "path_warp_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -407,13 +407,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-warp"
+      "path_id": "path_warp"
     },
     {
-      "id": "path-xy-user",
+      "id": "path_xy_user",
       "entities": [
         {
-          "id": "path-xy-user-body",
+          "id": "path_xy_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -426,13 +426,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-xy"
+      "path_id": "path_xy"
     },
     {
-      "id": "path-xy-user-reverse",
+      "id": "path_xy_user_reverse",
       "entities": [
         {
-          "id": "path-xy-user-reverse-body",
+          "id": "path_xy_user_reverse_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -445,14 +445,14 @@
         }
       ],
       "level": 1,
-      "path-direction": -1,
-      "path-id": "path-xy"
+      "path_direction": -1,
+      "path_id": "path_xy"
     },
     {
-      "id": "path-xyz-user",
+      "id": "path_xyz_user",
       "entities": [
         {
-          "id": "path-xyz-user-body",
+          "id": "path_xyz_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -465,13 +465,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-xyz"
+      "path_id": "path_xyz"
     },
     {
-      "id": "path-xyz-user-reverse",
+      "id": "path_xyz_user_reverse",
       "entities": [
         {
-          "id": "path-xyz-user-reverse-body",
+          "id": "path_xyz_user_reverse_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -484,14 +484,14 @@
         }
       ],
       "level": 1,
-      "path-direction": -1,
-      "path-id": "path-xyz"
+      "path_direction": -1,
+      "path_id": "path_xyz"
     },
     {
-      "id": "path-xz-user",
+      "id": "path_xz_user",
       "entities": [
         {
-          "id": "path-xz-user-body",
+          "id": "path_xz_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -504,13 +504,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-xz"
+      "path_id": "path_xz"
     },
     {
-      "id": "path-xz-user-reverse",
+      "id": "path_xz_user_reverse",
       "entities": [
         {
-          "id": "path-xz-user-reverse-body",
+          "id": "path_xz_user_reverse_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -523,14 +523,14 @@
         }
       ],
       "level": 1,
-      "path-direction": -1,
-      "path-id": "path-xz"
+      "path_direction": -1,
+      "path_id": "path_xz"
     },
     {
-      "id": "path-yz-user",
+      "id": "path_yz_user",
       "entities": [
         {
-          "id": "path-yz-user-body",
+          "id": "path_yz_user_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -543,13 +543,13 @@
         }
       ],
       "level": 1,
-      "path-id": "path-yz"
+      "path_id": "path_yz"
     },
     {
-      "id": "path-yz-user-reverse",
+      "id": "path_yz_user_reverse",
       "entities": [
         {
-          "id": "path-yz-user-reverse-body",
+          "id": "path_yz_user_reverse_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
@@ -562,121 +562,121 @@
         }
       ],
       "level": 1,
-      "path-direction": -1,
-      "path-id": "path-yz"
+      "path_direction": -1,
+      "path_id": "path_yz"
     }
   ],
   "prefabs": [
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "path-rotate-user-body",
+        "prefix": "path_rotate_user_body",
         "all": {
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "path-rotate-user",
-        "size-x": 1,
-        "size-y": 1,
-        "size-z": 5
+        "character": "path_rotate_user",
+        "size_x": 1,
+        "size_y": 1,
+        "size_z": 5
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[1, 0, 0, 1]],
-        "path": "path-distance",
-        "prefix": "lines-distance"
+        "path": "path_distance",
+        "prefix": "lines_distance"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0, 1, 0, 1]],
-        "path": "path-event",
-        "prefix": "lines-event"
+        "path": "path_event",
+        "prefix": "lines_event"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0, 0, 1, 1]],
-        "path": "path-exit",
-        "prefix": "lines-exit"
+        "path": "path_exit",
+        "prefix": "lines_exit"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[1, 1, 0, 1]],
-        "path": "path-reverse",
-        "prefix": "lines-reverse"
+        "path": "path_reverse",
+        "prefix": "lines_reverse"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[1, 0, 1, 1]],
-        "path": "path-rotate",
-        "prefix": "lines-rotate"
+        "path": "path_rotate",
+        "prefix": "lines_rotate"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0, 1, 1, 1]],
-        "path": "path-speed",
-        "prefix": "lines-speed"
+        "path": "path_speed",
+        "prefix": "lines_speed"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
-        "path": "path-warp",
-        "prefix": "lines-warp"
+        "character": "test_paths",
+        "path": "path_warp",
+        "prefix": "lines_warp"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[1, 0.2, 0.2, 1]],
-        "path": "path-xy",
-        "prefix": "lines-xy"
+        "path": "path_xy",
+        "prefix": "lines_xy"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0.2, 1, 0.2, 1]],
-        "path": "path-xyz",
-        "prefix": "lines-xyz"
+        "path": "path_xyz",
+        "prefix": "lines_xyz"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0.2, 0.2, 1, 1]],
-        "path": "path-xz",
-        "prefix": "lines-xz"
+        "path": "path_xz",
+        "prefix": "lines_xz"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test-paths",
+        "character": "test_paths",
         "colors": [[0.2, 0.2, 0.2, 1]],
-        "path": "path-yz",
-        "prefix": "lines-yz"
+        "path": "path_yz",
+        "prefix": "lines_yz"
       }
     }
   ]

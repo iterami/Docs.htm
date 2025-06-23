@@ -15,67 +15,67 @@
   "title": "Example Level",
 
   // Optional. Ambient light color red, green, and blue values between 0 and 1 inclusive.
-  "ambient-color": [1, 1, 1],
+  "ambient_color": [1, 1, 1],
 
   // Optional. Maximum and minimum camera zoom.
   // When max is 0 then characters are forced into 1st person mode.
-  "camera-zoom-max": 50,
-  "camera-zoom-min": 0,
+  "camera_zoom_max": 50,
+  "camera_zoom_min": 0,
 
   // Optional. Clear color red, green, and blue values between 0 and 1 inclusive.
-  "clear-color": [0, 0, 0],
+  "clear_color": [0, 0, 0],
 
   // Optional. Directional light color red, green, and blue values between 0 and 1 inclusive.
-  "directional-color": [1, 1, 1],
+  "directional_color": [1, 1, 1],
 
   // Optional. If directional lighting is enabled and its vector.
-  "directional-state": true,
-  "directional-vector": [0, 1, 0],
+  "directional_state": true,
+  "directional_vector": [0, 1, 0],
 
   // Optional. The maximum distance at which entities are drawn, or false for unlimited.
-  "draw-range": 1000,
+  "draw_range": 1000,
 
-  // Optional. Distance at which entites start getting obscurbed by the "clear-color"
-  //   until the end up being completely obscured. If "fog-end" is 0, no fog is computed.
-  "fog-end": 100,
-  "fog-start": 0,
+  // Optional. Distance at which entites start getting obscurbed by the "clear_color"
+  //   until the end up being completely obscured. If "fog_end" is 0, no fog is computed.
+  "fog_end": 100,
+  "fog_start": 0,
 
   // Optional. Gravity acceleration, maxiumum downward terminal velocity, and if fall damage occurs.
-  "gravity-acceleration": -0.05,
-  "gravity-damage": false,
-  "gravity-max": -2,
+  "gravity_acceleration": -0.05,
+  "gravity_damage": false,
+  "gravity_max": -2,
 
   // Optional. Locked properties that are applied to all characters before collision detection.
   "lock": {
     // This example prevents any characters from having any y position other than 10.
-    "position-y": 10
+    "position_y": 10
   },
 
   // Optional. Particle types to be created when the level is loaded.
   "particles": {
-    "example-particle": {
+    "example_particle": {
       // Optional. False if the vertex position should just wrap upon reaching max/min,
       //   or true if the vertex position wrap should be randomized instead.
       "randomize": true,
 
       // Optional. Vertex movement speed upon each axis.
-      "speed-x": 0,
-      "speed-y": 0,
-      "speed-z": 0,
+      "speed_x": 0,
+      "speed_y": 0,
+      "speed_z": 0,
 
       // Optional. Maximum and minimum vertex position values before the vertex is wrapped.
-      "x-max": 100,
-      "x-min": -100,
-      "y-max": 100,
-      "y-min": -100,
-      "z-max": 100,
-      "z-min": -100
+      "x_max": 100,
+      "x_min": -100,
+      "y_max": 100,
+      "y_min": -100,
+      "z_max": 100,
+      "z_min": -100
     }
   },
 
   // Optional. Paths that characters can move along.
   "paths": {
-    "example-path": {
+    "example_path": {
       // Optional. If those that use this path should still collide with things.
       "collision": true,
 
@@ -95,28 +95,28 @@
 
           // Optional. Event handling when this point is reached.
           // More event info can be found in the example entity below.
-          "event-limit": false,
-          "event-todo": [],
+          "event_limit": false,
+          "event_todo": [],
 
           // Optional. Point position relative to "0, 0, 0".
           // Leave absent to use current position of that axis.
-          "position-x": 0,
-          "position-y": 0,
-          "position-z": 0,
+          "position_x": 0,
+          "position_y": 0,
+          "position_z": 0,
 
           // Optional. Forced rotation that is applied to all characters that reach this point.
           // Leave absent to maintain current rotation.
-          "rotate-x": 0,
-          "rotate-y": 90,
-          "rotate-z": 0,
+          "rotate_x": 0,
+          "rotate_y": 90,
+          "rotate_z": 0,
 
           // Optional. Speed multiplier when characters are approaching this point.
           "speed": 2
         },
         {
           // Optional. Paths can have unlimited points.
-          "position-x": -10,
-          "position-z": -10
+          "position_x": -10,
+          "position_z": -10
         }
       ],
 
@@ -137,8 +137,8 @@
 
   // Optional. Properties that are applied to all non-static characters when they spawn.
   "spawn": {
-    "position-y": 5,
-    "position-z": 5
+    "position_y": 5,
+    "position_z": 5
   },
 
   // Optional. Custom texture URIs.
@@ -147,12 +147,12 @@
   },
 
   // Optional. Minimum character Y position before forced death and respawn.
-  "y-min": -200,
+  "y_min": -200,
 
   // Optional. Array of groups to create, excluding automatically created groups such as "skybox".
   "groups": [
-    "example-group-0",
-    "example-group-1"
+    "example_group_0",
+    "example_group_1"
   ],
 
   // Optional. Array of character objects to use to create new characters.
@@ -165,16 +165,16 @@
       "automove": false,
 
       // Optional. If the camera is locked to the character's position.
-      "camera-lock": true,
+      "camera_lock": true,
 
       // Optional. Current camera zoom value.  When 0, camera is in 1st person mode.
-      "camera-zoom": 20,
+      "camera_zoom": 20,
 
       // Optional. The maximum distance that collision can occur.
       // Bottom is y-, top is y+, and xz is horizontal.
-      "collide-bottom": 3,
-      "collide-top": 3,
-      "collide-xz": 2,
+      "collide_bottom": 3,
+      "collide_top": 3,
+      "collide_xz": 2,
 
       // Optional. If the character collides into entities that have collision.
       "collides": true,
@@ -185,8 +185,8 @@
       // Optional. Current character gravity multiplier.
       "gravity": 1,
 
-      // Optional. "change-position-y" set when the character jumps.
-      "jump-height": 1,
+      // Optional. "change_position_y" set when the character jumps.
+      "jump_height": 1,
 
       // Optional. Optional object with values that NPC characters can use to control themselves.
       // Object property labels match <a href=js/core.htm#keybinds>core.js keybinds</a> stored in localStorage.
@@ -196,11 +196,11 @@
       "level": 0,
 
       // Optional. Current character xp.
-      "level-xp": 0,
+      "level_xp": 0,
 
       // Optional. Current and maximum life.
       "life": 1,
-      "life-max": 1,
+      "life_max": 1,
 
       // Optional. Remaining character lives, or -1 for unlimited lives.
       "lives": -1,
@@ -208,7 +208,7 @@
       // Optional. Locked properties that are applied this character before collision detection.
       "lock": {
         // This example does nothing because this example level locks character y position to 10.
-        "position-y": 5
+        "position_y": 5
       },
 
       // Optional. Either boolean false when no model is created,
@@ -227,36 +227,36 @@
       //   loop = loop from the beginning by moving towards 1st point.
       //   reverse = return back along path.
       //   warp = teleport back to 1st point.
-      "path-direction": 1,
-      "path-end": "",
-      "path-id": "",
-      "path-point": 0,
+      "path_direction": 1,
+      "path_end": "",
+      "path_id": "",
+      "path_point": 0,
 
       // Optional. The color of the character's reticle, or false is none should be visible.
       "reticle": "#fff",
 
       // Optional. The current scale multiplier of this character that scales all attached entities.
-      "scale-x": 1,
-      "scale-y": 1,
-      "scale-z": 1,
+      "scale_x": 1,
+      "scale_y": 1,
+      "scale_z": 1,
 
       // Optional. Properties that are applied to this character when it spawns.
       "spawn": {
-        "camera-rotate-x": 45
+        "camera_rotate_x": 45
       },
 
       // Optional. Character movement speed.
       "speed": 1,
 
       // Optional. How many degrees this character turns at once.
-      "turn-speed": 5,
+      "turn_speed": 5,
 
       // Optional. Which vehicle this character is controlling, or false if not.
       "vehicle": false,
 
       // Optional. The stats of this character when used as a vehicle, or false if not possible.
       // If not false, then all properties within this object are required.
-      "vehicle-stats": {
+      "vehicle_stats": {
         // The ID of the character that is controlling this vehicle, or false if none.
         "character": false,
 
@@ -271,12 +271,12 @@
         "speed": 0,
 
         // How quickly the vehicle accelerates when moving backward and forward, or when slowly down.
-        "speed-backward": -0.1,
-        "speed-forward": 0.1,
+        "speed_backward": -0.1,
+        "speed_forward": 0.1,
 
         // The maximum speed that the vehicle can move backwards and forwards.
-        "speed-max-backward": -0.5,
-        "speed-max-forward": 1
+        "speed_max_backward": -0.5,
+        "speed_max_forward": 1
       },
 
       // Optional. Array of entities that should be loaded and attached to the camera position (without zoom).
@@ -286,33 +286,33 @@
 
     // Example of character with entities.
     {
-      "id": "world-static",
+      "id": "world_static",
       "entities": [
         {
           // Optional. Entity ID.
-          "id": "example-entity-0",
+          "id": "example_entity_0",
 
           // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
           "alpha": 1,
 
           // Optional. ID of character or entity that this entity is attached to, or false if not attached.
-          "attach-to": false,
+          "attach_to": false,
 
           // Optional. Variable that contains what this entity is attached to.
-          "attach-type": "entity_entities",
+          "attach_type": "entity_entities",
 
           // Optional. Position offset relative to position of the entity/character attached to.
-          "attach-x": 0,
-          "attach-y": -2,
-          "attach-z": 0,
+          "attach_x": 0,
+          "attach_y": -2,
+          "attach_z": 0,
 
           // Optional. If the entity will rotate based on the location of the camera.
           "billboard": false,
 
           // Optional. Amount that entity rotation should change by when the entity is updated.
-          "change-rotate-x": 0,
-          "change-rotate-y": 0,
-          "change-rotate-z": 0,
+          "change_rotate_x": 0,
+          "change_rotate_y": 0,
+          "change_rotate_z": 0,
 
           // Optional. If characters can collide with this entity.
           "collision": true,
@@ -321,33 +321,33 @@
           "draw": true,
 
           // Optional. How the vertices should be drawn.
-          "draw-mode": "TRIANGLE_FAN",
+          "draw_mode": "TRIANGLE_FAN",
 
           // Optional. The maximum distance at which this specific entity is drawn,
-          //   or false to use "draw-range" from "webgl_properties".
-          "draw-range": 500,
+          //   or false to use "webgl_properties.draw_range".
+          "draw_range": 500,
 
           // Optional. The number of times this event should occur, or false for unlimited.<span id=events></span>
-          "event-limit": false,
+          "event_limit": false,
 
           // Optional. The range at which this event occurs, or false to disable.
           // If range is 0, only during collisions.
           // If range is a number &gt; 0, only within a certain radius.
           // If range is an array of 3 numbers, only within a cuboid of that size.
-          "event-range": false,
+          "event_range": false,
 
           // Optional. Array of things todo when this event occurs.
           // If a property === "_self" then the event parent ID is used.
           // If a property === "_target" then the event target ID is used.
-          "event-todo": [
+          "event_todo": [
             {
               // Optional. The number of times this todo should occur.
               // Exclude this property for no limit.
               "limit": 1,
 
               // Optional. How much to randomly add to "value".
-              "random-max": 0,
-              "random-min": 0,
+              "random_max": 0,
+              "random_min": 0,
 
               // Optional. If this todo should add the value or overwrite the existing value.
               "set": false,
@@ -356,7 +356,7 @@
               "stat": "life",
 
               // Optional. ID of the character/entity or the name of the function/variable that will be affected.
-              "todo": "example-entity-1",
+              "todo": "example_entity_1",
 
               // Optional. What is being done during this todo, which includes:
               //   "entity" (default), "character", "function", and "variable".
@@ -367,9 +367,9 @@
             }
           ],
 
-          // Optional. If "light-range" is greater than 0, emit a light of a certain color within that range.
-          "light-color": [1, 1, 1],
-          "light-range": 0,
+          // Optional. If "light_range" is greater than 0, emit a light of a certain color within that range.
+          "light_color": [1, 1, 1],
+          "light_range": 0,
 
           // Optional. If this entity should have its vertices modified based upon particle properties.
           "particle": false,
@@ -380,20 +380,20 @@
 
           // Optional. Maximum range between the entity and character within which picking can occur.
           // If 0, picking range is unlimited.
-          "picking-range": 0,
+          "picking_range": 0,
 
           // Optional. The size of each point when this entity uses the "POINTS" draw mode.
-          "point-size": 0,
+          "point_size": 0,
 
           // Optional. Rotation of entity in degrees between 0 inclusive and 360 exclusive.
-          "rotate-x": 0,
-          "rotate-y": 0,
-          "rotate-z": 0,
+          "rotate_x": 0,
+          "rotate_y": 0,
+          "rotate_z": 0,
 
           // Optional. Scale of this entity, with 1 being default.
-          "scale-x": 1,
-          "scale-y": 1,
-          "scale-z": 1,
+          "scale_x": 1,
+          "scale_y": 1,
+          "scale_z": 1,
 
           // Optional. ID of texture within core_images.
           // If the texture is not animated, only include the image name.
@@ -402,17 +402,17 @@
           "texture": "gear.png",
 
           // Optional. Texture alignment string.
-          "texture-align": "11010010",
+          "texture_align": "11010010",
 
           // Optional. How many times the texture will repeat.
-          "texture-x": 1,
-          "texture-y": 1,
+          "texture_x": 1,
+          "texture_y": 1,
 
           // Optional. Array of numbers between 0 and 1 inclusive, indicating the color of each vertex.
           // Each row is: red, green, blue, alpha
           // If only 4 numbers are included, then that color will be used for all vertices.
           // If not included then a random color will be selected.
-          "vertex-colors": [
+          "vertex_colors": [
             1, 1, 1, 1,
             1, 0, 0, 1,
             0, 1, 0, 1,
@@ -432,8 +432,8 @@
           // Optional. Array of groups this entity will be added to. Groups must exist.
           // This is where entities are added to the "skybox".
           "groups": [
-            "example-group-0",
-            "example-group-1"
+            "example_group_0",
+            "example_group_1"
           ]
         }
       ]
@@ -449,7 +449,7 @@
       // REQUIRED. Properties of this prefab. Passed as args.
       "properties": {
         // Optional. Prefix added to each created entity ID.
-        "prefix": "example-cuboid",
+        "prefix": "example_cuboid",
 
         // Optional. Properties applied to every face of this cuboid.
         "all": {},
@@ -463,7 +463,7 @@
         "bottom": {},
 
         // Optional. Which character this cuboid should be attached to.
-        "character": "world-static",
+        "character": "world_static",
 
         // Optional. Properties applied to the +z face.
         // Set "exclude" to true to prevent this face from being created.
@@ -474,18 +474,18 @@
         "left": {},
 
         // Optional. Position of the center of the cuboid relative to the parent character position.
-        "position-x": 0,
-        "position-y": 0,
-        "position-z": 0,
+        "position_x": 0,
+        "position_y": 0,
+        "position_z": 0,
 
         // Optional. Properties applied to the +x face.
         // Set "exclude" to true to prevent this face from being created.
         "right": {},
 
         // Optional. Size of the cuboid.
-        "size-x": 1,
-        "size-y": 1,
-        "size-z": 1,
+        "size_x": 1,
+        "size_y": 1,
+        "size_z": 1,
 
         // Optional. Properties applied to the +y face.
         // Set "exclude" to true to prevent this face from being created.
@@ -502,7 +502,7 @@
 
       // REQUIRED. Array of character or entity IDs, depending on the character property.
       "ids": [
-        "example-entity-0"
+        "example_entity_0"
       ],
 
       // REQUIRED. The range in which to choose a number, which is then added to the property.
@@ -510,7 +510,7 @@
       "min": -100,
 
       // REQUIRED. The property that will be modified.
-      "property": "position-z"
+      "property": "position_z"
     }
   ]
 }</code>

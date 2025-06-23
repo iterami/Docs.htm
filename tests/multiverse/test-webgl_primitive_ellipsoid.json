@@ -1,20 +1,20 @@
 {
   "title": "Primitive Ellipsoid Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-primitive-ellipsoid",
+      "id": "test_primitive_ellipsoid",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -32,24 +32,24 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "ellipsoid",
-        "character": "test-primitive-ellipsoid",
-        "position-x": -10,
-        "position-y": 15,
-        "radius-x": 5,
-        "radius-y": 10,
-        "radius-z": 15
+        "character": "test_primitive_ellipsoid",
+        "position_x": -10,
+        "position_y": 15,
+        "radius_x": 5,
+        "radius_y": 10,
+        "radius_z": 15
       }
     },
     {
       "type": "webgl_primitive_ellipsoid",
       "properties": {
-        "prefix": "ellipsoid-inverse",
-        "character": "test-primitive-ellipsoid",
-        "position-x": 10,
-        "position-y": 15,
-        "radius-x": -5,
-        "radius-y": -10,
-        "radius-z": -15
+        "prefix": "ellipsoid_inverse",
+        "character": "test_primitive_ellipsoid",
+        "position_x": 10,
+        "position_y": 15,
+        "radius_x": -5,
+        "radius_y": -10,
+        "radius_z": -15
       }
     }
   ]

@@ -14,7 +14,7 @@ function choose(choice){
     }
     const path = choicelist[choices][choice];
     if(path.length){
-        webgl_characters[webgl_character_id]['path-id'] = 'path-' + path;
+        webgl_characters[webgl_character_id]['path_id'] = 'path_' + path;
     }
     choices++;
 
@@ -25,43 +25,43 @@ function load_start(spawn){
     webgl_level_load({
       'character': 0,
       'json': {
-        'camera-zoom-max': 0,
+        'camera_zoom_max': 0,
         'paths': {
-          'path-start': {
+          'path_start': {
             'points': [
               {
-                'position-z': 50,
+                'position_z': 50,
               },
               {
-                'position-z': 25,
+                'position_z': 25,
               },
             ],
           },
-          'path-left': {
+          'path_left': {
             'points': [
               {
-                'position-z': 25,
+                'position_z': 25,
               },
               {
-                'position-x': -25,
-                'position-z': 0,
+                'position_x': -25,
+                'position_z': 0,
               },
               {
-                'position-z': -40,
+                'position_z': -40,
               },
             ],
           },
-          'path-right': {
+          'path_right': {
             'points': [
               {
-                'position-z': 25,
+                'position_z': 25,
               },
               {
-                'position-x': 25,
-                'position-z': 0,
+                'position_x': 25,
+                'position_z': 0,
               },
               {
-                'position-z': -40,
+                'position_z': -40,
               },
             ],
           },
@@ -69,15 +69,15 @@ function load_start(spawn){
         'picking': 2,
         'characters': [
           {
-            'id': 'story-start',
+            'id': 'story_start',
             'spawn': false,
             'entities': [
               {
                 'id': 'ground',
                 'texture': 'grid.png',
-                'texture-x': 10,
-                'texture-y': 20,
-                'vertex-colors': [
+                'texture_x': 10,
+                'texture_y': 20,
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'vertices': [
@@ -108,9 +108,9 @@ function new_game(){
       'controls': '',
       'level': -1,
       'spawn': {
-        'path-id': 'path-start',
-        'position-y': 5,
-        'position-z': 50,
+        'path_id': 'path_start',
+        'position_y': 5,
+        'position_z': 50,
       },
     });
     update_ui();
@@ -133,34 +133,34 @@ function repo_init(){
         },
       },
       'events': {
-        'choose-0': {
+        'choose_0': {
           'onclick': function(){
               choose(0);
           },
         },
-        'choose-1': {
+        'choose_1': {
           'onclick': function(){
               choose(1);
           },
         },
-        'choose-2': {
+        'choose_2': {
           'onclick': function(){
               choose(2);
           },
         },
-        'choose-3': {
+        'choose_3': {
           'onclick': function(){
               choose(3);
           },
         },
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
       'globals': {
         'choices': 0,
       },
-      'info': '<button id=new-game type=button>Start Story Test</button>',
+      'info': '<button id=new_game type=button>Start Story Test</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {
@@ -173,8 +173,8 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': '<div id=choice><button id=choose-0 type=button>Choice 0</button><button id=choose-1 type=button>Choice 1</button><br>'
-        + '<button id=choose-2 type=button>Choice 2</button><button id=choose-3 type=button>Choice 3</button></div>'
+      'ui': '<div id=choice><button id=choose_0 type=button>Choice 0</button><button id=choose_1 type=button>Choice 1</button><br>'
+        + '<button id=choose_2 type=button>Choice 2</button><button id=choose_3 type=button>Choice 3</button></div>'
         + 'Choices: <span id=choices></span>',
     });
 }

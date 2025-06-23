@@ -13,20 +13,20 @@ function kill(id){
     if(webgl_characters[id].team !== 0
       && webgl_characters[id].level >= webgl_characters[webgl_character_id].level - 10){
         webgl_stat_modify({
-          'stat': 'level-xp',
+          'stat': 'level_xp',
         });
     }
 
-    if(Math.random() < webgl_characters[id]['drop-chance']){
+    if(Math.random() < webgl_characters[id].drop_chance){
         item_drop(webgl_characters[id].drops[core_random_integer(webgl_characters[id].drops.length)]);
     }
 }
 
 function level_properties(){
     return {
-      'camera-zoom-min': 10,
+      'camera_zoom_min': 10,
       'picking': 2,
-      'y-min': -100,
+      'y_min': -100,
     };
 }
 
@@ -37,23 +37,23 @@ function load_cave(){
         ...level_properties(),
         'characters': [
           {
-            'id': 'arpg-cave',
+            'id': 'arpg_cave',
             'spawn': false,
             'entities': [
               {
                 'id': 'exit',
-                'attach-y': 5,
-                'attach-z': 4.99,
-                'event-range': 0,
-                'event-todo': [
+                'attach_y': 5,
+                'attach_z': 4.99,
+                'event_range': 0,
+                'event_todo': [
                   {
                     'todo': 'load_town',
                     'type': 'function',
                     'value': 1,
                   },
                 ],
-                'rotate-x': 270,
-                'vertex-colors': [
+                'rotate_x': 270,
+                'vertex_colors': [
                   0, .4, 0, 1,
                 ],
                 'vertices': [
@@ -64,10 +64,10 @@ function load_cave(){
                 ],
               },
               {
-                'id': 'exit-marker',
-                'attach-z': 7,
+                'id': 'exit_marker',
+                'attach_z': 7,
                 'collision': false,
-                'vertex-colors': [
+                'vertex_colors': [
                   0, .4, 0, 1,
                 ],
                 'vertices': [
@@ -81,16 +81,16 @@ function load_cave(){
           },
           {
             ...stats(1),
-            'id': 'npc-enemy',
+            'id': 'npc_enemy',
             'model': {
               'top': {
-                'event-range': 5,
-                'event-todo': [
+                'event_range': 5,
+                'event_todo': [
                   {
                     'todo': 'webgl_character_hit',
                     'type': 'function',
                     'value': {
-                      'id': 'npc-enemy',
+                      'id': 'npc_enemy',
                       'xz': .3,
                       'y': .5
                     }
@@ -99,7 +99,7 @@ function load_cave(){
               },
             },
             'spawn': {
-              'position-z': -40,
+              'position_z': -40,
             },
           },
         ],
@@ -109,7 +109,7 @@ function load_cave(){
             'properties': {
               'prefix': 'cave',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .3, .3, .3, 1,
                 ],
                 'texture': 'lavaleaf.png',
@@ -117,12 +117,12 @@ function load_cave(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'arpg-cave',
-              'position-y': 5,
-              'position-z': -25,
-              'size-x': -40,
-              'size-y': -10,
-              'size-z': -60,
+              'character': 'arpg_cave',
+              'position_y': 5,
+              'position_z': -25,
+              'size_x': -40,
+              'size_y': -10,
+              'size_z': -60,
             },
           },
         ],
@@ -134,28 +134,28 @@ function load_town(spawn){
     const spawners = [
       {},
       {
-        'position-x': 100,
-        'position-z': -65,
+        'position_x': 100,
+        'position_z': -65,
       }
     ];
     webgl_level_load({
       'character': 0,
       'json': {
         ...level_properties(),
-        'clear-color': [0, .2, 0],
+        'clear_color': [0, .2, 0],
         'spawn': spawners[spawn],
         'characters': [
           {
-            'id': 'arpg-town',
+            'id': 'arpg_town',
             'spawn': false,
             'entities': [
               {
                 'id': 'home',
-                'attach-z': -25,
+                'attach_z': -25,
                 'texture': 'grid.png',
-                'texture-x': 6,
-                'texture-y': 9,
-                'vertex-colors': [
+                'texture_x': 6,
+                'texture_y': 9,
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'vertices': [
@@ -167,11 +167,11 @@ function load_town(spawn){
               },
               {
                 'id': 'bridge',
-                'attach-x': 50,
+                'attach_x': 50,
                 'texture': 'grid.png',
-                'texture-x': 4,
-                'texture-y': 2,
-                'vertex-colors': [
+                'texture_x': 4,
+                'texture_y': 2,
+                'vertex_colors': [
                   .8, .4, 0, 1,
                 ],
                 'vertices': [
@@ -183,10 +183,10 @@ function load_town(spawn){
               },
               {
                 'id': 'forest',
-                'attach-x': 100,
-                'attach-z': -25,
+                'attach_x': 100,
+                'attach_z': -25,
                 'texture': 'lavaleaf.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .1, .4, .1, 1,
                 ],
                 'vertices': [
@@ -198,18 +198,18 @@ function load_town(spawn){
               },
               {
                 'id': 'cave',
-                'attach-x': 100,
-                'attach-y': 5,
-                'attach-z': -70,
-                'event-range': 0,
-                'event-todo': [
+                'attach_x': 100,
+                'attach_y': 5,
+                'attach_z': -70,
+                'event_range': 0,
+                'event_todo': [
                   {
                     'todo': 'load_cave',
                     'type': 'function',
                   },
                 ],
-                'rotate-x': 90,
-                'vertex-colors': [
+                'rotate_x': 90,
+                'vertex_colors': [
                   0, 0, 0, 1,
                 ],
                 'vertices': [
@@ -223,10 +223,10 @@ function load_town(spawn){
           },
           {
             ...stats(0),
-            'id': 'npc-friend',
+            'id': 'npc_friend',
             'spawn': {
-              'position-x': 0,
-              'position-z': -50,
+              'position_x': 0,
+              'position_z': -50,
             },
           },
         ],
@@ -266,7 +266,7 @@ function repo_init(){
         },
       },
       'events': {
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
@@ -284,9 +284,9 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new-game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level-xp></span> xp)<br>'
-        + 'Life: <span class=life></span>/<span class=life-max></span><br>'
-        + 'Mana: <span class=mana></span>/<span class=mana-max></span>'
+      'info': '<button id=new_game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span> xp)<br>'
+        + 'Life: <span class=life></span>/<span class=life_max></span><br>'
+        + 'Mana: <span class=mana></span>/<span class=mana_max></span>'
         + '<div id=rpg_tabs></div><div id=rpg_tabcontent></div>',
       'menu': true,
       'pointerbinds': {
@@ -304,11 +304,11 @@ function repo_init(){
       'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Skill: <span id=skill></span><br>'
-        + 'Life: <span id=life></span>/<span id=life-max></span><br>'
-        + 'Mana: <span id=mana></span>/<span id=mana-max></span>',
+        + 'Life: <span id=life></span>/<span id=life_max></span><br>'
+        + 'Mana: <span id=mana></span>/<span id=mana_max></span>',
     });
     core_tab_create({
-      'content': 'Jump Height: <span id=jump-height></span><br>'
+      'content': 'Jump Height: <span id=jump_height></span><br>'
         + 'Speed: <span id=speed></span>',
       'group': 'rpg',
       'id': 'stats',
@@ -380,25 +380,25 @@ function skill_use(id){
 
 function stats(team){
     return {
-      'camera-zoom': 25,
+      'camera_zoom': 25,
       'collides': true,
       'controls': 'arpg',
-      'drop-chance': 0,
+      'drop_chance': 0,
       'drops': [],
       'equipment': {
         'head': void 0,
         'neck': void 0,
         'body': void 0,
-        'wrist-left': void 0,
-        'wrist-right': void 0,
-        'hand-left': void 0,
-        'holding-left': void 0,
-        'hand-right': void 0,
-        'holding-right': void 0,
+        'wrist_left': void 0,
+        'wrist_right': void 0,
+        'hand_left': void 0,
+        'holding_left': void 0,
+        'hand_right': void 0,
+        'holding_right': void 0,
         'rings': [],
         'legs': void 0,
-        'foot-left': void 0,
-        'foot-right': void 0,
+        'foot_left': void 0,
+        'foot_right': void 0,
       },
       'gravity': 1,
       'inventory': [
@@ -406,11 +406,11 @@ function stats(team){
           'id': 'Test Item',
         },
       ],
-      'jump-height': .6,
+      'jump_height': .6,
       'level': 1,
       'lives': 1,
       'mana': 0,
-      'mana-max': 0,
+      'mana_max': 0,
       'model': {
         'bottom': {
           'exclude': true,
@@ -419,8 +419,8 @@ function stats(team){
       'npcs': {},
       'skill': '',
       'spawn': {
-        'camera-rotate-x': 65,
-        'position-y': 3,
+        'camera_rotate_x': 65,
+        'position_y': 3,
       },
       'speed': .5,
       'talent_points': 0,
@@ -466,13 +466,13 @@ function update_ui(){
       'ids': {
         'equipment': equipment_ui + '</ul>',
         'inventory': inventory_ui + '</ul>',
-        'jump-height': character['jump-height'],
+        'jump_height': character.jump_height,
         'level': character.level,
-        'level-xp': character['level-xp'],
+        'level_xp': character.level_xp,
         'life': character.life,
-        'life-max': character['life-max'],
+        'life_max': character.life_max,
         'mana': character.mana,
-        'mana-max': character['mana-max'],
+        'mana_max': character.mana_max,
         'skill': character.skill,
         'speed': character.speed,
         'talent_points': character.talent_points_max - character.talent_points,

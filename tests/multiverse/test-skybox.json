@@ -1,20 +1,20 @@
 {
   "title": "Skybox Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-skybox",
+      "id": "test_skybox",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -35,24 +35,24 @@
         "groups": [
           "skybox"
         ],
-        "radius-x": -10,
-        "radius-y": -10,
-        "radius-z": -10,
-        "slices-latitude": 4,
-        "slices-longitude": 2
+        "radius_x": -10,
+        "radius_y": -10,
+        "radius_z": -10,
+        "slices_latitude": 4,
+        "slices_longitude": 2
       }
     },
     {
       "type": "webgl_primitive_ellipsoid",
       "properties": {
-        "prefix": "skybox-unattached",
-        "character": "test-skybox",
-        "position-y": 10,
-        "radius-x": -10,
-        "radius-y": -10,
-        "radius-z": -10,
-        "slices-latitude": 4,
-        "slices-longitude": 2
+        "prefix": "skybox_unattached",
+        "character": "test_skybox",
+        "position_y": 10,
+        "radius_x": -10,
+        "radius_y": -10,
+        "radius_z": -10,
+        "slices_latitude": 4,
+        "slices_longitude": 2
       }
     }
   ]

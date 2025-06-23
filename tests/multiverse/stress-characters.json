@@ -2,19 +2,19 @@
   "title": "Characters Stress Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "stress-characters",
+      "id": "stress_characters",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -25,12 +25,12 @@
           ]
         },
         {
-          "id": "pick-stress",
-          "attach-y": 5,
-          "attach-z": -25,
+          "id": "pick_stress",
+          "attach_y": 5,
+          "attach_z": -25,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_prefab_repeat",
               "type": "function",

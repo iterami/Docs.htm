@@ -1,20 +1,20 @@
 {
   "title": "Cuboid Tree Prefab Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-cuboid-tree",
+      "id": "test_cuboid_tree",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -31,26 +31,26 @@
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "character": "test-cuboid-tree",
-        "prefix": "tree-default"
+        "character": "test_cuboid_tree",
+        "prefix": "tree_default"
       }
     },
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "prefix": "tree-modified",
-        "character": "test-cuboid-tree",
-        "leaf-color": [0.8, 0.4, 0, 1],
-        "leaf-size-x": 20,
-        "leaf-size-y": 40,
-        "leaf-size-z": 20,
-        "leaf-texture": "wood.png",
-        "position-z": -25,
-        "trunk-color": 	[0, 1, 0, 1],
-        "trunk-size-x": 5,
-        "trunk-size-y": 20,
-        "trunk-size-z": 10,
-        "trunk-texture": "grid.png"
+        "prefix": "tree_modified",
+        "character": "test_cuboid_tree",
+        "leaf_color": [0.8, 0.4, 0, 1],
+        "leaf_size_x": 20,
+        "leaf_size_y": 40,
+        "leaf_size_z": 20,
+        "leaf_texture": "wood.png",
+        "position_z": -25,
+        "trunk_color": 	[0, 1, 0, 1],
+        "trunk_size_x": 5,
+        "trunk_size_y": 20,
+        "trunk_size_z": 10,
+        "trunk_texture": "grid.png"
       }
     }
   ]

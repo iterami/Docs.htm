@@ -1,20 +1,20 @@
 {
   "title": "Frustum Tree Prefab Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-frustum-tree",
+      "id": "test_frustum_tree",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -31,28 +31,28 @@
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "character": "test-frustum-tree",
-        "prefix": "tree-default"
+        "character": "test_frustum_tree",
+        "prefix": "tree_default"
       }
     },
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "prefix": "tree-1",
+        "prefix": "tree_1",
         "bottom": true,
-        "character": "test-frustum-tree",
+        "character": "test_frustum_tree",
         "height": 40,
-        "height-range": 20,
-        "leaf-color-bottom": [0.1, 0.3, 0.1, 1],
-        "leaf-color-top": [0.05, 0.15, 0.05, 1],
-        "leaf-count": 5,
-        "leaf-points": 8,
-        "leaf-separate": 10,
-        "leaf-size": 10,
-        "position-z": -20,
-        "trunk-color": [0.9, 0.7, 0.9, 1],
-        "trunk-points": 10,
-        "trunk-size": 5
+        "height_range": 20,
+        "leaf_color_bottom": [0.1, 0.3, 0.1, 1],
+        "leaf_color_top": [0.05, 0.15, 0.05, 1],
+        "leaf_count": 5,
+        "leaf_points": 8,
+        "leaf_separate": 10,
+        "leaf_size": 10,
+        "position_z": -20,
+        "trunk_color": [0.9, 0.7, 0.9, 1],
+        "trunk_points": 10,
+        "trunk_size": 5
       }
     }
   ]

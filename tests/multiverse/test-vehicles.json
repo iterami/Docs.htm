@@ -2,22 +2,22 @@
   "title": "Vehicles Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
-  "y-min": -100,
+  "y_min": -100,
   "characters": [
     {
-      "id": "test-vehicles",
+      "id": "test_vehicles",
       "spawn": false,
       "entities": [
         {
           "id": "base",
-          "attach-y": -20,
+          "attach_y": -20,
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -28,10 +28,10 @@
           ]
         },
         {
-          "id": "track-0-0",
-          "attach-x": 450,
-          "attach-y": -20,
-          "attach-z": -600,
+          "id": "track_0_0",
+          "attach_x": 450,
+          "attach_y": -20,
+          "attach_z": -600,
           "texture": "grid.png",
           "vertices": [
             50, 0, -100,
@@ -41,10 +41,10 @@
           ]
         },
         {
-          "id": "track-0-1",
-          "attach-x": 200,
-          "attach-y": -20,
-          "attach-z": -750,
+          "id": "track_0_1",
+          "attach_x": 200,
+          "attach_y": -20,
+          "attach_z": -750,
           "texture": "grid.png",
           "vertices": [
             300, 0, -50,
@@ -54,10 +54,10 @@
           ]
         },
         {
-          "id": "track-0-2",
-          "attach-x": -200,
-          "attach-y": -20,
-          "attach-z": -850,
+          "id": "track_0_2",
+          "attach_x": -200,
+          "attach_y": -20,
+          "attach_z": -850,
           "texture": "grid.png",
           "vertices": [
             100, 0, -150,
@@ -67,10 +67,10 @@
           ]
         },
         {
-          "id": "track-0-3",
-          "attach-x": 200,
-          "attach-y": -20,
-          "attach-z": -950,
+          "id": "track_0_3",
+          "attach_x": 200,
+          "attach_y": -20,
+          "attach_z": -950,
           "texture": "grid.png",
           "vertices": [
             300, 0, -50,
@@ -80,10 +80,10 @@
           ]
         },
         {
-          "id": "track-0-4",
-          "attach-x": 450,
-          "attach-y": -20,
-          "attach-z": -1100,
+          "id": "track_0_4",
+          "attach_x": 450,
+          "attach_y": -20,
+          "attach_z": -1100,
           "texture": "grid.png",
           "vertices": [
             50, 0, -100,
@@ -93,9 +93,9 @@
           ]
         },
         {
-          "id": "track-0-5",
-          "attach-y": -20,
-          "attach-z": -1250,
+          "id": "track_0_5",
+          "attach_y": -20,
+          "attach_z": -1250,
           "texture": "grid.png",
           "vertices": [
             500, 0, -50,
@@ -105,10 +105,10 @@
           ]
         },
         {
-          "id": "track-0-6",
-          "attach-x": -450,
-          "attach-y": -20,
-          "attach-z": -850,
+          "id": "track_0_6",
+          "attach_x": -450,
+          "attach_y": -20,
+          "attach_z": -850,
           "texture": "grid.png",
           "vertices": [
             50, 0, -350,
@@ -120,30 +120,30 @@
       ]
     },
     {
-      "id": "vehicle-fast",
-      "collide-xz": 5,
+      "id": "vehicle_fast",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "position-x": -25
+        "position_x": -25
       },
-      "turn-speed": 2,
-      "vehicle-stats": {
-        "speed-backwards": -0.01,
-        "speed-max-backward": -3,
-        "speed-max-forward": 6
+      "turn_speed": 2,
+      "vehicle_stats": {
+        "speed_backwards": -0.01,
+        "speed_max_backward": -3,
+        "speed_max_forward": 6
       },
       "entities": [
         {
-          "id": "fast-body",
+          "id": "fast_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-fast"
+                "vehicle": "vehicle_fast"
               }
             }
           ],
@@ -158,28 +158,28 @@
       ]
     },
     {
-      "id": "vehicle-locked-enter",
-      "collide-xz": 5,
+      "id": "vehicle_locked_enter",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "position-x": -75
+        "position_x": -75
       },
-      "turn-speed": 2,
-      "vehicle-stats": {
+      "turn_speed": 2,
+      "vehicle_stats": {
         "lock": 1
       },
       "entities": [
         {
-          "id": "locked-enter-body",
+          "id": "locked_enter_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-locked-enter"
+                "vehicle": "vehicle_locked_enter"
               }
             }
           ],
@@ -194,28 +194,28 @@
       ]
     },
     {
-      "id": "vehicle-locked-exit",
-      "collide-xz": 5,
+      "id": "vehicle_locked_exit",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "position-x": -90
+        "position_x": -90
       },
-      "turn-speed": 2,
-      "vehicle-stats": {
+      "turn_speed": 2,
+      "vehicle_stats": {
         "lock": 2
       },
       "entities": [
         {
-          "id": "locked-exit-body",
+          "id": "locked_exit_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-locked-exit"
+                "vehicle": "vehicle_locked_exit"
               }
             }
           ],
@@ -230,28 +230,28 @@
       ]
     },
     {
-      "id": "vehicle-locked-both",
-      "collide-xz": 5,
+      "id": "vehicle_locked_both",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "position-x": -105
+        "position_x": -105
       },
-      "turn-speed": 2,
-      "vehicle-stats": {
+      "turn_speed": 2,
+      "vehicle_stats": {
         "lock": 3
       },
       "entities": [
         {
-          "id": "locked-both-body",
+          "id": "locked_both_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-locked-both"
+                "vehicle": "vehicle_locked_both"
               }
             }
           ],
@@ -266,28 +266,28 @@
       ]
     },
     {
-      "id": "vehicle-medium",
-      "collide-xz": 5,
+      "id": "vehicle_medium",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
-      "turn-speed": 2,
-      "vehicle-stats": {
+      "turn_speed": 2,
+      "vehicle_stats": {
         "character": "_me",
-        "speed-backwards": -0.01,
-        "speed-max-backward": -1.5,
-        "speed-max-forward": 3
+        "speed_backwards": -0.01,
+        "speed_max_backward": -1.5,
+        "speed_max_forward": 3
       },
       "entities": [
         {
-          "id": "medium-body",
+          "id": "medium_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-medium"
+                "vehicle": "vehicle_medium"
               }
             }
           ],
@@ -302,31 +302,31 @@
       ]
     },
     {
-      "id": "vehicle-slow",
-      "collide-xz": 5,
+      "id": "vehicle_slow",
+      "collide_xz": 5,
       "collides": true,
       "gravity": 1,
       "level": 0,
       "spawn": {
-        "position-x": 25
+        "position_x": 25
       },
-      "turn-speed": 2,
-      "vehicle-stats": {
-        "speed-forward": 0.01,
-        "speed-backward": -0.01,
-        "speed-max-backward": -5,
-        "speed-max-forward": 10
+      "turn_speed": 2,
+      "vehicle_stats": {
+        "speed_forward": 0.01,
+        "speed_backward": -0.01,
+        "speed_max_backward": -5,
+        "speed_max_forward": 10
       },
       "entities": [
         {
-          "id": "slow-body",
+          "id": "slow_body",
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_vehicle_toggle",
               "type": "function",
               "value": {
-                "vehicle": "vehicle-slow"
+                "vehicle": "vehicle_slow"
               }
             }
           ],
@@ -352,11 +352,11 @@
         "bottom": {
           "exclude": true
         },
-        "character": "test-vehicles",
-        "position-y": -10,
-        "size-x": 100,
-        "size-y": 20,
-        "size-z": 100
+        "character": "test_vehicles",
+        "position_y": -10,
+        "size_x": 100,
+        "size_y": 20,
+        "size_z": 100
       }
     }
   ]

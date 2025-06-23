@@ -2,19 +2,19 @@
   "title": "Custom Properties Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-custom-properties",
+      "id": "test_custom_properties",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -25,17 +25,17 @@
           ]
         },
         {
-          "id": "entity-custom",
-          "attach-x": -10,
-          "attach-y": 5,
+          "id": "entity_custom",
+          "attach_x": -10,
+          "attach_y": 5,
           "billboard": true,
           "collision": false,
-          "custom-property": "set",
-          "event-todo": [
+          "custom_property": "set",
+          "event_todo": [
             {
               "todo": "eval",
               "type": "function",
-              "value": "console.log('entity-custom:',entity_entities['entity-custom']['custom-property']);console.log('character-custom:',webgl_characters['character-custom']['custom-property'])"
+              "value": "console.log('entity_custom:',entity_entities.entity_custom.custom_property);console.log('character_custom:',webgl_characters.character_custom.custom_property)"
             }
           ],
           "picking": true,
@@ -48,16 +48,16 @@
           ]
         },
         {
-          "id": "entity-not-custom",
-          "attach-x": 10,
-          "attach-y": 5,
+          "id": "entity_not_custom",
+          "attach_x": 10,
+          "attach_y": 5,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "eval",
               "type": "function",
-              "value": "console.log('entity-not-custom:',entity_entities['entity-not-custom']['custom-property']);console.log('character-not-custom:',webgl_characters['character-not-custom']['custom-property'])"
+              "value": "console.log('entity_not_custom:',entity_entities.entity_not_custom.custom_property);console.log('character_not_custom:',webgl_characters.character_not_custom.custom_property)"
             }
           ],
           "picking": true,
@@ -72,11 +72,11 @@
       ]
     },
     {
-      "id": "character-custom",
-      "custom-property": "set"
+      "id": "character_custom",
+      "custom_property": "set"
     },
     {
-      "id": "character-not-custom"
+      "id": "character_not_custom"
     }
   ]
 }

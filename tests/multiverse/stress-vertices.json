@@ -1,20 +1,20 @@
 {
   "title": "Vertices Stress Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "stress-vertices",
+      "id": "stress_vertices",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -32,13 +32,13 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "ellipsoid",
-        "character": "stress-vertices",
-        "position-y": 15,
-        "radius-x": 10,
-        "radius-y": 10,
-        "radius-z": 10,
-        "slices-latitude": 1500,
-        "slices-longitude": 1500
+        "character": "stress_vertices",
+        "position_y": 15,
+        "radius_x": 10,
+        "radius_y": 10,
+        "radius_z": 10,
+        "slices_latitude": 1500,
+        "slices_longitude": 1500
       }
     }
   ]

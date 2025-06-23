@@ -41,7 +41,7 @@ function lap_update(args){
 
 function level_properties(){
     return {
-      'camera-zoom-max': 30,
+      'camera_zoom_max': 30,
     };
 }
 
@@ -52,29 +52,29 @@ function load_testtrack(){
         ...level_properties(),
         'characters': [
           {
-            'id': 'racing-testtrack',
+            'id': 'racing_testtrack',
             'spawn': false,
             'entities': [
               {
                 'id': 'jump',
-                'attach-x': -170,
-                'attach-y': -.99,
-                'attach-z': -100,
-                'event-range': 0,
-                'event-todo': [
+                'attach_x': -170,
+                'attach_y': -.99,
+                'attach_z': -100,
+                'event_range': 0,
+                'event_todo': [
                   {
                     'set': true,
-                    'stat': 'change-position-y',
+                    'stat': 'change_position_y',
                     'value': 3,
                   },
                   {
                     'set': true,
-                    'stat': 'change-position-z',
+                    'stat': 'change_position_z',
                     'value': 3,
                   },
                 ],
                 'texture': 'grid.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   1, 0, 0, 1,
                 ],
                 'vertices': [
@@ -85,12 +85,12 @@ function load_testtrack(){
                 ],
               },
               {
-                'id': 'mark-goal',
-                'attach-y': -.9,
-                'attach-z': 375,
+                'id': 'mark_goal',
+                'attach_y': -.9,
+                'attach_z': 375,
                 'collision': false,
-                'event-range': [20, 100, 125],
-                'event-todo': [
+                'event_range': [20, 100, 125],
+                'event_todo': [
                   {
                     'todo': 'lap_update',
                     'type': 'function',
@@ -101,9 +101,9 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 10,
-                'texture-y': 50,
-                'vertex-colors': [
+                'texture_x': 10,
+                'texture_y': 50,
+                'vertex_colors': [
                   0, 1, 0, 1,
                 ],
                 'vertices': [
@@ -114,13 +114,13 @@ function load_testtrack(){
                 ],
               },
               {
-                'id': 'mark-1',
-                'attach-x': 210,
-                'attach-y': -.9,
-                'attach-z': 240,
+                'id': 'mark_1',
+                'attach_x': 210,
+                'attach_y': -.9,
+                'attach_z': 240,
                 'collision': false,
-                'event-range': [40, 100, 10],
-                'event-todo': [
+                'event_range': [40, 100, 10],
+                'event_todo': [
                   {
                     'target': true,
                     'todo': 'lap_update',
@@ -132,9 +132,9 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 20,
-                'texture-y': 5,
-                'vertex-colors': [
+                'texture_x': 20,
+                'texture_y': 5,
+                'vertex_colors': [
                   0, 0, 1, 1,
                 ],
                 'vertices': [
@@ -145,12 +145,12 @@ function load_testtrack(){
                 ],
               },
               {
-                'id': 'mark-2',
-                'attach-x': -33,
-                'attach-y': -.9,
+                'id': 'mark_2',
+                'attach_x': -33,
+                'attach_y': -.9,
                 'collision': false,
-                'event-range': [40, 100, 10],
-                'event-todo': [
+                'event_range': [40, 100, 10],
+                'event_todo': [
                   {
                     'target': true,
                     'todo': 'lap_update',
@@ -162,9 +162,9 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 20,
-                'texture-y': 5,
-                'vertex-colors': [
+                'texture_x': 20,
+                'texture_y': 5,
+                'vertex_colors': [
                   0, 0, 1, 1,
                 ],
                 'vertices': [
@@ -175,13 +175,13 @@ function load_testtrack(){
                 ],
               },
               {
-                'id': 'mark-3',
-                'attach-x': 210,
-                'attach-y': -.9,
-                'attach-z': -240,
+                'id': 'mark_3',
+                'attach_x': 210,
+                'attach_y': -.9,
+                'attach_z': -240,
                 'collision': false,
-                'event-range': [40, 100, 10],
-                'event-todo': [
+                'event_range': [40, 100, 10],
+                'event_todo': [
                   {
                     'target': true,
                     'todo': 'lap_update',
@@ -193,9 +193,9 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 20,
-                'texture-y': 5,
-                'vertex-colors': [
+                'texture_x': 20,
+                'texture_y': 5,
+                'vertex_colors': [
                   0, 0, 1, 1,
                 ],
                 'vertices': [
@@ -206,13 +206,13 @@ function load_testtrack(){
                 ],
               },
               {
-                'id': 'mark-4',
-                'attach-x': -170,
-                'attach-y': -.9,
-                'attach-z': -240,
+                'id': 'mark_4',
+                'attach_x': -170,
+                'attach_y': -.9,
+                'attach_z': -240,
                 'collision': false,
-                'event-range': [80, 100, 10],
-                'event-todo': [
+                'event_range': [80, 100, 10],
+                'event_todo': [
                   {
                     'target': true,
                     'todo': 'lap_update',
@@ -224,9 +224,9 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'texture-x': 20,
-                'texture-y': 5,
-                'vertex-colors': [
+                'texture_x': 20,
+                'texture_y': 5,
+                'vertex_colors': [
                   0, 0, 1, 1,
                 ],
                 'vertices': [
@@ -245,45 +245,45 @@ function load_testtrack(){
             'properties': {
               'prefix': 'base',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 3,
-                'texture-y': 3,
+                'texture_x': 3,
+                'texture_y': 3,
               },
-              'character': 'racing-testtrack',
-              'position-y': 49,
-              'size-x': -500,
-              'size-y': -100,
-              'size-z': -1000,
+              'character': 'racing_testtrack',
+              'position_y': 49,
+              'size_x': -500,
+              'size_y': -100,
+              'size_z': -1000,
               'top': {
-                'texture-x': 3,
-                'texture-y': 4,
+                'texture_x': 3,
+                'texture_y': 4,
               },
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'wall-0',
+              'prefix': 'wall_0',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 3,
-                'texture-y': 3,
+                'texture_x': 3,
+                'texture_y': 3,
               },
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-testtrack',
-              'position-x': -83.3,
-              'position-y': 49,
-              'size-x': 20,
-              'size-y': 100,
-              'size-z': 500,
+              'character': 'racing_testtrack',
+              'position_x': -83.3,
+              'position_y': 49,
+              'size_x': 20,
+              'size_y': 100,
+              'size_z': 500,
               'top': {
                 'exclude': true,
               },
@@ -292,81 +292,81 @@ function load_testtrack(){
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'wall-1',
+              'prefix': 'wall_1',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 3,
-                'texture-y': 3,
+                'texture_x': 3,
+                'texture_y': 3,
               },
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-testtrack',
+              'character': 'racing_testtrack',
               'left': {
                 'exclude': true,
               },
-              'position-x': 51.7,
-              'position-y': 9,
-              'position-z': 240,
-              'size-x': 250,
-              'size-y': 20,
-              'size-z': 20,
+              'position_x': 51.7,
+              'position_y': 9,
+              'position_z': 240,
+              'size_x': 250,
+              'size_y': 20,
+              'size_z': 20,
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'wall-2',
+              'prefix': 'wall_2',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 3,
-                'texture-y': 3,
+                'texture_x': 3,
+                'texture_y': 3,
               },
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-testtrack',
+              'character': 'racing_testtrack',
               'right': {
                 'exclude': true,
               },
-              'position-x': 125,
-              'position-y': 9,
-              'size-x': 250,
-              'size-y': 20,
-              'size-z': 20,
+              'position_x': 125,
+              'position_y': 9,
+              'size_x': 250,
+              'size_y': 20,
+              'size_z': 20,
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
-              'prefix': 'wall-3',
+              'prefix': 'wall_3',
               'all': {
-                'vertex-colors': [
+                'vertex_colors': [
                   .5, .5, .5, 1,
                 ],
                 'texture': 'grid.png',
-                'texture-x': 3,
-                'texture-y': 3,
+                'texture_x': 3,
+                'texture_y': 3,
               },
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing-testtrack',
+              'character': 'racing_testtrack',
               'left': {
                 'exclude': true,
               },
-              'position-x': 51.7,
-              'position-y': 9,
-              'position-z': -240,
-              'size-x': 250,
-              'size-y': 20,
-              'size-z': 20,
+              'position_x': 51.7,
+              'position_y': 9,
+              'position_z': -240,
+              'size_x': 250,
+              'size_y': 20,
+              'size_z': 20,
             },
           },
         ],
@@ -387,7 +387,7 @@ function new_game(){
 
     load_testtrack();
     racer_add(webgl_character_id);
-    racer_add('test-racer');
+    racer_add('test_racer');
     update_ui();
 }
 
@@ -407,13 +407,13 @@ function racer_add(id){
       ...properties,
     });
 
-    const vehicle = id + '-vehicle';
+    const vehicle = id + '_vehicle';
     if(!webgl_characters[vehicle]){
         webgl_character_init({
           'collides': true,
           'entities': [
             {
-              'id': vehicle + '-body',
+              'id': vehicle + '_body',
               'collision': false,
               'vertices': [
                 5, 0, -5,
@@ -427,19 +427,19 @@ function racer_add(id){
           'id': vehicle,
           'level': 0,
           'spawn': {
-            'position-x': -25,
-            'position-y': 5,
-            'position-z': 250 + 25 * position_max,
-            'rotate-y': 90,
+            'position_x': -25,
+            'position_y': 5,
+            'position_z': 250 + 25 * position_max,
+            'rotate_y': 90,
           },
-          'turn-speed': 2,
-          'vehicle-stats': {
+          'turn_speed': 2,
+          'vehicle_stats': {
             'character': id,
             //'lock': 2,
-            'speed-backward': -.02,
-            'speed-forward': .04,
-            'speed-max-backward': -1.5,
-            'speed-max-forward': 3,
+            'speed_backward': -.02,
+            'speed_forward': .04,
+            'speed_max_backward': -1.5,
+            'speed_max_forward': 3,
           },
         });
     }
@@ -462,7 +462,7 @@ function repo_init(){
         },
       },
       'events': {
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
@@ -471,10 +471,10 @@ function repo_init(){
         'mark_max': 0,
         'position_max': 0,
       },
-      'info': '<button id=new-game type=button>Start Racing Test</button><br><br>Lap: <span class=lap></span>/<span class=lap-max></span><br>'
-        + 'Mark: <span class=mark></span>/<span class=mark-max></span><br>'
-        + 'Position: <span class=position></span>/<span class=position-max></span><br>'
-        + 'Speed: <span class=speed></span>/<span class=speed-max></span>',
+      'info': '<button id=new_game type=button>Start Racing Test</button><br><br>Lap: <span class=lap></span>/<span class=lap_max></span><br>'
+        + 'Mark: <span class=mark></span>/<span class=mark_max></span><br>'
+        + 'Position: <span class=position></span>/<span class=position_max></span><br>'
+        + 'Speed: <span class=speed></span>/<span class=speed_max></span>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {
@@ -492,10 +492,10 @@ function repo_init(){
       'root': '../../common-webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': 'Lap: <span id=lap></span>/<span id=lap-max></span><br>'
-        + 'Mark: <span id=mark></span>/<span id=mark-max></span><br>'
-        + 'Position: <span id=position></span>/<span id=position-max></span><br>'
-        + 'Speed: <span id=speed></span>/<span id=speed-max></span>',
+      'ui': 'Lap: <span id=lap></span>/<span id=lap_max></span><br>'
+        + 'Mark: <span id=mark></span>/<span id=mark_max></span><br>'
+        + 'Position: <span id=position></span>/<span id=position_max></span><br>'
+        + 'Speed: <span id=speed></span>/<span id=speed_max></span>',
     });
 }
 
@@ -504,18 +504,18 @@ function repo_logic(){
     let speed = '-';
     let speed_max = '-';
     if(character.vehicle !== false){
-        const stats = webgl_characters[character.vehicle]['vehicle-stats'];
+        const stats = webgl_characters[character.vehicle].vehicle_stats;
         speed = core_round({
           'decimals': 2,
           'number': stats.speed,
         });
-        speed_max = stats['speed-max-forward'];
+        speed_max = stats.speed_max_forward;
     }
     core_ui_update({
       'class': true,
       'ids': {
         'speed': speed,
-        'speed-max': speed_max,
+        'speed_max': speed_max,
       },
     });
 }
@@ -526,9 +526,9 @@ function repo_stat_modify(){
 
 function stats(){
     return {
-      'camera-zoom': 25,
-      'collide-bottom': 5,
-      'collide-top': 1,
+      'camera_zoom': 25,
+      'collide_bottom': 5,
+      'collide_top': 1,
       'controls': 'rpg',
       'lap': 1,
       'level': 0,
@@ -536,9 +536,9 @@ function stats(){
       'position': 1,
       'model': {},
       'spawn': {
-        'camera-rotate-x': 30,
-        'camera-rotate-y': 90,
-        'rotate-y': 90,
+        'camera_rotate_x': 30,
+        'camera_rotate_y': 90,
+        'rotate_y': 90,
       },
     };
 }
@@ -549,11 +549,11 @@ function update_ui(){
       'class': true,
       'ids': {
         'lap': character.lap,
-        'lap-max': lap_max,
+        'lap_max': lap_max,
         'mark': character.mark,
-        'mark-max': mark_max,
+        'mark_max': mark_max,
         'position': character.position,
-        'position-max': position_max,
+        'position_max': position_max,
       },
     });
 }

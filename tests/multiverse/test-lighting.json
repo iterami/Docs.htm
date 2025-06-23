@@ -1,23 +1,23 @@
 {
   "title": "Lighting Test",
-  "ambient-color": [0.5, 0.5, 0.5],
+  "ambient_color": [0.5, 0.5, 0.5],
   "paths": {
     "loop": {
       "end": "loop",
       "points": [
         {
-          "position-x": -45,
-          "position-z": -45
+          "position_x": -45,
+          "position_z": -45
         },
         {
-          "position-x": 45
+          "position_x": 45
         },
         {
-          "position-x": -45,
-          "position-z": 45
+          "position_x": -45,
+          "position_z": 45
         },
         {
-          "position-x": 45
+          "position_x": 45
         }
       ],
       "speed": 0.5
@@ -25,21 +25,21 @@
   },
   "characters": [
     {
-      "id": "test-lighting",
+      "id": "test_lighting",
       "spawn": false
     },
     {
-      "id": "light-black",
-      "path-id": "loop",
+      "id": "light_black",
+      "path_id": "loop",
       "spawn": false,
       "entities": [
         {
-          "id": "light-black",
+          "id": "light_black",
           "billboard": true,
           "collision": false,
-          "light-color": [0, 0, 0],
-          "light-range": 25,
-          "vertex-colors": [
+          "light_color": [0, 0, 0],
+          "light_range": 25,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -52,20 +52,20 @@
       ]
     },
     {
-      "id": "light-blue",
-      "path-id": "loop",
-      "path-point": 2,
-      "position-x": -45,
-      "position-z": 45,
+      "id": "light_blue",
+      "path_id": "loop",
+      "path_point": 2,
+      "position_x": -45,
+      "position_z": 45,
       "spawn": false,
       "entities": [
         {
-          "id": "light-blue",
+          "id": "light_blue",
           "billboard": true,
           "collision": false,
-          "light-color": [0, 0, 1],
-          "light-range": 25,
-          "vertex-colors": [
+          "light_color": [0, 0, 1],
+          "light_range": 25,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -78,20 +78,20 @@
       ]
     },
     {
-      "id": "light-green",
-      "path-id": "loop",
-      "path-point": 1,
-      "position-x": 45,
-      "position-z": -45,
+      "id": "light_green",
+      "path_id": "loop",
+      "path_point": 1,
+      "position_x": 45,
+      "position_z": -45,
       "spawn": false,
       "entities": [
         {
-          "id": "light-green",
+          "id": "light_green",
           "billboard": true,
           "collision": false,
-          "light-color": [0, 1, 0],
-          "light-range": 25,
-          "vertex-colors": [
+          "light_color": [0, 1, 0],
+          "light_range": 25,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -104,19 +104,19 @@
       ]
     },
     {
-      "id": "light-red",
-      "path-id": "loop",
-      "position-x": -45,
-      "position-z": -45,
+      "id": "light_red",
+      "path_id": "loop",
+      "position_x": -45,
+      "position_z": -45,
       "spawn": false,
       "entities": [
         {
-          "id": "light-red",
+          "id": "light_red",
           "billboard": true,
           "collision": false,
-          "light-color": [1, 0, 0],
-          "light-range": 25,
-          "vertex-colors": [
+          "light_color": [1, 0, 0],
+          "light_range": 25,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -129,20 +129,20 @@
       ]
     },
     {
-      "id": "light-white",
-      "path-id": "loop",
-      "path-point": 3,
-      "position-x": 45,
-      "position-z": 45,
+      "id": "light_white",
+      "path_id": "loop",
+      "path_point": 3,
+      "position_x": 45,
+      "position_z": 45,
       "spawn": false,
       "entities": [
         {
-          "id": "light-white",
+          "id": "light_white",
           "billboard": true,
           "collision": false,
-          "light-color": [1, 1, 1],
-          "light-range": 25,
-          "vertex-colors": [
+          "light_color": [1, 1, 1],
+          "light_range": 25,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -162,17 +162,17 @@
         "prefix": "cuboid",
         "all": {
           "texture": "lavaleaf.png",
-          "vertex-colors": [
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ]
         },
         "bottom": {
           "collision": false
         },
-        "character": "test-lighting",
-        "size-x": -100,
-        "size-y": -20,
-        "size-z": -100
+        "character": "test_lighting",
+        "size_x": -100,
+        "size_y": -20,
+        "size_z": -100
       }
     },
     {
@@ -182,11 +182,11 @@
         "groups": [
           "skybox"
         ],
-        "radius-x": -5,
-        "radius-y": -5,
-        "radius-z": -5,
-        "slices-latitude": 4,
-        "slices-longitude": 2
+        "radius_x": -5,
+        "radius_y": -5,
+        "radius_z": -5,
+        "slices_latitude": 4,
+        "slices_longitude": 2
       }
     }
   ]

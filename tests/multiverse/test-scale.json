@@ -2,20 +2,20 @@
   "title": "Scaling Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5,
-    "position-z": 25
+    "position_y": 5,
+    "position_z": 25
   },
   "characters": [
     {
-      "id": "test-scaling",
+      "id": "test_scaling",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -26,12 +26,12 @@
           ]
         },
         {
-          "id": "tree-big",
-          "attach-x": -10,
-          "attach-y": 6,
+          "id": "tree_big",
+          "attach_x": -10,
+          "attach_y": 6,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_character_scale",
               "type": "function",
@@ -52,12 +52,12 @@
           ]
         },
         {
-          "id": "tree-small",
-          "attach-x": -10,
-          "attach-y": 2,
+          "id": "tree_small",
+          "attach_x": -10,
+          "attach_y": 2,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_character_scale",
               "type": "function",
@@ -79,14 +79,14 @@
         },
         {
           "id": "wall",
-          "attach-z": -40,
-          "rotate-x": 90,
-          "scale-x": 2,
-          "scale-y": 2,
-          "scale-z": 2,
+          "attach_z": -40,
+          "rotate_x": 90,
+          "scale_x": 2,
+          "scale_y": 2,
+          "scale_z": 2,
           "texture": "grid.png",
-          "texture-x": 2,
-          "texture-y": 2,
+          "texture_x": 2,
+          "texture_y": 2,
           "vertices": [
             10, 0, -10,
             -10, 0, -10,
@@ -95,13 +95,13 @@
           ]
         },
         {
-          "id": "wall-big",
-          "attach-x": 20,
-          "attach-y": 6,
-          "attach-z": -35,
+          "id": "wall_big",
+          "attach_x": 20,
+          "attach_y": 6,
+          "attach_z": -35,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_entity_scale",
               "type": "function",
@@ -122,13 +122,13 @@
           ]
         },
         {
-          "id": "wall-small",
-          "attach-x": 20,
-          "attach-y": 2,
-          "attach-z": -35,
+          "id": "wall_small",
+          "attach_x": 20,
+          "attach_y": 2,
+          "attach_z": -35,
           "billboard": true,
           "collision": false,
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_entity_scale",
               "type": "function",
@@ -153,12 +153,12 @@
     {
       "id": "character",
       "spawn": {
-        "position-x": -25,
-        "position-y": 0,
-        "position-z": 0,
-        "scale-x": 2,
-        "scale-y": 2,
-        "scale-z": 2
+        "position_x": -25,
+        "position_y": 0,
+        "position_z": 0,
+        "scale_x": 2,
+        "scale_y": 2,
+        "scale_z": 2
       }
     }
   ],

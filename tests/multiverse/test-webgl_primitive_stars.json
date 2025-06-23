@@ -1,20 +1,20 @@
 {
   "title": "Primitive Stars Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-primitive-stars",
+      "id": "test_primitive_stars",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -41,10 +41,10 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "prefix": "0.25",
-        "character": "test-primitive-stars",
-        "height-limit": 0.25,
-        "position-x": -30,
-        "position-z": -30,
+        "character": "test_primitive_stars",
+        "height_limit": 0.25,
+        "position_x": -30,
+        "position_z": -30,
         "radius": 20,
         "range": 0,
         "stars": 1000
@@ -54,11 +54,11 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "prefix": "0.5",
-        "character": "test-primitive-stars",
-        "height-limit": 0.5,
-        "position-x": 30,
-        "position-y": 10,
-        "position-z": -30,
+        "character": "test_primitive_stars",
+        "height_limit": 0.5,
+        "position_x": 30,
+        "position_y": 10,
+        "position_z": -30,
         "radius": 20,
         "range": 0,
         "stars": 1000
@@ -68,11 +68,11 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "prefix": "0.75",
-        "character": "test-primitive-stars",
-        "height-limit": 0.75,
-        "position-x": 30,
-        "position-y": 20,
-        "position-z": 30,
+        "character": "test_primitive_stars",
+        "height_limit": 0.75,
+        "position_x": 30,
+        "position_y": 20,
+        "position_z": 30,
         "radius": 20,
         "range": 0,
         "stars": 1000
@@ -82,11 +82,11 @@
       "type": "webgl_primitive_stars",
       "properties": {
         "prefix": "1",
-        "character": "test-primitive-stars",
-        "height-limit": 1,
-        "position-x": -30,
-        "position-y": 30,
-        "position-z": 30,
+        "character": "test_primitive_stars",
+        "height_limit": 1,
+        "position_x": -30,
+        "position_y": 30,
+        "position_z": 30,
         "radius": 20,
         "range": 0,
         "stars": 1000

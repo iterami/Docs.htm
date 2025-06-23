@@ -1,21 +1,21 @@
 {
   "title": "Normals Test",
-  "directional-state": true,
+  "directional_state": true,
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-normals",
+      "id": "test_normals",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -26,13 +26,13 @@
           ]
         },
         {
-          "id": "rotating-bottom",
-          "attach-x": -15,
-          "attach-y": 10,
-          "change-rotate-z": -1,
+          "id": "rotating_bottom",
+          "attach_x": -15,
+          "attach_y": 10,
+          "change_rotate_z": -1,
           "collision": false,
-          "rotate-x": 180,
-          "vertex-colors": [
+          "rotate_x": 180,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -43,12 +43,12 @@
           ]
         },
         {
-          "id": "rotating-top",
-          "attach-x": -15,
-          "attach-y": 10,
-          "change-rotate-z": 1,
+          "id": "rotating_top",
+          "attach_x": -15,
+          "attach_y": 10,
+          "change_rotate_z": 1,
           "collision": false,
-          "vertex-colors": [
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -61,12 +61,12 @@
       ]
     },
     {
-      "id": "cuboid-rotating",
+      "id": "cuboid_rotating",
       "spawn": {
-        "change-rotate-z": 1,
-        "position-x": 15,
-        "position-y": 10,
-        "position-z": 0
+        "change_rotate_z": 1,
+        "position_x": 15,
+        "position_y": 10,
+        "position_z": 0
       }
     }
   ],
@@ -77,31 +77,31 @@
         "prefix": "cuboid",
         "all": {
           "collision": false,
-          "vertex-colors": [
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ]
         },
-        "character": "test-normals",
-        "position-y": 10,
-        "size-x": 5,
-        "size-y": 5,
-        "size-z": 5
+        "character": "test_normals",
+        "position_y": 10,
+        "size_x": 5,
+        "size_y": 5,
+        "size_z": 5
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-rotating",
+        "prefix": "cuboid_rotating",
         "all": {
           "collision": false,
-          "vertex-colors": [
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ]
         },
-        "character": "cuboid-rotating",
-        "size-x": 5,
-        "size-y": 5,
-        "size-z": 5
+        "character": "cuboid_rotating",
+        "size_x": 5,
+        "size_y": 5,
+        "size_z": 5
       }
     }
   ]

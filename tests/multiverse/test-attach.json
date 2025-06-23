@@ -1,20 +1,20 @@
 {
   "title": "Attach Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-attach",
+      "id": "test_attach",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -27,10 +27,10 @@
       ]
     },
     {
-      "id": "rotate-x",
+      "id": "rotate_x",
       "entities": [
         {
-          "id": "body-x",
+          "id": "body_x",
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -41,8 +41,8 @@
           ]
         },
         {
-          "id": "attached-x",
-          "attach-x": 10,
+          "id": "attached_x",
+          "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -54,16 +54,16 @@
         }
       ],
       "spawn": {
-        "change-rotate-x": 5,
-        "position-x": -15,
-        "position-z": -15
+        "change_rotate_x": 5,
+        "position_x": -15,
+        "position_z": -15
       }
     },
     {
-      "id": "rotate-y",
+      "id": "rotate_y",
       "entities": [
         {
-          "id": "body-y",
+          "id": "body_y",
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -74,8 +74,8 @@
           ]
         },
         {
-          "id": "attached-y",
-          "attach-x": 10,
+          "id": "attached_y",
+          "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -87,15 +87,15 @@
         }
       ],
       "spawn": {
-        "change-rotate-y": 5,
-        "position-z": -15
+        "change_rotate_y": 5,
+        "position_z": -15
       }
     },
     {
-      "id": "rotate-z",
+      "id": "rotate_z",
       "entities": [
         {
-          "id": "body-z",
+          "id": "body_z",
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -106,8 +106,8 @@
           ]
         },
         {
-          "id": "attached-z",
-          "attach-x": 10,
+          "id": "attached_z",
+          "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
@@ -119,9 +119,9 @@
         }
       ],
       "spawn": {
-        "change-rotate-z": 5,
-        "position-x": 15,
-        "position-z": -15
+        "change_rotate_z": 5,
+        "position_x": 15,
+        "position_z": -15
       }
     }
   ]

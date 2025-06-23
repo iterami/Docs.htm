@@ -2,16 +2,16 @@
   "title": "Audio Test",
   "picking": 2,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-events",
+      "id": "test_events",
       "spawn": false,
       "entities": [
         {
           "id": "base",
-          "event-todo": [
+          "event_todo": [
             {
               "todo": "webgl_audio",
               "type": "function",
@@ -24,9 +24,9 @@
           ],
           "picking": true,
           "texture": "grid.png",
-          "texture-x": 2,
-          "texture-y": 2,
-          "vertex-colors": [
+          "texture_x": 2,
+          "texture_y": 2,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [

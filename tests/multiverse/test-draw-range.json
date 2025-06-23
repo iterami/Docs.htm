@@ -1,20 +1,20 @@
 {
   "title": "Draw Range Test",
-  "draw-range": 100,
+  "draw_range": 100,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-draw-range",
+      "id": "test_draw_range",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -25,13 +25,13 @@
           ]
         },
         {
-          "id": "entity-0",
-          "attach-x": -40,
-          "attach-y": 2,
-          "attach-z": -40,
+          "id": "entity_0",
+          "attach_x": -40,
+          "attach_y": 2,
+          "attach_z": -40,
           "billboard": true,
           "collision": false,
-          "draw-range": 80,
+          "draw_range": 80,
           "texture": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -41,13 +41,13 @@
           ]
         },
         {
-          "id": "entity-1",
-          "attach-x": 40,
-          "attach-y": 2,
-          "attach-z": -40,
+          "id": "entity_1",
+          "attach_x": 40,
+          "attach_y": 2,
+          "attach_z": -40,
           "billboard": true,
           "collision": false,
-          "draw-range": 60,
+          "draw_range": 60,
           "texture": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -57,13 +57,13 @@
           ]
         },
         {
-          "id": "entity-2",
-          "attach-x": 40,
-          "attach-y": 2,
-          "attach-z": 40,
+          "id": "entity_2",
+          "attach_x": 40,
+          "attach_y": 2,
+          "attach_z": 40,
           "billboard": true,
           "collision": false,
-          "draw-range": 40,
+          "draw_range": 40,
           "texture": "grid.png",
           "vertices": [
             2, 2, 0,
@@ -73,13 +73,13 @@
           ]
         },
         {
-          "id": "entity-3",
-          "attach-x": -40,
-          "attach-y": 2,
-          "attach-z": 40,
+          "id": "entity_3",
+          "attach_x": -40,
+          "attach_y": 2,
+          "attach_z": 40,
           "billboard": true,
           "collision": false,
-          "draw-range": 20,
+          "draw_range": 20,
           "texture": "grid.png",
           "vertices": [
             2, 2, 0,

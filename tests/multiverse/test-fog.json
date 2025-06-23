@@ -1,21 +1,21 @@
 {
   "title": "Fog Test",
-  "fog-end": 80,
-  "fog-start": 40,
+  "fog_end": 80,
+  "fog_start": 40,
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-fog",
+      "id": "test_fog",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 20,
-          "texture-y": 20,
-          "vertex-colors": [
+          "texture_x": 20,
+          "texture_y": 20,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [

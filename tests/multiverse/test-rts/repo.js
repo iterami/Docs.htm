@@ -81,9 +81,9 @@ function handle_picking(event){
 
 function level_properties(){
     return {
-      'camera-zoom': 50,
-      'camera-zoom-max': 100,
-      'camera-zoom-min': 20,
+      'camera_zoom': 50,
+      'camera_zoom_max': 100,
+      'camera_zoom_min': 20,
       'picking': 2,
     };
 }
@@ -95,14 +95,14 @@ function load_testmap(){
         ...level_properties(),
         'characters': [
           {
-            'id': 'rts-testmap',
+            'id': 'rts_testmap',
             'spawn': false,
             'entities': [
               {
                 'id': 'base',
                 'picking': true,
                 'texture': 'lavaleaf.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .2, .8, .2, 1,
                 ],
                 'vertices': [
@@ -113,12 +113,12 @@ function load_testmap(){
                 ],
               },
               {
-                'id': 'wall-n',
-                'attach-y': 10,
-                'attach-z': -50,
-                'rotate-x': 90,
+                'id': 'wall_n',
+                'attach_y': 10,
+                'attach_z': -50,
+                'rotate_x': 90,
                 'texture': 'lavaleaf.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .8, .4, 0, 1,
                 ],
                 'vertices': [
@@ -129,12 +129,12 @@ function load_testmap(){
                 ],
               },
               {
-                'id': 'wall-w',
-                'attach-x': -100,
-                'attach-y': 10,
-                'rotate-z': 270,
+                'id': 'wall_w',
+                'attach_x': -100,
+                'attach_y': 10,
+                'rotate_z': 270,
                 'texture': 'lavaleaf.png',
-                'vertex-colors': [
+                'vertex_colors': [
                   .8, .4, 0, 1,
                 ],
                 'vertices': [
@@ -173,12 +173,12 @@ function make(args){
 
     const id = args.type + entity_id_count;
     webgl_entity_create({
-      'character': 'rts-testmap',
+      'character': 'rts_testmap',
       'entities': [{
-        'attach-to': 'rts-testmap',
-        'attach-x': args.x,
-        'attach-y': args.y,
-        'attach-z': args.z,
+        'attach_to': 'rts_testmap',
+        'attach_x': args.x,
+        'attach_y': args.y,
+        'attach_z': args.z,
         'id': id,
         'picking': true,
         'team': args.team,
@@ -257,7 +257,7 @@ function new_game(){
         core_html({
           'parent': core_elements.build,
           'properties': {
-            'id': 'build-' + id,
+            'id': 'build_' + id,
             'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
                 build({
@@ -268,7 +268,7 @@ function new_game(){
             'style': 'display:none',
             'type': 'button',
           },
-          'store': 'build-' + id,
+          'store': 'build_' + id,
           'type': 'button',
         });
     }
@@ -298,14 +298,14 @@ function repo_init(){
         },
       },
       'events': {
-        'new-game': {
+        'new_game': {
           'onclick': new_game,
         },
       },
       'globals': {
         'tech': {},
       },
-      'info': '<button id=new-game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
+      'info': '<button id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
         + 'Team: <span class=team></span><br>'
         + 'Type: <span class=type></span>',
@@ -386,13 +386,13 @@ function select(id){
     if(character.selected === ''
       || entity_entities[character.selected].team !== character.id){
         for(const id in tech){
-            core_elements['build-' + id].style.display = 'none';
+            core_elements['build_' + id].style.display = 'none';
         }
 
     }else{
         const builds = tech[entity_entities[character.selected].type].builds;
         for(const id in tech){
-            core_elements['build-' + id].style.display = builds.includes(id)
+            core_elements['build_' + id].style.display = builds.includes(id)
               ? 'inline-block'
               : 'none';
         }
@@ -403,12 +403,12 @@ function select(id){
 function stats(){
     return {
       'building': {},
-      'camera-zoom': 50,
+      'camera_zoom': 50,
       'controls': 'rts',
       'level': -1,
       'lock': {
-        'camera-rotate-x': 60,
-        'position-y': 5,
+        'camera_rotate_x': 60,
+        'position_y': 5,
       },
       'selected': '',
       'speed': 2,
@@ -432,9 +432,9 @@ function team_create(args){
       'id': args.id,
       'power': args.power,
       'spawn': {
-        'position-x': args.x,
-        'position-y': args.y,
-        'position-z': args.z,
+        'position_x': args.x,
+        'position_y': args.y,
+        'position_z': args.z,
       },
     });
     make({

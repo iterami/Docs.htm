@@ -1,20 +1,20 @@
 {
   "title": "Primitive Frustum Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-primitive-frustum",
+      "id": "test_primitive_frustum",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -32,40 +32,40 @@
       "type": "webgl_primitive_frustum",
       "properties": {
         "prefix": "frustum",
-        "character": "test-primitive-frustum",
+        "character": "test_primitive_frustum",
         "length": 10,
-        "position-x": -10,
-        "position-y": 5,
-        "size-bottom": 10,
-        "size-top": 5
+        "position_x": -10,
+        "position_y": 5,
+        "size_bottom": 10,
+        "size_top": 5
       }
     },
     {
       "type": "webgl_primitive_frustum",
       "properties": {
-        "prefix": "frustum-inverse",
-        "character": "test-primitive-frustum",
+        "prefix": "frustum_inverse",
+        "character": "test_primitive_frustum",
         "length": -10,
-        "position-x": 10,
-        "position-y": 15,
-        "size-bottom": -10,
-        "size-top": -5
+        "position_x": 10,
+        "position_y": 15,
+        "size_bottom": -10,
+        "size_top": -5
       }
     },
     {
       "type": "webgl_primitive_frustum",
       "properties": {
         "prefix": "pipe",
-        "character": "test-primitive-frustum",
+        "character": "test_primitive_frustum",
         "bottom": false,
-        "color-bottom": [0.1, 0.1, 0.1, 1],
-        "color-top": [0.1, 0.1, 0.1, 1],
+        "color_bottom": [0.1, 0.1, 0.1, 1],
+        "color_top": [0.1, 0.1, 0.1, 1],
         "length": 25,
         "points": 15,
-        "position-y": 5,
-        "position-z": -25,
-        "size-bottom": 2,
-        "size-top": 2,
+        "position_y": 5,
+        "position_z": -25,
+        "size_bottom": 2,
+        "size_top": 2,
         "top": false
       }
     }

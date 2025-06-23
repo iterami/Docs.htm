@@ -1,20 +1,20 @@
 {
   "title": "Lines Tree Prefab Test",
   "spawn": {
-    "position-y": 5,
-    "position-z": 10
+    "position_y": 5,
+    "position_z": 10
   },
   "characters": [
     {
-      "id": "test-lines-tree",
+      "id": "test_lines_tree",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -31,8 +31,8 @@
     {
       "type": "prefabs_webgl_lines_tree",
       "properties": {
-        "character": "test-lines-tree",
-        "prefix": "tree-default"
+        "character": "test_lines_tree",
+        "prefix": "tree_default"
       }
     }
   ]

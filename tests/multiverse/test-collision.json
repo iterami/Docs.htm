@@ -1,19 +1,19 @@
 {
   "title": "Collision Test",
   "spawn": {
-    "position-y": 5
+    "position_y": 5
   },
   "characters": [
     {
-      "id": "test-collision",
+      "id": "test_collision",
       "spawn": false,
       "entities": [
         {
           "id": "base",
           "texture": "grid.png",
-          "texture-x": 10,
-          "texture-y": 10,
-          "vertex-colors": [
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
@@ -24,11 +24,11 @@
           ]
         },
         {
-          "id": "ramp-0",
-          "attach-x": 25,
-          "attach-y": 3,
-          "attach-z": 15,
-          "rotate-x": 315,
+          "id": "ramp_0",
+          "attach_x": 25,
+          "attach_y": 3,
+          "attach_z": 15,
+          "rotate_x": 315,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -37,11 +37,11 @@
           ]
         },
         {
-          "id": "ramp-1",
-          "attach-x": 35,
-          "attach-y": 3,
-          "attach-z": 25,
-          "rotate-z": 315,
+          "id": "ramp_1",
+          "attach_x": 35,
+          "attach_y": 3,
+          "attach_z": 25,
+          "rotate_z": 315,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -50,11 +50,11 @@
           ]
         },
         {
-          "id": "ramp-2",
-          "attach-x": 25,
-          "attach-y": 3,
-          "attach-z": 35,
-          "rotate-x": 45,
+          "id": "ramp_2",
+          "attach_x": 25,
+          "attach_y": 3,
+          "attach_z": 35,
+          "rotate_x": 45,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -63,11 +63,11 @@
           ]
         },
         {
-          "id": "ramp-3",
-          "attach-x": 15,
-          "attach-y": 3,
-          "attach-z": 25,
-          "rotate-z": 45,
+          "id": "ramp_3",
+          "attach_x": 15,
+          "attach_y": 3,
+          "attach_z": 25,
+          "rotate_z": 45,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -76,12 +76,12 @@
           ]
         },
         {
-          "id": "rotated-0",
-          "attach-x": -25,
-          "attach-y": 5,
-          "attach-z": 10,
-          "rotate-x": 90,
-          "rotate-z": 315,
+          "id": "rotated_0",
+          "attach_x": -25,
+          "attach_y": 5,
+          "attach_z": 10,
+          "rotate_x": 90,
+          "rotate_z": 315,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -90,11 +90,11 @@
           ]
         },
         {
-          "id": "rotated-1",
-          "attach-x": -25,
-          "attach-y": 5,
-          "rotate-x": 90,
-          "rotate-z": 225,
+          "id": "rotated_1",
+          "attach_x": -25,
+          "attach_y": 5,
+          "rotate_x": 90,
+          "rotate_z": 225,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -103,11 +103,11 @@
           ]
         },
         {
-          "id": "rotated-2",
-          "attach-x": -35,
-          "attach-y": 5,
-          "rotate-x": 90,
-          "rotate-z": 135,
+          "id": "rotated_2",
+          "attach_x": -35,
+          "attach_y": 5,
+          "rotate_x": 90,
+          "rotate_z": 135,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -116,12 +116,12 @@
           ]
         },
         {
-          "id": "rotated-3",
-          "attach-x": -35,
-          "attach-y": 5,
-          "attach-z": 10,
-          "rotate-x": 90,
-          "rotate-z": 45,
+          "id": "rotated_3",
+          "attach_x": -35,
+          "attach_y": 5,
+          "attach_z": 10,
+          "rotate_x": 90,
+          "rotate_z": 45,
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -136,55 +136,55 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-0",
-        "character": "test-collision",
-        "position-x": 30,
-        "position-y": 5,
-        "position-z": -20,
-        "size-x": 10,
-        "size-y": 10,
-        "size-z": 10
+        "prefix": "cuboid_0",
+        "character": "test_collision",
+        "position_x": 30,
+        "position_y": 5,
+        "position_z": -20,
+        "size_x": 10,
+        "size_y": 10,
+        "size_z": 10
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-1",
-        "character": "test-collision",
-        "position-x": 30,
-        "position-y": 15,
-        "position-z": -30,
-        "size-x": 10,
-        "size-y": 10,
-        "size-z": 10
+        "prefix": "cuboid_1",
+        "character": "test_collision",
+        "position_x": 30,
+        "position_y": 15,
+        "position_z": -30,
+        "size_x": 10,
+        "size_y": 10,
+        "size_z": 10
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-inverted",
-        "character": "test-collision",
-        "position-y": 11,
-        "position-z": -30,
-        "size-x": -20,
-        "size-y": -20,
-        "size-z": -20
+        "prefix": "cuboid_inverted",
+        "character": "test_collision",
+        "position_y": 11,
+        "position_z": -30,
+        "size_x": -20,
+        "size_y": -20,
+        "size_z": -20
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid-ramps",
+        "prefix": "cuboid_ramps",
         "bottom": {
           "exclude": true
         },
-        "character": "test-collision",
-        "position-x": 25,
-        "position-y": 3,
-        "position-z": 25,
-        "size-x": 10,
-        "size-y": 6,
-        "size-z": 10
+        "character": "test_collision",
+        "position_x": 25,
+        "position_y": 3,
+        "position_z": 25,
+        "size_x": 10,
+        "size_y": 6,
+        "size_z": 10
       }
     }
   ]
