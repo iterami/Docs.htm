@@ -34,7 +34,7 @@ function repo_init(){
       'id': 'test_character_0',
       'level': 1,
       'spawn':{
-        'position-x': 23,
+        'position_x': 23,
       },
     });
 
@@ -74,9 +74,9 @@ function repo_init(){
           },
           'expect': function(result){
               const clearcolor = webgl.getParameter(webgl.COLOR_CLEAR_VALUE);
-              return webgl_properties['clear_color'][0] === .1
-                && webgl_properties['clear_color'][1] === .2
-                && webgl_properties['clear_color'][2] === .3
+              return webgl_properties.clear_color[0] === .1
+                && webgl_properties.clear_color[1] === .2
+                && webgl_properties.clear_color[2] === .3
                 && core_float_compare({
                   'a': clearcolor[0],
                   'b': .1,
@@ -108,15 +108,15 @@ function repo_init(){
             'y': 23,
           },
           'expect': function(result){
-              return webgl_characters.test_character_0['position-y'] === 23;
+              return webgl_characters.test_character_0.position_y === 23;
           },
           'function': 'webgl_move_to',
         },
         {
           'args': {
-            'rotate-x': webgl_characters.test_character_0['rotate-x'],
-            'rotate-y': webgl_characters.test_character_0['rotate-y'],
-            'rotate-z': webgl_characters.test_character_0['rotate-z'],
+            'rotate-x': webgl_characters.test_character_0.rotate_x,
+            'rotate-y': webgl_characters.test_character_0.rotate_y,
+            'rotate-z': webgl_characters.test_character_0.rotate_z,
             'vertices-length': 1,
           },
           'expect': [
@@ -145,7 +145,7 @@ function repo_init(){
             'target': webgl_characters.test_character_0,
           },
           'expect': function(result){
-              return webgl_characters.test_character_0.level === -1;
+              return webgl_characters.test_character_0.level === 2;
           },
           'function': 'webgl_stat_modify',
         },
