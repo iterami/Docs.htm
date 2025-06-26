@@ -14,7 +14,7 @@ function choose(choice){
     }
     const path = choicelist[choices][choice];
     if(path.length){
-        webgl_characters[webgl_character_id]['path_id'] = 'path_' + path;
+        webgl_characters[webgl_character_id].path_id = 'path_' + path;
     }
     choices++;
 
