@@ -41,6 +41,14 @@ function repo_init(){
         'contextmenu': {
           'preventDefault': true,
         },
+        'pointermove': {
+          'todo': function(){
+              if(core_pointer.down_0){
+                  camera_x -= core_pointer.movement_x;
+                  camera_y -= core_pointer.movement_y;
+              }
+          },
+        },
       },
       'root': 'index.htm',
       'storage_controls': true,
@@ -51,10 +59,6 @@ function repo_init(){
 }
 
 function repo_logic(){
-    if(core_pointer.down_0){
-        camera_x -= core_pointer.movement_x;
-        camera_y -= core_pointer.movement_y;
-    }
     if(core_keys[core_storage_data.move_down].state){
         camera_y += 10;
     }
