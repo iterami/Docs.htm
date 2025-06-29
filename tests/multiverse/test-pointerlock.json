@@ -1,7 +1,9 @@
 {
   "title": "Pointer Lock Test",
   "camera_zoom_max": 0,
+  "picking": 2,
   "pointerlock": true,
+  "reticle": true,
   "spawn": {
     "position_y": 5
   },
@@ -12,6 +14,13 @@
       "entities": [
         {
           "id": "base",
+          "event_todo": [
+            {
+              "stat": "vertex_colors",
+              "todo": "_self"
+            }
+          ],
+          "picking": true,
           "texture": "grid.png",
           "texture_x": 10,
           "texture_y": 10,

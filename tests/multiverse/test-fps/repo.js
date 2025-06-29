@@ -26,6 +26,7 @@ function level_properties(){
       'camera_zoom': 0,
       'camera_zoom_max': 0,
       'pointerlock': true,
+      'reticle': true,
       'y_min': -100,
     };
 }

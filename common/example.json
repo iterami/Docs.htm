@@ -58,6 +58,7 @@
   "paused": false,
   "picking": 2,
   "pointerlock": false,
+  "reticle": true,
   "spawn": {
     "position_y": 5,
     "position_z": 5
