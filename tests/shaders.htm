@@ -80,8 +80,12 @@ uniform mat4 camera;
 uniform mat4 perspective;
 
 void main(void){
-    color = normalize(perspective
-      * vec4(vertexPosition, 1.0));
+    color = vec4(
+      (normalize(vertexPosition.x) + 1.0) / 2.0,
+      (normalize(vertexPosition.y) + 1.0) / 2.0,
+      (normalize(vertexPosition.z) + 1.0) / 2.0,
+      1
+    );
     gl_Position = perspective * camera
       * vec4(vertexPosition, 1.0);
 }
