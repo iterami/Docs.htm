@@ -12,10 +12,7 @@
   <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_character_id]" is checked.
   <li>If the "cursor" arg is true, then the cursor will be changed to "pointer" when hovering over a pickable entity instead of triggering picking events.
   <li>Triggers optional events on successful pick.
-  <li>Returns:<ul>
-    <li>Returns false if no entity is picked.
-    <li>An object containing the entity and other information about the pick, such as optional xyz position if the entity has "picking_xyz" true.
-  </ul>
+  <li>Returns an object containing the entity and other information about the pick, such as optional xyz position if the entity has "picking_xyz" true.
 </ul>
 <table>
   <tr class=header>
