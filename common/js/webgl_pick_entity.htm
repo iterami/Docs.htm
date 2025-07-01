@@ -11,7 +11,12 @@
   <li>Picking xy is equal to "globalThis.innerWidth / 2" and "globalThis.innerHeight / 2" if "webgl_properties.pointerlock" is true, or otherwise is equal to "core_pointer.x" and "core_pointer.y".
   <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_character_id]" is checked.
   <li>If the "cursor" arg is true, then the cursor will be changed to "pointer" when hovering over a pickable entity instead of triggering picking events.
-  <li>Triggers optional events and returns the entity object if an entity is picked, or returns false is no entity is picked.
+  <li>Triggers optional events on successful pick.
+  <li>Returns:<ul>
+    <li>If the entity has "picking_xyz" true, then an object containing the entity and xyz positions is returned.
+    <li>If the entity has "picking_xyz" false, then the entity is returned.
+    <li>Returns false if no entity is picked.
+  </ul>
 </ul>
 <table>
   <tr class=header>

@@ -157,6 +157,7 @@
           "particle": false,
           "picking": false,
           "picking_range": 0,
+          "picking_xyz": false,
           "point_size": 0,
           "rotate_x": 0,
           "rotate_y": 0,

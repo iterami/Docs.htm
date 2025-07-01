@@ -12,6 +12,8 @@
       "entities": [
         {
           "id": "base",
+          "picking": true,
+          "picking_xyz": true,
           "texture": "grid.png",
           "texture_x": 10,
           "texture_y": 10,
