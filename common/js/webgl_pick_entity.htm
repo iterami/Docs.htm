@@ -13,9 +13,8 @@
   <li>If the "cursor" arg is true, then the cursor will be changed to "pointer" when hovering over a pickable entity instead of triggering picking events.
   <li>Triggers optional events on successful pick.
   <li>Returns:<ul>
-    <li>If the entity has "picking_xyz" true, then an object containing the entity and xyz positions is returned.
-    <li>If the entity has "picking_xyz" false, then the entity is returned.
     <li>Returns false if no entity is picked.
+    <li>An object containing the entity and other information about the pick, such as optional xyz position if the entity has "picking_xyz" true.
   </ul>
 </ul>
 <table>
