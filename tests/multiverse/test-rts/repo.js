@@ -7,30 +7,39 @@ function attack(pick){
 // Required args: id, build
 function build(args){
     const player = webgl_characters[args.id];
-    if(player.building[args.build]){
-        return;
-    }
-
     const cost = tech[args.build].cost;
     if(player.power < cost){
         return;
     }
 
-    const position = webgl_get_position(entity_entities[player.selected]);
+    build_placeholder = '';
+    entity_entities._rts_placeholder_build_entity.draw = false;
+
     player.power -= cost;
-    player.building[args.build] = {
-      'id': args.build,
-      'time': tech[args.build].time,
-      'x': position.x + 20,
-      'y': position.y,
-      'z': position.z,
-    };
+    const id = make({
+      'team': player.id,
+      'type': args.build,
+      'x': webgl_picked_x,
+      'y': webgl_picked_y,
+      'z': webgl_picked_z,
+    })
+    player.building[id] = tech[args.build].time;
+
     update_ui();
 }
 
 function handle_picking(event){
     if(core_key_shift
       || event.target.id !== 'canvas'){
+        return;
+    }
+
+    if(build_placeholder.length > 0
+      && core_pointer.down_0){
+        build({
+          'id': webgl_character_id,
+          'build': build_placeholder,
+        });
         return;
     }
 
@@ -41,14 +50,13 @@ function handle_picking(event){
         return;
     }
 
-    const pick = webgl_pick_entity();
-    if(!pick.entity){
+    const entity = webgl_pick_entity();
+    if(!entity){
         return;
     }
-    const entity = pick.entity;
 
     if(core_pointer.down_0){
-        select(entity.team ? entity.id : '');
+        select((entity.team && !character.building[entity.id]) ? entity.id : '');
 
     }else if(core_pointer.down_1
       && selected.team === character.id){
@@ -152,6 +160,7 @@ function load_testmap(){
               {
                 'id': 'base',
                 'picking': true,
+                'picking_xyz': true,
                 'texture': 'lavaleaf.png',
                 'vertex_colors': [
                   .2, .8, .2, 1,
@@ -217,7 +226,7 @@ function make(args){
       'args': args,
       'defaults': {
         'x': 0,
-        'y': 1,
+        'y': 0,
         'z': 0,
       },
     });
@@ -237,10 +246,14 @@ function make(args){
         ...tech[args.type].properties,
       }],
     });
+    return id;
 }
 
 function move(pick){
-    console.log(webgl_characters[webgl_character_id].selected, 'is moving to', pick.id);
+    console.log(
+      webgl_characters[webgl_character_id].selected, 'is moving to', pick.id,
+      'at', webgl_picked_x, webgl_picked_y, webgl_picked_z
+    );
 }
 
 function new_game(){
@@ -250,6 +263,7 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
+    build_placeholder = '';
     core_object_reset(tech);
     Object.assign(
       tech,
@@ -265,10 +279,10 @@ function new_game(){
           'properties': {
             'texture': 'grid.png',
             'vertices': [
-              4, 0, -4,
-              -4, 0, -4,
-              -4, 0, 4,
-              4, 0, 4,
+              4, 1, -4,
+              -4, 1, -4,
+              -4, 1, 4,
+              4, 1, 4,
             ],
           },
         },
@@ -280,10 +294,10 @@ function new_game(){
           'properties': {
             'texture': 'grid.png',
             'vertices': [
-              10, 0, -10,
-              -10, 0, -10,
-              -10, 0, 10,
-              10, 0, 10,
+              10, 1, -10,
+              -10, 1, -10,
+              -10, 1, 10,
+              10, 1, 10,
             ],
           },
         },
@@ -295,10 +309,10 @@ function new_game(){
           'properties': {
             'texture': 'grid.png',
             'vertices': [
-              5, 0, -5,
-              -5, 0, -5,
-              -5, 0, 5,
-              5, 0, 5,
+              5, 1, -5,
+              -5, 1, -5,
+              -5, 1, 5,
+              5, 1, 5,
             ],
           },
         },
@@ -311,10 +325,7 @@ function new_game(){
             'id': 'build_' + id,
             'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
-                build({
-                  'id': webgl_character_id,
-                  'build': id,
-                });
+                placeholder_update(id);
             },
             'style': 'display:none',
             'type': 'button',
@@ -326,6 +337,20 @@ function new_game(){
 
     load_testmap();
     update_ui();
+}
+
+function placeholder_update(id){
+    build_placeholder = id;
+    const placeholder = entity_entities._rts_placeholder_build_entity;
+    placeholder.draw = true;
+    placeholder.vertices = tech[id].properties.vertices;
+
+    webgl.bindVertexArray(placeholder.vao);
+    webgl_buffer_set({
+      'attribute': webgl_shaders.default.attributes.vertexPosition,
+      'data': placeholder.vertices,
+      'size': 3,
+    });
 }
 
 function rally(pick){
@@ -354,6 +379,7 @@ function repo_init(){
         },
       },
       'globals': {
+        'build_placeholder': '',
         'tech': {},
       },
       'info': '<button id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
@@ -394,6 +420,13 @@ function repo_init(){
 }
 
 function repo_logic(){
+    if(build_placeholder.length){
+        const placeholder = webgl_characters._rts_placeholder_build;
+        placeholder.position_x = webgl_picked_x;
+        placeholder.position_y = webgl_picked_y;
+        placeholder.position_z = webgl_picked_z;
+    }
+
     for(const id in webgl_characters){
         const character = webgl_characters[id];
         if(!character.building){
@@ -401,16 +434,7 @@ function repo_logic(){
         }
 
         for(const building in character.building){
-            const build = character.building[building];
-            build.time--;
-            if(build.time <= 0){
-                make({
-                  'team': character.id,
-                  'type': build.id,
-                  'x': build.x,
-                  'y': build.y,
-                  'z': build.z,
-                });
+            if(character.building[building]-- <= 0){
                 delete character.building[building];
             }
         }
@@ -418,8 +442,8 @@ function repo_logic(){
 
     let progress_ui = '';
     const building = webgl_characters[webgl_character_id].building;
-    for(const progress in building){
-        progress_ui += building[progress].id + ': ' + building[progress].time + '<br>';
+    for(const id in building){
+        progress_ui += id + ': ' + building[id] + '<br>';
     }
     core_ui_update({
       'class': true,
