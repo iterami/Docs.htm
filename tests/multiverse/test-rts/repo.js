@@ -82,6 +82,53 @@ function handle_picking(event){
     }
 }
 
+function level_placeholders(){
+    return [
+      {
+        'id': '_rts_placeholder_build',
+        'spawn': false,
+        'entities': [
+          {
+            'id': '_rts_placeholder_build_entity',
+            'alpha': .5,
+            'collision': false,
+            'draw': false,
+            'vertex_colors': [
+              1, 1, 1, 1,
+            ],
+            'vertices': [
+              1, 1, -1,
+              -1, 1, -1,
+              -1, 1, 1,
+              1, 1, 1,
+            ],
+          },
+        ],
+      },
+      {
+        'id': '_rts_placeholder_move',
+        'spawn': false,
+        'entities': [
+          {
+            'id': '_rts_placeholder_move_entity',
+            'alpha': .5,
+            'collision': false,
+            'draw': false,
+            'vertex_colors': [
+              1, 1, 1, 1,
+            ],
+            'vertices': [
+              1, 1, -1,
+              -1, 1, -1,
+              -1, 1, 1,
+              1, 1, 1,
+            ],
+          },
+        ],
+      },
+    ];
+}
+
 function level_properties(){
     return {
       'camera_zoom': 50,
@@ -97,6 +144,7 @@ function load_testmap(){
       'json': {
         ...level_properties(),
         'characters': [
+          ...level_placeholders(),
           {
             'id': 'rts_testmap',
             'spawn': false,
