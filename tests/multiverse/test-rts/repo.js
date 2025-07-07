@@ -1,7 +1,7 @@
 'use strict';
 
 function attack(pick){
-    console.log('Attacking', pick.id, 'with', webgl_characters[webgl_character_id].selected);
+    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', pick.id);
 }
 
 // Required args: id, build
@@ -42,39 +42,42 @@ function handle_picking(event){
     }
 
     const pick = webgl_pick_entity();
-    const team = pick?.team;
-    if(core_pointer.down_0){
-        select((pick && team) ? pick.id : '');
+    if(!pick.entity){
+        return;
+    }
+    const entity = pick.entity;
 
-    }else if(pick
-      && core_pointer.down_1
+    if(core_pointer.down_0){
+        select(entity.team ? entity.id : '');
+
+    }else if(core_pointer.down_1
       && selected.team === character.id){
         const properties = tech[selected.type];
-        if(!team){
+        if(!entity.team){
             if(properties.type === 'unit'){
-                move(pick);
+                move(entity);
 
             }else if(properties.builds.length){
-                rally(pick);
+                rally(entity);
             }
 
             return;
         }
 
-        const owned = team && team === character.id;
+        const owned = entity.team === character.id;
         if(properties.type === 'unit'){
             if(owned){
-                move(pick);
+                move(entity);
 
             }else{
-                attack(pick);
+                attack(entity);
             }
 
         }else if(properties.builds.length){
-            rally(pick);
+            rally(entity);
 
         }else if(!owned){
-            attack(pick);
+            attack(entity);
         }
     }
 }
@@ -189,7 +192,7 @@ function make(args){
 }
 
 function move(pick){
-    console.log('Moving', webgl_characters[webgl_character_id].selected, 'to', pick.id);
+    console.log(webgl_characters[webgl_character_id].selected, 'is moving to', pick.id);
 }
 
 function new_game(){
@@ -278,7 +281,7 @@ function new_game(){
 }
 
 function rally(pick){
-    console.log('Set rally of', webgl_characters[webgl_character_id].selected, 'to', pick.id);
+    console.log(webgl_characters[webgl_character_id].selected, 'rally point set to', pick.id);
 }
 
 function repo_escape(){
