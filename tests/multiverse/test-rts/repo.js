@@ -343,6 +343,9 @@ function placeholder_update(id){
     build_placeholder = id;
     const placeholder = entity_entities._rts_placeholder_build_entity;
     placeholder.draw = true;
+    placeholder.position_x = webgl_picked_x;
+    placeholder.position_y = webgl_picked_y;
+    placeholder.position_z = webgl_picked_z;
     placeholder.vertices = tech[id].properties.vertices;
 
     webgl.bindVertexArray(placeholder.vao);
