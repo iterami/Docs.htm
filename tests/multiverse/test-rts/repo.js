@@ -7,23 +7,33 @@ function attack(pick){
 // Required args: id, build
 function build(args){
     const player = webgl_characters[args.id];
-    const cost = tech[args.build].cost;
-    if(player.power < cost){
+    const properties = tech[args.build];
+    if(player.power < properties.cost){
         return;
     }
 
     build_placeholder = '';
     entity_entities._rts_placeholder_build_entity.draw = false;
 
-    player.power -= cost;
+    let x = webgl_picked_x;
+    let y = webgl_picked_y;
+    let z = webgl_picked_z;
+    if(properties.type === 'unit'){
+        const selected = entity_entities[player.selected];
+        x = selected.attach_x;
+        y = selected.attach_y;
+        z = selected.attach_z;
+    }
+
+    player.power -= properties.cost;
     const id = make({
       'team': player.id,
       'type': args.build,
-      'x': webgl_picked_x,
-      'y': webgl_picked_y,
-      'z': webgl_picked_z,
+      'x': x,
+      'y': y,
+      'z': z,
     })
-    player.building[id] = tech[args.build].time;
+    player.building[id] = properties.time;
 
     update_ui();
 }
@@ -43,8 +53,8 @@ function handle_picking(event){
         return;
     }
 
-    const character = webgl_characters[webgl_character_id];
-    const selected = entity_entities[character.selected];
+    const player = webgl_characters[webgl_character_id];
+    const selected = entity_entities[player.selected];
     if(core_pointer.down_1
       && !selected){
         return;
@@ -56,10 +66,10 @@ function handle_picking(event){
     }
 
     if(core_pointer.down_0){
-        select((entity.team && !character.building[entity.id]) ? entity.id : '');
+        select((entity.team && !player.building[entity.id]) ? entity.id : '');
 
     }else if(core_pointer.down_1
-      && selected.team === character.id){
+      && selected.team === player.id){
         const properties = tech[selected.type];
         if(!entity.team){
             if(properties.type === 'unit'){
@@ -72,7 +82,7 @@ function handle_picking(event){
             return;
         }
 
-        const owned = entity.team === character.id;
+        const owned = entity.team === player.id;
         if(properties.type === 'unit'){
             if(owned){
                 move(entity);
@@ -325,7 +335,15 @@ function new_game(){
             'id': 'build_' + id,
             'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
-                placeholder_update(id);
+                if(tech[id].type === 'building'){
+                    placeholder_update(id);
+
+                }else{
+                    build({
+                      'id': webgl_character_id,
+                      'build': id,
+                    });
+                }
             },
             'style': 'display:none',
             'type': 'button',
@@ -432,14 +450,14 @@ function repo_logic(){
     }
 
     for(const id in webgl_characters){
-        const character = webgl_characters[id];
-        if(!character.building){
+        const player = webgl_characters[id];
+        if(!player.building){
             continue;
         }
 
-        for(const building in character.building){
-            if(character.building[building]-- <= 0){
-                delete character.building[building];
+        for(const building in player.building){
+            if(player.building[building]-- <= 0){
+                delete player.building[building];
             }
         }
     }
@@ -459,17 +477,17 @@ function repo_logic(){
 }
 
 function select(id){
-    const character = webgl_characters[webgl_character_id];
-    character.selected = id;
+    const player = webgl_characters[webgl_character_id];
+    player.selected = id;
 
-    if(character.selected === ''
-      || entity_entities[character.selected].team !== character.id){
+    if(player.selected === ''
+      || entity_entities[player.selected].team !== player.id){
         for(const id in tech){
             core_elements['build_' + id].style.display = 'none';
         }
 
     }else{
-        const builds = tech[entity_entities[character.selected].type].builds;
+        const builds = tech[entity_entities[player.selected].type].builds;
         for(const id in tech){
             core_elements['build_' + id].style.display = builds.includes(id)
               ? 'inline-block'
@@ -526,13 +544,13 @@ function team_create(args){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_character_id];
-    const selected = entity_entities[character.selected];
+    const player = webgl_characters[webgl_character_id];
+    const selected = entity_entities[player.selected];
     core_ui_update({
       'class': true,
       'ids': {
-        'power': character.power,
-        'selected': character.selected,
+        'power': player.power,
+        'selected': player.selected,
         'team': selected?.team,
         'type': selected?.type,
       },
