@@ -1,7 +1,7 @@
 'use strict';
 
-function attack(pick){
-    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', pick.id);
+function attack(entity){
+    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', entity.id);
 }
 
 // Required args: id, build
@@ -73,7 +73,7 @@ function handle_picking(event){
         if(!entity.team){
             if(properties.type === 'unit'
               || properties.builds.length){
-                move(entity);
+                move(selected);
             }
 
             return;
@@ -83,7 +83,7 @@ function handle_picking(event){
         if(properties.type === 'unit'
           || properties.builds.length){
             if(owned){
-                move(entity);
+                move(selected);
 
             }else{
                 attack(entity);
@@ -131,10 +131,10 @@ function level_placeholders(){
               1, 1, 1, 1,
             ],
             'vertices': [
-              0, 0, 0,
-              0, 0, 0,
-              0, 0, 0,
-              0, 0, 0,
+              2, 3, -2,
+              -2, 3, -2,
+              -2, 3, 2,
+              2, 3, 2,
             ],
           },
         ],
@@ -257,8 +257,7 @@ function make(args){
     return id;
 }
 
-function move(pick){
-    const entity = entity_entities[webgl_characters[webgl_character_id].selected];
+function move(entity){
     entity.destination_x = webgl_picked_x;
     entity.destination_y = webgl_picked_y;
     entity.destination_z = webgl_picked_z;
@@ -370,9 +369,6 @@ function placeholder_hide(){
 
 function placeholder_show(id){
     const placeholder = entity_entities._rts_placeholder_build_entity;
-    placeholder.position_x = webgl_picked_x;
-    placeholder.position_y = webgl_picked_y;
-    placeholder.position_z = webgl_picked_z;
     placeholder.vertices = tech[id].properties.vertices;
 
     webgl.bindVertexArray(placeholder.vao);
@@ -449,13 +445,6 @@ function repo_init(){
 }
 
 function repo_logic(){
-    if(build_placeholder.length){
-        const placeholder = webgl_characters._rts_placeholder_build;
-        placeholder.position_x = webgl_picked_x;
-        placeholder.position_y = webgl_picked_y;
-        placeholder.position_z = webgl_picked_z;
-    }
-
     for(const id in webgl_characters){
         const player = webgl_characters[id];
         if(!player.building){
@@ -469,8 +458,26 @@ function repo_logic(){
         }
     }
 
+    const player = webgl_characters[webgl_character_id];
+    if(player.selected){
+        const placeholder = webgl_characters._rts_placeholder_move;
+        const selected = entity_entities[player.selected];
+        placeholder.position_x = selected.destination_x;
+        placeholder.position_y = selected.destination_y;
+        placeholder.position_z = selected.destination_z;
+        entity_entities._rts_placeholder_move_entity.draw = Math.abs(selected.attach_x - selected.destination_x) > 1
+          || Math.abs(selected.attach_y - selected.destination_y) > 1
+          || Math.abs(selected.attach_z - selected.destination_z) > 1;
+    }
+    if(build_placeholder.length){
+        const placeholder = webgl_characters._rts_placeholder_build;
+        placeholder.position_x = webgl_picked_x;
+        placeholder.position_y = webgl_picked_y;
+        placeholder.position_z = webgl_picked_z;
+    }
+
     let progress_ui = '';
-    const building = webgl_characters[webgl_character_id].building;
+    const building = player.building;
     for(const id in building){
         progress_ui += id + ': ' + building[id] + '<br>';
     }
@@ -512,6 +519,7 @@ function select(id){
 
     if(player.selected === ''
       || entity_entities[player.selected].team !== player.id){
+        entity_entities._rts_placeholder_move_entity.draw = false;
         for(const id in tech){
             core_elements['build_' + id].style.display = 'none';
         }
