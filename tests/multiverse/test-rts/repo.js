@@ -105,10 +105,10 @@ function level_placeholders(){
               1, 1, 1, 1,
             ],
             'vertices': [
-              1, 1, -1,
-              -1, 1, -1,
-              -1, 1, 1,
-              1, 1, 1,
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0,
             ],
           },
         ],
@@ -126,10 +126,10 @@ function level_placeholders(){
               1, 1, 1, 1,
             ],
             'vertices': [
-              1, 1, -1,
-              -1, 1, -1,
-              -1, 1, 1,
-              1, 1, 1,
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0,
             ],
           },
         ],
@@ -294,10 +294,10 @@ function new_game(){
           'properties': {
             'texture': 'grid.png',
             'vertices': [
-              10, 1, -10,
-              -10, 1, -10,
-              -10, 1, 10,
-              10, 1, 10,
+              10, .01, -10,
+              -10, .01, -10,
+              -10, .01, 10,
+              10, .01, 10,
             ],
           },
         },
@@ -309,10 +309,10 @@ function new_game(){
           'properties': {
             'texture': 'grid.png',
             'vertices': [
-              5, 1, -5,
-              -5, 1, -5,
-              -5, 1, 5,
-              5, 1, 5,
+              5, .01, -5,
+              -5, .01, -5,
+              -5, .01, 5,
+              5, .01, 5,
             ],
           },
         },
@@ -340,9 +340,7 @@ function new_game(){
 }
 
 function placeholder_update(id){
-    build_placeholder = id;
     const placeholder = entity_entities._rts_placeholder_build_entity;
-    placeholder.draw = true;
     placeholder.position_x = webgl_picked_x;
     placeholder.position_y = webgl_picked_y;
     placeholder.position_z = webgl_picked_z;
@@ -354,6 +352,9 @@ function placeholder_update(id){
       'data': placeholder.vertices,
       'size': 3,
     });
+
+    build_placeholder = id;
+    placeholder.draw = true;
 }
 
 function rally(pick){
