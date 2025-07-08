@@ -12,8 +12,7 @@ function build(args){
         return;
     }
 
-    build_placeholder = '';
-    entity_entities._rts_placeholder_build_entity.draw = false;
+    placeholder_hide();
 
     let x = webgl_picked_x;
     let y = webgl_picked_y;
@@ -273,7 +272,7 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
-    build_placeholder = '';
+    placeholder_hide();
     core_object_reset(tech);
     Object.assign(
       tech,
@@ -329,6 +328,11 @@ function new_game(){
       }
     );
     core_elements.build.textContent = '';
+    for(const element in core_elements){
+        if(element.startsWith('build_')){
+            delete core_elements[element];
+        }
+    }
     for(const id in tech){
         core_html({
           'parent': core_elements.build,
@@ -336,14 +340,17 @@ function new_game(){
             'id': 'build_' + id,
             'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
-                if(tech[id].type === 'building'){
-                    placeholder_update(id);
-
-                }else{
+                if(tech[id].type === 'unit'){
                     build({
                       'id': webgl_character_id,
                       'build': id,
                     });
+
+                }else if(build_placeholder.length){
+                    placeholder_hide();
+
+                }else{
+                    placeholder_show(id);
                 }
             },
             'style': 'display:none',
@@ -358,7 +365,15 @@ function new_game(){
     update_ui();
 }
 
-function placeholder_update(id){
+function placeholder_hide(){
+    build_placeholder = '';
+    const placeholder = entity_entities._rts_placeholder_build_entity;
+    if(placeholder){
+        placeholder.draw = false;
+    }
+}
+
+function placeholder_show(id){
     const placeholder = entity_entities._rts_placeholder_build_entity;
     placeholder.position_x = webgl_picked_x;
     placeholder.position_y = webgl_picked_y;
