@@ -248,6 +248,9 @@ function make(args){
         'attach_x': args.x,
         'attach_y': args.y,
         'attach_z': args.z,
+        'destination_x': args.x,
+        'destination_y': args.y,
+        'destination_z': args.z,
         'id': id,
         'picking': true,
         'team': args.team,
@@ -259,10 +262,10 @@ function make(args){
 }
 
 function move(pick){
-    console.log(
-      webgl_characters[webgl_character_id].selected, 'is moving to', pick.id,
-      'at', webgl_picked_x, webgl_picked_y, webgl_picked_z
-    );
+    const entity = entity_entities[webgl_characters[webgl_character_id].selected];
+    entity.destination_x = webgl_picked_x;
+    entity.destination_y = webgl_picked_y;
+    entity.destination_z = webgl_picked_z;
 }
 
 function new_game(){
@@ -328,12 +331,8 @@ function new_game(){
       }
     );
     core_elements.build.textContent = '';
-    for(const element in core_elements){
-        if(element.startsWith('build_')){
-            delete core_elements[element];
-        }
-    }
     for(const id in tech){
+        delete core_elements['build_' + id];
         core_html({
           'parent': core_elements.build,
           'properties': {
@@ -490,6 +489,28 @@ function repo_logic(){
       },
       'todo': 'innerHTML',
     });
+
+    for(const id in entity_entities){
+        const entity = entity_entities[id];
+        if(!entity.team){
+            continue;
+        }
+
+        if(Math.abs(entity.attach_x - entity.destination_x) > 1
+          || Math.abs(entity.attach_y - entity.destination_y) > 1
+          || Math.abs(entity.attach_z - entity.destination_z) > 1){
+            const angle_xz = Math.atan2(
+              entity.attach_z - entity.destination_z,
+              entity.attach_x - entity.destination_x
+            );
+            entity.attach_x -= core_round({
+              'number': Math.cos(angle_xz),
+            });
+            entity.attach_z -= core_round({
+              'number': Math.sin(angle_xz),
+            });
+        }
+    }
 }
 
 function select(id){
@@ -513,21 +534,6 @@ function select(id){
     update_ui();
 }
 
-function stats(){
-    return {
-      'building': {},
-      'camera_zoom': 50,
-      'controls': 'rts',
-      'level': -1,
-      'lock': {
-        'camera_rotate_x': 60,
-        'position_y': 5,
-      },
-      'selected': '',
-      'speed': 2,
-    };
-}
-
 function team_create(args){
     args = core_args({
       'args': args,
@@ -541,14 +547,23 @@ function team_create(args){
     });
 
     webgl_character_init({
-      ...stats(),
+      'building': {},
+      'camera_zoom': 50,
+      'controls': 'rts',
       'id': args.id,
+      'level': -1,
+      'lock': {
+        'camera_rotate_x': 60,
+        'position_y': 5,
+      },
       'power': args.power,
+      'selected': '',
       'spawn': {
         'position_x': args.x,
         'position_y': args.y,
         'position_z': args.z,
       },
+      'speed': 2,
     });
     make({
       'team': args.id,
