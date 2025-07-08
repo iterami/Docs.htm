@@ -71,27 +71,23 @@ function handle_picking(event){
       && selected.team === player.id){
         const properties = tech[selected.type];
         if(!entity.team){
-            if(properties.type === 'unit'){
+            if(properties.type === 'unit'
+              || properties.builds.length){
                 move(entity);
-
-            }else if(properties.builds.length){
-                rally(entity);
             }
 
             return;
         }
 
         const owned = entity.team === player.id;
-        if(properties.type === 'unit'){
+        if(properties.type === 'unit'
+          || properties.builds.length){
             if(owned){
                 move(entity);
 
             }else{
                 attack(entity);
             }
-
-        }else if(properties.builds.length){
-            rally(entity);
 
         }else if(!owned){
             attack(entity);
@@ -390,10 +386,6 @@ function placeholder_show(id){
     placeholder.draw = true;
 }
 
-function rally(pick){
-    console.log(webgl_characters[webgl_character_id].selected, 'rally point set to', pick.id);
-}
-
 function repo_escape(){
     if(webgl === 0
       && !core_menu_open){
@@ -492,7 +484,8 @@ function repo_logic(){
 
     for(const id in entity_entities){
         const entity = entity_entities[id];
-        if(!entity.team){
+        if(!entity.team
+          || tech[entity.type].type !== 'unit'){
             continue;
         }
 
