@@ -236,6 +236,17 @@ function make(args){
       },
     });
 
+    let destination_x = args.x;
+    let destination_y = args.y;
+    let destination_z = args.z;
+    if(webgl_characters[args.team].selected
+      && tech[args.type].type === 'unit'){
+        const selected = entity_entities[webgl_characters[args.team].selected];
+        destination_x = selected.destination_x;
+        destination_y = selected.destination_y;
+        destination_z = selected.destination_z;
+    }
+
     const id = args.type + entity_id_count;
     webgl_entity_create({
       'character': 'rts_testmap',
@@ -244,9 +255,9 @@ function make(args){
         'attach_x': args.x,
         'attach_y': args.y,
         'attach_z': args.z,
-        'destination_x': args.x,
-        'destination_y': args.y,
-        'destination_z': args.z,
+        'destination_x': destination_x,
+        'destination_y': destination_y,
+        'destination_z': destination_z,
         'id': id,
         'picking': true,
         'team': args.team,
@@ -492,6 +503,7 @@ function repo_logic(){
     for(const id in entity_entities){
         const entity = entity_entities[id];
         if(!entity.team
+          || webgl_characters[entity.team].building[id]
           || tech[entity.type].type !== 'unit'){
             continue;
         }
