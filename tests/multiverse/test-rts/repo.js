@@ -328,6 +328,7 @@ function new_game(){
         },
       }
     );
+    core_elements.build.textContent = '';
     for(const id in tech){
         core_html({
           'parent': core_elements.build,
