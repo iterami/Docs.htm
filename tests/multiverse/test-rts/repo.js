@@ -43,13 +43,18 @@ function handle_picking(event){
         return;
     }
 
-    if(build_placeholder.length > 0
-      && core_pointer.down_0){
-        build({
-          'id': webgl_character_id,
-          'build': build_placeholder,
-        });
-        return;
+    if(build_placeholder.length > 0){
+        if(core_pointer.down_0){
+            build({
+              'id': webgl_character_id,
+              'build': build_placeholder,
+            });
+            return;
+
+        }else if(core_pointer.down_1){
+            placeholder_hide();
+            return;
+        }
     }
 
     const player = webgl_characters[webgl_character_id];
@@ -220,7 +225,7 @@ function load_testmap(){
       'x': -75,
     });
     team_create({
-      'id': 'enemy',
+      'id': 'Enemy',
       'x': 75,
     });
 }
@@ -351,7 +356,7 @@ function new_game(){
                       'build': id,
                     });
 
-                }else if(build_placeholder.length){
+                }else if(build_placeholder === id){
                     placeholder_hide();
 
                 }else{
