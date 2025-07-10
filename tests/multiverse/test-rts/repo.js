@@ -136,10 +136,10 @@ function level_placeholders(){
               1, 1, 1, 1,
             ],
             'vertices': [
-              2, 2, -2,
-              -2, 2, -2,
-              -2, 2, 2,
-              2, 2, 2,
+              2, .1, -2,
+              -2, .1, -2,
+              -2, .1, 2,
+              2, .1, 2,
             ],
           },
         ],
@@ -591,7 +591,7 @@ function team_create(args){
         'id': webgl_character_id,
         'power': 0,
         'x': 0,
-        'y': 1,
+        'y': 0,
         'z': 0,
       },
     });
