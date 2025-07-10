@@ -220,13 +220,25 @@ function load_testmap(){
       },
     });
 
-    team_create({
+    const spawns = [
+      {
+        'x': -75,
+      },
+      {
+        'x': 75,
+      },
+    ];
+    const spawn_properties = {
       'power': 10000,
-      'x': -75,
+    };
+    team_create({
+      ...spawn_properties,
+      ...core_random_splice(spawns),
     });
     team_create({
       'id': 'Enemy',
-      'x': 75,
+      ...spawn_properties,
+      ...core_random_splice(spawns),
     });
 }
 
