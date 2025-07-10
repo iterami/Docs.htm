@@ -298,24 +298,28 @@ function new_game(){
             'Turret',
           ],
           'cost': 100,
+          'life': 100,
           'time': 100,
           'type': 'unit',
           'properties': {
+            'life': 100,
             'texture': 'grid.png',
             'vertices': [
-              4, 1, -4,
-              -4, 1, -4,
-              -4, 1, 4,
-              4, 1, 4,
+              4, .03, -4,
+              -4, .03, -4,
+              -4, .03, 4,
+              4, .03, 4,
             ],
           },
         },
         'Factory': {
           'builds': ['Builder'],
           'cost': 1000,
+          'life': 1000,
           'time': 200,
           'type': 'building',
           'properties': {
+            'life': 1000,
             'texture': 'grid.png',
             'vertices': [
               10, .01, -10,
@@ -328,15 +332,17 @@ function new_game(){
         'Turret': {
           'builds': [],
           'cost': 250,
+          'life': 500,
           'time': 150,
           'type': 'building',
           'properties': {
+            'life': 500,
             'texture': 'grid.png',
             'vertices': [
-              5, .01, -5,
-              -5, .01, -5,
-              -5, .01, 5,
-              5, .01, 5,
+              5, .02, -5,
+              -5, .02, -5,
+              -5, .02, 5,
+              5, .02, 5,
             ],
           },
         },
@@ -354,7 +360,7 @@ function new_game(){
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
-            'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
+            'innerHTML': id + '<br>Cost: ' + tech[id].cost + '<br>Time: ' + tech[id].time,
             'onclick': function(){
                 if(tech[id].type === 'unit'){
                     build({
@@ -431,6 +437,7 @@ function repo_init(){
       },
       'info': '<button id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
+        + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Team: <span class=team></span><br>'
         + 'Type: <span class=type></span>',
       'menu': true,
@@ -455,6 +462,7 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'
+        + 'Life: <span id=life></span>/<span id=life_max></span><br>'
         + 'Team: <span id=team></span><br>'
         + 'Type: <span id=type></span>'
         + '<div id=build></div>'
@@ -603,14 +611,24 @@ function team_create(args){
 
 function update_ui(){
     const player = webgl_characters[webgl_character_id];
-    const selected = entity_entities[player.selected];
     core_ui_update({
       'class': true,
       'ids': {
         'power': player.power,
         'selected': player.selected,
-        'team': selected?.team,
-        'type': selected?.type,
+      },
+    });
+    const selected = entity_entities[player.selected];
+    if(!selected){
+        return;
+    }
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'life': selected.life,
+        'life_max': tech[selected.type].life,
+        'team': selected.team,
+        'type': selected.type,
       },
     });
 }
