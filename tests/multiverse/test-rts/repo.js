@@ -43,18 +43,18 @@ function handle_picking(event){
         return;
     }
 
-    if(build_placeholder.length > 0){
+    if(build_placeholder.length){
         if(core_pointer.down_0){
             build({
               'id': webgl_character_id,
               'build': build_placeholder,
             });
-            return;
 
         }else if(core_pointer.down_1){
             placeholder_hide();
-            return;
         }
+
+        return;
     }
 
     const player = webgl_characters[webgl_character_id];
@@ -241,12 +241,13 @@ function make(args){
       },
     });
 
+    const player = webgl_characters[args.team];
     let destination_x = args.x;
     let destination_y = args.y;
     let destination_z = args.z;
-    if(webgl_characters[args.team].selected
+    if(player.selected
       && tech[args.type].type === 'unit'){
-        const selected = entity_entities[webgl_characters[args.team].selected];
+        const selected = entity_entities[player.selected];
         destination_x = selected.destination_x;
         destination_y = selected.destination_y;
         destination_z = selected.destination_z;
@@ -256,7 +257,6 @@ function make(args){
     webgl_entity_create({
       'character': 'rts_testmap',
       'entities': [{
-        'attach_to': 'rts_testmap',
         'attach_x': args.x,
         'attach_y': args.y,
         'attach_z': args.z,
@@ -267,6 +267,7 @@ function make(args){
         'picking': true,
         'team': args.team,
         'type': args.type,
+        'vertex_colors': player.color,
         ...tech[args.type].properties,
       }],
     });
@@ -341,13 +342,18 @@ function new_game(){
         },
       }
     );
+    for(const element in core_elements){
+        if(element.startsWith('build_')){
+            delete core_elements[element];
+        }
+    }
     core_elements.build.textContent = '';
     for(const id in tech){
-        delete core_elements['build_' + id];
+        const prefixed = 'build_' + id;
         core_html({
           'parent': core_elements.build,
           'properties': {
-            'id': 'build_' + id,
+            'id': prefixed,
             'innerHTML': id + '<br>' + tech[id].cost + ', ' + tech[id].time,
             'onclick': function(){
                 if(tech[id].type === 'unit'){
@@ -366,7 +372,7 @@ function new_game(){
             'style': 'display:none',
             'type': 'button',
           },
-          'store': 'build_' + id,
+          'store': prefixed,
           'type': 'button',
         });
     }
@@ -567,6 +573,9 @@ function team_create(args){
     webgl_character_init({
       'building': {},
       'camera_zoom': 50,
+      'color':  webgl_vertexcolorarray({
+        'vertexcount': 1,
+      }),
       'controls': 'rts',
       'id': args.id,
       'level': -1,
