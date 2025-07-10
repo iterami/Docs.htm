@@ -299,6 +299,7 @@ function new_game(){
           ],
           'cost': 100,
           'life': 100,
+          'speed': 1,
           'time': 100,
           'type': 'unit',
           'properties': {
@@ -316,6 +317,7 @@ function new_game(){
           'builds': ['Builder'],
           'cost': 1000,
           'life': 1000,
+          'speed': 0,
           'time': 200,
           'type': 'building',
           'properties': {
@@ -333,6 +335,7 @@ function new_game(){
           'builds': [],
           'cost': 250,
           'life': 500,
+          'speed': 0,
           'time': 150,
           'type': 'building',
           'properties': {
@@ -438,6 +441,7 @@ function repo_init(){
       'info': '<button id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
+        + 'Speed: <span class=speed></span><br>'
         + 'Team: <span class=team></span><br>'
         + 'Type: <span class=type></span>',
       'menu': true,
@@ -463,6 +467,7 @@ function repo_init(){
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'
         + 'Life: <span id=life></span>/<span id=life_max></span><br>'
+        + 'Speed: <span id=speed></span><br>'
         + 'Team: <span id=team></span><br>'
         + 'Type: <span id=type></span>'
         + '<div id=build></div>'
@@ -530,15 +535,16 @@ function repo_logic(){
         if(Math.abs(entity.attach_x - entity.destination_x) > 1
           || Math.abs(entity.attach_y - entity.destination_y) > 1
           || Math.abs(entity.attach_z - entity.destination_z) > 1){
+            const speed = tech[entity.type].speed;
             const angle_xz = Math.atan2(
               entity.attach_z - entity.destination_z,
               entity.attach_x - entity.destination_x
             );
             entity.attach_x -= core_round({
-              'number': Math.cos(angle_xz),
+              'number': Math.cos(angle_xz) * speed,
             });
             entity.attach_z -= core_round({
-              'number': Math.sin(angle_xz),
+              'number': Math.sin(angle_xz) * speed,
             });
         }
     }
@@ -611,24 +617,17 @@ function team_create(args){
 
 function update_ui(){
     const player = webgl_characters[webgl_character_id];
+    const selected = entity_entities[player.selected];
     core_ui_update({
       'class': true,
       'ids': {
+        'life': selected?.life,
+        'life_max': tech[selected?.type]?.life,
         'power': player.power,
         'selected': player.selected,
-      },
-    });
-    const selected = entity_entities[player.selected];
-    if(!selected){
-        return;
-    }
-    core_ui_update({
-      'class': true,
-      'ids': {
-        'life': selected.life,
-        'life_max': tech[selected.type].life,
-        'team': selected.team,
-        'type': selected.type,
+        'speed': tech[selected?.type]?.speed,
+        'team': selected?.team,
+        'type': selected?.type,
       },
     });
 }
