@@ -125,7 +125,7 @@
         {
           "id": "example_entity_0",
           "alpha": 1,
-          "attach_to": false,
+          "attach_to": "_me",
           "attach_type": "entity_entities",
           "attach_x": 0,
           "attach_y": -2,
