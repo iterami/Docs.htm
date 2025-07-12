@@ -111,6 +111,7 @@ function level_placeholders(){
             'alpha': .5,
             'collision': false,
             'draw': false,
+            'picking_exclude': true,
             'vertex_colors': [
               1, 1, 1, 1,
             ],
@@ -132,6 +133,7 @@ function level_placeholders(){
             'alpha': .5,
             'collision': false,
             'draw': false,
+            'picking_exclude': true,
             'vertex_colors': [
               1, 1, 1, 1,
             ],

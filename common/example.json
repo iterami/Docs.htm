@@ -156,6 +156,7 @@
           "light_range": 0,
           "particle": false,
           "picking": false,
+          "picking_exclude": false,
           "picking_range": 0,
           "picking_xyz": false,
           "point_size": 0,

@@ -7,5 +7,6 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_draw()
 <ul>
   <li>No args.
-  <li>Sets up matricies, sets up the camera, and draws all created entities in specific order.
+  <li>First draws all "skybox" entities while depth testing is disabled, then draws all "opaque" and "transparent" entities normally.
+  <li>To draw only entities without "picking_exclude" true, use <a href=webgl_draw_picking.htm>webgl_draw_picking()</a>.
 </ul>

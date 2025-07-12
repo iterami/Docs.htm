@@ -296,7 +296,7 @@
           // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
           "alpha": 1,
 
-          // Required. ID of character or entity that this entity is attached to.
+          // Optional. ID of character or entity that this entity is attached to.
           "attach_to": '_me',
 
           // Optional. Variable that contains what this entity is attached to.
@@ -378,6 +378,9 @@
           // Optional. If this entity can be selected via picking.
           // If true, an RGB array will be generated based upon the current entity_id_count and replace this property.
           "picking": false,
+
+          // Optional. If this entity should be excluded and not drawn during picking.
+          "picking_exclude": false,
 
           // Optional. Maximum range between the entity and character within which picking can occur.
           // If 0, picking range is unlimited.
