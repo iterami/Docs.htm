@@ -4,11 +4,16 @@ function attack(entity){
     console.log(webgl_characters[webgl_character_id].selected, 'is attacking', entity.id);
 }
 
-// Required args: id, build
+// Required args: build, id, placeholder
 function build(args){
     const player = webgl_characters[args.id];
     const properties = tech[args.build];
-    if(player.power < properties.cost){
+    if(player.power < properties.power){
+        return;
+    }
+
+    if(args.placeholder === true){
+        placeholder_show(args.build);
         return;
     }
 
@@ -24,7 +29,7 @@ function build(args){
         z = selected.attach_z;
     }
 
-    player.power -= properties.cost;
+    player.power -= properties.power;
     const id = make({
       'team': player.id,
       'type': args.build,
@@ -311,8 +316,8 @@ function new_game(){
             'Factory',
             'Turret',
           ],
-          'cost': 100,
           'life': 100,
+          'power': 100,
           'speed': 1,
           'time': 100,
           'type': 'unit',
@@ -329,8 +334,8 @@ function new_game(){
         },
         'Factory': {
           'builds': ['Builder'],
-          'cost': 1000,
           'life': 1000,
+          'power': 1000,
           'speed': 0,
           'time': 200,
           'type': 'building',
@@ -347,8 +352,8 @@ function new_game(){
         },
         'Turret': {
           'builds': [],
-          'cost': 250,
           'life': 500,
+          'power': 250,
           'speed': 0,
           'time': 150,
           'type': 'building',
@@ -377,20 +382,18 @@ function new_game(){
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
-            'innerHTML': id + '<br>Cost: ' + tech[id].cost + '<br>Time: ' + tech[id].time,
+            'innerHTML': id + '<br>Power: ' + tech[id].power + '<br>Time: ' + tech[id].time,
             'onclick': function(){
-                if(tech[id].type === 'unit'){
-                    build({
-                      'id': webgl_character_id,
-                      'build': id,
-                    });
-
-                }else if(build_placeholder === id){
+                if(build_placeholder === id){
                     placeholder_hide();
-
-                }else{
-                    placeholder_show(id);
+                    return;
                 }
+
+                build({
+                  'build': id,
+                  'id': webgl_character_id,
+                  'placeholder': tech[id].type === 'building',
+                });
             },
             'style': 'display:none',
             'type': 'button',
@@ -674,4 +677,12 @@ function update_ui(){
         'type': selected?.type,
       },
     });
+    for(const element in core_elements){
+        if(element.startsWith('build_')){
+            const id = element.slice(6);
+            core_elements[element].style.borderColor = webgl_characters[webgl_character_id].power < tech[id].power
+              ? '#f00'
+              : '#999';
+        }
+    }
 }
