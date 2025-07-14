@@ -458,6 +458,28 @@ function repo_init(){
         + 'Speed: <span class=speed></span><br>'
         + 'Team: <span class=team></span><br>'
         + 'Type: <span class=type></span>',
+      'keybinds': {
+        'ArrowDown': {
+          'todo': function(){
+              rotate_camera(180);
+          },
+        },
+        'ArrowLeft': {
+          'todo': function(){
+              rotate_camera(270);
+          },
+        },
+        'ArrowRight': {
+          'todo': function(){
+              rotate_camera(90);
+          },
+        },
+        'ArrowUp': {
+          'todo': function(){
+              rotate_camera(0);
+          },
+        },
+      },
       'menu': true,
       'pointerbinds': {
         'contextmenu': {
@@ -562,6 +584,14 @@ function repo_logic(){
             });
         }
     }
+}
+
+function rotate_camera(degrees){
+    webgl_camera_rotate({
+      'character': webgl_character_id,
+      'set': true,
+      'y': degrees,
+    });
 }
 
 function select(id){
