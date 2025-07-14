@@ -236,7 +236,7 @@ function load_testmap(){
       },
     ];
     const spawn_properties = {
-      'power': 10000,
+      'power': 2000,
     };
     team_create({
       ...spawn_properties,
@@ -318,17 +318,17 @@ function new_game(){
           ],
           'life': 100,
           'power': 100,
-          'speed': 1,
+          'speed': .5,
           'time': 100,
           'type': 'unit',
           'properties': {
             'life': 100,
             'texture': 'grid.png',
             'vertices': [
-              4, .03, -4,
-              -4, .03, -4,
-              -4, .03, 4,
-              4, .03, 4,
+              3, .03, -3,
+              -3, .03, -3,
+              -3, .03, 3,
+              3, .03, 3,
             ],
           },
         },
