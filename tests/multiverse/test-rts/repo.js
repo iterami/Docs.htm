@@ -183,42 +183,10 @@ function load_testmap(){
                   .2, .8, .2, 1,
                 ],
                 'vertices': [
-                  100, 0, -50,
-                  -100, 0, -50,
-                  -100, 0, 50,
-                  100, 0, 50,
-                ],
-              },
-              {
-                'id': 'wall_n',
-                'attach_y': 10,
-                'attach_z': -50,
-                'rotate_x': 90,
-                'texture': 'lavaleaf.png',
-                'vertex_colors': [
-                  .8, .4, 0, 1,
-                ],
-                'vertices': [
-                  100, 0, -10,
-                  -100, 0, -10,
-                  -100, 0, 10,
-                  100, 0, 10,
-                ],
-              },
-              {
-                'id': 'wall_w',
-                'attach_x': -100,
-                'attach_y': 10,
-                'rotate_z': 270,
-                'texture': 'lavaleaf.png',
-                'vertex_colors': [
-                  .8, .4, 0, 1,
-                ],
-                'vertices': [
-                  10, 0, -50,
-                  -10, 0, -50,
-                  -10, 0, 50,
-                  10, 0, 50,
+                  100, 0, -100,
+                  -100, 0, -100,
+                  -100, 0, 100,
+                  100, 0, 100,
                 ],
               },
             ],
@@ -230,9 +198,19 @@ function load_testmap(){
     const spawns = [
       {
         'x': -75,
+        'z': -75,
       },
       {
         'x': 75,
+        'z': -75,
+      },
+      {
+        'x': -75,
+        'z': 75,
+      },
+      {
+        'x': 75,
+        'z': 75,
       },
     ];
     const spawn_properties = {
