@@ -262,15 +262,6 @@ function make(args){
 
     const player = webgl_characters[args.team];
     const selected = entity_entities[player.selected];
-    let destination_x = args.x;
-    let destination_y = args.y;
-    let destination_z = args.z;
-    if(selected
-      && tech[args.type].type === 'unit'){
-        destination_x = selected.destination_x;
-        destination_y = selected.destination_y;
-        destination_z = selected.destination_z;
-    }
 
     const id = args.type + entity_id_count;
     webgl_entity_create({
@@ -279,9 +270,9 @@ function make(args){
         'attach_x': args.x,
         'attach_y': args.y,
         'attach_z': args.z,
-        'destination_x': destination_x,
-        'destination_y': destination_y,
-        'destination_z': destination_z,
+        'destination_x': args.x,
+        'destination_y': args.y,
+        'destination_z': args.z,
         'id': id,
         'making': selected?.id || '',
         'picking': true,
@@ -572,6 +563,10 @@ function repo_logic(){
                     if(entity.time > 0){
                         entity.time--;
                         if(entity.time === 0){
+                            const made = entity_entities[entity.making];
+                            made.destination_x = entity.destination_x;
+                            made.destination_y = entity.destination_y;
+                            made.destination_z = entity.destination_z;
                             entity.making = '';
                         }
                     }
