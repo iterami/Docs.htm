@@ -48,6 +48,9 @@ function build(args){
     update_ui();
 }
 
+function handle_ai(player){
+}
+
 function handle_picking(event){
     if(core_key_shift
       || event.target.id !== 'canvas'){
@@ -513,6 +516,10 @@ function repo_logic(){
             if(player.building[building]-- <= 0){
                 delete player.building[building];
             }
+        }
+
+        if(id !== webgl_character_id){
+            handle_ai(player);
         }
     }
 
