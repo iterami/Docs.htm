@@ -19,14 +19,20 @@ function build(args){
 
     placeholder_hide();
 
+    const selected = entity_entities[player.selected];
     let x = webgl_picked_x;
     let y = webgl_picked_y;
     let z = webgl_picked_z;
+
     if(properties.type === 'unit'){
-        const selected = entity_entities[player.selected];
         x = selected.attach_x;
         y = selected.attach_y;
         z = selected.attach_z;
+
+    }else if(properties.type === 'building'){
+        selected.destination_x = x;
+        selected.destination_y = y;
+        selected.destination_z = z;
     }
 
     player.power -= properties.power;
