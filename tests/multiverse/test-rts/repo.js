@@ -96,14 +96,11 @@ function handle_picking(event){
     }
 
     const entity = webgl_pick_entity();
-    if(!entity){
-        return;
-    }
-
     if(core_pointer.down_0){
         select(entity.team ? entity.id : '');
 
-    }else if(core_pointer.down_1
+    }else if(entity
+      && core_pointer.down_1
       && selected.team === player.id
       && selected.time === 0){
         const properties = tech[selected.type];
