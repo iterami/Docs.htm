@@ -53,6 +53,18 @@ function build(args){
     update_ui();
 }
 
+function death(entity){
+    if(entity.making){
+        entity_entities[entity.making].making = '';
+    }
+
+    entity_remove({
+      'entities': [
+        entity.id,
+      ],
+    });
+}
+
 function handle_ai(player){
 }
 
@@ -128,7 +140,6 @@ function level_placeholders(){
         'entities': [
           {
             'id': '_rts_placeholder_build_entity',
-            'alpha': .5,
             'collision': false,
             'draw': false,
             'picking_exclude': true,
@@ -150,7 +161,6 @@ function level_placeholders(){
         'entities': [
           {
             'id': '_rts_placeholder_move_entity',
-            'alpha': .5,
             'collision': false,
             'draw': false,
             'picking_exclude': true,
@@ -158,10 +168,10 @@ function level_placeholders(){
               1, 1, 1, 1,
             ],
             'vertices': [
-              2, .1, -2,
-              -2, .1, -2,
-              -2, .1, 2,
-              2, .1, 2,
+              1.5, .1, -1.5,
+              -1.5, .1, -1.5,
+              -1.5, .1, 1.5,
+              1.5, .1, 1.5,
             ],
           },
         ],
@@ -456,7 +466,7 @@ function repo_init(){
         + 'Speed: <span class=speed></span><br>'
         + 'Team: <span class=team></span><br>'
         + 'Type: <span class=type></span><br>'
-        + 'Making: <span class=making></span> (<span class=making_time></span>)',
+        + 'Making: <span class=making></span> <span class=making_time></span>',
       'keybinds': {
         'ArrowDown': {
           'todo': function(){
@@ -505,7 +515,7 @@ function repo_init(){
         + 'Speed: <span id=speed></span><br>'
         + 'Team: <span id=team></span><br>'
         + 'Type: <span id=type></span><br>'
-        + 'Making: <span id=making></span> (<span id=making_time></span>)'
+        + 'Making: <span id=making></span> <span id=making_time></span>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
       'ui_elements': [
@@ -539,7 +549,7 @@ function repo_logic(){
           'class': true,
           'ids': {
             'making': selected.making,
-            'making_time': selected.time,
+            'making_time': selected.time || '',
           },
         });
     }
@@ -680,7 +690,7 @@ function update_ui(){
         'life': selected?.life,
         'life_max': tech[selected?.type]?.life,
         'making': selected?.making,
-        'making_time': selected?.time,
+        'making_time': selected?.time || '',
         'power': player.power,
         'selected': player.selected,
         'speed': tech[selected?.type]?.speed,
