@@ -375,7 +375,7 @@ function new_game(){
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
-            'innerHTML': id + '<br>Power: ' + tech[id].power + '<br>Time: ' + tech[id].time,
+            'innerHTML': id + '<br>' + tech[id].type + '<br>Power ' + tech[id].power + '<br>Time ' + tech[id].time,
             'onclick': function(){
                 if(build_placeholder === id){
                     placeholder_hide();
