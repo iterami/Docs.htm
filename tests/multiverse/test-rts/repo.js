@@ -103,10 +103,18 @@ function handle_picking(event){
       && core_pointer.down_1
       && selected.team === player.id
       && selected.time === 0){
+        if(entity.id === selected.id){
+            entity.destination_x = entity.attach_x;
+            entity.destination_y = entity.attach_y;
+            entity.destination_z = entity.attach_z;
+            return;
+        }
+
         const properties = tech[selected.type];
+        const moveable = properties.type === 'unit'
+          || properties.builds.length;
         if(!entity.team){
-            if(properties.type === 'unit'
-              || properties.builds.length){
+            if(moveable){
                 move(selected);
             }
 
@@ -114,8 +122,7 @@ function handle_picking(event){
         }
 
         const owned = entity.team === player.id;
-        if(properties.type === 'unit'
-          || properties.builds.length){
+        if(moveable){
             if(owned){
                 move(selected);
 
