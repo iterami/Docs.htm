@@ -1,12 +1,13 @@
 <!doctype html>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>webgl_texture_init(args)</title>
+<title>webgl_texture_init(id)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_texture_init(args)
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=webgl.htm>webgl.js</a>/webgl_texture_init(id)
 <ul>
-  <li>Creates a texture based on a "core_image" and stores it either as a static or animated texture.
+  <li>Creates a texture based on an image in "core_images" and stores it in "webgl_textures".
+  <li>Inits the image via <a href=core_image.htm>core_image(args)</a> and "webgl_uris" if the texture does not already exist.
 </ul>
 <table>
   <tr class=header>
@@ -14,15 +15,7 @@
     <td>Default
     <td>Type
   <tr>
-    <td>animated
-    <td>false
-    <td>boolean
-  <tr>
     <td>id
     <td>
     <td>string ID
-  <tr>
-    <td>loading
-    <td>false
-    <td>boolean
 </table>
