@@ -293,7 +293,7 @@ function repo_init(){
           'todo': webgl_controls_wheel,
         },
       },
-      'root': '../../common-webgl-standalone.htm',
+      'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Skill: <span id=skill></span><br>'

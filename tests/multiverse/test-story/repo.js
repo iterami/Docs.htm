@@ -170,7 +170,7 @@ function repo_init(){
           'todo': webgl_pick_entity,
         },
       },
-      'root': '../../common-webgl-standalone.htm',
+      'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
       'ui': '<div id=choice><button id=choose_0 type=button>Choice 0</button><button id=choose_1 type=button>Choice 1</button><br>'

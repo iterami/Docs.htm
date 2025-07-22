@@ -501,7 +501,7 @@ function repo_init(){
           'todo': webgl_controls_wheel,
         },
       },
-      'root': '../../common-webgl-standalone.htm',
+      'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'

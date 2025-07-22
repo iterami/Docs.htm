@@ -273,7 +273,7 @@ function repo_init(){
           },
         },
       },
-      'root': '../../common-webgl-standalone.htm',
+      'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
       'ui': 'Life: <span id=life></span>/<span id=life_max></span><br>'
