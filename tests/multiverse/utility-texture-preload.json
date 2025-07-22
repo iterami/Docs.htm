@@ -1,0 +1,109 @@
+{
+  "characters": [
+    {
+      "id": "utility_texture_preload",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "boost",
+          "collision": false,
+          "texture": "boost.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "door",
+          "collision": false,
+          "texture": "door.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "goal",
+          "collision": false,
+          "texture": "goal.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "grid",
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "key",
+          "collision": false,
+          "texture": "key.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "lavaleaf",
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "stone",
+          "collision": false,
+          "texture": "stone.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "wall",
+          "collision": false,
+          "texture": "wall.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        },
+        {
+          "id": "wood",
+          "collision": false,
+          "texture": "wood.png",
+          "vertices": [
+            1, 0, -1,
+            -1, 0, -1,
+            -1, 0, 1,
+            1, 0, 1
+          ]
+        }
+      ]
+    }
+  ]
+}
