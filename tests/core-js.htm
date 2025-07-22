@@ -152,34 +152,49 @@ function repo_init(){
         },
         {
           'args': {
-            'decimals_max': 2,
-            'number': '123456.789',
+            'number': '1234.56789',
           },
-          'expect': '123,456.79',
+          'expect': '1,234.56789',
           'function': 'core_number_format',
         },
         {
           'args': {
-            'decimals_max': 4,
-            'number': '123456.789',
+            'decimals_max': 1,
+            'number': '1234.44444',
           },
-          'expect': '123,456.789',
+          'expect': '1,234.4',
+          'function': 'core_number_format',
+        },
+        {
+          'args': {
+            'decimals_max': 1,
+            'number': '1234.55555',
+          },
+          'expect': '1,234.6',
+          'function': 'core_number_format',
+        },
+        {
+          'args': {
+            'decimals_max': 7,
+            'number': '1234.56789',
+          },
+          'expect': '1,234.56789',
           'function': 'core_number_format',
         },
         {
           'args': {
             'decimals_min': 2,
-            'number': '123456.789',
+            'number': '1234.1234',
           },
-          'expect': '123,456.789',
+          'expect': '1,234.1234',
           'function': 'core_number_format',
         },
         {
           'args': {
-            'decimals_min': 5,
-            'number': '123456.789',
+            'decimals_min': 7,
+            'number': '1234.56789',
           },
-          'expect': '123,456.78900',
+          'expect': '1,234.5678900',
           'function': 'core_number_format',
         },
         {
