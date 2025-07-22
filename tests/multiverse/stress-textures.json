@@ -13,16 +13,16 @@
         {
           "id": "base",
           "texture": "debug.png",
-          "texture_x": 1e6,
-          "texture_y": 1e6,
+          "texture_x": 9e6,
+          "texture_y": 9e6,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
-            1e5, 0, -1e5,
-            -1e5, 0, -1e5,
-            -1e5, 0, 1e5,
-            1e5, 0, 1e5
+            9e5, 0, -9e5,
+            -9e5, 0, -9e5,
+            -9e5, 0, 9e5,
+            9e5, 0, 9e5
           ]
         }
       ]

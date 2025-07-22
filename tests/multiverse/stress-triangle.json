@@ -30,9 +30,9 @@
           "attach_y": -1,
           "texture": "lavaleaf.png",
           "vertices": [
-            1e7, 0, -1e7,
-            -1e7, 0, -1e7,
-            -1e7, 0, 1e7
+            3e7, 0, -3e7,
+            -3e7, 0, -3e7,
+            -3e7, 0, 3e7
           ]
         }
       ]
