@@ -1,0 +1,31 @@
+{
+  "title": "Textures Stress Test",
+  "spawn": {
+    "position_y": 5,
+    "position_z": 10,
+    "speed": 10
+  },
+  "characters": [
+    {
+      "id": "stress_textures",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "debug.png",
+          "texture_x": 1e5,
+          "texture_y": 1e5,
+          "vertex_colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            5000, 0, -5000,
+            -5000, 0, -5000,
+            -5000, 0, 5000,
+            5000, 0, 5000
+          ]
+        }
+      ]
+    }
+  ]
+}
