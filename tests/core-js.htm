@@ -152,7 +152,23 @@ function repo_init(){
         },
         {
           'args': {
-            'decimals_max': 3,
+            'decimals_max': 2,
+            'number': '123456.789',
+          },
+          'expect': '123,456.79',
+          'function': 'core_number_format',
+        },
+        {
+          'args': {
+            'decimals_max': 4,
+            'number': '123456.789',
+          },
+          'expect': '123,456.789',
+          'function': 'core_number_format',
+        },
+        {
+          'args': {
+            'decimals_min': 2,
             'number': '123456.789',
           },
           'expect': '123,456.789',
