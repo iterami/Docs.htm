@@ -15,7 +15,7 @@
         {
           "id": "base",
           "texture": "grid.png",
-          "texture_x": 100,
+          "texture_x": 0,
           "texture_y": 100,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
