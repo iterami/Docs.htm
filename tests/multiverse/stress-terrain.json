@@ -1,7 +1,8 @@
 {
   "title": "Terrain Stress Test",
   "spawn": {
-    "position_y": 5
+    "position_y": 5,
+    "speed": 10
   },
   "characters": [
     {
