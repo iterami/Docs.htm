@@ -33,6 +33,7 @@
       "properties": {
         "prefix": "ellipsoid",
         "character": "stress_vertices",
+        "draw_range": 99,
         "position_y": 15,
         "radius_x": 10,
         "radius_y": 10,

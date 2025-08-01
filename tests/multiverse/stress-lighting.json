@@ -41,6 +41,7 @@
                     {
                       "attach_y": 5,
                       "collision": false,
+                      "draw_range": 99,
                       "light_color": [1, 1, 1],
                       "light_range": 25,
                       "vertices": [

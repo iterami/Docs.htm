@@ -33,11 +33,12 @@
         "character": "stress_particles",
         "entities": [
           {
+            "id": "storm",
             "attach_y": 50,
             "draw_mode": "POINTS",
-            "id": "storm_0",
+            "draw_range": 99,
             "point_size": 150,
-            "vertex_repeat": 500000
+            "vertex_repeat": 5e5
           }
         ],
         "id": "storm",

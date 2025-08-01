@@ -1,0 +1,23 @@
+{
+  "characters": [
+    {
+      "id": "empty",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "vertex_colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ]
+}
