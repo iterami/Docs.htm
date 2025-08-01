@@ -24,109 +24,106 @@
           ]
         },
         {
-          "id": "ramp_0",
-          "attach_x": 25,
-          "attach_y": 3,
-          "attach_z": 15,
-          "rotate_x": 315,
+          "id": "ramp_east",
+          "attach_x": 300,
+          "attach_y": 25,
+          "rotate_z": 330,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "ramp_1",
-          "attach_x": 35,
-          "attach_y": 3,
-          "attach_z": 25,
-          "rotate_z": 315,
+          "id": "ramp_north",
+          "attach_x": 200,
+          "attach_y": 25,
+          "attach_z": -50,
+          "rotate_x": 330,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "ramp_2",
-          "attach_x": 25,
-          "attach_y": 3,
-          "attach_z": 35,
-          "rotate_x": 45,
+          "id": "ramp_south",
+          "attach_x": 200,
+          "attach_y": 25,
+          "attach_z": 50,
+          "rotate_x": 30,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "ramp_3",
-          "attach_x": 15,
-          "attach_y": 3,
-          "attach_z": 25,
-          "rotate_z": 45,
+          "id": "ramp_west",
+          "attach_x": 100,
+          "attach_y": 25,
+          "rotate_z": 30,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "rotated_0",
-          "attach_x": -25,
+          "id": "rotated_northeast",
+          "attach_x": -250,
           "attach_y": 5,
-          "attach_z": 10,
           "rotate_x": 90,
           "rotate_z": 315,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "rotated_1",
-          "attach_x": -25,
+          "id": "rotated_southeast",
+          "attach_x": -250,
           "attach_y": 5,
           "rotate_x": 90,
           "rotate_z": 225,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "rotated_2",
-          "attach_x": -35,
+          "id": "rotated_northwest",
+          "attach_x": -350,
           "attach_y": 5,
           "rotate_x": 90,
           "rotate_z": 135,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         },
         {
-          "id": "rotated_3",
-          "attach_x": -35,
+          "id": "rotated_southwest",
+          "attach_x": -350,
           "attach_y": 5,
-          "attach_z": 10,
+          "attach_z": 100,
           "rotate_x": 90,
           "rotate_z": 45,
           "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
           ]
         }
       ]
