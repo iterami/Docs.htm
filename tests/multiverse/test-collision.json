@@ -98,10 +98,21 @@
       ]
     },
     {
-      "id": "test_rotating",
+      "id": "test_rotatable",
       "position_x": 75,
       "position_y": 50,
+      "position_z": -75,
       "rotate_z": 30,
+      "spawn": false
+    },
+    {
+      "id": "test_rotating",
+      "change_rotate_x": 1,
+      "change_rotate_y": 1,
+      "change_rotate_z": 1,
+      "position_x": 75,
+      "position_y": 50,
+      "position_z": 75,
       "spawn": false
     }
   ],
@@ -143,6 +154,16 @@
         "size_x": -20,
         "size_y": -20,
         "size_z": -20
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid_rotatable",
+        "character": "test_rotatable",
+        "size_x": 50,
+        "size_y": 50,
+        "size_z": 50
       }
     },
     {
