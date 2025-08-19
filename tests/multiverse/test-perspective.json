@@ -25,15 +25,27 @@
           ]
         },
         {
-          "id": "triangle",
-          "attach_z": -500,
+          "id": "flat",
+          "attach_z": -250,
           "collision": false,
-          "draw_type": "TRIANGLES",
           "texture": "grid.png",
           "vertices": [
             1000, 0, 0,
             0, 230, 0,
-            -1000, 0, 0
+            -1000, 0, 0,
+            0, -230, 0
+          ]
+        },
+        {
+          "id": "tall",
+          "attach_z": -230,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            230, 0, 0,
+            0, 1000, 0,
+            -230, 0, 0,
+            0, -1000, 0
           ]
         }
       ]
