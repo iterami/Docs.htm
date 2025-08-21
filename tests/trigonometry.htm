@@ -36,35 +36,35 @@
 
 <script>
 function calculate(){
-    let result = '';
+    let result = 0;
     const type = document.getElementById('type').value;
 
     if(type === 'acos'){
-        result = radians_to_degrees(Math[type](
+        result = Math[type](
           document.getElementById('side_adjacent').value / document.getElementById('side_hypotenuse').value
-        ));
+        );
 
     }else if(type === 'asin'){
-        result = radians_to_degrees(Math[type](
+        result = Math[type](
           document.getElementById('side_opposite').value / document.getElementById('side_hypotenuse').value
-        ));
+        );
 
     }else if(type === 'atan'){
-        result = radians_to_degrees(Math[type](
+        result = Math[type](
           document.getElementById('side_opposite').value / document.getElementById('side_adjacent').value
-        ));
+        );
 
     }else if(type === 'atan2'){
-        result = radians_to_degrees(Math[type](
+        result = Math[type](
           document.getElementById('side_opposite').value,
           document.getElementById('side_adjacent').value
-        ));
+        );
 
     }else{
-        result = radians_to_degrees(Math[type](degrees_to_radians(document.getElementById('angle').value)));
+        result = Math[type](degrees_to_radians(document.getElementById('angle').value));
     }
 
-    document.getElementById('result').textContent = result;
+    document.getElementById('result').textContent = Math.round(radians_to_degrees(result));
 }
 
 function degrees_to_radians(degrees){
