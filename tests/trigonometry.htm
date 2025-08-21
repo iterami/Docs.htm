@@ -5,10 +5,10 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Trigonometry
-<table>
+<table class=center>
   <tr class=header>
     <td>Part of a Right Triangle
-    <td>Values
+    <td>Lengths and Degrees
   <tr>
     <td>Side: Adjacent
     <td><input id=side_adjacent step=any type=number>
@@ -19,10 +19,10 @@
     <td>Side: Opposite
     <td><input id=side_opposite step=any type=number>
   <tr>
-    <td>Angle (degrees 0.01 - 89.99)
-    <td><input id=angle max=89.99 min=0.01 step=0.01 type=number>
+    <td>Angle (0.001-89.999)
+    <td><input id=angle max=89.999 min=0.001 step=0.001 type=number>
   <tr>
-    <td><select id=type>
+    <td colspan=2><select id=type>
       <option value=acos>acos(adjacent side / hypotenuse side)</option>
       <option value=asin>asin(opposite side / hypotenuse side)</option>
       <option value=atan>atan(opposite side / adjacent side)</option>
@@ -30,8 +30,11 @@
       <option value=cos>cos(angle)</option>
       <option value=sin>sin(angle)</option>
       <option value=tan>tan(angle)</option>
+      <option value=hypot>hypot(adjacent, opposite)</option>
     </select>
-    <td><button onclick=calculate() type=button>Calculate</button> <span id=result></span>
+  <tr>
+    <td><button onclick=calculate() type=button>Calculate</button>
+    <td id=result>
 </table>
 
 <script>
@@ -40,31 +43,37 @@ function calculate(){
     const type = document.getElementById('type').value;
 
     if(type === 'acos'){
-        result = Math[type](
+        result = radians_to_degrees(Math[type](
           document.getElementById('side_adjacent').value / document.getElementById('side_hypotenuse').value
-        );
+        ));
 
     }else if(type === 'asin'){
-        result = Math[type](
+        result = radians_to_degrees(Math[type](
           document.getElementById('side_opposite').value / document.getElementById('side_hypotenuse').value
-        );
+        ));
 
     }else if(type === 'atan'){
-        result = Math[type](
+        result = radians_to_degrees(Math[type](
           document.getElementById('side_opposite').value / document.getElementById('side_adjacent').value
-        );
+        ));
 
     }else if(type === 'atan2'){
-        result = Math[type](
+        result = radians_to_degrees(Math[type](
           document.getElementById('side_opposite').value,
           document.getElementById('side_adjacent').value
+        ));
+
+    }else if(type === 'hypot'){
+        result = Math[type](
+          document.getElementById('side_adjacent').value,
+          document.getElementById('side_opposite').value
         );
 
     }else{
         result = Math[type](degrees_to_radians(document.getElementById('angle').value));
     }
 
-    document.getElementById('result').textContent = Math.round(radians_to_degrees(result));
+    document.getElementById('result').textContent = result;
 }
 
 function degrees_to_radians(degrees){
