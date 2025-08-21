@@ -31,6 +31,7 @@
       <option value=sin>sin(angle)</option>
       <option value=tan>tan(angle)</option>
       <option value=hypot>hypotenuse(X, Y)</option>
+      <option value=aha>sides(hypotenuse, X=Y)</option>
     </select>
   <tr>
     <td><button onclick=calculate() type=button>Calculate</button>
@@ -68,6 +69,9 @@ function calculate(){
           document.getElementById('side_adjacent').value,
           document.getElementById('side_opposite').value
         );
+
+    }else if(type === 'aha'){
+        result = document.getElementById('side_hypotenuse').value * .7071067811865476;
 
     }else{
         result = Math[type](degrees_to_radians(document.getElementById('angle').value));
