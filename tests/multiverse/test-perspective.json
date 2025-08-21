@@ -2,7 +2,8 @@
   "title": "Perspective Test",
   "spawn": {
     "position_y": 5,
-    "position_z": 10
+    "position_z": 10,
+    "speed": 10
   },
   "characters": [
     {
@@ -31,20 +32,20 @@
           "texture": "grid.png",
           "vertices": [
             1000, 0, 0,
-            0, 230, 0,
+            0, 500, 0,
             -1000, 0, 0,
-            0, -230, 0
+            0, -500, 0
           ]
         },
         {
           "id": "tall",
-          "attach_z": -230,
+          "attach_z": -251,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
-            230, 0, 0,
+            500, 0, 0,
             0, 1000, 0,
-            -230, 0, 0,
+            -500, 0, 0,
             0, -1000, 0
           ]
         }
