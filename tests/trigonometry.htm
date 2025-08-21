@@ -10,27 +10,27 @@
     <td>Part of a Right Triangle
     <td>Lengths and Degrees
   <tr>
-    <td>Side: Adjacent
+    <td>Side: Adjacent X
     <td><input id=side_adjacent step=any type=number>
   <tr>
     <td>Side: Hypotenuse
     <td><input id=side_hypotenuse step=any type=number>
   <tr>
-    <td>Side: Opposite
+    <td>Side: Opposite Y
     <td><input id=side_opposite step=any type=number>
   <tr>
     <td>Angle (0.001-89.999)
     <td><input id=angle max=89.999 min=0.001 step=0.001 type=number>
   <tr>
     <td colspan=2><select id=type>
-      <option value=acos>acos(adjacent side / hypotenuse side)</option>
-      <option value=asin>asin(opposite side / hypotenuse side)</option>
-      <option value=atan>atan(opposite side / adjacent side)</option>
-      <option value=atan2>atan2(opposite side, adjacent side)</option>
+      <option value=acos>acos(X / hypotenuse)</option>
+      <option value=asin>asin(Y / hypotenuse)</option>
+      <option value=atan>atan(Y / X)</option>
+      <option value=atan2>atan2(Y, X)</option>
       <option value=cos>cos(angle)</option>
       <option value=sin>sin(angle)</option>
       <option value=tan>tan(angle)</option>
-      <option value=hypot>hypot(adjacent, opposite)</option>
+      <option value=hypot>hypotenuse(X, Y)</option>
     </select>
   <tr>
     <td><button onclick=calculate() type=button>Calculate</button>
