@@ -2,6 +2,8 @@
   "title": "Vehicles Test",
   "picking": 2,
   "spawn": {
+    "camera_rotate_x": 30,
+    "camera_zoom": 50,
     "position_y": 5,
     "position_z": 10
   },
@@ -28,7 +30,20 @@
           ]
         },
         {
-          "id": "ramp",
+          "id": "ramp_long",
+          "attach_y": 100,
+          "attach_z": -400,
+          "rotate_z": 340,
+          "texture": "grid.png",
+          "vertices": [
+            412, 0, -25,
+            -412, 0, -25,
+            -412, 0, 25,
+            412, 0, 25
+          ]
+        },
+        {
+          "id": "ramp_wide",
           "attach_z": -250,
           "rotate_z": 30,
           "texture": "grid.png",
