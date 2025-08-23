@@ -28,6 +28,18 @@
           ]
         },
         {
+          "id": "ramp",
+          "attach_z": -250,
+          "rotate_z": 30,
+          "texture": "grid.png",
+          "vertices": [
+            44, 0, -100,
+            -44, 0, -100,
+            -44, 0, 100,
+            44, 0, 100
+          ]
+        },
+        {
           "id": "track_0_0",
           "attach_x": 450,
           "attach_y": -20,
