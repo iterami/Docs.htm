@@ -1,11 +1,22 @@
 <!doctype html>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>math_matrix_create()</title>
+<title>math_matrix_create(length)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=math.htm>math.js</a>/math_matrix_create()
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Projects</a>/<a href=math.htm>math.js</a>/math_matrix_create(length)
 <ul>
-  <li>No args.
-  <li>Creates a new blank Float32Array of length 16 and returns it.
+  <li>Creates a new Float32Array.
+  <li>If "length" is a number or not specified, then the returned array is filled with 0s until "length" or 16.
+  <li>If "length" is an array or object, then the returned array will match its length and use its values.
 </ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>length
+    <td>16
+    <td>integer or array or object
+</table>

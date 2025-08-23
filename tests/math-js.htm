@@ -23,6 +23,8 @@ function repo_init(){
       'title': 'Docs.htm',
     });
 
+    math_matrices.test = math_matrix_create([15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]);
+
     document.getElementById('consts').innerHTML = test_consts({
       'consts': [
         'Math.E',
@@ -152,6 +154,21 @@ function repo_init(){
           'function': 'math_greatest_common_divisor',
         },
         {
+          'args': {
+            'id': 'test',
+            'to': 'cloned',
+          },
+          'expect': function(result){
+              for(const value in math_matrices.cloned){
+                  if(math_matrices.cloned[value] !== math_matrices.test[value]){
+                      return false;
+                  }
+              }
+              return true;
+          },
+          'function': 'math_matrix_clone',
+        },
+        {
           'args': void 0,
           'expect': {
             '0': 0,
@@ -169,6 +186,28 @@ function repo_init(){
             '12': 0,
             '13': 0,
             '14': 0,
+            '15': 0,
+          },
+          'function': 'math_matrix_create',
+        },
+        {
+          'args': [15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0],
+          'expect': {
+            '0': 15,
+            '1': 14,
+            '2': 13,
+            '3': 12,
+            '4': 11,
+            '5': 10,
+            '6': 9,
+            '7': 8,
+            '8': 7,
+            '9': 6,
+            '10': 5,
+            '11': 4,
+            '12': 3,
+            '13': 2,
+            '14': 1,
             '15': 0,
           },
           'function': 'math_matrix_create',
