@@ -8,50 +8,40 @@
 <div id=custom-test></div>
 <table>
   <tr class=header>
-    <td>Element
+    <td>Element <button onclick=clear_elements() type=button>Clear</button>
     <td>Example
-    <td class=tables-nosort>Test<br><button onclick=clear_elements() type=button>Clear</button>
   <tr>
-    <td>Newline
+    <td><button onclick=add_element(this) type=button>Newline</button>
     <td><br>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Space
+    <td><button onclick=add_element(this) type=button>Space</button>
     <td>&nbsp;
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Code
+    <td><button onclick=add_element(this) type=button>Code</button>
     <td>
 <code>function example(args){
     // Example code.
 }</code>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Button
+    <td><button onclick=add_element(this) type=button>Button</button>
     <td><button type=button>Example<br>Button</button>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Input type=number Any
+    <td><button onclick=add_element(this) type=button>Input type=number Any</button>
     <td><input step=any type=number value=123.456>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Input type=number MinMax
+    <td><button onclick=add_element(this) type=button>Input type=number MinMax</button>
     <td><input max=200 min=0 step=.1 type=number value=123.456>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Input type=text
+    <td><button onclick=add_element(this) type=button>Input type=text</button>
     <td><input type=text value="Input Text">
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Link External
+    <td><button onclick=add_element(this) type=button>Link External</button>
     <td><a class=external href=writings-css.htm rel=noreferrer>External Link</a>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Link Internal
+    <td><button onclick=add_element(this) type=button>Link Internal</button>
     <td><a href=writings-css.htm>Internal Link</a>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>List Ordered
+    <td><button onclick=add_element(this) type=button>List Ordered</button>
     <td><ol>
       <li>layer 1
       <li>layer 1:<ol>
@@ -72,9 +62,8 @@
         </ol>
       </ol>
     </ol>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>List Unordered
+    <td><button onclick=add_element(this) type=button>List Unordered</button>
     <td><ul>
       <li>layer 1
       <li>layer 1:<ul>
@@ -95,9 +84,8 @@
         </ul>
       </ul>
     </ul>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Select
+    <td><button onclick=add_element(this) type=button>Select</button>
     <td><select>
       <option>Select Option #1
       <hr>
@@ -105,17 +93,14 @@
       <option disabled>Select Option #3 is disabled!
       <option>Select Option #4 is even longer!
     </select>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Select Empty
+    <td><button onclick=add_element(this) type=button>Select Empty</button>
     <td><select></select>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Separator
+    <td><button onclick=add_element(this) type=button>Separator</button>
     <td><hr>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Table
+    <td><button onclick=add_element(this) type=button>Table</button>
     <td><table>
       <tr class=header>
         <td>Table
@@ -138,27 +123,21 @@
         <td>Row
         <td>Contents
     </table>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Textarea
+    <td><button onclick=add_element(this) type=button>Textarea</button>
     <td><textarea>Textarea</textarea>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Textarea Readonly
+    <td><button onclick=add_element(this) type=button>Textarea Readonly</button>
     <td><textarea readonly>Textarea Readonly</textarea>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Text Aligned Center
+    <td><button onclick=add_element(this) type=button>Text Aligned Center</button>
     <td><div class=center>Center</div>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Text Aligned Right
+    <td><button onclick=add_element(this) type=button>Text Aligned Right</button>
     <td><div class=right>Right</div>
-    <td><button onclick=add_element(this) type=button>+</button>
   <tr>
-    <td>Text Default
+    <td><button onclick=add_element(this) type=button>Text Default</button>
     <td>Default
-    <td><button onclick=add_element(this) type=button>+</button>
 </table>
 
 <script src=../../common/js/tables.js></script>
