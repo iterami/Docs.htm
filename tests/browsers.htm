@@ -71,16 +71,16 @@ globalThis.onload = function(){
     const features = {
       'addEventListener': !!globalThis.addEventListener,
       'AudioAPI': 'AudioContext' in globalThis,
-      'canvas': !!document.getElementById('canvas').getContext('2d'),
       'Canvas Picking': test_canvaspicking(),
+      'canvas': !!document.getElementById('canvas').getContext('2d'),
       'contextmenu': 'oncontextmenu' in globalThis,
       'CSS Rotation Transform': css,
       'Images': test_images(),
       'localStorage': test_localStorage(),
-      'ontouchstart': 'ontouchstart' in globalThis,
       'MediaDevices': test_mediadevices(),
       'PointerEvent': 'PointerEvent' in globalThis,
       'pointerLockElement': 'pointerLockElement' in document,
+      'TouchEvent': 'TouchEvent' in globalThis,
       'WebGL2': webgl,
     };
     let result = '';
