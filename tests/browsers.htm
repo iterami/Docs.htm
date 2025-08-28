@@ -79,7 +79,8 @@ globalThis.onload = function(){
       'localStorage': test_localStorage(),
       'ontouchstart': 'ontouchstart' in globalThis,
       'MediaDevices': test_mediadevices(),
-      'PointerAPI': 'PointerEvent' in globalThis,
+      'PointerEvent': 'PointerEvent' in globalThis,
+      'pointerLockElement': 'pointerLockElement' in document,
       'WebGL2': webgl,
     };
     let result = '';
