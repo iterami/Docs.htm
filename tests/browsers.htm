@@ -18,8 +18,17 @@ canvas{
 </table>
 <canvas id=canvas></canvas>
 <canvas id=webgl></canvas>
+<button id=pointerlock onclick=pointerlock_request()>document.body.requestPointerLock()</button>
 
 <script>
+function pointerlock_exit(){
+    document.exitPointerLock();
+}
+
+function pointerlock_request(){
+    document.body.requestPointerLock();
+}
+
 function test_canvaspicking(){
     const pixel = document.getElementById('canvas').getContext('2d').getImageData(0, 0, 1, 1).data;
     return pixel[0] === 0 && pixel[1] === 0 && pixel[2] === 0;
@@ -88,5 +97,7 @@ globalThis.onload = function(){
         result += '<tr><td>' + feature + '<td id="' + feature + '">' + features[feature];
     }
     document.getElementById('results').innerHTML = result;
+
+    globalThis.onkeydown = pointerlock_exit;
 };
 </script>
