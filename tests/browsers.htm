@@ -18,7 +18,7 @@ canvas{
 </table>
 <canvas id=canvas></canvas>
 <canvas id=webgl></canvas>
-<button id=pointerlock onclick=pointerlock_request()>document.body.requestPointerLock()</button>
+<button id=pointerlock onclick=pointerlock_request()>document.body.requestPointerLock()</button> <span id=pointerlock_element></span>
 
 <script>
 function pointerlock_exit(){
@@ -27,6 +27,14 @@ function pointerlock_exit(){
 
 function pointerlock_request(){
     document.body.requestPointerLock();
+}
+
+function pointerlock_update(event){
+    const element = document.pointerLockElement;
+    document.getElementById('pointerlock_element').textContent = event.type + ': '
+      + (element === null
+        ? 'null'
+        : element.localName);
 }
 
 function test_canvaspicking(){
@@ -98,6 +106,8 @@ globalThis.onload = function(){
     }
     document.getElementById('results').innerHTML = result;
 
+    document.onpointerlockchange = pointerlock_update;
+    document.onpointerlockerror = pointerlock_update;
     globalThis.onkeydown = pointerlock_exit;
 };
 </script>
