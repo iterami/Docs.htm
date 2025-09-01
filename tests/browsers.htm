@@ -46,7 +46,7 @@ function test_images(){
     const image = new Image();
     image.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==';
     image.onload = function(){
-        document.getElementById('Images').textContent = true;
+        document.getElementById('result_Images').textContent = true;
     };
 }
 
@@ -67,10 +67,10 @@ function test_mediadevices(){
       'audio': false,
       'video': false,
     }).then(function(stream){
-        document.getElementById('MediaDevices').textContent = true;
+        document.getElementById('result_MediaDevices').textContent = true;
 
     }).catch(function(error){
-        document.getElementById('MediaDevices').textContent = error;
+        document.getElementById('result_MediaDevices').textContent = error;
     });
 }
 
@@ -102,7 +102,7 @@ globalThis.onload = function(){
     };
     let result = '';
     for(const feature in features){
-        result += '<tr><td>' + feature + '<td id="' + feature + '">' + features[feature];
+        result += '<tr><td>' + feature + '<td id="result_' + feature + '">' + features[feature];
     }
     document.getElementById('results').innerHTML = result;
 
