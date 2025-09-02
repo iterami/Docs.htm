@@ -16,7 +16,7 @@
   <tbody id=totals>
     <tr class=header>
       <td>Events
-      <td>Totals
+      <td>core_mobile: <span id=core_mobile_span></span>
   </tbody>
   <tr class=header>
     <td><input checked id=check_pointer type=checkbox>Pointer
@@ -189,6 +189,7 @@ function update_pointer(event){
     update(event);
     core_ui_update({
       'ids': {
+        'core_mobile_span': core_mobile,
         ...core_pointer,
         'deltaY': event?.deltaY || Number(core_elements.deltaY?.textContent),
       },
