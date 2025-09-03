@@ -132,7 +132,10 @@ function update(event){
 
     if(!totals[event.type]){
         totals[event.type] = 0;
-        core_elements.totals.innerHTML += '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a><td id=' + event.type + '>';
+        core_elements.totals.insertAdjacentHTML(
+          'afterend',
+          '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm>' + event.type + '</a><td id=' + event.type + '>'
+        );
     }
 
     core_ui_update({
