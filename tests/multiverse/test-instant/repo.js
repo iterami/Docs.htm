@@ -5,13 +5,23 @@ function new_game(){
       'character': 0,
       'json': {
         'clear_color': [0, .2, 0],
+        'picking': 2,
+        'pointerlock': true,
+        'reticle': true,
         'characters': [
           {
-            'id': '_instant',
+            'id': 'test_instant',
             'spawn': false,
             'entities': [
               {
                 'id': 'base',
+                'event_todo': [
+                  {
+                    'stat': 'vertex_colors',
+                    'todo': '_self',
+                  },
+                ],
+                'picking': true,
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 10,
@@ -37,6 +47,7 @@ function new_game(){
       'controls': 'rpg',
       'level': -1,
       'spawn': {
+        'camera_rotate_x': 30,
         'position_x': 0,
         'position_y': 6,
         'position_z': 0,
@@ -54,6 +65,9 @@ function repo_init(){
           'todo': function(){
               webgl_controls_pointer();
           },
+        },
+        'pointerup': {
+          'todo': webgl_pick_entity,
         },
       },
       'root': '../../webgl-standalone.htm',
