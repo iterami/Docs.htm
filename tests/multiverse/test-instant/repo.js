@@ -5,7 +5,7 @@ function new_game(){
       'character': 0,
       'json': {
         'clear_color': [0, .2, 0],
-        'picking': 2,
+        'picking': 1,
         'pointerlock': true,
         'reticle': true,
         'characters': [
@@ -73,7 +73,20 @@ function repo_init(){
       'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
+      'ui': '<span id=picked></span',
     });
 
     new_game();
+}
+
+function repo_logic(){
+    const picked = webgl_pick_entity(true);
+    core_ui_update({
+      'class': true,
+      'ids': {
+        'picked': picked
+          ? picked.id
+          : 'false',
+      },
+    });
 }
