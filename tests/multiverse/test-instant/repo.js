@@ -73,17 +73,24 @@ function repo_init(){
       'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': '<span id=picked></span',
+      'ui': '<span id=picked></span><div id=color></div>',
     });
 
     new_game();
 }
 
 function repo_logic(){
+    const x = webgl_properties.pointerlock ? Math.floor(globalThis.innerWidth / 2) : core_pointer.x;
+    const y = webgl_properties.pointerlock ? Math.floor(globalThis.innerHeight / 2) : core_pointer.y;
+
     const picked = webgl_pick_entity(true);
     core_ui_update({
       'class': true,
       'ids': {
+        'color': webgl_pick_color({
+          'x': x,
+          'y': y,
+        }),
         'picked': picked
           ? picked.id
           : 'false',
