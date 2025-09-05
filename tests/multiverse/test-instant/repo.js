@@ -6,7 +6,7 @@ function new_game(){
       'json': {
         'clear_color': [0, .2, 0],
         'picking': 1,
-        'pointerlock': true,
+        'pointerlock': core_storage_data.pointerlock,
         'reticle': true,
         'characters': [
           {
@@ -71,7 +71,11 @@ function repo_init(){
         },
       },
       'root': '../../webgl-standalone.htm',
+      'storage': {
+        'pointerlock': true,
+      },
       'storage_controls': true,
+      'storage_menu': '<table><tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
       'title': 'Docs.htm',
       'ui': '<span id=picked></span><div id=color></div>',
     });
@@ -83,14 +87,16 @@ function repo_logic(){
     const x = webgl_properties.pointerlock ? Math.floor(globalThis.innerWidth / 2) : core_pointer.x;
     const y = webgl_properties.pointerlock ? Math.floor(globalThis.innerHeight / 2) : core_pointer.y;
 
+    webgl_draw();
+    const color = webgl_pick_color({
+      'x': x,
+      'y': y,
+    });
     const picked = webgl_pick_entity(true);
     core_ui_update({
       'class': true,
       'ids': {
-        'color': webgl_pick_color({
-          'x': x,
-          'y': y,
-        }),
+        'color': color,
         'picked': picked
           ? picked.id
           : 'false',
