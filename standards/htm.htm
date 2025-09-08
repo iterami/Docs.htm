@@ -6,16 +6,13 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Standards/HTM
 <ul>
-  <li>All pages must include:<ul>
-    <li>&lt;!doctype html&gt;
-    <li>&lt;meta charset=utf-8&gt;
-    <li>&lt;meta content="width=device-width,initial-scale=1" name=viewport&gt;
-    <li>&lt;title&gt;A Title&lt;/title&gt;
-    <li>&lt;link href=a/css/file.css rel=stylesheet&gt;
-  </ul>
-  <li>If a page must disable mobile zooming, then use this meta tag instead:<ul>
-    <li>&lt;meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport&gt;
-  </ul>
+  <li>All pages must include:<code>&lt;!doctype html&gt;
+&lt;html lang=en&gt;
+&lt;meta charset=utf-8&gt;
+&lt;meta content="width=device-width,initial-scale=1" name=viewport&gt;
+&lt;title&gt;A Title&lt;/title&gt;
+&lt;link href=a/css/file.css rel=stylesheet&gt;</code>
+  <li>If a page must disable mobile zooming, then use this meta tag instead:<code>&lt;meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport&gt;</code>
   <li>Element IDs:<ul>
     <li>Must be able to be used in <a href=js.htm>JavaScript</a> dot notation.
     <li>Must not include the element "tagName".
