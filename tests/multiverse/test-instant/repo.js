@@ -34,6 +34,15 @@ function debug_pick_entity(cursor){
       'x': x,
       'y': y
     });
+    webgl_shader_use('default');
+    const clear_color = webgl_properties.clear_color;
+    webgl.clearColor(
+      clear_color[0],
+      clear_color[1],
+      clear_color[2],
+      1
+    );
+    webgl_draw();
 
     let picked = false;
     if(color[0] !== 0
@@ -121,9 +130,6 @@ function debug_pick_entity(cursor){
             core_elements.reticle.style.width = '4px';
         }
     }
-
-    webgl_shader_use('default');
-    webgl_draw();
 
     return {
       'color': color,
