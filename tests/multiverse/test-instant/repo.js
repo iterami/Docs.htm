@@ -208,9 +208,12 @@ function new_game(){
     });
 }
 
+function repo_escape(){
+    core_elements.repo_ui.style.display = 'inline';
+}
+
 function repo_init(){
     core_repo_init({
-      'info': '<div id=debug_color></div><div id=debug_entity></div>',
       'pointerbinds': {
         'contextmenu': {
           'preventDefault': true,
@@ -233,7 +236,7 @@ function repo_init(){
       'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td>Debug Picking'
         + '<tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
       'title': 'Docs.htm',
-      'ui': '<span id=picked></span><div id=color></div>',
+      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div>',
       'ui_elements': [
         'debug_result',
       ],
