@@ -1,0 +1,39 @@
+{
+  "title": "Reticle Test",
+  "camera_zoom_max": 0,
+  "picking": 2,
+  "reticle": true,
+  "spawn": {
+    "position_y": 5
+  },
+  "characters": [
+    {
+      "id": "test_reticle",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "event_todo": [
+            {
+              "stat": "vertex_colors",
+              "todo": "_self"
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ]
+}
