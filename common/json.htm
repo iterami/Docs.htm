@@ -136,9 +136,10 @@
   // Optional. If this level will request the pointer remain locked to the canvas.
   "pointerlock": false,
 
-  // Optional. If this level should display the reticle in the center of the screen.
-  // Very useful for aiding players with first person picking.
-  "reticle": true,
+  // Optional. If this level should display the reticle in the center of the screen to help with picking.
+  // If the value is true, then a default reticle will be displayed.
+  // If the value is a string of css, then it will be applied to the reticle element.
+  "reticle": "background:#0f0;height:10px;width:10px;",
 
   // Optional. Properties that are applied to all non-static characters when they spawn.
   "spawn": {
@@ -298,10 +299,10 @@
           "alpha": 1,
 
           // Optional. ID of character or entity that this entity is attached to.
-          "attach_to": '_me',
+          "attach_to": "_me",
 
           // Optional. Variable that contains what this entity is attached to.
-          "attach_type": "entity_entities",
+          "attach_type": "webgl_characters",
 
           // Optional. Position offset relative to position of the entity/character attached to.
           "attach_x": 0,

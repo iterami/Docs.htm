@@ -2,7 +2,7 @@
   "title": "Reticle Test",
   "camera_zoom_max": 0,
   "picking": 2,
-  "reticle": true,
+  "reticle": "background:#0f0;height:10px;width:10px;",
   "spawn": {
     "position_y": 5
   },
