@@ -10,18 +10,18 @@
       "entities": [
         {
           "id": "base",
-          "attach_x": -50,
+          "attach_x": -70,
           "texture": "grid.png",
-          "texture_x": 30,
+          "texture_x": 34,
           "texture_y": 20,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
-            150, 0, -100,
-            -150, 0, -100,
-            -150, 0, 100,
-            150, 0, 100
+            170, 0, -100,
+            -170, 0, -100,
+            -170, 0, 100,
+            170, 0, 100
           ]
         },
         {
@@ -31,8 +31,8 @@
           "rotate_z": 330,
           "vertices": [
             0, 0, -10,
-            -50, 0, -10,
-            -50, 0, 10,
+            -40, 0, -10,
+            -40, 0, 10,
             0, 0, 10
           ]
         },
@@ -43,8 +43,8 @@
           "rotate_z": 300,
           "vertices": [
             0, 0, -10,
-            -50, 0, -10,
-            -50, 0, 10,
+            -40, 0, -10,
+            -40, 0, 10,
             0, 0, 10
           ]
         },
@@ -54,10 +54,10 @@
           "attach_z": 10,
           "rotate_z": 30,
           "vertices": [
-            50, 0, -10,
+            40, 0, -10,
             0, 0, -10,
             0, 0, 10,
-            50, 0, 10
+            40, 0, 10
           ]
         },
         {
@@ -66,10 +66,10 @@
           "attach_z": -10,
           "rotate_z": 60,
           "vertices": [
-            50, 0, -10,
+            40, 0, -10,
             0, 0, -10,
             0, 0, 10,
-            50, 0, 10
+            40, 0, 10
           ]
         },
         {
@@ -78,8 +78,8 @@
           "attach_z": -30,
           "rotate_x": 30,
           "vertices": [
-            10, 0, -50,
-            -10, 0, -50,
+            10, 0, -40,
+            -10, 0, -40,
             -10, 0, 0,
             10, 0, 0
           ]
@@ -90,8 +90,8 @@
           "attach_z": -30,
           "rotate_x": 60,
           "vertices": [
-            10, 0, -50,
-            -10, 0, -50,
+            10, 0, -40,
+            -10, 0, -40,
             -10, 0, 0,
             10, 0, 0
           ]
@@ -104,8 +104,8 @@
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
-            -10, 0, 50,
-            10, 0, 50
+            -10, 0, 40,
+            10, 0, 40
           ]
         },
         {
@@ -116,8 +116,119 @@
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
-            -10, 0, 50,
-            10, 0, 50
+            -10, 0, 40,
+            10, 0, 40
+          ]
+        },
+        {
+          "id": "wall_30",
+          "attach_x": 30,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 30,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_60",
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 60,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_120",
+          "attach_x": -30,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 120,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_150",
+          "attach_x": -60,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 150,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_210",
+          "attach_x": -90,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 210,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_240",
+          "attach_x": -120,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 240,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_300",
+          "attach_x": -150,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 300,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "wall_330",
+          "attach_x": -180,
+          "attach_y": 10,
+          "attach_z": 75,
+          "rotate_y": 330,
+          "rotate_z": 270,
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
           ]
         }
       ]
@@ -147,7 +258,6 @@
       "properties": {
         "prefix": "cuboid_0",
         "character": "test_collision",
-        "position_x": -30,
         "position_y": 5,
         "position_z": -70,
         "size_x": 10,
@@ -160,7 +270,6 @@
       "properties": {
         "prefix": "cuboid_1",
         "character": "test_collision",
-        "position_x": -30,
         "position_y": 15,
         "position_z": -80,
         "size_x": 10,
@@ -173,7 +282,7 @@
       "properties": {
         "prefix": "cuboid_inverted",
         "character": "test_collision",
-        "position_x": -70,
+        "position_x": -30,
         "position_y": 11,
         "position_z": -60,
         "size_x": -20,
