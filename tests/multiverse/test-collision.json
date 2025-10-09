@@ -10,26 +10,72 @@
       "entities": [
         {
           "id": "base",
+          "attach_x": -50,
           "texture": "grid.png",
-          "texture_x": 20,
+          "texture_x": 30,
           "texture_y": 20,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
-            100, 0, -100,
-            -100, 0, -100,
-            -100, 0, 100,
-            100, 0, 100
+            150, 0, -100,
+            -150, 0, -100,
+            -150, 0, 100,
+            150, 0, 100
           ]
         },
-
-
-
+        {
+          "id": "ramp_x-30",
+          "attach_x": -170,
+          "attach_z": -10,
+          "rotate_z": 330,
+          "vertices": [
+            0, 0, -10,
+            -50, 0, -10,
+            -50, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x-60",
+          "attach_x": -170,
+          "attach_z": 10,
+          "rotate_z": 300,
+          "vertices": [
+            0, 0, -10,
+            -50, 0, -10,
+            -50, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x+30",
+          "attach_x": -110,
+          "attach_z": 10,
+          "rotate_z": 30,
+          "vertices": [
+            50, 0, -10,
+            0, 0, -10,
+            0, 0, 10,
+            50, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x+60",
+          "attach_x": -110,
+          "attach_z": -10,
+          "rotate_z": 60,
+          "vertices": [
+            50, 0, -10,
+            0, 0, -10,
+            0, 0, 10,
+            50, 0, 10
+          ]
+        },
         {
           "id": "ramp_z-30",
-          "attach_x": -150,
-          "attach_z": -25,
+          "attach_x": -130,
+          "attach_z": -30,
           "rotate_x": 30,
           "vertices": [
             10, 0, -50,
@@ -40,8 +86,8 @@
         },
         {
           "id": "ramp_z-60",
-          "attach_x": -170,
-          "attach_z": -25,
+          "attach_x": -150,
+          "attach_z": -30,
           "rotate_x": 60,
           "vertices": [
             10, 0, -50,
@@ -53,7 +99,7 @@
         {
           "id": "ramp_z+30",
           "attach_x": -150,
-          "attach_z": 25,
+          "attach_z": 30,
           "rotate_x": 330,
           "vertices": [
             10, 0, 0,
@@ -64,96 +110,14 @@
         },
         {
           "id": "ramp_z+60",
-          "attach_x": -170,
-          "attach_z": 25,
+          "attach_x": -130,
+          "attach_z": 30,
           "rotate_x": 300,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
             -10, 0, 50,
             10, 0, 50
-          ]
-        },
-
-
-
-
-
-
-
-
-
-
-        {
-          "id": "ramp_15",
-          "attach_x": -40,
-          "attach_z": -20,
-          "rotate_x": 15,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
-          ]
-        },
-        {
-          "id": "ramp_30",
-          "attach_x": -50,
-          "attach_z": -20,
-          "rotate_x": 30,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
-          ]
-        },
-        {
-          "id": "ramp_45",
-          "attach_x": -60,
-          "attach_z": -20,
-          "rotate_x": 45,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
-          ]
-        },
-        {
-          "id": "ramp_60",
-          "attach_x": -70,
-          "attach_z": -20,
-          "rotate_x": 60,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
-          ]
-        },
-        {
-          "id": "ramp_75",
-          "attach_x": -80,
-          "attach_z": -20,
-          "rotate_x": 75,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
-          ]
-        },
-        {
-          "id": "ramp_89",
-          "attach_x": -90,
-          "attach_z": -20,
-          "rotate_x": 89,
-          "vertices": [
-            5, 0, -50,
-            -5, 0, -50,
-            -5, 0, 0,
-            5, 0, 0
           ]
         }
       ]
@@ -185,7 +149,7 @@
         "character": "test_collision",
         "position_x": -30,
         "position_y": 5,
-        "position_z": 70,
+        "position_z": -70,
         "size_x": 10,
         "size_y": 10,
         "size_z": 10
@@ -198,7 +162,7 @@
         "character": "test_collision",
         "position_x": -30,
         "position_y": 15,
-        "position_z": 80,
+        "position_z": -80,
         "size_x": 10,
         "size_y": 10,
         "size_z": 10
@@ -211,7 +175,7 @@
         "character": "test_collision",
         "position_x": -70,
         "position_y": 11,
-        "position_z": 60,
+        "position_z": -60,
         "size_x": -20,
         "size_y": -20,
         "size_z": -20
