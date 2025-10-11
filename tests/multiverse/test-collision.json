@@ -25,31 +25,7 @@
           ]
         },
         {
-          "id": "ramp_x-30",
-          "attach_x": -170,
-          "attach_z": -10,
-          "rotate_z": 330,
-          "vertices": [
-            0, 0, -10,
-            -40, 0, -10,
-            -40, 0, 10,
-            0, 0, 10
-          ]
-        },
-        {
-          "id": "ramp_x-60",
-          "attach_x": -170,
-          "attach_z": 10,
-          "rotate_z": 300,
-          "vertices": [
-            0, 0, -10,
-            -40, 0, -10,
-            -40, 0, 10,
-            0, 0, 10
-          ]
-        },
-        {
-          "id": "ramp_x+30",
+          "id": "ramp_x30",
           "attach_x": -110,
           "attach_z": 10,
           "rotate_z": 30,
@@ -61,7 +37,7 @@
           ]
         },
         {
-          "id": "ramp_x+60",
+          "id": "ramp_x60",
           "attach_x": -110,
           "attach_z": -10,
           "rotate_z": 60,
@@ -73,7 +49,31 @@
           ]
         },
         {
-          "id": "ramp_z-30",
+          "id": "ramp_x300",
+          "attach_x": -170,
+          "attach_z": 10,
+          "rotate_z": 300,
+          "vertices": [
+            0, 0, -10,
+            -40, 0, -10,
+            -40, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x330",
+          "attach_x": -170,
+          "attach_z": -10,
+          "rotate_z": 330,
+          "vertices": [
+            0, 0, -10,
+            -40, 0, -10,
+            -40, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_z30",
           "attach_x": -130,
           "attach_z": -30,
           "rotate_x": 30,
@@ -85,7 +85,7 @@
           ]
         },
         {
-          "id": "ramp_z-60",
+          "id": "ramp_z60",
           "attach_x": -150,
           "attach_z": -30,
           "rotate_x": 60,
@@ -97,10 +97,10 @@
           ]
         },
         {
-          "id": "ramp_z+30",
-          "attach_x": -150,
+          "id": "ramp_z300",
+          "attach_x": -130,
           "attach_z": 30,
-          "rotate_x": 330,
+          "rotate_x": 300,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
@@ -109,10 +109,10 @@
           ]
         },
         {
-          "id": "ramp_z+60",
-          "attach_x": -130,
+          "id": "ramp_z330",
+          "attach_x": -150,
           "attach_z": 30,
-          "rotate_x": 300,
+          "rotate_x": 330,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
