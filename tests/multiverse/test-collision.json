@@ -258,11 +258,11 @@
       "properties": {
         "prefix": "cuboid_0",
         "character": "test_collision",
-        "position_y": 5,
-        "position_z": -70,
-        "size_x": 10,
-        "size_y": 10,
-        "size_z": 10
+        "position_y": 4,
+        "position_z": -60,
+        "size_x": 16,
+        "size_y": 8,
+        "size_z": 16
       }
     },
     {
@@ -270,11 +270,11 @@
       "properties": {
         "prefix": "cuboid_1",
         "character": "test_collision",
-        "position_y": 15,
+        "position_y": 12,
         "position_z": -80,
-        "size_x": 10,
-        "size_y": 10,
-        "size_z": 10
+        "size_x": 20,
+        "size_y": 4,
+        "size_z": 20
       }
     },
     {
@@ -282,7 +282,7 @@
       "properties": {
         "prefix": "cuboid_inverted",
         "character": "test_collision",
-        "position_x": -30,
+        "position_x": -40,
         "position_y": 11,
         "position_z": -60,
         "size_x": -20,
