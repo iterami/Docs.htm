@@ -10,7 +10,7 @@
       "entities": [
         {
           "id": "ramp_x30",
-          "attach_x": -110,
+          "attach_x": 30,
           "attach_z": 10,
           "rotate_z": 30,
           "vertices": [
@@ -22,7 +22,7 @@
         },
         {
           "id": "ramp_x60",
-          "attach_x": -110,
+          "attach_x": 30,
           "attach_z": -10,
           "rotate_z": 60,
           "vertices": [
@@ -34,7 +34,7 @@
         },
         {
           "id": "ramp_x300",
-          "attach_x": -170,
+          "attach_x": -30,
           "attach_z": 10,
           "rotate_z": 300,
           "vertices": [
@@ -46,7 +46,7 @@
         },
         {
           "id": "ramp_x330",
-          "attach_x": -170,
+          "attach_x": -30,
           "attach_z": -10,
           "rotate_z": 330,
           "vertices": [
@@ -58,7 +58,7 @@
         },
         {
           "id": "ramp_z30",
-          "attach_x": -130,
+          "attach_x": 10,
           "attach_z": -30,
           "rotate_x": 30,
           "vertices": [
@@ -70,7 +70,7 @@
         },
         {
           "id": "ramp_z60",
-          "attach_x": -150,
+          "attach_x": -10,
           "attach_z": -30,
           "rotate_x": 60,
           "vertices": [
@@ -82,7 +82,7 @@
         },
         {
           "id": "ramp_z300",
-          "attach_x": -130,
+          "attach_x": 10,
           "attach_z": 30,
           "rotate_x": 300,
           "vertices": [
@@ -94,7 +94,7 @@
         },
         {
           "id": "ramp_z330",
-          "attach_x": -150,
+          "attach_x": -10,
           "attach_z": 30,
           "rotate_x": 330,
           "vertices": [
@@ -106,9 +106,9 @@
         },
         {
           "id": "wall_30",
-          "attach_x": 30,
+          "attach_x": 90,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 30,
           "rotate_z": 270,
           "vertices": [
@@ -120,8 +120,9 @@
         },
         {
           "id": "wall_60",
+          "attach_x": 60,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 60,
           "rotate_z": 270,
           "vertices": [
@@ -133,9 +134,9 @@
         },
         {
           "id": "wall_120",
-          "attach_x": -30,
+          "attach_x": 30,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 120,
           "rotate_z": 270,
           "vertices": [
@@ -147,9 +148,8 @@
         },
         {
           "id": "wall_150",
-          "attach_x": -60,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 150,
           "rotate_z": 270,
           "vertices": [
@@ -161,9 +161,9 @@
         },
         {
           "id": "wall_210",
-          "attach_x": -90,
+          "attach_x": -30,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 210,
           "rotate_z": 270,
           "vertices": [
@@ -175,9 +175,9 @@
         },
         {
           "id": "wall_240",
-          "attach_x": -120,
+          "attach_x": -60,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 240,
           "rotate_z": 270,
           "vertices": [
@@ -189,9 +189,9 @@
         },
         {
           "id": "wall_300",
-          "attach_x": -150,
+          "attach_x": -90,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 300,
           "rotate_z": 270,
           "vertices": [
@@ -203,9 +203,9 @@
         },
         {
           "id": "wall_330",
-          "attach_x": -180,
+          "attach_x": -120,
           "attach_y": 10,
-          "attach_z": 75,
+          "attach_z": 150,
           "rotate_y": 330,
           "rotate_z": 270,
           "vertices": [
@@ -217,27 +217,25 @@
         },
         {
           "id": "base",
-          "attach_x": -70,
           "texture": "grid.png",
-          "texture_x": 34,
-          "texture_y": 20,
+          "texture_x": 10,
+          "texture_y": 10,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
-            170, 0, -100,
-            -170, 0, -100,
-            -170, 0, 100,
-            170, 0, 100
+            250, 0, -250,
+            -250, 0, -250,
+            -250, 0, 250,
+            250, 0, 250
           ]
         }
       ]
     },
     {
       "id": "test_rotatable",
-      "position_x": 75,
+      "position_x": 150,
       "position_y": 50,
-      "position_z": -75,
       "rotate_z": 30,
       "spawn": false
     },
@@ -246,9 +244,9 @@
       "change_rotate_x": 1,
       "change_rotate_y": 1,
       "change_rotate_z": 1,
-      "position_x": 75,
+      "position_x": 150,
       "position_y": 50,
-      "position_z": 75,
+      "position_z": 100,
       "spawn": false
     }
   ],
@@ -258,8 +256,9 @@
       "properties": {
         "prefix": "cuboid_0",
         "character": "test_collision",
+        "position_x": -100,
         "position_y": 4,
-        "position_z": -60,
+        "position_z": -100,
         "size_x": 16,
         "size_y": 8,
         "size_z": 16
@@ -270,8 +269,9 @@
       "properties": {
         "prefix": "cuboid_1",
         "character": "test_collision",
+        "position_x": -100,
         "position_y": 12,
-        "position_z": -80,
+        "position_z": -120,
         "size_x": 20,
         "size_y": 4,
         "size_z": 20
@@ -282,12 +282,12 @@
       "properties": {
         "prefix": "cuboid_inverted",
         "character": "test_collision",
-        "position_x": -40,
-        "position_y": 11,
-        "position_z": -60,
-        "size_x": -20,
+        "position_x": 150,
+        "position_y": 16,
+        "position_z": -100,
+        "size_x": -50,
         "size_y": -20,
-        "size_z": -20
+        "size_z": -50
       }
     },
     {
