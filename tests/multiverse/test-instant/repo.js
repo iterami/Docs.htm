@@ -19,6 +19,7 @@ function debug_pick_color(args){
 }
 
 function debug_pick_entity(cursor){
+    let picked = false;
     const x = webgl_properties.pointerlock ? Math.floor(globalThis.innerWidth / 2) : core_pointer.x;
     const y = webgl_properties.pointerlock ? Math.floor(globalThis.innerHeight / 2) : core_pointer.y;
 
@@ -34,17 +35,7 @@ function debug_pick_entity(cursor){
       'x': x,
       'y': y
     });
-    webgl_shader_use('default');
-    const clear_color = webgl_properties.clear_color;
-    webgl.clearColor(
-      clear_color[0],
-      clear_color[1],
-      clear_color[2],
-      1
-    );
-    webgl_draw();
 
-    let picked = false;
     if(color[0] !== 0
       || color[1] !== 0
       || color[2] !== 0){
@@ -112,8 +103,8 @@ function debug_pick_entity(cursor){
         if(cursor === true){
             webgl.canvas.style.cursor = 'pointer';
             if(core_elements.reticle){
-                core_elements.reticle.style.height = '6px';
-                core_elements.reticle.style.width = '6px';
+                core_elements.reticle.style.height = Math.ceil(core_elements.reticle.dataset.height * 1.5) + 'px';
+                core_elements.reticle.style.width = Math.ceil(core_elements.reticle.dataset.width * 1.5) + 'px';
             }
 
         }else{
@@ -126,10 +117,20 @@ function debug_pick_entity(cursor){
     }else if(cursor === true){
         webgl.canvas.style.cursor = 'auto';
         if(core_elements.reticle){
-            core_elements.reticle.style.height = '4px';
-            core_elements.reticle.style.width = '4px';
+            core_elements.reticle.style.height = core_elements.reticle.dataset.height + 'px';
+            core_elements.reticle.style.width = core_elements.reticle.dataset.width + 'px';
         }
     }
+
+    webgl_shader_use('default');
+    const clear_color = webgl_properties.clear_color;
+    webgl.clearColor(
+      clear_color[0],
+      clear_color[1],
+      clear_color[2],
+      1
+    );
+    webgl_draw();
 
     return {
       'color': color,
