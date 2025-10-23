@@ -162,6 +162,7 @@ function new_game(){
                   },
                 ],
                 'picking': true,
+                'picking_xyz': true,
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 10,
@@ -180,6 +181,14 @@ function new_game(){
                 'attach_y': 10,
                 'attach_z': -40,
                 'change_rotate_y': 1,
+                'event_todo': [
+                  {
+                    'stat': 'vertex_colors',
+                    'todo': '_self',
+                  },
+                ],
+                'picking': true,
+                'picking_xyz': true,
                 'rotate_x': 90,
                 'texture': 'grid.png',
                 'vertices': [
@@ -237,14 +246,14 @@ function repo_init(){
       },
       'root': '../../webgl-standalone.htm',
       'storage': {
-        'debug_picking': false,
+        'debug_picking': true,
         'pointerlock': true,
       },
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td>Debug Picking'
         + '<tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
       'title': 'Docs.htm',
-      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div>',
+      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div>',
       'ui_elements': [
         'debug_result',
       ],
@@ -289,6 +298,7 @@ function repo_logic(){
         'picked': picked
           ? picked.id
           : 'false',
+        'xyz': 'x' + webgl_picked_x + ' y' + webgl_picked_y + ' z' + webgl_picked_z,
       },
     });
 }
