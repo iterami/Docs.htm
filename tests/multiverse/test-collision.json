@@ -42,10 +42,36 @@
           ]
         },
         {
+          "id": "ramp_x30_reverse",
+          "attach_x": 50,
+          "attach_y": 50,
+          "attach_z": 10,
+          "rotate_z": 120,
+          "vertices": [
+            40, 0, -10,
+            0, 0, -10,
+            0, 0, 10,
+            40, 0, 10
+          ]
+        },
+        {
           "id": "ramp_x60",
           "attach_x": 30,
           "attach_z": -10,
           "rotate_z": 60,
+          "vertices": [
+            40, 0, -10,
+            0, 0, -10,
+            0, 0, 10,
+            40, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x60_reverse",
+          "attach_x": 50,
+          "attach_y": 50,
+          "attach_z": -10,
+          "rotate_z": 150,
           "vertices": [
             40, 0, -10,
             0, 0, -10,
@@ -66,10 +92,36 @@
           ]
         },
         {
+          "id": "ramp_x300_reverse",
+          "attach_x": -50,
+          "attach_y": 50,
+          "attach_z": 10,
+          "rotate_z": 210,
+          "vertices": [
+            0, 0, -10,
+            -40, 0, -10,
+            -40, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
           "id": "ramp_x330",
           "attach_x": -30,
           "attach_z": -10,
           "rotate_z": 330,
+          "vertices": [
+            0, 0, -10,
+            -40, 0, -10,
+            -40, 0, 10,
+            0, 0, 10
+          ]
+        },
+        {
+          "id": "ramp_x330_reverse",
+          "attach_x": -50,
+          "attach_y": 50,
+          "attach_z": -10,
+          "rotate_z": 240,
           "vertices": [
             0, 0, -10,
             -40, 0, -10,
@@ -90,10 +142,36 @@
           ]
         },
         {
+          "id": "ramp_z30_reverse",
+          "attach_x": 10,
+          "attach_y": 50,
+          "attach_z": -50,
+          "rotate_x": 120,
+          "vertices": [
+            10, 0, -40,
+            -10, 0, -40,
+            -10, 0, 0,
+            10, 0, 0
+          ]
+        },
+        {
           "id": "ramp_z60",
           "attach_x": -10,
           "attach_z": -30,
           "rotate_x": 60,
+          "vertices": [
+            10, 0, -40,
+            -10, 0, -40,
+            -10, 0, 0,
+            10, 0, 0
+          ]
+        },
+        {
+          "id": "ramp_z60_reverse",
+          "attach_x": -10,
+          "attach_y": 50,
+          "attach_z": -50,
+          "rotate_x": 150,
           "vertices": [
             10, 0, -40,
             -10, 0, -40,
@@ -114,10 +192,36 @@
           ]
         },
         {
+          "id": "ramp_z300_reverse",
+          "attach_x": 10,
+          "attach_y": 50,
+          "attach_z": 50,
+          "rotate_x": 30,
+          "vertices": [
+            10, 0, 0,
+            -10, 0, 0,
+            -10, 0, 40,
+            10, 0, 40
+          ]
+        },
+        {
           "id": "ramp_z330",
           "attach_x": -10,
           "attach_z": 30,
           "rotate_x": 330,
+          "vertices": [
+            10, 0, 0,
+            -10, 0, 0,
+            -10, 0, 40,
+            10, 0, 40
+          ]
+        },
+        {
+          "id": "ramp_z330_reverse",
+          "attach_x": -10,
+          "attach_y": 50,
+          "attach_z": 50,
+          "rotate_x": 60,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
