@@ -3,6 +3,27 @@
   "spawn": {
     "position_y": 5
   },
+  "paths": {
+    "moving": {
+      "end": "loop",
+      "points": [
+        {
+          "position_x": -200,
+          "position_z": -150
+        },
+        {
+          "position_x": -100
+        },
+        {
+          "position_z": -50
+        },
+        {
+          "position_x": -200
+        }
+      ],
+      "speed": 0.5
+    }
+  },
   "characters": [
     {
       "id": "test_collision",
@@ -248,6 +269,14 @@
       "position_y": 50,
       "position_z": 100,
       "spawn": false
+    },
+    {
+      "id": "test_moving",
+      "path_id": "moving",
+      "position_x": -200,
+      "position_y": 10,
+      "position_z": -150,
+      "spawn": false
     }
   ],
   "prefabs": [
@@ -256,9 +285,9 @@
       "properties": {
         "prefix": "cuboid_0",
         "character": "test_collision",
-        "position_x": -100,
+        "position_x": -50,
         "position_y": 4,
-        "position_z": -100,
+        "position_z": -150,
         "size_x": 16,
         "size_y": 8,
         "size_z": 16
@@ -269,9 +298,9 @@
       "properties": {
         "prefix": "cuboid_1",
         "character": "test_collision",
-        "position_x": -100,
+        "position_x": -50,
         "position_y": 12,
-        "position_z": -120,
+        "position_z": -170,
         "size_x": 20,
         "size_y": 4,
         "size_z": 20
@@ -288,6 +317,16 @@
         "size_x": -50,
         "size_y": -20,
         "size_z": -50
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "cuboid_moving",
+        "character": "test_moving",
+        "size_x": 50,
+        "size_y": 10,
+        "size_z": 50
       }
     },
     {
