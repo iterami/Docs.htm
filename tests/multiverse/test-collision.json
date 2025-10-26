@@ -196,7 +196,7 @@
           "attach_x": 10,
           "attach_y": 50,
           "attach_z": 50,
-          "rotate_x": 30,
+          "rotate_x": 210,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
@@ -221,7 +221,7 @@
           "attach_x": -10,
           "attach_y": 50,
           "attach_z": 50,
-          "rotate_x": 60,
+          "rotate_x": 240,
           "vertices": [
             10, 0, 0,
             -10, 0, 0,
