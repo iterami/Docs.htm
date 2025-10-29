@@ -76,9 +76,9 @@ function repo_init(){
       },
       'blur': {
         'todo': function(event){
+            update(event);
             update_keys();
             update_pointer();
-            update(event);
         },
       },
       'globals': {
