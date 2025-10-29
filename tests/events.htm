@@ -181,14 +181,15 @@ function update_keys(event){
       || !core_elements.check_keys.checked){
         return;
     }
-    if(event
-      && (event.code || event.key)){
+
+    if(event){
         const code = event.code.length
           ? event.code
           : event.key;
         core_elements.code.textContent = code;
 
-        if(!event.ctrlKey
+        if(code
+          && !event.ctrlKey
           && !event.altKey
           && !event.metaKey
           && code !== 'ControlLeft'
@@ -202,6 +203,7 @@ function update_keys(event){
             };
         }
     }
+
     update(event);
 
     const sorted_keys = core_sort_strings({
@@ -219,7 +221,9 @@ function update_pointer(event){
       || !core_elements.check_pointer.checked){
         return;
     }
+
     update(event);
+
     core_ui_update({
       'ids': {
         'core_mobile': core_mobile,
