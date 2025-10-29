@@ -4,10 +4,20 @@
 <meta content="width=device-width,initial-scale=1" name=viewport>
 <title>Event Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
+<style>
+table{
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events<br>
-<button id=pointerLock type=button>pointerLock</button><input id=text type=text><br>
 <table>
+  <tbody id=totals>
+    <tr class=header>
+      <td>Events
+      <td>Totals
+</table><table>
   <tr>
     <td>core_type(event)
     <td id=event>
@@ -17,20 +27,34 @@
   <tr>
     <td>TouchEvent: <span id=touchevent></span>
     <td>core_mobile: <span id=core_mobile></span>
-  <tbody id=totals>
-    <tr class=header>
-      <td>Events
-      <td>Totals
-  </tbody>
   <tr class=header>
     <td><input checked id=check_pointer type=checkbox>Pointer
     <td><input checked id=check_scroll type=checkbox>Scroll
   <tr>
+    <td><button id=pointerLock type=button>pointerLock</button>
+    <td><input id=text type=text>
+  <tr>
     <td>deltaY Wheel
     <td id=deltaY>
-  <tbody id=core_pointer></tbody>
+  <tbody id=core_pointer>
+</table><table>
   <tr class=header>
     <td><input checked id=check_keys type=checkbox>Keys
+    <td>Modifiers
+  <tr>
+    <td>altKey
+    <td id=altKey>
+  <tr>
+    <td>ctrlKey
+    <td id=ctrlKey>
+  <tr>
+    <td>metaKey
+    <td id=metaKey>
+  <tr>
+    <td>shiftKey
+    <td id=shiftKey>
+  <tr class=header>
+    <td>Code:
     <td id=code>
   <tbody id=keys>
 </table>
@@ -142,7 +166,11 @@ function update(event){
     core_ui_update({
       'ids': {
         [event.type]: ++totals[event.type],
+        'altKey': event.altKey,
+        'ctrlKey': event.ctrlKey,
         'event': core_type(event),
+        'metaKey': event.metaKey,
+        'shiftKey': event.shiftKey,
         'type': event.type,
       },
     });
@@ -158,9 +186,7 @@ function update_keys(event){
         const code = event.code.length
           ? event.code
           : event.key;
-        core_elements.code.textContent = event.code.length
-          ? 'code: ' + code
-          : 'key: ' + code;
+        core_elements.code.textContent = code;
 
         if(!event.ctrlKey
           && !event.altKey
