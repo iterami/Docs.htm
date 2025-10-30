@@ -117,14 +117,7 @@ globalThis.onload = function(){
 
     let propertiestable = '';
     for(const property in navigator){
-        const type = typeof navigator[property];
-        if(type !== 'boolean'
-          && type !== 'number'
-          && type !== 'string'){
-            continue;
-        }
-
-        propertiestable += '<tr><td>' + property + '<td id="property_' + property + '">' + navigator[property];
+        propertiestable += '<tr><td>' + property + '<td id="property_' + property + '">' + JSON.stringify(navigator[property]);
     }
     document.getElementById('properties').innerHTML = propertiestable;
 
