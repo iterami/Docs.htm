@@ -6,17 +6,20 @@
 <link href=../../common/css/core.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/core_ui_update.htm>core_ui_update(args)</a><br>
-<textarea id=values>{
-  "button": "Button Text",
-  "input_checkbox": true,
-  "input_color": "#00ff00",
-  "input_number": 123.456,
-  "input_range": 23,
-  "input_text": "Input Text",
-  "progress": 23,
-  "select": 1,
-  "text": "Text",
-  "textarea": "Text Area"
+<textarea id=args>{
+  "class": true,
+  "ids": {
+    "button": "Button Text",
+    "input_checkbox": true,
+    "input_color": "#00ff00",
+    "input_number": 123.456,
+    "input_range": 23,
+    "input_text": "Input Text",
+    "progress": 23,
+    "select": 1,
+    "text": "Text",
+    "textarea": "Text Area"
+  }
 }</textarea>
 <table>
   <tr class=header>
@@ -77,15 +80,12 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
-        'values',
+        'args',
       ],
     });
 }
 
 function update(){
-    core_ui_update({
-      'class': true,
-      'ids': JSON.parse(core_elements.values.value),
-    });
+    core_ui_update(JSON.parse(core_elements.args.value));
 }
 </script>
