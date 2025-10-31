@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Tooltip Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+<style>
+.tooltip{
+    background: #111;
+    border: 1px solid #aaa;
+    display: none;
+    padding: 9px;
+    position: fixed;
+    text-align: left;
+    width: max-content;
+}
+</style>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Tooltips<br>
+<div class=tooltip style=display:block;position:static>
+  <div>Example Tooltip Design</div>
+  <div>This is some example tooltip text.</div>
+</div>
+<button class=big id=test>Tooltip<br>Test Button</button>
+<div class=tooltip id=tooltip></div>
+
+<script src=../../common/js/core.js></script>
+<script>
+function handle_tooltip_hide(event){
+    core_elements.tooltip.style.display = 'none';
+    core_elements.tooltip.innerHTML = '';
+}
+
+function handle_tooltip_show(event){
+    core_elements.tooltip.innerHTML = tooltips[event.target.id];
+    core_elements.tooltip.style.display = 'block';
+    core_elements.tooltip.style.left = event.target.offsetLeft - event.target.scrollLeft + 'px';
+    core_elements.tooltip.style.top = event.target.offsetTop - event.target.scrollTop + event.target.offsetHeight + 'px';
+}
+
+function handle_tooltip_toggle(event){
+    if(core_elements.tooltip.style.display === 'none'){
+        handle_tooltip_show(event);
+
+    }else{
+        handle_tooltip_hide(event);
+    }
+}
+
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'test': {
+          'onclick': handle_tooltip_toggle,
+          'onpointerenter': handle_tooltip_show,
+          'onpointerleave': handle_tooltip_hide,
+        },
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui_elements': [
+        'tooltip',
+      ],
+    });
+}
+
+const tooltips = {
+  'test': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
+};
+</script>
