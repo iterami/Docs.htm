@@ -5,6 +5,9 @@
 <title>Tooltip Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
+#button{
+    position: fixed;
+}
 .tooltip{
     background: #111;
     border: 1px solid #aaa;
@@ -16,12 +19,7 @@
 }
 </style>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Tooltips<br>
-<div class=tooltip style=display:block;position:static>
-  <div>Example Tooltip Design</div>
-  <div>This is some example tooltip text.</div>
-</div>
-<button class=big id=test>Tooltip<br>Test Button</button>
+<button class=big id=button>Tooltip<br>Test Button</button>
 <div class=tooltip id=tooltip></div>
 
 <script src=../../common/js/core.js></script>
@@ -50,21 +48,33 @@ function handle_tooltip_toggle(event){
 function repo_init(){
     core_repo_init({
       'events': {
-        'test': {
+        'button': {
           'onclick': handle_tooltip_toggle,
           'onpointerenter': handle_tooltip_show,
           'onpointerleave': handle_tooltip_hide,
         },
       },
+      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>',
+      'menu': true,
       'root': 'index.htm',
+      'storage': {
+        'button_x': '0px',
+        'button_y': '300px',
+      },
+      'storage_menu': '<table><tr><td><input class=mini id=button_x type=text><td>Button X'
+        + '<tr><td><input class=mini id=button_y type=text><td>Button Y</table>',
       'title': 'Docs.htm',
       'ui_elements': [
+        'button',
         'tooltip',
       ],
     });
+
+    core_elements.button.style.left = core_storage_data.button_x;
+    core_elements.button.style.top = core_storage_data.button_y;
 }
 
 const tooltips = {
-  'test': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
+  'button': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
 };
 </script>
