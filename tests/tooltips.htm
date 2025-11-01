@@ -32,8 +32,32 @@ function handle_tooltip_hide(event){
 function handle_tooltip_show(event){
     core_elements.tooltip.innerHTML = tooltips[event.target.id];
     core_elements.tooltip.style.display = 'block';
-    core_elements.tooltip.style.left = event.target.offsetLeft - event.target.scrollLeft + 'px';
-    core_elements.tooltip.style.top = event.target.offsetTop - event.target.scrollTop + event.target.offsetHeight + 'px';
+
+    const left = Math.max(
+      event.target.offsetLeft - event.target.scrollLeft,
+      0
+    );
+    if(left + core_elements.tooltip.offsetWidth > globalThis.innerWidth){
+        core_elements.tooltip.style.left = 'auto';
+        core_elements.tooltip.style.right = 0;
+
+    }else{
+        core_elements.tooltip.style.left = left + 'px';
+        core_elements.tooltip.style.right = 'auto';
+    }
+
+    const top = Math.max(
+      event.target.offsetTop - event.target.scrollTop + event.target.offsetHeight,
+      0
+    );
+    if(top + core_elements.tooltip.offsetHeight > globalThis.innerHeight){
+        core_elements.tooltip.style.bottom = Math.abs(event.target.offsetTop - event.target.scrollTop - globalThis.innerHeight) + 'px';
+        core_elements.tooltip.style.top = 'auto';
+
+    }else{
+        core_elements.tooltip.style.bottom = 'auto';
+        core_elements.tooltip.style.top = top + 'px';
+    }
 }
 
 function handle_tooltip_toggle(event){
@@ -53,8 +77,12 @@ function repo_init(){
           'onpointerenter': handle_tooltip_show,
           'onpointerleave': handle_tooltip_hide,
         },
+        'update': {
+          'onclick': update_button,
+        },
       },
-      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>',
+      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>'
+        + '<button id=update type=button>Update Button Position</button>',
       'menu': true,
       'root': 'index.htm',
       'storage': {
@@ -70,6 +98,10 @@ function repo_init(){
       ],
     });
 
+    update_button();
+}
+
+function update_button(){
     core_elements.button.style.left = core_storage_data.button_x;
     core_elements.button.style.top = core_storage_data.button_y;
 }
