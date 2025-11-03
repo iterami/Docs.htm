@@ -35,6 +35,7 @@ function load_cave(){
       'character': 0,
       'json': {
         ...level_properties(),
+        'fog_end': 100,
         'characters': [
           {
             'id': 'arpg_cave',
@@ -118,11 +119,10 @@ function load_cave(){
                 'exclude': true,
               },
               'character': 'arpg_cave',
-              'position_y': 5,
-              'position_z': -25,
-              'size_x': -40,
-              'size_y': -10,
-              'size_z': -60,
+              'position_y': 25,
+              'size_x': -500,
+              'size_y': -50,
+              'size_z': -500,
             },
           },
         ],
@@ -136,13 +136,13 @@ function load_town(spawn){
       {
         'position_x': 100,
         'position_z': -65,
+        'rotate_y': 180,
       }
     ];
     webgl_level_load({
       'character': 0,
       'json': {
         ...level_properties(),
-        'clear_color': [0, .2, 0],
         'spawn': spawners[spawn],
         'characters': [
           {
@@ -150,57 +150,33 @@ function load_town(spawn){
             'spawn': false,
             'entities': [
               {
-                'id': 'home',
-                'attach_z': -25,
-                'texture': 'grid.png',
-                'texture_x': 6,
-                'texture_y': 9,
+                'id': 'lava',
+                'attach_x': 130,
+                'attach_z': 5,
+                'attach_y': .01,
+                'event_range': 0,
+                'event_todo': [
+                  {
+                    'stat': 'life',
+                    'value': -1,
+                  },
+                ],
+                'texture': 'lavaleaf.png,.1,.1',
                 'vertex_colors': [
-                  .5, .5, .5, 1,
+                  1, 0, 0, 1,
                 ],
                 'vertices': [
-                  30, 0, -45,
-                  -30, 0, -45,
-                  -30, 0, 45,
-                  30, 0, 45,
+                  20, 0, -20,
+                  -20, 0, -20,
+                  -20, 0, 20,
+                   20, 0, 20,
                 ],
               },
               {
-                'id': 'bridge',
-                'attach_x': 50,
-                'texture': 'grid.png',
-                'texture_x': 4,
-                'texture_y': 2,
-                'vertex_colors': [
-                  .8, .4, 0, 1,
-                ],
-                'vertices': [
-                  20, 0, -10,
-                  -20, 0, -10,
-                  -20, 0, 10,
-                  20, 0, 10,
-                ],
-              },
-              {
-                'id': 'forest',
+                'id': 'cave_entrance',
                 'attach_x': 100,
-                'attach_z': -25,
-                'texture': 'lavaleaf.png',
-                'vertex_colors': [
-                  .1, .4, .1, 1,
-                ],
-                'vertices': [
-                  30, 0, -45,
-                  -30, 0, -45,
-                  -30, 0, 45,
-                  30, 0, 45,
-                ],
-              },
-              {
-                'id': 'cave',
-                'attach_x': 100,
-                'attach_y': 5,
-                'attach_z': -70,
+                'attach_y': 10,
+                'attach_z': -74.99,
                 'event_range': 0,
                 'event_todo': [
                   {
@@ -213,10 +189,10 @@ function load_town(spawn){
                   0, 0, 0, 1,
                 ],
                 'vertices': [
-                  15, 0, -5,
-                  -15, 0, -5,
-                  -15, 0, 5,
-                   15, 0, 5,
+                  20, 0, -10,
+                  -20, 0, -10,
+                  -20, 0, 10,
+                   20, 0, 10,
                 ],
               },
             ],
@@ -227,6 +203,33 @@ function load_town(spawn){
             'spawn': {
               'position_x': 0,
               'position_z': -50,
+              'rotate_y': 0,
+            },
+          },
+        ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'town',
+              'all': {
+                'vertex_colors': [
+                  .3, .3, .3, 1,
+                ],
+                'texture': 'grid.png',
+                'texture_x': 20,
+                'texture_y': 10,
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'character': 'arpg_town',
+              'position_x': 50,
+              'position_y': 25,
+              'position_z': -25,
+              'size_x': -200,
+              'size_y': -50,
+              'size_z': -100,
             },
           },
         ],
@@ -419,7 +422,7 @@ function stats(team){
       'npcs': {},
       'skill': '',
       'spawn': {
-        'camera_rotate_x': 65,
+        'camera_rotate_x': 60,
         'position_y': 3,
       },
       'speed': .5,
