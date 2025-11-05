@@ -1,23 +1,25 @@
 {
   "title": "Lighting Test",
   "ambient_color": [0.5, 0.5, 0.5],
+  "fog_end": 100,
+  "fog_start": 100,
   "paths": {
     "loop": {
       "end": "loop",
       "points": [
         {
-          "position_x": -45,
-          "position_z": -45
+          "position_x": -95,
+          "position_z": -95
         },
         {
-          "position_x": 45
+          "position_x": 95
         },
         {
-          "position_x": -45,
-          "position_z": 45
+          "position_x": -95,
+          "position_z": 95
         },
         {
-          "position_x": 45
+          "position_x": 95
         }
       ],
       "speed": 0.5
@@ -170,9 +172,9 @@
           "collision": false
         },
         "character": "test_lighting",
-        "size_x": -100,
+        "size_x": -200,
         "size_y": -20,
-        "size_z": -100
+        "size_z": -200
       }
     },
     {
