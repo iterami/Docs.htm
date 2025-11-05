@@ -163,7 +163,9 @@
       "properties": {
         "prefix": "cuboid",
         "all": {
-          "texture": "lavaleaf.png",
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ]
