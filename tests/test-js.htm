@@ -25,8 +25,8 @@ function repo_init(){
 
     document.getElementById('consts').innerHTML = test_consts({
       'consts': [
-        'fake_constant',
         'Math.PI',
+        'undefined_constant',
       ],
     });
     document.getElementById('results').innerHTML = test_run({
@@ -57,6 +57,14 @@ function repo_init(){
           },
           'expect': 'wrong',
           'function': 'core_round',
+        },
+        {
+          'args': {
+            'decimals': 0,
+            'number': 123.456,
+          },
+          'expect': 123,
+          'function': 'undefined_function',
         },
       ],
     });
