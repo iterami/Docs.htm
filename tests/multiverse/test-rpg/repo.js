@@ -1,5 +1,13 @@
 'use strict';
 
+function debug_xp(){
+    webgl_stat_modify({
+      'stat': 'level_xp',
+      'target': webgl_characters[webgl_character_id],
+      'value': 1000,
+    });
+}
+
 function item_drop(item){
 }
 
@@ -14,6 +22,7 @@ function kill(id){
       && webgl_characters[id].level >= webgl_characters[webgl_character_id].level - 10){
         webgl_stat_modify({
           'stat': 'level_xp',
+          'target': webgl_characters[id],
         });
     }
 
@@ -368,9 +377,21 @@ function repo_init(){
           },
         },
         'talents': {
+          'Jump Height': {
+            'stat': 'jump_height',
+            'value': .01,
+          },
           'Life': {
-            'stat': 'life',
+            'stat': 'life_max',
             'value': 1,
+          },
+          'Mana': {
+            'stat': 'mana_max',
+            'value': 1,
+          },
+          'Speed': {
+            'stat': 'speed',
+            'value': .01,
           },
         },
       },
@@ -401,6 +422,7 @@ function repo_init(){
       'ui': 'Skill: <span id=skill></span><br>'
         + 'Life: <span id=life></span>/<span id=life_max></span><br>'
         + 'Mana: <span id=mana></span>/<span id=mana_max></span><br>'
+        + 'XP: <span id=xp_percent></span>%<br>'
         + 'Floor: <span id=floor></span>',
     });
     core_tab_create({
@@ -431,7 +453,7 @@ function repo_init(){
 
     let talents_ui = '<ul>';
     for(const talent in talents){
-        talents_ui += '<li>+' + talents[talent].value + ' ' + talent + ' <button onclick="talent_modify(\'' + talent + '\')" type=button>+</button>';
+        talents_ui += '<li><button onclick="talent_modify(\'' + talent + '\')" type=button>+</button> +' + talents[talent].value + ' ' + talent;
     }
     core_tab_create({
       'content': 'Talents (<span id=talent_points></span> points): ' + talents_ui + '</ul>',
@@ -439,9 +461,19 @@ function repo_init(){
       'id': 'talents',
       'label': 'Talents',
     });
+    core_tab_create({
+      'content': '<button onclick=debug_xp() type=button>Gain 1,000 XP</button>',
+      'group': 'core_menu',
+      'id': 'debug',
+      'label': 'Debug',
+    });
 }
 
-function repo_stat_modify(){
+function repo_stat_modify(args){
+    if(args.stat === 'level'){
+        args.target.talent_points++;
+    }
+
     update_ui();
 }
 
@@ -545,7 +577,6 @@ function stats(team){
       },
       'speed': .5,
       'talent_points': 0,
-      'talent_points_max': 0,
       'team': team,
     };
 }
@@ -558,7 +589,10 @@ function talent_modify(talent){
     }
 
     character.talent_points--;
-    webgl_stat_modify(talents[talent]);
+    webgl_stat_modify({
+      ...talents[talent],
+      'target': character,
+    });
 }
 
 function update_ui(){
@@ -580,8 +614,6 @@ function update_ui(){
         inventory_ui += '<li>' + character.inventory[item].id;
     }
 
-    character.talent_points_max = character.level;
-
     core_ui_update({
       'class': true,
       'ids': {
@@ -597,7 +629,8 @@ function update_ui(){
         'mana_max': character.mana_max,
         'skill': character.skill,
         'speed': character.speed,
-        'talent_points': character.talent_points_max - character.talent_points,
+        'talent_points': character.talent_points,
+        'xp_percent': character.level_xp / (Math.floor(character.level + 1) * 1e3) * 100,
       },
       'todo': 'innerHTML',
     });
