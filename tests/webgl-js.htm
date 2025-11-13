@@ -130,9 +130,34 @@ function repo_init(){
           'args': {
             'stat': 'level',
             'target': webgl_characters.test_character_0,
+            'value': 2,
+          },
+          'expect': function(result){
+              return webgl_characters.test_character_0.level === 3;
+          },
+          'function': 'webgl_stat_modify',
+        },
+        {
+          'args': {
+            'set': true,
+            'stat': 'level',
+            'target': webgl_characters.test_character_0,
+            'value': 2,
           },
           'expect': function(result){
               return webgl_characters.test_character_0.level === 2;
+          },
+          'function': 'webgl_stat_modify',
+        },
+        {
+          'args': {
+            'round': 2,
+            'stat': 'jump_height',
+            'value': .11111,
+            'target': webgl_characters.test_character_0,
+          },
+          'expect': function(result){
+              return webgl_characters.test_character_0.jump_height === 1.11;
           },
           'function': 'webgl_stat_modify',
         },
