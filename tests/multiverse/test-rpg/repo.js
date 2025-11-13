@@ -1,11 +1,30 @@
 'use strict';
 
 function debug_xp(){
+    if(!webgl_characters[webgl_character_id]){
+        return;
+    }
+
     webgl_stat_modify({
       'stat': 'level_xp',
       'target': webgl_characters[webgl_character_id],
       'value': 1000,
     });
+}
+
+function heal(){
+    const character = webgl_characters[webgl_character_id];
+    if(!character
+      || (character.life >= character.life_max
+         && character.mana >= character.mana_max)
+      || character.life <= 0){
+        return;
+    }
+
+    character.life = character.life_max;
+    character.mana = character.mana_max;
+
+    update_ui();
 }
 
 function item_drop(item){
@@ -41,6 +60,12 @@ function level_properties(){
 
 function load_cave(){
     floor++;
+    if(floor > 1){
+        webgl_stat_modify({
+          'stat': 'level_xp',
+          'target': webgl_characters[webgl_character_id],
+        });
+    }
 
     const cave_length = -Math.floor(300 + Math.random() * 300);
     const cave_width = -Math.floor(100 + Math.random() * 100);
@@ -114,9 +139,14 @@ function load_cave(){
                     'value': {
                       'id': 'npc_enemy',
                       'xz': .3,
-                      'y': .5
-                    }
-                  }
+                      'y': .5,
+                    },
+                  },
+                  {
+                    'stat': 'life',
+                    'target': '_target',
+                    'value': -10,
+                  },
                 ],
               },
             },
@@ -206,8 +236,8 @@ function load_town(spawn){
               {
                 'id': 'lava',
                 'attach_x': 130,
-                'attach_z': 5,
                 'attach_y': .01,
+                'attach_z': 5,
                 'event_range': 0,
                 'event_todo': [
                   {
@@ -254,6 +284,17 @@ function load_town(spawn){
           {
             ...stats(0),
             'id': 'npc_friend',
+            'model': {
+              'top': {
+                'event_range': 10,
+                'event_todo': [
+                  {
+                    'todo': 'heal',
+                    'type': 'function',
+                  },
+                ],
+              },
+            },
             'spawn': {
               'position_x': 0,
               'position_z': -50,
@@ -273,11 +314,11 @@ function load_town(spawn){
             'collide_bottom': 1,
             'collide_top': 1,
             'collide_xz': 2,
-            'model': spike_model('spike', 2, 1, 1),
+            'model': spike_model('spike', 3, 1, 1),
             'path_id': 'path_lava',
             'path_point': 2,
             'position_x': 85,
-            'position_y': 5,
+            'position_y': 4,
             'position_z': 5,
             'spawn': false,
           },
@@ -378,6 +419,7 @@ function repo_init(){
         },
         'talents': {
           'Jump Height': {
+            'round': 2,
             'stat': 'jump_height',
             'value': .01,
           },
@@ -390,6 +432,7 @@ function repo_init(){
             'value': 1,
           },
           'Speed': {
+            'round': 2,
             'stat': 'speed',
             'value': .01,
           },
@@ -523,9 +566,14 @@ function spike_model(id, range, xz, y){
             'value': {
               'id': id,
               'xz': xz,
-              'y': y
-            }
-          }
+              'y': y,
+            },
+          },
+          {
+            'stat': 'life',
+            'target': '_target',
+            'value': -10,
+          },
         ],
       },
     };
@@ -630,7 +678,9 @@ function update_ui(){
         'skill': character.skill,
         'speed': character.speed,
         'talent_points': character.talent_points,
-        'xp_percent': character.level_xp / (Math.floor(character.level + 1) * 1e3) * 100,
+        'xp_percent': core_round({
+          'number': character.level_xp / (Math.floor(character.level + 1) * 1e3) * 100,
+        }),
       },
       'todo': 'innerHTML',
     });
