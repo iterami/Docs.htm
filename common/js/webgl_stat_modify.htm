@@ -9,6 +9,7 @@
 <ul>
   <li>Modifies or sets a character/entity property.
   <li>Creates the stat if it does not exist and the "has" arg is false.
+  <li>The optional "round" arg can be an integer to round the modified stat to a specific number of decimal places using <a href=core_round.htm>core_round(args)</a>.
   <li>Character "life" property has extra checks to remove attached entities upon death.
   <li>Modifying "vertex-colors" randomizes colors.
   <li>Calls optional repo-specific <a href=repo_stat_modify.htm>repo_stat_modify(args)</a> function with the same args.
@@ -21,6 +22,10 @@
   <tr>
     <td>has
     <td>true
+    <td>boolean
+  <tr>
+    <td>round
+    <td>false
     <td>boolean
   <tr>
     <td>set
