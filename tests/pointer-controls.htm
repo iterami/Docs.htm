@@ -12,15 +12,6 @@
     transform-origin: left;
     width: 30px;
 }
-#direction_2{
-    background: #f00;
-    top: 20%;
-}
-#direction_2_relative{
-    background: #0f0;
-    left: 25%;
-    top: 23%;
-}
 #direction_4{
     background: #00f;
     top: 50%;
@@ -30,21 +21,45 @@
     left: 25%;
     top: 75%;
 }
+#direction_leftright{
+    background: #f00;
+    top: 20%;
+}
+#direction_leftright_relative{
+    background: #0f0;
+    left: 25%;
+    top: 23%;
+}
+#direction_updown{
+    background: #0ff;
+    left: 73%;
+    top: 50%;
+}
+#direction_updown_relative{
+    background: #ff0;
+    left: 75%;
+    top: 75%;
+}
 </style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Pointer Controls
-<div class=direction id=direction_2></div>
-<div class=direction id=direction_2_relative></div>
 <div class=direction id=direction_4></div>
 <div class=direction id=direction_4_relative></div>
+<div class=direction id=direction_leftright></div>
+<div class=direction id=direction_leftright_relative></div>
+<div class=direction id=direction_updown></div>
+<div class=direction id=direction_updown_relative></div>
 
 <script src=../../common/js/core.js></script>
 <script>
 function direction_reset(){
-    core_elements.direction_2.style.width = '30px';
-    core_elements.direction_2_relative.style.width = '30px';
-    core_elements.direction_4.style.width = '30px';
-    core_elements.direction_4_relative.style.width = '30px';
+    const width = '30px';
+    core_elements.direction_4.style.width = width;
+    core_elements.direction_4_relative.style.width = width;
+    core_elements.direction_leftright.style.width = width;
+    core_elements.direction_leftright_relative.style.width = width;
+    core_elements.direction_updown.style.width = width;
+    core_elements.direction_updown_relative.style.width = width;
 }
 
 function direction_update(){
@@ -54,30 +69,50 @@ function direction_update(){
 
     const angles = [0, 90, 180, 270]; // 0=right, 1=down, 2=left, 3=up
     let direction = 0;
-    const style_2 = core_elements.direction_2.style;
-    const style_2_relative = core_elements.direction_2_relative.style;
     const style_4 = core_elements.direction_4.style;
     const style_4_relative = core_elements.direction_4_relative.style;
+    const style_leftright = core_elements.direction_leftright.style;
+    const style_leftright_relative = core_elements.direction_leftright_relative.style;
+    const style_updown = core_elements.direction_updown.style;
+    const style_updown_relative = core_elements.direction_updown_relative.style;
     const x = core_pointer.x;
     const y = core_pointer.y;
 
-    style_2.width = '100px';
+    style_leftright.width = '100px';
     if(x > globalThis.innerWidth / 2){
         direction = 0;
 
     }else{
         direction = 2;
     }
-    style_2.transform = 'rotate(' + angles[direction] + 'deg)';
+    style_leftright.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_2_relative.width = '100px';
-    if(x > core_elements.direction_2_relative.offsetLeft){
+    style_leftright_relative.width = '100px';
+    if(x > core_elements.direction_leftright_relative.offsetLeft){
         direction = 0;
 
     }else{
         direction = 2;
     }
-    style_2_relative.transform = 'rotate(' + angles[direction] + 'deg)';
+    style_leftright_relative.transform = 'rotate(' + angles[direction] + 'deg)';
+
+    style_updown.width = '100px';
+    if(y > globalThis.innerHeight / 2){
+        direction = 1;
+
+    }else{
+        direction = 3;
+    }
+    style_updown.transform = 'rotate(' + angles[direction] + 'deg)';
+
+    style_updown_relative.width = '100px';
+    if(y > core_elements.direction_updown_relative.offsetTop){
+        direction = 1;
+
+    }else{
+        direction = 3;
+    }
+    style_updown_relative.transform = 'rotate(' + angles[direction] + 'deg)';
 
     style_4.width = '100px';
     const x_normalized = x / globalThis.innerWidth;
@@ -146,10 +181,12 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
-        'direction_2',
-        'direction_2_relative',
         'direction_4',
         'direction_4_relative',
+        'direction_leftright',
+        'direction_leftright_relative',
+        'direction_updown',
+        'direction_updown_relative',
       ],
     });
 }
