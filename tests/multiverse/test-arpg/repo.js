@@ -16,7 +16,7 @@ function heal(){
     const character = webgl_characters[webgl_character_id];
     if(!character
       || (character.life >= character.life_max
-         && character.mana >= character.mana_max)){
+         && character.mana >= character.mana_max)
       || character.life <= 0){
         return;
     }
@@ -405,6 +405,7 @@ function repo_init(){
       'beforeunload': {
         'todo': function(event){
             if(webgl !== 0){
+                core_escape(true);
                 event.preventDefault();
             }
         },
