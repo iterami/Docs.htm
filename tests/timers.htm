@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Timer Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Timers<br>
+<button id=add type=button>Add Timer</button>
+<table>
+  <tr class=header>
+    <td>Timer
+    <td>Frames
+    <td>Max
+    <td>Random
+    <td>Repeat
+  <tbody id=list>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function add_timer(){
+    const frames = Math.floor(Math.random() * 100) + 25;
+    timers.push({
+      'frames': frames,
+      'frames_max': frames,
+      'frames_random': Math.floor(Math.random() * 50),
+      'id': 'Random Finite Timer',
+      'repeat': Math.floor(Math.random() * 10),
+    });
+}
+
+function logic_loop(){
+    let list = '';
+    for(const id in timers){
+        const timer = timers[id];
+        timer.frames--;
+
+        list += '<tr><td>' + timer.id
+          + '<td>' + timer.frames
+          + '<td>' + timer.frames_max
+          + '<td>' + timer.frames_random
+          + '<td>' + timer.repeat;
+
+        if(timer.frames <= 0){
+            if(timer.repeat !== 0){
+                if(timer.repeat > 0){
+                    timer.repeat--;
+                }
+                let max = timer.frames_max;
+                if(timer.frames_random){
+                    max += Math.floor(Math.random() * timer.frames_random);
+                }
+                timer.frames = max;
+
+            }else{
+                timers.splice(timer, 1);
+            }
+        }
+    }
+
+    core_ui_update({
+      'ids': {
+        'list': list,
+      },
+      'todo': 'innerHTML',
+    });
+}
+
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'add': {
+          'onclick': add_timer,
+        },
+      },
+      'globals': {
+        'timers': [
+          {
+            'frames': 50,
+            'id': 'Finite Timer',
+            'repeat': 0,
+          },
+          {
+            'frames': 50,
+            'frames_max': 50,
+            'id': 'Infinite Timer',
+            'repeat': -1,
+          },
+        ],
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+    });
+
+    core_interval_modify({
+      'id': 'interval',
+      'interval': 200,
+      'todo': logic_loop,
+    });
+}
+</script>
