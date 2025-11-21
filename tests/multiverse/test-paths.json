@@ -33,6 +33,7 @@
         {
           "event_todo": [
             {
+              "limit": 1,
               "stat": "vertex_colors",
               "todo": "path_event_user_body"
             }
@@ -44,7 +45,6 @@
         {
           "event_todo": [
             {
-              "limit": 1,
               "stat": "vertex_colors",
               "todo": "path_event_user_body"
             }
