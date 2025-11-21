@@ -17,27 +17,32 @@ function add_timer(args){
       'frames': args.frames_max,
       ...args,
     });
+    created++;
 }
 
 function add_timer_random(){
+    if(webgl === 0){
+        return;
+    }
+
     add_timer({
       'event_end': [
         {
-          'todo': 'eval',
-          'type': 'function',
-          'value': 'console.log("Timer ended.")',
+          'todo': 'ended',
+          'type': 'variable',
+          'value': 1,
         },
       ],
       'event_repeat': [
         {
-          'todo': 'eval',
-          'type': 'function',
-          'value': 'console.log("Timer is repeating!")',
+          'todo': 'repeated',
+          'type': 'variable',
+          'value': 1,
         },
       ],
       'frames_max': Math.floor(Math.random() * 100) + 25,
       'frames_random': Math.floor(Math.random() * 50),
-      'id': 'Random Finite Timer',
+      'id': 'Timer ' + created,
       'repeat': Math.floor(Math.random() * 10),
     });
 }
@@ -90,10 +95,49 @@ function handle_timers(){
 
     core_ui_update({
       'ids': {
+        'ended': ended,
+        'repeated': repeated,
         'timers': list,
       },
       'todo': 'innerHTML',
     });
+}
+
+function load_test(){
+    webgl_level_load({
+      'character': 0,
+      'json': {
+        'spawn': {
+          'position_y': 5,
+          'position_z': 25,
+        },
+        'characters': [
+          {
+            'id': 'test',
+            'spawn': false,
+            'entities': [
+              {
+                'id': 'base',
+                'texture': 'grid.png',
+                'texture_x': 10,
+                'texture_y': 10,
+                'vertex_colors': [
+                  .5, .5, .5, 1,
+                ],
+                'vertices': [
+                  50, 0, -50,
+                  -50, 0, -50,
+                  -50, 0, 50,
+                  50, 0, 50,
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    });
+
+    load_timers();
 }
 
 function load_timers(){
@@ -124,44 +168,16 @@ function load_timers(){
     }
 }
 
-function load_test(){
-    webgl_level_load({
-      'character': 0,
-      'json': {
-        'characters': [
-          {
-            'id': 'test',
-            'spawn': false,
-          },
-        ],
-        'prefabs': [
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'test',
-              'all': {
-                'texture': 'grid.png',
-              },
-              'character': 'test',
-              'position_y': 25,
-              'size_x': -100,
-              'size_y': -50,
-              'size_z': -100,
-            },
-          },
-        ],
-      },
-    });
-
-    load_timers();
-}
-
 function new_game(){
     if(webgl !== 0
       && !globalThis.confirm('Reset?')){
         return;
     }
     webgl_character_id = '_me';
+
+    created = 0;
+    ended = 0;
+    repeated = 0;
 
     load_test();
     webgl_character_init({
@@ -178,6 +194,8 @@ function repo_escape(){
       && !core_menu_open){
         new_game();
     }
+
+    core_elements.repo_ui.style.display = 'inline';
 }
 
 function repo_init(){
@@ -199,6 +217,9 @@ function repo_init(){
         },
       },
       'globals': {
+        'created': 0,
+        'ended': 0,
+        'repeated': 0,
         'timers': [],
       },
       'info': '<button id=new_game type=button>Start Timers Test</button>',
@@ -216,7 +237,7 @@ function repo_init(){
       'root': '../../webgl-standalone.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': '<button id=add type=button>Add Timer</button><div id=timers></div>',
+      'ui': '<button id=add type=button>Add Timer</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
     });
 }
 
