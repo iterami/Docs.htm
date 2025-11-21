@@ -25,14 +25,14 @@ function add_timer_random(){
         {
           'todo': 'eval',
           'type': 'function',
-          'value': 'console.log("Event ended.")',
+          'value': 'console.log("Timer ended.")',
         },
       ],
       'event_repeat': [
         {
           'todo': 'eval',
           'type': 'function',
-          'value': 'console.log("Event is repeating!")',
+          'value': 'console.log("Timer is repeating!")',
         },
       ],
       'frames_max': Math.floor(Math.random() * 100) + 25,
@@ -45,7 +45,8 @@ function add_timer_random(){
 function handle_timers(){
     let list = '';
 
-    for(const id in timers){
+    for(const i in timers){
+        const id = timers.length - i - 1;
         const timer = timers[id];
 
         if(timer.active){
@@ -83,7 +84,7 @@ function handle_timers(){
                   'parent': timer.event_end,
                 });
             }
-            timers.splice(timer, 1);
+            timers.splice(id, 1);
         }
     }
 
