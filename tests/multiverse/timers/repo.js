@@ -1,13 +1,12 @@
 'use strict';
 
 // Required args: id
+// Optional args: event_end, event_repeat
 function add_timer(args){
     args = core_args({
       'args': args,
       'defaults': {
         'active': true,
-        'event_end': void 0,
-        'event_repeat': void 0,
         'frames_max': '100',
         'frames_random': 0,
         'repeat': 0,
@@ -22,6 +21,20 @@ function add_timer(args){
 
 function add_timer_random(){
     add_timer({
+      'event_end': [
+        {
+          'todo': 'eval',
+          'type': 'function',
+          'value': 'console.log("Event ended.")',
+        },
+      ],
+      'event_repeat': [
+        {
+          'todo': 'eval',
+          'type': 'function',
+          'value': 'console.log("Event is repeating!")',
+        },
+      ],
       'frames_max': Math.floor(Math.random() * 100) + 25,
       'frames_random': Math.floor(Math.random() * 50),
       'id': 'Random Finite Timer',
@@ -35,10 +48,9 @@ function handle_timers(){
     for(const id in timers){
         const timer = timers[id];
 
-        if(!timer.active){
-            continue;
+        if(timer.active){
+            timer.frames--;
         }
-        timer.frames--;
 
         list += timer.id + ': '
           + timer.frames + '/' + timer.frames_max
@@ -59,19 +71,18 @@ function handle_timers(){
             }
             timer.frames = max;
 
-            /*
-            webgl_event({
-              'parent': args.target,
-              'target': args.collider,
-            });
-            */
+            if(timer.event_repeat){
+                webgl_event({
+                  'parent': timer.event_repeat,
+                });
+            }
+
         }else{
-            /*
-            webgl_event({
-              'parent': args.target,
-              'target': args.collider,
-            });
-            */
+            if(timer.event_end){
+                webgl_event({
+                  'parent': timer.event_end,
+                });
+            }
             timers.splice(timer, 1);
         }
     }
@@ -94,6 +105,12 @@ function load_timers(){
         'repeat': 0,
       },
       {
+        'active': false,
+        'frames': 50,
+        'id': 'Inactive Timer',
+        'repeat': 0,
+      },
+      {
         'frames': 50,
         'frames_max': 50,
         'id': 'Infinite Timer',
@@ -101,7 +118,9 @@ function load_timers(){
       },
     ];
 
-    timers.push(...examples);
+    for(const example of examples){
+        add_timer(example);
+    }
 }
 
 function load_test(){

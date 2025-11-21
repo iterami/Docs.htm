@@ -8,6 +8,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_event(args)
 <ul>
   <li>Handles entity events that occur during collision, within a certain radius, or when the entity is picked.
+  <li>You can pass an array of event objects to the "parent" arg for events without "parent" or "target" objects.
   <li>More information about event properties can be found in the <a href=../json.htm#events>JSON level format example</a>.
 </ul>
 <table>
@@ -18,7 +19,7 @@
   <tr>
     <td>parent
     <td>
-    <td>entity object
+    <td>entity object or array of event objects
   <tr>
     <td>target
     <td>
