@@ -7,7 +7,7 @@ function add_timer(args){
       'args': args,
       'defaults': {
         'active': true,
-        'frames_max': '100',
+        'frames_max': 100,
         'frames_random': 0,
         'id': timer_count,
         'repeat': 0,
@@ -41,10 +41,10 @@ function add_timer_random(){
           'value': 1,
         },
       ],
-      'frames_max': Math.floor(Math.random() * 100) + 25,
-      'frames_random': Math.floor(Math.random() * 50),
+      'frames_max': Math.floor(Math.random() * 100) + 100,
+      'frames_random': Math.floor(Math.random() * 100),
       'id': 'timer_' + timer_count,
-      'repeat': Math.floor(Math.random() * 10),
+      'repeat': Math.floor(Math.random() * 5),
     });
 }
 
@@ -131,6 +131,43 @@ function load_test(){
                   50, 0, 50,
                 ],
               },
+              {
+                'id': 'toggle',
+                'attach_x': -10,
+                'attach_y': 3,
+                'billboard': true,
+                'collision': false,
+                'texture': 'grid.png',
+                'vertices': [
+                  2, 2, 0,
+                  -2, 2, 0,
+                  -2, -2, 0,
+                  2, -2, 0,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'infinite',
+            'collides': true,
+            'gravity': 1,
+            'level': 0,
+            'position_x': 10,
+            'position_y': 5,
+            'spawn': false,
+            'entities': [
+              {
+                'id': 'test',
+                'billboard': true,
+                'collision': false,
+                'texture': 'grid.png',
+                'vertices': [
+                  2, 2, 0,
+                  -2, 2, 0,
+                  -2, -2, 0,
+                  2, -2, 0,
+                ],
+              },
             ],
           },
         ],
@@ -147,23 +184,33 @@ function load_timers(){
     const examples = [
       {
         'id': 'finite',
-        'frames': 50,
+        'frames_max': 100,
         'repeat': 0,
       },
       {
         'id': 'inactive',
         'active': false,
-        'frames': 50,
+        'frames_max': 100,
         'repeat': 0,
       },
       {
         'id': 'infinite',
-        'frames': 50,
-        'frames_max': 50,
+        'frames_max': 100,
         'repeat': -1,
+        'event_repeat': [
+          {
+            'set': true,
+            'stat': 'position_y',
+            'todo': 'infinite',
+            'type': 'character',
+            'value': 50,
+          },
+        ],
       },
       {
         'id': 'toggle_0',
+        'frames_max': 100,
+        'repeat': -1,
         'event_repeat': [
           {
             'todo': 'toggle_timer',
@@ -171,18 +218,23 @@ function load_timers(){
             'value': 'toggle_0',
           },
           {
+            'set': true,
+            'stat': 'attach_y',
+            'todo': 'toggle',
+            'value': 10,
+          },
+          {
             'todo': 'toggle_timer',
             'type': 'function',
             'value': 'toggle_1',
           },
         ],
-        'frames': 50,
-        'frames_max': 50,
-        'repeat': -1,
       },
       {
         'id': 'toggle_1',
         'active': false,
+        'frames_max': 50,
+        'repeat': -1,
         'event_repeat': [
           {
             'todo': 'toggle_timer',
@@ -190,14 +242,17 @@ function load_timers(){
             'value': 'toggle_1',
           },
           {
+            'set': true,
+            'stat': 'attach_y',
+            'todo': 'toggle',
+            'value': 3,
+          },
+          {
             'todo': 'toggle_timer',
             'type': 'function',
             'value': 'toggle_0',
           },
         ],
-        'frames': 50,
-        'frames_max': 50,
-        'repeat': -1,
       },
     ];
 
