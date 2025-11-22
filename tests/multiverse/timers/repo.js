@@ -9,15 +9,16 @@ function add_timer(args){
         'active': true,
         'frames_max': '100',
         'frames_random': 0,
+        'id': timer_count,
         'repeat': 0,
       },
     });
 
-    timers.push({
+    timers[args.id] = {
       'frames': args.frames_max,
       ...args,
-    });
-    created++;
+    };
+    timer_count++;
 }
 
 function add_timer_random(){
@@ -42,7 +43,7 @@ function add_timer_random(){
       ],
       'frames_max': Math.floor(Math.random() * 100) + 25,
       'frames_random': Math.floor(Math.random() * 50),
-      'id': 'Timer ' + created,
+      'id': 'timer_' + timer_count,
       'repeat': Math.floor(Math.random() * 10),
     });
 }
@@ -50,8 +51,7 @@ function add_timer_random(){
 function handle_timers(){
     let list = '';
 
-    for(const i in timers){
-        const id = timers.length - i - 1;
+    for(const id in timers){
         const timer = timers[id];
 
         if(timer.active){
@@ -89,7 +89,7 @@ function handle_timers(){
                   'parent': timer.event_end,
                 });
             }
-            timers.splice(id, 1);
+            delete timers[id];
         }
     }
 
@@ -141,24 +141,62 @@ function load_test(){
 }
 
 function load_timers(){
+    timer_count = 0;
     core_object_reset(timers);
 
     const examples = [
       {
+        'id': 'finite',
         'frames': 50,
-        'id': 'Finite Timer',
         'repeat': 0,
       },
       {
+        'id': 'inactive',
         'active': false,
         'frames': 50,
-        'id': 'Inactive Timer',
         'repeat': 0,
       },
       {
+        'id': 'infinite',
         'frames': 50,
         'frames_max': 50,
-        'id': 'Infinite Timer',
+        'repeat': -1,
+      },
+      {
+        'id': 'toggle_0',
+        'event_repeat': [
+          {
+            'todo': 'toggle_timer',
+            'type': 'function',
+            'value': 'toggle_0',
+          },
+          {
+            'todo': 'toggle_timer',
+            'type': 'function',
+            'value': 'toggle_1',
+          },
+        ],
+        'frames': 50,
+        'frames_max': 50,
+        'repeat': -1,
+      },
+      {
+        'id': 'toggle_1',
+        'active': false,
+        'event_repeat': [
+          {
+            'todo': 'toggle_timer',
+            'type': 'function',
+            'value': 'toggle_1',
+          },
+          {
+            'todo': 'toggle_timer',
+            'type': 'function',
+            'value': 'toggle_0',
+          },
+        ],
+        'frames': 50,
+        'frames_max': 50,
         'repeat': -1,
       },
     ];
@@ -175,7 +213,6 @@ function new_game(){
     }
     webgl_character_id = '_me';
 
-    created = 0;
     ended = 0;
     repeated = 0;
 
@@ -217,10 +254,10 @@ function repo_init(){
         },
       },
       'globals': {
-        'created': 0,
         'ended': 0,
         'repeated': 0,
-        'timers': [],
+        'timers': {},
+        'timer_count': 0,
       },
       'info': '<button id=new_game type=button>Start Timers Test</button>',
       'menu': true,
@@ -243,4 +280,12 @@ function repo_init(){
 
 function repo_logic(){
     handle_timers();
+}
+
+function toggle_timer(id){
+    if(!timers[id]){
+        return;
+    }
+
+    timers[id].active = !timers[id].active;
 }
