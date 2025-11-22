@@ -199,6 +199,14 @@ function load_timers(){
         'repeat': -1,
         'event_repeat': [
           {
+            'todo': 'add_timer',
+            'type': 'function',
+            'value': {
+              'frames_max': 25,
+              'id': 'infinite_temp',
+            },
+          },
+          {
             'set': true,
             'stat': 'position_y',
             'todo': 'infinite',
