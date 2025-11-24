@@ -25,7 +25,41 @@
           ]
         },
         {
-          "id": "pick_stress",
+          "id": "pick_random",
+          "attach_x": -15,
+          "attach_y": 5,
+          "attach_z": -25,
+          "billboard": true,
+          "collision": false,
+          "event_todo": [
+            {
+              "todo": "webgl_prefab_repeat",
+              "type": "function",
+              "value": {
+                "count": 1e4,
+                "properties": {
+                  "frames_random": 100
+                },
+                "type": "webgl_timer_add"
+              }
+            },
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(webgl_timer_count)"
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        },
+        {
+          "id": "pick_same",
+          "attach_x": 15,
           "attach_y": 5,
           "attach_z": -25,
           "billboard": true,
