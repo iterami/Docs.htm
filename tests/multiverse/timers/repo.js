@@ -117,18 +117,13 @@ function load_test(){
         'timers': [
           {
             'id': 'finite',
-            'frames_max': 100,
-            'repeat': 0,
           },
           {
             'id': 'inactive',
             'active': false,
-            'frames_max': 100,
-            'repeat': 0,
           },
           {
             'id': 'infinite',
-            'frames_max': 100,
             'repeat': -1,
             'event_repeat': [
               {
@@ -150,7 +145,6 @@ function load_test(){
           },
           {
             'id': 'toggle_0',
-            'frames_max': 100,
             'repeat': -1,
             'event_repeat': [
               {

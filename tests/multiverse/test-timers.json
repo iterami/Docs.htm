@@ -67,8 +67,14 @@
   ],
   "timers": [
     {
+      "id": "finite"
+    },
+    {
+      "id": "inactive",
+      "active": false
+    },
+    {
       "id": "infinite",
-      "frames_max": 100,
       "repeat": -1,
       "event_repeat": [
         {
@@ -90,7 +96,6 @@
     },
     {
       "id": "toggle_0",
-      "frames_max": 100,
       "repeat": -1,
       "event_repeat": [
         {
