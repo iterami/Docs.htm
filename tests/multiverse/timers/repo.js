@@ -1,32 +1,11 @@
 'use strict';
 
-// Required args: id
-// Optional args: event_end, event_repeat
-function add_timer(args){
-    args = core_args({
-      'args': args,
-      'defaults': {
-        'active': true,
-        'frames_max': 100,
-        'frames_random': 0,
-        'id': timer_count,
-        'repeat': 0,
-      },
-    });
-
-    timers[args.id] = {
-      'frames': args.frames_max,
-      ...args,
-    };
-    timer_count++;
-}
-
 function add_timer_random(){
     if(webgl === 0){
         return;
     }
 
-    add_timer({
+    webgl_timer_add({
       'event_end': [
         {
           'todo': 'ended',
@@ -43,56 +22,20 @@ function add_timer_random(){
       ],
       'frames_max': Math.floor(Math.random() * 100) + 100,
       'frames_random': Math.floor(Math.random() * 100),
-      'id': 'timer_' + timer_count,
       'repeat': Math.floor(Math.random() * 5),
     });
 }
 
-function handle_timers(){
+function display_timers(){
     let list = '';
-
-    for(const id in timers){
-        const timer = timers[id];
-
-        if(timer.active){
-            timer.frames--;
-        }
+    for(const id in webgl_timers){
+        const timer = webgl_timers[id];
 
         list += timer.id + ': '
           + timer.frames + '/' + timer.frames_max
           + ', +' + timer.frames_random
           + ', ' + timer.repeat + '<br>';
-
-        if(timer.frames > 0){
-            continue;
-        }
-
-        if(timer.repeat !== 0){
-            if(timer.repeat > 0){
-                timer.repeat--;
-            }
-            let max = timer.frames_max;
-            if(timer.frames_random){
-                max += Math.floor(Math.random() * timer.frames_random);
-            }
-            timer.frames = max;
-
-            if(timer.event_repeat){
-                webgl_event({
-                  'parent': timer.event_repeat,
-                });
-            }
-
-        }else{
-            if(timer.event_end){
-                webgl_event({
-                  'parent': timer.event_end,
-                });
-            }
-            delete timers[id];
-        }
     }
-
     core_ui_update({
       'ids': {
         'ended': ended,
@@ -171,102 +114,90 @@ function load_test(){
             ],
           },
         ],
+        'timers': [
+          {
+            'id': 'finite',
+            'frames_max': 100,
+            'repeat': 0,
+          },
+          {
+            'id': 'inactive',
+            'active': false,
+            'frames_max': 100,
+            'repeat': 0,
+          },
+          {
+            'id': 'infinite',
+            'frames_max': 100,
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_add',
+                'type': 'function',
+                'value': {
+                  'frames_max': 25,
+                  'id': 'infinite_temp',
+                },
+              },
+              {
+                'set': true,
+                'stat': 'position_y',
+                'todo': 'infinite',
+                'type': 'character',
+                'value': 50,
+              },
+            ],
+          },
+          {
+            'id': 'toggle_0',
+            'frames_max': 100,
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_0',
+              },
+              {
+                'set': true,
+                'stat': 'attach_y',
+                'todo': 'toggle',
+                'value': 10,
+              },
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_1',
+              },
+            ],
+          },
+          {
+            'id': 'toggle_1',
+            'active': false,
+            'frames_max': 50,
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_1',
+              },
+              {
+                'set': true,
+                'stat': 'attach_y',
+                'todo': 'toggle',
+                'value': 3,
+              },
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_0',
+              },
+            ],
+          },
+        ],
       },
     });
-
-    load_timers();
-}
-
-function load_timers(){
-    timer_count = 0;
-    core_object_reset(timers);
-
-    const examples = [
-      {
-        'id': 'finite',
-        'frames_max': 100,
-        'repeat': 0,
-      },
-      {
-        'id': 'inactive',
-        'active': false,
-        'frames_max': 100,
-        'repeat': 0,
-      },
-      {
-        'id': 'infinite',
-        'frames_max': 100,
-        'repeat': -1,
-        'event_repeat': [
-          {
-            'todo': 'add_timer',
-            'type': 'function',
-            'value': {
-              'frames_max': 25,
-              'id': 'infinite_temp',
-            },
-          },
-          {
-            'set': true,
-            'stat': 'position_y',
-            'todo': 'infinite',
-            'type': 'character',
-            'value': 50,
-          },
-        ],
-      },
-      {
-        'id': 'toggle_0',
-        'frames_max': 100,
-        'repeat': -1,
-        'event_repeat': [
-          {
-            'todo': 'toggle_timer',
-            'type': 'function',
-            'value': 'toggle_0',
-          },
-          {
-            'set': true,
-            'stat': 'attach_y',
-            'todo': 'toggle',
-            'value': 10,
-          },
-          {
-            'todo': 'toggle_timer',
-            'type': 'function',
-            'value': 'toggle_1',
-          },
-        ],
-      },
-      {
-        'id': 'toggle_1',
-        'active': false,
-        'frames_max': 50,
-        'repeat': -1,
-        'event_repeat': [
-          {
-            'todo': 'toggle_timer',
-            'type': 'function',
-            'value': 'toggle_1',
-          },
-          {
-            'set': true,
-            'stat': 'attach_y',
-            'todo': 'toggle',
-            'value': 3,
-          },
-          {
-            'todo': 'toggle_timer',
-            'type': 'function',
-            'value': 'toggle_0',
-          },
-        ],
-      },
-    ];
-
-    for(const example of examples){
-        add_timer(example);
-    }
 }
 
 function new_game(){
@@ -319,8 +250,6 @@ function repo_init(){
       'globals': {
         'ended': 0,
         'repeated': 0,
-        'timers': {},
-        'timer_count': 0,
       },
       'info': '<button id=new_game type=button>Start Timers Test</button>',
       'menu': true,
@@ -342,13 +271,5 @@ function repo_init(){
 }
 
 function repo_logic(){
-    handle_timers();
-}
-
-function toggle_timer(id){
-    if(!timers[id]){
-        return;
-    }
-
-    timers[id].active = !timers[id].active;
+    display_timers();
 }

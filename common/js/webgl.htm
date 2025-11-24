@@ -17,6 +17,7 @@
   <li><a href=#character-properties>Character Properties</a>
   <li><a href=#entity-properties>Entity Properties</a>
   <li><a href=#particle-properties>Particle Properties</a>
+  <li><a href=#timer-properties>Timer Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
   <li>Picking may not work properly for entities after "entity_id_count > 16,777,216".
   <li>Requires:<ul>
@@ -96,6 +97,9 @@
     <li><a href=webgl_texture_animate.htm>webgl_texture_animate(id)</a>
     <li><a href=webgl_texture_init.htm>webgl_texture_init(id)</a>
     <li><a href=webgl_tiles.htm>webgl_tiles(args)</a>
+    <li><a href=webgl_timer_add.htm>webgl_timer_add(args)</a>
+    <li><a href=webgl_timer_handle.htm>webgl_timer_handle(timer)</a>
+    <li><a href=webgl_timer_toggle.htm>webgl_timer_toggle(id)</a>
     <li><a href=webgl_uniform_update.htm>webgl_uniform_update()</a>
     <li><a href=webgl_vehicle_toggle.htm>webgl_vehicle_toggle(args)</a>
     <li><a href=webgl_vertexattribarray_set.htm>webgl_vertexattribarray_set(args)</a>
@@ -715,6 +719,44 @@
   <tr>
     <td>z_min
     <td>-100
+    <td>number
+</table>
+<table id=timer-properties>
+  <tr class=header>
+    <td>Timer Properties
+    <td>Default
+    <td>Type
+  <tr>
+    <td>active
+    <td>true
+    <td>boolean
+  <tr>
+    <td>event_end
+    <td>void 0
+    <td>array of event objects
+  <tr>
+    <td>event_repeat
+    <td>void 0
+    <td>array of event objects
+  <tr>
+    <td>frames
+    <td>args.frames_max
+    <td>number
+  <tr>
+    <td>frames_max
+    <td>100
+    <td>number
+  <tr>
+    <td>frames_random
+    <td>0
+    <td>number
+  <tr>
+    <td>id
+    <td>webgl_timer_count
+    <td>string ID
+  <tr>
+    <td>repeat
+    <td>0
     <td>number
 </table>
 <table id=vehicle-properties>

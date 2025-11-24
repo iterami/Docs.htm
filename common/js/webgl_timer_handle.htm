@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>webgl_timer_handle(timer)</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_timer_handle(timer)
+<ul>
+  <li>If "timer" is active, then decreases remaining "timer.frames" by 1.
+  <li>If "timer.frames" &lt;=0:<ul>
+    <li>and "timer.repeat" is &gt;0, then handle "timer.event_repeat" events.
+    <li>and "timer.repeat" is &lt;=0, then handle "timer.event_end" events.
+  </ul>
+  <li>Events are handled by <a href=webgl_event.htm>webgl_event(args)</a>.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>timer
+    <td>
+    <td>object
+</table>

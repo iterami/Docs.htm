@@ -1,0 +1,59 @@
+{
+  "title": "Timers Test",
+  "picking": 2,
+  "spawn": {
+    "position_y": 5
+  },
+  "characters": [
+    {
+      "id": "test_timers",
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        },
+        {
+          "id": "pick_timer",
+          "attach_y": 5,
+          "attach_z": -25,
+          "billboard": true,
+          "collision": false,
+          "event_todo": [
+            {
+              "todo": "webgl_timer_add",
+              "type": "function",
+              "value": {
+                "event_end": [
+                  {
+                    "todo": "eval",
+                    "type": "function",
+                    "value": "console.log('Timer Ended')"
+                  }
+                ]
+              }
+            }
+          ],
+          "picking": true,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -5, -5, 0,
+            5, -5, 0
+          ]
+        }
+      ]
+    }
+  ]
+}
