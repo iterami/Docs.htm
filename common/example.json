@@ -16,8 +16,9 @@
   "lock": {
     "position_y": 10
   },
-  "particles": {
-    "example_particle": {
+  "particles": [
+    {
+      "id": "example_particle",
       "randomize": true,
       "speed_x": 0,
       "speed_y": 0,
@@ -29,9 +30,10 @@
       "z_max": 100,
       "z_min": -100
     }
-  },
-  "paths": {
-    "example_path": {
+  ],
+  "paths": [
+    {
+      "id": "example_path",
       "collision": true,
       "end": "loop",
       "points": [
@@ -54,7 +56,7 @@
       ],
       "speed": 2
     }
-  },
+  ],
   "paused": false,
   "picking": 2,
   "pointerlock": false,

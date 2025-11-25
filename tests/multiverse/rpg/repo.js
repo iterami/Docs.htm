@@ -200,8 +200,9 @@ function load_town(spawn){
       'json': {
         ...level_properties(),
         'spawn': spawners[spawn],
-        'paths': {
-          'path_lava': {
+        'paths': [
+          {
+            'id': 'path_lava',
             'end': 'reverse',
             'points': [
               {
@@ -227,7 +228,7 @@ function load_town(spawn){
             ],
             'speed': .4,
           },
-        },
+        ],
         'characters': [
           {
             'id': 'rpg_town',

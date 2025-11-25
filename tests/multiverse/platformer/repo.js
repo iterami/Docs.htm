@@ -153,8 +153,9 @@ function load_skymap(spawn){
         ...level_properties(),
         'clear_color': [0, 0, .2],
         'spawn': spawners[spawn],
-        'paths': {
-          'fireball_0': {
+        'paths': [
+          {
+            'id': 'fireball_0',
             'end': 'warp',
             'points': [
               {
@@ -165,7 +166,8 @@ function load_skymap(spawn){
               },
             ],
           },
-          'platform_0': {
+          {
+            'id': 'platform_0',
             'end': 'loop',
             'speed': .2,
             'points': [
@@ -192,7 +194,8 @@ function load_skymap(spawn){
               },
             ],
           },
-          'wallmoving_0': {
+          {
+            'id': 'wallmoving_0',
             'end': 'loop',
             'points': [
               {
@@ -203,7 +206,7 @@ function load_skymap(spawn){
               },
             ],
           },
-        },
+        ],
         'characters': [
           {
             'id': 'platformer_skymap',

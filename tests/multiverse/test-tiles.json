@@ -252,8 +252,9 @@
                 ]
               }
             ],
-            "paths": {
-              "tile_path": {
+            "paths": [
+              {
+                "id": "tile_path",
                 "end": "loop",
                 "points": [
                   {
@@ -264,7 +265,7 @@
                   }
                 ]
               }
-            },
+            ],
             "prefabs": [
               {
                 "type": "webgl_primitive_cuboid",

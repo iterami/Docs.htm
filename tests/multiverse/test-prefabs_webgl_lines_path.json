@@ -4,8 +4,9 @@
     "position_y": 5,
     "position_z": 10
   },
-  "paths": {
-    "path_loop": {
+  "paths": [
+    {
+      "id": "path_loop",
       "end": "loop",
       "points": [
         {
@@ -24,7 +25,8 @@
         }
       ]
     },
-    "path_point": {
+    {
+      "id": "path_point",
       "points": [
         {
           "position_y": 15,
@@ -32,7 +34,8 @@
         }
       ]
     },
-    "path_reverse": {
+    {
+      "id": "path_reverse".
       "end": "reverse",
       "points": [
         {
@@ -51,7 +54,7 @@
         }
       ]
     }
-  },
+  ],
   "characters": [
     {
       "id": "test_lines_path",

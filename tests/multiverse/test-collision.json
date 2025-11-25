@@ -3,8 +3,9 @@
   "spawn": {
     "position_y": 5
   },
-  "paths": {
-    "moving": {
+  "paths": [
+    {
+      "id": "moving",
       "end": "loop",
       "points": [
         {
@@ -23,7 +24,7 @@
       ],
       "speed": 0.5
     }
-  },
+  ],
   "characters": [
     {
       "id": "test_collision",

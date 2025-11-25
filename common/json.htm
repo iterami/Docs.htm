@@ -53,8 +53,11 @@
   },
 
   // Optional. Particle types to be created when the level is loaded.
-  "particles": {
-    "example_particle": {
+  "particles": [
+    {
+      // REQUIRED. The ID of this particle.
+      "id": "example_particle",
+
       // Optional. False if the vertex position should just wrap upon reaching max/min,
       //   or true if the vertex position wrap should be randomized instead.
       "randomize": true,
@@ -72,11 +75,14 @@
       "z_max": 100,
       "z_min": -100
     }
-  },
+  ],
 
   // Optional. Paths that characters can move along.
-  "paths": {
-    "example_path": {
+  "paths": [
+    {
+      // REQUIRED. The ID of this path.
+      "id": "example_path",
+
       // Optional. If those that use this path should still collide with things.
       "collision": true,
 
@@ -124,7 +130,7 @@
       // Optional. Speed multiplier applied to every character on this path.
       "speed": 2
     }
-  },
+  ],
 
   // Optional. If the level starts paused or not.
   "paused": false,

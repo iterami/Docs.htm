@@ -4,8 +4,9 @@
     "position_y": 5,
     "position_z": 10
   },
-  "paths": {
-    "path_distance": {
+  "paths": [
+    {
+      "id": "path_distance",
       "end": "loop",
       "points": [
         {
@@ -27,7 +28,8 @@
       ],
       "speed": 0.5
     },
-    "path_event": {
+    {
+      "id": "path_event",
       "end": "loop",
       "points": [
         {
@@ -65,7 +67,8 @@
       ],
       "speed": 0.5
     },
-    "path_exit": {
+    {
+      "id": "path_exit",
       "points": [
         {
           "position_x": -15,
@@ -83,7 +86,8 @@
       ],
       "speed": 0.5
     },
-    "path_reverse": {
+    {
+      "id": "path_reverse",
       "end": "reverse",
       "points": [
         {
@@ -102,7 +106,8 @@
       ],
       "speed": 0.5
     },
-    "path_rotate": {
+    {
+      "id": "path_rotate",
       "end": "loop",
       "points": [
         {
@@ -130,7 +135,8 @@
       ],
       "speed": 0.5
     },
-    "path_speed": {
+    {
+      "id": "path_speed",
       "end": "loop",
       "points": [
         {
@@ -151,7 +157,8 @@
       ],
       "speed": 0.5
     },
-    "path_warp": {
+    {
+      "id": "path_warp",
       "end": "warp",
       "points": [
         {
@@ -170,7 +177,8 @@
       ],
       "speed": 0.5
     },
-    "path_xy": {
+    {
+      "id": "path_xy",
       "end": "loop",
       "points": [
         {
@@ -193,7 +201,8 @@
       ],
       "speed": 0.5
     },
-    "path_xyz": {
+    {
+      "id": "path_xyz",
       "end": "loop",
       "points": [
         {
@@ -219,7 +228,8 @@
       ],
       "speed": 0.5
     },
-    "path_xz": {
+    {
+      "id": "path_xz",
       "end": "loop",
       "points": [
         {
@@ -242,7 +252,8 @@
       ],
       "speed": 0.5
     },
-    "path_yz": {
+    {
+      "id": "path_yz",
       "end": "loop",
       "points": [
         {
@@ -265,7 +276,7 @@
       ],
       "speed": 0.5
     }
-  },
+  ],
   "characters": [
     {
       "id": "test_paths",

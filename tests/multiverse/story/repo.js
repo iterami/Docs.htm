@@ -26,8 +26,9 @@ function load_start(spawn){
       'character': 0,
       'json': {
         'camera_zoom_max': 0,
-        'paths': {
-          'path_start': {
+        'paths': [
+          {
+            'id': 'path_start',
             'points': [
               {
                 'position_z': 50,
@@ -37,7 +38,8 @@ function load_start(spawn){
               },
             ],
           },
-          'path_left': {
+          {
+            'id': 'path_left',
             'points': [
               {
                 'position_z': 25,
@@ -51,7 +53,8 @@ function load_start(spawn){
               },
             ],
           },
-          'path_right': {
+          {
+            'id': 'path_right',
             'points': [
               {
                 'position_z': 25,
@@ -65,7 +68,7 @@ function load_start(spawn){
               },
             ],
           },
-        },
+        ],
         'picking': 2,
         'characters': [
           {
