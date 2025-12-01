@@ -31,7 +31,6 @@ function handle_tooltip_hide(event){
 
 function handle_tooltip_show(event){
     core_elements.tooltip.innerHTML = tooltips[event.target.id];
-    core_elements.tooltip.style.display = 'block';
 
     const left = Math.max(
       event.target.offsetLeft - event.target.scrollLeft,
@@ -58,14 +57,16 @@ function handle_tooltip_show(event){
         core_elements.tooltip.style.bottom = 'auto';
         core_elements.tooltip.style.top = top + 'px';
     }
+
+    core_elements.tooltip.style.display = 'block';
 }
 
 function handle_tooltip_toggle(event){
-    if(core_elements.tooltip.style.display === 'none'){
-        handle_tooltip_show(event);
+    if(core_elements.tooltip.style.display === 'block'){
+        handle_tooltip_hide(event);
 
     }else{
-        handle_tooltip_hide(event);
+        handle_tooltip_show(event);
     }
 }
 
@@ -73,9 +74,9 @@ function repo_init(){
     core_repo_init({
       'events': {
         'button': {
-          'onclick': handle_tooltip_toggle,
-          'onpointerenter': handle_tooltip_show,
-          'onpointerleave': handle_tooltip_hide,
+          'onmouseenter': handle_tooltip_show,
+          'onmouseleave': handle_tooltip_hide,
+          'onpointerdown': handle_tooltip_toggle,
         },
         'update': {
           'onclick': update_button,
