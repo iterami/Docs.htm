@@ -6,6 +6,10 @@ function add_timer(){
     }
 
     webgl_timer_add(JSON.parse(core_storage_data.timer));
+
+    if(core_menu_open){
+        display_timers();
+    }
 }
 
 function add_timer_random(){
@@ -32,6 +36,10 @@ function add_timer_random(){
       'frames_random': Math.floor(Math.random() * 100),
       'repeat': Math.floor(Math.random() * 5),
     });
+
+    if(core_menu_open){
+        display_timers();
+    }
 }
 
 function display_timers(){
