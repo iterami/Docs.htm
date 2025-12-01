@@ -1,5 +1,13 @@
 'use strict';
 
+function add_timer(){
+    if(webgl === 0){
+        return;
+    }
+
+    webgl_timer_add(JSON.parse(core_storage_data.timer));
+}
+
 function add_timer_random(){
     if(webgl === 0){
         return;
@@ -235,10 +243,13 @@ function repo_init(){
       },
       'events': {
         'add': {
-          'onclick': add_timer_random,
+          'onclick': add_timer,
         },
         'new_game': {
           'onclick': new_game,
+        },
+        'random': {
+          'onclick': add_timer_random,
         },
       },
       'globals': {
@@ -258,9 +269,32 @@ function repo_init(){
         },
       },
       'root': '../../webgl-standalone.htm',
+      'storage': {
+        'timer': `{
+  "active": true,
+  "frames_max": 100,
+  "frames_random": 0,
+  "repeat": 0,
+  "event_end": [
+    {
+      "todo": "ended",
+      "type": "variable",
+      "value": 1
+    }
+  ],
+  "event_repeat": [
+    {
+      "todo": "repeated",
+      "type": "variable",
+      "value": 1
+    }
+  ]
+}`,
+      },
       'storage_controls': true,
+      'storage_menu': '<textarea id=timer></textarea><br>',
       'title': 'Docs.htm',
-      'ui': '<button id=add type=button>Add Timer</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
+      'ui': '<button id=add type=button>Add Timer</button><button id=random type=button>Random</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
     });
 }
 
