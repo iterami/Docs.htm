@@ -24,12 +24,56 @@
 
 <script src=../../common/js/core.js></script>
 <script>
-function handle_tooltip_hide(event){
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'update': {
+          'onclick': update_button,
+        },
+      },
+      'globals': {
+        'tooltips': {
+          'button': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
+        },
+      },
+      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>'
+        + '<button id=update type=button>Update Button Position</button>',
+      'menu': true,
+      'root': 'index.htm',
+      'storage': {
+        'button_x': '0px',
+        'button_y': '300px',
+      },
+      'storage_menu': '<table><tr><td><input class=mini id=button_x type=text><td>Button X'
+        + '<tr><td><input class=mini id=button_y type=text><td>Button Y</table>',
+      'title': 'Docs.htm',
+      'ui_elements': [
+        'button',
+        'tooltip',
+      ],
+    });
+
+    tooltip_init();
+    update_button();
+}
+
+function tooltip_hide(event){
     core_elements.tooltip.style.display = 'none';
     core_elements.tooltip.innerHTML = '';
 }
 
-function handle_tooltip_show(event){
+function tooltip_init(){
+    for(const tooltip in tooltips){
+        core_elements[tooltip].onmouseenter = tooltip_show;
+        core_elements[tooltip].onmouseleave = tooltip_hide;
+        core_elements[tooltip].onpointerdown = tooltip_toggle;
+    }
+}
+
+function tooltip_show(event){
+    if(!tooltips[event.target.id]){
+        return;
+    }
     core_elements.tooltip.innerHTML = tooltips[event.target.id];
 
     const left = Math.max(
@@ -61,53 +105,17 @@ function handle_tooltip_show(event){
     core_elements.tooltip.style.display = 'block';
 }
 
-function handle_tooltip_toggle(event){
+function tooltip_toggle(event){
     if(core_elements.tooltip.style.display === 'block'){
-        handle_tooltip_hide(event);
+        tooltip_hide(event);
 
     }else{
-        handle_tooltip_show(event);
+        tooltip_show(event);
     }
-}
-
-function repo_init(){
-    core_repo_init({
-      'events': {
-        'button': {
-          'onmouseenter': handle_tooltip_show,
-          'onmouseleave': handle_tooltip_hide,
-          'onpointerdown': handle_tooltip_toggle,
-        },
-        'update': {
-          'onclick': update_button,
-        },
-      },
-      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>'
-        + '<button id=update type=button>Update Button Position</button>',
-      'menu': true,
-      'root': 'index.htm',
-      'storage': {
-        'button_x': '0px',
-        'button_y': '300px',
-      },
-      'storage_menu': '<table><tr><td><input class=mini id=button_x type=text><td>Button X'
-        + '<tr><td><input class=mini id=button_y type=text><td>Button Y</table>',
-      'title': 'Docs.htm',
-      'ui_elements': [
-        'button',
-        'tooltip',
-      ],
-    });
-
-    update_button();
 }
 
 function update_button(){
     core_elements.button.style.left = core_storage_data.button_x;
     core_elements.button.style.top = core_storage_data.button_y;
 }
-
-const tooltips = {
-  'button': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
-};
 </script>
