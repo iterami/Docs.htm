@@ -11,7 +11,8 @@
   <li>Runs additional init functions in "core_init_todo" and then deletes it.
   <li>Sets up various repo-specific things needed for project function.
   <li>If "menu" or "menu_lock" are true, then the menu is open when the repo loads.
-  <li>If "storage_controls" is true, then a tab with settings for keyboard and pointer controls will be created.
+  <li>If "storage_controls" is not false, then a tab with settings for keyboard and pointer controls will be created.
+  <li>If "storage_controls" is an object, then its properties can be used to overwrite "core_key_rebinds" values with custom objects.
 </ul>
 <table>
   <tr class=header>
@@ -81,7 +82,7 @@
   <tr>
     <td>storage_controls
     <td>false
-    <td>boolean
+    <td>boolean or object
   <tr>
     <td>storage_menu
     <td>''
