@@ -27,6 +27,9 @@
   <tr>
     <td>TouchEvent: <span id=touchevent></span>
     <td>core_mobile: <span id=core_mobile></span>
+  <tr>
+    <td>Last Control Key
+    <td id=control_last>
   <tr class=header>
     <td><input checked id=check_pointer type=checkbox>Pointer
     <td><input checked id=check_scroll type=checkbox>Scroll
@@ -64,6 +67,15 @@
 
 <script src=../../common/js/core.js></script>
 <script>
+function get_control(code){
+    for(const key in core_key_rebinds){
+        if(core_storage_data[key] === code){
+            return key;
+        }
+    }
+    return false;
+}
+
 function repo_escape(){
     update_keys();
     update_pointer();
@@ -131,13 +143,33 @@ function repo_init(){
         },
       },
       'root': 'index.htm',
-      'storage_controls': true,
+      'storage_controls': {
+        'crouch': {
+          'todo': update_controls,
+        },
+        'jump': {
+          'todo': update_controls,
+        },
+        'move_down': {
+          'todo': update_controls,
+        },
+        'move_left': {
+          'todo': update_controls,
+        },
+        'move_right': {
+          'todo': update_controls,
+        },
+        'move_up': {
+          'todo': update_controls,
+        },
+      },
       'title': 'Docs.htm',
       'ui_elements': [
         'check_keys',
         'check_pointer',
         'code',
         'control',
+        'control_last',
         'deltaY',
         'keys',
         'totals',
@@ -182,6 +214,11 @@ function update(event){
     });
 }
 
+function update_controls(event){
+    core_elements.control_last.textContent = event.code + ': ' + get_control(event.code);
+    update_keys(event);
+}
+
 function update_keys(event){
     if((core_menu_open && event)
       || !core_elements.check_keys.checked){
@@ -209,14 +246,7 @@ function update_keys(event){
             };
         }
 
-        let control = false;
-        for(const key in core_storage_data){
-            if(core_storage_data[key] === code){
-                control = key;
-                break;
-            }
-        }
-        core_elements.control.textContent = control;
+        core_elements.control.textContent = get_control(code);
     }
 
     update(event);
