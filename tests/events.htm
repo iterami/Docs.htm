@@ -5,19 +5,19 @@
 <title>Event Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
-table{
+.table{
     display: inline-block;
     vertical-align: top;
 }
 </style>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Events<br>
-<table>
+<table class=table>
   <tr class=header>
     <td>Events
     <td>Totals
   <tbody id=totals>
-</table><table>
+</table><table class=table>
   <tr>
     <td>core_type(event)
     <td id=event>
@@ -37,7 +37,7 @@ table{
     <td>deltaY Wheel
     <td id=deltaY>
   <tbody id=core_pointer>
-</table><table>
+</table><table class=table>
   <tr class=header>
     <td><input checked id=check_keys type=checkbox>Keys
     <td>Modifiers
@@ -53,6 +53,9 @@ table{
   <tr>
     <td>shiftKey
     <td id=shiftKey>
+  <tr class=header>
+    <td>Control?
+    <td id=control>
   <tr class=header>
     <td>Code:
     <td id=code>
@@ -128,11 +131,13 @@ function repo_init(){
         },
       },
       'root': 'index.htm',
+      'storage_controls': true,
       'title': 'Docs.htm',
       'ui_elements': [
         'check_keys',
         'check_pointer',
         'code',
+        'control',
         'deltaY',
         'keys',
         'totals',
@@ -190,19 +195,28 @@ function update_keys(event){
         core_elements.code.textContent = code;
 
         if(code
+          && !core_keys[code]
           && !event.ctrlKey
           && !event.altKey
           && !event.metaKey
           && code !== 'ControlLeft'
           && code !== 'ControlRight'
           && code !== 'AltLeft'
-          && code !== 'AltRight'
-          && !core_keys[code]){
+          && code !== 'AltRight'){
             core_keys[code] = {
               'preventDefault': false,
               'state': true,
             };
         }
+
+        let control = false;
+        for(const key in core_storage_data){
+            if(core_storage_data[key] === code){
+                control = key;
+                break;
+            }
+        }
+        core_elements.control.textContent = control;
     }
 
     update(event);
