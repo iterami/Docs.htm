@@ -13,6 +13,33 @@
   "type": "sine"
 }</textarea><br>
 <button class=medium id=play_boop type=button>Play Boop</button><button class=medium id=play_custom type=button>Play Custom</button>
+<table>
+  <tr class=header>
+    <td>Listener
+    <td>Value
+  <tr>
+    <td>forwardX
+    <td><input id=forwardX step=any type=number value=0>
+  <tr>
+    <td>forwardY
+    <td><input id=forwardY step=any type=number value=0>
+  <tr>
+    <td>forwardZ
+    <td><input id=forwardZ step=any type=number value=-1>
+  <tr class=header>
+    <td>Panner
+    <td>Value
+  <tr>
+    <td>positionX
+    <td><input id=positionX step=any type=number value=0>
+  <tr>
+    <td>positionY
+    <td><input id=positionY step=any type=number value=0>
+  <tr>
+    <td>positionZ
+    <td><input id=positionZ step=any type=number value=0>
+</table>
+<button class=medium id=play_custom_at type=button>Play Custom At Position</button>
 
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/audio.js></script>
@@ -22,6 +49,21 @@ function custom_audio(){
       'custom': JSON.parse(core_elements.args.value),
     });
     audio_start('custom');
+}
+
+function custom_audio_at(){
+    audio_create({
+      'custom': JSON.parse(core_elements.args.value),
+    });
+    audio_start_at({
+      'forwardX': core_elements.forwardX.value,
+      'forwardY': core_elements.forwardY.value,
+      'forwardZ': core_elements.forwardZ.value,
+      'id': 'custom',
+      'positionX': core_elements.positionX.value,
+      'positionY': core_elements.positionY.value,
+      'positionZ': core_elements.positionZ.value,
+    });
 }
 
 function repo_init(){
@@ -35,11 +77,20 @@ function repo_init(){
         'play_custom': {
           'onclick': custom_audio,
         },
+        'play_custom_at': {
+          'onclick': custom_audio_at,
+        },
       },
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
         'args',
+        'forwardX',
+        'forwardY',
+        'forwardZ',
+        'positionX',
+        'positionY',
+        'positionZ',
       ],
     });
 }
