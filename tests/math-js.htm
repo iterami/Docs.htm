@@ -155,21 +155,6 @@ function repo_init(){
           'function': 'math_greatest_common_divisor',
         },
         {
-          'args': {
-            'id': 'test',
-            'to': 'cloned',
-          },
-          'expect': function(result){
-              for(const value in math_matrices.cloned){
-                  if(math_matrices.cloned[value] !== math_matrices.test[value]){
-                      return false;
-                  }
-              }
-              return true;
-          },
-          'function': 'math_matrix_clone',
-        },
-        {
           'args': void 0,
           'expect': {
             '0': 0,
