@@ -199,6 +199,24 @@ function repo_init(){
           'function': 'math_matrix_create',
         },
         {
+          'args': math_matrix_create(),
+          'expect': function(result){
+              const expected = [
+                1, 0, 0, 0, 0,
+                1, 0, 0, 0, 0,
+                1, 0, 0, 0, 0,
+                1,
+              ];
+              for(const value in expected){
+                  if(expected[value] !== result[value]){
+                      return false;
+                  }
+              }
+              return true;
+          },
+          'function': 'math_matrix_identity',
+        },
+        {
           'args': {
             'speed': 2,
             'x0': 0,
