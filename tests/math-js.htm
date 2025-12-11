@@ -34,15 +34,16 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
+          'function': 'math_clamp',
           'args': {
             'max': 360,
             'min': 0,
             'value': 450,
           },
           'expect': 360,
-          'function': 'math_clamp',
         },
         {
+          'function': 'math_clamp',
           'args': {
             'max': 360,
             'min': 0,
@@ -50,9 +51,9 @@ function repo_init(){
             'wrap': true,
           },
           'expect': 90,
-          'function': 'math_clamp',
         },
         {
+          'function': 'math_clamp',
           'args': {
             'max': 200,
             'min': 100,
@@ -60,9 +61,9 @@ function repo_init(){
             'wrap': true,
           },
           'expect': 150,
-          'function': 'math_clamp',
         },
         {
+          'function': 'math_clamp',
           'args': {
             'max': 200,
             'min': 100,
@@ -70,9 +71,9 @@ function repo_init(){
             'wrap': true,
           },
           'expect': 150,
-          'function': 'math_clamp',
         },
         {
+          'function': 'math_cuboid_overlap',
           'args': {
             'height0': 10,
             'height1': 10,
@@ -84,9 +85,9 @@ function repo_init(){
             'y1': 0,
           },
           'expect': true,
-          'function': 'math_cuboid_overlap',
         },
         {
+          'function': 'math_cuboid_overlap',
           'args': {
             'height0': 10,
             'height1': 10,
@@ -98,14 +99,14 @@ function repo_init(){
             'y1': 0,
           },
           'expect': false,
-          'function': 'math_cuboid_overlap',
         },
         {
+          'function': 'math_degrees_to_radians',
           'args': 145,
           'expect': 2.5307274,
-          'function': 'math_degrees_to_radians',
         },
         {
+          'function': 'math_distance',
           'args': {
             'x0': 4,
             'x1': 16,
@@ -115,9 +116,9 @@ function repo_init(){
             'z1': 42,
           },
           'expect': 33.1360831,
-          'function': 'math_distance',
         },
         {
+          'function': 'math_fixed_length_line',
           'args': {
             'length': 5,
             'x0': 0,
@@ -132,9 +133,9 @@ function repo_init(){
             'y': 0,
             'z': 3.5355338,
           },
-          'function': 'math_fixed_length_line',
         },
         {
+          'function': 'math_fraction_reduce',
           'args': {
             'numerator': 222,
           },
@@ -142,17 +143,17 @@ function repo_init(){
             'denominator': 500,
             'numerator': 111,
           },
-          'function': 'math_fraction_reduce',
         },
         {
+          'function': 'math_greatest_common_divisor',
           'args': {
             'a': 11,
             'b': 99,
           },
           'expect': 11,
-          'function': 'math_greatest_common_divisor',
         },
         {
+          'function': 'math_matrix_create',
           'args': void 0,
           'expect': {
              '0': 0,  '1': 0,  '2': 0,  '3': 0,
@@ -160,9 +161,9 @@ function repo_init(){
              '8': 0,  '9': 0, '10': 0, '11': 0,
             '12': 0, '13': 0, '14': 0, '15': 0,
           },
-          'function': 'math_matrix_create',
         },
         {
+          'function': 'math_matrix_create',
           'args': [15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0],
           'expect': {
              '0': 15,  '1': 14,  '2': 13,  '3': 12,
@@ -170,9 +171,9 @@ function repo_init(){
              '8':  7,  '9':  6, '10':  5, '11':  4,
             '12':  3, '13':  2, '14':  1, '15':  0,
           },
-          'function': 'math_matrix_create',
         },
         {
+          'function': 'math_matrix_identity',
           'args': math_matrix_create(),
           'expect': {
              '0': 1,  '1': 0,  '2': 0,  '3': 0,
@@ -180,9 +181,9 @@ function repo_init(){
              '8': 0,  '9': 0, '10': 1, '11': 0,
             '12': 0, '13': 0, '14': 0, '15': 1,
           },
-          'function': 'math_matrix_identity',
         },
         {
+          'function': 'math_move_2d',
           'args': {
             'speed': 2,
             'x0': 0,
@@ -195,18 +196,18 @@ function repo_init(){
             'x': 1.4142136,
             'y': 1.4142136,
           },
-          'function': 'math_move_2d',
         },
         {
+          'function': 'math_move_2d_diagonal',
           'args': {
             'dx': 1,
             'dy': 1,
             'speed': 2,
           },
           'expect': '?',
-          'function': 'math_move_2d_diagonal',
         },
         {
+          'function': 'math_move_3d',
           'args': {
             'angle': 45,
             'speed': 2,
@@ -215,9 +216,9 @@ function repo_init(){
             'x': 1.4142136,
             'z': 1.4142136,
           },
-          'function': 'math_move_3d',
         },
         {
+          'function': 'math_normalize',
           'args': {
             'x': 1,
             'y': 2,
@@ -228,12 +229,11 @@ function repo_init(){
             'y': 0.5345224,
             'z': 0.8017837,
           },
-          'function': 'math_normalize',
         },
         {
+          'function': 'math_radians_to_degrees',
           'args': .7853981633974483,
           'expect': 45,
-          'function': 'math_radians_to_degrees',
         },
       ],
     });

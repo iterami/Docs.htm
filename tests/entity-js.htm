@@ -27,38 +27,39 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
+          'function': 'entity_create',
           'args': void 0,
           'expect': function(){
               const id = entity_id_count - 1;
               return entity_entities[id].id === id;
           },
-          'function': 'entity_create',
         },
         {
+          'function': 'entity_create',
           'args': {
             'id': 'test',
           },
           'expect': function(){
               return entity_entities.test.id === 'test';
           },
-          'function': 'entity_create',
         },
         {
+          'function': 'entity_create',
           'args': void 0,
           'expect': function(){
               const id = entity_id_count - 1;
               return entity_entities[id].id === id;
           },
-          'function': 'entity_create',
         },
         {
+          'function': 'entity_group_create',
           'args': ['testgroup'],
           'expect': function(){
               return entity_groups._length.testgroup === 0;
           },
-          'function': 'entity_group_create',
         },
         {
+          'function': 'entity_group_add',
           'args': {
             'entities': [
               0,
@@ -70,9 +71,9 @@ function repo_init(){
           'expect': function(){
               return entity_groups._length.testgroup === 3;
           },
-          'function': 'entity_group_add',
         },
         {
+          'function': 'entity_group_modify',
           'args': {
             'groups': [
               'testgroup',
@@ -84,7 +85,6 @@ function repo_init(){
           'expect': function(){
               return entity_entities.test.testproperty === 0;
           },
-          'function': 'entity_group_modify',
         },
       ],
     });

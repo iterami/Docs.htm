@@ -33,14 +33,15 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
+          'function': 'core_round',
           'args': {
             'decimals': 0,
             'number': 123.456,
           },
           'expect': 123,
-          'function': 'core_round',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 0,
             'number': 123.456,
@@ -48,23 +49,22 @@ function repo_init(){
           'expect': function(result){
               return result === 123;
           },
-          'function': 'core_round',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 0,
             'number': 123.456,
           },
           'expect': 'wrong',
-          'function': 'core_round',
         },
         {
+          'function': 'undefined_function',
           'args': {
             'decimals': 0,
             'number': 123.456,
           },
           'expect': 123,
-          'function': 'undefined_function',
         },
       ],
     });

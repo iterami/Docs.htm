@@ -32,11 +32,12 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
+          'function': 'core_args',
           'args': {},
           'expect': {},
-          'function': 'core_args',
         },
         {
+          'function': 'core_args',
           'args': {
             'args': {},
             'defaults': {
@@ -46,95 +47,95 @@ function repo_init(){
           'expect': {
             'test-default-arg': 7,
           },
-          'function': 'core_args',
         },
         {
+          'function': 'core_digits_min',
           'args': {
             'digits': 3,
             'number': 7777,
           },
           'expect': '7777',
-          'function': 'core_digits_min',
         },
         {
+          'function': 'core_digits_min',
           'args': {
             'digits': 3,
             'number': 7,
           },
           'expect': '007',
-          'function': 'core_digits_min',
         },
         {
+          'function': 'core_digits_min',
           'args': {
             'digits': 3,
             'number': -7,
           },
           'expect': '-007',
-          'function': 'core_digits_min',
         },
         {
+          'function': 'core_digits_min',
           'args': {
             'digits': 3,
             'number': -7.7,
           },
           'expect': '-007.7',
-          'function': 'core_digits_min',
         },
         {
+          'function': 'core_float_compare',
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
             'precision': 0,
           },
           'expect': false,
-          'function': 'core_float_compare',
         },
         {
+          'function': 'core_float_compare',
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
             'precision': Number.EPSILON,
           },
           'expect': true,
-          'function': 'core_float_compare',
         },
         {
+          'function': 'core_float_compare',
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
             'precision': 1e-15,
           },
           'expect': true,
-          'function': 'core_float_compare',
         },
         {
+          'function': 'core_float_compare',
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
             'precision': 1e-16,
           },
           'expect': false,
-          'function': 'core_float_compare',
         },
         {
+          'function': 'core_hex_to_rgb',
           'args': '#abc',
           'expect': {
             'blue': 204,
             'green': 187,
             'red': 170,
           },
-          'function': 'core_hex_to_rgb',
         },
         {
+          'function': 'core_hex_to_rgb',
           'args': '#abcdef',
           'expect': {
             'blue': 239,
             'green': 205,
             'red': 171,
           },
-          'function': 'core_hex_to_rgb',
         },
         {
+          'function': 'core_html',
           'args': {
             'parent': document.body,
             'properties': {
@@ -144,89 +145,89 @@ function repo_init(){
           'expect': function(result){
               return document.getElementById('core_html-element') === result;
           },
-          'function': 'core_html',
         },
         {
+          'function': 'core_html_format',
           'args': '<u>\'"&</u>',
           'expect': '&lt;u&gt;&#39;&#34;&amp;&lt;/u&gt;',
-          'function': 'core_html_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'number': '1234.56789',
           },
           'expect': '1,234.56789',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'decimals_max': 1,
             'number': '1234.44444',
           },
           'expect': '1,234.4',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'decimals_max': 1,
             'number': '1234.55555',
           },
           'expect': '1,234.6',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'decimals_max': 7,
             'number': '1234.56789',
           },
           'expect': '1,234.56789',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'decimals_min': 2,
             'number': '1234.1234',
           },
           'expect': '1,234.1234',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_number_format',
           'args': {
             'decimals_min': 7,
             'number': '1234.56789',
           },
           'expect': '1,234.5678900',
-          'function': 'core_number_format',
         },
         {
+          'function': 'core_random_boolean',
           'args': void 0,
           'expect': function(result){
               return typeof result === 'boolean';
           },
-          'function': 'core_random_boolean',
         },
         {
+          'function': 'core_random_boolean',
           'args': 0,
           'expect': false,
-          'function': 'core_random_boolean',
         },
         {
+          'function': 'core_random_drop',
           'args': {
             'options': {},
           },
           'expect': false,
-          'function': 'core_random_drop',
         },
         {
+          'function': 'core_random_drop',
           'args': {
             'options': {
               'guaranteed': 1,
             },
           },
           'expect': 'guaranteed',
-          'function': 'core_random_drop',
         },
         {
+          'function': 'core_random_drop',
           'args': {
             'nothing_type': -1,
             'options': {
@@ -234,44 +235,44 @@ function repo_init(){
             },
           },
           'expect': 'guaranteed',
-          'function': 'core_random_drop',
         },
         {
+          'function': 'core_random_hex',
           'args': void 0,
           'expect': function(result){
               return typeof result === 'string' && result.length === 6;
           },
-          'function': 'core_random_hex',
         },
         {
+          'function': 'core_random_integer',
           'args': 100,
           'expect': function(result){
               return Number.isInteger(result);
           },
-          'function': 'core_random_integer',
         },
         {
+          'function': 'core_random_integer',
           'args': 1,
           'expect': 0,
-          'function': 'core_random_integer',
         },
         {
+          'function': 'core_random_key',
           'args': {
             'test-key': 1,
           },
           'expect': 'test-key',
-          'function': 'core_random_key',
         },
         {
+          'function': 'core_random_string',
           'args': {
             'length': 5,
           },
           'expect': function(result){
               return typeof result === 'string';
           },
-          'function': 'core_random_string',
         },
         {
+          'function': 'core_replace',
           'args': {
             'patterns': {
               'i ': ' ',
@@ -280,41 +281,41 @@ function repo_init(){
             'string': 'iterami iterami iterami',
           },
           'expect': 'eram eram erami',
-          'function': 'core_replace',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 0,
             'number': 123.456,
           },
           'expect': 123,
-          'function': 'core_round',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 1,
             'number': 123.456,
           },
           'expect': 123.5,
-          'function': 'core_round',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 7,
             'number': 123.456,
           },
           'expect': 123.456,
-          'function': 'core_round',
         },
         {
+          'function': 'core_round',
           'args': {
             'decimals': 1,
             'number': 1.234e23,
           },
           'expect': 1.2e23,
-          'function': 'core_round',
         },
         {
+          'function': 'core_sort_numbers',
           'args': {
             'array': [
               8,
@@ -333,9 +334,9 @@ function repo_init(){
             23,
             42,
           ],
-          'function': 'core_sort_numbers',
         },
         {
+          'function': 'core_sort_property',
           'args': {
             'array': [
               {
@@ -359,9 +360,9 @@ function repo_init(){
                 && result[2].test === 2
                 && result[3].test === 3;
           },
-          'function': 'core_sort_property',
         },
         {
+          'function': 'core_sort_strings',
           'args': {
             'array': [
               'eight',
@@ -380,51 +381,50 @@ function repo_init(){
             'sixteen',
             'twentythree',
           ],
-          'function': 'core_sort_strings',
         },
         {
+          'function': 'core_type',
           'args': [1, 2, 3],
           'expect': 'array',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': false,
           'expect': 'boolean',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': true,
           'expect': 'boolean',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': function(){
               return false;
           },
           'expect': 'function',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': 7777,
           'expect': 'number',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': {
             'property': 'value',
           },
           'expect': 'object',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': 'text goes here',
           'expect': 'string',
-          'function': 'core_type',
         },
         {
+          'function': 'core_type',
           'args': void 0,
           'expect': 'undefined',
-          'function': 'core_type',
         },
       ],
     });
