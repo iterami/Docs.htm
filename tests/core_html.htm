@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>core_html(args) Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+<style>
+#anchor{
+    border: 1px solid #aaa;
+    margin: auto;
+    padding: 9px;
+    width: max-content;
+}
+</style>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/core_html.htm>core_html(args)</a>
+<div id=anchor>ANCHOR</div>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui_elements': [
+        'anchor',
+      ],
+    });
+
+    const types = ['after', 'append', 'before', 'prepend'];
+    for(const todo of types){
+        core_html({
+          'parent': core_elements.anchor,
+          'properties': {
+            'id': todo,
+            'textContent': todo,
+          },
+          'store': todo,
+          'todo': todo,
+        });
+    }
+}
+</script>
