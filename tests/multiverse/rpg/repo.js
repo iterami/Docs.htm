@@ -443,7 +443,7 @@ function repo_init(){
       'info': '<button id=new_game type=button>Start RPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span> xp)<br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana_max></span>'
-        + '<div id=rpg_tabs></div><div id=rpg_tabcontent></div>',
+        + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {
