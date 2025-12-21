@@ -123,7 +123,6 @@ function repo_init(){
       },
       'pointerbinds': {
         'contextmenu': {
-          'preventDefault': true,
           'todo': update_pointer,
         },
         'pointercancel': {
@@ -241,7 +240,6 @@ function update_keys(event){
           && code !== 'AltLeft'
           && code !== 'AltRight'){
             core_keys[code] = {
-              'preventDefault': false,
               'state': true,
             };
         }

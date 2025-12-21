@@ -487,9 +487,7 @@ function repo_init(){
       },
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointerdown': {
           'todo': handle_picking,
         },

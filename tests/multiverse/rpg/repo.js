@@ -446,9 +446,7 @@ function repo_init(){
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();

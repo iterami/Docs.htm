@@ -522,9 +522,7 @@ function repo_init(){
         + 'Keys: <span class=keys></span>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();

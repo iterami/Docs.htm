@@ -233,9 +233,7 @@ function repo_init(){
         },
       },
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();

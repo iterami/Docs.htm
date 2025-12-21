@@ -167,9 +167,7 @@ function repo_init(){
       'info': '<button id=new_game type=button>Start Story Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointerup': {
           'todo': webgl_pick_entity,
         },

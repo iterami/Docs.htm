@@ -267,9 +267,7 @@ function repo_init(){
       'info': '<button id=new_game type=button>Start Timers Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();

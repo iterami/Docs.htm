@@ -152,9 +152,7 @@ function repo_init(){
       'info': '<button id=new_game type=button>Start Horror Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();

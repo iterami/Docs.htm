@@ -260,9 +260,7 @@ function repo_init(){
         + 'Reload: <span class=reload></span></span>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {
-          'preventDefault': true,
-        },
+        'contextmenu': {},
         'pointerdown': {
           'todo': function(){
               weapon_fire(webgl_character_id);
