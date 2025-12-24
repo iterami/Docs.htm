@@ -58,7 +58,6 @@ function load_testtrack(){
               {
                 'id': 'jump',
                 'attach_x': -170,
-                'attach_y': -.99,
                 'attach_z': -100,
                 'event_range': 0,
                 'event_todo': [
@@ -86,7 +85,6 @@ function load_testtrack(){
               },
               {
                 'id': 'mark_goal',
-                'attach_y': -.9,
                 'attach_z': 375,
                 'collision': false,
                 'event_range': [20, 100, 125],
@@ -116,7 +114,6 @@ function load_testtrack(){
               {
                 'id': 'mark_1',
                 'attach_x': 210,
-                'attach_y': -.9,
                 'attach_z': 240,
                 'collision': false,
                 'event_range': [40, 100, 10],
@@ -147,7 +144,6 @@ function load_testtrack(){
               {
                 'id': 'mark_2',
                 'attach_x': -33,
-                'attach_y': -.9,
                 'collision': false,
                 'event_range': [40, 100, 10],
                 'event_todo': [
@@ -177,7 +173,6 @@ function load_testtrack(){
               {
                 'id': 'mark_3',
                 'attach_x': 210,
-                'attach_y': -.9,
                 'attach_z': -240,
                 'collision': false,
                 'event_range': [40, 100, 10],
@@ -208,7 +203,6 @@ function load_testtrack(){
               {
                 'id': 'mark_4',
                 'attach_x': -170,
-                'attach_y': -.9,
                 'attach_z': -240,
                 'collision': false,
                 'event_range': [80, 100, 10],
@@ -236,33 +230,45 @@ function load_testtrack(){
                   80, 0, 10,
                 ],
               },
+              {
+                'id': 'base',
+                'attach_y': -1,
+                'texture': 'grid.png',
+                'texture_x': 3,
+                'texture_y': 3,
+                'vertex_colors': [
+                  .5, .5, .5, 1,
+                ],
+                'vertices': [
+                  250, 0, -500,
+                  -250, 0, -500,
+                  -250, 0, 500,
+                  250, 0, 500,
+                ],
+              },
+              {
+                'id': 'reset',
+                'attach_y': -50,
+                'draw': false,
+                'event_range': 0,
+                'event_todo': [
+                  {
+                    'todo': 'return_to_mark',
+                    'type': 'function',
+                    'value': '_target',
+                  },
+                ],
+                'vertices': [
+                  999, 0, -999,
+                  -999, 0, -999,
+                  -999, 0, 999,
+                  999, 0, 999,
+                ],
+              },
             ],
           },
         ],
         'prefabs': [
-          {
-            'type': 'webgl_primitive_cuboid',
-            'properties': {
-              'prefix': 'base',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-                'texture': 'grid.png',
-                'texture_x': 3,
-                'texture_y': 3,
-              },
-              'character': 'racing_testtrack',
-              'position_y': 49,
-              'size_x': -500,
-              'size_y': -100,
-              'size_z': -1000,
-              'top': {
-                'texture_x': 3,
-                'texture_y': 4,
-              },
-            },
-          },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
@@ -284,9 +290,6 @@ function load_testtrack(){
               'size_x': 20,
               'size_y': 100,
               'size_z': 500,
-              'top': {
-                'exclude': true,
-              },
             },
           },
           {
@@ -332,9 +335,6 @@ function load_testtrack(){
                 'exclude': true,
               },
               'character': 'racing_testtrack',
-              'right': {
-                'exclude': true,
-              },
               'position_x': 125,
               'position_y': 9,
               'size_x': 250,
@@ -521,6 +521,26 @@ function repo_logic(){
 
 function repo_stat_modify(){
     update_ui();
+}
+
+function return_to_mark(id){
+    const vehicle = webgl_characters[id];
+    const driver = !vehicle.vehicle_stats
+      ? vehicle
+      : webgl_characters[vehicle.vehicle_stats.character];
+    const mark = 'mark_' + (driver.mark === 0
+      ? 'goal'
+      : driver.mark);
+    const position = webgl_get_position(entity_entities[mark]);
+    if(vehicle.vehicle_stats){
+        vehicle.vehicle_stats.speed = 0;
+    }
+    webgl_move_to({
+      'move': vehicle,
+      'x': position.x,
+      'y': position.y + 5,
+      'z': position.z,
+    });
 }
 
 function stats(){
