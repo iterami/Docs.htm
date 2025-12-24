@@ -8,7 +8,7 @@ function debug_xp(){
     webgl_stat_modify({
       'stat': 'level_xp',
       'target': webgl_characters[webgl_character_id],
-      'value': 1000,
+      'value': document.getElementById('debug_xp').value,
     });
 }
 
@@ -66,9 +66,71 @@ function load_cave(){
           'target': webgl_characters[webgl_character_id],
         });
     }
+    const cave_length = Math.random() * 300 + 200;
+    const cave_offset = 30;
+    const cave_width = Math.random() * 100 + 100;
 
-    const cave_length = -Math.floor(300 + Math.random() * 300);
-    const cave_width = -Math.floor(100 + Math.random() * 100);
+    const lava = [];
+    const npcs = [];
+    for(let i = 0; i < floor; i++){
+        const lava_x = Math.random() * 21 + 2;
+        const lava_z = Math.random() * 21 + 2;
+        lava.push({
+          'id': 'lava_' + i,
+          'attach_x': Math.random() * cave_width - cave_width / 2,
+          'attach_y': .01,
+          'attach_z': Math.random() * -cave_length + cave_offset,
+          'event_range': 0,
+          'event_todo': [
+            {
+              'stat': 'life',
+              'value': -1,
+            },
+          ],
+          'texture': 'lavaleaf.png,.1,.1',
+          'vertex_colors': [
+            1, 0, 0, 1,
+          ],
+          'vertices': [
+            lava_x, 0, -lava_z,
+            -lava_x, 0, -lava_z,
+            -lava_x, 0, lava_z,
+            lava_x, 0, lava_z,
+          ],
+        });
+        const npc_id = 'npc_enemy_' + i;
+        npcs.push({
+          ...stats(1),
+          'id': npc_id,
+          'level': floor,
+          'model': {
+            'top': {
+              'event_range': 5,
+              'event_todo': [
+                {
+                  'todo': 'webgl_character_hit',
+                  'type': 'function',
+                  'value': {
+                    'id': npc_id,
+                    'xz': .3,
+                    'y': .5,
+                  },
+                },
+                {
+                  'stat': 'life',
+                  'target': '_target',
+                  'value': -10,
+                },
+              ],
+            },
+          },
+          'spawn': {
+            'position_x': Math.random() * cave_width - cave_width / 2,
+            'position_z': Math.random() * -cave_length + cave_offset,
+          },
+        });
+    }
+
     webgl_level_load({
       'character': 0,
       'json': {
@@ -82,7 +144,7 @@ function load_cave(){
               {
                 'id': 'exit_up',
                 'attach_y': .01,
-                'attach_z': 30,
+                'attach_z': cave_offset - 5,
                 'event_range': 0,
                 'event_todo': [
                   {
@@ -95,17 +157,17 @@ function load_cave(){
                   0, 1, 0, 1,
                 ],
                 'vertices': [
-                  10, 0, -10,
-                  -10, 0, -10,
-                  -10, 0, 10,
-                   10, 0, 10,
+                  10, 0, -5,
+                  -10, 0, -5,
+                  -10, 0, 5,
+                  10, 0, 5,
                 ],
               },
               {
                 'id': 'exit_down',
                 'attach_x': Math.random() * cave_width - cave_width / 2,
                 'attach_y': .01,
-                'attach_z': cave_length + 70,
+                'attach_z': -cave_length + cave_offset + 5,
                 'event_range': 0,
                 'event_todo': [
                   {
@@ -114,47 +176,19 @@ function load_cave(){
                   },
                 ],
                 'vertex_colors': [
-                  1, 0, 0, 1,
+                  0, 0, 1, 1,
                 ],
                 'vertices': [
-                  10, 0, -10,
-                  -10, 0, -10,
-                  -10, 0, 10,
-                   10, 0, 10,
+                  10, 0, -5,
+                  -10, 0, -5,
+                  -10, 0, 5,
+                  10, 0, 5,
                 ],
               },
+              ...lava,
             ],
           },
-          {
-            ...stats(1),
-            'id': 'npc_enemy',
-            'level': floor,
-            'model': {
-              'top': {
-                'event_range': 5,
-                'event_todo': [
-                  {
-                    'todo': 'webgl_character_hit',
-                    'type': 'function',
-                    'value': {
-                      'id': 'npc_enemy',
-                      'xz': .3,
-                      'y': .5,
-                    },
-                  },
-                  {
-                    'stat': 'life',
-                    'target': '_target',
-                    'value': -10,
-                  },
-                ],
-              },
-            },
-            'spawn': {
-              'position_x': Math.random() * cave_width - cave_width / 2,
-              'position_z': Math.random() * cave_length - cave_length / 2 + 50,
-            },
-          },
+          ...npcs,
         ],
         'prefabs': [
           {
@@ -174,10 +208,10 @@ function load_cave(){
               },
               'character': 'arpg_cave',
               'position_y': 25,
-              'position_z': cave_length / 2 + 50,
-              'size_x': cave_width,
+              'position_z': -cave_length / 2 + cave_offset,
+              'size_x': -cave_width,
               'size_y': -50,
-              'size_z': cave_length,
+              'size_z': -cave_length,
             },
           },
         ],
@@ -256,7 +290,7 @@ function load_town(spawn){
                   20, 0, -20,
                   -20, 0, -20,
                   -20, 0, 20,
-                   20, 0, 20,
+                  20, 0, 20,
                 ],
               },
               {
@@ -279,7 +313,7 @@ function load_town(spawn){
                   20, 0, -10,
                   -20, 0, -10,
                   -20, 0, 10,
-                   20, 0, 10,
+                  20, 0, 10,
                 ],
               },
             ],
@@ -505,7 +539,7 @@ function repo_init(){
       'label': 'Talents',
     });
     core_tab_create({
-      'content': '<button onclick=debug_xp() type=button>Gain 1,000 XP</button>',
+      'content': '<input id=debug_xp step=any type=number value=1000><button onclick=debug_xp() type=button>Gain XP</button>',
       'group': 'core_menu',
       'id': 'debug',
       'label': 'Debug',
