@@ -224,12 +224,17 @@ function load_testmap(){
       },
     });
 
+    const spawn_properties = {
+      'power': 2000,
+    };
     const spawns = [
       {
+        'camera': 90,
         'x': -75,
         'z': -75,
       },
       {
+        'camera': 180,
         'x': 75,
         'z': -75,
       },
@@ -238,13 +243,11 @@ function load_testmap(){
         'z': 75,
       },
       {
+        'camera': 270,
         'x': 75,
         'z': 75,
       },
     ];
-    const spawn_properties = {
-      'power': 2000,
-    };
     team_create({
       ...spawn_properties,
       ...core_random_splice(spawns),
@@ -606,9 +609,9 @@ function repo_logic(){
     }
 }
 
-function rotate_camera(degrees){
+function rotate_camera(degrees, id){
     webgl_camera_rotate({
-      'character': webgl_character_id,
+      'character': id || webgl_character_id,
       'set': true,
       'y': degrees,
     });
@@ -669,6 +672,10 @@ function team_create(args){
       },
       'speed': 2,
     });
+    rotate_camera(
+      args.camera || 0,
+      args.id
+    );
     make({
       'team': args.id,
       'time': 0,
