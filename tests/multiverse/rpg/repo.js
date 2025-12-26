@@ -59,14 +59,15 @@ function level_properties(){
 }
 
 function load_cave(){
-    floor++;
-    if(floor > 1){
+    if(floor > 0){
         webgl_stat_modify({
           'stat': 'level_xp',
           'target': webgl_characters[webgl_character_id],
+          'value': floor,
         });
     }
-    const cave_length = Math.random() * 300 + 200;
+    floor++;
+    const cave_length = Math.random() * (200 + floor) + 150 + floor;
     const cave_offset = 25;
     const cave_width = Math.random() * 100 + 100;
 
