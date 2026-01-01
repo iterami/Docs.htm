@@ -169,6 +169,27 @@
           ]
         },
         {
+          "id": "link",
+          "attach_x": 45,
+          "attach_y": -9.99,
+          "attach_z": 45,
+          "event_todo": [
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "window.open('../index.htm', '_blank')"
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
           "id": "respawn",
           "attach_z": -20,
           "event_todo": [
