@@ -9,7 +9,6 @@
 <ul>
   <li>Handles entity events that occur during collision, within a certain radius, or when the entity is picked.
   <li>You can pass an array of event objects to the "parent" arg for events without "parent" or "target" objects.
-  <li>More information about event properties can be found in the <a href=../json.htm#events>JSON level format example</a>.
 </ul>
 <table>
   <tr class=header>
@@ -25,3 +24,19 @@
     <td>
     <td>character/entity object
 </table>
+<ul>
+  <li>The properties in each object within "event_todo" of the "parent" control what happens when the event occurs. Examples can be found in the <a href=../json.htm#events>JSON level format</a> and the <a href=../../tests/multiverse/test-events.json>test-events.json</a>:<ul>
+    <li>"limit": how many times this event occurs before it is skipped.
+    <li>"random_max" and "random_min": value range to randomly add to "value".
+    <li>"set": if modifying a stat or variable, either set its value to "value" or add it.
+    <li>"stat": the specific character/entity property that will be modified.
+    <li>"todo": either the ID of the character/entity, the name of the function to call, or the name of the variable to modify.
+    <li>"type": what is being called or modified when this event occurs:<ul>
+      <li>"character": modify the character with the "todo" ID.
+      <li>"entity": default, modify the entity with the "todo" ID.
+      <li>"function": call the function with the "todo" name and pass "value" as its args. You can set this to "eval" to run complex functions such as "globalThis.window.open()".
+      <li>"variable": modify the variable with the "todo" name.
+    </ul>
+    <li>"value": the value to use to modify stats and variables, or the args that are passed to called functions.
+  </ul>
+</ul>
