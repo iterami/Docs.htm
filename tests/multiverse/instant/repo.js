@@ -252,7 +252,7 @@ function repo_init(){
       'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td>Debug Picking'
         + '<tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
       'title': 'Docs.htm',
-      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div>',
+      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div><div id=debug_catch></div>',
       'ui_elements': [
         'debug_result',
       ],
@@ -263,6 +263,7 @@ function repo_init(){
 
 function repo_logic(){
     let color = '';
+    let debug_catch = '';
     let debug_color = '';
     let debug_entity = '';
     let picked = '';
@@ -271,16 +272,21 @@ function repo_logic(){
 
     webgl_draw();
     if(core_storage_data.debug_picking){
-        const pick_color = debug_pick_color({
-          'x': x,
-          'y': y,
-        });
-        color = pick_color.pixelarray;
-        const pick_entity = debug_pick_entity(true);
-        picked = pick_entity.picked;
+        try{
+            const pick_color = debug_pick_color({
+              'x': x,
+              'y': y,
+            });
+            color = pick_color.pixelarray;
+            const pick_entity = debug_pick_entity(true);
+            picked = pick_entity.picked;
 
-        debug_color = 'Color: x' + pick_color.x + ' y' + pick_color.y + ' ' + color;
-        debug_entity = 'Entity: x' + pick_entity.x + ' y' + pick_entity.y + ' ' + pick_entity.color;
+            debug_color = 'Color: x' + pick_color.x + ' y' + pick_color.y + ' ' + color;
+            debug_entity = 'Entity: x' + pick_entity.x + ' y' + pick_entity.y + ' ' + pick_entity.color;
+
+        }catch(error){
+            debug_catch = error;
+        }
 
     }else{
         color = webgl_pick_color({
@@ -292,6 +298,7 @@ function repo_logic(){
     core_ui_update({
       'ids': {
         'color': color,
+        'debug_catch': debug_catch,
         'debug_color': debug_color,
         'debug_entity': debug_entity,
         'picked': picked
