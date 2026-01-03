@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>webgl_json_function(args)</title>
+<link href=../../../common/css/writings.css rel=stylesheet>
+
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_json_function(args)
+<ul>
+  <li>A function that can allow the <a href=../json.htm#webgl_json_function>JSON Level Format</a> events to call functions that aren't directly in the "globalThis" scope, such as "globalThis.console.log()", without using "eval()".
+  <li>If the "spread" arg is true, then the "args" arg will be spread as the function's args, which allows calling functions with multiple separate args in a specific order.
+  <li>If the "spread" arg is false, then the "args" arg is just passed directly as the function's args.
+</ul>
+<table>
+  <tr class=header>
+    <td>Arg
+    <td>Default
+    <td>Type
+  <tr>
+    <td>args
+    <td>void 0
+    <td>anything
+  <tr>
+    <td>spread
+    <td>true
+    <td>boolean
+  <tr>
+    <td>todo
+    <td>
+    <td>string
+</table>

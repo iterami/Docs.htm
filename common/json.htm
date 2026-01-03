@@ -167,21 +167,29 @@
       // Optional. Inactive timers do not count down.
       "active": true,
 
-      // Optional. Array of things todo when this timer ends and no longer repeats.
+      // Optional. Array of things todo when this timer ends and no longer repeats.<span id=webgl_json_function></span>
       "event_end": [
         {
-          "todo": "eval",
+          "todo": "webgl_json_function",
           "type": "function",
-          "value": "console.log('Timer Ended')"
+          "value": {
+            "args": "Timer Ended",
+            "spread": false,
+            "todo": "console.log"
+          }
         }
       ],
 
       // Optional. Array of things todo when this timer repeats but hasn't ended.
       "event_repeat": [
         {
-          "todo": "eval",
+          "todo": "webgl_json_function",
           "type": "function",
-          "value": "console.log('Timer Repeated')"
+          "value": {
+            "args": "Timer Repeated",
+            "spread": false,
+            "todo": "console.log"
+          }
         }
       ],
 

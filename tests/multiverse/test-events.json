@@ -86,9 +86,13 @@
               "value": 1000
             },
             {
-              "todo": "eval",
+              "todo": "webgl_json_function",
               "type": "function",
-              "value": "console.log('Gained 1,000 xp.')"
+              "value": {
+                "args": "Gained 1,000 xp.",
+                "spread": false,
+                "todo": "console.log"
+              }
             }
           ],
           "picking": true,
@@ -111,9 +115,13 @@
               "value": 1000000
             },
             {
-              "todo": "eval",
+              "todo": "webgl_json_function",
               "type": "function",
-              "value": "console.log('Gained 1,000,000 xp.')"
+              "value": {
+                "args": "Gained 1,000,000 xp.",
+                "spread": false,
+                "todo": "console.log"
+              }
             }
           ],
           "picking": true,
@@ -175,9 +183,12 @@
           "attach_z": 45,
           "event_todo": [
             {
-              "todo": "eval",
+              "todo": "webgl_json_function",
               "type": "function",
-              "value": "window.open('../index.htm', '_blank')"
+              "value": {
+                "args": ["../index.htm", "_blank"],
+                "todo": "window.open"
+              }
             }
           ],
           "picking": true,
