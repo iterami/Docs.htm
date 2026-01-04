@@ -549,7 +549,7 @@ function repo_init(){
 
 function repo_stat_modify(args){
     if(args.stat === 'level'){
-        args.target.talent_points++;
+        args.target.talent_points += args.levels;
     }
 
     update_ui();
