@@ -10,6 +10,7 @@
   <li>A function that can allow the <a href=../json.htm#webgl_json_function>JSON Level Format</a> events to call functions that aren't directly in the "globalThis" scope, such as "globalThis.console.log()", without using "eval()".
   <li>If the "spread" arg is true, then the "args" arg will be spread as the function's args, which allows calling functions with multiple separate args in a specific order.
   <li>If the "spread" arg is false, then the "args" arg is just passed directly as the function's args.
+  <li>If you need to pass variables to the called function, then currently you should use the "eval()" function instead.
 </ul>
 <table>
   <tr class=header>
