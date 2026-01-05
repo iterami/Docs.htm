@@ -283,6 +283,7 @@ function repo_logic(){
 
             debug_color = 'Color: x' + pick_color.x + ' y' + pick_color.y + ' ' + color;
             debug_entity = 'Entity: x' + pick_entity.x + ' y' + pick_entity.y + ' ' + pick_entity.color;
+            debug_catch = 'Picking Debug try/catch OK';
 
         }catch(error){
             debug_catch = error;
