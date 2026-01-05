@@ -4,6 +4,24 @@
 <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport>
 <title>Canvas Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
+<style>
+#selectable{
+    background-color: #222;
+    bottom: 0;
+    height: 150px;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    z-index: 8;
+}
+</style>
+
+<div id=selectable>
+  Selectable<br>Text<br><br>
+  <input type=text value="Selectable Input"><br><br>
+  <button>Selectable Button</button>
+</div>
+
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/canvas.js></script>
 <script src=../../common/js/entity.js></script>
@@ -12,15 +30,14 @@ function repo_drawlogic(){
     const half_x = globalThis.innerWidth / 2;
     const half_y = globalThis.innerHeight / 2;
 
-    canvas_setproperties({
-      'fillStyle': '#206620',
-    });
-    canvas.fillRect(
-      half_x - 10 - camera_x,
-      half_y - 10 - camera_y,
-      20,
-      20
+    canvas.save();
+    canvas.translate(
+      half_x - camera_x,
+      half_y - camera_y
     );
+    canvas.rotate(rotation);
+    canvas.fillRect(-25, -25, 50, 50);
+    canvas.restore();
 }
 
 function repo_escape(){
@@ -37,6 +54,7 @@ function repo_init(){
       'globals': {
         'camera_x': 0,
         'camera_y': 0,
+        'rotation': 0,
       },
       'pointerbinds': {
         'contextmenu': {},
@@ -55,20 +73,28 @@ function repo_init(){
       'ui': '<button id=reset_camera type=button>Reset Camera</button><table><tr><td>Camera X<td id=camera_x><tr><td>Camera Y<td id=camera_y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down_x<td id=down_x><tr><td>down_y<td id=down_y><tr><td>movement_x<td id=movement_x><tr><td>movement_y<td id=movement_y><tr><td>down_0<td id=down_0><tr><td>down_1<td id=down_1><tr><td>down_2<td id=down_2><tr><td>down_3<td id=down_3><tr><td>down_4<td id=down_4><tr><td>core_mobile<td id=core_mobile></table><span id=todo style="display:none"></span>',
     });
     canvas_init();
+    canvas_setproperties({
+      'fillStyle': '#206620',
+    });
 }
 
 function repo_logic(){
+    rotation += Math.PI / 180;
+    if(rotation >= Math.PI * 2){
+        rotation = 0;
+    }
+
     if(core_keys[core_storage_data.move_down].state){
-        camera_y += 10;
+        camera_y += 5;
     }
     if(core_keys[core_storage_data.move_left].state){
-        camera_x -= 10;
+        camera_x -= 5;
     }
     if(core_keys[core_storage_data.move_right].state){
-        camera_x += 10;
+        camera_x += 5;
     }
     if(core_keys[core_storage_data.move_up].state){
-        camera_y -= 10;
+        camera_y -= 5;
     }
 
     core_ui_update({
