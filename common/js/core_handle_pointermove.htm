@@ -10,5 +10,5 @@
   <li>Returns early if the menu is open and blocking events.
   <li>Updates all pointer button states, due to how pointer events handle multiple buttons pressed at once.
   <li>Updates pointer xy position and handles movement differently if the "pointerType" is "touch".
-  <li>Calls "pointermove" event todo().
+  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
 </ul>
