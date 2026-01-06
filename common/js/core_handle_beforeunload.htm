@@ -9,5 +9,5 @@
 <ul>
   <li>Can be used to ask for confirmation before the user leaves the page.
   <li>Can be used to automatically <a href=core_storage_save.htm>core storage_save(keys)</a> when the user leaves the page for repos with continual progress.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>Calls event todo() if it exists, which allows repos to conditionally determine when to "event.preventDefault()".
 </ul>
