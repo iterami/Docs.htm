@@ -185,6 +185,10 @@ function repo_init(){
     }
     document.getElementById('core_pointer').innerHTML = html;
     update_pointer();
+    globalThis.addEventListener('touchcancel', update_pointer);
+    globalThis.addEventListener('touchend', update_pointer);
+    globalThis.addEventListener('touchmove', update_pointer);
+    globalThis.addEventListener('touchstart', update_pointer);
 }
 
 function update(event){
@@ -194,9 +198,14 @@ function update(event){
 
     if(!totals[event.type]){
         totals[event.type] = 0;
+
+        const link = event.type.includes('touch')
+          ? event.type
+          : '<a href=../common/js/core_handle_' + event.type + '.htm target=_blank>' + event.type + '</a>';
+
         core_elements.totals.insertAdjacentHTML(
           'beforeend',
-          '<tr><td><a href=../common/js/core_handle_' + event.type + '.htm target=_blank>' + event.type + '</a><td id=' + event.type + '>'
+          '<tr><td>' + link + '<td id=' + event.type + '>'
         );
     }
 
