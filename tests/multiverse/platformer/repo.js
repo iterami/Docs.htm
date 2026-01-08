@@ -147,6 +147,46 @@ function load_skymap(spawn){
           ],
         });
     }
+    if(flags.skymap.key_0){
+        flagged.push({
+          'id': 'key_0',
+          'alpha': .99999,
+          'attach_x': -15,
+          'attach_y': 3,
+          'attach_z': -80,
+          'billboard': true,
+          'collision': false,
+          'event_limit': 1,
+          'event_range': 3,
+          'event_todo': [
+            {
+              'todo': 'collect',
+              'type': 'function',
+              'value': {
+                'flag': 'key_0',
+                'id': 'key_0',
+                'type': 'keys',
+              },
+            },
+            {
+              'stat': 'attach_x',
+              'todo': 'gate_0',
+              'value': -60,
+            },
+          ],
+          'texture': 'key.png',
+          'texture_align': '00101101',
+          'vertex_colors': [
+            1, 1, 1, 1,
+          ],
+          'vertices': [
+            2, 2, -0,
+            -2, 2, -0,
+            -2, -2, 0,
+            2, -2, 0,
+          ],
+        });
+    }
     webgl_level_load({
       'character': 0,
       'json': {
@@ -240,6 +280,7 @@ function load_skymap(spawn){
               },
               {
                 'id': 'gate_0',
+                'attach_x': flags.skymap.key_0 ? 0 : -60,
                 'attach_z': -100,
                 'rotate_x': 90,
                 'texture': 'grid.png',
@@ -251,43 +292,6 @@ function load_skymap(spawn){
                   -30, 0, -20,
                   -30, 0, 20,
                   30, 0, 20,
-                ],
-              },
-              {
-                'id': 'key_0',
-                'alpha': .99999,
-                'attach_x': -15,
-                'attach_y': 3,
-                'attach_z': -80,
-                'billboard': true,
-                'collision': false,
-                'event_limit': 1,
-                'event_range': 3,
-                'event_todo': [
-                  {
-                    'todo': 'collect',
-                    'type': 'function',
-                    'value': {
-                      'id': 'key_0',
-                      'type': 'keys',
-                    },
-                  },
-                  {
-                    'stat': 'attach_x',
-                    'todo': 'gate_0',
-                    'value': -60,
-                  },
-                ],
-                'texture': 'key.png',
-                'texture_align': '00101101',
-                'vertex_colors': [
-                  1, 1, 1, 1,
-                ],
-                'vertices': [
-                  2, 2, -0,
-                  -2, 2, -0,
-                  -2, -2, 0,
-                  2, -2, 0,
                 ],
               },
               {
@@ -445,6 +449,7 @@ function new_game(){
     flags = {
       'skymap': {
         'coin_0': true,
+        'key_0': true,
         'lives_0': true,
       },
     };
