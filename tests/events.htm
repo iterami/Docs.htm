@@ -202,10 +202,9 @@ function update(event){
         const path = event.type.includes('touch')
           ? 'touch'
           : event.type;
-
         core_elements.totals.insertAdjacentHTML(
           'beforeend',
-          '<tr><td><a href=../common/js/core_handle_' + path + '.htm target=_blank>' + event.type + '</a>' + '<td id=' + event.type + '>'
+          '<tr><td><a href=../common/js/core_handle_' + path + '.htm target=_blank>' + event.type + '</a><td id=' + event.type + '>'
         );
     }
 
