@@ -345,6 +345,7 @@ function load_skymap(spawn){
                     'type': 'function',
                     'value': {
                       'id': 'fireball_0',
+                      'target': '_target',
                       'xz': .3,
                       'y': .5
                     }
