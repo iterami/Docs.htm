@@ -1,5 +1,6 @@
 {
   "title": "Characters Test",
+  "gravity_damage": true,
   "spawn": {
     "camera_rotate_x": 30,
     "position_y": 5
@@ -37,7 +38,7 @@
       "level": 1,
       "model": {},
       "spawn": {
-        "position_z": -25
+        "position_z": -10
       }
     },
     {
@@ -56,6 +57,7 @@
               "type": "function",
               "value": {
                 "id": "character_hit",
+                "target": "_target",
                 "xz": 0.3,
                 "y": 0.5
               }
@@ -64,7 +66,40 @@
         }
       },
       "spawn": {
-        "position_x": -10
+        "position_x": -2,
+        "position_z": -30
+      }
+    },
+    {
+      "id": "dead_character_hit",
+      "automove": true,
+      "camera_zoom": 25,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": 1,
+      "level": 1,
+      "lives": 1,
+      "model": {
+        "top": {
+          "event_range": 5,
+          "event_todo": [
+            {
+              "todo": "webgl_character_hit",
+              "type": "function",
+              "value": {
+                "id": "dead_character_hit",
+                "target": "_target",
+                "xz": 0.3,
+                "y": 0.5
+              }
+            }
+          ]
+        }
+      },
+      "spawn": {
+        "position_x": 7,
+        "position_y": 99,
+        "position_z": -60
       }
     }
   ]
