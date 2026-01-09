@@ -499,7 +499,7 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new_game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span> xp)<br>'
+      'info': '<button id=new_game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span>/<span id=level_xp_max></span> xp <span class=xp_percent></span>%)<br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana_max></span>'
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
@@ -718,6 +718,7 @@ function update_ui(){
         inventory_ui += '<li>' + character.inventory[item].id;
     }
 
+    const xp_max = Math.floor(character.level + 1) * 1e3;
     core_ui_update({
       'class': true,
       'ids': {
@@ -727,6 +728,7 @@ function update_ui(){
         'jump_height': character.jump_height,
         'level': character.level,
         'level_xp': character.level_xp,
+        'level_xp_max': xp_max,
         'life': character.life,
         'life_max': character.life_max,
         'mana': character.mana,
@@ -735,7 +737,7 @@ function update_ui(){
         'speed': character.speed,
         'talent_points': character.talent_points,
         'xp_percent': core_round({
-          'number': character.level_xp / (Math.floor(character.level + 1) * 1e3) * 100,
+          'number': character.level_xp / xp_max * 100,
         }),
       },
       'todo': 'innerHTML',
