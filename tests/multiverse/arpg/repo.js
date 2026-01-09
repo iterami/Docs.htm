@@ -58,7 +58,11 @@ function level_properties(){
     };
 }
 
-function load_cave(){
+function load_cave(id){
+    if(id !== webgl_character_id){
+        return;
+    }
+
     if(floor > 0){
         webgl_stat_modify({
           'stat': 'level_xp',
@@ -68,8 +72,10 @@ function load_cave(){
     }
     floor++;
     const cave_length = Math.random() * (200 + floor) + 150 + floor;
+    const cave_length_half = cave_length / 2;
     const cave_offset = 25;
     const cave_width = Math.random() * 100 + 100;
+    const cave_width_half = cave_width / 2;
 
     const lava = [];
     const npcs = [];
@@ -78,9 +84,9 @@ function load_cave(){
         const lava_z = Math.random() * 21 + 2;
         lava.push({
           'id': 'lava_' + i,
-          'attach_x': Math.random() * cave_width - cave_width / 2,
+          'attach_x': Math.random() * cave_width - cave_width_half,
           'attach_y': .01,
-          'attach_z': Math.random() * -cave_length + cave_offset,
+          'attach_z': Math.random() * cave_length - cave_length_half,
           'event_range': 0,
           'event_todo': [
             {
@@ -113,6 +119,7 @@ function load_cave(){
                   'type': 'function',
                   'value': {
                     'id': npc_id,
+                    'target': '_target',
                     'xz': .3,
                     'y': .5,
                   },
@@ -126,8 +133,8 @@ function load_cave(){
             },
           },
           'spawn': {
-            'position_x': Math.random() * cave_width - cave_width / 2,
-            'position_z': Math.random() * -cave_length + cave_offset,
+            'position_x': Math.random() * cave_width - cave_width_half,
+            'position_z': Math.random() * cave_length - cave_length_half,
           },
         });
     }
@@ -137,6 +144,9 @@ function load_cave(){
       'json': {
         ...level_properties(),
         'fog_end': 100 + Math.floor(Math.random() * 50),
+        'spawn': {
+          'position_z': cave_length_half,
+        },
         'characters': [
           {
             'id': 'arpg_cave',
@@ -145,13 +155,16 @@ function load_cave(){
               {
                 'id': 'exit_up',
                 'attach_y': .01,
-                'attach_z': cave_offset - 5,
+                'attach_z': cave_length_half + cave_offset,
                 'event_range': 0,
                 'event_todo': [
                   {
                     'todo': 'load_town',
                     'type': 'function',
-                    'value': 1,
+                    'value': {
+                      'spawn': 1,
+                      'target': '_target',
+                    },
                   },
                 ],
                 'vertex_colors': [
@@ -168,12 +181,13 @@ function load_cave(){
                 'id': 'exit_down',
                 'attach_x': Math.random() * cave_width - cave_width / 2,
                 'attach_y': .01,
-                'attach_z': -cave_length + cave_offset + 5,
+                'attach_z': -cave_length_half - cave_offset,
                 'event_range': 0,
                 'event_todo': [
                   {
                     'todo': 'load_cave',
                     'type': 'function',
+                    'value': '_target',
                   },
                 ],
                 'vertex_colors': [
@@ -209,10 +223,9 @@ function load_cave(){
               },
               'character': 'arpg_cave',
               'position_y': 25,
-              'position_z': -cave_length / 2 + cave_offset,
               'size_x': -cave_width,
               'size_y': -50,
-              'size_z': -cave_length,
+              'size_z': -cave_length - cave_offset * 2 - 10,
             },
           },
         ],
@@ -221,7 +234,12 @@ function load_cave(){
     update_ui();
 }
 
-function load_town(spawn){
+function load_town(args){
+    if(args?.spawn === 1
+      && args.target !== webgl_character_id){
+        return;
+    }
+
     floor = 0;
 
     const spawners = [
@@ -236,7 +254,7 @@ function load_town(spawn){
       'character': 0,
       'json': {
         ...level_properties(),
-        'spawn': spawners[spawn],
+        'spawn': spawners[args?.spawn || 0],
         'paths': [
           {
             'id': 'path_lava',
@@ -304,6 +322,7 @@ function load_town(spawn){
                   {
                     'todo': 'load_cave',
                     'type': 'function',
+                    'value': '_target',
                   },
                 ],
                 'rotate_x': 90,
@@ -421,7 +440,7 @@ function new_game(){
 
     floor = 0;
 
-    load_town(0);
+    load_town();
     webgl_character_init({
       ...stats(0),
       'level': 0,
@@ -600,6 +619,7 @@ function spike_model(id, range, xz, y){
             'type': 'function',
             'value': {
               'id': id,
+              'target': '_target',
               'xz': xz,
               'y': y,
             },
