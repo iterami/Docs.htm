@@ -8,7 +8,6 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_handle_keydown(event)
 <ul>
   <li>Updates the state of "core_key_shift".
-  <li>Does not call event todo if the control, alt, or meta keys are down, or if the pressed key is already down.
-  <li>Does not call event todo if the menu is open and blocking events, except for the "Escape" key.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>Does not call event todo if the control, alt, or meta keys are down, if the pressed key is already down, or the menu is open and blocking events, except for the "Escape" key.
+  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event down() if it exists.
 </ul>

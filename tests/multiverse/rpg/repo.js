@@ -500,7 +500,7 @@ function repo_init(){
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'keybinds': {
         'Backquote': {
-          'todo': function(){
+          'down': function(){
               webgl_characters[webgl_character_id].automove = !webgl_characters[webgl_character_id].automove;
           },
         },

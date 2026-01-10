@@ -468,22 +468,22 @@ function repo_init(){
         + 'Making: <span class=making></span> <span class=making_time></span>',
       'keybinds': {
         'ArrowDown': {
-          'todo': function(){
+          'down': function(){
               rotate_camera(180);
           },
         },
         'ArrowLeft': {
-          'todo': function(){
+          'down': function(){
               rotate_camera(270);
           },
         },
         'ArrowRight': {
-          'todo': function(){
+          'down': function(){
               rotate_camera(90);
           },
         },
         'ArrowUp': {
-          'todo': function(){
+          'down': function(){
               rotate_camera(0);
           },
         },
