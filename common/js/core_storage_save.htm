@@ -2,13 +2,14 @@
 <html lang=en>
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
-<title>core_storage_save(keys)</title>
+<title>core_storage_save(args)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_storage_save(keys)
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_storage_save(args)
 <ul>
   <li>Saves current localStorage input values to localStorage.
   <li>Saves all by default, but can also only save specific keys.
+  <li>Can optionally call <a href=core_keys_rebind.htm>core_keys_rebind()</a> to update bound keys.
 </ul>
 <table>
   <tr class=header>
@@ -19,4 +20,8 @@
     <td>keys
     <td>false
     <td>boolean false or array of strings
+  <tr>
+    <td>rebind
+    <td>true
+    <td>boolean
 </table>
