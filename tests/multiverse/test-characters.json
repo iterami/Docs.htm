@@ -14,16 +14,58 @@
         {
           "id": "base",
           "texture": "grid.png",
-          "texture_x": 20,
+          "texture_x": 10,
           "texture_y": 20,
           "vertex_colors": [
             0.5, 0.5, 0.5, 1
           ],
           "vertices": [
-            100, 0, -100,
-            -100, 0, -100,
-            -100, 0, 100,
-            100, 0, 100
+            50, 0, -100,
+            -50, 0, -100,
+            -50, 0, 100,
+            50, 0, 100
+          ]
+        },
+        {
+          "id": "death_horizontal",
+          "attach_x": -50,
+          "attach_y": 0.1,
+          "event_range": 0,
+          "event_todo": [
+            {
+              "set": true,
+              "stat": "life",
+              "value": 0
+            }
+          ],
+          "texture": "lavaleaf.png",
+          "vertices": [
+            10, 0, -10,
+            -10, 0, -10,
+            -10, 0, 10,
+            10, 0, 10
+          ]
+        },
+        {
+          "id": "death_vertical",
+          "attach_x": -50,
+          "attach_y": 10,
+          "attach_z": -40,
+          "event_range": 0,
+          "event_todo": [
+            {
+              "set": true,
+              "stat": "life",
+              "value": 0
+            }
+          ],
+          "rotate_x": 90,
+          "texture": "lavaleaf.png",
+          "vertices": [
+            20, 0, -10,
+            -20, 0, -10,
+            -20, 0, 10,
+            20, 0, 10
           ]
         }
       ]
