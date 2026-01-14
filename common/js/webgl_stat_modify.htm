@@ -10,7 +10,11 @@
   <li>Modifies or sets a character/entity property.
   <li>Creates the stat if it does not exist and the "has" arg is false.
   <li>The optional "round" arg can be an integer to round the modified stat to a specific number of decimal places using <a href=core_round.htm>core_round(args)</a>.
-  <li>Character "life" property has extra checks to remove attached entities upon death.
+  <li>Character "life" property handles character death when life&lt;=0, such as from <a href=webgl_character_die.htm>webgl_character_die(id)</a>:<ol>
+    <li>Life is set to 0.
+    <li>If the character has more than 0 lives, then 1 is lost.
+    <li>If the character does not have 0 lives remaining, then their life is set to max and they respawn via <a href=webgl_character_spawn.htm>webgl_character_spawn(id)</a>.
+  </ol>
   <li>Modifying "vertex-colors" randomizes colors.
   <li>Calls optional repo-specific <a href=repo_stat_modify.htm>repo_stat_modify(args)</a> function with the same args.
 </ul>
