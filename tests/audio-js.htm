@@ -7,12 +7,27 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/audio.htm>audio.js</a><br>
 <textarea id=args>{
-  "duration": 0.1,
+  "duration": 0.15,
   "frequency": 100,
   "panner": false,
   "type": "sine"
 }</textarea><br>
 <button class=medium id=play_boop type=button>Play Boop</button><button class=medium id=play_custom type=button>Play Custom</button>
+<table>
+  <tr>
+    <td>baseLatency
+    <td id=baseLatency>
+  <tr>
+    <td>currentTime
+    <td id=currentTime>
+  <tr>
+    <td>outputLatency
+    <td id=outputLatency>
+  <tr>
+    <td>sampleRate
+    <td id=sampleRate>
+</table>
+<button class=medium id=play_custom_at type=button>Play Custom At Position</button>
 <table>
   <tr class=header>
     <td>Listener
@@ -39,7 +54,6 @@
     <td>positionZ
     <td><input id=positionZ step=any type=number value=0>
 </table>
-<button class=medium id=play_custom_at type=button>Play Custom At Position</button>
 
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/audio.js></script>
@@ -49,6 +63,7 @@ function custom_audio(){
       'custom': JSON.parse(core_elements.args.value),
     });
     audio_start('custom');
+    update_properties();
 }
 
 function custom_audio_at(){
@@ -64,6 +79,7 @@ function custom_audio_at(){
       'positionY': core_elements.positionY.value,
       'positionZ': core_elements.positionZ.value,
     });
+    update_properties();
 }
 
 function repo_init(){
@@ -72,6 +88,7 @@ function repo_init(){
         'play_boop': {
           'onclick': function(){
               audio_start('boop');
+              update_properties();
           },
         },
         'play_custom': {
@@ -92,6 +109,21 @@ function repo_init(){
         'positionY',
         'positionZ',
       ],
+    });
+}
+
+function update_properties(){
+    if(audio_context === 0){
+        return;
+    }
+
+    core_ui_update({
+      'ids': {
+        'baseLatency': audio_context.baseLatency,
+        'currentTime': audio_context.currentTime,
+        'outputLatency': audio_context.outputLatency,
+        'sampleRate': audio_context.sampleRate,
+      },
     });
 }
 </script>
