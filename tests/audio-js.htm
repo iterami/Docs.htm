@@ -26,6 +26,9 @@
   <tr>
     <td>sampleRate
     <td id=sampleRate>
+  <tr>
+    <td>state
+    <td id=state>
 </table>
 <button class=medium id=play_custom_at type=button>Play Custom At Position</button>
 <table>
@@ -123,6 +126,7 @@ function update_properties(){
         'currentTime': audio_context.currentTime,
         'outputLatency': audio_context.outputLatency,
         'sampleRate': audio_context.sampleRate,
+        'state': audio_context.state,
       },
     });
 }
