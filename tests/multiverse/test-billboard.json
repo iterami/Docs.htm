@@ -25,46 +25,58 @@
           ]
         },
         {
-          "id": "billboard_0",
-          "attach_x": -5,
+          "id": "billboard_tall",
+          "attach_x": -30,
+          "attach_y": 5,
+          "billboard": true,
+          "collision": false,
+          "vertices": [
+            5, 5, 0,
+            -5, 5, 0,
+            -2, -5, 0,
+            2, -5, 0
+          ]
+        },
+        {
+          "id": "billboard_x",
+          "attach_x": -10,
           "attach_y": 5,
           "billboard": true,
           "change_rotate_x": 1,
           "collision": false,
-          "texture": "grid.png",
           "vertices": [
-            5, 5, 0,
-            -5, 5, 0,
-            -5, -5, 0,
-            5, -5, 0
+            5, 0, -5,
+            -5, 0, -5,
+            -2, 0, 5,
+            2, 0, 5
           ]
         },
         {
-          "id": "billboard_1",
+          "id": "billboard_y",
+          "attach_x": 10,
           "attach_y": 5,
           "billboard": true,
+          "change_rotate_y": 1,
           "collision": false,
-          "texture": "grid.png",
           "vertices": [
-            5, 5, 0,
-            -5, 5, 0,
-            -5, -5, 0,
-            5, -5, 0
+            5, 0, -5,
+            -5, 0, -5,
+            -2, 0, 5,
+            2, 0, 5
           ]
         },
         {
-          "id": "billboard_2",
-          "attach_x": 5,
+          "id": "billboard_z",
+          "attach_x": 30,
           "attach_y": 5,
           "billboard": true,
           "change_rotate_z": 1,
           "collision": false,
-          "texture": "grid.png",
           "vertices": [
-            5, 5, 0,
-            -5, 5, 0,
-            -5, -5, 0,
-            5, -5, 0
+            5, 0, -5,
+            -5, 0, -5,
+            -2, 0, 5,
+            2, 0, 5
           ]
         }
       ]
