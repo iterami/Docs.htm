@@ -55,6 +55,15 @@ function repo_init(){
         {
           'function': 'math_clamp',
           'args': {
+            'max': 360,
+            'min': 0,
+            'value': 180,
+          },
+          'expect': 180,
+        },
+        {
+          'function': 'math_clamp',
+          'args': {
             'max': 200,
             'min': 100,
             'value': -4050,
