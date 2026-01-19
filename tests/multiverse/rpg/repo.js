@@ -496,7 +496,9 @@ function repo_init(){
       },
       'info': '<button id=new_game type=button>Start RPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span>/<span id=level_xp_max></span> xp <span class=xp_percent></span>%)<br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
-        + 'Mana: <span class=mana></span>/<span class=mana_max></span>'
+        + 'Mana: <span class=mana></span>/<span class=mana_max></span><br>'
+        + 'Jump Height: <span id=jump_height></span><br>'
+        + 'Speed: <span id=speed></span>'
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'keybinds': {
         'Backquote': {
@@ -528,13 +530,6 @@ function repo_init(){
         + 'Mana: <span id=mana></span>/<span id=mana_max></span><br>'
         + 'XP: <span id=xp_percent></span>%<br>'
         + 'Floor: <span id=floor></span>',
-    });
-    core_tab_create({
-      'content': 'Jump Height: <span id=jump_height></span><br>'
-        + 'Speed: <span id=speed></span>',
-      'group': 'rpg',
-      'id': 'stats',
-      'label': 'Stats',
     });
     core_tab_create({
       'content': '<div id=equipment></div>'
