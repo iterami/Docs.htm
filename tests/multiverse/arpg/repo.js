@@ -8,7 +8,7 @@ function debug_xp(){
     webgl_stat_modify({
       'stat': 'level_xp',
       'target': webgl_characters[webgl_character_id],
-      'value': document.getElementById('debug_xp').value,
+      'value': Number(document.getElementById('debug_xp').value),
     });
 }
 
