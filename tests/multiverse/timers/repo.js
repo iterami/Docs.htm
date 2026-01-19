@@ -32,9 +32,9 @@ function add_timer_random(){
           'value': 1,
         },
       ],
-      'frames_max': Math.floor(Math.random() * 100) + 100,
-      'frames_random': Math.floor(Math.random() * 100),
-      'repeat': Math.floor(Math.random() * 5),
+      'frames_max': core_random_integer(100) + 100,
+      'frames_random': core_random_integer(100),
+      'repeat': core_random_integer(5),
     });
 
     if(core_menu_open){

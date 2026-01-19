@@ -143,7 +143,7 @@ function load_cave(id){
       'character': 0,
       'json': {
         ...level_properties(),
-        'fog_end': 100 + Math.floor(Math.random() * 50),
+        'fog_end': 100 + core_random_integer(50),
         'spawn': {
           'position_z': cave_length_half,
         },
@@ -212,8 +212,8 @@ function load_cave(id){
               'prefix': 'cave',
               'all': {
                 'texture': 'lavaleaf.png',
-                'texture_x': 1 + Math.floor(Math.random() * 3),
-                'texture_y': 1 + Math.floor(Math.random() * 3),
+                'texture_x': 1 + core_random_integer(3),
+                'texture_y': 1 + core_random_integer(3),
                 'vertex_colors': [
                   1, 1, 1, 1,
                 ],
