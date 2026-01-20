@@ -437,7 +437,7 @@ function new_game(){
 
     load_town();
     webgl_character_init({
-      ...stats(),
+      ...stats(0),
       'level': 0,
     });
     update_ui();
