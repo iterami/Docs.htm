@@ -27,13 +27,37 @@ function heal(){
     update_ui();
 }
 
-function item_drop(item){
+function item_drop(id){
 }
 
-function item_pickup(item){
+function item_equip(id){
+    const character = webgl_characters[webgl_character_id];
+    const item = character.inventory[id];
+
+    if(character.equipment[item.slot] !== void 0){
+        item_unequip(item.slot);
+    }
+
+    character.equipment[item.slot] = item;
+    character.inventory.splice(id, 1);
+
+    update_ui();
 }
 
-function item_toggle(item){
+function item_pickup(id){
+}
+
+function item_unequip(slot){
+    const character = webgl_characters[webgl_character_id];
+
+    if(character.equipment[slot] === void 0){
+        return;
+    }
+
+    character.inventory.push(character.equipment[slot]);
+    character.equipment[slot] = void 0;
+
+    update_ui();
 }
 
 function kill(id){
@@ -535,7 +559,7 @@ function repo_init(){
     const slots = stats_equipment();
     let equipment_ui = '<table>';
     for(const slot in slots){
-        equipment_ui += '<tr><td>' + slot + '<td id=' + slot + '>';
+        equipment_ui += '<tr><td><button onclick="item_unequip(\'' + slot + '\')">' + slot + '</button><td id=' + slot + '>';
     }
     core_tab_create({
       'content': equipment_ui + '</table><span id=inventory></span>',
@@ -657,7 +681,11 @@ function stats(team){
       'gravity': 1,
       'inventory': [
         {
-          'id': 'Test Item',
+          'id': 'Test Mana Hat',
+          'slot': 'head',
+          'stats': {
+            'mana_max': 1,
+          },
         },
       ],
       'jump_height': .6,
@@ -720,12 +748,12 @@ function update_ui(){
 
     let inventory_ui = '<ul>';
     for(const item in character.inventory){
-        inventory_ui += '<li>' + character.inventory[item].id;
+        inventory_ui += '<li>' + character.inventory[item].id + ' <button onclick="item_equip(' + item + ')">Equip</button>';
     }
     const equipment = {};
     for(const slot in character.equipment){
         equipment[slot] = character.equipment[slot] !== void 0
-          ? character.equipment[slot]
+          ? character.equipment[slot].id
           : '';
     }
     const xp_max = Math.floor(character.level + 1) * 1e3;
