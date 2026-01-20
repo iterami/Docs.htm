@@ -531,31 +531,38 @@ function repo_init(){
         + 'XP: <span id=xp_percent></span>%<br>'
         + 'Floor: <span id=floor></span>',
     });
+
+    const slots = stats_equipment();
+    let equipment_ui = '<table>';
+    for(const slot in slots){
+        equipment_ui += '<tr><td>' + slot + '<td id=' + slot + '>';
+    }
     core_tab_create({
-      'content': '<div id=equipment></div>'
-        + 'Inventory: <span id=inventory></span>',
+      'content': equipment_ui + '</table><span id=inventory></span>',
       'group': 'rpg',
       'id': 'inventory',
       'label': 'Inventory',
     });
 
-    let skills_ui = '<ul>';
+    let skills_ui = '<table class=center><tr class=header><td>Skill<td>Mana<td>Damage';
     for(const skill in skills){
-        skills_ui += '<li><button onclick="skill_select(\'' + skill + '\')" type=button>' + skill + '</button>';
+        skills_ui += '<tr><td><button onclick="skill_select(\'' + skill + '\')" type=button>' + skill + '</button>'
+          + '<td>' + skills[skill].mana
+          + '<td>' + skills[skill].damage;
     }
     core_tab_create({
-      'content': 'Selected Skill: <span class=skill></span><br>' + skills_ui + '</ul>',
+      'content': 'Selected Skill: <span class=skill></span>' + skills_ui + '</table>',
       'group': 'rpg',
       'id': 'skills',
       'label': 'Skills',
     });
 
-    let talents_ui = '<ul>';
+    let talents_ui = '<table><tr class=header><td>+<td><span id=talent_points></span> points';
     for(const talent in talents){
-        talents_ui += '<li><button onclick="talent_modify(\'' + talent + '\')" type=button>+</button> +' + talents[talent].value + ' ' + talent;
+        talents_ui += '<tr><td><button onclick="talent_modify(\'' + talent + '\')" type=button>+</button><td>+' + talents[talent].value + ' ' + talent;
     }
     core_tab_create({
-      'content': 'Talents (<span id=talent_points></span> points): ' + talents_ui + '</ul>',
+      'content': talents_ui + '</table>',
       'group': 'rpg',
       'id': 'talents',
       'label': 'Talents',
@@ -646,21 +653,7 @@ function stats(team){
       'controls': 'rpg',
       'drop_chance': 0,
       'drops': [],
-      'equipment': {
-        'head': void 0,
-        'neck': void 0,
-        'body': void 0,
-        'wrist_left': void 0,
-        'wrist_right': void 0,
-        'hand_left': void 0,
-        'holding_left': void 0,
-        'hand_right': void 0,
-        'holding_right': void 0,
-        'rings': [],
-        'legs': void 0,
-        'foot_left': void 0,
-        'foot_right': void 0,
-      },
+      'equipment': stats_equipment(),
       'gravity': 1,
       'inventory': [
         {
@@ -686,6 +679,25 @@ function stats(team){
     };
 }
 
+function stats_equipment(){
+    return {
+      'head': void 0,
+      'neck': void 0,
+      'body': void 0,
+      'wrist_left': void 0,
+      'wrist_right': void 0,
+      'hand_left': void 0,
+      'holding_left': void 0,
+      'hand_right': void 0,
+      'holding_right': void 0,
+      'ring_left': void 0,
+      'ring_right': void 0,
+      'legs': void 0,
+      'foot_left': void 0,
+      'foot_right': void 0,
+    };
+}
+
 function talent_modify(talent){
     const character = webgl_characters[webgl_character_id];
     if(!character
@@ -706,24 +718,22 @@ function update_ui(){
         return;
     }
 
-    let equipment_ui = '<ul>';
-    for(const slot in character.equipment){
-        const item = character.equipment[slot] !== void 0
-          ? character.equipment[slot]
-          : '';
-        equipment_ui += '<li>' + slot + ': ' + item;
-    }
-
     let inventory_ui = '<ul>';
     for(const item in character.inventory){
         inventory_ui += '<li>' + character.inventory[item].id;
     }
-
+    const equipment = {};
+    for(const slot in character.equipment){
+        equipment[slot] = character.equipment[slot] !== void 0
+          ? character.equipment[slot]
+          : '';
+    }
     const xp_max = Math.floor(character.level + 1) * 1e3;
+
     core_ui_update({
       'class': true,
       'ids': {
-        'equipment': equipment_ui + '</ul>',
+        ...equipment,
         'floor': floor,
         'inventory': inventory_ui + '</ul>',
         'jump_height': character.jump_height,
