@@ -591,7 +591,7 @@ function repo_init(){
         equipment_ui += '<tr><td><button onclick="item_unequip(\'' + slot + '\')">' + slot + '</button><td id=' + slot + '>';
     }
     core_tab_create({
-      'content': equipment_ui + '</table><span id=inventory></span>',
+      'content': equipment_ui + '</table><ul id=inventory></ul>',
       'group': 'rpg',
       'id': 'inventory',
       'label': 'Inventory',
@@ -769,7 +769,7 @@ function update_ui(){
         return;
     }
 
-    let inventory_ui = '<ul>';
+    let inventory_ui = '';
     for(const item in character.inventory){
         inventory_ui += '<li><button onclick="item_equip(' + item + ')">' + character.inventory[item].id + '</button>'
           + '<button onclick="item_delete(' + item + ')">X</button>';
@@ -787,7 +787,7 @@ function update_ui(){
       'ids': {
         ...equipment,
         'floor': floor,
-        'inventory': inventory_ui + '</ul>',
+        'inventory': inventory_ui,
         'jump_height': character.jump_height,
         'level': character.level,
         'level_xp': character.level_xp,
