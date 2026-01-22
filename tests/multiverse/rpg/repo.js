@@ -519,6 +519,7 @@ function repo_init(){
         'items': {
           'Boot': 'foot',
           'Bracelet': 'wrist',
+          'Glove': 'hand',
           'Hat': 'head',
           'Necklace': 'neck',
           'Ring': 'ring',
@@ -776,8 +777,8 @@ function update_ui(){
 
     let inventory_ui = '<ul>';
     for(const item in character.inventory){
-        inventory_ui += '<li>' + character.inventory[item].id + ' <button onclick="item_equip(' + item + ')">Equip</button>'
-          + '<button onclick="item_delete(' + item + ')">Delete</button>';
+        inventory_ui += '<li><button onclick="item_equip(' + item + ')">' + character.inventory[item].id + '</button>'
+          + '<button onclick="item_delete(' + item + ')">X</button>';
     }
     const equipment = {};
     for(const slot in character.equipment){
