@@ -27,18 +27,43 @@ function heal(){
     update_ui();
 }
 
-function item_drop(id){
+function item_create(){
+    const item = core_random_key(items);
+    webgl_characters[webgl_character_id].inventory.push({
+      'id': item,
+      'slot': items[item],
+    });
+
+    update_ui();
+}
+
+function item_delete(id){
+    const inventory = webgl_characters[webgl_character_id].inventory;
+
+    if(!globalThis.confirm('Delete ' + inventory[id].id + '?')){
+        return;
+    }
+    inventory.splice(id, 1);
+
+    update_ui();
 }
 
 function item_equip(id){
     const character = webgl_characters[webgl_character_id];
     const item = character.inventory[id];
+    let slot = item.slot;
 
-    if(character.equipment[item.slot] !== void 0){
-        item_unequip(item.slot);
+    if(slot === 'foot' || slot === 'hand' || slot === 'holding' || slot === 'ring' || slot === 'wrist'){
+        slot += character.equipment[slot + '_right'] === void 0
+          ? '_right'
+          : '_left';
     }
 
-    character.equipment[item.slot] = item;
+    if(character.equipment[slot] !== void 0){
+        item_unequip(slot);
+    }
+
+    character.equipment[slot] = item;
     character.inventory.splice(id, 1);
 
     update_ui();
@@ -491,6 +516,16 @@ function repo_init(){
       },
       'globals': {
         'floor': 0,
+        'items': {
+          'Boot': 'foot',
+          'Bracelet': 'wrist',
+          'Hat': 'head',
+          'Necklace': 'neck',
+          'Ring': 'ring',
+          'Scarf': 'neck',
+          'Shirt': 'body',
+          'Trousers': 'legs',
+        },
         'skills': {
           'Bolt': {
             'damage': 1,
@@ -592,7 +627,8 @@ function repo_init(){
       'label': 'Talents',
     });
     core_tab_create({
-      'content': '<input id=debug_xp step=any type=number value=1000><button onclick=debug_xp() type=button>Gain XP</button>',
+      'content': '<button onclick=item_create() type=button>Create Random Item</button><br>'
+        + '<input id=debug_xp step=any type=number value=1000><button onclick=debug_xp() type=button>Gain XP</button>',
       'group': 'core_menu',
       'id': 'debug',
       'label': 'Debug',
@@ -679,15 +715,7 @@ function stats(team){
       'drops': [],
       'equipment': stats_equipment(),
       'gravity': 1,
-      'inventory': [
-        {
-          'id': 'Test Mana Hat',
-          'slot': 'head',
-          'stats': {
-            'mana_max': 1,
-          },
-        },
-      ],
+      'inventory': [],
       'jump_height': .6,
       'level': 1,
       'life_max': 100,
@@ -715,8 +743,8 @@ function stats_equipment(){
       'wrist_left': void 0,
       'wrist_right': void 0,
       'hand_left': void 0,
-      'holding_left': void 0,
       'hand_right': void 0,
+      'holding_left': void 0,
       'holding_right': void 0,
       'ring_left': void 0,
       'ring_right': void 0,
@@ -748,7 +776,8 @@ function update_ui(){
 
     let inventory_ui = '<ul>';
     for(const item in character.inventory){
-        inventory_ui += '<li>' + character.inventory[item].id + ' <button onclick="item_equip(' + item + ')">Equip</button>';
+        inventory_ui += '<li>' + character.inventory[item].id + ' <button onclick="item_equip(' + item + ')">Equip</button>'
+          + '<button onclick="item_delete(' + item + ')">Delete</button>';
     }
     const equipment = {};
     for(const slot in character.equipment){
