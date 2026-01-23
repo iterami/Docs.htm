@@ -533,8 +533,13 @@ function repo_init(){
           'Trousers': 'legs',
         },
         'skills': {
-          'Bolt': {
-            'damage': 1,
+          'Melee Attack': {
+            'mana': 0,
+          },
+          'Ranged Attack': {
+            'mana': 0,
+          },
+          'Magical Bolt': {
             'mana': 1,
           },
         },
@@ -597,14 +602,13 @@ function repo_init(){
       'label': 'Inventory',
     });
 
-    let skills_ui = '<table class=center><tr class=header><td>Skill<td>Mana<td>Damage';
+    let skills_ui = '<table class=center><tr class=header><td>Selected: <span class=skill></span><td>Mana Cost';
     for(const skill in skills){
         skills_ui += '<tr><td><button onclick="skill_select(\'' + skill + '\')" type=button>' + skill + '</button>'
-          + '<td>' + skills[skill].mana
-          + '<td>' + skills[skill].damage;
+          + '<td>' + skills[skill].mana;
     }
     core_tab_create({
-      'content': 'Selected Skill: <span class=skill></span>' + skills_ui + '</table>',
+      'content': skills_ui + '</table>',
       'group': 'rpg',
       'id': 'skills',
       'label': 'Skills',
