@@ -28,10 +28,28 @@ function heal(){
 }
 
 function item_create(){
+    const character = webgl_characters[webgl_character_id];
+    if(!character){
+        return;
+    }
+
+    const stats = {};
+    const rarity = Math.random() > .75
+      ? 'magic'
+      : 'normal';
+    if(rarity === 'magic'){
+        const stat = core_random_key(item_stats);
+        stats[stat] = Number.isInteger(item_stats[stat])
+          ? core_random_integer(item_stats[stat])
+          : Math.random() * item_stats[stat];
+    }
+
     const item = core_random_key(items);
-    webgl_characters[webgl_character_id].inventory.push({
+    character.inventory.push({
       'id': item,
+      'rarity': rarity,
       'slot': items[item],
+      'stats': stats,
     });
 
     update_ui();
@@ -53,12 +71,11 @@ function item_equip(id){
     const item = character.inventory[id];
     let slot = item.slot;
 
-    if(slot === 'foot' || slot === 'hand' || slot === 'holding' || slot === 'ring' || slot === 'wrist'){
+    if(!(slot in character.equipment)){
         slot += character.equipment[slot + '_right'] === void 0
           ? '_right'
           : '_left';
     }
-
     if(character.equipment[slot] !== void 0){
         item_unequip(slot);
     }
@@ -66,7 +83,19 @@ function item_equip(id){
     character.equipment[slot] = item;
     character.inventory.splice(id, 1);
 
-    update_ui();
+    let update = true;
+    for(const stat in item.stats){
+        webgl_stat_modify({
+          'stat': stat,
+          'target': character,
+          'value': item.stats[stat],
+        });
+        update = false;
+    }
+
+    if(update){
+        update_ui();
+    }
 }
 
 function item_pickup(id){
@@ -74,15 +103,27 @@ function item_pickup(id){
 
 function item_unequip(slot){
     const character = webgl_characters[webgl_character_id];
-
-    if(character.equipment[slot] === void 0){
+    const item = character.equipment[slot];
+    if(item === void 0){
         return;
     }
 
-    character.inventory.push(character.equipment[slot]);
+    character.inventory.push(item);
     character.equipment[slot] = void 0;
 
-    update_ui();
+    let update = true;
+    for(const stat in item.stats){
+        webgl_stat_modify({
+          'stat': stat,
+          'target': character,
+          'value': -item.stats[stat],
+        });
+        update = false;
+    }
+
+    if(update){
+        update_ui();
+    }
 }
 
 function kill(id){
@@ -532,6 +573,12 @@ function repo_init(){
           'Shirt': 'body',
           'Trousers': 'legs',
         },
+        'item_stats': {
+          'jump_height': .1,
+          'life_max': 10,
+          'mana_max': 5,
+          'speed': .1,
+        },
         'skills': {
           'Melee Attack': {
             'mana': 0,
@@ -637,6 +684,11 @@ function repo_stat_modify(args){
     if(args.stat === 'level'){
         args.target.talent_points += args.levels;
     }
+
+    args.target.mana = Math.min(
+      args.target.mana,
+      args.target.mana_max
+    );
 
     update_ui();
 }
@@ -774,15 +826,21 @@ function update_ui(){
     }
 
     let inventory_ui = '';
-    for(const item in character.inventory){
-        inventory_ui += '<li><button onclick="item_equip(' + item + ')">' + character.inventory[item].id + '</button>'
-          + '<button onclick="item_delete(' + item + ')">X</button>';
+    for(const id in character.inventory){
+        const item = character.inventory[id];
+
+        inventory_ui += '<li><button class=rarity_' + item.rarity + ' onclick="item_equip(' + id + ')">' + item.id + '</button>'
+          + '<button onclick="item_delete(' + id + ')">X</button>';
     }
     const equipment = {};
     for(const slot in character.equipment){
-        equipment[slot] = character.equipment[slot] !== void 0
-          ? character.equipment[slot].id
-          : '';
+        const item = character.equipment[slot];
+        if(item === void 0){
+            equipment[slot] = '';
+            continue;
+        }
+
+        equipment[slot] = '<span class=rarity_' + item.rarity + '>' + item.id + '</span>';
     }
     const xp_max = Math.floor(character.level + 1) * 1e3;
 
