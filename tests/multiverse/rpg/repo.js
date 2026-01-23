@@ -692,11 +692,6 @@ function repo_stat_modify(args){
         args.target.talent_points += args.levels;
     }
 
-    args.target.mana = Math.min(
-      args.target.mana,
-      args.target.mana_max
-    );
-
     update_ui();
 }
 
