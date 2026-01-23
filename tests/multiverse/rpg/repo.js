@@ -645,7 +645,7 @@ function repo_init(){
     });
 
     const slots = stats_equipment();
-    let equipment_ui = '<table>';
+    let equipment_ui = '<table class=center>';
     for(const slot in slots){
         equipment_ui += '<tr><td><button onclick="item_unequip(\'' + slot + '\')">' + slot + '</button><td id=' + slot + '>';
     }
@@ -656,28 +656,22 @@ function repo_init(){
       'label': 'Inventory',
     });
 
-    let skills_ui = '<table class=center><tr class=header><td>Selected: <span class=skill></span><td>Mana Cost';
+    let skills_ui = '<table class=center><tr class=header><td>Selected Skill:<div class=skill></div><td>Mana<br>Cost';
     for(const skill in skills){
         skills_ui += '<tr><td><button onclick="skill_select(\'' + skill + '\')" type=button>' + skill + '</button>'
           + '<td>' + skills[skill].mana;
+    }
+    skills_ui += '</table><table><tr class=header><td id=talent_points><td>Talent Points';
+    for(const talent in talents){
+        skills_ui += '<tr><td><button onclick="talent_modify(\'' + talent + '\')" type=button>+</button><td>+' + talents[talent].value + ' ' + talent;
     }
     core_tab_create({
       'content': skills_ui + '</table>',
       'group': 'rpg',
       'id': 'skills',
-      'label': 'Skills',
+      'label': 'Skills and Talents',
     });
 
-    let talents_ui = '<table><tr class=header><td>+<td><span id=talent_points></span> points';
-    for(const talent in talents){
-        talents_ui += '<tr><td><button onclick="talent_modify(\'' + talent + '\')" type=button>+</button><td>+' + talents[talent].value + ' ' + talent;
-    }
-    core_tab_create({
-      'content': talents_ui + '</table>',
-      'group': 'rpg',
-      'id': 'talents',
-      'label': 'Talents',
-    });
     core_tab_create({
       'content': '<button onclick=item_create() type=button>Create Random Item</button><br>'
         + '<input id=debug_xp step=any type=number value=1000><button onclick=debug_xp() type=button>Gain XP</button>',
@@ -775,7 +769,6 @@ function stats(team){
       'mana': 0,
       'mana_max': 0,
       'model': {},
-      'npcs': {},
       'skill': '',
       'spawn': {
         'camera_rotate_x': 30,
