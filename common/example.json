@@ -141,7 +141,6 @@
       },
       "speed": 1,
       "turn_speed": 5,
-      "vehicle": false,
       "vehicle_stats": {
         "character": false,
         "lock": 0,
