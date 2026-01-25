@@ -6,6 +6,7 @@
   "characters": [
     {
       "id": "stress_particles",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -30,7 +31,6 @@
     {
       "type": "webgl_primitive_particle",
       "properties": {
-        "character": "stress_particles",
         "entities": [
           {
             "id": "storm",

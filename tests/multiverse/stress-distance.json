@@ -8,6 +8,7 @@
   "characters": [
     {
       "id": "stress_distance",
+      "base": true,
       "spawn": false,
       "entities": [
         {

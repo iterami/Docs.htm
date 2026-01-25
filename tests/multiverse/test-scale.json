@@ -8,6 +8,7 @@
   "characters": [
     {
       "id": "test_scaling",
+      "base": true,
       "spawn": false,
       "entities": [
         {

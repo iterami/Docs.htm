@@ -8,6 +8,7 @@
   "characters": [
     {
       "id": "test_prefab_repeat",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -36,7 +37,6 @@
         "count": 100,
         "properties": {
           "billboard": true,
-          "character": "test_prefab_repeat",
           "height": 20,
           "height_range": 20,
           "width_base": 6,

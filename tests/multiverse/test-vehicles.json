@@ -11,6 +11,7 @@
   "characters": [
     {
       "id": "test_vehicles",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -379,7 +380,6 @@
         "bottom": {
           "exclude": true
         },
-        "character": "test_vehicles",
         "position_y": -10,
         "size_x": 100,
         "size_y": 20,

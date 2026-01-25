@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_lines_tree",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -31,7 +32,6 @@
     {
       "type": "prefabs_webgl_lines_tree",
       "properties": {
-        "character": "test_lines_tree",
         "prefix": "tree_default"
       }
     }

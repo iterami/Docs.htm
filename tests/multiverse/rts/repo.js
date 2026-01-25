@@ -201,6 +201,7 @@ function load_testmap(){
           ...level_placeholders(),
           {
             'id': '_rts',
+            'base': true,
             'spawn': false,
             'entities': [
               {
@@ -275,7 +276,6 @@ function make(args){
 
     const id = args.type + entity_id_count;
     webgl_entity_create({
-      'character': '_rts',
       'entities': [{
         'attach_x': args.x,
         'attach_y': args.y,

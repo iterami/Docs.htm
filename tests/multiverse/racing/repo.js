@@ -53,6 +53,7 @@ function load_testtrack(){
         'characters': [
           {
             'id': 'racing_testtrack',
+            'base': true,
             'spawn': false,
             'entities': [
               {
@@ -284,7 +285,6 @@ function load_testtrack(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing_testtrack',
               'position_x': -83.3,
               'position_y': 49,
               'size_x': 20,
@@ -307,7 +307,6 @@ function load_testtrack(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing_testtrack',
               'left': {
                 'exclude': true,
               },
@@ -334,7 +333,6 @@ function load_testtrack(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing_testtrack',
               'position_x': 125,
               'position_y': 9,
               'size_x': 250,
@@ -357,7 +355,6 @@ function load_testtrack(){
               'bottom': {
                 'exclude': true,
               },
-              'character': 'racing_testtrack',
               'left': {
                 'exclude': true,
               },

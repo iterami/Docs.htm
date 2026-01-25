@@ -2,6 +2,7 @@
   "characters": [
     {
       "id": "utility_texture_preload",
+      "base": true,
       "spawn": false,
       "entities": [
         {

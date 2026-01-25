@@ -10,6 +10,7 @@
   "characters": [
     {
       "id": "test_zoom",
+      "base": true,
       "spawn": false,
       "entities": [
         {

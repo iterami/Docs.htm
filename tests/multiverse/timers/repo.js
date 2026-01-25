@@ -73,6 +73,7 @@ function load_test(){
         'characters': [
           {
             'id': 'test',
+            'base': true,
             'spawn': false,
             'entities': [
               {

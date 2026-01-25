@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "path_reverse".
+      "id": "path_reverse",
       "end": "reverse",
       "points": [
         {
@@ -58,6 +58,7 @@
   "characters": [
     {
       "id": "test_lines_path",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -82,7 +83,6 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test_lines_path",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]
@@ -94,7 +94,6 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test_lines_path",
         "path": "path_point",
         "prefix": "point"
       }
@@ -102,7 +101,6 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "character": "test_lines_path",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]

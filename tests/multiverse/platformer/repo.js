@@ -34,6 +34,7 @@ function load_cave(){
         'characters': [
           {
             'id': 'platformer_cave',
+            'base': true,
             'spawn': false,
           },
         ],
@@ -48,7 +49,6 @@ function load_cave(){
                 ],
                 'texture': 'lavaleaf.png',
               },
-              'character': 'platformer_cave',
               'front': {
                 'event_range': 0,
                 'event_todo': [
@@ -250,6 +250,7 @@ function load_skymap(spawn){
         'characters': [
           {
             'id': 'platformer_skymap',
+            'base': true,
             'spawn': false,
             'entities': [
               ...flagged,
@@ -427,7 +428,6 @@ function load_skymap(spawn){
             'type': 'prefab_platform',
             'properties': {
               'prefix': 'platform_1',
-              'character': 'platformer_skymap',
               'position_y': -5,
               'position_z': -100,
               'size_x': 40,

@@ -151,6 +151,7 @@ function new_game(){
         'characters': [
           {
             'id': 'test_instant',
+            'base': true,
             'spawn': false,
             'entities': [
               {

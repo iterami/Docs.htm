@@ -6,6 +6,7 @@
   "characters": [
     {
       "id": "test_tiles",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -31,7 +32,6 @@
       "type": "webgl_tiles",
       "properties": {
         "prefix": "tiles_order",
-        "character": "test_tiles",
         "order": [2, 2, 2, 2, 2, 0, 1, 0, 1],
         "position_x": -50,
         "position_y": 10,
@@ -118,7 +118,6 @@
       "type": "webgl_tiles",
       "properties": {
         "prefix": "tiles_random",
-        "character": "test_tiles",
         "position_y": 10,
         "position_z": -35,
         "tiles": [
@@ -203,7 +202,6 @@
       "type": "webgl_tiles",
       "properties": {
         "prefix": "tiles_repeat",
-        "character": "test_tiles",
         "position_x": 50,
         "position_y": 10,
         "position_z": -35,

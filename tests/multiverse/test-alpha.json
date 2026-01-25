@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_alpha",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -37,7 +38,6 @@
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test_alpha",
         "position_y": 20,
         "size_x": 10,
         "size_y": 10,
@@ -53,7 +53,6 @@
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test_alpha",
         "position_y": 20,
         "size_x": 17,
         "size_y": 17,
@@ -69,7 +68,6 @@
           "collision": false,
           "texture": "grid.png"
         },
-        "character": "test_alpha",
         "position_y": 20,
         "size_x": 24,
         "size_y": 24,

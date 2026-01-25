@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_frustum_tree",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -31,7 +32,6 @@
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "character": "test_frustum_tree",
         "prefix": "tree_default"
       }
     },
@@ -40,7 +40,6 @@
       "properties": {
         "prefix": "tree_1",
         "bottom": true,
-        "character": "test_frustum_tree",
         "height": 40,
         "height_range": 20,
         "leaf_color_bottom": [0.1, 0.3, 0.1, 1],

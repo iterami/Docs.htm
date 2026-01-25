@@ -10,6 +10,7 @@
   "characters": [
     {
       "id": "test_pointerlock",
+      "base": true,
       "spawn": false,
       "entities": [
         {

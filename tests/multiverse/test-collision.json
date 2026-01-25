@@ -28,6 +28,7 @@
   "characters": [
     {
       "id": "test_collision",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -389,7 +390,6 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid_0",
-        "character": "test_collision",
         "position_x": -50,
         "position_y": 4,
         "position_z": -150,
@@ -402,7 +402,6 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid_1",
-        "character": "test_collision",
         "position_x": -50,
         "position_y": 12,
         "position_z": -170,
@@ -415,7 +414,6 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid_inverted",
-        "character": "test_collision",
         "position_x": 150,
         "position_y": 16,
         "position_z": -100,

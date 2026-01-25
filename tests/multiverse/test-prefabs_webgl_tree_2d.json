@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_tree_2d",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -31,7 +32,6 @@
     {
       "type": "prefabs_webgl_tree_2d",
       "properties": {
-        "character": "test_tree_2d",
         "prefix": "tree_default"
       }
     },
@@ -41,7 +41,6 @@
         "prefix": "tree_modified",
         "base_color": [0.1, 0.3, 0.1, 1],
         "billboard": true,
-        "character": "test_tree_2d",
         "height": 10,
         "height_range": 40,
         "leaf_color": [0.4, 0.2, 0, 1],

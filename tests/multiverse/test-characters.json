@@ -9,6 +9,7 @@
   "characters": [
     {
       "id": "test_characters",
+      "base": true,
       "spawn": false,
       "entities": [
         {

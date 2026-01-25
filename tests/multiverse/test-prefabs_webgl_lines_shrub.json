@@ -6,6 +6,7 @@
   "characters": [
     {
       "id": "test_lines_shrub",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -34,7 +35,6 @@
         "base_color": [
           0.3, 0.15, 0, 1
         ],
-        "character": "test_lines_shrub",
         "leaf_color": [
           0, 1, 0, 1
         ],
@@ -56,7 +56,6 @@
         "base_color": [
           0.3, 0.15, 0, 1
         ],
-        "character": "test_lines_shrub",
         "leaf_color": [
           0, 1, 0, 1
         ],
@@ -78,7 +77,6 @@
         "base_color": [
           0.3, 0.15, 0, 1
         ],
-        "character": "test_lines_shrub",
         "draw_mode": "TRIANGLE_FAN",
         "leaf_color": [
           0, 1, 0, 1
@@ -101,7 +99,6 @@
         "base_color": [
           0.3, 0.15, 0, 1
         ],
-        "character": "test_lines_shrub",
         "leaf_color": [
           0, 1, 0, 1
         ],

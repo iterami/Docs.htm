@@ -2,6 +2,7 @@
   "characters": [
     {
       "id": "empty",
+      "base": true,
       "spawn": false,
       "entities": [
         {

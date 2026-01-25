@@ -2,12 +2,12 @@
   "title": "Textures Stress Test",
   "spawn": {
     "position_y": 5,
-    "position_z": 10,
-    "speed": 10
+    "position_z": 10
   },
   "characters": [
     {
       "id": "stress_textures",
+      "base": true,
       "spawn": false,
       "entities": [
         {

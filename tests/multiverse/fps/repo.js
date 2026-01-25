@@ -39,6 +39,7 @@ function load_bridge(){
         'characters': [
           {
             'id': 'map_bridge',
+            'base': true,
             'spawn': false,
             'entities': [
               {
@@ -165,7 +166,6 @@ function load_bridge(){
                   .5, .5, .5, 1,
                 ],
               },
-              'character': 'map_bridge',
               'position_y': -5,
               'size_x': 100,
               'size_y': 10,
@@ -186,7 +186,6 @@ function load_bridge(){
                   .5, .5, .5, 1,
                 ],
               },
-              'character': 'map_bridge',
               'position_y': -5,
               'position_z': -160,
               'size_x': 100,

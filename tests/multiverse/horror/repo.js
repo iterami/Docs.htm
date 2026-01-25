@@ -18,6 +18,7 @@ function load_hallway(){
         'characters': [
           {
             'id': 'horror_hallway',
+            'base': true,
             'spawn': false,
           },
         ],
@@ -35,7 +36,6 @@ function load_hallway(){
               'back': {
                 'exclude': true,
               },
-              'character': 'horror_hallway',
               'front': {
                 'texture': 'door.png',
               },
@@ -59,7 +59,6 @@ function load_hallway(){
                 ],
                 'texture': 'grid.png',
               },
-              'character': 'horror_hallway',
               'left': {
                 'exclude': true,
               },
@@ -85,7 +84,6 @@ function load_hallway(){
                 ],
                 'texture': 'grid.png',
               },
-              'character': 'horror_hallway',
               'position_x': 63,
               'position_y': 12,
               'position_z': -45,

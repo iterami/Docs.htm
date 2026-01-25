@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "stress_lighting",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -36,7 +37,6 @@
               "type": "function",
               "value": {
                 "properties": {
-                  "character": "stress_lighting",
                   "entities": [
                     {
                       "attach_y": 5,

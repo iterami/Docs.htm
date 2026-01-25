@@ -8,6 +8,7 @@
   "characters": [
     {
       "id": "test_fog",
+      "base": true,
       "spawn": false,
       "entities": [
         {

@@ -1,12 +1,12 @@
 {
   "title": "Terrain Stress Test",
   "spawn": {
-    "position_y": 5,
-    "speed": 10
+    "position_y": 5
   },
   "characters": [
     {
       "id": "stress_terrain",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -32,7 +32,6 @@
       "type": "webgl_primitive_terrain",
       "properties": {
         "prefix": "terrain",
-        "character": "stress_terrain",
         "height_random": 50,
         "position_y": -50,
         "tiles_x": 1500,

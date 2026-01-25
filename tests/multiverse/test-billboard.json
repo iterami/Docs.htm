@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_billboard",
+      "base": true,
       "spawn": false,
       "entities": [
         {

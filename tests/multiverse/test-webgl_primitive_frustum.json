@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_primitive_frustum",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -32,7 +33,6 @@
       "type": "webgl_primitive_frustum",
       "properties": {
         "prefix": "frustum",
-        "character": "test_primitive_frustum",
         "length": 10,
         "position_x": -10,
         "position_y": 5,
@@ -44,7 +44,6 @@
       "type": "webgl_primitive_frustum",
       "properties": {
         "prefix": "frustum_inverse",
-        "character": "test_primitive_frustum",
         "length": -10,
         "position_x": 10,
         "position_y": 15,
@@ -56,7 +55,6 @@
       "type": "webgl_primitive_frustum",
       "properties": {
         "prefix": "pipe",
-        "character": "test_primitive_frustum",
         "bottom": false,
         "color_bottom": [0.1, 0.1, 0.1, 1],
         "color_top": [0.1, 0.1, 0.1, 1],

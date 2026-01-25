@@ -9,6 +9,7 @@
   "characters": [
     {
       "id": "test_normals",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -51,7 +52,6 @@
             0.5, 0.5, 0.5, 1
           ]
         },
-        "character": "test_normals",
         "position_x": -10,
         "position_y": 10,
         "size_x": 5,

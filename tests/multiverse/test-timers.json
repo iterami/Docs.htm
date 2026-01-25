@@ -8,6 +8,7 @@
   "characters": [
     {
       "id": "test_timers",
+      "base": true,
       "spawn": false,
       "entities": [
         {

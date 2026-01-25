@@ -29,6 +29,7 @@
   "characters": [
     {
       "id": "test_lighting",
+      "base": true,
       "spawn": false
     },
     {
@@ -171,7 +172,6 @@
         "bottom": {
           "collision": false
         },
-        "character": "test_lighting",
         "size_x": -200,
         "size_y": -20,
         "size_z": -200

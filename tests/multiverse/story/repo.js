@@ -73,6 +73,7 @@ function load_start(spawn){
         'characters': [
           {
             'id': 'story_start',
+            'base': true,
             'spawn': false,
             'entities': [
               {

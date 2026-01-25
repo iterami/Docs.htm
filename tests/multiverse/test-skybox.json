@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_skybox",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -46,7 +47,6 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "skybox_unattached",
-        "character": "test_skybox",
         "position_y": 10,
         "radius_x": -10,
         "radius_y": -10,

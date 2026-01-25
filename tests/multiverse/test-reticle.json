@@ -9,6 +9,7 @@
   "characters": [
     {
       "id": "test_reticle",
+      "base": true,
       "spawn": false,
       "entities": [
         {

@@ -240,6 +240,7 @@ function load_cave(id){
         'characters': [
           {
             'id': 'rpg_cave',
+            'base': true,
             'spawn': false,
             'entities': [
               {
@@ -308,7 +309,6 @@ function load_cave(id){
                   1, 1, 1, 1,
                 ],
               },
-              'character': 'rpg_cave',
               'position_y': 25,
               'size_x': -cave_width,
               'size_y': -50,
@@ -375,6 +375,7 @@ function load_town(args){
         'characters': [
           {
             'id': 'rpg_town',
+            'base': true,
             'spawn': false,
             'entities': [
               {
@@ -481,7 +482,6 @@ function load_town(args){
                   1, 1, 1, 1,
                 ],
               },
-              'character': 'rpg_town',
               'position_x': 50,
               'position_y': 25,
               'position_z': -25,
@@ -506,7 +506,6 @@ function load_town(args){
           {
             'type': 'prefabs_webgl_lines_path',
             'properties': {
-              'character': 'rpg_town',
               'path': 'path_lava',
               'prefix': 'path_lava'
             }

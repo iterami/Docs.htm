@@ -7,6 +7,7 @@
   "characters": [
     {
       "id": "test_primitive_ellipsoid",
+      "base": true,
       "spawn": false,
       "entities": [
         {
@@ -32,7 +33,6 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "ellipsoid",
-        "character": "test_primitive_ellipsoid",
         "position_x": -10,
         "position_y": 15,
         "radius_x": 5,
@@ -44,7 +44,6 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "ellipsoid_inverse",
-        "character": "test_primitive_ellipsoid",
         "position_x": 10,
         "position_y": 15,
         "radius_x": -5,
