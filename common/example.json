@@ -108,6 +108,7 @@
     {
       "id": "_me",
       "automove": false,
+      "base": false,
       "camera_lock": true,
       "camera_zoom": 20,
       "collide_bottom": 3,
@@ -154,6 +155,7 @@
     },
     {
       "id": "world_static",
+      "base": true,
       "entities": [
         {
           "id": "example_entity_0",

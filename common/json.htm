@@ -224,6 +224,9 @@
       // Optional. If this character is moving forward regardless of key states.
       "automove": false,
 
+      // Optional. If this character should be used as the default character when creating entities, primitives, and prefabs.
+      "base": false,
+
       // Optional. If the camera is locked to the character's position.
       "camera_lock": true,
 
@@ -344,6 +347,10 @@
     // Example of character with entities.
     {
       "id": "world_static",
+
+      // Optional. This character will be used as the default character when creating entities, primitives, and prefabs.
+      "base": true,
+
       "entities": [
         {
           // Optional. Entity ID.
