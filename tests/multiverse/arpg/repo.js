@@ -515,6 +515,15 @@ function load_town(args){
               'prefix': 'path_lava'
             }
           },
+          {
+            'type': 'prefabs_webgl_trap',
+            'properties': {
+              'prefix': 'trap',
+              'position_x': 85,
+              'position_y': .01,
+              'position_z': -40,
+            }
+          },
         ],
       },
     });

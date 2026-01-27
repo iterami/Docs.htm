@@ -41,8 +41,16 @@
         "prefix": "trap_modified",
         "color_active": [0.1, 0.3, 0.1, 1],
         "color_inactive": [1, 1, 1, 1],
-        "position_y": 1,
-        "position_z": -25
+        "frames_max_active": 25,
+        "frames_max_inactive": 50,
+        "frames_random_active": 50,
+        "frames_random_inactive": 100,
+        "position_y": 0.01,
+        "position_z": -25,
+        "size_x": 60,
+        "size_y": 999,
+        "size_z": 30,
+        "texture": "lavaleaf.png"
       }
     }
   ]

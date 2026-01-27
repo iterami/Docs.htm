@@ -145,5 +145,16 @@
         "position_z": -60
       }
     }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_trap",
+      "properties": {
+        "prefix": "trap",
+        "position_x": 35,
+        "position_y": 0.01,
+        "position_z": -35
+      }
+    }
   ]
 }
