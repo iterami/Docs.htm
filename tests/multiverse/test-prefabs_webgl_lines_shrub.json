@@ -1,7 +1,8 @@
 {
   "title": "Lines Shrub Prefab Test",
   "spawn": {
-    "position_y": 5
+    "position_y": 5,
+    "position_z": 20
   },
   "characters": [
     {
@@ -31,15 +32,14 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
+        "prefix": "shrub_default"
+      }
+    },
+    {
+      "type": "prefabs_webgl_lines_shrub",
+      "properties": {
         "prefix": "shrub_short",
-        "base_color": [
-          0.3, 0.15, 0, 1
-        ],
-        "leaf_color": [
-          0, 1, 0, 1
-        ],
-        "leaf_distance": 10,
-        "points": 100,
+        "points": 200,
         "position_x": -30,
         "position_z": -20,
         "x_max": 10,
@@ -54,10 +54,10 @@
       "properties": {
         "prefix": "shrub_tall",
         "base_color": [
-          0.3, 0.15, 0, 1
+          0.15, 0.3, 0, 1
         ],
         "leaf_color": [
-          0, 1, 0, 1
+          1, 0, 0, 1
         ],
         "leaf_distance": 10,
         "points": 100,
@@ -74,13 +74,7 @@
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
         "prefix": "shrub_filled",
-        "base_color": [
-          0.3, 0.15, 0, 1
-        ],
         "draw_mode": "TRIANGLE_FAN",
-        "leaf_color": [
-          0, 1, 0, 1
-        ],
         "leaf_distance": 10,
         "points": 100,
         "position_x": 10,
@@ -97,12 +91,11 @@
       "properties": {
         "prefix": "shrub_line",
         "base_color": [
-          0.3, 0.15, 0, 1
+          0, 0, 1, 1
         ],
         "leaf_color": [
-          0, 1, 0, 1
+          1, 1, 1, 1
         ],
-        "leaf_distance": 10,
         "points": 25,
         "position_x": 30,
         "position_z": -20,
