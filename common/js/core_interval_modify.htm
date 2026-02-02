@@ -10,6 +10,7 @@
   <li>Creates or modifies an animation frame, interval, or timeout.
   <li>Intervals must have a "todo" arg of type "function".
   <li>Intervals can be synced to repeat as closely aligned to official UTC seconds as possible.
+  <li>The "lock" arg determines if an interval gets resuemd when <a href=core_interval_resume_all.htm>core_interval_resume_all()</a> is called.
 </ul>
 <table>
   <tr class=header>
@@ -28,6 +29,10 @@
     <td>interval
     <td>25
     <td>number
+  <tr>
+    <td>lock
+    <td>false
+    <td>boolean
   <tr>
     <td>paused
     <td>false
