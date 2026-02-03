@@ -185,6 +185,7 @@ function repo_init(){
     }
     document.getElementById('core_pointer').innerHTML = html;
     update_pointer();
+    globalThis.addEventListener('pointerlockchange', update_pointer);
     globalThis.addEventListener('touchcancel', update_pointer);
     globalThis.addEventListener('touchend', update_pointer);
     globalThis.addEventListener('touchmove', update_pointer);
