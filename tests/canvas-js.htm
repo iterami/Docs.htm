@@ -54,6 +54,7 @@ function repo_init(){
       'globals': {
         'camera_x': 0,
         'camera_y': 0,
+        'fps_logic': 0,
         'rotation': 0,
       },
       'pointerbinds': {
@@ -70,7 +71,7 @@ function repo_init(){
       'root': 'index.htm',
       'storage_controls': true,
       'title': 'Docs.htm',
-      'ui': '<button id=reset_camera type=button>Reset Camera</button><table><tr><td>Camera X<td id=camera_x><tr><td>Camera Y<td id=camera_y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down_x<td id=down_x><tr><td>down_y<td id=down_y><tr><td>movement_x<td id=movement_x><tr><td>movement_y<td id=movement_y><tr><td>down_0<td id=down_0><tr><td>down_1<td id=down_1><tr><td>down_2<td id=down_2><tr><td>down_3<td id=down_3><tr><td>down_4<td id=down_4><tr><td>core_mobile<td id=core_mobile></table><span id=todo style="display:none"></span>',
+      'ui': '<button id=reset_camera type=button>Reset Camera</button><table><tr><td>Logic FPS<td id=fps_logic><tr><td>Camera X<td id=camera_x><tr><td>Camera Y<td id=camera_y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down_x<td id=down_x><tr><td>down_y<td id=down_y><tr><td>movement_x<td id=movement_x><tr><td>movement_y<td id=movement_y><tr><td>down_0<td id=down_0><tr><td>down_1<td id=down_1><tr><td>down_2<td id=down_2><tr><td>down_3<td id=down_3><tr><td>down_4<td id=down_4><tr><td>core_mobile<td id=core_mobile></table><span id=todo style="display:none"></span>',
     });
     canvas_init();
     canvas_setproperties({
@@ -102,9 +103,11 @@ function repo_logic(){
         'camera_x': camera_x,
         'camera_y': camera_y,
         'core_mobile': core_mobile,
+        'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
         ...core_pointer,
       },
     });
+    fps_logic = new Date().getTime();
 }
 
 function reset_camera(){

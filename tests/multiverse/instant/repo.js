@@ -233,6 +233,9 @@ function repo_init(){
             }
         },
       },
+      'globals': {
+        'fps_logic': 0,
+      },
       'pointerbinds': {
         'contextmenu': {},
         'pointermove': {
@@ -253,7 +256,7 @@ function repo_init(){
       'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td>Debug Picking'
         + '<tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
       'title': 'Docs.htm',
-      'ui': '<span id=picked></span> <span id=color></span><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div><div id=debug_catch></div>',
+      'ui': '<span id=picked></span> <span id=color></span><br>Logic FPS: <span id=fps_logic></span><br><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div><div id=debug_catch></div>',
       'ui_elements': [
         'debug_result',
       ],
@@ -303,10 +306,12 @@ function repo_logic(){
         'debug_catch': debug_catch,
         'debug_color': debug_color,
         'debug_entity': debug_entity,
+        'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
         'picked': picked
           ? picked.id
           : 'false',
         'xyz': 'x' + webgl_picked_x + ' y' + webgl_picked_y + ' z' + webgl_picked_z,
       },
     });
+    fps_logic = new Date().getTime();
 }
