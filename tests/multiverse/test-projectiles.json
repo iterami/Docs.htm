@@ -1,0 +1,85 @@
+{
+  "title": "Projectiles Test",
+  "picking": 1,
+  "spawn": {
+    "position_y": 5,
+    "position_z": 25
+  },
+  "characters": [
+    {
+      "id": "test_projectiles",
+      "base": true,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "event_todo": [
+            {
+              "todo": "webgl_projectile",
+              "type": "function",
+              "value": {
+                "character": "stationary",
+                "projectile": {}
+              }
+            }
+          ],
+          "picking": true,
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [
+            0.5, 0.5, 0.5, 1
+          ],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "projectile",
+      "model": {},
+      "spawn": false
+    },
+    {
+      "id": "rotator",
+      "automove": true,
+      "change_rotate_y": -2,
+      "collides": true,
+      "controls": "rpg",
+      "gravity": 1,
+      "level": 0,
+      "model": {},
+      "position_x": 10,
+      "position_y": 5,
+      "spawn": false
+    },
+    {
+      "id": "stationary",
+      "model": {},
+      "position_x": 20,
+      "position_y": 10,
+      "spawn": false
+    }
+  ],
+  "timers": [
+    {
+      "id": "rotator",
+      "frames_max": 10,
+      "repeat": -1,
+      "event_repeat": [
+        {
+          "todo": "webgl_projectile",
+          "type": "function",
+          "value": {
+            "character": "rotator",
+            "projectile": "projectile"
+          }
+        }
+      ]
+    }
+  ]
+}

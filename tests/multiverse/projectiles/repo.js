@@ -23,8 +23,7 @@ function load_test(){
                     'type': 'function',
                     'value': {
                       'character': 'stationary',
-                      'projectile': {
-                      },
+                      'projectile': {},
                     },
                   },
                 ],
@@ -64,7 +63,6 @@ function load_test(){
           },
           {
             'id': 'stationary',
-            'collides': true,
             'model': {},
             'position_x': 20,
             'position_y': 10,
