@@ -1,8 +1,7 @@
 {
   "title": "Primitive Stars Test",
   "spawn": {
-    "position_y": 5,
-    "position_z": 10
+    "position_y": 5
   },
   "characters": [
     {
@@ -32,10 +31,16 @@
     {
       "type": "webgl_primitive_stars",
       "properties": {
+        "prefix": "default"
+      }
+    },
+    {
+      "type": "webgl_primitive_stars",
+      "properties": {
+        "prefix": "skybox",
         "groups": [
           "skybox"
-        ],
-        "prefix": "skybox"
+        ]
       }
     },
     {

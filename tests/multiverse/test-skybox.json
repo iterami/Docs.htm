@@ -36,9 +36,9 @@
         "groups": [
           "skybox"
         ],
-        "radius_x": -10,
-        "radius_y": -10,
-        "radius_z": -10,
+        "radius_x": -99,
+        "radius_y": -99,
+        "radius_z": -99,
         "slices_latitude": 4,
         "slices_longitude": 2
       }

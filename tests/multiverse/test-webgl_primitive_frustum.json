@@ -32,6 +32,12 @@
     {
       "type": "webgl_primitive_frustum",
       "properties": {
+        "prefix": "default"
+      }
+    },
+    {
+      "type": "webgl_primitive_frustum",
+      "properties": {
         "prefix": "frustum",
         "length": 10,
         "position_x": -10,

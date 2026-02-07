@@ -32,6 +32,12 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
+        "prefix": "default"
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
         "prefix": "cuboid",
         "all": {
           "texture": "debug.png"

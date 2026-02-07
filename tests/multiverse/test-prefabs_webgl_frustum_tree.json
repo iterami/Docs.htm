@@ -32,13 +32,13 @@
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "prefix": "tree_default"
+        "prefix": "default"
       }
     },
     {
       "type": "prefabs_webgl_frustum_tree",
       "properties": {
-        "prefix": "tree_1",
+        "prefix": "tree",
         "bottom": true,
         "height": 40,
         "height_range": 20,

@@ -32,13 +32,13 @@
     {
       "type": "prefabs_webgl_tree_2d",
       "properties": {
-        "prefix": "tree_default"
+        "prefix": "default"
       }
     },
     {
       "type": "prefabs_webgl_tree_2d",
       "properties": {
-        "prefix": "tree_modified",
+        "prefix": "tree",
         "base_color": [0.1, 0.3, 0.1, 1],
         "billboard": true,
         "height": 10,

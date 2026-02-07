@@ -32,7 +32,7 @@
     {
       "type": "prefabs_webgl_lines_shrub",
       "properties": {
-        "prefix": "shrub_default"
+        "prefix": "default"
       }
     },
     {

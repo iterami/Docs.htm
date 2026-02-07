@@ -32,13 +32,13 @@
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "prefix": "tree_default"
+        "prefix": "default"
       }
     },
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "prefix": "tree_modified",
+        "prefix": "tree",
         "leaf_color": [0.8, 0.4, 0, 1],
         "leaf_size_x": 20,
         "leaf_size_y": 40,

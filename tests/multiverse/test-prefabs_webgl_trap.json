@@ -32,13 +32,13 @@
     {
       "type": "prefabs_webgl_trap",
       "properties": {
-        "prefix": "trap_default"
+        "prefix": "default"
       }
     },
     {
       "type": "prefabs_webgl_trap",
       "properties": {
-        "prefix": "trap_modified",
+        "prefix": "trap",
         "color_active": [0.1, 0.3, 0.1, 1],
         "color_inactive": [1, 1, 1, 1],
         "frames_max_active": 25,

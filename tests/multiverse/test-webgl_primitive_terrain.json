@@ -1,8 +1,7 @@
 {
   "title": "Primitive Terrain Test",
   "spawn": {
-    "position_y": 5,
-    "position_z": 10
+    "position_y": 5
   },
   "characters": [
     {
@@ -32,8 +31,7 @@
     {
       "type": "webgl_primitive_terrain",
       "properties": {
-        "prefix": "default",
-        "position_y": 5
+        "prefix": "default"
       }
     },
     {

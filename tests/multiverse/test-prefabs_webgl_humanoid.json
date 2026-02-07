@@ -32,7 +32,7 @@
     {
       "type": "prefabs_webgl_humanoid",
       "properties": {
-        "prefix": "humanoid_default"
+        "prefix": "default"
       }
     }
   ]

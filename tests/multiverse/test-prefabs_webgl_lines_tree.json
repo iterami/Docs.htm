@@ -32,7 +32,7 @@
     {
       "type": "prefabs_webgl_lines_tree",
       "properties": {
-        "prefix": "tree_default"
+        "prefix": "default"
       }
     }
   ]
