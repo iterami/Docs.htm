@@ -63,6 +63,7 @@ function load_test(){
           },
           {
             'id': 'stationary',
+            'change_rotate_y': -1,
             'model': {},
             'position_x': 20,
             'position_y': 10,
