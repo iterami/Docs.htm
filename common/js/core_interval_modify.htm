@@ -8,9 +8,11 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_interval_modify(args)
 <ul>
   <li>Creates or modifies an animation frame, interval, or timeout.
-  <li>If "interval" arg is -1, then animation frame will be used.
+  <li>If "interval" arg is set to specific values below 0:<ul>
+    <li>-1: animation frame will be used.
+    <li>-2: the interval will be synced to repeat as closely aligned to official UTC seconds as possible.
+  </ul>
   <li>Intervals must have a "todo" arg of type "function".
-  <li>Intervals can be synced to repeat as closely aligned to official UTC seconds as possible.
   <li>The "lock" arg determines if an interval gets resuemd when <a href=core_interval_resume_all.htm>core_interval_resume_all()</a> is called.
 </ul>
 <table>
@@ -38,10 +40,6 @@
     <td>set
     <td>'setInterval'
     <td>string
-  <tr>
-    <td>sync
-    <td>false
-    <td>boolean
   <tr>
     <td>todo
     <td>
