@@ -429,14 +429,14 @@ function racer_add(id){
             'position_z': 250 + 25 * position_max,
             'rotate_y': 90,
           },
-          'turn_speed': 2,
+          'turn_speed': 1,
           'vehicle_stats': {
             'character': id,
             //'lock': 2,
-            'speed_backward': -.02,
-            'speed_forward': .04,
-            'speed_max_backward': -1.5,
-            'speed_max_forward': 3,
+            'speed_backward': -.01,
+            'speed_forward': .02,
+            'speed_max_backward': -1,
+            'speed_max_forward': 2,
           },
         });
     }
