@@ -35,6 +35,7 @@ function debug_pick_entity(cursor){
       'x': x,
       'y': y
     });
+    webgl_shader_use('default');
 
     if(color[0] !== 0
       || color[1] !== 0
@@ -122,7 +123,6 @@ function debug_pick_entity(cursor){
         }
     }
 
-    webgl_shader_use('default');
     const clear_color = webgl_properties.clear_color;
     webgl.clearColor(
       clear_color[0],
