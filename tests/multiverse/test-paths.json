@@ -8,6 +8,7 @@
     {
       "id": "path_distance",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "distance": 5,
@@ -25,12 +26,12 @@
           "position_x": 15,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_event",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "event_todo": [
@@ -64,11 +65,11 @@
           "position_x": 15,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_exit",
+      "speed": 0.5,
       "points": [
         {
           "position_x": -15,
@@ -83,12 +84,12 @@
           "position_x": 15,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_reverse",
       "end": "reverse",
+      "speed": 0.5,
       "points": [
         {
           "position_x": -15,
@@ -103,12 +104,12 @@
           "position_x": 15,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_rotate",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": -15,
@@ -132,12 +133,12 @@
           "rotate_y": 45,
           "rotate_z": 45
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_speed",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": -15,
@@ -154,12 +155,12 @@
           "position_y": 15,
           "speed": 0.1
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_warp",
       "end": "warp",
+      "speed": 0.5,
       "points": [
         {
           "position_x": -15,
@@ -174,12 +175,12 @@
           "position_x": 15,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_xy",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": 0,
@@ -198,12 +199,12 @@
           "position_x": -5,
           "position_y": 15
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_xyz",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": 0,
@@ -225,12 +226,12 @@
           "position_y": 5,
           "position_z": -10
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_xz",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": 0,
@@ -249,12 +250,12 @@
           "position_x": 0,
           "position_z": -10
         }
-      ],
-      "speed": 0.5
+      ]
     },
     {
       "id": "path_yz",
       "end": "loop",
+      "speed": 0.5,
       "points": [
         {
           "position_x": 0,
@@ -273,8 +274,7 @@
           "position_y": 5,
           "position_z": -10
         }
-      ],
-      "speed": 0.5
+      ]
     }
   ],
   "characters": [
@@ -302,6 +302,8 @@
     },
     {
       "id": "path_distance_user",
+      "level": 1,
+      "path_id": "path_distance",
       "entities": [
         {
           "id": "path_distance_user_body",
@@ -315,12 +317,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_distance"
+      ]
     },
     {
       "id": "path_event_user",
+      "level": 1,
+      "path_id": "path_event",
       "entities": [
         {
           "id": "path_event_user_body",
@@ -334,13 +336,14 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_event"
+      ]
     },
     {
       "id": "path_exit_user",
       "collides": true,
+      "gravity": 1,
+      "level": 1,
+      "path_id": "path_exit",
       "entities": [
         {
           "id": "path_exit_user_body",
@@ -354,13 +357,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "gravity": 1,
-      "level": 1,
-      "path_id": "path_exit"
+      ]
     },
     {
       "id": "path_reverse_user",
+      "level": 1,
+      "path_id": "path_reverse",
       "entities": [
         {
           "id": "path_reverse_user_body",
@@ -374,9 +376,7 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_reverse"
+      ]
     },
     {
       "id": "path_rotate_user",
@@ -385,6 +385,8 @@
     },
     {
       "id": "path_speed_user",
+      "level": 1,
+      "path_id": "path_speed",
       "entities": [
         {
           "id": "path_speed_user_body",
@@ -398,12 +400,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_speed"
+      ]
     },
     {
       "id": "path_warp_user",
+      "level": 1,
+      "path_id": "path_warp",
       "entities": [
         {
           "id": "path_warp_user_body",
@@ -417,12 +419,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_warp"
+      ]
     },
     {
       "id": "path_xy_user",
+      "level": 1,
+      "path_id": "path_xy",
       "entities": [
         {
           "id": "path_xy_user_body",
@@ -436,12 +438,13 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_xy"
+      ]
     },
     {
       "id": "path_xy_user_reverse",
+      "level": 1,
+      "path_direction": -1,
+      "path_id": "path_xy",
       "entities": [
         {
           "id": "path_xy_user_reverse_body",
@@ -455,13 +458,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_direction": -1,
-      "path_id": "path_xy"
+      ]
     },
     {
       "id": "path_xyz_user",
+      "level": 1,
+      "path_id": "path_xyz",
       "entities": [
         {
           "id": "path_xyz_user_body",
@@ -475,12 +477,13 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_xyz"
+      ]
     },
     {
       "id": "path_xyz_user_reverse",
+      "level": 1,
+      "path_direction": -1,
+      "path_id": "path_xyz",
       "entities": [
         {
           "id": "path_xyz_user_reverse_body",
@@ -494,13 +497,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_direction": -1,
-      "path_id": "path_xyz"
+      ]
     },
     {
       "id": "path_xz_user",
+      "level": 1,
+      "path_id": "path_xz",
       "entities": [
         {
           "id": "path_xz_user_body",
@@ -514,12 +516,13 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_xz"
+      ]
     },
     {
       "id": "path_xz_user_reverse",
+      "level": 1,
+      "path_direction": -1,
+      "path_id": "path_xz",
       "entities": [
         {
           "id": "path_xz_user_reverse_body",
@@ -533,13 +536,12 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_direction": -1,
-      "path_id": "path_xz"
+      ]
     },
     {
       "id": "path_yz_user",
+      "level": 1,
+      "path_id": "path_yz",
       "entities": [
         {
           "id": "path_yz_user_body",
@@ -553,12 +555,13 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_id": "path_yz"
+      ]
     },
     {
       "id": "path_yz_user_reverse",
+      "level": 1,
+      "path_direction": -1,
+      "path_id": "path_yz",
       "entities": [
         {
           "id": "path_yz_user_reverse_body",
@@ -572,10 +575,7 @@
             2, -2, 0
           ]
         }
-      ],
-      "level": 1,
-      "path_direction": -1,
-      "path_id": "path_yz"
+      ]
     }
   ],
   "prefabs": [
@@ -596,88 +596,88 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_distance",
         "colors": [[1, 0, 0, 1]],
-        "path": "path_distance",
-        "prefix": "lines_distance"
+        "path": "path_distance"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_event",
         "colors": [[0, 1, 0, 1]],
-        "path": "path_event",
-        "prefix": "lines_event"
+        "path": "path_event"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_exit",
         "colors": [[0, 0, 1, 1]],
-        "path": "path_exit",
-        "prefix": "lines_exit"
+        "path": "path_exit"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_reverse",
         "colors": [[1, 1, 0, 1]],
-        "path": "path_reverse",
-        "prefix": "lines_reverse"
+        "path": "path_reverse"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_rotate",
         "colors": [[1, 0, 1, 1]],
-        "path": "path_rotate",
-        "prefix": "lines_rotate"
+        "path": "path_rotate"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_speed",
         "colors": [[0, 1, 1, 1]],
-        "path": "path_speed",
-        "prefix": "lines_speed"
+        "path": "path_speed"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "path": "path_warp",
-        "prefix": "lines_warp"
+        "prefix": "lines_warp",
+        "path": "path_warp"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_xy",
         "colors": [[1, 0.2, 0.2, 1]],
-        "path": "path_xy",
-        "prefix": "lines_xy"
+        "path": "path_xy"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_xyz",
         "colors": [[0.2, 1, 0.2, 1]],
-        "path": "path_xyz",
-        "prefix": "lines_xyz"
+        "path": "path_xyz"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_xz",
         "colors": [[0.2, 0.2, 1, 1]],
-        "path": "path_xz",
-        "prefix": "lines_xz"
+        "path": "path_xz"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "lines_yz",
         "colors": [[0.2, 0.2, 0.2, 1]],
-        "path": "path_yz",
-        "prefix": "lines_yz"
+        "path": "path_yz"
       }
     }
   ]

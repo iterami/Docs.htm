@@ -167,8 +167,8 @@
     {
       "type": "prefabs_webgl_cuboid_tree",
       "properties": {
-        "character": "character",
-        "prefix": "tree"
+        "prefix": "tree",
+        "character": "character"
       }
     }
   ]

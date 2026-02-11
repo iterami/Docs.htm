@@ -36,6 +36,7 @@
               "todo": "webgl_prefab_repeat",
               "type": "function",
               "value": {
+                "type": "webgl_entity_create",
                 "properties": {
                   "entities": [
                     {
@@ -52,8 +53,7 @@
                       ]
                     }
                   ]
-                },
-                "type": "webgl_entity_create"
+                }
               }
             },
             {

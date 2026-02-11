@@ -36,6 +36,7 @@
       "id": "example_path",
       "collision": true,
       "end": "loop",
+      "speed": 2,
       "points": [
         {
           "distance": 0,
@@ -53,8 +54,7 @@
           "position_x": -10,
           "position_z": -10
         }
-      ],
-      "speed": 2
+      ]
     }
   ],
   "paused": false,
@@ -72,6 +72,9 @@
     {
       "id": "example_timer",
       "active": true,
+      "frames_max": 100,
+      "frames_random": 100,
+      "repeat": -1,
       "event_end": [
         {
           "todo": "webgl_json_function",
@@ -93,10 +96,7 @@
             "todo": "console.log"
           }
         }
-      ],
-      "frames_max": 100,
-      "frames_random": 100,
-      "repeat": -1
+      ]
     }
   ],
   "y_min": -200,
@@ -155,6 +155,7 @@
     {
       "id": "world_static",
       "base": true,
+      "spawn": false,
       "entities": [
         {
           "id": "example_entity_0",

@@ -83,30 +83,30 @@
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "loop",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]
         ],
-        "path": "path_loop",
-        "prefix": "loop"
+        "path": "path_loop"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
-        "path": "path_point",
-        "prefix": "point"
+        "prefix": "point",
+        "path": "path_point"
       }
     },
     {
       "type": "prefabs_webgl_lines_path",
       "properties": {
+        "prefix": "reverse",
         "colors": [
           [1, 0, 0, 1],
           [0, 0, 1, 1]
         ],
-        "path": "path_reverse",
-        "prefix": "reverse"
+        "path": "path_reverse"
       }
     }
   ]

@@ -36,6 +36,8 @@
         "position_x": -50,
         "position_y": 10,
         "position_z": -35,
+        "tiles_max": 20,
+        "tiles_min": 2,
         "tiles": [
           {
             "attach_z": -20,
@@ -109,9 +111,7 @@
               }
             ]
           }
-        ],
-        "tiles_max": 20,
-        "tiles_min": 2
+        ]
       }
     },
     {
@@ -120,6 +120,8 @@
         "prefix": "tiles_random",
         "position_y": 10,
         "position_z": -35,
+        "tiles_max": 20,
+        "tiles_min": 2,
         "tiles": [
           {
             "attach_z": -20,
@@ -193,9 +195,7 @@
               }
             ]
           }
-        ],
-        "tiles_max": 20,
-        "tiles_min": 2
+        ]
       }
     },
     {

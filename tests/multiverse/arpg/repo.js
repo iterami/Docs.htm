@@ -349,6 +349,7 @@ function load_town(args){
           {
             'id': 'path_lava',
             'end': 'reverse',
+            'speed': .4,
             'points': [
               {
                 'position_x': 130,
@@ -371,7 +372,6 @@ function load_town(args){
                 'position_z': -40,
               },
             ],
-            'speed': .4,
           },
         ],
         'characters': [
@@ -511,9 +511,9 @@ function load_town(args){
           {
             'type': 'prefabs_webgl_lines_path',
             'properties': {
+              'prefix': 'path_lava',
               'path': 'path_lava',
-              'prefix': 'path_lava'
-            }
+            },
           },
           {
             'type': 'prefabs_webgl_trap',
@@ -522,7 +522,7 @@ function load_town(args){
               'position_x': 85,
               'position_y': .01,
               'position_z': -40,
-            }
+            },
           },
         ],
       },

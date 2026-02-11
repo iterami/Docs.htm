@@ -29,6 +29,11 @@
     },
     {
       "id": "rotate_x",
+      "spawn": {
+        "change_rotate_x": 5,
+        "position_x": -15,
+        "position_z": -15
+      },
       "entities": [
         {
           "id": "body_x",
@@ -53,15 +58,14 @@
             2, 0, 2
           ]
         }
-      ],
-      "spawn": {
-        "change_rotate_x": 5,
-        "position_x": -15,
-        "position_z": -15
-      }
+      ]
     },
     {
       "id": "rotate_y",
+      "spawn": {
+        "change_rotate_y": 5,
+        "position_z": -15
+      },
       "entities": [
         {
           "id": "body_y",
@@ -86,14 +90,15 @@
             2, 0, 2
           ]
         }
-      ],
-      "spawn": {
-        "change_rotate_y": 5,
-        "position_z": -15
-      }
+      ]
     },
     {
       "id": "rotate_z",
+      "spawn": {
+        "change_rotate_z": 5,
+        "position_x": 15,
+        "position_z": -15
+      },
       "entities": [
         {
           "id": "body_z",
@@ -118,12 +123,7 @@
             2, 0, 2
           ]
         }
-      ],
-      "spawn": {
-        "change_rotate_z": 5,
-        "position_x": 15,
-        "position_z": -15
-      }
+      ]
     }
   ]
 }

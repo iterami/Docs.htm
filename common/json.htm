@@ -93,6 +93,9 @@
       //   warp = teleport back to 1st point.
       "end": "loop",
 
+      // Optional. Speed multiplier applied to every character on this path.
+      "speed": 2,
+
       // REQUIRED. Array of path points in order.
       "points": [
         {
@@ -125,10 +128,7 @@
           "position_x": -10,
           "position_z": -10
         }
-      ],
-
-      // Optional. Speed multiplier applied to every character on this path.
-      "speed": 2
+      ]
     }
   ],
 
@@ -167,6 +167,17 @@
       // Optional. Inactive timers do not count down.
       "active": true,
 
+      // Optional. The duration of this timer in logic frames.
+      "frames_max": 100,
+
+      // Optional. How many additional frames to randomly add on top of "frames_max"
+      //   during creation and repeat.
+      "frames_random": 100,
+
+      // Optional. How many times this timer should repeat after counting down to 0 frames.
+      //   -1 = repeat unlimited times.
+      "repeat": -1,
+
       // Optional. Array of things todo when this timer ends and no longer repeats.<span id=webgl_json_function></span>
       "event_end": [
         {
@@ -191,18 +202,7 @@
             "todo": "console.log"
           }
         }
-      ],
-
-      // Optional. The duration of this timer in logic frames.
-      "frames_max": 100,
-
-      // Optional. How many additional frames to randomly add on top of "frames_max"
-      //   during creation and repeat.
-      "frames_random": 100,
-
-      // Optional. How many times this timer should repeat after counting down to 0 frames.
-      //   -1 = repeat unlimited times.
-      "repeat": -1
+      ]
     }
   ],
 
@@ -347,6 +347,9 @@
 
       // Optional. This character will be used as the default character when creating entities, primitives, and prefabs.
       "base": true,
+
+      // Optional. If this character should not be spawned in like normal characters.
+      "spawn": false,
 
       "entities": [
         {

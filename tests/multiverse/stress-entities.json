@@ -37,6 +37,7 @@
               "type": "function",
               "value": {
                 "count": 500,
+                "type": "webgl_entity_create",
                 "properties": {
                   "entities": [
                     {
@@ -60,8 +61,7 @@
                       ]
                     }
                   ]
-                },
-                "type": "webgl_entity_create"
+                }
               }
             },
             {
