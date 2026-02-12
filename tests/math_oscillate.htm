@@ -24,27 +24,27 @@
     <td><input id=value step=any type=number>
   <tr>
     <td>Previous
-    <td><input id=old step=any type=number>
+    <td><input id=old step=any type=number value=0>
   <tr>
     <td>Diff
-    <td><input id=diff step=any type=number>
+    <td><input id=diff readonly step=any type=number>
 </table>
 
 <script src=../../common/js/core.js></script>
 <script src=../../common/js/math.js></script>
 <script>
 function oscillate(){
-    value_old = value;
-    value = math_oscillate({
-      'value': value,
+    core_elements.old.value = core_elements.value.value || 0;
+    core_elements.value.value = math_oscillate({
+      'value': core_elements.value.value,
       ...JSON.parse(core_elements.input.value),
     });
 
     core_ui_update({
       'ids': {
-        'diff': value - value_old,
-        'value': value,
-        'old': value_old,
+        'diff': core_elements.value.value - core_elements.old.value,
+        'old': core_elements.old.value,
+        'value': core_elements.value.value,
       },
     });
 }
@@ -56,15 +56,13 @@ function repo_init(){
           'onclick': oscillate,
         },
       },
-      'globals': {
-        'value': 0,
-        'value_old': 0,
-      },
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
+        'old',
         'input',
         'result',
+        'value',
       ],
     });
 }
