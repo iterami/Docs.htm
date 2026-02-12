@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>math_oscillate(args) Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/math_oscillate.htm>math_oscillate(args)</a><br>
+
+<textarea id=input>
+{
+  "limit": 5,
+  "min": -10,
+  "max": 10
+}
+</textarea><br>
+<button id=oscillate>Oscillate</button>
+<table>
+  <tr class=header>
+    <td>Properties
+    <td>Values
+  <tr>
+    <td>Value
+    <td><input id=value step=any type=number>
+  <tr>
+    <td>Previous
+    <td><input id=old step=any type=number>
+  <tr>
+    <td>Diff
+    <td><input id=diff step=any type=number>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/math.js></script>
+<script>
+function oscillate(){
+    value_old = value;
+    value = math_oscillate({
+      'value': value,
+      ...JSON.parse(core_elements.input.value),
+    });
+
+    core_ui_update({
+      'ids': {
+        'diff': value - value_old,
+        'value': value,
+        'old': value_old,
+      },
+    });
+}
+
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'oscillate': {
+          'onclick': oscillate,
+        },
+      },
+      'globals': {
+        'value': 0,
+        'value_old': 0,
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui_elements': [
+        'input',
+        'result',
+      ],
+    });
+}
+</script>
