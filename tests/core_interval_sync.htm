@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>core_interval_sync(interval) Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/core_interval_sync.htm>core_interval_sync(interval)</a>
+<table>
+  <tr class=header>
+    <td>Milliseconds
+    <td>Count
+  <tbody id=totals>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function interval(){
+    const ms = new Date().getMilliseconds();
+    if(!totals[ms]){
+        totals[ms] = 0;
+    }
+    totals[ms]++;
+
+    if(!core_elements[ms]){
+        core_elements.totals.insertAdjacentHTML(
+          'beforeend',
+          '<tr><td>' + ms + '<td id=' + ms + '>'
+        );
+        core_elements[ms] = document.getElementById(ms);
+    }
+
+    core_elements[ms].textContent = totals[ms];
+}
+
+function repo_init(){
+    core_repo_init({
+      'globals': {
+        'totals': {},
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+      'ui_elements': [
+        'totals',
+      ],
+    });
+
+    core_interval_modify({
+      'id': 'interval',
+      'interval': -2,
+      'todo': interval,
+    });
+}
+</script>
