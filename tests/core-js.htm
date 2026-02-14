@@ -148,8 +148,9 @@ function repo_init(){
         },
         {
           'function': 'core_html_format',
-          'args': '<u>\'"&</u>',
-          'expect': '&lt;u&gt;&#39;&#34;&amp;&lt;/u&gt;',
+          'args': `<u>'
+"&</u>`,
+          'expect': '&lt;u&gt;&apos;<br>&quot;&amp;&lt;/u&gt;',
         },
         {
           'function': 'core_number_format',

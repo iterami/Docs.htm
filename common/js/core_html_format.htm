@@ -7,7 +7,15 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_html_format(string)
 <ul>
-  <li>Replaces characters in a string that may cause HTML errors and returns it.
+  <li>Replaces characters in a string that may cause HTML errors and returns it:<ol>
+    <li>"&amp;" = "&amp;amp;"
+    <li>"&lt;" = "&amp;lt;"
+    <li>"&gt;" = "&amp;gt;"
+    <li>"&apos;" = "&amp;apos;"
+    <li>'&quot;' = "&amp;quot;"
+    <li>"\n\r" = "&lt;br&gt;"
+    <li>"\n" = "&lt;br&gt;"
+  </ol>
 </ul>
 <table>
   <tr class=header>
