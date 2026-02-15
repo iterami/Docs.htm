@@ -16,6 +16,11 @@
 <script src=../../common/js/core.js></script>
 <script>
 function interval(){
+    if(skip){
+        skip = false;
+        return;
+    }
+
     const ms = new Date().getMilliseconds();
     if(!totals[ms]){
         totals[ms] = 0;
@@ -33,9 +38,14 @@ function interval(){
     core_elements[ms].textContent = totals[ms];
 }
 
+function repo_escape(){
+    skip = true;
+}
+
 function repo_init(){
     core_repo_init({
       'globals': {
+        'skip': true,
         'totals': {},
       },
       'root': 'index.htm',
