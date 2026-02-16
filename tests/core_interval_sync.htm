@@ -7,6 +7,12 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/core_interval_sync.htm>core_interval_sync(interval)</a>
 <table>
+  <tr>
+    <td>Total
+    <td id=count>
+  <tr>
+    <td>Average
+    <td><input id=average readonly type=text>
   <tr class=header>
     <td>Milliseconds
     <td>Count
@@ -16,26 +22,31 @@
 <script src=../../common/js/core.js></script>
 <script>
 function interval(){
+    const ms = new Date().getMilliseconds();
+
     if(skip){
         skip = false;
         return;
     }
+    count++;
+    total += ms;
+    average = total / count;
 
-    const ms = new Date().getMilliseconds();
     if(!totals[ms]){
         totals[ms] = 0;
-    }
-    totals[ms]++;
-
-    if(!core_elements[ms]){
         core_elements.totals.insertAdjacentHTML(
           'beforeend',
           '<tr><td>' + ms + '<td id=' + ms + '>'
         );
-        core_elements[ms] = document.getElementById(ms);
     }
 
-    core_elements[ms].textContent = totals[ms];
+    core_ui_update({
+      'ids': {
+        [ms]: ++totals[ms],
+        'average': average,
+        'count': count,
+      },
+    });
 }
 
 function repo_escape(){
@@ -45,7 +56,10 @@ function repo_escape(){
 function repo_init(){
     core_repo_init({
       'globals': {
+        'average': 0,
+        'count': 0,
         'skip': true,
+        'total': 0,
         'totals': {},
       },
       'root': 'index.htm',
