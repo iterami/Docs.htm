@@ -21,11 +21,14 @@
 function interval(){
     const ms = new Date().getMilliseconds();
 
-    if(skip
-      || ms > 995){
+    if(skip){
         skip = false;
         return;
     }
+    if(ms > 950){
+        ms -= 1000;
+    }
+
     count++;
     total += ms;
     average = total / count;
