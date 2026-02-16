@@ -31,8 +31,8 @@
     <td>Last Control Key
     <td id=control_last>
   <tr class=header>
-    <td><input checked id=check_pointer type=checkbox>Pointer
     <td><input checked id=check_scroll type=checkbox>Scroll
+    <td><input checked id=check_pointer type=checkbox>pointerType: <span id=pointerType></span>
   <tr>
     <td><button id=pointerLock type=button>pointerLock</button>
     <td><input id=text type=text>
@@ -276,13 +276,17 @@ function update_pointer(event){
 
     update(event);
 
+    const ids = {
+      ...core_pointer,
+      'core_mobile': core_mobile,
+      'deltaY': event?.deltaY || Number(core_elements.deltaY?.textContent),
+      'touchevent': 'TouchEvent' in globalThis,
+    };
+    if(!event?.touches){
+        ids.pointerType = event?.pointerType;
+    }
     core_ui_update({
-      'ids': {
-        'core_mobile': core_mobile,
-        ...core_pointer,
-        'deltaY': event?.deltaY || Number(core_elements.deltaY?.textContent),
-        'touchevent': 'TouchEvent' in globalThis,
-      },
+      'ids': ids,
     });
 }
 </script>
