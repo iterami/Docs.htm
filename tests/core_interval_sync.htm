@@ -19,7 +19,7 @@
 <script src=../../common/js/core.js></script>
 <script>
 function interval(){
-    const ms = new Date().getMilliseconds();
+    let ms = new Date().getMilliseconds();
 
     if(skip){
         skip = false;
@@ -35,10 +35,21 @@ function interval(){
 
     if(!totals[ms]){
         totals[ms] = 0;
-        core_elements.totals.insertAdjacentHTML(
-          'beforeend',
-          '<tr><td>' + ms + '<td id=' + ms + '>'
-        );
+        keys.push(ms);
+        core_sort_numbers({
+          'array': keys,
+          'clone': false,
+        });
+
+        let table = '';
+        for(const key of keys){
+            table += '<tr><td>' + key + '<td id=' + key + '>' + totals[key];
+        }
+        core_elements.totals.innerHTML = table;
+
+        for(const key of keys){
+            core_elements[key] = document.getElementById(key);
+        }
     }
 
     core_ui_update({
@@ -59,6 +70,7 @@ function repo_init(){
       'globals': {
         'average': 0,
         'count': 0,
+        'keys': [],
         'skip': true,
         'total': 0,
         'totals': {},
