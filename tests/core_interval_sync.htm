@@ -21,7 +21,8 @@
 function interval(){
     const ms = new Date().getMilliseconds();
 
-    if(skip){
+    if(skip
+      || ms > 995){
         skip = false;
         return;
     }
