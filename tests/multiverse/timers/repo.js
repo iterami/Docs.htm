@@ -265,7 +265,7 @@ function repo_init(){
         'ended': 0,
         'repeated': 0,
       },
-      'info': '<button id=new_game type=button>Start Timers Test</button>',
+      'info': '<button class=medium id=new_game type=button>Start Timers Test</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},

@@ -619,7 +619,7 @@ function repo_init(){
           },
         },
       },
-      'info': '<button id=new_game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span>/<span id=level_xp_max></span> xp <span class=xp_percent></span>%)<br>'
+      'info': '<button class=medium id=new_game type=button>Start ARPG Test</button><br><br>Level: <span id=level></span> (<span id=level_xp></span>/<span id=level_xp_max></span> xp <span class=xp_percent></span>%)<br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Mana: <span class=mana></span>/<span class=mana_max></span><br>'
         + 'Jump Height: <span id=jump_height></span><br>'
@@ -670,7 +670,7 @@ function repo_init(){
       'content': skills_ui + '</table>',
       'group': 'rpg',
       'id': 'skills',
-      'label': 'Skills and Talents',
+      'label': 'Skills/Talents',
     });
 
     core_tab_create({

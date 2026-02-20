@@ -165,7 +165,7 @@ function repo_init(){
       'globals': {
         'choices': 0,
       },
-      'info': '<button id=new_game type=button>Start Story Test</button>',
+      'info': '<button class=medium id=new_game type=button>Start Story Test</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},

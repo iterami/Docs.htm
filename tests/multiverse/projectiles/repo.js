@@ -130,7 +130,7 @@ function repo_init(){
           'onclick': new_game,
         },
       },
-      'info': '<button id=new_game type=button>Start Projectiles Test</button>',
+      'info': '<button class=medium id=new_game type=button>Start Projectiles Test</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},

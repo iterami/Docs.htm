@@ -469,7 +469,7 @@ function repo_init(){
         'mark_max': 0,
         'position_max': 0,
       },
-      'info': '<button id=new_game type=button>Start Racing Test</button><br><br>Lap: <span class=lap></span>/<span class=lap_max></span><br>'
+      'info': '<button class=medium id=new_game type=button>Start Racing Test</button><br><br>Lap: <span class=lap></span>/<span class=lap_max></span><br>'
         + 'Mark: <span class=mark></span>/<span class=mark_max></span><br>'
         + 'Position: <span class=position></span>/<span class=position_max></span><br>'
         + 'Speed: <span class=speed></span>/<span class=speed_max></span>',

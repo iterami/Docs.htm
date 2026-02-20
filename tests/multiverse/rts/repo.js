@@ -459,7 +459,7 @@ function repo_init(){
         'build_placeholder': '',
         'tech': {},
       },
-      'info': '<button id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
+      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Speed: <span class=speed></span><br>'

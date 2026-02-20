@@ -521,7 +521,7 @@ function repo_init(){
       'globals': {
         'flags': {},
       },
-      'info': '<button id=new_game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life_max></span><br>'
+      'info': '<button class=medium id=new_game type=button>Start Platformer Test</button><br><br>Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Lives: <span class=lives></span><br>'
         + 'Speed: <span id=speed></span><br>'
         + 'Coins: <span class=coins></span><br>'
