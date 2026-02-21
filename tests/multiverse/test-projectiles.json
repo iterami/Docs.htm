@@ -18,7 +18,7 @@
               "todo": "webgl_projectile",
               "type": "function",
               "value": {
-                "character": "stationary",
+                "character": "_me",
                 "projectile": {}
               }
             }
@@ -35,6 +35,19 @@
             -50, 0, -50,
             -50, 0, 50,
             50, 0, 50
+          ]
+        },
+        {
+          "id": "wall",
+          "attach_y": 10,
+          "attach_z": -50,
+          "rotate_x": 90,
+          "texture": "grid.png",
+          "vertices": [
+            50, 0, -10,
+            -50, 0, -10,
+            -50, 0, 10,
+            50, 0, 10
           ]
         }
       ]
@@ -55,14 +68,6 @@
       "model": {},
       "position_x": 10,
       "position_y": 5,
-      "spawn": false
-    },
-    {
-      "id": "stationary",
-      "change_rotate_y": -1,
-      "model": {},
-      "position_x": 20,
-      "position_y": 10,
       "spawn": false
     }
   ],
