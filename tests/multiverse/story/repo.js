@@ -184,7 +184,7 @@ function repo_init(){
 
 function update_ui(){
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'choices': choices,
       },

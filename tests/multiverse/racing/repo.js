@@ -1,8 +1,11 @@
 'use strict';
 
-function lap_update(args){
-    const character = webgl_characters[args.id];
-    if(character.mark !== args.mark - 1){
+function lap_update({
+  id,
+  mark,
+} = {}){
+    const character = webgl_characters[id];
+    if(character.mark !== mark - 1){
         return;
     }
 
@@ -508,7 +511,7 @@ function repo_logic(){
         speed_max = stats.speed_max_forward;
     }
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'speed': speed,
         'speed_max': speed_max,
@@ -562,7 +565,7 @@ function stats(){
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'lap': character.lap,
         'lap_max': lap_max,

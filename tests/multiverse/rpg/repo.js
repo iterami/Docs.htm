@@ -321,9 +321,12 @@ function load_cave(id){
     update_ui();
 }
 
-function load_town(args){
-    if(args?.spawn === 1
-      && args.target !== webgl_character_id){
+function load_town({
+  spawn = 0,
+  target,
+} = {}){
+    if(spawn === 1
+      && target !== webgl_character_id){
         return;
     }
 
@@ -342,7 +345,7 @@ function load_town(args){
       'character': 0,
       'json': {
         ...level_properties(),
-        'spawn': spawners[args?.spawn || 0],
+        'spawn': spawners[spawn],
         'paths': [
           {
             'id': 'path_lava',
@@ -705,7 +708,7 @@ function skill_select(id){
 
     character.skill = id;
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'skill': id,
       },
@@ -847,7 +850,7 @@ function update_ui(){
     const xp_max = Math.floor(character.level + 1) * 1e3;
 
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         ...equipment,
         'floor': floor,

@@ -1,20 +1,24 @@
 'use strict';
 
-function collect(args){
-    if(args.flag){
-        delete flags.skymap[args.flag];
+function collect({
+  flag,
+  id,
+  type,
+  value = 1,
+} = {}){
+    if(flag){
+        delete flags.skymap[flag];
     }
 
-    const value = args.value || 1;
     webgl_stat_modify({
-      'stat': args.type,
+      'stat': type,
       'target': webgl_characters[webgl_character_id],
       'value': value,
     });
 
     audio_start('boop');
     entity_remove({
-      'entities': [args.id],
+      'entities': [id],
     });
 }
 
@@ -555,7 +559,7 @@ function repo_stat_modify(){
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'coins': character.coins,
         'keys': character.keys,

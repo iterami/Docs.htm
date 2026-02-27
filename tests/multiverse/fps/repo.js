@@ -1,23 +1,27 @@
 'use strict';
 
-function collect(args){
-    if(args.type === 'weapon'){
+function collect({
+  id,
+  type,
+  value,
+} = {}){
+    if(type === 'weapon'){
         weapon_equip({
           'id': webgl_character_id,
-          'weapon': args.value,
+          'weapon': value,
         });
 
     }else{
         webgl_stat_modify({
-          'stat': args.type,
+          'stat': type,
           'target': webgl_characters[webgl_character_id],
-          'value': args.value,
+          'value': value,
         });
     }
 
     audio_start('boop');
     entity_remove({
-      'entities': [args.id],
+      'entities': [id],
     });
 }
 
@@ -291,7 +295,7 @@ function repo_logic(){
     }
 
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'reload': webgl_characters[webgl_character_id].reload,
       },
@@ -328,7 +332,7 @@ function stats(){
 function update_ui(){
     const character = webgl_characters[webgl_character_id];
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'ammo': character.ammo,
         'ammo_max': character.ammo_max,
@@ -342,17 +346,20 @@ function update_ui(){
     });
 }
 
-function weapon_equip(args){
-    const character = webgl_characters[args.id];
-    const weapon = weapons[args.weapon];
+function weapon_equip({
+  id,
+  weapon,
+} = {}){
+    const character = webgl_characters[id];
+    const equip = weapons[weapon];
 
-    if(character.weapon !== args.weapon){
-        character.weapon = args.weapon;
-        character.ammo_max = weapon.ammo;
-        character.reload = weapon.reload;
+    if(character.weapon !== weapon){
+        character.weapon = weapon;
+        character.ammo_max = equip.ammo;
+        character.reload = equip.reload;
     }
 
-    character.ammo = weapon.ammo;
+    character.ammo = equip.ammo;
     update_ui();
 }
 

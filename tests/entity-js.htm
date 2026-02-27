@@ -27,7 +27,7 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
-          'function': 'entity_create',
+          'todo': 'entity_create',
           'args': void 0,
           'expect': function(){
               const id = entity_id_count - 1;
@@ -35,7 +35,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'entity_create',
+          'todo': 'entity_create',
           'args': {
             'id': 'test',
           },
@@ -44,7 +44,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'entity_create',
+          'todo': 'entity_create',
           'args': void 0,
           'expect': function(){
               const id = entity_id_count - 1;
@@ -52,14 +52,14 @@ function repo_init(){
           },
         },
         {
-          'function': 'entity_group_create',
+          'todo': 'entity_group_create',
           'args': ['testgroup'],
           'expect': function(){
               return entity_groups._length.testgroup === 0;
           },
         },
         {
-          'function': 'entity_group_add',
+          'todo': 'entity_group_add',
           'args': {
             'entities': [
               0,
@@ -73,7 +73,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'entity_group_modify',
+          'todo': 'entity_group_modify',
           'args': {
             'groups': [
               'testgroup',

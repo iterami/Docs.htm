@@ -1,10 +1,13 @@
 'use strict';
 
-function debug_pick_color(args){
+function debug_pick_color({
+  x,
+  y,
+} = {}){
     const pixelarray = new Uint8Array(3);
     webgl.readPixels(
-      args.x,
-      webgl.drawingBufferHeight - args.y,
+      x,
+      webgl.drawingBufferHeight - y,
       1,
       1,
       webgl.RGB,
@@ -13,8 +16,8 @@ function debug_pick_color(args){
     );
     return {
       'pixelarray': pixelarray,
-      'x': args.x,
-      'y': webgl.drawingBufferHeight - args.y,
+      'x': x,
+      'y': webgl.drawingBufferHeight - y,
     };
 }
 

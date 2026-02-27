@@ -43,7 +43,7 @@ function repo_init(){
       'link': '../common/js/',
       'tests': [
         {
-          'function': 'webgl_character_init',
+          'todo': 'webgl_character_init',
           'args': {
             'id': 'test_character_1',
             'level': 5,
@@ -53,22 +53,22 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_character_level',
+          'todo': 'webgl_character_level',
           'args': void 0,
           'expect': -1,
         },
         {
-          'function': 'webgl_character_level',
+          'todo': 'webgl_character_level',
           'args': 'fake_character',
           'expect': -3,
         },
         {
-          'function': 'webgl_character_level',
+          'todo': 'webgl_character_level',
           'args': webgl_characters.test_character_0,
           'expect': 1,
         },
         {
-          'function': 'webgl_color_set',
+          'todo': 'webgl_color_set',
           'args': {
             'blue': .3,
             'green': .2,
@@ -97,14 +97,14 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_get_position',
+          'todo': 'webgl_get_position',
           'args': webgl_characters.test_character_0,
           'expect': function(result){
               return result.x === 23;
           },
         },
         {
-          'function': 'webgl_move_to',
+          'todo': 'webgl_move_to',
           'args': {
             'y': 23,
             'move': webgl_characters.test_character_0,
@@ -114,7 +114,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_pick_color',
+          'todo': 'webgl_pick_color',
           'args': {
             'x': 0,
             'y': 0,
@@ -127,7 +127,7 @@ function repo_init(){
           ],
         },
         {
-          'function': 'webgl_stat_modify',
+          'todo': 'webgl_stat_modify',
           'args': {
             'stat': 'level',
             'value': 2,
@@ -138,7 +138,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_stat_modify',
+          'todo': 'webgl_stat_modify',
           'args': {
             'set': true,
             'stat': 'level',
@@ -150,7 +150,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_stat_modify',
+          'todo': 'webgl_stat_modify',
           'args': {
             'round': 2,
             'stat': 'jump_height',
@@ -162,7 +162,7 @@ function repo_init(){
           },
         },
         {
-          'function': 'webgl_vertexcolorarray',
+          'todo': 'webgl_vertexcolorarray',
           'args': {
             'colors': [
               0,

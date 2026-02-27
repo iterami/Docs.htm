@@ -4,10 +4,13 @@ function attack(entity){
     console.log(webgl_characters[webgl_character_id].selected, 'is attacking', entity.id);
 }
 
-// Required args: build, id, placeholder
-function build(args){
-    const player = webgl_characters[args.id];
-    const properties = tech[args.build];
+function build({
+  build,
+  id,
+  placeholder,
+} = {}){
+    const player = webgl_characters[id];
+    const properties = tech[build];
     if(player.power < properties.power){
         return;
     }
@@ -16,8 +19,8 @@ function build(args){
         return;
     }
 
-    if(args.placeholder === true){
-        placeholder_show(args.build);
+    if(placeholder === true){
+        placeholder_show(build);
         return;
     }
 
@@ -39,15 +42,15 @@ function build(args){
     }
 
     player.power -= properties.power;
-    const id = make({
+    const making = make({
       'team': player.id,
       'time': properties.time,
-      'type': args.build,
+      'type': build,
       'x': x,
       'y': y,
       'z': z,
     });
-    selected.making = id;
+    selected.making = making;
     selected.time = properties.time;
 
     update_ui();
@@ -260,37 +263,34 @@ function load_testmap(){
     });
 }
 
-// Required args: team, time, type, x, y, z
-function make(args){
-    args = core_args({
-      'args': args,
-      'defaults': {
-        'x': 0,
-        'y': 0,
-        'z': 0,
-      },
-    });
-
-    const player = webgl_characters[args.team];
+function make({
+  team,
+  time,
+  type,
+  x = 0,
+  y = 0,
+  z = 0,
+} = {}){
+    const player = webgl_characters[team];
     const selected = entity_entities[player.selected];
 
-    const id = args.type + entity_id_count;
+    const id = type + entity_id_count;
     webgl_entity_create({
       'entities': [{
-        'attach_x': args.x,
-        'attach_y': args.y,
-        'attach_z': args.z,
-        'destination_x': args.x,
-        'destination_y': args.y,
-        'destination_z': args.z,
+        'attach_x': x,
+        'attach_y': y,
+        'attach_z': z,
+        'destination_x': x,
+        'destination_y': y,
+        'destination_z': z,
         'id': id,
         'making': selected?.id || '',
         'picking': true,
-        'team': args.team,
-        'time': args.time,
-        'type': args.type,
+        'team': team,
+        'time': time,
+        'type': type,
         'vertex_colors': player.color,
-        ...tech[args.type].properties,
+        ...tech[type].properties,
       }],
     });
     return id;
@@ -543,7 +543,7 @@ function repo_logic(){
           || Math.abs(selected.attach_z - selected.destination_z) > 1;
 
         core_ui_update({
-          'class': true,
+          'classname': true,
           'ids': {
             'making': selected.making,
             'making_time': selected.time || '',
@@ -639,50 +639,46 @@ function select(id){
     update_ui();
 }
 
-function team_create(args){
-    args = core_args({
-      'args': args,
-      'defaults': {
-        'id': webgl_character_id,
-        'power': 0,
-        'x': 0,
-        'y': 0,
-        'z': 0,
-      },
-    });
-
+function team_create({
+  camera = 0,
+  id = webgl_character_id,
+  power = 0,
+  x = 0,
+  y = 0,
+  z = 0,
+} = {}){
     webgl_character_init({
       'camera_zoom': 50,
       'color':  webgl_vertexcolorarray({
         'vertexcount': 1,
       }),
       'controls': 'rts',
-      'id': args.id,
+      'id': id,
       'level': -1,
       'lock': {
         'camera_rotate_x': 60,
         'position_y': 5,
       },
-      'power': args.power,
+      'power': power,
       'selected': '',
       'spawn': {
-        'position_x': args.x,
-        'position_y': args.y,
-        'position_z': args.z,
+        'position_x': x,
+        'position_y': y,
+        'position_z': z,
       },
       'speed': 2,
     });
     rotate_camera(
-      args.camera || 0,
-      args.id
+      camera,
+      id
     );
     make({
-      'team': args.id,
+      'team': id,
       'time': 0,
       'type': 'Builder',
-      'x': args.x,
-      'y': args.y,
-      'z': args.z,
+      'x': x,
+      'y': y,
+      'z': z,
     });
 }
 
@@ -690,7 +686,7 @@ function update_ui(){
     const player = webgl_characters[webgl_character_id];
     const selected = entity_entities[player.selected];
     core_ui_update({
-      'class': true,
+      'classname': true,
       'ids': {
         'life': selected?.life,
         'life_max': tech[selected?.type]?.life,

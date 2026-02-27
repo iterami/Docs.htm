@@ -107,7 +107,7 @@
               "todo": "webgl_entity_scale",
               "type": "function",
               "value": {
-                "entity": "wall",
+                "id": "wall",
                 "x": 0.1,
                 "y": 0.1,
                 "z": 0.1
@@ -134,7 +134,7 @@
               "todo": "webgl_entity_scale",
               "type": "function",
               "value": {
-                "entity": "wall",
+                "id": "wall",
                 "x": -0.1,
                 "y": -0.1,
                 "z": -0.1
