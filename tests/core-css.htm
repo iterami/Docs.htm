@@ -7,7 +7,7 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../../common/css/core.css>core.css</a>
 <div id=custom-test></div>
-<table>
+<table class=tables-nosort>
   <tr class=header>
     <td>Type
     <td><button onclick=clear_elements() type=button>Clear</button> Elements
@@ -262,6 +262,7 @@
 </table>
 
 <script src=../../common/js/core.js></script>
+<script src=../../common/js/tables.js></script>
 <script>
 function add_element(element){
     document.getElementById('custom-test').innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
