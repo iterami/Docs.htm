@@ -258,8 +258,8 @@ function repo_init(){
         'pointerlock': true,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td>Debug Picking'
-        + '<tr><td><input id=pointerlock type=checkbox><td>Pointerlock</table>',
+      'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td><label for=debug_picking>Debug Picking</label>'
+        + '<tr><td><input id=pointerlock type=checkbox><td><label for=pointerlock>Pointerlock</label></table>',
       'title': 'Docs.htm',
       'ui': '<span id=picked></span> <span id=color></span><br>Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><br><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div><div id=debug_catch></div>',
       'ui_elements': [
