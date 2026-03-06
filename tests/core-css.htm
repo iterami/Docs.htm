@@ -99,18 +99,6 @@
     <td><button onclick=add_element(this) type=button>Input type=password Readonly</button>
     <td><input readonly type=password value=password>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=radio</button>
-    <td><input name=radio type=radio>
-  <tr>
-    <td><button onclick=add_element(this) type=button>Input type=radio Checked Disabled</button>
-    <td id=radio><input checked disabled name=radio type=radio>
-  <tr>
-    <td><button onclick=add_element(this) type=button>Input type=radio Disabled</button>
-    <td><input disabled name=radio type=radio>
-  <tr>
-    <td><button onclick=add_element(this) type=button>Input type=radio Label</button>
-    <td><label><input name=radio type=radio>Label</label>
-  <tr>
     <td><button onclick=add_element(this) type=button>Input type=range</button>
     <td><input type=range>
   <tr>
@@ -279,7 +267,6 @@ function clear_elements(){
     while(elements.firstChild){
         elements.removeChild(elements.firstChild);
     }
-    document.getElementById('radio').firstChild.checked = true;
 }
 
 function repo_init(){
