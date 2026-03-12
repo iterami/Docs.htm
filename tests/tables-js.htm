@@ -213,7 +213,7 @@
     <td>column
 </table>
 <hr>
-<button onclick="add_rows(10)" type=button>+10 Rows</button><button onclick="add_rows(100)" type=button>+100 Rows</button><button onclick="reset_rows()" type=button>Reset</button> <span id=row_count>0</span>
+<input id=rowcount step=1 type=number value=100><button onclick=add_rows() type=button>Add Rows</button><button onclick=reset_rows() type=button>Reset</button> <span id=row_count>0</span>
 <table>
   <thead>
     <tr class=header>
@@ -228,7 +228,8 @@
 </table>
 
 <script>
-function add_rows(rows){
+function add_rows(){
+    const rows = document.getElementById('rowcount').value;
     const table_element = document.getElementById('custom_table_body');
     for(let i = 0; i < rows; i++){
         table_element.innerHTML += '<tr>'
