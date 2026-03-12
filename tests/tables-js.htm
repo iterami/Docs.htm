@@ -167,7 +167,7 @@
     <td class=tables-nosort>Unsortable
   <tbody id=generated>
 </table>
-<button id=make-sortable onclick="tables_add(document.getElementById('unsortable_table'))" type=button>Make Unsortable Table Sortable</button>
+<button id=make_sortable onclick="tables_add(document.getElementById('unsortable_table'))" type=button>Make Unsortable Table Sortable</button>
 <table class=tables-nosort id=unsortable_table>
   <tr class=header>
     <td>Main
@@ -213,7 +213,7 @@
     <td>column
 </table>
 <hr>
-<button onclick="add_rows(10)" type=button>+10 Rows</button><button onclick="add_rows(100)" type=button>+100 Rows</button><button onclick="reset_rows()" type=button>Reset</button> <span id=row-count>0</span>
+<button onclick="add_rows(10)" type=button>+10 Rows</button><button onclick="add_rows(100)" type=button>+100 Rows</button><button onclick="reset_rows()" type=button>Reset</button> <span id=row_count>0</span>
 <table>
   <thead>
     <tr class=header>
@@ -222,22 +222,26 @@
       <td class=tables-nosort>String<br>Unsortable
       <td>Number Sortable
       <td class=tables-nosort>Number<br>Unsortable
-  <tbody id=custom-table-body>
+      <td>Both Sortable
+      <td class=tables-nosort>Both<br>Unsortable
+  <tbody id=custom_table_body>
 </table>
 
 <script>
 function add_rows(rows){
-    const table_element = document.getElementById('custom-table-body');
+    const table_element = document.getElementById('custom_table_body');
     for(let i = 0; i < rows; i++){
         table_element.innerHTML += '<tr>'
           + '<td>' + row_counter
           + '<td>' + random_string()
           + '<td>' + random_string()
           + '<td>' + random_number()
-          + '<td>' + random_number();
+          + '<td>' + random_number()
+          + '<td>' + random_number_or_string()
+          + '<td>' + random_number_or_string();
         row_counter++;
     }
-    document.getElementById('row-count').textContent = row_counter;
+    document.getElementById('row_count').textContent = row_counter;
 }
 
 function random_number(){
@@ -264,9 +268,9 @@ function random_string(){
 }
 
 function reset_rows(){
-    document.getElementById('custom-table-body').innerHTML = '';
+    document.getElementById('custom_table_body').innerHTML = '';
     row_counter = 0;
-    document.getElementById('row-count').textContent = row_counter;
+    document.getElementById('row_count').textContent = row_counter;
 }
 
 let row_counter = 0;
