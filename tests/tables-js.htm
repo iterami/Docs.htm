@@ -12,7 +12,7 @@
     <td>Main
     <td>Same
     <td>Table with only header
-    <td class=tables-numbers>Numbers
+    <td>Numbers
     <td class=tables-nosort>Unsortable
 </table>
 <table>
@@ -21,7 +21,7 @@
       <td>Main
       <td>Same
       <td>Table with only &lt;thead&gt;
-      <td class=tables-numbers>Numbers
+      <td>Numbers
       <td class=tables-nosort>Unsortable
 </table>
 <table>
@@ -29,7 +29,7 @@
     <td>Main
     <td>Same
     <td>default Table with no &lt;tbody&gt;
-    <td class=tables-numbers>Numbers
+    <td>Numbers
     <td class=tables-nosort>Unsortable
   <tr>
     <td>0
@@ -65,7 +65,7 @@
     <td>5
     <td>
     <td>Fusce eget felis augue.
-    <td>4,888
+    <td>Oops text.
     <td>column
 </table>
 <table>
@@ -73,7 +73,7 @@
     <td>Same not Main
     <td>Same
     <td>Table with custom main column
-    <td class="tables-main tables-numbers">Main Numbers
+    <td class=tables-main>Main Numbers
     <td class=tables-nosort>Unsortable
   <tr>
     <td>same text
@@ -109,7 +109,7 @@
     <td>same text
     <td>
     <td>Fusce eget felis augue.
-    <td>4,888
+    <td>Oops text.
     <td>column
 </table>
 <table>
@@ -118,7 +118,7 @@
       <td>Main
       <td>Same
       <td>Table with &lt;tbody&gt;
-      <td class=tables-numbers>Numbers
+      <td>Numbers
       <td class=tables-nosort>Unsortable
   <tbody>
     <tr>
@@ -155,7 +155,7 @@
       <td>5
       <td>
       <td>Fusce eget felis augue.
-      <td>4,888
+      <td>Oops text.
       <td>column
 </table>
 <table>
@@ -163,7 +163,7 @@
     <td>Main
     <td>Same
     <td>Table with &lt;tbody&gt; Generated in onload
-    <td class=tables-numbers>Numbers
+    <td>Numbers
     <td class=tables-nosort>Unsortable
   <tbody id=generated>
 </table>
@@ -173,7 +173,7 @@
     <td>Main
     <td>Same
     <td>Unsortable Table
-    <td class=tables-numbers>Numbers
+    <td>Numbers
     <td class=tables-nosort>Unsortable
   <tr>
     <td>0
@@ -209,7 +209,7 @@
     <td>5
     <td>
     <td>Fusce eget felis augue.
-    <td>4,888
+    <td>Oops text.
     <td>column
 </table>
 <hr>
@@ -217,10 +217,10 @@
 <table>
   <thead>
     <tr class=header>
-      <td class=tables-numbers>ID
+      <td>ID
       <td>String Sortable
       <td class=tables-nosort>String<br>Unsortable
-      <td class=tables-numbers>Number Sortable
+      <td>Number Sortable
       <td class=tables-nosort>Number<br>Unsortable
   <tbody id=custom-table-body>
 </table>
@@ -242,6 +242,15 @@ function add_rows(rows){
 
 function random_number(){
     return Math.random() * 1e10;
+}
+
+function random_number_or_string(){
+    if(Math.random() < .5){
+        return random_number();
+
+    }else{
+        return random_string();
+    }
 }
 
 function random_string(){
@@ -267,8 +276,8 @@ globalThis.onload = function(){
     for(let i = 0; i < 6; i++){
         generated += '<tr><td>' + i
           + '<td>' + (i < 3 ? 'same text' : '')
-          + '<td>' + random_string()
-          + '<td>' + random_number()
+          + '<td>' + random_number_or_string()
+          + '<td>' + random_number_or_string()
           + '<td>' + (i % 2 ? 'column' : 'unsortable');
     }
     document.getElementById('generated').innerHTML = generated;
