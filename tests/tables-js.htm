@@ -274,6 +274,7 @@
       <td class=tables-nosort>Both<br>Unsortable
   <tbody id=custom_table_body>
 </table>
+<button onclick=back() type=button>Back to Rows Test</button>
 
 <script>
 function add_rows(){
@@ -293,6 +294,10 @@ function add_rows(){
     document.getElementById('row_count').textContent = row_counter;
 }
 
+function back(){
+    document.getElementById('rowcount').scrollIntoView();
+}
+
 function random_number(){
     return Math.random() * 1e10;
 }
@@ -300,15 +305,13 @@ function random_number(){
 function random_number_or_string(){
     if(Math.random() < .5){
         return random_number();
-
-    }else{
-        return random_string();
     }
+
+    return random_string();
 }
 
 function random_string(){
     const letters = 'bcdfghjklmnpqrstvwxyz';
-
     let string = '';
     for(let i = 0; i < 10; i++){
         string += letters[Math.floor(Math.random() * letters.length)];
