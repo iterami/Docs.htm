@@ -10,7 +10,8 @@
   <li>Creates a ellipsoid primitive with specified properties.
   <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
   <li>Position is the center of the ellipsoid.
-  <li>If the "color0" or "color1" arg arrays are empty then a random color will be used.
+  <li>If "color_top0" or "color_top1" args are undefined or empty arrays then a random color will be generated.
+  <li>If "color_bottom0" or "color_bottom1" args are undefined or empty arrays then they will use the top color values.
 </ul>
 <table>
   <tr class=header>
@@ -22,11 +23,19 @@
     <td>webgl_character_base
     <td>string ID
   <tr>
-    <td>color0
+    <td>color_bottom0
     <td>[]
     <td>array of numbers
   <tr>
-    <td>color1
+    <td>color_bottom1
+    <td>[]
+    <td>array of numbers
+  <tr>
+    <td>color_top0
+    <td>[]
+    <td>array of numbers
+  <tr>
+    <td>color_top1
     <td>[]
     <td>array of numbers
   <tr>

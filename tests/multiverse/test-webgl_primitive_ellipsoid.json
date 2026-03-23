@@ -56,6 +56,21 @@
         "radius_y": -10,
         "radius_z": -15
       }
+    },
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "prefix": "ellipsoid_color",
+        "color_bottom1": [0, 1, 0, 1],
+        "color_bottom0": [1, 0, 1, 1],
+        "color_top0": [0, 0, 1, 1],
+        "color_top1": [1, 0, 0, 1],
+        "position_y": 15,
+        "position_z": -25,
+        "radius_x": 10,
+        "radius_y": 15,
+        "radius_z": 5
+      }
     }
   ]
 }

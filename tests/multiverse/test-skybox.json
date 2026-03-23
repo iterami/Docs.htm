@@ -39,6 +39,7 @@
         "radius_x": -99,
         "radius_y": -99,
         "radius_z": -99,
+        "rotate_z": 45,
         "slices_latitude": 4,
         "slices_longitude": 2
       }
@@ -47,6 +48,24 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "skybox_unattached",
+        "position_x": -15,
+        "position_y": 10,
+        "radius_x": -10,
+        "radius_y": -10,
+        "radius_z": -10,
+        "slices_latitude": 4,
+        "slices_longitude": 2
+      }
+    },
+    {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "prefix": "skybox_color",
+        "color_bottom0": [1, 0, 0, 1],
+        "color_bottom1": [0, 0, 1, 1],
+        "color_top0": [0, 1, 0, 1],
+        "color_top1": [0, 1, 0, 1],
+        "position_x": 15,
         "position_y": 10,
         "radius_x": -10,
         "radius_y": -10,
