@@ -33,7 +33,7 @@ function update(){
             continue;
         }
 
-        properties += '<tr><td>' + property + '<td>' + location[property];
+        properties += '<tr><td>' + property + '<td>' + JSON.stringify(location[property]);
     }
     document.getElementById('properties').innerHTML = properties;
 
@@ -45,7 +45,7 @@ function update(){
     keys.sort();
     let parameters = '';
     for(const parameter of keys){
-        parameters += '<tr><td>' + parameter + '<td>' + search[parameter];
+        parameters += '<tr><td>' + parameter + '<td>' + JSON.stringify(search[parameter]);
     }
     document.getElementById('parameters').innerHTML = parameters;
 }
