@@ -5,23 +5,21 @@
 <title>common prefabs/uri.js Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/prefabs/uri.htm>prefabs/uri.js</a><br>
-<canvas id=canvas_animated></canvas>
-<select id=direction_x>
-  <option value=1>+1
-  <option value=0>0
-  <option value=-1>-1
-</select>
-<select id=direction_y>
-  <option value=1>+1
-  <option value=0>0
-  <option value=-1>-1
-</select>
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/prefabs/uri.htm>prefabs/uri.js</a>
 <table>
   <thead>
     <tr class=header>
-      <td>Prefab
-      <td>URI
+      <td>URIs
+      <td><canvas id=canvas_animated></canvas>
+        <select id=direction_x>
+          <option value=1>+1
+          <option value=0>0
+          <option value=-1>-1
+       </select><select id=direction_y>
+         <option value=1>+1
+         <option value=0>0
+         <option value=-1>-1
+       </select>
   <tbody id=results>
 </table>
 
@@ -87,10 +85,9 @@ function repo_init(){
     let results = '';
     for(let uri in uris){
         results += '<tr><td><canvas id="canvas_' + uri + '"></canvas><br>'
-          + uri + '<br>'
+          + '<button onclick=setup_uri("' + uri + '") type=button>'+ uri + '</button><br>'
           + '<span id="height_' + uri + '"></span> x <span id="width_' + uri + '"></span><br>'
           + '<span id="size_' + uri + '"></span> B<br>'
-          + '<button onclick=setup_uri("' + uri + '") type=button>Animate</button>'
           + '<td><textarea id="' + uri + '" readonly>' + uris[uri] + '</textarea>';
     }
     document.getElementById('results').innerHTML = results;
