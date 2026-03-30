@@ -121,8 +121,8 @@ globalThis.onload = function(){
     }
     keys.sort();
     let propertiestable = '';
-    for(const i in keys){
-        propertiestable += '<tr><td>' + keys[i] + '<td id="property_' + keys[i] + '">' + JSON.stringify(navigator[keys[i]]);
+    for(const property of keys){
+        propertiestable += '<tr><td>' + property + '<td id="property_' + property + '">' + JSON.stringify(navigator[property]);
     }
     document.getElementById('properties').innerHTML = propertiestable;
 

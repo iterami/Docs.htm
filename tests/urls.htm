@@ -22,16 +22,29 @@
 function update(){
     const location = new URL(document.getElementById('url').value);
 
-    let properties = '';
+    const keys = [];
     for(const property in location){
+        keys.push(property);
+    }
+    keys.sort();
+    let properties = '';
+    for(const property of keys){
+        if(typeof location[property] === 'function'){
+            continue;
+        }
+
         properties += '<tr><td>' + property + '<td>' + location[property];
     }
     document.getElementById('properties').innerHTML = properties;
 
     const search = Object.fromEntries(new URLSearchParams(location.search));
-console.log(search)
-    let parameters = '';
+    keys.length = 0;
     for(const parameter in search){
+        keys.push(parameter);
+    }
+    keys.sort();
+    let parameters = '';
+    for(const parameter of keys){
         parameters += '<tr><td>' + parameter + '<td>' + search[parameter];
     }
     document.getElementById('parameters').innerHTML = parameters;
