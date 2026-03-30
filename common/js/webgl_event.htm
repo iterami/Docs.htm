@@ -35,8 +35,8 @@ The properties in each object within "event_todo" of the "parent" control what h
     <li>"character": modify the character with the "todo" ID.
     <li>"entity": default, modify the entity with the "todo" ID.
     <li>"function": call the function with the "todo" name and pass "value" as its args. For JSON levels:<ul>
-      <li>You can call <a href=webgl_json_function.htm>webgl_json_function(args)</a> to run complex functions that don't use variables, such as using "globalThis.open()" to open a webpage.
-      <li>If you need to pass variables to the called function, then currently you should use the "eval()" function with a string value, such as "console.log(webgl_character_count)".
+      <li>You can call <a href=webgl_json_function.htm>webgl_json_function(args)</a> to run complex functions that don't use variables, such as calling "globalThis.console.log('static text')", without using eval.
+      <li>If you need to pass variables to the called function, then currently you should use the "eval" function with a string "value", such as "console.log(webgl_character_count)".
     </ul>
     <li>"variable": modify the variable with the "todo" name.
   </ul>
