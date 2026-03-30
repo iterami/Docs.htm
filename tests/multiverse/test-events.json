@@ -182,7 +182,7 @@
               "type": "function",
               "value": {
                 "args": ["../index.htm", "_blank"],
-                "todo": "window.open"
+                "todo": "globalThis.open"
               }
             }
           ],
