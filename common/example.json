@@ -250,9 +250,7 @@
   "randomized": [
     {
       "character": false,
-      "ids": [
-        "example_entity_0"
-      ],
+      "ids": ["example_entity_0"],
       "max": 100,
       "min": -100,
       "property": "position_z"

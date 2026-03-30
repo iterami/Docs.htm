@@ -43,9 +43,7 @@
           "collision": false,
           "light_color": [0, 0, 0],
           "light_range": 25,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
             -1, 1, -0,
@@ -69,9 +67,7 @@
           "collision": false,
           "light_color": [0, 0, 1],
           "light_range": 25,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
             -1, 1, -0,
@@ -95,9 +91,7 @@
           "collision": false,
           "light_color": [0, 1, 0],
           "light_range": 25,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
             -1, 1, -0,
@@ -120,9 +114,7 @@
           "collision": false,
           "light_color": [1, 0, 0],
           "light_range": 25,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
             -1, 1, -0,
@@ -146,9 +138,7 @@
           "collision": false,
           "light_color": [1, 1, 1],
           "light_range": 25,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
             -1, 1, -0,
@@ -181,9 +171,7 @@
       "type": "webgl_primitive_ellipsoid",
       "properties": {
         "prefix": "skybox",
-        "groups": [
-          "skybox"
-        ],
+        "groups": ["skybox"],
         "radius_x": -5,
         "radius_y": -5,
         "radius_z": -5,

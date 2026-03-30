@@ -14,9 +14,7 @@
           "texture": "grid.png",
           "texture_x": 10,
           "texture_y": 5,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             50, 0, -25,
             -50, 0, -25,
@@ -45,9 +43,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  1, 0, 0, 1
-                ],
+                "vertex_colors": [1, 0, 0, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -64,9 +60,7 @@
                 "attach_x": -5,
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 1, 0, 1
-                ],
+                "vertex_colors": [0, 1, 0, 1],
                 "vertices": [
                   10, 0, -10,
                   -10, 0, -10,
@@ -84,9 +78,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -99,9 +91,7 @@
                 "attach_y": -10,
                 "attach_z": -5,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   10, 0, -5,
                   -10, 0, -5,
@@ -129,9 +119,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  1, 0, 0, 1
-                ],
+                "vertex_colors": [1, 0, 0, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -148,9 +136,7 @@
                 "attach_x": -5,
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 1, 0, 1
-                ],
+                "vertex_colors": [0, 1, 0, 1],
                 "vertices": [
                   10, 0, -10,
                   -10, 0, -10,
@@ -168,9 +154,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -183,9 +167,7 @@
                 "attach_y": -10,
                 "attach_z": -5,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   10, 0, -5,
                   -10, 0, -5,
@@ -213,9 +195,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  1, 0, 0, 1
-                ],
+                "vertex_colors": [1, 0, 0, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -239,9 +219,7 @@
                 "attach_x": -5,
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 1, 0, 1
-                ],
+                "vertex_colors": [0, 1, 0, 1],
                 "vertices": [
                   10, 0, -10,
                   -10, 0, -10,
@@ -288,9 +266,7 @@
               {
                 "attach_y": -10,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   5, 0, -10,
                   -5, 0, -10,
@@ -303,9 +279,7 @@
                 "attach_y": -10,
                 "attach_z": -5,
                 "texture": "grid.png",
-                "vertex_colors": [
-                  0, 0, 1, 1
-                ],
+                "vertex_colors": [0, 0, 1, 1],
                 "vertices": [
                   10, 0, -5,
                   -10, 0, -5,

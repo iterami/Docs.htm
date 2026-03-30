@@ -15,9 +15,7 @@
           "texture": "debug.png",
           "texture_x": 9e6,
           "texture_y": 9e6,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             9e5, 0, -9e5,
             -9e5, 0, -9e5,

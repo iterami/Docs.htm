@@ -27,9 +27,7 @@
           "texture": "grid.png",
           "texture_x": 2,
           "texture_y": 2,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             100, 0, -100,
             -100, 0, -100,

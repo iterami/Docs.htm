@@ -16,9 +16,7 @@
           "texture": "grid.png",
           "texture_x": 10,
           "texture_y": 10,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             50, 0, -50,
             -50, 0, -50,
@@ -37,9 +35,7 @@
               "todo": "entity_remove",
               "type": "function",
               "value": {
-                "entities": [
-                  "cuboid"
-                ]
+                "entities": ["cuboid"]
               }
             }
           ],
@@ -61,9 +57,7 @@
               "todo": "entity_remove",
               "type": "function",
               "value": {
-                "entities": [
-                  "delete"
-                ]
+                "entities": ["delete"]
               }
             }
           ],

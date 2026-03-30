@@ -18,9 +18,7 @@
           "texture": "grid.png",
           "texture_x": 0,
           "texture_y": 100,
-          "vertex_colors": [
-            0.5, 0.5, 0.5, 1
-          ],
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             50, 0, -50,
             -50, 0, -50,
@@ -227,9 +225,7 @@
         "all": {
           "collision": false,
           "texture": "boost.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 10,
@@ -245,9 +241,7 @@
         "all": {
           "collision": false,
           "texture": "debug.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -10,
         "position_y": 10,
@@ -263,9 +257,7 @@
         "all": {
           "collision": false,
           "texture": "default.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_y": 10,
         "size_x": 5,
@@ -280,9 +272,7 @@
         "all": {
           "collision": false,
           "texture": "door.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 10,
         "position_y": 10,
@@ -298,9 +288,7 @@
         "all": {
           "collision": false,
           "texture": "goal.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 20,
         "position_y": 10,
@@ -316,9 +304,7 @@
         "all": {
           "collision": false,
           "texture": "grid.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 10,
@@ -336,9 +322,7 @@
           "alpha": 0.999999,
           "collision": false,
           "texture": "key.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -10,
         "position_y": 10,
@@ -355,9 +339,7 @@
         "all": {
           "collision": false,
           "texture": "lavaleaf.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_y": 10,
         "position_z": -10,
@@ -373,9 +355,7 @@
         "all": {
           "collision": false,
           "texture": "stone.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 10,
         "position_y": 10,
@@ -392,9 +372,7 @@
         "all": {
           "collision": false,
           "texture": "wall.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 20,
         "position_y": 10,
@@ -411,9 +389,7 @@
         "all": {
           "collision": false,
           "texture": "wood.png",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 10,
@@ -430,9 +406,7 @@
         "all": {
           "collision": false,
           "texture": "boost.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 20,
@@ -448,9 +422,7 @@
         "all": {
           "collision": false,
           "texture": "debug.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -10,
         "position_y": 20,
@@ -466,9 +438,7 @@
         "all": {
           "collision": false,
           "texture": "default.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_y": 20,
         "size_x": 5,
@@ -483,9 +453,7 @@
         "all": {
           "collision": false,
           "texture": "door.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 10,
         "position_y": 20,
@@ -501,9 +469,7 @@
         "all": {
           "collision": false,
           "texture": "goal.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 20,
         "position_y": 20,
@@ -519,9 +485,7 @@
         "all": {
           "collision": false,
           "texture": "grid.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 20,
@@ -539,9 +503,7 @@
           "alpha": 0.999999,
           "collision": false,
           "texture": "key.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -10,
         "position_y": 20,
@@ -558,9 +520,7 @@
         "all": {
           "collision": false,
           "texture": "lavaleaf.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_y": 20,
         "position_z": -10,
@@ -576,9 +536,7 @@
         "all": {
           "collision": false,
           "texture": "stone.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 10,
         "position_y": 20,
@@ -595,9 +553,7 @@
         "all": {
           "collision": false,
           "texture": "wall.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": 20,
         "position_y": 20,
@@ -614,9 +570,7 @@
         "all": {
           "collision": false,
           "texture": "wood.png,.1",
-          "vertex_colors": [
-            1, 1, 1, 1
-          ]
+          "vertex_colors": [1, 1, 1, 1]
         },
         "position_x": -20,
         "position_y": 20,
