@@ -6,17 +6,38 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/CSS<br>
-<textarea id=css>{
+<textarea id=text_css>{
   "fontFamily": "monospace",
   "fontSize": "14px"
-}</textarea><button onclick=apply() type=button>Apply</button>
+}</textarea><button onclick=text_apply() type=button>Apply</button>
 <div id=text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ligula, dictum ut pulvinar sed, fringilla non lectus. Nunc fermentum aliquam condimentum. Aenean iaculis varius massa, vel rutrum nunc dictum eget. Sed sed ante at diam gravida luctus. Mauris tellus sapien, fringilla convallis mollis nec, tempor et velit. Morbi est odio, aliquet non interdum rutrum, facilisis egestas felis. Curabitur quis nisl et lacus congue ultricies. Sed enim justo, varius condimentum egestas quis, sodales condimentum orci. Praesent porttitor consectetur leo, ac consequat magna vulputate et. Donec non sem sem.</div>
+<hr>
+<textarea id=element_htm>&lt;button type=button&gt;Example Element&lt;/button&gt;</textarea><span id=element></span>
+<table>
+  <tr class=header>
+    <td>CSS Properties
+    <td><button onclick=element_css() type=button>Get CSS</button>
+  <tbody id=element_css>
+</table>
 
 <script>
-function apply(){
+function element_css(){
+    const element_div = document.getElementById('element');
+    element_div.innerHTML = document.getElementById('element_htm').value;
+
+    let table = '';
+    const element = element_div.firstElementChild;
+    const properties = globalThis.getComputedStyle(element);
+    for(let i = 0; i < properties.length; i++){
+        table += '<tr><td>' + properties[i] + '<td>' + properties.getPropertyValue(properties[i]);
+    }
+    document.getElementById('element_css').innerHTML = table;
+}
+
+function text_apply(){
     Object.assign(
       document.getElementById('text').style,
-      JSON.parse(document.getElementById('css').value)
+      JSON.parse(document.getElementById('text_css').value)
     );
 }
 </script>
