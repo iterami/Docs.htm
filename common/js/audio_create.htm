@@ -5,10 +5,37 @@
 <title>audio_create(audios)</title>
 <link href=../../../common/css/writings.css rel=stylesheet>
 
-<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=audio.htm>audio.js</a>/audio_start(audios)
+<a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=audio.htm>audio.js</a>/audio_create(audios)
 <ul>
-  <li>Adds duration, frequency, and type properties for an audio to "audio_audios".
-  <li>The default audio "boop" is created when the file is loaded.
+  <li>Adds an audio object to "audio_audios" with the following properties:<table id=properties>
+    <tr class=header>
+      <td>Properties
+      <td>Default
+      <td>Type
+    <tr>
+      <td>duration
+      <td>.1
+      <td>number
+    <tr>
+      <td>frequency
+      <td>100
+      <td>number
+    <tr>
+      <td>panner
+      <td>false
+      <td>boolean false or object
+    <tr>
+      <td>type
+      <td>'sine'
+      <td>string:<ul>
+        <li>'sawtooth'
+        <li>'sine'
+        <li>'square'
+        <li>'triangle'
+      </ul>
+  </table>
+  <li>A default "boop" audio is created when the file is loaded.
+  <li>Created audios can be started via <a href=audio_start.htm>audio_start(id)</a> or <a href=audio_start_at.htm>audio_start_at(args)</a>.
 </ul>
 <table>
   <tr class=header>
