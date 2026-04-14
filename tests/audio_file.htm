@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>audio_file(args) Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../common/js/audio_file.htm>audio_file(args)</a>
+<table>
+  <tr class=header>
+    <td>Args
+    <td><button id=audio_file type=button>audio_file(args)</button>
+  <tr>
+    <td>id
+    <td><input id=audio_id type=text value=cat>
+  <tr>
+    <td>path
+    <td><input id=audio_path type=text value=cat.wav>
+  <tr class=header>
+    <td>Audio ID
+    <td><button id=update type=button>Update Audios</button>
+  <tbody id=audios>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script src=../../common/js/audio.js></script>
+<script>
+function load_file(){
+    audio_file({
+      'id': document.getElementById('audio_id').value,
+      'path': document.getElementById('audio_path').value,
+    });
+
+    update_audios();
+}
+
+function repo_init(){
+    core_repo_init({
+      'events': {
+        'audio_file': {
+          'onclick': load_file,
+        },
+        'update': {
+          'onclick': update_audios,
+        },
+      },
+      'root': 'index.htm',
+      'title': 'Docs.htm',
+    });
+}
+
+function update_audios(){
+    let audios = '';
+    for(const audio in audio_audios){
+        if(!audio_audios[audio].element){
+            continue;
+        }
+
+        audios += '<tr><td>' + audio
+          + '<td><button onclick=audio_play("' + audio + '") type=button>audio_play("' + audio + '")</button>';
+    }
+    document.getElementById('audios').innerHTML = audios;
+}
+</script>
