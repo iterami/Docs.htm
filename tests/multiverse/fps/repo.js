@@ -231,6 +231,8 @@ function new_game(){
 }
 
 function repo_escape(){
+    audio_state_all(!core_menu_open);
+
     if(webgl === 0
       && !core_menu_open){
         new_game();

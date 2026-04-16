@@ -223,6 +223,8 @@ function new_game(){
 }
 
 function repo_escape(){
+    audio_state_all(!core_menu_open);
+
     core_elements.repo_ui.style.display = 'inline';
 }
 
