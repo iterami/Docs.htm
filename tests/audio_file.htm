@@ -34,6 +34,13 @@ function load_file(){
     update();
 }
 
+function play_audio(id, music){
+    audio_play({
+      'id': id,
+      'loop': music,
+    });
+}
+
 function repo_escape(){
     audio_state_all(!core_menu_open);
 }
@@ -61,8 +68,8 @@ function update(){
         }
 
         audios += '<tr><td>' + audio
-          + '<td><button onclick=audio_play("' + audio + '") type=button>Play</button>'
-          + '<button onclick=audio_play("' + audio + '",true) type=button>Music</button>'
+          + '<td><button onclick=play_audio("' + audio + '") type=button>Play</button>'
+          + '<button onclick=play_audio("' + audio + '",true) type=button>Music</button>'
           + '<button onclick=audio_state("' + audio + '",false) type=button>Stop</button>';
     }
     document.getElementById('audios').innerHTML = audios;
