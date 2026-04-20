@@ -5,26 +5,23 @@
 <title>iterami Script Standards</title>
 <link href=../../common/css/writings.css rel=stylesheet>
 
-<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Standards/Script
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/Script Standards
 <ul>
-  <li>All scripts should start with:<ul>
-    <li>The shebang should always be the 1st line.
+  <li>All scripts should start with a shebang, followed by:<ul>
     <li>set -eux
-    <li>Args must be listed in a comment, with example usage.<ul>
-      <li>If no args, display "# No args.".
-    </ul>
+    <li>Args must be listed in a comment, with example usage, or "# No args.".
   </ul>
-  <li>Exit codes should use the following values:<table class=center>
-    <tr class=header>
-      <td>Exit Code
-      <td>Notes
-    <tr>
-      <td>0
-      <td>Success
-    <tr>
-      <td>1
-      <td>Error
-  </table>
   <li>Repos cloned via the "git clone" command must end with the ".git" suffix.
   </ul>
 </ul>
+<table class=center>
+  <tr class=header>
+    <td>Exit Code
+    <td>Notes
+  <tr>
+    <td>0
+    <td>Success
+  <tr>
+    <td>1
+    <td>Error
+</table>
