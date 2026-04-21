@@ -1,0 +1,77 @@
+{
+  "title": "Scale Test",
+  "spawn": {
+    "position_y": 5
+  },
+  "characters": [
+    {
+      "id": "test_scale",
+      "base": true,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "lavaleaf.png",
+          "vertex_colors": [0, 0.5, 0, 1],
+          "vertices": [
+            999, 0, -999,
+            -999, 0, -999,
+            -999, 0, 999,
+            999, 0, 999
+          ]
+        },
+        {
+          "id": "pitch-x1",
+          "attach_y": 0.1,
+          "collision": false,
+          "vertex_colors": [0, 0.3, 0, 1],
+          "vertices": [
+            34, 0, -52.5,
+            -34, 0, -52.5,
+            -34, 0, 52.5,
+            34, 0, 52.5
+          ]
+        },
+        {
+          "id": "pitch-x2",
+          "attach_x": -128,
+          "attach_y": 0.1,
+          "collision": false,
+          "vertex_colors": [0, 0.3, 0, 1],
+          "vertices": [
+            68, 0, -105,
+            -68, 0, -105,
+            -68, 0, 105,
+            68, 0, 105
+          ]
+        },
+        {
+          "id": "pitch-x4",
+          "attach_x": -356,
+          "attach_y": 0.1,
+          "collision": false,
+          "vertex_colors": [0, 0.3, 0, 1],
+          "vertices": [
+            136, 0, -210,
+            -136, 0, -210,
+            -136, 0, 210,
+            136, 0, 210
+          ]
+        },
+        {
+          "id": "pitch-x8",
+          "attach_x": 356,
+          "attach_y": 0.1,
+          "collision": false,
+          "vertex_colors": [0, 0.3, 0, 1],
+          "vertices": [
+            272, 0, -420,
+            -272, 0, -420,
+            -272, 0, 420,
+            272, 0, 420
+          ]
+        }
+      ]
+    }
+  ]
+}
