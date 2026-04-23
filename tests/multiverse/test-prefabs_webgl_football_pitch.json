@@ -36,9 +36,10 @@
       "properties": {
         "prefix": "colors",
         "attach_z": 96,
+        "goal_color": [1, 0, 0, 1],
         "grass_color": [0.5, 0.5, 0, 1],
         "line_color": [0.5, 0, 0.5, 1],
-        "line_width": 6
+        "line_width": 2
       }
     },
     {
@@ -46,8 +47,14 @@
       "properties": {
         "prefix": "resized",
         "attach_x": 128,
-        "penalty_length": 40,
-        "penalty_width": 25,
+        "circle_radius": 4,
+        "goal_height": 55,
+        "goal_width": 2,
+        "goalbox_length": 35,
+        "goalbox_width": 4,
+        "line_width": 1,
+        "penaltybox_length": 40,
+        "penaltybox_width": 25,
         "pitch_length": 100,
         "pitch_width": 100
       }
@@ -72,8 +79,14 @@
       "type": "prefabs_webgl_football_pitch",
       "properties": {
         "attach_z": 356,
-        "penalty_length": 10,
-        "penalty_width": 100,
+        "circle_radius": 16,
+        "goal_height": 1,
+        "goal_width": 75,
+        "goalbox_length": 3,
+        "goalbox_width": 80,
+        "line_width": 1,
+        "penaltybox_length": 10,
+        "penaltybox_width": 100,
         "pitch_length": 50,
         "pitch_width": 200,
         "prefix": "together",
