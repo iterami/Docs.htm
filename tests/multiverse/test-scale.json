@@ -11,6 +11,7 @@
       "entities": [
         {
           "id": "base",
+          "attach_y": -0.1,
           "texture": "lavaleaf.png",
           "vertex_colors": [0, 0.5, 0, 1],
           "vertices": [
@@ -19,59 +20,43 @@
             -999, 0, 999,
             999, 0, 999
           ]
-        },
-        {
-          "id": "pitch-x1",
-          "attach_y": 0.1,
-          "collision": false,
-          "vertex_colors": [0, 0.3, 0, 1],
-          "vertices": [
-            34, 0, -52.5,
-            -34, 0, -52.5,
-            -34, 0, 52.5,
-            34, 0, 52.5
-          ]
-        },
-        {
-          "id": "pitch-x2",
-          "attach_x": -128,
-          "attach_y": 0.1,
-          "collision": false,
-          "vertex_colors": [0, 0.3, 0, 1],
-          "vertices": [
-            68, 0, -105,
-            -68, 0, -105,
-            -68, 0, 105,
-            68, 0, 105
-          ]
-        },
-        {
-          "id": "pitch-x4",
-          "attach_x": -356,
-          "attach_y": 0.1,
-          "collision": false,
-          "vertex_colors": [0, 0.3, 0, 1],
-          "vertices": [
-            136, 0, -210,
-            -136, 0, -210,
-            -136, 0, 210,
-            136, 0, 210
-          ]
-        },
-        {
-          "id": "pitch-x8",
-          "attach_x": 356,
-          "attach_y": 0.1,
-          "collision": false,
-          "vertex_colors": [0, 0.3, 0, 1],
-          "vertices": [
-            272, 0, -420,
-            -272, 0, -420,
-            -272, 0, 420,
-            272, 0, 420
-          ]
         }
       ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "pitch_x1"
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "pitch_x2",
+        "attach_x": -128,
+        "rotate_y": 90,
+        "scaling": 2
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "pitch_x4",
+        "attach_x": -356,
+        "rotate_y": 90,
+        "scaling": 4
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "pitch_x8",
+        "attach_x": 356,
+        "rotate_y": 90,
+        "scaling": 8
+      }
     }
   ]
 }

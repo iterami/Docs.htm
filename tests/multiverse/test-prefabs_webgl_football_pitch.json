@@ -1,0 +1,85 @@
+{
+  "title": "Football Pitch Prefab Test",
+  "spawn": {
+    "position_y": 5
+  },
+  "characters": [
+    {
+      "id": "test_football_pitch",
+      "base": true,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "ground",
+          "attach_y": -0.1,
+          "texture": "lavaleaf.png",
+          "vertex_colors": [0, 0.5, 0, 1],
+          "vertices": [
+            999, 0, -999,
+            -999, 0, -999,
+            -999, 0, 999,
+            999, 0, 999
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "default"
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "colors",
+        "attach_z": 96,
+        "grass_color": [0.5, 0.5, 0, 1],
+        "line_color": [0.5, 0, 0.5, 1],
+        "line_width": 6
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "resized",
+        "attach_x": 128,
+        "penalty_length": 40,
+        "penalty_width": 25,
+        "pitch_length": 100,
+        "pitch_width": 100
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "rotated",
+        "attach_x": -128,
+        "rotate_y": 90
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "prefix": "scaled",
+        "attach_z": -356,
+        "scaling": 8
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
+        "attach_z": 356,
+        "penalty_length": 10,
+        "penalty_width": 100,
+        "pitch_length": 50,
+        "pitch_width": 200,
+        "prefix": "together",
+        "rotate_y": 90,
+        "scaling": 8
+      }
+    }
+  ]
+}
