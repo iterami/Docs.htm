@@ -1,0 +1,14 @@
+{
+  "background_color": "#000",
+  "categories": ["education"],
+  "description": "This is the description of the Progressive Web App Test.",
+  "display": "fullscreen",
+  "icons": [],
+  "id": "index.htm?v1",
+  "name": "Progressive Web App Test",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "short_name": "PWATest",
+  "start_url": "index.htm",
+  "theme_color": "#000"
+}
