@@ -7,8 +7,8 @@ function handle_activate(event){
           keys.map(key => (key === id
             ? Promise.resolve()
             : caches.delete(key))
-        )
-        .then(() => self.clients.claim())
+          )
+        ).then(() => self.clients.claim())
     );
 }
 
