@@ -19,7 +19,7 @@ function handle_fetch(event){
             if(event.request.mode === 'navigation'){
                 return caches.match('index.htm');
             }
-        });
+        })
       )
     );
 }
