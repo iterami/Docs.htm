@@ -8,7 +8,7 @@ function handle_activate(event){
             ? Promise.resolve()
             : caches.delete(key))
           )
-        ).then(() => self.clients.claim())
+        )).then(() => self.clients.claim())
     );
 }
 
