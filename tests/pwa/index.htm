@@ -9,7 +9,24 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../index.htm>Tests</a>/Progressive Web App
 <ul>
   <li><a href=manifest.json>manifest.json</a>
-  <li><a href=service_worker.js>service_worker.js</a>
+  <li><a href=service_worker.js>service_worker.js</a>: <span id=service_worker_status>Not Registered</span>
 </ul>
 
-<script src=service_worker.js></script>
+<script>
+globalThis.onload = function(){
+    const element = document.getElementById('service_worker_status');
+
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('service_worker.js')
+          .then(status => {
+              element.textContent = 'Registered!';
+
+          }).catch(error => {
+              element.textContent = error;
+          });
+
+    }else{
+        element.textContent = 'Not Supported';
+    }
+};
+</script>
