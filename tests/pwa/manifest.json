@@ -1,8 +1,12 @@
 {
   "background_color": "#000",
-  "categories": ["education"],
+  "categories": [
+    "education"
+  ],
   "description": "This is the description of the Progressive Web App Test.",
   "display": "standalone",
+  "display_override": [],
+  "file_handlers": [],
   "icons": [
     {
       "sizes": "192x192",
@@ -16,11 +20,20 @@
     }
   ],
   "id": "index.htm?v1",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
   "name": "Progressive Web App Test",
+  "note_taking": {},
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
+  "protocol_handlers": [],
+  "related_applications": [],
   "scope": "/Docs.htm/tests/pwa/",
+  "scope_extension": [],
+  "screenshots": [],
   "short_name": "PWATest",
+  "shortcuts": [],
   "start_url": "index.htm",
   "theme_color": "#000"
 }
