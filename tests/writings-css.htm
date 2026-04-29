@@ -6,10 +6,10 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../../common/css/writings.css>writings.css</a>
-<div id=custom-test></div>
-<table class=tables-nosort>
+<div id=custom_test></div>
+<table class=tables-nosort id=table>
   <tr class=header>
-    <td>Type
+    <td>Types <button onclick=toggle_align() type=button>Toggle Align</button>
     <td><button onclick=clear_elements() type=button>Clear</button> Elements
   <tr>
     <td><button onclick=add_element(this) type=button>Newline</button>
@@ -18,14 +18,14 @@
     <td><button onclick=add_element(this) type=button>Space</button>
     <td>&nbsp;
   <tr>
+    <td><button onclick=add_element(this) type=button>Button</button>
+    <td><button type=button>Example<br>Button</button>
+  <tr>
     <td><button onclick=add_element(this) type=button>Code</button>
     <td>
 <code>function example(args){
     // Example code.
 }</code>
-  <tr>
-    <td><button onclick=add_element(this) type=button>Button</button>
-    <td><button type=button>Example<br>Button</button>
   <tr>
     <td><button onclick=add_element(this) type=button>Input type=number Any</button>
     <td><input step=any type=number value=123.456>
@@ -204,10 +204,10 @@
     <td><textarea readonly>Textarea Readonly</textarea>
   <tr>
     <td><button onclick=add_element(this) type=button>Text Aligned Center</button>
-    <td><div class=center>Center</div>
+    <td class=right><div class=center>Center</div>
   <tr>
     <td><button onclick=add_element(this) type=button>Text Aligned Right</button>
-    <td><div class=right>Right</div>
+    <td class=center><div class=right>Right</div>
   <tr>
     <td><button onclick=add_element(this) type=button>Text Default</button>
     <td>Default
@@ -215,15 +215,21 @@
 
 <script>
 function add_element(element){
-    document.getElementById('custom-test').innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+    custom_test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
 }
 
 function clear_elements(){
-    const elements = document.getElementById('custom-test');
-    while(elements.firstChild){
-        elements.removeChild(elements.firstChild);
+    while(custom_test.firstChild){
+        custom_test.removeChild(custom_test.firstChild);
     }
 }
+
+function toggle_align(){
+    table.classList.toggle('center');
+}
+
+const custom_test = document.getElementById('custom_test');
+const table = document.getElementById('table');
 </script>
 
 <script src=../../common/js/tables.js></script>
