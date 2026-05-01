@@ -81,19 +81,22 @@
     {
       "type": "prefabs_webgl_football_pitch",
       "properties": {
+        "prefix": "together",
         "attach_z": 356,
         "circle_radius": 16,
+        "goal_color": [1, 1, 0, 1],
         "goal_height": 1,
         "goal_width": 75,
         "goalbox_length": 3,
         "goalbox_width": 80,
+        "grass_color": [0, 0, 0.3, 1],
+        "line_color": [0, 0.3, 0, 1],
         "line_width": 1,
         "penalty_distance": 13,
         "penaltybox_length": 10,
         "penaltybox_width": 100,
         "pitch_length": 50,
         "pitch_width": 200,
-        "prefix": "together",
         "rotate_y": 90,
         "scaling": 8,
         "spot_radius": 2
