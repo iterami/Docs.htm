@@ -9,6 +9,7 @@
 <ul>
   <li>Creates a football pitch prefab with the specified properties.
   <li>Position is the center of the field on the grass.
+  <li>The "line_height" arg is the height at which lines are drawn above the grass. It is not scaled and helps reduce z-fighting when viewed from far away.
   <li>Args will be used in entity creation after being cleaned up by <a href=../webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
 </ul>
 <table>
@@ -55,6 +56,10 @@
   <tr>
     <td>line_color
     <td>[1, 1, 1, 1]
+    <td>number
+  <tr>
+    <td>line_height
+    <td>.03
     <td>number
   <tr>
     <td>line_width
