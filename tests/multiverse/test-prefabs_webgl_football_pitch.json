@@ -39,7 +39,8 @@
         "goal_color": [1, 0, 0, 1],
         "grass_color": [0.5, 0.5, 0, 1],
         "line_color": [0.5, 0, 0.5, 1],
-        "line_width": 2
+        "line_width": 2,
+        "spot_radius": 2
       }
     },
     {
@@ -47,16 +48,18 @@
       "properties": {
         "prefix": "resized",
         "attach_x": 128,
-        "circle_radius": 4,
+        "circle_radius": 5,
         "goal_height": 55,
         "goal_width": 2,
-        "goalbox_length": 35,
+        "goalbox_length": 33,
         "goalbox_width": 4,
         "line_width": 1,
+        "penalty_distance": 36,
         "penaltybox_length": 40,
         "penaltybox_width": 25,
         "pitch_length": 100,
-        "pitch_width": 100
+        "pitch_width": 100,
+        "spot_radius": 2
       }
     },
     {
@@ -85,13 +88,15 @@
         "goalbox_length": 3,
         "goalbox_width": 80,
         "line_width": 1,
+        "penalty_distance": 13,
         "penaltybox_length": 10,
         "penaltybox_width": 100,
         "pitch_length": 50,
         "pitch_width": 200,
         "prefix": "together",
         "rotate_y": 90,
-        "scaling": 8
+        "scaling": 8,
+        "spot_radius": 2
       }
     }
   ]
