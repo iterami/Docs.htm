@@ -9,8 +9,8 @@
 <div id=custom_test></div>
 <table class=tables-nosort id=table>
   <tr class=header>
-    <td>Types <button onclick=toggle_align() type=button>Toggle Align</button>
-    <td><button onclick=clear_elements() type=button>Clear</button> Elements
+    <td><button onclick=toggle_align() type=button>Toggle Align</button>
+    <td>&lt;ol start=<input class=mini id=ol_start oninput=update_ol_start() step=1 value=1 type=number>&gt; <button onclick=clear_elements() type=button>Clear Elements</button>
   <tr>
     <td><button onclick=add_element(this) type=button>Newline</button>
     <td><br>
@@ -228,7 +228,19 @@ function toggle_align(){
     table.classList.toggle('center');
 }
 
+function update_ol_start(){
+    const start = ol_start.value.length === 0
+      ? 1
+      : Math.floor(ol_start.value);
+
+    const elements = document.querySelectorAll('ol');
+    for(const element of elements){
+        element.start = start;
+    }
+}
+
 const custom_test = document.getElementById('custom_test');
+const ol_start = document.getElementById('ol_start');
 const table = document.getElementById('table');
 </script>
 
