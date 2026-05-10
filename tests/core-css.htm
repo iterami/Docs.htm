@@ -6,7 +6,7 @@
 <link href=../../common/css/core.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../../common/css/core.css>core.css</a>
-<div id=custom_test></div>
+<div id=test></div>
 <table class=tables-nosort id=table>
   <tr class=header>
     <td><button onclick=toggle_align() type=button>Toggle Align</button>
@@ -215,11 +215,11 @@
 <script src=../../common/js/tables.js></script>
 <script>
 function add_element(element){
-    core_elements.custom_test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+    core_elements.test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
 }
 
 function clear_elements(){
-    const element = core_elements.custom_test;
+    const element = core_elements.test;
     while(element.firstChild){
         element.removeChild(element.firstChild);
     }
@@ -230,8 +230,8 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
-        'custom_test',
         'table',
+        'test',
       ],
     });
 }

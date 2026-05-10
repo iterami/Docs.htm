@@ -6,11 +6,11 @@
 <link href=../../common/css/writings.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../../common/index.htm>common</a>/<a href=../../common/css/writings.css>writings.css</a>
-<div id=custom_test></div>
+<div id=test></div>
 <table class=tables-nosort id=table>
   <tr class=header>
-    <td><button onclick=toggle_align() type=button>Toggle Align</button>
-    <td>&lt;ol start=<input class=mini id=ol_start oninput=update_ol_start() step=1 value=1 type=number>&gt; <button onclick=clear_elements() type=button>Clear Elements</button>
+    <td><button onclick=toggle_align() type=button>Toggle Align</button> <a href=#table>table</a>, <a href=#test>test</a>
+    <td><a href=#ol_start>ol start</a><input class=mini id=ol_start oninput=update_ol_start() step=1 value=1 type=number> <button onclick=clear_elements() type=button>Clear Elements</button>
   <tr>
     <td><button onclick=add_element(this) type=button>Newline</button>
     <td><br>
@@ -255,12 +255,12 @@
 
 <script>
 function add_element(element){
-    custom_test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+    test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
 }
 
 function clear_elements(){
-    while(custom_test.firstChild){
-        custom_test.removeChild(custom_test.firstChild);
+    while(test.firstChild){
+        test.removeChild(test.firstChild);
     }
 }
 
@@ -279,9 +279,9 @@ function update_ol_start(){
     }
 }
 
-const custom_test = document.getElementById('custom_test');
 const ol_start = document.getElementById('ol_start');
 const table = document.getElementById('table');
+const test = document.getElementById('test');
 </script>
 
 <script src=../../common/js/tables.js></script>
