@@ -57,7 +57,9 @@ function repo_init(){
         'fps_draw': 0,
         'fps_draw_time': 0,
         'fps_logic': 0,
+        'pie': Math.PI * 2,
         'rotation': 0,
+        'slice': Math.PI / 180,
       },
       'pointerbinds': {
         'contextmenu': {},
@@ -88,8 +90,8 @@ function repo_init(){
 }
 
 function repo_logic(){
-    rotation += Math.PI / 180;
-    if(rotation >= Math.PI * 2){
+    rotation += slice;
+    if(rotation >= pie){
         rotation = 0;
     }
 
