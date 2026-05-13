@@ -1,5 +1,12 @@
 'use strict';
 
+function debug_drawloop(){
+    webgl_draw();
+    core_interval_animationFrame('webgl_drawloop');
+    fps_draw = Math.trunc(1000 / (new Date().getTime() - fps_draw_time));
+    fps_draw_time = new Date().getTime();
+}
+
 function debug_pick_color({
   x,
   y,
@@ -256,11 +263,15 @@ function repo_init(){
       },
       'root': '../../webgl-standalone.htm',
       'storage': {
-        'debug_picking': true,
+        'color': true,
+        'color_debug': true,
+        'entity': true,
+        'entity_debug': true,
         'pointerlock': true,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input id=debug_picking type=checkbox><td><label for=debug_picking>Debug Picking</label>'
+      'storage_menu': '<table><tr><td><input id=color type=checkbox><td><label for=color>Color Picking,</label> <label>Debug<input id=color_debug type=checkbox></label>'
+        + '<tr><td><input id=entity type=checkbox><td><label for=enityt>Entity Picking,</label> <label>Debug<input id=entity_debug type=checkbox></label>'
         + '<tr><td><input id=pointerlock type=checkbox><td><label for=pointerlock>Pointerlock</label></table>',
       'title': 'Docs.htm',
       'ui': '<span id=picked></span> <span id=color></span><br>Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><br><div id=debug_color></div><div id=debug_entity></div><div id=xyz></div><div id=debug_catch></div>',
@@ -268,13 +279,7 @@ function repo_init(){
         'debug_result',
       ],
     });
-    globalThis.webgl_drawloop = function(){
-        webgl_draw();
-        core_interval_animationFrame('webgl_drawloop');
-        fps_draw = Math.trunc(1000 / (new Date().getTime() - fps_draw_time));
-        fps_draw_time = new Date().getTime();
-    };
-
+    globalThis.webgl_drawloop = debug_drawloop;
     new_game();
 }
 
@@ -284,35 +289,48 @@ function repo_logic(){
     let debug_color = '';
     let debug_entity = '';
     let picked = '';
-    const x = webgl_properties.pointerlock ? Math.floor(globalThis.innerWidth / 2) : core_pointer.x;
-    const y = webgl_properties.pointerlock ? Math.floor(globalThis.innerHeight / 2) : core_pointer.y;
 
     webgl_draw();
-    if(core_storage_data.debug_picking){
-        try{
-            const pick_color = debug_pick_color({
+    if(core_storage_data.color){
+        const x = webgl_properties.pointerlock ? globalThis.innerWidth / 2 : core_pointer.x;
+        const y = webgl_properties.pointerlock ? globalThis.innerHeight / 2 : core_pointer.y;
+
+        if(core_storage_data.color_debug){
+            try{
+                const pick_color = debug_pick_color({
+                  'x': x,
+                  'y': y,
+                });
+                color = pick_color.pixelarray;
+                debug_color = 'Color: x' + pick_color.x + ' y' + pick_color.y + ' ' + color;
+
+            }catch(error){
+                debug_catch += error;
+            }
+
+        }else{
+            color = webgl_pick_color({
               'x': x,
               'y': y,
             });
-            color = pick_color.pixelarray;
-            const pick_entity = debug_pick_entity(true);
-            picked = pick_entity.picked;
-
-            debug_color = 'Color: x' + pick_color.x + ' y' + pick_color.y + ' ' + color;
-            debug_entity = 'Entity: x' + pick_entity.x + ' y' + pick_entity.y + ' ' + pick_entity.color;
-            debug_catch = 'Picking Debug try/catch OK';
-
-        }catch(error){
-            debug_catch = error;
         }
-
-    }else{
-        color = webgl_pick_color({
-          'x': x,
-          'y': y,
-        });
-        picked = webgl_pick_entity(true);
     }
+    if(core_storage_data.entity){
+        if(core_storage_data.entity_debug){
+            try{
+                const pick_entity = debug_pick_entity(true);
+                picked = pick_entity.picked;
+                debug_entity = 'Entity: x' + pick_entity.x + ' y' + pick_entity.y + ' ' + pick_entity.color;
+
+            }catch(error){
+                debug_catch += error;
+            }
+
+        }else{
+            picked = webgl_pick_entity(true);
+        }
+    }
+
     core_ui_update({
       'ids': {
         'color': color,
@@ -321,9 +339,7 @@ function repo_logic(){
         'debug_entity': debug_entity,
         'fps_draw': fps_draw,
         'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
-        'picked': picked
-          ? picked.id
-          : 'false',
+        'picked': JSON.stringify(picked ? picked.id : false),
         'xyz': 'x' + webgl_picked_x + ' y' + webgl_picked_y + ' z' + webgl_picked_z,
       },
     });
