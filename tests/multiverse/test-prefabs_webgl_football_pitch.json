@@ -75,6 +75,17 @@
     {
       "type": "prefabs_webgl_football_pitch",
       "properties": {
+        "prefix": "rotating",
+        "attach_x": -256,
+        "attach_y": 50,
+        "change_rotate_x": 1,
+        "change_rotate_y": 1,
+        "change_rotate_z": 1
+      }
+    },
+    {
+      "type": "prefabs_webgl_football_pitch",
+      "properties": {
         "prefix": "scaled",
         "attach_z": -356,
         "scaling": 8
