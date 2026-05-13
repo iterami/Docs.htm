@@ -4,7 +4,7 @@ function load_test(){
     webgl_level_load({
       'character': 0,
       'json': {
-        'picking': 1,
+        'picking': 2,
         'spawn': {
           'position_y': 5,
           'position_z': 25,
@@ -142,7 +142,7 @@ function repo_init(){
           },
         },
         'pointerup': {
-          'todo': webgl_pick_entity,
+          'todo': webgl_pick,
         },
       },
       'root': '../../webgl-standalone.htm',

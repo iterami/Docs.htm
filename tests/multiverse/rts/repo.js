@@ -26,6 +26,7 @@ function build({
 
     placeholder_hide();
 
+    /*
     let x = webgl_picked_x;
     let y = webgl_picked_y;
     let z = webgl_picked_z;
@@ -52,6 +53,7 @@ function build({
     });
     selected.making = making;
     selected.time = properties.time;
+    */
 
     update_ui();
 }
@@ -98,7 +100,8 @@ function handle_picking(event){
         return;
     }
 
-    const entity = webgl_pick_entity();
+    /*
+    const entity = webgl_pick();
     if(core_pointer.down_0){
         select(entity.team ? entity.id : '');
 
@@ -137,6 +140,7 @@ function handle_picking(event){
             attack(entity);
         }
     }
+    */
 }
 
 function level_placeholders(){
@@ -297,9 +301,11 @@ function make({
 }
 
 function move(entity){
+    /*
     entity.destination_x = webgl_picked_x;
     entity.destination_y = webgl_picked_y;
     entity.destination_z = webgl_picked_z;
+    */
 }
 
 function new_game(){
@@ -554,9 +560,11 @@ function repo_logic(){
     }
     if(build_placeholder.length){
         const placeholder = webgl_characters._rts_placeholder_build;
+        /*
         placeholder.position_x = webgl_picked_x;
         placeholder.position_y = webgl_picked_y;
         placeholder.position_z = webgl_picked_z;
+        */
     }
 
     for(const id in entity_entities){

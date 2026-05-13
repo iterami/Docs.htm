@@ -172,7 +172,7 @@ function repo_init(){
       'pointerbinds': {
         'contextmenu': {},
         'pointerup': {
-          'todo': webgl_pick_entity,
+          'todo': webgl_pick,
         },
       },
       'root': '../../webgl-standalone.htm',
