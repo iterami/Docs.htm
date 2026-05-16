@@ -7,14 +7,94 @@ function debug_drawloop(){
     fps_draw_time = new Date().getTime();
 }
 
+function debug_pick(cursor){
+    if(core_menu_open
+      || webgl_properties.picking < 1){
+        return;
+    }
+
+    const character = webgl_characters[webgl_character_id];
+    if(character.life <= 0){
+        return;
+    }
+
+    const level = webgl_character_level(character);
+    if(level < -1 || (level >= 0 && webgl_properties.paused)){
+        return;
+    }
+
+    let pixelbuffer = false;
+    if(cursor === true){
+        for(let i = 0; i < 2; i++){
+            if(webgl_pixelbuffers[i].sync === null){
+                pixelbuffer = webgl_pixelbuffers[i];
+                break;
+            }
+        }
+
+    }else{
+        for(let i = 2; i < 4; i++){
+            if(webgl_pixelbuffers[i].sync === null){
+                pixelbuffer = webgl_pixelbuffers[i];
+                break;
+            }
+        }
+    }
+    if(!pixelbuffer){
+        return;
+    }
+
+    const x = webgl_properties.pointerlock ? globalThis.innerWidth / 2 : core_pointer.x;
+    const y = webgl_properties.pointerlock ? globalThis.innerHeight / 2 : core_pointer.y;
+
+    webgl_shader_use('picking');
+    webgl_scissor({
+      'todo': function(){
+          webgl_draw_picking();
+
+          webgl.bindBuffer(webgl.PIXEL_PACK_BUFFER, pixelbuffer.buffer);
+          webgl.bufferData(webgl.PIXEL_PACK_BUFFER, 3, webgl.STREAM_READ);
+
+          webgl.readPixels(
+            x,
+            webgl.drawingBufferHeight - y,
+            1,
+            1,
+            webgl.RGB,
+            webgl.UNSIGNED_BYTE,
+            0
+          );
+          pixelbuffer.sync = webgl.fenceSync(webgl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+          pixelbuffer.cursor = cursor === true;
+          pixelbuffer.x = x;
+          pixelbuffer.y = y;
+
+          webgl.flush();
+          webgl.bindBuffer(webgl.PIXEL_PACK_BUFFER, null);
+      },
+      'x': x,
+      'y': y,
+    });
+    webgl_shader_use('default');
+
+    const clear_color = webgl_properties.clear_color;
+    webgl.clearColor(
+      clear_color[0],
+      clear_color[1],
+      clear_color[2],
+      1
+    );
+    webgl_draw();
+}
+
 function new_game(){
     webgl_level_load({
       'character': 0,
       'json': {
         'clear_color': [0, .2, 0],
-        'picking': 2,
+        'picking': core_storage_data.picking,
         'pointerlock': core_storage_data.pointerlock,
-        'reticle': true,
+        'reticle': core_storage_data.pointerreticle,
         'characters': [
           {
             'id': 'test_instant',
@@ -46,7 +126,7 @@ function new_game(){
               },
               {
                 'id': 'rotate',
-                'attach_y': 10,
+                'attach_y': 12,
                 'attach_z': -40,
                 'change_rotate_y': 1,
                 'event_todo': [
@@ -72,16 +152,11 @@ function new_game(){
       },
     });
     webgl_character_init({
-      'collide_bottom': 8,
-      'collide_top': 2,
       'collides': true,
       'controls': 'rpg',
       'level': -1,
       'spawn': {
-        'camera_rotate_x': 30,
-        'position_x': 0,
         'position_y': 6,
-        'position_z': 0,
       },
     });
 }
@@ -102,11 +177,17 @@ function repo_init(){
             }
         },
       },
+      'events': {
+        'new_game': {
+          'onclick': new_game,
+        },
+      },
       'globals': {
         'fps_draw': 0,
         'fps_draw_time': 0,
         'fps_logic': 0,
       },
+      'info': '<button class=medium id=new_game type=button>Restart</button>',
       'pointerbinds': {
         'contextmenu': {},
         'pointermove': {
@@ -120,10 +201,15 @@ function repo_init(){
       },
       'root': '../../webgl-standalone.htm',
       'storage': {
+        'debug_cursor': true,
+        'debug_pick': true,
+        'picking': 1,
         'pointerlock': true,
+        'pointerreticle': true,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input id=pointerlock type=checkbox><td><label for=pointerlock>Pointerlock</label></table>',
+      'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox>Debug</label> <label><input id=debug_cursor type=checkbox>Cursor</label>'
+        + '<tr><td><label><input id=pointerlock type=checkbox>Pointerlock</label><td><label><input id=pointerreticle type=checkbox>Reticle</label></table>',
       'title': 'Docs.htm',
       'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span>',
     });
@@ -132,6 +218,10 @@ function repo_init(){
 }
 
 function repo_logic(){
+    if(core_storage_data.debug_pick){
+        debug_pick(core_storage_data.debug_cursor);
+    }
+
     core_ui_update({
       'ids': {
         'fps_draw': fps_draw,
