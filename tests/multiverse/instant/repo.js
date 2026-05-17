@@ -89,7 +89,14 @@ function debug_pick(cursor){
 
 function new_game(){
     webgl_level_load({
-      'character': 0,
+      'character': {
+        'collides': true,
+        'controls': 'rpg',
+        'level': -1,
+        'spawn': {
+          'position_y': 6,
+        },
+      },
       'json': {
         'clear_color': [0, .2, 0],
         'picking': core_storage_data.picking,
@@ -129,6 +136,7 @@ function new_game(){
                 'attach_y': 12,
                 'attach_z': -40,
                 'change_rotate_y': 1,
+                'collision': false,
                 'event_todo': [
                   {
                     'stat': 'vertex_colors',
@@ -149,14 +157,6 @@ function new_game(){
             ],
           },
         ],
-      },
-    });
-    webgl_character_init({
-      'collides': true,
-      'controls': 'rpg',
-      'level': -1,
-      'spawn': {
-        'position_y': 6,
       },
     });
 }
@@ -195,8 +195,23 @@ function repo_init(){
               webgl_controls_pointer();
           },
         },
-        'pointerup': {
+        'pointerdown': {
           'todo': webgl_pick,
+        },
+        'pointerup': {
+          'todo': function(){
+              const pixelbuffer = webgl_pick_entity({
+                'start': 2,
+              });
+
+              core_ui_update({
+                'ids': {
+                  'picked_click': 'Picked by click: ' + (pixelbuffer === false
+                    ? false
+                    : pixelbuffer?.picked?.id),
+                },
+              });
+          },
         },
       },
       'root': '../../webgl-standalone.htm',
@@ -211,7 +226,7 @@ function repo_init(){
       'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox>Debug</label> <label><input id=debug_cursor type=checkbox>Cursor</label>'
         + '<tr><td><label><input id=pointerlock type=checkbox>Pointerlock</label><td><label><input id=pointerreticle type=checkbox>Reticle</label></table>',
       'title': 'Docs.htm',
-      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span>',
+      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div>',
     });
     globalThis.webgl_drawloop = debug_drawloop;
     new_game();
@@ -222,11 +237,30 @@ function repo_logic(){
         debug_pick(core_storage_data.debug_cursor);
     }
 
+    let pixelbuffers = '';
+    for(const id in webgl_pixelbuffers){
+        const pixelbuffer = webgl_pixelbuffers[id];
+        const sync = pixelbuffer.sync !== null;
+        pixelbuffers += id + ': ' + sync + ', ' + pixelbuffer.picked?.id + '<br>';
+    }
+    const pixelbuffers_all = webgl_pick_entity();
+    const pixelbuffers_01 = webgl_pick_entity({
+      'end': 1,
+    });
+    const pixelbuffers_23 = webgl_pick_entity({
+      'start': 2,
+    });
+
     core_ui_update({
       'ids': {
+        'entities': 'all: ' + (pixelbuffers_all === false ? false : pixelbuffers_all?.picked?.id)
+          + '<br>0-1: ' + (pixelbuffers_01 === false ? false : pixelbuffers_01?.picked?.id)
+          + '<br>2-3: ' + (pixelbuffers_23 === false ? false : pixelbuffers_23?.picked?.id),
         'fps_draw': fps_draw,
         'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
+        'pixelbuffers': pixelbuffers,
       },
+      'todo': 'innerHTML',
     });
     fps_logic = new Date().getTime();
 }
