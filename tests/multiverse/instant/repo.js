@@ -8,18 +8,7 @@ function debug_drawloop(){
 }
 
 function debug_pick(cursor){
-    if(core_menu_open
-      || webgl_properties.picking < 1){
-        return;
-    }
-
-    const character = webgl_characters[webgl_character_id];
-    if(character.life <= 0){
-        return;
-    }
-
-    const level = webgl_character_level(character);
-    if(level < -1 || (level >= 0 && webgl_properties.paused)){
+    if(!webgl_pick_check()){
         return;
     }
 
@@ -53,14 +42,14 @@ function debug_pick(cursor){
           webgl_draw_picking();
 
           webgl.bindBuffer(webgl.PIXEL_PACK_BUFFER, pixelbuffer.buffer);
-          webgl.bufferData(webgl.PIXEL_PACK_BUFFER, 3, webgl.STREAM_READ);
+          webgl.bufferData(webgl.PIXEL_PACK_BUFFER, 4, webgl.STREAM_READ);
 
           webgl.readPixels(
             x,
             webgl.drawingBufferHeight - y,
             1,
             1,
-            webgl.RGB,
+            webgl.RGBA,
             webgl.UNSIGNED_BYTE,
             0
           );
