@@ -7,9 +7,9 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_pick(cursor)
 <ul>
-  <li>Requires "webgl_properties.picking" to be at least 1 before picking can be done.
+  <li>Calls <a href=webgl_pick_check.htm>webgl_pick_check()</a> to see if picking can currently occur.
   <li>Uses the framebuffer and picking shader created by <a href=webgl_framebuffer_init.htm>webgl_framebuffer_init()</a>.
-  <li>Asynchronously determines the color of the picked pixel and stores it in one of the available "webgl_pixelbuffers" objects. On the next logic frame when the color is determined, it is passed along with the "cursor" arg and other properties to <a href=webgl_pick_event.htm>webgl_pick_event(args)</a> for handling.
+  <li>Asynchronously determines the color of the picked pixel and stores it in one of the available "webgl_pixelbuffers" objects. On the next logic frame after the color is determined, it is passed along with the "cursor" arg and other properties to <a href=webgl_pick_event.htm>webgl_pick_event(args)</a> for handling. The object can also be retrieved via <a href=webgl_pick_entity.htm>webgl_pick_entity(args)</a>.
   <li>Picking xy is equal to "globalThis.innerWidth / 2" and "globalThis.innerHeight / 2" if "webgl_properties.pointerlock" is true, or otherwise is equal to "core_pointer.x" and "core_pointer.y".
   <li>Entities with "picking_exclude" true cannot be picked and won't block entities behind them.
   <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_character_id]" is checked.
