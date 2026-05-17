@@ -208,7 +208,7 @@ function repo_init(){
                 'ids': {
                   'picked_click': 'Picked by click: ' + (pixelbuffer === false
                     ? false
-                    : pixelbuffer?.picked?.id),
+                    : JSON.stringify(pixelbuffer?.picked?.id)),
                 },
               });
           },
@@ -241,7 +241,7 @@ function repo_logic(){
     for(const id in webgl_pixelbuffers){
         const pixelbuffer = webgl_pixelbuffers[id];
         const sync = pixelbuffer.sync !== null;
-        pixelbuffers += id + ': ' + sync + ', ' + pixelbuffer.picked?.id + '<br>';
+        pixelbuffers += id + ': ' + sync + ', ' + JSON.stringify(pixelbuffer.picked?.id) + '<br>';
     }
     const pixelbuffers_all = webgl_pick_entity();
     const pixelbuffers_01 = webgl_pick_entity({
@@ -253,9 +253,9 @@ function repo_logic(){
 
     core_ui_update({
       'ids': {
-        'entities': 'all: ' + (pixelbuffers_all === false ? false : pixelbuffers_all?.picked?.id)
-          + '<br>0-1: ' + (pixelbuffers_01 === false ? false : pixelbuffers_01?.picked?.id)
-          + '<br>2-3: ' + (pixelbuffers_23 === false ? false : pixelbuffers_23?.picked?.id),
+        'entities': 'all: ' + (pixelbuffers_all === false ? false : JSON.stringify(pixelbuffers_all?.picked?.id))
+          + '<br>0-1: ' + (pixelbuffers_01 === false ? false : JSON.stringify(pixelbuffers_01?.picked?.id))
+          + '<br>2-3: ' + (pixelbuffers_23 === false ? false : JSON.stringify(pixelbuffers_23?.picked?.id)),
         'fps_draw': fps_draw,
         'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
         'pixelbuffers': pixelbuffers,
