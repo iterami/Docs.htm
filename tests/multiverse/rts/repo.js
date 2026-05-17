@@ -74,19 +74,22 @@ function handle_ai(player){
 }
 
 function handle_picking(event){
-    if(core_key_shift
+    if(core_menu_open
+      || core_key_shift
       || event.target.id !== 'canvas'){
         return;
     }
 
+    const button = event.button;
+
     if(build_placeholder.length){
-        if(core_pointer.down_0){
+        if(button === 0){
             build({
               'id': webgl_character_id,
               'build': build_placeholder,
             });
 
-        }else if(core_pointer.down_1){
+        }else if(button === 1){
             placeholder_hide();
         }
 
@@ -95,18 +98,24 @@ function handle_picking(event){
 
     const player = webgl_characters[webgl_character_id];
     const selected = entity_entities[player.selected];
-    if(core_pointer.down_1
+    if(button === 2
       && !selected){
         return;
     }
 
-    /*
-    const entity = webgl_pick();
-    if(core_pointer.down_0){
+    const pixelbuffer = webgl_pick_entity({
+      'start': 2,
+    });
+    if(!pixelbuffer.picked){
+        return;
+    }
+    const entity = pixelbuffer.picked;
+
+    if(button === 0){
         select(entity.team ? entity.id : '');
 
     }else if(entity
-      && core_pointer.down_1
+      && button === 2
       && selected.team === player.id
       && selected.time === 0){
         if(entity.id === selected.id){
@@ -140,7 +149,6 @@ function handle_picking(event){
             attack(entity);
         }
     }
-    */
 }
 
 function level_placeholders(){
@@ -500,12 +508,15 @@ function repo_init(){
       'pointerbinds': {
         'contextmenu': {},
         'pointerdown': {
-          'todo': handle_picking,
+          'todo': webgl_pick,
         },
         'pointermove': {
           'todo': function(){
               webgl_controls_pointer();
           },
+        },
+        'pointerup': {
+          'todo': handle_picking,
         },
         'wheel': {
           'todo': webgl_controls_wheel,
