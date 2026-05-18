@@ -80,8 +80,9 @@ function repo_init(){
     globalThis.canvas_drawloop = function(){
         canvas_draw();
         core_interval_animationFrame('canvas_drawloop');
-        fps_draw = Math.trunc(1000 / (new Date().getTime() - fps_draw_time));
-        fps_draw_time = new Date().getTime();
+        const now = globalThis.performance.now();
+        fps_draw = Math.trunc(1000 / (now - fps_draw_time));
+        fps_draw_time = now;
     };
     canvas_init();
     canvas_setproperties({
@@ -108,17 +109,19 @@ function repo_logic(){
         camera_y -= 5;
     }
 
+    const now = globalThis.performance.now();
+    const logic_fps = Math.trunc(1000 / (now - fps_logic));
+    fps_logic = now;
     core_ui_update({
       'ids': {
         'camera_x': camera_x,
         'camera_y': camera_y,
         'core_mobile': core_mobile,
         'fps_draw': fps_draw,
-        'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
+        'fps_logic': logic_fps,
         ...core_pointer,
       },
     });
-    fps_logic = new Date().getTime();
 }
 
 function reset_camera(){
