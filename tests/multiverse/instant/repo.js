@@ -3,8 +3,9 @@
 function debug_drawloop(){
     webgl_draw();
     core_interval_animationFrame('webgl_drawloop');
-    fps_draw = Math.trunc(1000 / (new Date().getTime() - fps_draw_time));
-    fps_draw_time = new Date().getTime();
+    const now = globalThis.performance.now();
+    fps_draw = Math.trunc(1000 / (now - fps_draw_time));
+    fps_draw_time = now;
 }
 
 function debug_pick(cursor){
@@ -232,16 +233,18 @@ function repo_logic(){
       'start': 2,
     });
 
+    const now = globalThis.performance.now();
+    const logic_fps = Math.trunc(1000 / (now - fps_logic));
+    fps_logic = now;
     core_ui_update({
       'ids': {
         'entities': 'all: ' + (pixelbuffers_all === false ? false : JSON.stringify(pixelbuffers_all?.picked?.id))
           + '<br>0-1: ' + (pixelbuffers_01 === false ? false : JSON.stringify(pixelbuffers_01?.picked?.id))
           + '<br>2-3: ' + (pixelbuffers_23 === false ? false : JSON.stringify(pixelbuffers_23?.picked?.id)),
         'fps_draw': fps_draw,
-        'fps_logic': Math.trunc(1000 / (new Date().getTime() - fps_logic)),
+        'fps_logic': logic_fps,
         'pixelbuffers': pixelbuffers,
       },
       'todo': 'innerHTML',
     });
-    fps_logic = new Date().getTime();
 }
