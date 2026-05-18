@@ -87,7 +87,7 @@ function new_game(){
         },
       },
       'json': {
-        'clear_color': [0, .2, 0],
+        'clear_color': [.1, .2, .3],
         'picking': core_storage_data.picking,
         'pointerlock': core_storage_data.pointerlock,
         'reticle': core_storage_data.pointerreticle,
@@ -158,14 +158,6 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
-      },
       'events': {
         'new_game': {
           'onclick': new_game,

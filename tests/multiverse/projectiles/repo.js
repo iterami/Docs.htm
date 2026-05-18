@@ -1,14 +1,18 @@
 'use strict';
 
-function load_test(){
+function new_game(){
     webgl_level_load({
-      'character': 0,
-      'json': {
-        'picking': 2,
+      'character': {
+        'collides': true,
+        'controls': 'rpg',
+        'level': -1,
         'spawn': {
           'position_y': 5,
           'position_z': 25,
         },
+      },
+      'json': {
+        'picking': 2,
         'characters': [
           {
             'id': 'test',
@@ -91,23 +95,6 @@ function load_test(){
     });
 }
 
-function new_game(){
-    if(webgl !== 0
-      && !globalThis.confirm('Reset?')){
-        return;
-    }
-    webgl_character_id = '_me';
-
-    load_test();
-    webgl_character_init({
-      'collides': true,
-      'controls': 'rpg',
-      'gravity': 1,
-      'level': 0,
-      'lives': 1,
-    });
-}
-
 function repo_escape(){
     audio_state_all(!core_menu_open);
 
@@ -119,20 +106,12 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
-      },
       'events': {
         'new_game': {
           'onclick': new_game,
         },
       },
-      'info': '<button class=medium id=new_game type=button>Start Projectiles Test</button>',
+      'info': '<button class=medium id=new_game type=button>Restart</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},
