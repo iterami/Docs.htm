@@ -1,8 +1,51 @@
 'use strict';
 
+function add_timer(){
+    if(webgl === 0){
+        return;
+    }
+
+    webgl_timer_add(JSON.parse(core_storage_data.timer));
+
+    if(core_menu_open){
+        display_timers();
+    }
+}
+
+function add_timer_random(){
+    if(webgl === 0){
+        return;
+    }
+
+    webgl_timer_add({
+      'event_end': [
+        {
+          'todo': 'ended',
+          'type': 'variable',
+          'value': 1,
+        },
+      ],
+      'event_repeat': [
+        {
+          'todo': 'repeated',
+          'type': 'variable',
+          'value': 1,
+        },
+      ],
+      'frames_max': core_random_integer(100) + 100,
+      'frames_random': core_random_integer(100),
+      'repeat': core_random_integer(5),
+    });
+
+    if(core_menu_open){
+        display_timers();
+    }
+}
+
 function debug_drawloop(){
     webgl_draw();
     core_interval_animationFrame('webgl_drawloop');
+
     const now = globalThis.performance.now();
     fps_draw = Math.trunc(1000 / (now - fps_draw_time));
     fps_draw_time = now;
@@ -77,7 +120,30 @@ function debug_pick(cursor){
     webgl_draw();
 }
 
+function display_timers(){
+    let list = '';
+    for(const id in webgl_timers){
+        const timer = webgl_timers[id];
+
+        list += timer.id + ': '
+          + timer.frames + '/' + timer.frames_max
+          + ', +' + timer.frames_random
+          + ', ' + timer.repeat + '<br>';
+    }
+    core_ui_update({
+      'ids': {
+        'ended': ended,
+        'repeated': repeated,
+        'timers': list,
+      },
+      'todo': 'innerHTML',
+    });
+}
+
 function new_game(){
+    ended = 0;
+    repeated = 0;
+
     webgl_level_load({
       'character': {
         'collides': true,
@@ -85,6 +151,7 @@ function new_game(){
         'level': -1,
         'spawn': {
           'position_y': 6,
+          'position_z': 25,
         },
       },
       'json': {
@@ -104,6 +171,14 @@ function new_game(){
                   {
                     'stat': 'vertex_colors',
                     'todo': '_self',
+                  },
+                  {
+                    'todo': 'webgl_projectile',
+                    'type': 'function',
+                    'value': {
+                      'character': 'stationary',
+                      'projectile': {},
+                    },
                   },
                 ],
                 'picking': true,
@@ -144,6 +219,160 @@ function new_game(){
                   5, 0, 5,
                 ],
               },
+              {
+                'id': 'toggle',
+                'attach_x': -10,
+                'attach_y': 3,
+                'billboard': true,
+                'collision': false,
+                'texture': 'grid.png',
+                'vertices': [
+                  2, 2, 0,
+                  -2, 2, 0,
+                  -2, -2, 0,
+                  2, -2, 0,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'infinite',
+            'collides': true,
+            'gravity': 1,
+            'level': 0,
+            'position_x': 10,
+            'position_y': 5,
+            'spawn': false,
+            'entities': [
+              {
+                'id': 'test',
+                'billboard': true,
+                'collision': false,
+                'texture': 'grid.png',
+                'vertices': [
+                  2, 2, 0,
+                  -2, 2, 0,
+                  -2, -2, 0,
+                  2, -2, 0,
+                ],
+              },
+            ],
+          },
+          {
+            'id': 'projectile',
+            'model': {},
+            'spawn': false,
+          },
+          {
+            'id': 'rotator',
+            'automove': true,
+            'change_rotate_y': -2,
+            'collides': true,
+            'controls': 'rpg',
+            'gravity': 1,
+            'level': 0,
+            'model': {},
+            'position_x': 10,
+            'position_y': 5,
+            'spawn': false,
+          },
+          {
+            'id': 'stationary',
+            'change_rotate_y': -1,
+            'model': {},
+            'position_x': 20,
+            'position_y': 10,
+            'spawn': false,
+          },
+        ],
+        'timers': [
+          {
+            'id': 'finite',
+          },
+          {
+            'id': 'inactive',
+            'active': false,
+          },
+          {
+            'id': 'infinite',
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_add',
+                'type': 'function',
+                'value': {
+                  'frames_max': 25,
+                  'id': 'infinite_temp',
+                },
+              },
+              {
+                'set': true,
+                'stat': 'position_y',
+                'todo': 'infinite',
+                'type': 'character',
+                'value': 50,
+              },
+            ],
+          },
+          {
+            'id': 'rotator',
+            'frames_max': 10,
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_projectile',
+                'type': 'function',
+                'value': {
+                  'character': 'rotator',
+                  'projectile': 'projectile',
+                },
+              },
+            ],
+          },
+          {
+            'id': 'toggle_0',
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_0',
+              },
+              {
+                'set': true,
+                'stat': 'attach_y',
+                'todo': 'toggle',
+                'value': 10,
+              },
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_1',
+              },
+            ],
+          },
+          {
+            'id': 'toggle_1',
+            'active': false,
+            'frames_max': 50,
+            'repeat': -1,
+            'event_repeat': [
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_1',
+              },
+              {
+                'set': true,
+                'stat': 'attach_y',
+                'todo': 'toggle',
+                'value': 3,
+              },
+              {
+                'todo': 'webgl_timer_toggle',
+                'type': 'function',
+                'value': 'toggle_0',
+              },
             ],
           },
         ],
@@ -160,14 +389,22 @@ function repo_escape(){
 function repo_init(){
     core_repo_init({
       'events': {
+        'add': {
+          'onclick': add_timer,
+        },
         'new_game': {
           'onclick': new_game,
         },
+        'random': {
+          'onclick': add_timer_random,
+        },
       },
       'globals': {
+        'ended': 0,
         'fps_draw': 0,
         'fps_draw_time': 0,
         'fps_logic': 0,
+        'repeated': 0,
       },
       'info': '<button class=medium id=new_game type=button>Restart</button>',
       'pointerbinds': {
@@ -203,12 +440,32 @@ function repo_init(){
         'picking': 1,
         'pointerlock': true,
         'pointerreticle': true,
+        'timer': `{
+  "active": true,
+  "frames_max": 100,
+  "frames_random": 0,
+  "repeat": 0,
+  "event_end": [
+    {
+      "todo": "ended",
+      "type": "variable",
+      "value": 1
+    }
+  ],
+  "event_repeat": [
+    {
+      "todo": "repeated",
+      "type": "variable",
+      "value": 1
+    }
+  ]
+}`,
       },
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox>Debug</label> <label><input id=debug_cursor type=checkbox>Cursor</label>'
-        + '<tr><td><label><input id=pointerlock type=checkbox>Pointerlock</label><td><label><input id=pointerreticle type=checkbox>Reticle</label></table>',
+        + '<tr><td><label><input id=pointerlock type=checkbox>Pointerlock</label><td><label><input id=pointerreticle type=checkbox>Reticle</label></table><textarea id=timer></textarea><br>',
       'title': 'Docs.htm',
-      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div>',
+      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div><button id=add type=button>Add Timer</button><button id=random type=button>Random</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
     });
     globalThis.webgl_drawloop = debug_drawloop;
     new_game();
@@ -247,4 +504,5 @@ function repo_logic(){
       },
       'todo': 'innerHTML',
     });
+    display_timers();
 }
