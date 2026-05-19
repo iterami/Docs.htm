@@ -26,6 +26,15 @@
 <script src=../../common/js/canvas.js></script>
 <script src=../../common/js/entity.js></script>
 <script>
+function debug_drawloop(){
+    canvas_draw();
+    core_interval_animationFrame('canvas_drawloop');
+
+    const now = globalThis.performance.now();
+    fps_draw = Math.trunc(1000 / (now - fps_draw_time));
+    fps_draw_time = now;
+}
+
 function repo_drawlogic(){
     const half_x = globalThis.innerWidth / 2;
     const half_y = globalThis.innerHeight / 2;
@@ -77,13 +86,7 @@ function repo_init(){
       'title': 'Docs.htm',
       'ui': '<button id=reset_camera type=button>Reset Camera</button><table><tr><td>Draw FPS<td id=fps_draw><tr><td>Logic FPS<td id=fps_logic><tr><td>core_mobile<td id=core_mobile><tr><td>Camera X<td id=camera_x><tr><td>Camera Y<td id=camera_y><tr><td>x<td id=x><tr><td>y<td id=y><tr><td>down_x<td id=down_x><tr><td>down_y<td id=down_y><tr><td>movement_x<td id=movement_x><tr><td>movement_y<td id=movement_y><tr><td>down_0<td id=down_0><tr><td>down_1<td id=down_1><tr><td>down_2<td id=down_2><tr><td>down_3<td id=down_3><tr><td>down_4<td id=down_4></table><span id=todo style="display:none"></span>',
     });
-    globalThis.canvas_drawloop = function(){
-        canvas_draw();
-        core_interval_animationFrame('canvas_drawloop');
-        const now = globalThis.performance.now();
-        fps_draw = Math.trunc(1000 / (now - fps_draw_time));
-        fps_draw_time = now;
-    };
+    globalThis.canvas_drawloop = debug_drawloop;
     canvas_init();
     canvas_setproperties({
       'fillStyle': '#206620',
@@ -112,6 +115,7 @@ function repo_logic(){
     const now = globalThis.performance.now();
     const logic_fps = Math.trunc(1000 / (now - fps_logic));
     fps_logic = now;
+
     core_ui_update({
       'ids': {
         'camera_x': camera_x,

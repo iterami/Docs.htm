@@ -493,6 +493,7 @@ function repo_logic(){
     const now = globalThis.performance.now();
     const logic_fps = Math.trunc(1000 / (now - fps_logic));
     fps_logic = now;
+
     core_ui_update({
       'ids': {
         'entities': 'all: ' + (pixelbuffers_all === false ? false : JSON.stringify(pixelbuffers_all?.picked?.id))
