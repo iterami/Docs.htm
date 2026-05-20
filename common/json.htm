@@ -143,9 +143,12 @@
   "pointerlock": false,
 
   // Optional. If this level should display the reticle in the center of the screen to help with picking.
+  // If the value is false, then no reticle will be displayed.
   // If the value is true, then a default reticle will be displayed.
-  // If the value is a string of css, then it will be applied to the reticle element.
-  "reticle": "background:#0f0;height:10px;width:10px;",
+  // If the value is an object of style properties, then it will be applied to the reticle element and displayed.
+  "reticle": {
+    "background": "#0f0"
+  },
 
   // Optional. Properties that are applied to all non-static characters when they spawn.
   "spawn": {
