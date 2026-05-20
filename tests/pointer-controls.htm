@@ -6,11 +6,11 @@
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
 .direction{
-    height: 20px;
+    height: 2rem;
     left: 50%;
     position: absolute;
     transform-origin: left;
-    width: 30px;
+    width: 3rem;
 }
 #direction_4{
     background: #00f;
@@ -53,13 +53,12 @@
 <script src=../../common/js/core.js></script>
 <script>
 function direction_reset(){
-    const width = '30px';
-    core_elements.direction_4.style.width = width;
-    core_elements.direction_4_relative.style.width = width;
-    core_elements.direction_leftright.style.width = width;
-    core_elements.direction_leftright_relative.style.width = width;
-    core_elements.direction_updown.style.width = width;
-    core_elements.direction_updown_relative.style.width = width;
+    core_elements.direction_4.style.width = size_small;
+    core_elements.direction_4_relative.style.width = size_small;
+    core_elements.direction_leftright.style.width = size_small;
+    core_elements.direction_leftright_relative.style.width = size_small;
+    core_elements.direction_updown.style.width = size_small;
+    core_elements.direction_updown_relative.style.width = size_small;
 }
 
 function direction_update(){
@@ -78,7 +77,7 @@ function direction_update(){
     const x = core_pointer.x;
     const y = core_pointer.y;
 
-    style_leftright.width = '100px';
+    style_leftright.width = size_big;
     if(x > globalThis.innerWidth / 2){
         direction = 0;
 
@@ -87,7 +86,7 @@ function direction_update(){
     }
     style_leftright.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_leftright_relative.width = '100px';
+    style_leftright_relative.width = size_big;
     if(x > core_elements.direction_leftright_relative.offsetLeft){
         direction = 0;
 
@@ -96,7 +95,7 @@ function direction_update(){
     }
     style_leftright_relative.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_updown.width = '100px';
+    style_updown.width = size_big;
     if(y > globalThis.innerHeight / 2){
         direction = 1;
 
@@ -105,7 +104,7 @@ function direction_update(){
     }
     style_updown.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_updown_relative.width = '100px';
+    style_updown_relative.width = size_big;
     if(y > core_elements.direction_updown_relative.offsetTop){
         direction = 1;
 
@@ -114,7 +113,7 @@ function direction_update(){
     }
     style_updown_relative.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_4.width = '100px';
+    style_4.width = size_big;
     const x_normalized = x / globalThis.innerWidth;
     const y_normalized = y / globalThis.innerHeight;
     if(x_normalized < .5){
@@ -139,7 +138,7 @@ function direction_update(){
     }
     style_4.transform = 'rotate(' + angles[direction] + 'deg)';
 
-    style_4_relative.width = '100px';
+    style_4_relative.width = size_big;
     const x_relative = x - core_elements.direction_4_relative.offsetLeft;
     const y_relative = y - core_elements.direction_4_relative.offsetTop;
     if(x_relative < 0){
@@ -165,8 +164,16 @@ function direction_update(){
     style_4_relative.transform = 'rotate(' + angles[direction] + 'deg)';
 }
 
+function repo_escape(){
+    direction_reset();
+}
+
 function repo_init(){
     core_repo_init({
+      'globals': {
+        'size_big': '6rem',
+        'size_small': '3rem',
+      },
       'pointerbinds': {
         'pointerdown': {
           'todo': direction_update,
