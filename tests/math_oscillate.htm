@@ -6,25 +6,21 @@
 <link href=../../common/css/core.css rel=stylesheet>
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/<a href=../common/js/math_oscillate.htm>math_oscillate(args)</a><br>
-
-<textarea id=input>
-{
+<textarea id=input>{
   "limit": 5,
   "min": -10,
   "max": 10
-}
-</textarea><br>
-<button id=oscillate>Oscillate</button>
+}</textarea>
 <table>
   <tr class=header>
-    <td>Properties
-    <td>Values
+    <td><button id=oscillate>Oscillate</button>
+    <td><progress id=progress value=.5></progress>
   <tr>
     <td>Value
     <td><input id=value step=any type=number>
   <tr>
     <td>Previous
-    <td><input id=old step=any type=number value=0>
+    <td><input id=previous step=any type=number value=0>
   <tr>
     <td>Diff
     <td><input id=diff readonly step=any type=number>
@@ -34,17 +30,22 @@
 <script src=../../common/js/math.js></script>
 <script>
 function oscillate(){
-    core_elements.old.value = core_elements.value.value || 0;
-    core_elements.value.value = math_oscillate({
-      'value': core_elements.value.value,
-      ...JSON.parse(core_elements.input.value),
-    });
+    const properties = JSON.parse(core_elements.input.value);
+    const min = Math.abs(properties.min);
+    progress.max = min + properties.max;
+
+    const previous_value = core_elements.value.value || 0;
+    const new_value = math_oscillate({
+      'value': previous_value,
+      ...properties,
+    })
 
     core_ui_update({
       'ids': {
-        'diff': core_elements.value.value - core_elements.old.value,
-        'old': core_elements.old.value,
-        'value': core_elements.value.value,
+        'diff': new_value - previous_value,
+        'previous': previous_value,
+        'progress': min + Number(new_value),
+        'value': new_value,
       },
     });
 }
@@ -59,8 +60,9 @@ function repo_init(){
       'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
-        'old',
         'input',
+        'previous',
+        'progress',
         'result',
         'value',
       ],
