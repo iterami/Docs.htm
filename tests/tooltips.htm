@@ -6,7 +6,7 @@
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
 #button{
-    position: fixed;
+    position: relative;
 }
 .tooltip{
     background: #111;
@@ -19,33 +19,33 @@
 }
 </style>
 
-<button class=big id=button>Tooltip<br>Test Button</button>
+<div class=tooltip style=display:block>
+  <div>Example Tooltip Design</div>
+  <div>This is some example tooltip text.</div>
+</div>
+<button class=big id=button>Tooltip<br>Button</button>
 <div class=tooltip id=tooltip></div>
 
 <script src=../../common/js/core.js></script>
 <script>
 function repo_init(){
     core_repo_init({
-      'events': {
-        'update': {
-          'onclick': update_button,
-        },
-      },
       'globals': {
         'tooltips': {
           'button': '<div>Example Real Tooltip</div><div>This is a real tooltip example!</div>',
         },
       },
-      'info': '<div class=tooltip style=display:block;position:static><div>Example Tooltip Design</div><div>This is some example tooltip text.</div></div>'
-        + '<button id=update type=button>Update Button Position</button>',
-      'menu': true,
-      'root': 'index.htm',
-      'storage': {
-        'button_x': '0px',
-        'button_y': '300px',
+      'pointerbinds': {
+        'pointermove': {
+          'todo': function(event){
+              if(core_pointer.down_0){
+                  core_elements.button.style.left = (core_pointer.x - globalThis.innerWidth) + 'px';
+                  core_elements.button.style.top = core_pointer.y + 'px';
+              }
+          },
+        },
       },
-      'storage_menu': '<table><tr><td><input class=mini id=button_x type=text><td>Button X'
-        + '<tr><td><input class=mini id=button_y type=text><td>Button Y</table>',
+      'root': 'index.htm',
       'title': 'Docs.htm',
       'ui_elements': [
         'button',
@@ -53,13 +53,15 @@ function repo_init(){
       ],
     });
 
+    document.body.style.height = (globalThis.innerHeight * 2) + 'px';
+    document.body.style.width = (globalThis.innerWidth * 2) + 'px';
     tooltip_init();
-    update_button();
 }
 
 function tooltip_hide(event){
-    core_elements.tooltip.style.display = 'none';
-    core_elements.tooltip.innerHTML = '';
+    const element = core_elements.tooltip;
+    element.style.display = 'none';
+    element.innerHTML = '';
 }
 
 function tooltip_init(){
@@ -74,35 +76,33 @@ function tooltip_show(event){
     if(!tooltips[event.target.id]){
         return;
     }
-    core_elements.tooltip.innerHTML = tooltips[event.target.id];
+    const element = core_elements.tooltip;
+    element.innerHTML = tooltips[event.target.id];
+    const style = element.style;
+    style.display = 'block';
 
-    const left = Math.max(
-      event.target.offsetLeft - event.target.scrollLeft,
-      0
-    );
-    if(left + core_elements.tooltip.offsetWidth > globalThis.innerWidth){
-        core_elements.tooltip.style.left = 'auto';
-        core_elements.tooltip.style.right = 0;
+    const target = event.target.getBoundingClientRect();
+    const tooltip = element.getBoundingClientRect();
 
-    }else{
-        core_elements.tooltip.style.left = left + 'px';
-        core_elements.tooltip.style.right = 'auto';
-    }
-
-    const top = Math.max(
-      event.target.offsetTop - event.target.scrollTop + event.target.offsetHeight,
-      0
-    );
-    if(top + core_elements.tooltip.offsetHeight > globalThis.innerHeight){
-        core_elements.tooltip.style.bottom = Math.abs(event.target.offsetTop - event.target.scrollTop - globalThis.innerHeight) + 'px';
-        core_elements.tooltip.style.top = 'auto';
+    const left = Math.max(0, target.left);
+    if(left + tooltip.width > globalThis.innerWidth){
+        style.left = 'auto';
+        style.right = 0;
 
     }else{
-        core_elements.tooltip.style.bottom = 'auto';
-        core_elements.tooltip.style.top = top + 'px';
+        style.left = left + 'px';
+        style.right = 'auto';
     }
 
-    core_elements.tooltip.style.display = 'block';
+    const top = Math.max(0, target.top + target.height);
+    if(top + tooltip.height > globalThis.innerHeight){
+        style.bottom = (globalThis.innerHeight - target.top) + 'px';
+        style.top = 'auto';
+
+    }else{
+        style.bottom = 'auto';
+        style.top = top + 'px';
+    }
 }
 
 function tooltip_toggle(event){
@@ -112,10 +112,5 @@ function tooltip_toggle(event){
     }else{
         tooltip_show(event);
     }
-}
-
-function update_button(){
-    core_elements.button.style.left = core_storage_data.button_x;
-    core_elements.button.style.top = core_storage_data.button_y;
 }
 </script>
