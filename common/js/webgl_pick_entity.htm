@@ -8,9 +8,9 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_pick_entity(args)
 <ul>
   <li>Checks "webgl_pixelbuffers" objects within a specific range for "sync === null" and "picked !== false" to determine what entity has been recently picked via <a href=webgl_pick.htm>webgl_pick(cursor)</a>.
-  <li>Calls <a href=webgl_pick_check.htm>webgl_pick_check()</a> to see if picking can currently occur.
   <li>Use the "start" and "end" args to control the range that is checked. Mouse movement picking is 0 to 1, and mouse click picking is 2 to 3.
   <li>If the "end" arg is less than the "start" arg, then "end" will be set to "webgl_pixelbuffers.length - 1".
+  <li>If the "checked" property of the pixelbuffer is false, then it will be skipped.
   <li>Returns the entire pixelbuffer object with the entity object as its "picked" property.
 </ul>
 <table>

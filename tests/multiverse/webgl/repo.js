@@ -52,33 +52,43 @@ function debug_drawloop(){
 }
 
 function debug_pick(cursor){
-    if(!webgl_pick_check()){
+    if(core_menu_open
+      || webgl_properties.picking < 1){
         return;
     }
 
-    let pixelbuffer = false;
-    if(cursor === true){
-        for(let i = 0; i < 2; i++){
-            if(webgl_pixelbuffers[i].sync === null){
-                pixelbuffer = webgl_pixelbuffers[i];
-                break;
-            }
-        }
+    const character = webgl_characters[webgl_character_id];
+    if(character.life <= 0){
+        return;
+    }
+    const level = webgl_character_level(character);
+    if(level < -1 || (level >= 0 && webgl_properties.paused)){
+        return;
+    }
 
-    }else{
-        for(let i = 2; i < 4; i++){
-            if(webgl_pixelbuffers[i].sync === null){
-                pixelbuffer = webgl_pixelbuffers[i];
-                break;
-            }
+    let start = 2;
+    let end = 4;
+    if(cursor === true){
+        start = 0;
+        end = 2;
+    }
+    let pixelbuffer = false;
+    for(let i = start; i < end; i++){
+        if(webgl_pixelbuffers[i].sync === null){
+            pixelbuffer = webgl_pixelbuffers[i];
+            break;
         }
     }
     if(!pixelbuffer){
         return;
     }
-
     const x = webgl_properties.pointerlock ? globalThis.innerWidth / 2 : core_pointer.x;
     const y = webgl_properties.pointerlock ? globalThis.innerHeight / 2 : core_pointer.y;
+
+    pixelbuffer.checked = true;
+    pixelbuffer.cursor = cursor === true;
+    pixelbuffer.x = x;
+    pixelbuffer.y = y;
 
     webgl_shader_use('picking');
     webgl_scissor({
@@ -98,9 +108,6 @@ function debug_pick(cursor){
             0
           );
           pixelbuffer.sync = webgl.fenceSync(webgl.SYNC_GPU_COMMANDS_COMPLETE, 0);
-          pixelbuffer.cursor = cursor === true;
-          pixelbuffer.x = x;
-          pixelbuffer.y = y;
 
           webgl.flush();
           webgl.bindBuffer(webgl.PIXEL_PACK_BUFFER, null);
