@@ -627,9 +627,7 @@ function repo_init(){
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'keybinds': {
         'Backquote': {
-          'down': function(){
-              webgl_character_automove();
-          },
+          'down': webgl_character_automove,
         },
       },
       'menu': true,
