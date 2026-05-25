@@ -1,0 +1,12 @@
+canvas{
+    display: none;
+}
+.failed{
+    background-color: #600;
+}
+pre{
+    margin: 0;
+}
+textarea{
+    height: 5rem;
+}
