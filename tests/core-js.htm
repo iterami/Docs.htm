@@ -420,10 +420,30 @@ function repo_init(){
         },
         {
           'todo': 'core_type',
+          'args': new Date(),
+          'expect': 'date',
+        },
+        {
+          'todo': 'core_type',
+          'args': new Error(),
+          'expect': 'error',
+        },
+        {
+          'todo': 'core_type',
+          'args': new Event('click'),
+          'expect': 'event',
+        },
+        {
+          'todo': 'core_type',
           'args': function(){
               return false;
           },
           'expect': 'function',
+        },
+        {
+          'todo': 'core_type',
+          'args': new Map(),
+          'expect': 'map',
         },
         {
           'todo': 'core_type',
@@ -439,6 +459,16 @@ function repo_init(){
         },
         {
           'todo': 'core_type',
+          'args': new RegExp(),
+          'expect': 'regexp',
+        },
+        {
+          'todo': 'core_type',
+          'args': new Set(),
+          'expect': 'set',
+        },
+        {
+          'todo': 'core_type',
           'args': 'text goes here',
           'expect': 'string',
         },
@@ -446,6 +476,16 @@ function repo_init(){
           'todo': 'core_type',
           'args': void 0,
           'expect': 'undefined',
+        },
+        {
+          'todo': 'core_type',
+          'args': new WeakMap(),
+          'expect': 'weakmap',
+        },
+        {
+          'todo': 'core_type',
+          'args': new WeakSet(),
+          'expect': 'weakset',
         },
       ],
     });
