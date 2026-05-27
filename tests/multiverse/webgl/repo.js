@@ -469,8 +469,8 @@ function repo_init(){
 }`,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox>Debug</label> <label><input id=debug_cursor type=checkbox>Cursor</label>'
-        + '<tr><td><label><input id=pointerlock type=checkbox>Pointerlock</label><td><label><input id=pointerreticle type=checkbox>Reticle</label></table><textarea id=timer></textarea><br>',
+      'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox> Debug</label> <label><input id=debug_cursor type=checkbox> Cursor</label>'
+        + '<tr><td><label><input id=pointerlock type=checkbox> Pointerlock</label><td><label><input id=pointerreticle type=checkbox> Reticle</label></table><textarea id=timer></textarea><br>',
       'title': 'Docs.htm',
       'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div><button id=add type=button>Add Timer</button><button id=random type=button>Random</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
     });
