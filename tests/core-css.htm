@@ -185,6 +185,7 @@
 </table>
 
 <script src=../../common/js/core.js></script>
+<script src=../../common/js/audio.js></script>
 <script src=../../common/js/tables.js></script>
 <script>
 function add_element(element){
@@ -201,6 +202,7 @@ function clear_elements(){
 function repo_init(){
     core_repo_init({
       'root': 'index.htm',
+      'storage_controls': true,
       'title': 'Docs.htm',
       'ui_elements': [
         'table',
