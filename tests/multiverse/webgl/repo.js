@@ -91,6 +91,7 @@ function debug_pick(cursor){
     pixelbuffer.y = y;
 
     webgl_shader_use('picking');
+    webgl.disable(webgl.BLEND);
     webgl_scissor({
       'todo': function(){
           webgl_draw_picking();
@@ -115,6 +116,7 @@ function debug_pick(cursor){
       'x': x,
       'y': y,
     });
+    webgl.enable(webgl.BLEND);
     webgl_shader_use('default');
 
     const clear_color = webgl_properties.clear_color;
@@ -472,7 +474,7 @@ function repo_init(){
       'storage_menu': '<table><tr><td><input class=mini id=picking step=any type=number> Picking<td><label><input id=debug_pick type=checkbox> Debug</label> <label><input id=debug_cursor type=checkbox> Cursor</label>'
         + '<tr><td><label><input id=pointerlock type=checkbox> Pointerlock</label><td><label><input id=pointerreticle type=checkbox> Reticle</label></table><textarea id=timer></textarea><br>',
       'title': 'Docs.htm',
-      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div><button id=add type=button>Add Timer</button><button id=random type=button>Random</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
+      'ui': 'Draw FPS: <span id=fps_draw></span><br>Logic FPS: <span id=fps_logic></span><div id=pixelbuffers></div><div id=entities></div><div id=picked_click></div><div id=picked_x></div><div id=picked_y></div><div id=picked_z></div><button id=add type=button>Add Timer</button><button id=random type=button>Random</button> <span id=ended></span>, <span id=repeated></span><div id=timers></div>',
     });
     globalThis.webgl_drawloop = debug_drawloop;
     new_game();
@@ -508,6 +510,9 @@ function repo_logic(){
           + '<br>2-3: ' + (pixelbuffers_23 === false ? false : JSON.stringify(pixelbuffers_23?.picked?.id)),
         'fps_draw': fps_draw,
         'fps_logic': logic_fps,
+        'picked_x': 'x: ' + webgl_picked_x,
+        'picked_y': 'y: ' + webgl_picked_y,
+        'picked_z': 'z: ' + webgl_picked_z,
         'pixelbuffers': pixelbuffers,
       },
       'todo': 'innerHTML',

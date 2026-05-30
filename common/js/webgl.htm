@@ -21,7 +21,7 @@
   <li><a href=#particle-properties>Particle Properties</a>
   <li><a href=#timer-properties>Timer Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
-  <li>Picking may not work properly for entities after "entity_id_count > 16,777,216".
+  <li>Picking is limited to 255 entities at once.
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
     <li><a href=entity.htm>entity.js</a>
@@ -180,6 +180,22 @@
     <td>webgl_paths
     <td>{}
     <td>object
+  <tr>
+    <td>webgl_pick_id
+    <td>0
+    <td>integer 0-255
+  <tr>
+    <td>webgl_picked_x
+    <td>0
+    <td>number
+  <tr>
+    <td>webgl_picked_y
+    <td>0
+    <td>number
+  <tr>
+    <td>webgl_picked_z
+    <td>0
+    <td>number
   <tr>
     <td>webgl_pixelbuffers
     <td>{}
@@ -619,10 +635,6 @@
     <td>picking_range
     <td>0
     <td>number &gt;=0
-  <tr>
-    <td>picking_xyz
-    <td>false
-    <td>boolean
   <tr>
     <td>point_size
     <td>0
