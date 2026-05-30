@@ -442,7 +442,7 @@
           "particle": false,
 
           // Optional. If this entity can be selected via picking.
-          // If true, an RGB array will be generated based upon the current entity_id_count and replace this property.
+          // If true, "webgl_pick_id" will increment by 1 and be used as this entity's picking ID, up to 255.
           "picking": false,
 
           // Optional. If this entity should be excluded and not drawn during picking.
@@ -451,9 +451,6 @@
           // Optional. Maximum range between the entity and character within which picking can occur.
           // If 0, picking range is unlimited.
           "picking_range": 0,
-
-          // Optional. If the xyz position on the picked entity should also be calculated and returned.
-          "picking_xyz": false,
 
           // Optional. The size of each point when this entity uses the "POINTS" draw mode.
           "point_size": 0,

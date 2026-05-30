@@ -220,7 +220,6 @@ function load_testmap(){
               {
                 'id': 'base',
                 'picking': true,
-                'picking_xyz': true,
                 'texture': 'lavaleaf.png',
                 'vertex_colors': [
                   .2, .8, .2, 1,

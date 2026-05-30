@@ -191,7 +191,6 @@ function new_game(){
                   },
                 ],
                 'picking': true,
-                'picking_xyz': true,
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 10,
@@ -218,7 +217,6 @@ function new_game(){
                   },
                 ],
                 'picking': true,
-                'picking_xyz': true,
                 'rotate_x': 90,
                 'texture': 'grid.png',
                 'vertices': [
