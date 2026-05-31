@@ -13,8 +13,7 @@
   </ul>
   <li><a href=#vertex>Vertex Shaders</a>:<ul>
     <li><a href=#vertex-minimum>Minimum</a>
-    <li><a href=#vertex-picking-color>Picking Color</a>
-    <li><a href=#vertex-picking-xyz>Picking XYZ</a>
+    <li><a href=#vertex-picking>Picking</a>
   </ul>
 </ul>
 <table>
@@ -49,27 +48,11 @@ uniform mat4 perspective;
 void main(void){
     color = vertexColor;
     gl_Position = perspective * camera
-      * vec4(vertexPosition, 1.0);
+      * vec4(vertexPosition, 1.);
 }
 </textarea>
-  <tr id=vertex-picking-color>
-    <td>Picking Color
-    <td><textarea readonly>#version 300 es
-
-in vec3 vertexPosition;
-in vec4 pickColor;
-out vec4 color;
-uniform mat4 camera;
-uniform mat4 perspective;
-
-void main(void){
-    color = pickColor;
-    gl_Position = perspective * camera
-      * vec4(vertexPosition, 1.0);
-}
-</textarea>
-  <tr id=vertex-picking-xyz>
-    <td>Picking XYZ
+  <tr id=vertex-picking>
+    <td>Picking
     <td><textarea readonly>#version 300 es
 
 in vec3 vertexPosition;
@@ -80,13 +63,13 @@ uniform mat4 perspective;
 
 void main(void){
     color = vec4(
-      (normalize(vertexPosition.x) + 1.0) / 2.0,
-      (normalize(vertexPosition.y) + 1.0) / 2.0,
-      (normalize(vertexPosition.z) + 1.0) / 2.0,
+      (normalize(vertexPosition.x) + 1.) / 2.,
+      (normalize(vertexPosition.y) + 1.) / 2.,
+      (normalize(vertexPosition.z) + 1.) / 2.,
       1
     );
     gl_Position = perspective * camera
-      * vec4(vertexPosition, 1.0);
+      * vec4(vertexPosition, 1.);
 }
 </textarea>
 </table>
