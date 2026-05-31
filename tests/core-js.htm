@@ -64,18 +64,17 @@ function repo_init(){
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
-            'precision': 0,
           },
-          'expect': false,
+          'expect': true,
         },
         {
           'todo': 'core_float_compare',
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
-            'precision': Number.EPSILON,
+            'precision': 0,
           },
-          'expect': true,
+          'expect': false,
         },
         {
           'todo': 'core_float_compare',
@@ -94,6 +93,14 @@ function repo_init(){
             'precision': 1e-16,
           },
           'expect': false,
+        },
+        {
+          'todo': 'core_float_compare',
+          'args': {
+            'a': 10000.1 + 10000.2 + 10000.3,
+            'b': 30000.6,
+          },
+          'expect': true,
         },
         {
           'todo': 'core_hex_to_rgb',
