@@ -72,15 +72,6 @@ function repo_init(){
           'args': {
             'a': 0.1 + 0.2 + 0.3,
             'b': 0.6,
-            'precision': 0,
-          },
-          'expect': false,
-        },
-        {
-          'todo': 'core_float_compare',
-          'args': {
-            'a': 0.1 + 0.2 + 0.3,
-            'b': 0.6,
             'precision': 1e-15,
           },
           'expect': true,
@@ -101,6 +92,15 @@ function repo_init(){
             'b': 30000.6,
           },
           'expect': true,
+        },
+        {
+          'todo': 'core_float_compare',
+          'args': {
+            'a': 10000.1 + 10000.2 + 10000.3,
+            'b': 30000.6,
+            'precision': Number.EPSILON,
+          },
+          'expect': false,
         },
         {
           'todo': 'core_hex_to_rgb',

@@ -7,7 +7,9 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_float_compare(args)
 <ul>
-  <li>Checks if two floating-point numbers are equal within a specific level of precision, which is scaled based on the highest magnitude.
+  <li>Checks if 2 floating-point numbers are equal.
+  <li>If "a === b" is false, then the numbers will be compared wtihin a specific level of precision.
+  <li>If no precision is specified, then "Number.EPSILON" will be used and scaled by the highest magnitude of the 2 numbers.
 </ul>
 <table>
   <tr class=header>
@@ -24,6 +26,6 @@
     <td>number
   <tr>
     <td>precision
-    <td>Number.EPSILON
+    <td>
     <td>number
 </table>
