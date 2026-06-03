@@ -1,7 +1,7 @@
 'use strict';
 
-function attack(entity){
-    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', entity.id);
+function attack(character){
+    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', character.id);
 }
 
 function build({
@@ -10,11 +10,12 @@ function build({
   placeholder,
 } = {}){
     const player = webgl_characters[id];
-    const properties = tech[build];
+    const properties = tech[build].character;
     if(player.power < properties.power){
         return;
     }
-    const selected = entity_entities[player.selected];
+
+    const selected = webgl_characters[player.selected];
     if(selected.time > 0){
         return;
     }
@@ -31,9 +32,9 @@ function build({
     let z = webgl_picked_z;
 
     if(properties.type === 'unit'){
-        x = selected.attach_x;
-        y = selected.attach_y;
-        z = selected.attach_z;
+        x = selected.position_x;
+        y = selected.position_y;
+        z = selected.position_z;
 
     }else if(properties.type === 'building'){
         selected.destination_x = x;
@@ -56,16 +57,15 @@ function build({
     update_ui();
 }
 
-function death(entity){
-    if(entity.making){
-        entity_entities[entity.making].making = '';
-    }
-
-    entity_remove({
-      'entities': [
-        entity.id,
-      ],
-    });
+function distance_destination(character){
+    return math_distance({
+      'x0': character.position_x,
+      'y0': character.position_y,
+      'z0': character.position_z,
+      'x1': character.destination_x,
+      'y1': character.destination_y,
+      'z1': character.destination_z,
+    }) > character.speed
 }
 
 function handle_ai(player){
@@ -83,8 +83,8 @@ function handle_picking(event){
     if(build_placeholder.length){
         if(button === 0){
             build({
-              'id': webgl_character_id,
               'build': build_placeholder,
+              'id': webgl_character_id,
             });
 
         }else if(button === 1){
@@ -95,7 +95,7 @@ function handle_picking(event){
     }
 
     const player = webgl_characters[webgl_character_id];
-    const selected = entity_entities[player.selected];
+    const selected = webgl_characters[player.selected];
     if(button === 2
       && !selected){
         return;
@@ -108,25 +108,26 @@ function handle_picking(event){
         return;
     }
     const entity = pixelbuffer.picked;
+    const character = webgl_characters[pixelbuffer.picked.attach_to];
 
     if(button === 0){
-        select(entity.team ? entity.id : '');
+        select(character.team ? character.id : '');
 
-    }else if(entity
+    }else if(character
       && button === 2
       && selected.team === player.id
       && selected.time === 0){
-        if(entity.id === selected.id){
-            entity.destination_x = entity.attach_x;
-            entity.destination_y = entity.attach_y;
-            entity.destination_z = entity.attach_z;
+        if(character.id === selected.id){
+            character.destination_x = entity.position_x;
+            character.destination_y = entity.position_y;
+            character.destination_z = entity.position_z;
             return;
         }
 
-        const properties = tech[selected.type];
+        const properties = tech[selected.type].character;
         const moveable = properties.type === 'unit'
           || properties.builds.length;
-        if(!entity.team){
+        if(!character.team){
             if(moveable){
                 move(selected);
             }
@@ -134,17 +135,17 @@ function handle_picking(event){
             return;
         }
 
-        const owned = entity.team === player.id;
+        const owned = character.team === player.id;
         if(moveable){
             if(owned){
                 move(selected);
 
             }else{
-                attack(entity);
+                attack(character);
             }
 
         }else if(!owned){
-            attack(entity);
+            attack(character);
         }
     }
 }
@@ -234,6 +235,24 @@ function load_testmap(){
             ],
           },
         ],
+        'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'obstacle',
+              'all': {
+                'texture': 'grid.png',
+              },
+              'bottom': {
+                'exclude': true,
+              },
+              'position_y': 5,
+              'size_x': 20,
+              'size_y': 10,
+              'size_z': 20,
+            },
+          },
+        ],
       },
     });
 
@@ -281,34 +300,44 @@ function make({
   z = 0,
 } = {}){
     const player = webgl_characters[team];
-    const selected = entity_entities[player.selected];
+    const selected = webgl_characters[player.selected];
 
-    const id = type + entity_id_count;
-    webgl_entity_create({
+    const id = team + '_' + type + entity_id_count;
+    webgl_character_init({
+      'id': id,
+      'collides': true,
+      'level': 0,
+      'spawn': {
+        'position_x': x,
+        'position_y': y,
+        'position_z': z,
+      },
+
+      ...tech[type].character,
+      'destination_x': x,
+      'destination_y': y,
+      'destination_z': z,
+      'making': selected?.id || '',
+      'team': team,
+      'time': time,
+      'type': type,
+
       'entities': [{
-        'attach_x': x,
-        'attach_y': y,
-        'attach_z': z,
-        'destination_x': x,
-        'destination_y': y,
-        'destination_z': z,
+        ...tech[type].entity,
         'id': id,
-        'making': selected?.id || '',
+        'attach_to': id,
         'picking': true,
-        'team': team,
-        'time': time,
-        'type': type,
         'vertex_colors': player.color,
-        ...tech[type].properties,
       }],
     });
+
     return id;
 }
 
-function move(entity){
-    entity.destination_x = webgl_picked_x;
-    entity.destination_y = webgl_picked_y;
-    entity.destination_z = webgl_picked_z;
+function move(character){
+    character.destination_x = webgl_picked_x;
+    character.destination_y = webgl_picked_y;
+    character.destination_z = webgl_picked_z;
 }
 
 function new_game(){
@@ -324,17 +353,18 @@ function new_game(){
       tech,
       {
         'Builder': {
-          'builds': [
-            'Factory',
-            'Turret',
-          ],
-          'life': 100,
-          'power': 100,
-          'speed': .5,
-          'time': 100,
-          'type': 'unit',
-          'properties': {
+          'character': {
+            'builds': [
+              'Factory',
+              'Turret',
+            ],
             'life': 100,
+            'power': 100,
+            'speed': .5,
+            'time': 100,
+            'type': 'unit',
+          },
+          'entity': {
             'texture': 'grid.png',
             'vertices': [
               3, .03, -3,
@@ -345,14 +375,15 @@ function new_game(){
           },
         },
         'Factory': {
-          'builds': ['Builder'],
-          'life': 1000,
-          'power': 1000,
-          'speed': 0,
-          'time': 200,
-          'type': 'building',
-          'properties': {
+          'character': {
+            'builds': ['Builder'],
             'life': 1000,
+            'power': 1000,
+            'speed': 0,
+            'time': 200,
+            'type': 'building',
+          },
+          'entity': {
             'texture': 'grid.png',
             'vertices': [
               10, .01, -10,
@@ -363,14 +394,15 @@ function new_game(){
           },
         },
         'Turret': {
-          'builds': [],
-          'life': 500,
-          'power': 250,
-          'speed': 0,
-          'time': 150,
-          'type': 'building',
-          'properties': {
+          'character': {
+            'builds': [],
             'life': 500,
+            'power': 250,
+            'speed': 0,
+            'time': 150,
+            'type': 'building',
+          },
+          'entity': {
             'texture': 'grid.png',
             'vertices': [
               5, .02, -5,
@@ -390,11 +422,12 @@ function new_game(){
     core_elements.build.textContent = '';
     for(const id in tech){
         const prefixed = 'build_' + id;
+        const properties = tech[id].character;
         core_html({
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
-            'innerHTML': id + '<br>' + tech[id].type + '<br>Power ' + tech[id].power + '<br>Time ' + tech[id].time,
+            'innerHTML': id + '<br>' + properties.type + '<br>Power ' + properties.power + '<br>Time ' + properties.time,
             'onclick': function(){
                 if(build_placeholder === id){
                     placeholder_hide();
@@ -404,7 +437,7 @@ function new_game(){
                 build({
                   'build': id,
                   'id': webgl_character_id,
-                  'placeholder': tech[id].type === 'building',
+                  'placeholder': properties.type === 'building',
                 });
             },
             'style': 'display:none',
@@ -429,7 +462,7 @@ function placeholder_hide(){
 
 function placeholder_show(id){
     const placeholder = entity_entities._rts_placeholder_build_entity;
-    placeholder.vertices = tech[id].properties.vertices;
+    placeholder.vertices = tech[id].entity.vertices;
 
     webgl.bindVertexArray(placeholder.vao);
     webgl_buffer_set({
@@ -548,13 +581,11 @@ function repo_logic(){
     const player = webgl_characters[webgl_character_id];
     if(player.selected){
         const placeholder = webgl_characters._rts_placeholder_move;
-        const selected = entity_entities[player.selected];
+        const selected = webgl_characters[player.selected];
         placeholder.position_x = selected.destination_x;
         placeholder.position_y = selected.destination_y;
         placeholder.position_z = selected.destination_z;
-        entity_entities._rts_placeholder_move_entity.draw = Math.abs(selected.attach_x - selected.destination_x) > 1
-          || Math.abs(selected.attach_y - selected.destination_y) > 1
-          || Math.abs(selected.attach_z - selected.destination_z) > 1;
+        entity_entities._rts_placeholder_move_entity.draw = distance_destination(selected);
 
         core_ui_update({
           'classname': true,
@@ -571,26 +602,31 @@ function repo_logic(){
         placeholder.position_z = webgl_picked_z;
     }
 
-    for(const id in entity_entities){
-        const entity = entity_entities[id];
-        if(!entity.team){
+    for(const id in webgl_characters){
+        const character = webgl_characters[id];
+        if(!character.type){
             continue;
         }
 
-        if(tech[entity.type].type === 'building'){
-            if(entity.making){
-                const making = entity_entities[entity.making];
-                if(Math.abs(entity.attach_x - making.attach_x) < 1
-                  && Math.abs(entity.attach_y - making.attach_y) < 1
-                  && Math.abs(entity.attach_z - making.attach_z) < 1){
-                    if(entity.time > 0){
-                        entity.time--;
-                        if(entity.time === 0){
-                            const made = entity_entities[entity.making];
-                            made.destination_x = entity.destination_x;
-                            made.destination_y = entity.destination_y;
-                            made.destination_z = entity.destination_z;
-                            entity.making = '';
+        const properties = tech[character.type].character;
+        if(properties.type === 'building'){
+            if(character.making){
+                const making = webgl_characters[character.making];
+                if(math_distance({
+                    'x0': character.position_x,
+                    'y0': character.position_y,
+                    'z0': character.position_z,
+                    'x1': making.position_x,
+                    'y1': making.position_y,
+                    'z1': making.position_z,
+                  }) < making.speed){
+                    if(character.time > 0){
+                        character.time--;
+                        if(character.time === 0){
+                            making.destination_x = character.destination_x;
+                            making.destination_y = character.destination_y;
+                            making.destination_z = character.destination_z;
+                            character.making = '';
                         }
                     }
                 }
@@ -598,26 +634,28 @@ function repo_logic(){
             continue;
         }
 
-        if(Math.abs(entity.attach_x - entity.destination_x) > 1
-          || Math.abs(entity.attach_y - entity.destination_y) > 1
-          || Math.abs(entity.attach_z - entity.destination_z) > 1){
-            const speed = tech[entity.type].speed;
+        if(distance_destination(character)){
             const angle_xz = Math.atan2(
-              entity.attach_z - entity.destination_z,
-              entity.attach_x - entity.destination_x
+              character.position_z - character.destination_z,
+              character.position_x - character.destination_x
             );
-            entity.attach_x -= core_round({
-              'number': Math.cos(angle_xz) * speed,
+            character.change_position_x = core_round({
+              'number': Math.cos(angle_xz) * -properties.speed,
             });
-            entity.attach_z -= core_round({
-              'number': Math.sin(angle_xz) * speed,
+            character.change_position_z = core_round({
+              'number': Math.sin(angle_xz) * -properties.speed,
             });
 
-        }else if(entity.time > 0){
-            entity.time--;
+        }else{
+            character.change_position_x = 0;
+            character.change_position_z = 0;
 
-            if(entity.time === 0){
-                entity.making = '';
+            if(character.time > 0){
+                character.time--;
+
+                if(character.time === 0){
+                    character.making = '';
+                }
             }
         }
     }
@@ -636,20 +674,21 @@ function select(id){
     player.selected = id;
 
     if(player.selected === ''
-      || entity_entities[player.selected].team !== player.id){
+      || webgl_characters[player.selected].team !== player.id){
         entity_entities._rts_placeholder_move_entity.draw = false;
         for(const id in tech){
             core_elements['build_' + id].style.display = 'none';
         }
 
     }else{
-        const builds = tech[entity_entities[player.selected].type].builds;
+        const builds = tech[webgl_characters[player.selected].type].character.builds;
         for(const id in tech){
             core_elements['build_' + id].style.display = builds.includes(id)
               ? 'inline-block'
               : 'none';
         }
     }
+
     update_ui();
 }
 
@@ -698,25 +737,26 @@ function team_create({
 
 function update_ui(){
     const player = webgl_characters[webgl_character_id];
-    const selected = entity_entities[player.selected];
+    const selected = webgl_characters[player.selected];
+    const properties = tech[selected?.type]?.character;
+
     core_ui_update({
       'classname': true,
       'ids': {
         'life': selected?.life,
-        'life_max': tech[selected?.type]?.life,
+        'life_max': properties?.life,
         'making': selected?.making,
         'making_time': selected?.time || '',
         'power': player.power,
         'selected': player.selected,
-        'speed': tech[selected?.type]?.speed,
+        'speed': properties?.speed,
         'team': selected?.team,
         'type': selected?.type,
       },
     });
     for(const element in core_elements){
         if(element.startsWith('build_')){
-            const id = element.slice(6);
-            core_elements[element].style.borderColor = webgl_characters[webgl_character_id].power < tech[id].power
+            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].power
               ? '#f00'
               : '#999';
         }
