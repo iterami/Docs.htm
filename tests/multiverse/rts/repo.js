@@ -756,7 +756,7 @@ function update_ui(){
     });
     for(const element in core_elements){
         if(element.startsWith('build_')){
-            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].power
+            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].character.power
               ? '#f00'
               : '#999';
         }
