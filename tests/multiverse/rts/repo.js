@@ -53,8 +53,6 @@ function build({
     });
     selected.making = making;
     selected.time = properties.time;
-
-    update_ui();
 }
 
 function distance_destination(character){
@@ -107,7 +105,6 @@ function handle_picking(event){
     if(!pixelbuffer.picked){
         return;
     }
-    const entity = pixelbuffer.picked;
     const character = webgl_characters[pixelbuffer.picked.attach_to];
 
     if(button === 0){
@@ -115,36 +112,43 @@ function handle_picking(event){
 
     }else if(character
       && button === 2
-      && selected.team === player.id
-      && selected.time === 0){
-        if(character.id === selected.id){
-            character.destination_x = entity.position_x;
-            character.destination_y = entity.position_y;
-            character.destination_z = entity.position_z;
+      && selected.team === player.id){
+        if(selected.id === character.id){
+            selected.destination_x = selected.position_x;
+            selected.destination_y = selected.position_y;
+            selected.destination_z = selected.position_z;
             return;
         }
 
         const properties = tech[selected.type].character;
-        const moveable = properties.type === 'unit'
-          || properties.builds.length;
-        if(!character.team){
-            if(moveable){
-                move(selected);
+        const unit = properties.type === 'unit';
+        const friendly = !character.team || character.team === player.id;
+
+        if(unit){
+            if(selected.making){
+                webgl_characters[selected.making].making = '';
+                selected.making = '';
+                selected.time = 0;
             }
 
-            return;
+            if(friendly
+              && character.time > 0
+              && !character.making){
+                character.making = selected.id;
+                selected.making = character.id;
+                selected.time = character.time;
+                selected.destination_x = character.position_x;
+                selected.destination_y = character.position_y;
+                selected.destination_z = character.position_z;
+
+                return;
+            }
         }
 
-        const owned = character.team === player.id;
-        if(moveable){
-            if(owned){
-                move(selected);
+        if(friendly){
+            move(selected);
 
-            }else{
-                attack(character);
-            }
-
-        }else if(!owned){
+        }else{
             attack(character);
         }
     }
@@ -307,6 +311,7 @@ function make({
       'id': id,
       'collides': true,
       'level': 0,
+      'life': time > 0 ? 1 : tech[type].character.life_max,
       'spawn': {
         'position_x': x,
         'position_y': y,
@@ -358,7 +363,7 @@ function new_game(){
               'Factory',
               'Turret',
             ],
-            'life': 100,
+            'life_max': 100,
             'power': 100,
             'speed': .5,
             'time': 100,
@@ -377,7 +382,7 @@ function new_game(){
         'Factory': {
           'character': {
             'builds': ['Builder'],
-            'life': 1000,
+            'life_max': 1000,
             'power': 1000,
             'speed': 0,
             'time': 200,
@@ -396,7 +401,7 @@ function new_game(){
         'Turret': {
           'character': {
             'builds': [],
-            'life': 500,
+            'life_max': 500,
             'power': 250,
             'speed': 0,
             'time': 150,
@@ -449,7 +454,6 @@ function new_game(){
     }
 
     load_testmap();
-    update_ui();
 }
 
 function placeholder_hide(){
@@ -579,21 +583,14 @@ function repo_logic(){
     }
 
     const player = webgl_characters[webgl_character_id];
+    const selected = webgl_characters[player.selected];
+
     if(player.selected){
         const placeholder = webgl_characters._rts_placeholder_move;
-        const selected = webgl_characters[player.selected];
         placeholder.position_x = selected.destination_x;
         placeholder.position_y = selected.destination_y;
         placeholder.position_z = selected.destination_z;
         entity_entities._rts_placeholder_move_entity.draw = distance_destination(selected);
-
-        core_ui_update({
-          'classname': true,
-          'ids': {
-            'making': selected.making,
-            'making_time': selected.time || '',
-          },
-        });
     }
     if(build_placeholder.length){
         const placeholder = webgl_characters._rts_placeholder_build;
@@ -622,7 +619,11 @@ function repo_logic(){
                   }) < making.speed){
                     if(character.time > 0){
                         character.time--;
-                        if(character.time === 0){
+                        character.life = Math.min(
+                          character.life + Math.ceil(properties.life_max / properties.time),
+                          character.life_max
+                        );
+                        if(character.time <= 0){
                             making.destination_x = character.destination_x;
                             making.destination_y = character.destination_y;
                             making.destination_z = character.destination_z;
@@ -653,10 +654,32 @@ function repo_logic(){
             if(character.time > 0){
                 character.time--;
 
-                if(character.time === 0){
+                if(character.time <= 0){
                     character.making = '';
                 }
             }
+        }
+    }
+
+    core_ui_update({
+      'classname': true,
+      'ids': {
+        'life': selected?.life,
+        'life_max': selected?.life_max,
+        'making': selected?.making,
+        'making_time': selected?.time || '',
+        'power': player.power,
+        'selected': player.selected,
+        'speed': tech[selected?.type]?.character?.speed,
+        'team': selected?.team,
+        'type': selected?.type,
+      },
+    });
+    for(const element in core_elements){
+        if(element.startsWith('build_')){
+            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].character.power
+              ? '#f00'
+              : '#999';
         }
     }
 }
@@ -688,8 +711,6 @@ function select(id){
               : 'none';
         }
     }
-
-    update_ui();
 }
 
 function team_create({
@@ -733,32 +754,4 @@ function team_create({
       'y': y,
       'z': z,
     });
-}
-
-function update_ui(){
-    const player = webgl_characters[webgl_character_id];
-    const selected = webgl_characters[player.selected];
-    const properties = tech[selected?.type]?.character;
-
-    core_ui_update({
-      'classname': true,
-      'ids': {
-        'life': selected?.life,
-        'life_max': properties?.life,
-        'making': selected?.making,
-        'making_time': selected?.time || '',
-        'power': player.power,
-        'selected': player.selected,
-        'speed': properties?.speed,
-        'team': selected?.team,
-        'type': selected?.type,
-      },
-    });
-    for(const element in core_elements){
-        if(element.startsWith('build_')){
-            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].character.power
-              ? '#f00'
-              : '#999';
-        }
-    }
 }
