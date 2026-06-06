@@ -112,7 +112,8 @@ function handle_picking(event){
 
     }else if(character
       && button === 2
-      && selected.team === player.id){
+      && selected.team === player.id
+      && selected.id !== selected.making){
         if(selected.id === character.id){
             selected.destination_x = selected.position_x;
             selected.destination_y = selected.position_y;
@@ -306,29 +307,34 @@ function make({
     const player = webgl_characters[team];
     const selected = webgl_characters[player.selected];
 
+    const character = tech[type].character;
+    const entity = tech[type].entity;
+
     const id = team + '_' + type + entity_id_count;
     webgl_character_init({
       'id': id,
       'collides': true,
       'level': 0,
-      'life': time > 0 ? 1 : tech[type].character.life_max,
+      'life': time > 0 ? 1 : character.life_max,
       'spawn': {
         'position_x': x,
         'position_y': y,
         'position_z': z,
       },
 
-      ...tech[type].character,
+      ...character,
       'destination_x': x,
       'destination_y': y,
       'destination_z': z,
-      'making': selected?.id || '',
+      'making': (time > 0 && character.type === 'unit')
+        ? id
+        : (selected?.id || ''),
       'team': team,
       'time': time,
       'type': type,
 
       'entities': [{
-        ...tech[type].entity,
+        ...entity,
         'id': id,
         'attach_to': id,
         'picking': true,
@@ -601,7 +607,8 @@ function repo_logic(){
 
     for(const id in webgl_characters){
         const character = webgl_characters[id];
-        if(!character.type){
+        if(!character.type
+          || character.id === character.making){
             continue;
         }
 
@@ -623,11 +630,13 @@ function repo_logic(){
                           character.life + Math.ceil(properties.life_max / properties.time),
                           character.life_max
                         );
+                        making.time--;
                         if(character.time <= 0){
                             making.destination_x = character.destination_x;
                             making.destination_y = character.destination_y;
                             making.destination_z = character.destination_z;
                             character.making = '';
+                            making.making = '';
                         }
                     }
                 }
@@ -650,14 +659,6 @@ function repo_logic(){
         }else{
             character.change_position_x = 0;
             character.change_position_z = 0;
-
-            if(character.time > 0){
-                character.time--;
-
-                if(character.time <= 0){
-                    character.making = '';
-                }
-            }
         }
     }
 
