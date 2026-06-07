@@ -5,6 +5,9 @@
 <title>Tooltip Tests</title>
 <link href=../../common/css/core.css rel=stylesheet>
 <style>
+body{
+    text-align: left;
+}
 #button{
     position: relative;
 }
@@ -39,7 +42,7 @@ function repo_init(){
         'pointermove': {
           'todo': function(event){
               if(core_pointer.down_0){
-                  core_elements.button.style.left = (core_pointer.x - globalThis.innerWidth) + 'px';
+                  core_elements.button.style.left = core_pointer.x + 'px';
                   core_elements.button.style.top = core_pointer.y + 'px';
               }
           },
@@ -53,8 +56,6 @@ function repo_init(){
       ],
     });
 
-    document.body.style.height = (globalThis.innerHeight * 2) + 'px';
-    document.body.style.width = (globalThis.innerWidth * 2) + 'px';
     tooltip_init();
 }
 
