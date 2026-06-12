@@ -55,6 +55,28 @@ function build({
     selected.time = properties.time;
 }
 
+function camera_reset(){
+    const player = webgl_characters[webgl_character_id];
+    if(!player){
+        return;
+    }
+
+    player.camera_rotate_x = 60;
+    player.camera_rotate_y = 0;
+    player.camera_zoom = 50;
+    player.rotate_x = 0;
+    player.rotate_y = 0;
+    core_escape(false);
+}
+
+function camera_rotate(degrees, id){
+    webgl_camera_rotate({
+      'character': id || webgl_character_id,
+      'set': true,
+      'y': degrees,
+    });
+}
+
 function distance_destination(character){
     return math_distance({
       'x0': character.position_x,
@@ -508,12 +530,15 @@ function repo_init(){
         'new_game': {
           'onclick': new_game,
         },
+        'camera_reset': {
+          'onclick': camera_reset,
+        },
       },
       'globals': {
         'build_placeholder': '',
         'tech': {},
       },
-      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><br><br>Power: <span class=power></span><br>'
+      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><button id=camera_reset type=button>Reset Camera</button><br><br>Power: <span class=power></span><br>'
         + 'Selected: <span class=selected></span><br>'
         + 'Life: <span class=life></span>/<span class=life_max></span><br>'
         + 'Speed: <span class=speed></span><br>'
@@ -523,22 +548,22 @@ function repo_init(){
       'keybinds': {
         'ArrowDown': {
           'down': function(){
-              rotate_camera(180);
+              camera_rotate(180);
           },
         },
         'ArrowLeft': {
           'down': function(){
-              rotate_camera(270);
+              camera_rotate(270);
           },
         },
         'ArrowRight': {
           'down': function(){
-              rotate_camera(90);
+              camera_rotate(90);
           },
         },
         'ArrowUp': {
           'down': function(){
-              rotate_camera(0);
+              camera_rotate(0);
           },
         },
       },
@@ -685,14 +710,6 @@ function repo_logic(){
     }
 }
 
-function rotate_camera(degrees, id){
-    webgl_camera_rotate({
-      'character': id || webgl_character_id,
-      'set': true,
-      'y': degrees,
-    });
-}
-
 function select(id){
     const player = webgl_characters[webgl_character_id];
     player.selected = id;
@@ -730,20 +747,17 @@ function team_create({
       'controls': 'rts',
       'id': id,
       'level': -1,
-      'lock': {
-        'camera_rotate_x': 60,
-        'position_y': 5,
-      },
       'power': power,
       'selected': '',
       'spawn': {
+        'camera_rotate_x': 60,
         'position_x': x,
         'position_y': y,
         'position_z': z,
       },
       'speed': 2,
     });
-    rotate_camera(
+    camera_rotate(
       camera,
       id
     );
