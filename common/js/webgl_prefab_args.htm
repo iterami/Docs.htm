@@ -7,7 +7,8 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_prefab_args(args)
 <ul>
-  <li>Function that removes all args that aren't part of default <a href=webgl.htm#entity-properties>entity properties</a> and returns the remaining args applied over the defaults.
+  <li>Removes all args that aren't part of default <a href=webgl.htm#entity-properties>entity properties</a>, applies the remaining args over the defaults, and returns it after additional logic.
+  <li>If if the "picking" property is true, then it is replaced with ++webgl_pick_id for use by pickable prefab entities.
 </ul>
 <table>
   <tr class=header>
