@@ -85,7 +85,7 @@ function distance_destination(character){
       'x1': character.destination_x,
       'y1': character.destination_y,
       'z1': character.destination_z,
-    }) > character.speed
+    }) > character.speed;
 }
 
 function handle_ai(player){
@@ -268,11 +268,12 @@ function load_testmap(){
             'properties': {
               'prefix': 'obstacle',
               'all': {
-                'texture': 'grid.png',
+                'texture': 'lavaleaf.png',
               },
               'bottom': {
                 'exclude': true,
               },
+              'picking': true,
               'position_y': 5,
               'size_x': 20,
               'size_y': 10,
@@ -330,8 +331,6 @@ function make({
     const selected = webgl_characters[player.selected];
 
     const character = tech[type].character;
-    const entity = tech[type].entity;
-
     const id = team + '_' + type + entity_id_count;
     webgl_character_init({
       'id': id,
@@ -354,14 +353,21 @@ function make({
       'team': team,
       'time': time,
       'type': type,
+    });
 
-      'entities': [{
-        ...entity,
-        'id': id,
-        'attach_to': id,
-        'picking': true,
+    const prefab = tech[type].prefab;
+    webgl_primitive_cuboid({
+      ...prefab,
+      'prefix': id,
+      'character': id,
+      'all': {
         'vertex_colors': player.color,
-      }],
+      },
+      'bottom': {
+        'exclude': true
+      },
+      'picking': true,
+      'position_y': y + prefab.size_y / 2,
     });
 
     return id;
@@ -387,6 +393,7 @@ function new_game(){
       {
         'Builder': {
           'character': {
+            'build_radius': 5,
             'builds': [
               'Factory',
               'Turret',
@@ -397,18 +404,22 @@ function new_game(){
             'time': 100,
             'type': 'unit',
           },
-          'entity': {
-            'texture': 'grid.png',
-            'vertices': [
+          'prefab': {
+            'placeholder': [
               3, .03, -3,
               -3, .03, -3,
               -3, .03, 3,
               3, .03, 3,
             ],
+            'size_x': 6,
+            'size_y': 2,
+            'size_z': 6,
+            'texture': 'grid.png',
           },
         },
         'Factory': {
           'character': {
+            'build_radius': 20,
             'builds': ['Builder'],
             'life_max': 1000,
             'power': 1000,
@@ -416,18 +427,22 @@ function new_game(){
             'time': 200,
             'type': 'building',
           },
-          'entity': {
-            'texture': 'grid.png',
-            'vertices': [
+          'prefab': {
+            'placeholder': [
               10, .01, -10,
               -10, .01, -10,
               -10, .01, 10,
               10, .01, 10,
             ],
+            'size_x': 20,
+            'size_y': 10,
+            'size_z': 20,
+            'texture': 'grid.png',
           },
         },
         'Turret': {
           'character': {
+            'build_radius': 10,
             'builds': [],
             'life_max': 500,
             'power': 250,
@@ -435,14 +450,17 @@ function new_game(){
             'time': 150,
             'type': 'building',
           },
-          'entity': {
-            'texture': 'grid.png',
-            'vertices': [
-              5, .02, -5,
-              -5, .02, -5,
-              -5, .02, 5,
-              5, .02, 5,
+          'prefab': {
+            'placeholder': [
+              4, .02, -4,
+              -4, .02, -4,
+              -4, .02, 4,
+              4, .02, 4,
             ],
+            'texture': 'grid.png',
+            'size_x': 8,
+            'size_y': 16,
+            'size_z': 8,
           },
         },
       }
@@ -494,7 +512,7 @@ function placeholder_hide(){
 
 function placeholder_show(id){
     const placeholder = entity_entities._rts_placeholder_build_entity;
-    placeholder.vertices = tech[id].entity.vertices;
+    placeholder.vertices = tech[id].prefab.placeholder;
 
     webgl.bindVertexArray(placeholder.vao);
     webgl_buffer_set({
@@ -639,7 +657,8 @@ function repo_logic(){
 
         const properties = tech[character.type].character;
         if(properties.type === 'building'){
-            if(character.making){
+            if(character.making
+              && character.time > 0){
                 const making = webgl_characters[character.making];
                 if(math_distance({
                     'x0': character.position_x,
@@ -648,21 +667,19 @@ function repo_logic(){
                     'x1': making.position_x,
                     'y1': making.position_y,
                     'z1': making.position_z,
-                  }) < making.speed){
-                    if(character.time > 0){
-                        character.time--;
-                        character.life = Math.min(
-                          character.life + Math.ceil(properties.life_max / properties.time),
-                          character.life_max
-                        );
-                        making.time--;
-                        if(character.time <= 0){
-                            making.destination_x = character.destination_x;
-                            making.destination_y = character.destination_y;
-                            making.destination_z = character.destination_z;
-                            character.making = '';
-                            making.making = '';
-                        }
+                  }) < properties.build_radius){
+                    character.time--;
+                    character.life = Math.min(
+                      character.life + Math.ceil(properties.life_max / properties.time),
+                      character.life_max
+                    );
+                    making.time--;
+                    if(character.time <= 0){
+                        making.destination_x = character.destination_x;
+                        making.destination_y = character.destination_y;
+                        making.destination_z = character.destination_z;
+                        character.making = '';
+                        making.making = '';
                     }
                 }
             }
