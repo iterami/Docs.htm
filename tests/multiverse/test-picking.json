@@ -55,50 +55,6 @@
           ]
         },
         {
-          "id": "pick_blocker_down",
-          "attach_x": 20,
-          "attach_y": 2,
-          "attach_z": -25,
-          "billboard": true,
-          "collision": false,
-          "event_todo": [
-            {
-              "stat": "attach_y",
-              "todo": "pick_blocker",
-              "value": -1
-            }
-          ],
-          "picking": true,
-          "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
-          ]
-        },
-        {
-          "id": "pick_blocker_up",
-          "attach_x": 20,
-          "attach_y": 6,
-          "attach_z": -25,
-          "billboard": true,
-          "collision": false,
-          "event_todo": [
-            {
-              "stat": "attach_y",
-              "todo": "pick_blocker",
-              "value": 1
-            }
-          ],
-          "picking": true,
-          "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
-          ]
-        },
-        {
           "id": "pick_color",
           "attach_y": 10,
           "attach_z": -50,
@@ -138,6 +94,50 @@
           ]
         }
       ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "pick_blocker_down",
+        "collision": false,
+        "event_todo": [
+          {
+            "stat": "attach_y",
+            "todo": "pick_blocker",
+            "value": -1
+          }
+        ],
+        "picking": true,
+        "position_x": 25,
+        "position_y": 7,
+        "position_z": -25,
+        "size_x": 4,
+        "size_y": 4,
+        "size_z": 4
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "pick_blocker_up",
+        "collision": false,
+        "event_todo": [
+          {
+            "stat": "attach_y",
+            "todo": "pick_blocker",
+            "value": 1
+          }
+        ],
+        "picking": true,
+        "position_x": 20,
+        "position_y": 7,
+        "position_z": -25,
+        "size_x": 4,
+        "size_y": 4,
+        "size_z": 4
+      }
     }
   ]
 }
