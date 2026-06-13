@@ -57,18 +57,14 @@ function load_cave(){
                   },
                 ],
                 'texture': 'door.png',
-                'vertex_colors': [
-                  1, 1, 1, 1,
-                ],
+                'vertex_colors': [1, 1, 1, 1,],
               },
               'position_y': 10,
               'size_x': -20,
               'size_y': -20,
               'size_z': -20,
               'texture': 'lavaleaf.png',
-              'vertex_colors': [
-                .3, .3, .3, 1,
-              ],
+              'vertex_colors': [.3, .3, .3, 1,],
             },
           },
         ],
@@ -107,9 +103,7 @@ function load_skymap(spawn){
               },
             },
           ],
-          'vertex_colors': [
-            .7, .7, 0, 1,
-          ],
+          'vertex_colors': [.7, .7, 0, 1,],
           'vertices': [
             1, 1, -0,
             -1, 1, -0,
@@ -138,9 +132,7 @@ function load_skymap(spawn){
               },
             },
           ],
-          'vertex_colors': [
-            .2, .4, 8, 1,
-          ],
+          'vertex_colors': [.2, .4, 8, 1,],
           'vertices': [
             1, 1, -0,
             -1, 1, -0,
@@ -178,9 +170,7 @@ function load_skymap(spawn){
           ],
           'texture': 'key.png',
           'texture_align': '00101101',
-          'vertex_colors': [
-            1, 1, 1, 1,
-          ],
+          'vertex_colors': [1, 1, 1, 1,],
           'vertices': [
             2, 2, -0,
             -2, 2, -0,
@@ -271,9 +261,7 @@ function load_skymap(spawn){
                 'rotate_z': 270,
                 'texture': 'door.png',
                 'texture_align': '10110100',
-                'vertex_colors': [
-                  1, 1, 1, 1,
-                ],
+                'vertex_colors': [1, 1, 1, 1,],
                 'vertices': [
                   10, 0, -10,
                   -10, 0, -10,
@@ -287,9 +275,7 @@ function load_skymap(spawn){
                 'attach_z': -100,
                 'rotate_x': 90,
                 'texture': 'grid.png',
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
+                'vertex_colors': [.5, .5, .5, 1,],
                 'vertices': [
                   30, 0, -20,
                   -30, 0, -20,
@@ -316,9 +302,7 @@ function load_skymap(spawn){
                     },
                   },
                 ],
-                'vertex_colors': [
-                  0, .7, 0, 1,
-                ],
+                'vertex_colors': [0, .7, 0, 1,],
                 'vertices': [
                   1, 1, -0,
                   -1, 1, -0,
@@ -371,9 +355,7 @@ function load_skymap(spawn){
                     'value': -1,
                   },
                 ],
-                'vertex_colors': [
-                  .7, 0, 0, 1,
-                ],
+                'vertex_colors': [.7, 0, 0, 1,],
                 'vertices': [
                   1, 1, -0,
                   -1, 1, -0,
@@ -401,9 +383,7 @@ function load_skymap(spawn){
                 'id': 'wallmoving_0',
                 'rotate_x': 90,
                 'texture': 'grid.png',
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
+                'vertex_colors': [.5, .5, .5, 1,],
                 'vertices': [
                   20, 0, -10,
                   -20, 0, -10,
@@ -486,13 +466,9 @@ function prefab_platform(args){
         'texture': 'grid.png',
         'texture_x': Math.floor(args.size_x / 10),
         'texture_y': Math.floor(args.size_z / 10),
-        'vertex_colors': [
-          .5, .5, .5, 1,
-        ],
+        'vertex_colors': [.5, .5, .5, 1,],
       },
-      'vertex_colors': [
-        .2, .2, .2, 1,
-      ],
+      'vertex_colors': [.2, .2, .2, 1,],
     });
 }
 

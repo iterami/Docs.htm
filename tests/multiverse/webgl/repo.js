@@ -194,9 +194,7 @@ function new_game(){
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 10,
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
+                'vertex_colors': [.5, .5, .5, 1,],
                 'vertices': [
                   50, 0, -50,
                   -50, 0, -50,

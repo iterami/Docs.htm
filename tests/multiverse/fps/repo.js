@@ -52,9 +52,7 @@ function load_bridge(){
                 'texture': 'grid.png',
                 'texture_x': 2,
                 'texture_y': 10,
-                'vertex_colors': [
-                  .8, .4, 0, 1,
-                ],
+                'vertex_colors': [.8, .4, 0, 1,],
                 'vertices': [
                   10, 0, -50,
                   -10, 0, -50,
@@ -81,9 +79,7 @@ function load_bridge(){
                     },
                   },
                 ],
-                'vertex_colors': [
-                  0, .7, 0, 1,
-                ],
+                'vertex_colors': [0, .7, 0, 1,],
                 'vertices': [
                   1, 1, -0,
                   -1, 1, -0,
@@ -111,9 +107,7 @@ function load_bridge(){
                     },
                   },
                 ],
-                'vertex_colors': [
-                  .2, .4, 8, 1,
-                ],
+                'vertex_colors': [.2, .4, 8, 1,],
                 'vertices': [
                   1, 1, -0,
                   -1, 1, -0,
@@ -140,9 +134,7 @@ function load_bridge(){
                     },
                   },
                 ],
-                'vertex_colors': [
-                  .7, 0, 0, 1,
-                ],
+                'vertex_colors': [.7, 0, 0, 1,],
                 'vertices': [
                   1, 1, -0,
                   -1, 1, -0,
@@ -174,9 +166,7 @@ function load_bridge(){
                 'texture_x': 10,
                 'texture_y': 6,
               },
-              'vertex_colors': [
-                .5, .5, .5, 1,
-              ],
+              'vertex_colors': [.5, .5, .5, 1,],
             },
           },
           {
@@ -193,9 +183,7 @@ function load_bridge(){
                 'texture_x': 10,
                 'texture_y': 6,
               },
-              'vertex_colors': [
-                .5, .5, .5, 1,
-              ],
+              'vertex_colors': [.5, .5, .5, 1,],
             },
           },
         ],

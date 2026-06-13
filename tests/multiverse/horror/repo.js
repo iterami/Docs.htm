@@ -42,9 +42,7 @@ function load_hallway(){
                 'texture_x': 3,
                 'texture_y': 40,
               },
-              'vertex_colors': [
-                .4, .4, .4, 1,
-              ],
+              'vertex_colors': [.4, .4, .4, 1,],
             },
           },
           {
@@ -65,9 +63,7 @@ function load_hallway(){
                 'texture_x': 23,
                 'texture_y': 3,
               },
-              'vertex_colors': [
-                .4, .4, .4, 1,
-              ],
+              'vertex_colors': [.4, .4, .4, 1,],
             },
           },
           {
@@ -85,9 +81,7 @@ function load_hallway(){
                 'texture_x': 10,
                 'texture_y': 10,
               },
-              'vertex_colors': [
-                .4, .4, .4, 1,
-              ],
+              'vertex_colors': [.4, .4, .4, 1,],
             },
           },
         ],
