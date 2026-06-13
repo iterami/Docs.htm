@@ -277,14 +277,6 @@ function load_testtrack(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_0',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-                'texture': 'grid.png',
-                'texture_x': 3,
-                'texture_y': 3,
-              },
               'bottom': {
                 'exclude': true,
               },
@@ -293,20 +285,18 @@ function load_testtrack(){
               'size_x': 20,
               'size_y': 100,
               'size_z': 500,
+              'texture': 'grid.png',
+              'texture_x': 3,
+              'texture_y': 3,
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_1',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-                'texture': 'grid.png',
-                'texture_x': 3,
-                'texture_y': 3,
-              },
               'bottom': {
                 'exclude': true,
               },
@@ -319,20 +309,18 @@ function load_testtrack(){
               'size_x': 250,
               'size_y': 20,
               'size_z': 20,
+              'texture': 'grid.png',
+              'texture_x': 3,
+              'texture_y': 3,
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_2',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-                'texture': 'grid.png',
-                'texture_x': 3,
-                'texture_y': 3,
-              },
               'bottom': {
                 'exclude': true,
               },
@@ -341,20 +329,18 @@ function load_testtrack(){
               'size_x': 250,
               'size_y': 20,
               'size_z': 20,
+              'texture': 'grid.png',
+              'texture_x': 3,
+              'texture_y': 3,
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_3',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-                'texture': 'grid.png',
-                'texture_x': 3,
-                'texture_y': 3,
-              },
               'bottom': {
                 'exclude': true,
               },
@@ -367,6 +353,12 @@ function load_testtrack(){
               'size_x': 250,
               'size_y': 20,
               'size_z': 20,
+              'texture': 'grid.png',
+              'texture_x': 3,
+              'texture_y': 3,
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
         ],

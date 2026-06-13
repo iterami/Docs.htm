@@ -47,12 +47,6 @@ function load_cave(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'cave',
-              'all': {
-                'vertex_colors': [
-                  .3, .3, .3, 1,
-                ],
-                'texture': 'lavaleaf.png',
-              },
               'front': {
                 'event_range': 0,
                 'event_todo': [
@@ -71,6 +65,10 @@ function load_cave(){
               'size_x': -20,
               'size_y': -20,
               'size_z': -20,
+              'texture': 'lavaleaf.png',
+              'vertex_colors': [
+                .3, .3, .3, 1,
+              ],
             },
           },
         ],
@@ -484,11 +482,6 @@ function new_game(){
 function prefab_platform(args){
     webgl_primitive_cuboid({
       ...args,
-      'all': {
-        'vertex_colors': [
-          .2, .2, .2, 1,
-        ],
-      },
       'top': {
         'texture': 'grid.png',
         'texture_x': Math.floor(args.size_x / 10),
@@ -497,6 +490,9 @@ function prefab_platform(args){
           .5, .5, .5, 1,
         ],
       },
+      'vertex_colors': [
+        .2, .2, .2, 1,
+      ],
     });
 }
 

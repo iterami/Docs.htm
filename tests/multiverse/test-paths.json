@@ -581,14 +581,12 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "path_rotate_user_body",
-        "all": {
-          "collision": false,
-          "texture": "grid.png"
-        },
         "character": "path_rotate_user",
+        "collision": false,
         "size_x": 1,
         "size_y": 1,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "grid.png"
       }
     },
     {

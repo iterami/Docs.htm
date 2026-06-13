@@ -154,17 +154,15 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid",
-        "all": {
-          "texture": "grid.png",
-          "texture_x": 10,
-          "texture_y": 10
-        },
         "bottom": {
           "collision": false
         },
         "size_x": -200,
         "size_y": -20,
-        "size_z": -200
+        "size_z": -200,
+        "texture": "grid.png",
+        "texture_x": 10,
+        "texture_y": 10
       }
     },
     {

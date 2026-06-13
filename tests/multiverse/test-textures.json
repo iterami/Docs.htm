@@ -222,362 +222,318 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "boost",
-        "all": {
-          "collision": false,
-          "texture": "boost.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "boost.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "debug",
-        "all": {
-          "collision": false,
-          "texture": "debug.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -10,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "debug.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "default",
-        "all": {
-          "collision": false,
-          "texture": "default.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "default.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "door",
-        "all": {
-          "collision": false,
-          "texture": "door.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 10,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "door.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "goal",
-        "all": {
-          "collision": false,
-          "texture": "goal.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 20,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "goal.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "grid",
-        "all": {
-          "collision": false,
-          "texture": "grid.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 10,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "grid.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "key",
-        "all": {
-          "alpha": 0.999999,
-          "collision": false,
-          "texture": "key.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "alpha": 0.999999,
+        "collision": false,
         "position_x": -10,
         "position_y": 10,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "key.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "lavaleaf",
-        "all": {
-          "collision": false,
-          "texture": "lavaleaf.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_y": 10,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "lavaleaf.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "stone",
-        "all": {
-          "collision": false,
-          "texture": "stone.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 10,
         "position_y": 10,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "stone.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "wall",
-        "all": {
-          "collision": false,
-          "texture": "wall.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 20,
         "position_y": 10,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "wall.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "wood",
-        "all": {
-          "collision": false,
-          "texture": "wood.png",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 10,
         "position_z": -20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "wood.png",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "boost_animated",
-        "all": {
-          "collision": false,
-          "texture": "boost.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "boost.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "debug_animated",
-        "all": {
-          "collision": false,
-          "texture": "debug.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -10,
         "position_y": 20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "debug.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "default_animated",
-        "all": {
-          "collision": false,
-          "texture": "default.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_y": 20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "default.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "door_animated",
-        "all": {
-          "collision": false,
-          "texture": "door.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 10,
         "position_y": 20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "door.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "goal_animated",
-        "all": {
-          "collision": false,
-          "texture": "goal.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 20,
         "position_y": 20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "goal.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "grid_animated",
-        "all": {
-          "collision": false,
-          "texture": "grid.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 20,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "grid.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "key_animated",
-        "all": {
-          "alpha": 0.999999,
-          "collision": false,
-          "texture": "key.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "alpha": 0.999999,
+        "collision": false,
         "position_x": -10,
         "position_y": 20,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "key.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "lavaleaf_animated",
-        "all": {
-          "collision": false,
-          "texture": "lavaleaf.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_y": 20,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "lavaleaf.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "stone_animated",
-        "all": {
-          "collision": false,
-          "texture": "stone.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 10,
         "position_y": 20,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "stone.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "wall_animated",
-        "all": {
-          "collision": false,
-          "texture": "wall.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": 20,
         "position_y": 20,
         "position_z": -10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "wall.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "wood_animated",
-        "all": {
-          "collision": false,
-          "texture": "wood.png,.1",
-          "vertex_colors": [1, 1, 1, 1]
-        },
+        "collision": false,
         "position_x": -20,
         "position_y": 20,
         "position_z": -20,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "texture": "wood.png,.1",
+        "vertex_colors": [1, 1, 1, 1]
       }
     }
   ]

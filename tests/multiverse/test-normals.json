@@ -44,29 +44,25 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid",
-        "all": {
-          "collision": false,
-          "vertex_colors": [0.5, 0.5, 0.5, 1]
-        },
+        "collision": false,
         "position_x": -10,
         "position_y": 10,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid_rotating",
-        "all": {
-          "collision": false,
-          "vertex_colors": [0.5, 0.5, 0.5, 1]
-        },
         "character": "cuboid_rotating",
+        "collision": false,
         "size_x": 5,
         "size_y": 5,
-        "size_z": 5
+        "size_z": 5,
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
       }
     }
   ]

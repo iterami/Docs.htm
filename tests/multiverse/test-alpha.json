@@ -31,45 +31,39 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "transparent_inner",
-        "all": {
-          "alpha": 0.5,
-          "collision": false,
-          "texture": "grid.png"
-        },
+        "alpha": 0.5,
+        "collision": false,
         "position_y": 20,
         "size_x": 10,
         "size_y": 10,
-        "size_z": 10
+        "size_z": 10,
+        "texture": "grid.png"
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "transparent_outer",
-        "all": {
-          "alpha": 0.5,
-          "collision": false,
-          "texture": "grid.png"
-        },
+        "alpha": 0.5,
+        "collision": false,
         "position_y": 20,
         "size_x": 17,
         "size_y": 17,
-        "size_z": 17
+        "size_z": 17,
+        "texture": "grid.png"
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "solid",
-        "all": {
-          "alpha": 0.5,
-          "collision": false,
-          "texture": "grid.png"
-        },
+        "alpha": 0.5,
+        "collision": false,
         "position_y": 20,
         "size_x": 24,
         "size_y": 24,
-        "size_z": 24
+        "size_z": 24,
+        "texture": "grid.png"
       }
     }
   ]

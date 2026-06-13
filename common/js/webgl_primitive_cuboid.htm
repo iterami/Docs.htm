@@ -8,20 +8,15 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_primitive_cuboid(args)
 <ul>
   <li>Creates a cuboid primitive with specified properties.
-  <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
+  <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>. These properties are applied to every side.
+  <li>Properties can be applied to specific sides via properties within the back, bottom, front, left, right, and top objects. Setting "exclude" to true within any of these objects prevents that side from being created.
   <li>Position is the center of the cuboid.
-  <li>Each side can overwrite any of the properties applied to "all", or can be not created by setting "exclude" to true.
-  <li>If the "vertex_colors" property of a side is empty then a random color will be used.
 </ul>
 <table>
   <tr class=header>
     <td>Arg
     <td>Default
     <td>Type
-  <tr>
-    <td>all
-    <td>{}
-    <td>object
   <tr>
     <td>back
     <td>{}

@@ -267,9 +267,6 @@ function load_testmap(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'obstacle',
-              'all': {
-                'texture': 'lavaleaf.png',
-              },
               'bottom': {
                 'exclude': true,
               },
@@ -278,6 +275,7 @@ function load_testmap(){
               'size_x': 20,
               'size_y': 10,
               'size_z': 20,
+              'texture': 'lavaleaf.png',
             },
           },
         ],
@@ -360,14 +358,12 @@ function make({
       ...prefab,
       'prefix': id,
       'character': id,
-      'all': {
-        'vertex_colors': player.color,
-      },
       'bottom': {
         'exclude': true
       },
       'picking': true,
       'position_y': y + prefab.size_y / 2,
+      'vertex_colors': player.color,
     });
 
     return id;

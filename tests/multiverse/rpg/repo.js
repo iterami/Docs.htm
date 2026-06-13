@@ -301,18 +301,16 @@ function load_cave(id){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'cave',
-              'all': {
-                'texture': 'lavaleaf.png',
-                'texture_x': 1 + core_random_integer(3),
-                'texture_y': 1 + core_random_integer(3),
-                'vertex_colors': [
-                  1, 1, 1, 1,
-                ],
-              },
               'position_y': 25,
               'size_x': -cave_width,
               'size_y': -50,
               'size_z': -cave_length - cave_offset * 2 - 10,
+              'texture': 'lavaleaf.png',
+              'texture_x': 1 + core_random_integer(3),
+              'texture_y': 1 + core_random_integer(3),
+              'vertex_colors': [
+                1, 1, 1, 1,
+              ],
             },
           },
         ],
@@ -477,33 +475,29 @@ function load_town({
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'town',
-              'all': {
-                'texture': 'grid.png',
-                'texture_x': 20,
-                'texture_y': 10,
-                'vertex_colors': [
-                  1, 1, 1, 1,
-                ],
-              },
               'position_x': 50,
               'position_y': 25,
               'position_z': -25,
               'size_x': -200,
               'size_y': -50,
               'size_z': -100,
+              'texture': 'grid.png',
+              'texture_x': 20,
+              'texture_y': 10,
+              'vertex_colors': [
+                1, 1, 1, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'platform',
-              'all': {
-                'texture': 'grid.png',
-              },
               'character': 'platform',
               'size_x': 10,
               'size_y': 1,
               'size_z': 10,
+              'texture': 'grid.png',
             },
           },
           {
@@ -731,12 +725,7 @@ function skill_use(id){
 
 function spike_model(id, range, xz, y){
     return {
-      'all': {
-        'collision': false,
-        'vertex_colors': [
-          1, 0, 0, 1,
-        ],
-      },
+      'collision': false,
       'top': {
         'event_range': range,
         'event_todo': [
@@ -757,6 +746,9 @@ function spike_model(id, range, xz, y){
           },
         ],
       },
+      'vertex_colors': [
+        1, 0, 0, 1,
+      ],
     };
 }
 

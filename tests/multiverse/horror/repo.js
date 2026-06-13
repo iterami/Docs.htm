@@ -27,12 +27,6 @@ function load_hallway(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'hallway_0',
-              'all': {
-                'vertex_colors': [
-                  .4, .4, .4, 1,
-                ],
-                'texture': 'grid.png',
-              },
               'back': {
                 'exclude': true,
               },
@@ -43,22 +37,20 @@ function load_hallway(){
               'size_x': -6,
               'size_y': -6,
               'size_z': -80,
+              'texture': 'grid.png',
               'top': {
                 'texture_x': 3,
                 'texture_y': 40,
               },
+              'vertex_colors': [
+                .4, .4, .4, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'hallway_1',
-              'all': {
-                'vertex_colors': [
-                  .4, .4, .4, 1,
-                ],
-                'texture': 'grid.png',
-              },
               'left': {
                 'exclude': true,
               },
@@ -68,32 +60,34 @@ function load_hallway(){
               'size_x': -46,
               'size_y': -6,
               'size_z': -6,
+              'texture': 'grid.png',
               'top': {
                 'texture_x': 23,
                 'texture_y': 3,
               },
+              'vertex_colors': [
+                .4, .4, .4, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'room_1',
-              'all': {
-                'vertex_colors': [
-                  .4, .4, .4, 1,
-                ],
-                'texture': 'grid.png',
-              },
               'position_x': 63,
               'position_y': 12,
               'position_z': -45,
               'size_x': -40,
               'size_y': -20,
               'size_z': -40,
+              'texture': 'grid.png',
               'top': {
                 'texture_x': 10,
                 'texture_y': 10,
               },
+              'vertex_colors': [
+                .4, .4, .4, 1,
+              ],
             },
           },
         ],

@@ -37,28 +37,24 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid",
-        "all": {
-          "texture": "debug.png"
-        },
         "position_x": -10,
         "position_y": 15,
         "size_x": 5,
         "size_y": 10,
-        "size_z": 15
+        "size_z": 15,
+        "texture": "debug.png"
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cuboid_inverse",
-        "all": {
-          "texture": "debug.png"
-        },
         "position_x": 10,
         "position_y": 15,
         "size_x": -5,
         "size_y": -10,
-        "size_z": -15
+        "size_z": -15,
+        "texture": "debug.png"
       }
     }
   ]

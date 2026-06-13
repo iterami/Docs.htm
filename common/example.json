@@ -231,7 +231,6 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "example_cuboid",
-        "all": {},
         "back": {},
         "bottom": {},
         "character": "world_static",

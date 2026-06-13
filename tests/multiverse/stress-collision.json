@@ -37,9 +37,7 @@
                 "characters": true,
                 "count": 100,
                 "properties": {
-                  "all": {
-                    "draw": false
-                  }
+                  "draw": false
                 },
                 "type": "webgl_primitive_cuboid"
               }

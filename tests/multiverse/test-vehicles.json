@@ -372,16 +372,14 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "start",
-        "all": {
-          "texture": "grid.png"
-        },
         "bottom": {
           "exclude": true
         },
         "position_y": -10,
         "size_x": 100,
         "size_y": 20,
-        "size_z": 100
+        "size_z": 100,
+        "texture": "grid.png"
       }
     }
   ]

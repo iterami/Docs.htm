@@ -165,11 +165,6 @@ function load_bridge(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'blue',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-              },
               'position_y': -5,
               'size_x': 100,
               'size_y': 10,
@@ -179,17 +174,15 @@ function load_bridge(){
                 'texture_x': 10,
                 'texture_y': 6,
               },
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'red',
-              'all': {
-                'vertex_colors': [
-                  .5, .5, .5, 1,
-                ],
-              },
               'position_y': -5,
               'position_z': -160,
               'size_x': 100,
@@ -200,6 +193,9 @@ function load_bridge(){
                 'texture_x': 10,
                 'texture_y': 6,
               },
+              'vertex_colors': [
+                .5, .5, .5, 1,
+              ],
             },
           },
         ],
