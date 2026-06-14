@@ -268,7 +268,7 @@ function load_testmap(){
               'position_y': 5,
               'size_x': 20,
               'size_y': 10,
-              'size_z': 20,
+              'size_z': 100,
               'texture': 'lavaleaf.png',
             },
           },
@@ -304,11 +304,13 @@ function load_testmap(){
       ...spawn_properties,
       ...core_random_splice(spawns),
     });
-    team_create({
-      'id': 'Enemy',
-      ...spawn_properties,
-      ...core_random_splice(spawns),
-    });
+    for(let team = 0; team < core_storage_data.enemies; team++){
+        team_create({
+          'id': 'Enemy' + team,
+          ...spawn_properties,
+          ...core_random_splice(spawns),
+        });
+    }
 }
 
 function make({
@@ -468,7 +470,7 @@ function new_game(){
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
-            'innerHTML': id + '<br>' + properties.type + '<br>Power ' + properties.power + '<br>Time ' + properties.time,
+            'innerHTML': id + ' ' + properties.power + 'power ' + properties.time + 'time',
             'onclick': function(){
                 if(build_placeholder === id){
                     placeholder_hide();
@@ -594,7 +596,11 @@ function repo_init(){
         },
       },
       'root': '../../webgl-standalone.htm',
+      'storage': {
+        'enemies': 3,
+      },
       'storage_controls': true,
+      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies</table>',
       'title': 'Docs.htm',
       'ui': 'Power: <span id=power></span><br>'
         + 'Selected: <span id=selected></span><br>'
@@ -732,7 +738,7 @@ function select(id){
         const builds = tech[webgl_characters[player.selected].type].character.builds;
         for(const id in tech){
             core_elements['build_' + id].style.display = builds.includes(id)
-              ? 'inline-block'
+              ? 'block'
               : 'none';
         }
     }
