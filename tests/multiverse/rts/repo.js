@@ -5,12 +5,12 @@ function attack(character){
 }
 
 function build({
-  build,
   id,
   placeholder,
+  type,
 } = {}){
     const player = webgl_characters[id];
-    const properties = tech[build].character;
+    const properties = tech[type].character;
     if(player.power < properties.power){
         return;
     }
@@ -21,7 +21,7 @@ function build({
     }
 
     if(placeholder === true){
-        placeholder_show(build);
+        placeholder_show(type);
         return;
     }
 
@@ -42,17 +42,15 @@ function build({
         selected.destination_z = z;
     }
 
-    player.power -= properties.power;
-    const making = make({
+    selected.making = make({
+      'power': properties.power,
       'team': player.id,
       'time': properties.time,
-      'type': build,
+      'type': type,
       'x': x,
       'y': y,
       'z': z,
     });
-    selected.making = making;
-    selected.time = properties.time;
 }
 
 function camera_reset(){
@@ -67,14 +65,6 @@ function camera_reset(){
     player.rotate_x = 0;
     player.rotate_y = 0;
     core_escape(false);
-}
-
-function camera_rotate(degrees, id){
-    webgl_camera_rotate({
-      'character': id || webgl_character_id,
-      'set': true,
-      'y': degrees,
-    });
 }
 
 function distance_destination(character){
@@ -103,8 +93,8 @@ function handle_picking(event){
     if(build_placeholder.length){
         if(button === 0){
             build({
-              'build': build_placeholder,
               'id': webgl_character_id,
+              'type': build_placeholder,
             });
 
         }else if(button === 1){
@@ -281,12 +271,10 @@ function load_testmap(){
     };
     const spawns = [
       {
-        'camera': 90,
         'x': -75,
         'z': -75,
       },
       {
-        'camera': 180,
         'x': 75,
         'z': -75,
       },
@@ -295,7 +283,6 @@ function load_testmap(){
         'z': 75,
       },
       {
-        'camera': 270,
         'x': 75,
         'z': 75,
       },
@@ -314,28 +301,39 @@ function load_testmap(){
 }
 
 function make({
+  power = 0,
   team,
-  time,
+  time = 0,
   type,
   x = 0,
   y = 0,
   z = 0,
 } = {}){
+    const character = tech[type].character;
     const player = webgl_characters[team];
+    const prefab = tech[type].prefab;
     const selected = webgl_characters[player.selected];
 
-    const character = tech[type].character;
+    player.power -= power;
+    if(selected){
+        selected.time = time;
+    }
+
     const id = team + '_' + type + entity_id_count;
     webgl_character_init({
       'id': id,
+      'collide_bottom': 0,
+      'collide_xy': prefab.size_x / 2,
       'collides': true,
+      'controls': 'rpg',
+      'gravity': 1,
       'level': 0,
       'life': time > 0 ? 1 : character.life_max,
-      'spawn': {
-        'position_x': x,
-        'position_y': y,
-        'position_z': z,
-      },
+      'lives': 1,
+      'position_x': x,
+      'position_y': y,
+      'position_z': z,
+      'spawn': false,
 
       ...character,
       'destination_x': x,
@@ -348,8 +346,6 @@ function make({
       'time': time,
       'type': type,
     });
-
-    const prefab = tech[type].prefab;
     webgl_primitive_cuboid({
       ...prefab,
       'prefix': id,
@@ -392,7 +388,7 @@ function new_game(){
             ],
             'life_max': 100,
             'power': 100,
-            'speed': .5,
+            'speed': .2,
             'time': 100,
             'type': 'unit',
           },
@@ -478,9 +474,9 @@ function new_game(){
                 }
 
                 build({
-                  'build': id,
                   'id': webgl_character_id,
                   'placeholder': properties.type === 'building',
+                  'type': id,
                 });
             },
             'style': 'display:none',
@@ -537,46 +533,25 @@ function repo_init(){
         },
       },
       'events': {
-        'new_game': {
-          'onclick': new_game,
-        },
         'camera_reset': {
           'onclick': camera_reset,
+        },
+        'new_game': {
+          'onclick': new_game,
         },
       },
       'globals': {
         'build_placeholder': '',
         'tech': {},
       },
-      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><button id=camera_reset type=button>Reset Camera</button><br><br>Power: <span class=power></span><br>'
-        + 'Selected: <span class=selected></span><br>'
-        + 'Life: <span class=life></span>/<span class=life_max></span><br>'
-        + 'Speed: <span class=speed></span><br>'
-        + 'Team: <span class=team></span><br>'
-        + 'Type: <span class=type></span><br>'
-        + 'Making: <span class=making></span> <span class=making_time></span>',
-      'keybinds': {
-        'ArrowDown': {
-          'down': function(){
-              camera_rotate(180);
-          },
-        },
-        'ArrowLeft': {
-          'down': function(){
-              camera_rotate(270);
-          },
-        },
-        'ArrowRight': {
-          'down': function(){
-              camera_rotate(90);
-          },
-        },
-        'ArrowUp': {
-          'down': function(){
-              camera_rotate(0);
-          },
-        },
-      },
+      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><button id=camera_reset type=button>Reset Camera</button><br>'
+        + '<table><tr><td>Power<td class=power>'
+        + '<tr><td>Selected<td class=selected>'
+        + '<tr><td>Life<td><span class=life></span>/<span class=life_max></span>'
+        + '<tr><td>Speed<td class=speed>'
+        + '<tr><td>Team<td class=team>'
+        + '<tr><td>Type<td class=type>'
+        + '<tr><td>Making<td><span class=making></span> <span class=making_time></span></table>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},
@@ -602,13 +577,13 @@ function repo_init(){
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies</table>',
       'title': 'Docs.htm',
-      'ui': 'Power: <span id=power></span><br>'
-        + 'Selected: <span id=selected></span><br>'
-        + 'Life: <span id=life></span>/<span id=life_max></span><br>'
-        + 'Speed: <span id=speed></span><br>'
-        + 'Team: <span id=team></span><br>'
-        + 'Type: <span id=type></span><br>'
-        + 'Making: <span id=making></span> <span id=making_time></span>'
+      'ui': '<table><tr><td>Power<td id=power>'
+        + '<tr><td>Selected<td id=selected>'
+        + '<tr><td>Life<td><span id=life></span>/<span id=life_max></span>'
+        + '<tr><td>Speed<td id=speed>'
+        + '<tr><td>Team<td id=team>'
+        + '<tr><td>Type<td id=type>'
+        + '<tr><td>Making<td><span id=making></span> <span id=making_time></span></table>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
       'ui_elements': [
@@ -630,7 +605,7 @@ function repo_logic(){
     const player = webgl_characters[webgl_character_id];
     const selected = webgl_characters[player.selected];
 
-    if(player.selected){
+    if(selected?.team === player.id){
         const placeholder = webgl_characters._rts_placeholder_move;
         placeholder.position_x = selected.destination_x;
         placeholder.position_y = selected.destination_y;
@@ -745,7 +720,6 @@ function select(id){
 }
 
 function team_create({
-  camera = 0,
   id = webgl_character_id,
   power = 0,
   x = 0,
@@ -770,13 +744,8 @@ function team_create({
       },
       'speed': 2,
     });
-    camera_rotate(
-      camera,
-      id
-    );
     make({
       'team': id,
-      'time': 0,
       'type': 'Builder',
       'x': x,
       'y': y,
