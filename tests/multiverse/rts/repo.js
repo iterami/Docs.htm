@@ -53,20 +53,6 @@ function build({
     });
 }
 
-function camera_reset(){
-    const player = webgl_characters[webgl_character_id];
-    if(!player){
-        return;
-    }
-
-    player.camera_rotate_x = 60;
-    player.camera_rotate_y = 0;
-    player.camera_zoom = 50;
-    player.rotate_x = 0;
-    player.rotate_y = 0;
-    core_escape(false);
-}
-
 function distance_destination(character){
     return math_distance({
       'x0': character.position_x,
@@ -534,7 +520,7 @@ function repo_init(){
       },
       'events': {
         'camera_reset': {
-          'onclick': camera_reset,
+          'onclick': webgl_character_spawn,
         },
         'new_game': {
           'onclick': new_game,
@@ -544,7 +530,7 @@ function repo_init(){
         'build_placeholder': '',
         'tech': {},
       },
-      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><button id=camera_reset type=button>Reset Camera</button><br>'
+      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><br>'
         + '<table><tr><td>Power<td class=power>'
         + '<tr><td>Selected<td class=selected>'
         + '<tr><td>Life<td><span class=life></span>/<span class=life_max></span>'
@@ -577,7 +563,8 @@ function repo_init(){
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies</table>',
       'title': 'Docs.htm',
-      'ui': '<table><tr><td>Power<td id=power>'
+      'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
+        + '<table><tr><td>Power<td id=power>'
         + '<tr><td>Selected<td id=selected>'
         + '<tr><td>Life<td><span id=life></span>/<span id=life_max></span>'
         + '<tr><td>Speed<td id=speed>'
