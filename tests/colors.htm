@@ -3,15 +3,14 @@
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
 <title>Color Tests</title>
-<link href=../../common/css/writings.css rel=stylesheet>
+<link href=../../common/css/core.css rel=stylesheet>
 <style>
 body{
-    margin: 0;
+    padding: 0;
 }
 td{
     border: 0;
     height: 9rem;
-    text-align: center;
     vertical-align: middle;
     width: 1%;
 }
@@ -19,13 +18,13 @@ td{
 
 <table>
   <tr>
-    <td style=background:#000><a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Colors<br><button onclick=update() type=button>Update Colors</button><button onclick=reset() type=button>Reset</button>
+    <td style=background:#000><a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Colors<br><button class=medium onclick=update() type=button>Update Colors</button><button class=medium onclick=reset() type=button>Reset</button>
     <td style="background:linear-gradient(90deg,#000 0%,#fff 100%)">
     <td style=background:#fff>
   <tr>
-    <td style=background:#f00><input id=0 maxlength=6 type=text value=f00>
-    <td style=background:#0f0><input id=1 maxlength=6 type=text value=0f0>
-    <td style=background:#00f><input id=2 maxlength=6 type=text value=00f>
+    <td style=background:#f00><input class=mini id=0 maxlength=6 type=text value=f00>
+    <td style=background:#0f0><input class=mini id=1 maxlength=6 type=text value=0f0>
+    <td style=background:#00f><input class=mini id=2 maxlength=6 type=text value=00f>
   <tr>
     <td id=0gradient style="background:linear-gradient(90deg,#f00 0%,#0f0 100%)">
     <td id=1gradient style="background:linear-gradient(90deg,#0f0 0%,#00f 100%)">
@@ -35,9 +34,9 @@ td{
     <td id=4gradient style="background:linear-gradient(90deg,#f0f 0%,#ff0 100%)">
     <td id=5gradient style="background:linear-gradient(90deg,#ff0 0%,#0ff 100%)">
   <tr>
-    <td style=background:#0ff><input id=3 maxlength=6 type=text value=0ff>
-    <td style=background:#f0f><input id=4 maxlength=6 type=text value=f0f>
-    <td style=background:#ff0><input id=5 maxlength=6 type=text value=ff0>
+    <td style=background:#0ff><input class=mini id=3 maxlength=6 type=text value=0ff>
+    <td style=background:#f0f><input class=mini id=4 maxlength=6 type=text value=f0f>
+    <td style=background:#ff0><input class=mini id=5 maxlength=6 type=text value=ff0>
 </table>
 
 <script>
