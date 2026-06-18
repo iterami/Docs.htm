@@ -3,13 +3,12 @@
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
 <title>Color Tests</title>
-<link href=../../common/css/core.css rel=stylesheet>
+<link href=../../common/css/writings.css rel=stylesheet>
 <style>
 body{
-    padding-top: 0;
+    margin: 0;
 }
 td{
-    color: #000;
     border: 0;
     height: 9rem;
     width: 1%;
@@ -18,23 +17,49 @@ td{
 
 <table>
   <tr>
-    <td style=background:#000;color:#fff><a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Colors<br>#000
+    <td style=background:#000><a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Colors<br><button onclick=update() type=button>Update Colors</button><button onclick=reset() type=button>Reset</button>
     <td style="background-image:linear-gradient(90deg,#000 0%,#fff 100%)">
-    <td style=background:#fff>#fff
+    <td style=background:#fff>
   <tr>
-    <td style=background:#f00>#f00
-    <td style=background:#0f0>#0f0
-    <td style=background:#00f;color:#fff>#00f
+    <td style=background:#f00><input id=0 maxlength=6 type=text value=f00>
+    <td style=background:#0f0><input id=1 maxlength=6 type=text value=0f0>
+    <td style=background:#00f><input id=2 maxlength=6 type=text value=00f>
   <tr>
-    <td style="background-image:linear-gradient(90deg,#f00 0%,#0f0 100%)">
-    <td style="background-image:linear-gradient(90deg,#0f0 0%,#00f 100%)">
-    <td style="background-image:linear-gradient(90deg,#00f 0%,#f00 100%)">
+    <td id=0gradient style="background-image:linear-gradient(90deg,#f00 0%,#0f0 100%)">
+    <td id=1gradient style="background-image:linear-gradient(90deg,#0f0 0%,#00f 100%)">
+    <td id=2gradient style="background-image:linear-gradient(90deg,#00f 0%,#f00 100%)">
   <tr>
-    <td style=background:#0ff>#0ff
-    <td style=background:#f0f>#f0f
-    <td style=background:#ff0>#ff0
+    <td style=background:#0ff><input id=3 maxlength=6 type=text value=0ff>
+    <td style=background:#f0f><input id=4 maxlength=6 type=text value=f0f>
+    <td style=background:#ff0><input id=5 maxlength=6 type=text value=ff0>
   <tr>
-    <td style="background-image:linear-gradient(90deg,#0ff 0%,#f0f 100%)">
-    <td style="background-image:linear-gradient(90deg,#f0f 0%,#ff0 100%)">
-    <td style="background-image:linear-gradient(90deg,#ff0 0%,#0ff 100%)">
+    <td id=3gradient style="background-image:linear-gradient(90deg,#0ff 0%,#f0f 100%)">
+    <td id=4gradient style="background-image:linear-gradient(90deg,#f0f 0%,#ff0 100%)">
+    <td id=5gradient style="background-image:linear-gradient(90deg,#ff0 0%,#0ff 100%)">
 </table>
+
+<script>
+function reset(){
+    if(!globalThis.confirm('Reset colors?')){
+        return;
+    }
+
+    const colors = ['f00', '0f0', '00f', '0ff', 'f0f', 'ff0'];
+    for(const i in colors){
+        document.getElementById(i).value = colors[i];
+    }
+    update();
+}
+
+function update(){
+    for(let i = 0; i < 6; i++){
+        const input = document.getElementById(i);
+        input.parentElement.style.background = '#' + input.value;
+
+        const next = document.getElementById(i < 3
+          ? (i === 2 ? 0 : i + 1)
+          : (i === 5 ? 3 : i + 1));
+        document.getElementById(i + 'gradient').style.backgroundImage = 'linear-gradient(90deg,#' + input.value + ' 0%,#' + next.value + ' 100%)';
+    }
+}
+</script>
