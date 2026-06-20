@@ -14,19 +14,13 @@ function build({
     if(player.power < properties.power){
         return;
     }
-
-    const selected = webgl_characters[player.selected];
-    if(selected.time > 0){
-        return;
-    }
-
     if(placeholder === true){
         placeholder_show(type);
         return;
     }
-
     placeholder_hide();
 
+    const selected = webgl_characters[player.selected];
     let x = webgl_picked_x;
     let y = webgl_picked_y;
     let z = webgl_picked_z;
@@ -83,7 +77,7 @@ function handle_picking(event){
               'type': build_placeholder,
             });
 
-        }else if(button === 1){
+        }else{
             placeholder_hide();
         }
 
@@ -92,9 +86,12 @@ function handle_picking(event){
 
     const player = webgl_characters[webgl_character_id];
     const selected = webgl_characters[player.selected];
-    if(button === 2
-      && !selected){
-        return;
+    if(button === 2){
+        if(!selected
+          || selected.team !== player.id
+          || selected.id === selected.making){
+            return;
+        }
     }
 
     const pixelbuffer = webgl_pick_entity({
@@ -106,12 +103,9 @@ function handle_picking(event){
     const character = webgl_characters[pixelbuffer.picked.attach_to];
 
     if(button === 0){
-        select(character.team ? character.id : '');
+        select(character.id);
 
-    }else if(character
-      && button === 2
-      && selected.team === player.id
-      && selected.id !== selected.making){
+    }else if(button === 2){
         if(selected.id === character.id){
             selected.destination_x = selected.position_x;
             selected.destination_y = selected.position_y;
@@ -501,11 +495,13 @@ function new_game(){
 }
 
 function placeholder_hide(){
-    build_placeholder = '';
-    const placeholder = entity_entities._rts_placeholder_build_entity;
-    if(placeholder){
-        placeholder.draw = false;
+    if(!build_placeholder.length){
+        return;
     }
+
+    entity_entities._rts_placeholder_build_entity.draw = false;
+    core_elements['build_' + build_placeholder].blur();
+    build_placeholder = '';
 }
 
 function placeholder_show(id){
@@ -664,11 +660,13 @@ function repo_logic(){
                       character.life + Math.ceil(properties.life_max / properties.time),
                       character.life_max
                     );
+
+                    making.destination_x = making.position_x;
+                    making.destination_y = making.position_y;
+                    making.destination_z = making.position_z;
                     making.time--;
+
                     if(character.time <= 0){
-                        making.destination_x = character.destination_x;
-                        making.destination_y = character.destination_y;
-                        making.destination_z = character.destination_z;
                         character.making = '';
                         making.making = '';
 
