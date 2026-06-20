@@ -380,106 +380,10 @@ function new_game(){
 
     placeholder_hide();
     core_object_reset(tech);
+
     Object.assign(
       tech,
-      {
-        'Builder': {
-          'character': {
-            'build_radius': 5,
-            'builds': [
-              'Factory',
-              'Generator',
-              'Tower',
-            ],
-            'life_max': 100,
-            'power': 100,
-            'speed': .2,
-            'time': 100,
-            'type': 'unit',
-          },
-          'prefab': {
-            'placeholder': [
-              3, .03, -3,
-              -3, .03, -3,
-              -3, .03, 3,
-              3, .03, 3,
-            ],
-            'size_x': 6,
-            'size_y': 2,
-            'size_z': 6,
-            'texture': 'grid.png',
-          },
-        },
-        'Factory': {
-          'character': {
-            'build_radius': 20,
-            'builds': ['Builder'],
-            'life_max': 1000,
-            'power': 1000,
-            'speed': 0,
-            'time': 200,
-            'type': 'building',
-          },
-          'prefab': {
-            'placeholder': [
-              10, .01, -10,
-              -10, .01, -10,
-              -10, .01, 10,
-              10, .01, 10,
-            ],
-            'size_x': 20,
-            'size_y': 10,
-            'size_z': 20,
-            'texture': 'grid.png',
-          },
-        },
-        'Generator': {
-          'character': {
-            'build_radius': 15,
-            'builds': [],
-            'life_max': 250,
-            'power': 100,
-            'speed': 0,
-            'time': 300,
-            'type': 'building',
-          },
-          'prefab': {
-            'placeholder': [
-              5, .01, -5,
-              -5, .01, -5,
-              -5, .01, 5,
-              5, .01, 5,
-            ],
-            'size_x': 10,
-            'size_y': 10,
-            'size_z': 10,
-            'texture': 'grid.png',
-          },
-        },
-        'Tower': {
-          'character': {
-            'build_radius': 10,
-            'builds': [],
-            'life_max': 500,
-            'power': 250,
-            'speed': 0,
-            'time': 150,
-            'type': 'building',
-          },
-          'prefab': {
-            'placeholder': [
-              4, .02, -4,
-              -4, .02, -4,
-              -4, .02, 4,
-              4, .02, 4,
-            ],
-            'texture': 'grid.png',
-            'size_x': 8,
-            'size_y': 16,
-            'size_z': 8,
-          },
-        },
-      }
+      JSON.parse(core_storage_data.tech_tree)
     );
     for(const element in core_elements){
         if(element.startsWith('build_')){
@@ -601,10 +505,106 @@ function repo_init(){
       'storage': {
         'enemies': 3,
         'starting_power': 2000,
+        'tech_tree': `{"Builder": {
+  "character": {
+    "build_radius": 5,
+    "builds": [
+      "Factory",
+      "Generator",
+      "Tower"
+    ],
+    "life_max": 100,
+    "power": 100,
+    "speed": 0.2,
+    "time": 100,
+    "type": "unit"
+  },
+  "prefab": {
+    "placeholder": [
+      3, 0.03, -3,
+      -3, 0.03, -3,
+      -3, 0.03, 3,
+      3, 0.03, 3
+    ],
+    "size_x": 6,
+    "size_y": 2,
+    "size_z": 6,
+    "texture": "grid.png"
+  }
+},
+"Factory": {
+  "character": {
+    "build_radius": 20,
+    "builds": ["Builder"],
+    "life_max": 1000,
+    "power": 1000,
+    "speed": 0,
+    "time": 200,
+    "type": "building"
+  },
+  "prefab": {
+    "placeholder": [
+      10, 0.01, -10,
+      -10, 0.01, -10,
+      -10, 0.01, 10,
+      10, 0.01, 10
+    ],
+    "size_x": 20,
+    "size_y": 10,
+    "size_z": 20,
+    "texture": "grid.png"
+  }
+},
+"Generator": {
+  "character": {
+    "build_radius": 15,
+    "builds": [],
+    "life_max": 250,
+    "power": 100,
+    "speed": 0,
+    "time": 300,
+    "type": "building"
+  },
+  "prefab": {
+    "placeholder": [
+      5, 0.01, -5,
+      -5, 0.01, -5,
+      -5, 0.01, 5,
+      5, 0.01, 5
+    ],
+    "size_x": 10,
+    "size_y": 10,
+    "size_z": 10,
+    "texture": "grid.png"
+  }
+},
+"Tower": {
+  "character": {
+    "build_radius": 10,
+    "builds": [],
+    "life_max": 500,
+    "power": 250,
+    "speed": 0,
+    "time": 150,
+    "type": "building"
+  },
+  "prefab": {
+    "placeholder": [
+      4, 0.02, -4,
+      -4, 0.02, -4,
+      -4, 0.02, 4,
+      4, 0.02, 4
+    ],
+    "texture": "grid.png",
+    "size_x": 8,
+    "size_y": 16,
+    "size_z": 8
+  }
+}}`,
       },
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies'
-        + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table>',
+        + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table><textarea id=tech_tree></textarea><br>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
         + '<table><tr><td>Power<td><span id=power></span>, <span id=power_gain></span>/<span id=power_next></span>'
