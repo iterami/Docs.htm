@@ -69,7 +69,7 @@ function distance_destination(character){
 function handle_ai(player){
     if(player.generators === 0){
         const builder = webgl_characters[player.id + '_0'];
-        if(builder){
+        if(builder?.time === 0){
             build({
               'id': player.id,
               'selected': builder,
