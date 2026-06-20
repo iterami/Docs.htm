@@ -241,10 +241,10 @@ function load_testmap(){
                 'texture': 'lavaleaf.png',
                 'vertex_colors': [.2, .8, .2, 1,],
                 'vertices': [
-                  100, 0, -100,
-                  -100, 0, -100,
-                  -100, 0, 100,
-                  100, 0, 100,
+                  150, 0, -150,
+                  -150, 0, -150,
+                  -150, 0, 150,
+                  150, 0, 150,
                 ],
               },
             ],
@@ -262,7 +262,7 @@ function load_testmap(){
               'position_y': 5,
               'size_x': 20,
               'size_y': 10,
-              'size_z': 100,
+              'size_z': 200,
               'texture': 'lavaleaf.png',
             },
           },
@@ -271,24 +271,24 @@ function load_testmap(){
     });
 
     const spawn_properties = {
-      'power': 2000,
+      'power': Number(core_storage_data.starting_power),
     };
     const spawns = [
       {
-        'x': -75,
-        'z': -75,
+        'x': -125,
+        'z': -125,
       },
       {
-        'x': 75,
-        'z': -75,
+        'x': 125,
+        'z': -125,
       },
       {
-        'x': -75,
-        'z': 75,
+        'x': -125,
+        'z': 125,
       },
       {
-        'x': 75,
-        'z': 75,
+        'x': 125,
+        'z': 125,
       },
     ];
     team_create({
@@ -576,11 +576,8 @@ function repo_init(){
       },
       'info': '<button class=medium id=new_game type=button>Start RTS Test</button><br>'
         + '<table><tr><td>Power<td><span class=power></span>, <span class=power_gain></span>/<span class=power_next></span>'
-        + '<tr><td>Selected<td class=selected>'
-        + '<tr><td>Life<td><span class=life></span>/<span class=life_max></span>'
-        + '<tr><td>Speed<td class=speed>'
-        + '<tr><td>Team<td class=team>'
-        + '<tr><td>Type<td class=type>'
+        + '<tr><td class=type><td class=selected>'
+        + '<tr><td><span class=speed></span> Speed<td><span class=life></span>/<span class=life_max></span> Life'
         + '<tr><td>Making<td><span class=making></span> <span class=making_time></span></table>',
       'menu': true,
       'pointerbinds': {
@@ -603,17 +600,16 @@ function repo_init(){
       'root': '../../webgl-standalone.htm',
       'storage': {
         'enemies': 3,
+        'starting_power': 2000,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies</table>',
+      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies'
+        + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
         + '<table><tr><td>Power<td><span id=power></span>, <span id=power_gain></span>/<span id=power_next></span>'
-        + '<tr><td>Selected<td id=selected>'
-        + '<tr><td>Life<td><span id=life></span>/<span id=life_max></span>'
-        + '<tr><td>Speed<td id=speed>'
-        + '<tr><td>Team<td id=team>'
-        + '<tr><td>Type<td id=type>'
+        + '<tr><td id=type><td id=selected>'
+        + '<tr><td><span id=speed></span> Speed<td><span id=life></span>/<span id=life_max></span> Life'
         + '<tr><td>Making<td><span id=making></span> <span id=making_time></span></table>'
         + '<div id=build></div>'
         + '<div id=progress></div>',
@@ -735,7 +731,6 @@ function repo_logic(){
            : -1,
         'selected': player.selected,
         'speed': tech[selected?.type]?.character?.speed,
-        'team': selected?.team,
         'type': selected?.type,
       },
     });
