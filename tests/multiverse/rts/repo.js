@@ -7,23 +7,30 @@ function attack(character){
 function build({
   id,
   placeholder,
+  selected,
   type,
+  x,
+  y,
+  z,
 } = {}){
     const player = webgl_characters[id];
     const properties = tech[type].character;
     if(player.power < properties.power){
         return;
     }
-    if(placeholder === true){
-        placeholder_show(type);
-        return;
-    }
-    placeholder_hide();
 
-    const selected = webgl_characters[player.selected];
-    let x = webgl_picked_x;
-    let y = webgl_picked_y;
-    let z = webgl_picked_z;
+    if(id === webgl_character_id){
+        if(placeholder === true){
+            placeholder_show(type);
+            return;
+        }
+        placeholder_hide();
+
+        selected = webgl_characters[player.selected];
+        x = webgl_picked_x;
+        y = webgl_picked_y;
+        z = webgl_picked_z;
+    }
 
     if(properties.type === 'unit'){
         x = selected.position_x;
@@ -38,6 +45,7 @@ function build({
 
     selected.making = make({
       'power': properties.power,
+      'selected': selected,
       'team': player.id,
       'time': properties.time,
       'type': type,
@@ -59,6 +67,19 @@ function distance_destination(character){
 }
 
 function handle_ai(player){
+    if(player.generators === 0){
+        const builder = webgl_characters[player.id + '_0'];
+        if(builder){
+            build({
+              'id': player.id,
+              'selected': builder,
+              'type': 'Generator',
+              'x': builder.position_x + 10,
+              'y': builder.position_y,
+              'z': builder.position_z,
+            });
+        }
+    }
 }
 
 function handle_picking(event){
@@ -98,12 +119,15 @@ function handle_picking(event){
       'start': 2,
     });
     if(!pixelbuffer.picked){
+        if(button === 0){
+            select('');
+        }
         return;
     }
     const character = webgl_characters[pixelbuffer.picked.attach_to];
 
     if(button === 0){
-        select(character.id);
+        select(character.team ? character.id : '');
 
     }else if(button === 2){
         if(selected.id === character.id){
@@ -282,6 +306,7 @@ function load_testmap(){
 
 function make({
   power = 0,
+  selected = '',
   team,
   time = 0,
   type,
@@ -292,7 +317,6 @@ function make({
     const character = tech[type].character;
     const player = webgl_characters[team];
     const prefab = tech[type].prefab;
-    const selected = webgl_characters[player.selected];
 
     player.power -= power;
     if(selected){
@@ -321,7 +345,7 @@ function make({
       'destination_z': z,
       'making': (time > 0 && character.type === 'unit')
         ? id
-        : (selected?.id || ''),
+        : (selected ? selected.id : ''),
       'team': team,
       'time': time,
       'type': type,
@@ -631,7 +655,7 @@ function repo_logic(){
             }
 
             if(id !== webgl_character_id){
-                handle_ai(player);
+                handle_ai(character);
             }
 
             continue;
