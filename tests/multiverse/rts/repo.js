@@ -595,10 +595,10 @@ function repo_init(){
       -4, 0.02, 4,
       4, 0.02, 4
     ],
-    "texture": "grid.png",
     "size_x": 8,
     "size_y": 16,
-    "size_z": 8
+    "size_z": 8,
+    "texture": "grid.png"
   }
 }}`,
       },
