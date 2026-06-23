@@ -9,118 +9,112 @@
 <div id=test></div>
 <table class=tables-nosort id=table>
   <tr class=header>
-    <td><button onclick=toggle_align() type=button>Toggle Align</button>
-    <td><button onclick=clear_elements() type=button>Clear Elements</button>
+    <td><button onclick=toggle_align() type=button>Toggle Align</button><button onclick=clear_elements() type=button>Clear Elements</button>
+    <td><button onclick="add('<br>')" type=button>Newline</button><button onclick="add('&nbsp;')" type=button>Space</button>
   <tr>
-    <td><button onclick=add_element(this) type=button>Newline</button>
-    <td><br>
-  <tr>
-    <td><button onclick=add_element(this) type=button>Space</button>
-    <td>&nbsp;
-  <tr>
-    <td><button onclick=add_element(this) type=button>Button</button>
+    <td><button onclick=add(this) type=button>Button</button>
     <td><button type=button>Example<br>Button</button>
   <tr>
-    <td><button onclick=add_element(this) type=button>Button Disabled</button>
+    <td><button onclick=add(this) type=button>Button Disabled</button>
     <td><button disabled type=button>Disabled<br>Button</button>
   <tr>
-    <td><button onclick=add_element(this) type=button>Grid Button</button>
+    <td><button onclick=add(this) type=button>Grid Button</button>
     <td><button class=gridbutton disabled type=button>G</button>
   <tr>
-    <td><button onclick=add_element(this) type=button>Grid Button Clickable</button>
+    <td><button onclick=add(this) type=button>Grid Button Clickable</button>
     <td><button class=gridbuttonclickable type=button>C</button>
   <tr>
-    <td><button onclick=add_element(this) type=button>Hidden</button>
+    <td><button onclick=add(this) type=button>Hidden</button>
     <td><div class=hidden>Hidden</div>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=checkbox Checked</button>
+    <td><button onclick=add(this) type=button>Input type=checkbox Checked</button>
     <td><input checked type=checkbox>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=checkbox Checked Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=checkbox Checked Disabled</button>
     <td><input disabled checked type=checkbox>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=checkbox Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=checkbox Disabled</button>
     <td><input disabled type=checkbox>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=checkbox Label</button>
+    <td><button onclick=add(this) type=button>Input type=checkbox Label</button>
     <td><label><input type=checkbox>Label</label>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=color</button>
+    <td><button onclick=add(this) type=button>Input type=color</button>
     <td><input type=color>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=color Disabled</button>
-    <td><input disabled type=color value=#123>
+    <td><button onclick=add(this) type=button>Input type=color Disabled</button>
+    <td><input disabled type=color value=#112233>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=file</button>
+    <td><button onclick=add(this) type=button>Input type=file</button>
     <td><input type=file>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=file Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=file Disabled</button>
     <td><input disabled type=file>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=number Any</button>
+    <td><button onclick=add(this) type=button>Input type=number Any</button>
     <td><input step=any type=number value=123.456>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=number Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=number Disabled</button>
     <td><input disabled step=any type=number value=123.456>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=number Mini</button>
+    <td><button onclick=add(this) type=button>Input type=number Mini</button>
     <td><input class=mini step=any type=number value=123.456>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=number MinMax</button>
+    <td><button onclick=add(this) type=button>Input type=number MinMax</button>
     <td><input max=200 min=0 step=.1 type=number value=123.456>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=number Readonly</button>
+    <td><button onclick=add(this) type=button>Input type=number Readonly</button>
     <td><input readonly step=any type=number value=123.456>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=password</button>
+    <td><button onclick=add(this) type=button>Input type=password</button>
     <td><input type=password value=password>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=password Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=password Disabled</button>
     <td><input disabled type=password value=password>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=password Readonly</button>
+    <td><button onclick=add(this) type=button>Input type=password Readonly</button>
     <td><input readonly type=password value=password>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=range</button>
+    <td><button onclick=add(this) type=button>Input type=range</button>
     <td><input type=range>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=range Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=range Disabled</button>
     <td><input disabled type=range>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=range Mini</button>
+    <td><button onclick=add(this) type=button>Input type=range Mini</button>
     <td><input class=mini type=range>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=text</button>
+    <td><button onclick=add(this) type=button>Input type=text</button>
     <td><input type=text value="Input Text">
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=text Disabled</button>
+    <td><button onclick=add(this) type=button>Input type=text Disabled</button>
     <td><input disabled type=text value=Disabled>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=text Mini</button>
+    <td><button onclick=add(this) type=button>Input type=text Mini</button>
     <td><input class=mini type=text value=Mini>
   <tr>
-    <td><button onclick=add_element(this) type=button>Input type=text Readonly</button>
+    <td><button onclick=add(this) type=button>Input type=text Readonly</button>
     <td><input readonly type=text value=Readonly>
   <tr>
-    <td><button onclick=add_element(this) type=button>Link External</button>
+    <td><button onclick=add(this) type=button>Link External</button>
     <td><a class=external href=core-css.htm rel=noreferrer>External Link</a>
   <tr>
-    <td><button onclick=add_element(this) type=button>Link Internal</button>
+    <td><button onclick=add(this) type=button>Link Internal</button>
     <td><a href=core-css.htm>Internal Link</a>
   <tr>
-    <td><button onclick=add_element(this) type=button>Progress</button>
+    <td><button onclick=add(this) type=button>Progress</button>
     <td><progress max=100 value=25></progress>
   <tr>
-    <td><button onclick=add_element(this) type=button>Progress Mini</button>
+    <td><button onclick=add(this) type=button>Progress Mini</button>
     <td><progress class=mini max=100 value=25></progress>
   <tr>
-    <td><button onclick=add_element(this) type=button>Progress Indeterminate</button>
+    <td><button onclick=add(this) type=button>Progress Indeterminate</button>
     <td><progress></progress>
   <tr>
-    <td><button onclick=add_element(this) type=button>Progress Indeterminate Mini</button>
+    <td><button onclick=add(this) type=button>Progress Indeterminate Mini</button>
     <td><progress class=mini></progress>
   <tr>
-    <td><button onclick=add_element(this) type=button>Select</button>
+    <td><button onclick=add(this) type=button>Select</button>
     <td><select>
       <option>Select Option #1
       <hr>
@@ -129,10 +123,10 @@
       <option>Select Option #4 is even longer!
     </select>
   <tr>
-    <td><button onclick=add_element(this) type=button>Select Empty</button>
+    <td><button onclick=add(this) type=button>Select Empty</button>
     <td><select></select>
   <tr>
-    <td><button onclick=add_element(this) type=button>Table</button>
+    <td><button onclick=add(this) type=button>Table</button>
     <td><table>
       <tr class=header>
         <td>Table
@@ -156,31 +150,31 @@
         <td>Contents
     </table>
   <tr>
-    <td><button onclick=add_element(this) type=button>Textarea</button>
+    <td><button onclick=add(this) type=button>Textarea</button>
     <td><textarea>Textarea</textarea>
   <tr>
-    <td><button onclick=add_element(this) type=button>Textarea Disabled</button>
+    <td><button onclick=add(this) type=button>Textarea Disabled</button>
     <td><textarea disabled>Textarea Disabled</textarea>
   <tr>
-    <td><button onclick=add_element(this) type=button>Textarea Readonly</button>
+    <td><button onclick=add(this) type=button>Textarea Readonly</button>
     <td><textarea readonly>Textarea Readonly</textarea>
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Default</button>
+    <td><button onclick=add(this) type=button>Text Default</button>
     <td>Default Text
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Aligned Center</button>
+    <td><button onclick=add(this) type=button>Text Aligned Center</button>
     <td class=left><div class=center>Center</div>
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Aligned Left</button>
+    <td><button onclick=add(this) type=button>Text Aligned Left</button>
     <td class=right><div class=left>Left</div>
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Aligned Right</button>
+    <td><button onclick=add(this) type=button>Text Aligned Right</button>
     <td class=center><div class=right>Right</div>
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Big</button>
+    <td><button onclick=add(this) type=button>Text Big</button>
     <td><span class=big>Big</span>
   <tr>
-    <td><button onclick=add_element(this) type=button>Text Medium</button>
+    <td><button onclick=add(this) type=button>Text Medium</button>
     <td><span class=medium>Medium</span>
 </table>
 
@@ -188,8 +182,10 @@
 <script src=../../common/js/audio.js></script>
 <script src=../../common/js/tables.js></script>
 <script>
-function add_element(element){
-    core_elements.test.innerHTML += element.parentElement.parentElement.children[1].innerHTML.trim();
+function add(element){
+    core_elements.test.innerHTML += core_type(element) === 'string'
+      ? element
+      : element.parentElement.parentElement.children[1].innerHTML.trim();
 }
 
 function clear_elements(){
