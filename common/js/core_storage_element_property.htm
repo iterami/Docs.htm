@@ -8,8 +8,8 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_storage_element_property(args)
 <ol>
   <li>If the localStorage value at "key" is a boolean, returns "checked".
-  <li>If the passed in "element" has a "value" property, returns "value".
-  <li>Otherwise returns "textContent".
+  <li>If the passed in "element" has a "value" of type "undefined", returns "textContent".
+  <li>Otherwise returns "value".
 </ol>
 <table>
   <tr class=header>
