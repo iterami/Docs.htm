@@ -66,7 +66,7 @@ function distance_destination(character){
     }) > character.speed;
 }
 
-function handle_ai(player){
+function handle_cpu(player){
     if(player.generators === 0){
         const builder = webgl_characters[player.id + '_0'];
         if(builder?.time === 0){
@@ -294,6 +294,7 @@ function load_testmap(){
     team_create({
       ...spawn_properties,
       ...core_random_splice(spawns),
+      'cpu': false,
     });
     for(let team = 0; team < core_storage_data.enemies; team++){
         team_create({
@@ -599,7 +600,7 @@ function repo_init(){
 }}`,
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>Enemies'
+      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>CPU Enemies'
         + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table><textarea id=tech_tree></textarea><br>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
@@ -647,8 +648,8 @@ function repo_logic(){
                 }
             }
 
-            if(id !== webgl_character_id){
-                handle_ai(character);
+            if(character.cpu){
+                handle_cpu(character);
             }
 
             continue;
@@ -736,13 +737,13 @@ function repo_logic(){
     if(!hidden){
         core_ui_update({
           'ids': {
-            'life': selected?.life,
-            'life_max': selected?.life_max,
-            'making': selected?.making,
-            'making_time': selected?.time || '',
+            'life': selected.life,
+            'life_max': selected.life_max,
+            'making': selected.making,
+            'making_time': selected.time || '',
             'selected': player.selected,
-            'speed': tech[selected?.type]?.character?.speed,
-            'type': selected?.type,
+            'speed': tech[selected.type].character.speed,
+            'type': selected.type,
           },
         });
         for(const element in core_elements){
@@ -778,6 +779,7 @@ function select(id){
 }
 
 function team_create({
+  cpu = true,
   id = webgl_character_id,
   power = 0,
   x = 0,
@@ -785,6 +787,7 @@ function team_create({
   z = 0,
 } = {}){
     webgl_character_init({
+      'cpu': cpu,
       'camera_zoom': 50,
       'controls': 'rts',
       'generators': 0,
