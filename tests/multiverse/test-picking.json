@@ -13,6 +13,13 @@
       "entities": [
         {
           "id": "base",
+          "event_todo": [
+            {
+              "todo": "eval",
+              "type": "function",
+              "value": "console.log(webgl_picked.id,webgl_picked.x,webgl_picked.y,webgl_picked.z)"
+            }
+          ],
           "picking": true,
           "texture": "grid.png",
           "texture_x": 10,

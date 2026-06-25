@@ -27,9 +27,9 @@ function build({
         placeholder_hide();
 
         selected = webgl_characters[player.selected];
-        x = webgl_picked_x;
-        y = webgl_picked_y;
-        z = webgl_picked_z;
+        x = webgl_picked.x;
+        y = webgl_picked.y;
+        z = webgl_picked.z;
     }
 
     if(properties.type === 'unit'){
@@ -367,9 +367,9 @@ function make({
 }
 
 function move(character){
-    character.destination_x = webgl_picked_x;
-    character.destination_y = webgl_picked_y;
-    character.destination_z = webgl_picked_z;
+    character.destination_x = webgl_picked.x;
+    character.destination_y = webgl_picked.y;
+    character.destination_z = webgl_picked.z;
 }
 
 function new_game(){
@@ -631,9 +631,9 @@ function repo_logic(){
     }
     if(build_placeholder.length){
         const placeholder = webgl_characters._rts_placeholder_build;
-        placeholder.position_x = webgl_picked_x;
-        placeholder.position_y = webgl_picked_y;
-        placeholder.position_z = webgl_picked_z;
+        placeholder.position_x = webgl_picked.x;
+        placeholder.position_y = webgl_picked.y;
+        placeholder.position_z = webgl_picked.z;
     }
 
     for(const id in webgl_characters){
