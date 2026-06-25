@@ -507,12 +507,9 @@ function return_to_mark(id){
     if(vehicle.vehicle_stats){
         vehicle.vehicle_stats.speed = 0;
     }
-    webgl_move_to({
-      'move': vehicle,
-      'x': position.x,
-      'y': position.y + 5,
-      'z': position.z,
-    });
+    vehicle.position_x = position.x;
+    vehicle.position_y = position.y + 5;
+    vehicle.position_z = position.z;
 }
 
 function stats(){
