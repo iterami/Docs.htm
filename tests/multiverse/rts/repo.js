@@ -478,11 +478,7 @@ function repo_init(){
         'build_placeholder': '',
         'tech': {},
       },
-      'info': '<button class=medium id=new_game type=button>Start RTS Test</button><br>'
-        + '<table><tr><td>Power<td><span class=power></span>, <span class=power_gain></span>/<span class=power_next></span>'
-        + '<tr><td class=type><td class=selected>'
-        + '<tr><td><span class=speed></span> Speed<td><span class=life></span>/<span class=life_max></span> Life'
-        + '<tr><td>Making<td><span class=making></span> <span class=making_time></span></table>',
+      'info': '<button class=medium id=new_game type=button>Start RTS Test</button>',
       'menu': true,
       'pointerbinds': {
         'contextmenu': {},
@@ -607,8 +603,8 @@ function repo_init(){
         + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table><textarea id=tech_tree></textarea><br>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
-        + '<table><tr><td>Power<td><span id=power></span>, <span id=power_gain></span>/<span id=power_next></span>'
-        + '<tr><td id=type><td id=selected>'
+        + 'Power: <span id=power></span>, <span id=power_gain></span>/<span id=power_next></span>'
+        + '<table class=hidden id=selected_ui><tr><td id=type><td id=selected>'
         + '<tr><td><span id=speed></span> Speed<td><span id=life></span>/<span id=life_max></span> Life'
         + '<tr><td>Making<td><span id=making></span> <span id=making_time></span></table>'
         + '<div id=build></div>'
@@ -616,6 +612,7 @@ function repo_init(){
       'ui_elements': [
         'build',
         'progress',
+        'selected_ui',
       ],
     });
 }
@@ -675,24 +672,32 @@ function repo_logic(){
                     'y1': making.position_y,
                     'z1': making.position_z,
                   }) < properties.build_radius){
-                    character.time--;
+                    making.destination_x = making.position_x;
+                    making.destination_y = making.position_y;
+                    making.destination_z = making.position_z;
+
                     character.life = Math.min(
                       character.life + Math.ceil(properties.life_max / properties.time),
                       character.life_max
                     );
-
-                    making.destination_x = making.position_x;
-                    making.destination_y = making.position_y;
-                    making.destination_z = making.position_z;
+                    character.time--;
                     making.time--;
 
                     if(character.time <= 0){
-                        character.making = '';
-                        making.making = '';
-
                         if(character.type === 'Generator'){
                             webgl_characters[character.team].generators++;
                         }
+
+                        if(character.destination_x !== character.position_x
+                          || character.destination_y !== character.position_y
+                          || character.destination_z !== character.position_z){
+                            making.destination_x = character.destination_x;
+                            making.destination_y = character.destination_y;
+                            making.destination_z = character.destination_z;
+                        }
+
+                        making.making = '';
+                        character.making = '';
                     }
                 }
             }
@@ -718,29 +723,37 @@ function repo_logic(){
     }
 
     core_ui_update({
-      'classname': true,
       'ids': {
-        'life': selected?.life,
-        'life_max': selected?.life_max,
-        'making': selected?.making,
-        'making_time': selected?.time || '',
         'power': player.power,
         'power_gain': player.power_gain,
         'power_next': player.generators > 0
            ? 101 - player.generators
            : -1,
-        'selected': player.selected,
-        'speed': tech[selected?.type]?.character?.speed,
-        'type': selected?.type,
       },
     });
-    for(const element in core_elements){
-        if(element.startsWith('build_')){
-            core_elements[element].style.borderColor = player.power < tech[element.slice(6)].character.power
-              ? '#f00'
-              : '#999';
+
+    const hidden = selected === void 0;
+    if(!hidden){
+        core_ui_update({
+          'ids': {
+            'life': selected?.life,
+            'life_max': selected?.life_max,
+            'making': selected?.making,
+            'making_time': selected?.time || '',
+            'selected': player.selected,
+            'speed': tech[selected?.type]?.character?.speed,
+            'type': selected?.type,
+          },
+        });
+        for(const element in core_elements){
+            if(element.startsWith('build_')){
+                core_elements[element].style.borderColor = player.power < tech[element.slice(6)].character.power
+                  ? '#f00'
+                  : '#999';
+            }
         }
     }
+    core_elements.selected_ui.classList.toggle('hidden', hidden);
 }
 
 function select(id){
