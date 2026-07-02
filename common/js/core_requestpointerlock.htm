@@ -6,6 +6,16 @@
 <link href=../../../common/css/writings.css rel=stylesheet>
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_requestpointerlock(element)
+<ul>
+  <li>Attempts to request pointerlock on an element, such as a canvas.
+  <li>Does nothing if:<ol>
+    <li>The core menu is open.
+    <li>"core_mobile" is true.
+    <li>An element currently has pointerlock.
+    <li>The escape key is being actively pressed.
+  </ol>
+  <li>Any errors that occur are silently ignored.
+</ul>
 <table>
   <tr class=header>
     <td>Arg
