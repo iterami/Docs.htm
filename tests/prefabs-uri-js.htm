@@ -74,7 +74,7 @@ function repo_init(){
     });
 
     let results = '';
-    for(let uri in uris){
+    for(const uri in uris){
         results += '<tr><td><canvas id="canvas_' + uri + '"></canvas><br>'
           + '<button onclick=setup_uri("' + uri + '") type=button>'+ uri + '</button><br>'
           + '<span id="height_' + uri + '"></span> x <span id="width_' + uri + '"></span><br>'

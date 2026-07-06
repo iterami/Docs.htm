@@ -30,10 +30,9 @@ function element_css(){
     element_div.innerHTML = document.getElementById('element_htm').value;
 
     let table = '';
-    const element = element_div.firstElementChild;
-    const properties = globalThis.getComputedStyle(element);
-    for(let i = 0; i < properties.length; i++){
-        table += '<tr><td>' + properties[i] + '<td>' + properties.getPropertyValue(properties[i]);
+    const properties = globalThis.getComputedStyle(element_div.firstElementChild);
+    for(const property of properties){
+        table += '<tr><td>' + property + '<td>' + properties.getPropertyValue(property);
     }
     document.getElementById('element_css').innerHTML = table;
 }
