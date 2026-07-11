@@ -77,7 +77,7 @@ function load_testtrack(){
                   },
                 ],
                 'texture': 'grid.png',
-                'vertex_colors': [1, 0, 0, 1,],
+                'vertex_colors': [1, 0, 0, 1],
                 'vertices': [
                   80, 0, -35,
                   -80, 0, -35,
@@ -103,7 +103,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 50,
-                'vertex_colors': [0, 1, 0, 1,],
+                'vertex_colors': [0, 1, 0, 1],
                 'vertices': [
                   20, 0, -125,
                   -20, 0, -125,
@@ -131,7 +131,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 20,
                 'texture_y': 5,
-                'vertex_colors': [0, 0, 1, 1,],
+                'vertex_colors': [0, 0, 1, 1],
                 'vertices': [
                   40, 0, -10,
                   -40, 0, -10,
@@ -158,7 +158,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 20,
                 'texture_y': 5,
-                'vertex_colors': [0, 0, 1, 1,],
+                'vertex_colors': [0, 0, 1, 1],
                 'vertices': [
                   40, 0, -10,
                   -40, 0, -10,
@@ -186,7 +186,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 20,
                 'texture_y': 5,
-                'vertex_colors': [0, 0, 1, 1,],
+                'vertex_colors': [0, 0, 1, 1],
                 'vertices': [
                   40, 0, -10,
                   -40, 0, -10,
@@ -214,7 +214,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 20,
                 'texture_y': 5,
-                'vertex_colors': [0, 0, 1, 1,],
+                'vertex_colors': [0, 0, 1, 1],
                 'vertices': [
                   80, 0, -10,
                   -80, 0, -10,
@@ -228,7 +228,7 @@ function load_testtrack(){
                 'texture': 'grid.png',
                 'texture_x': 3,
                 'texture_y': 3,
-                'vertex_colors': [.5, .5, .5, 1,],
+                'vertex_colors': [.5, .5, .5, 1],
                 'vertices': [
                   250, 0, -500,
                   -250, 0, -500,
@@ -274,7 +274,7 @@ function load_testtrack(){
               'texture': 'grid.png',
               'texture_x': 3,
               'texture_y': 3,
-              'vertex_colors': [.5, .5, .5, 1,],
+              'vertex_colors': [.5, .5, .5, 1],
             },
           },
           {
@@ -296,7 +296,7 @@ function load_testtrack(){
               'texture': 'grid.png',
               'texture_x': 3,
               'texture_y': 3,
-              'vertex_colors': [.5, .5, .5, 1,],
+              'vertex_colors': [.5, .5, .5, 1],
             },
           },
           {
@@ -314,7 +314,7 @@ function load_testtrack(){
               'texture': 'grid.png',
               'texture_x': 3,
               'texture_y': 3,
-              'vertex_colors': [.5, .5, .5, 1,],
+              'vertex_colors': [.5, .5, .5, 1],
             },
           },
           {
@@ -336,7 +336,7 @@ function load_testtrack(){
               'texture': 'grid.png',
               'texture_x': 3,
               'texture_y': 3,
-              'vertex_colors': [.5, .5, .5, 1,],
+              'vertex_colors': [.5, .5, .5, 1],
             },
           },
         ],

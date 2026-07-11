@@ -81,7 +81,7 @@ function load_start(spawn){
                 'texture': 'grid.png',
                 'texture_x': 10,
                 'texture_y': 20,
-                'vertex_colors': [.5, .5, .5, 1,],
+                'vertex_colors': [.5, .5, .5, 1],
                 'vertices': [
                   50, 0, -50,
                   -50, 0, -50,

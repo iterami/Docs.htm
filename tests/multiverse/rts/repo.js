@@ -182,7 +182,7 @@ function level_placeholders(){
             'collision': false,
             'draw': false,
             'picking_exclude': true,
-            'vertex_colors': [1, 1, 1, 1,],
+            'vertex_colors': [1, 1, 1, 1],
             'vertices': [
               0, 0, 0,
               0, 0, 0,
@@ -201,7 +201,7 @@ function level_placeholders(){
             'collision': false,
             'draw': false,
             'picking_exclude': true,
-            'vertex_colors': [1, 1, 1, 1,],
+            'vertex_colors': [1, 1, 1, 1],
             'vertices': [
               1.5, .1, -1.5,
               -1.5, .1, -1.5,
@@ -239,7 +239,7 @@ function load_testmap(){
                 'id': 'base',
                 'picking': true,
                 'texture': 'lavaleaf.png',
-                'vertex_colors': [.2, .8, .2, 1,],
+                'vertex_colors': [.2, .8, .2, 1],
                 'vertices': [
                   150, 0, -150,
                   -150, 0, -150,

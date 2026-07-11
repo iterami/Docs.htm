@@ -185,7 +185,7 @@ function load_cave(id){
             },
           ],
           'texture': 'lavaleaf.png,.1,.1',
-          'vertex_colors': [1, 0, 0, 1,],
+          'vertex_colors': [1, 0, 0, 1],
           'vertices': [
             lava_x, 0, -lava_z,
             -lava_x, 0, -lava_z,
@@ -256,7 +256,7 @@ function load_cave(id){
                     },
                   },
                 ],
-                'vertex_colors': [0, 1, 0, 1,],
+                'vertex_colors': [0, 1, 0, 1],
                 'vertices': [
                   10, 0, -5,
                   -10, 0, -5,
@@ -277,7 +277,7 @@ function load_cave(id){
                     'value': '_target',
                   },
                 ],
-                'vertex_colors': [0, 0, 1, 1,],
+                'vertex_colors': [0, 0, 1, 1],
                 'vertices': [
                   10, 0, -5,
                   -10, 0, -5,
@@ -302,7 +302,7 @@ function load_cave(id){
               'texture': 'lavaleaf.png',
               'texture_x': 1 + core_random_integer(3),
               'texture_y': 1 + core_random_integer(3),
-              'vertex_colors': [1, 1, 1, 1,],
+              'vertex_colors': [1, 1, 1, 1],
             },
           },
         ],
@@ -384,7 +384,7 @@ function load_town({
                   },
                 ],
                 'texture': 'lavaleaf.png,.1,.1',
-                'vertex_colors': [1, 0, 0, 1,],
+                'vertex_colors': [1, 0, 0, 1],
                 'vertices': [
                   20, 0, -20,
                   -20, 0, -20,
@@ -406,7 +406,7 @@ function load_town({
                   },
                 ],
                 'rotate_x': 90,
-                'vertex_colors': [0, 0, 0, 1,],
+                'vertex_colors': [0, 0, 0, 1],
                 'vertices': [
                   20, 0, -10,
                   -20, 0, -10,
@@ -472,7 +472,7 @@ function load_town({
               'texture': 'grid.png',
               'texture_x': 20,
               'texture_y': 10,
-              'vertex_colors': [1, 1, 1, 1,],
+              'vertex_colors': [1, 1, 1, 1],
             },
           },
           {
@@ -732,7 +732,7 @@ function spike_model(id, range, xz, y){
           },
         ],
       },
-      'vertex_colors': [1, 0, 0, 1,],
+      'vertex_colors': [1, 0, 0, 1],
     };
 }
 
