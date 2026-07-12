@@ -7,8 +7,8 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_texture_init(id)
 <ul>
-  <li>Creates a texture based on an image in "core_images" and stores it in "webgl_textures".
-  <li>Inits the image via <a href=core_image.htm>core_image(args)</a> and "webgl_uris" if the texture does not already exist.
+  <li>Creates a texture based on an image in "webgl_images" and stores it in "webgl_textures".
+  <li>If the texture does not already exist, inits the image from "webgl_uris[image]" and stores it in "webgl_images[image]" for use during texture init.
 </ul>
 <table>
   <tr class=header>

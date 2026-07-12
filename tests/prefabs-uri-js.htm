@@ -18,15 +18,15 @@
 <script src=../../common/js/prefabs/uri.js></script>
 <script>
 function animate_uri(){
-    const height = core_images[uri].height;
-    const width = core_images[uri].width;
+    const height = images[uri].height;
+    const width = images[uri].width;
 
     core_elements.canvas_animated.height = height;
     core_elements.canvas_animated.width = width;
 
     const canvas = core_elements.canvas_animated.getContext('2d');
     canvas.fillStyle = canvas.createPattern(
-      core_images[uri],
+      images[uri],
       'repeat'
     );
     canvas.translate(
@@ -42,19 +42,30 @@ function animate_uri(){
 
     offset_x += Number(core_elements.direction_x.value);
     if(offset_x <= 0){
-        offset_x = core_images[uri].width;
+        offset_x = images[uri].width;
 
-    }else if(offset_x >= core_images[uri].width){
+    }else if(offset_x >= images[uri].width){
         offset_x = 0;
     }
 
     offset_y += Number(core_elements.direction_y.value);
     if(offset_y <= 0){
-        offset_y = core_images[uri].height;
+        offset_y = images[uri].height;
 
-    }else if(offset_y >= core_images[uri].height){
+    }else if(offset_y >= images[uri].height){
         offset_y = 0;
     }
+}
+
+function new_image({
+  id,
+  src,
+  todo,
+} = {}){
+    const image = new Image();
+    image.onload = todo;
+    image.src = src;
+    images[id] = image;
 }
 
 function repo_init(){
@@ -84,26 +95,26 @@ function repo_init(){
     document.getElementById('results').innerHTML = results;
 
     for(const uri in uris){
-        core_image({
+        new_image({
           'id': uri,
           'src': uris[uri],
           'todo': function(){
               const canvas_element = document.getElementById('canvas_' + uri);
 
-              canvas_element.height = core_images[uri].height;
-              canvas_element.width = core_images[uri].width;
+              canvas_element.height = images[uri].height;
+              canvas_element.width = images[uri].width;
               canvas_element.style.border = 'solid 10px #000';
               canvas_element.style.display = 'inline';
 
               const canvas = canvas_element.getContext('2d');
               canvas.drawImage(
-                core_images[uri],
+                images[uri],
                 0,
                 0
               );
 
-              document.getElementById('height_' + uri).textContent = core_images[uri].height;
-              document.getElementById('width_' + uri).textContent = core_images[uri].width;
+              document.getElementById('height_' + uri).textContent = images[uri].height;
+              document.getElementById('width_' + uri).textContent = images[uri].width;
               document.getElementById('size_' + uri).textContent = document.getElementById(uri).value.length;
           },
         });
@@ -124,4 +135,6 @@ function setup_uri(id){
       'todo': animate_uri,
     });
 }
+
+const images = {};
 </script>
