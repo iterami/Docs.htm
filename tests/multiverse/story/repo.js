@@ -129,13 +129,11 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
+      'beforeunload': function(event){
+          if(webgl !== 0){
+              core_escape(true);
+              event.preventDefault();
+          }
       },
       'events': {
         'choose_0': {
@@ -168,10 +166,8 @@ function repo_init(){
       'info': '<button class=medium id=new_game type=button>Start Story Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {},
-        'pointerup': {
-          'todo': webgl_pick,
-        },
+        'contextmenu': function(){},
+        'pointerup': webgl_pick,
       },
       'root': '../../webgl-standalone.htm',
       'storage_controls': true,

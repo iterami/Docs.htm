@@ -411,29 +411,23 @@ function repo_init(){
       },
       'info': '<button class=medium id=new_game type=button>Restart</button>',
       'pointerbinds': {
-        'contextmenu': {},
-        'pointermove': {
-          'todo': function(){
-              webgl_controls_pointer();
-          },
+        'contextmenu': function(){},
+        'pointermove': function(){
+            webgl_controls_pointer();
         },
-        'pointerdown': {
-          'todo': webgl_pick,
-        },
-        'pointerup': {
-          'todo': function(){
-              const pixelbuffer = webgl_pick_entity({
-                'start': 2,
-              });
+        'pointerdown': webgl_pick,
+        'pointerup': function(){
+            const pixelbuffer = webgl_pick_entity({
+              'start': 2,
+            });
 
-              core_ui_update({
-                'ids': {
-                  'picked_click': 'Picked by click: ' + (pixelbuffer === false
-                    ? false
-                    : JSON.stringify(pixelbuffer?.picked?.id)),
-                },
-              });
-          },
+            core_ui_update({
+              'ids': {
+                'picked_click': 'Picked by click: ' + (pixelbuffer === false
+                  ? false
+                  : JSON.stringify(pixelbuffer?.picked?.id)),
+              },
+            });
         },
       },
       'root': '../../webgl-standalone.htm',

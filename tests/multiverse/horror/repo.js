@@ -124,13 +124,11 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
+      'beforeunload': function(event){
+          if(webgl !== 0){
+              core_escape(true);
+              event.preventDefault();
+          }
       },
       'events': {
         'new_game': {
@@ -140,11 +138,9 @@ function repo_init(){
       'info': '<button class=medium id=new_game type=button>Start Horror Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {},
-        'pointermove': {
-          'todo': function(){
-              webgl_controls_pointer();
-          },
+        'contextmenu': function(){},
+        'pointermove': function(){
+            webgl_controls_pointer();
         },
       },
       'root': '../../webgl-standalone.htm',

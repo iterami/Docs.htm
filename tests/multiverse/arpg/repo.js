@@ -540,13 +540,11 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
+      'beforeunload': function(event){
+          if(webgl !== 0){
+              core_escape(true);
+              event.preventDefault();
+          }
       },
       'events': {
         'new_game': {
@@ -612,13 +610,9 @@ function repo_init(){
         + '<div id=tabs_rpg></div><div id=tabcontents_rpg></div>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {},
-        'pointerup': {
-          'todo': webgl_pick,
-        },
-        'wheel': {
-          'todo': webgl_controls_wheel,
-        },
+        'contextmenu': function(){},
+        'pointerup': webgl_pick,
+        'wheel': webgl_controls_wheel,
       },
       'root': '../../webgl-standalone.htm',
       'storage_controls': true,

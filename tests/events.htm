@@ -83,18 +83,14 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            update(event);
-            event.preventDefault();
-        },
+      'beforeunload': function(event){
+          update(event);
+          event.preventDefault();
       },
-      'blur': {
-        'todo': function(event){
-            update(event);
-            update_keys();
-            update_pointer();
-        },
+      'blur': function(event){
+          update(event);
+          update_keys();
+          update_pointer();
       },
       'globals': {
         'totals': {},
@@ -122,24 +118,12 @@ function repo_init(){
         },
       },
       'pointerbinds': {
-        'contextmenu': {
-          'todo': update_pointer,
-        },
-        'pointercancel': {
-          'todo': update_pointer,
-        },
-        'pointerdown': {
-          'todo': update_pointer,
-        },
-        'pointermove': {
-          'todo': update_pointer,
-        },
-        'pointerup': {
-          'todo': update_pointer,
-        },
-        'wheel': {
-          'todo': update_pointer,
-        },
+        'contextmenu': update_pointer,
+        'pointercancel': update_pointer,
+        'pointerdown': update_pointer,
+        'pointermove': update_pointer,
+        'pointerup': update_pointer,
+        'wheel': update_pointer,
       },
       'root': 'index.htm',
       'storage_controls': {

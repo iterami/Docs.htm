@@ -175,15 +175,9 @@ function repo_init(){
         'size_small': '3rem',
       },
       'pointerbinds': {
-        'pointerdown': {
-          'todo': direction_update,
-        },
-        'pointermove': {
-          'todo': direction_update,
-        },
-        'pointerup': {
-          'todo': direction_reset,
-        },
+        'pointerdown': direction_update,
+        'pointermove': direction_update,
+        'pointerup': direction_reset,
       },
       'root': 'index.htm',
       'title': 'Docs.htm',

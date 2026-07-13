@@ -8,5 +8,5 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_handle_wheel(event)
 <ul>
   <li>Returns early if the menu is open and blocking events.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>If "core_events.wheel" exists, calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and "core_events.wheel(event)".
 </ul>

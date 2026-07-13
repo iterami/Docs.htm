@@ -9,5 +9,5 @@
 <ul>
   <li>Exits pointerlock if it is enabled and resets all key states and pointer buttons to false.
   <li>Gets called by <a href=core_escape.htm>core_escape(force)</a> when the menu becomes opened.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>If "core_events.blur" exists, calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and "core_events.blur(event)".
 </ul>

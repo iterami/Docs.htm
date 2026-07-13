@@ -225,13 +225,11 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
+      'beforeunload': function(event){
+          if(webgl !== 0){
+              core_escape(true);
+              event.preventDefault();
+          }
       },
       'events': {
         'new_game': {
@@ -249,16 +247,12 @@ function repo_init(){
         + 'Reload: <span class=reload></span></span>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {},
-        'pointerdown': {
-          'todo': function(){
-              weapon_fire(webgl_character_id);
-          },
+        'contextmenu': function(){},
+        'pointerdown': function(){
+            weapon_fire(webgl_character_id);
         },
-        'pointermove': {
-          'todo': function(){
-              webgl_controls_pointer();
-          },
+        'pointermove': function(){
+            webgl_controls_pointer();
         },
       },
       'root': '../../webgl-standalone.htm',

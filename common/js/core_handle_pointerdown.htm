@@ -11,5 +11,5 @@
   <li>Updates all pointer button states.
   <li>If "shift + right click" is detected, then calls <a href=core_handle_blur.htm>core_handle_blur(event)</a> and returns, allowing the browser to open the context menu.
   <li>Sets "down_x" and "down_y" to current pointer position and resets movement.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>If "core_events.pointerdown" exists, calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and "core_events.pointerdown(event)".
 </ul>

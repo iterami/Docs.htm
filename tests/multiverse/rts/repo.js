@@ -459,13 +459,11 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': {
-        'todo': function(event){
-            if(webgl !== 0){
-                core_escape(true);
-                event.preventDefault();
-            }
-        },
+      'beforeunload': function(event){
+          if(webgl !== 0){
+              core_escape(true);
+              event.preventDefault();
+          }
       },
       'events': {
         'camera_reset': {
@@ -482,21 +480,13 @@ function repo_init(){
       'info': '<button class=medium id=new_game type=button>Start RTS Test</button>',
       'menu': true,
       'pointerbinds': {
-        'contextmenu': {},
-        'pointerdown': {
-          'todo': webgl_pick,
+        'contextmenu': function(){},
+        'pointerdown': webgl_pick,
+        'pointermove': function(){
+            webgl_controls_pointer();
         },
-        'pointermove': {
-          'todo': function(){
-              webgl_controls_pointer();
-          },
-        },
-        'pointerup': {
-          'todo': handle_picking,
-        },
-        'wheel': {
-          'todo': webgl_controls_wheel,
-        },
+        'pointerup': handle_picking,
+        'wheel': webgl_controls_wheel,
       },
       'root': '../../webgl-standalone.htm',
       'storage': {

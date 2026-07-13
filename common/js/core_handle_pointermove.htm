@@ -11,5 +11,5 @@
   <li>Updates the state of "core_mobile", based on if the event "pointerType" is not "mouse".
   <li>Updates all pointer button states, due to how pointer events handle multiple buttons pressed at once.
   <li>Updates pointer xy position and handles movement based upon if "core_mobile" is true or not.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>If "core_events.pointermove" exists, calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and "core_events.pointermove(event)".
 </ul>

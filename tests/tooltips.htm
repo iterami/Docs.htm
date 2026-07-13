@@ -39,14 +39,12 @@ function repo_init(){
         },
       },
       'pointerbinds': {
-        'pointermove': {
-          'todo': function(event){
-              if(core_pointer.down_0){
-                  const button = core_elements.button.getBoundingClientRect();
-                  core_elements.button.style.left = (core_pointer.x - button.width / 2) + 'px';
-                  core_elements.button.style.top = (core_pointer.y - button.height) + 'px';
-              }
-          },
+        'pointermove': function(event){
+            if(core_pointer.down_0){
+                const button = core_elements.button.getBoundingClientRect();
+                core_elements.button.style.left = (core_pointer.x - button.width / 2) + 'px';
+                core_elements.button.style.top = (core_pointer.y - button.height) + 'px';
+            }
         },
       },
       'root': 'index.htm',

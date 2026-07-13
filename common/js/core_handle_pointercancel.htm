@@ -7,6 +7,6 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_handle_pointercancel(event)
 <ul>
-  <li>Resets all pointer button states to false when the pointer is canceled, such as mobile zoom with multiple pointers.
-  <li>Calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and event todo() if it exists.
+  <li>Resets all pointer button states to false and movement to 0 when the pointer is canceled, such as mobile zoom with multiple pointers.
+  <li>If "core_events.pointercancel" exists, calls <a href=core_handle_prevent.htm>core_handle_prevent(event)</a> and "core_events.pointercancel(event)".
 </ul>
