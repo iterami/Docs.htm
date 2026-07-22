@@ -32,6 +32,19 @@
       "spawn": false,
       "entities": [
         {
+          "id": "ramp_climb80",
+          "attach_x": 75,
+          "attach_z": -75,
+          "climbable": 0,
+          "rotate_x": 80,
+          "vertices": [
+            15, 0, -60,
+            -15, 0, -60,
+            -15, 0, 0,
+            15, 0, 0
+          ]
+        },
+        {
           "id": "ramp_x30",
           "attach_x": 30,
           "attach_z": 10,
