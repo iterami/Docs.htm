@@ -1,0 +1,106 @@
+{
+  "title": "Water Test",
+  "spawn": {
+    "position_y": 5,
+    "position_z": 25
+  },
+  "characters": [
+    {
+      "id": "test_water",
+      "base": true,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "attach_y": -0.001,
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water0_inner",
+        "alpha": 0.2,
+        "collision": false,
+        "position_y": -10,
+        "position_z": 70,
+        "size_x": -100,
+        "size_y": -20,
+        "size_z": -40,
+        "texture": "lavaleaf.png"
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water0_outer",
+        "alpha": 0.2,
+        "collision": false,
+        "position_y": -10,
+        "position_z": 70,
+        "size_x": 100,
+        "size_y": 20,
+        "size_z": 40,
+        "texture": "lavaleaf.png"
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water1_inner",
+        "alpha": 0.4,
+        "collision": false,
+        "position_y": 10,
+        "position_z": -10,
+        "size_x": -60,
+        "size_y": -20,
+        "size_z": -40,
+        "texture": "lavaleaf.png"
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water1_outer",
+        "alpha": 0.4,
+        "collision": false,
+        "position_y": 10,
+        "position_z": -10,
+        "size_x": 60,
+        "size_y": 20,
+        "size_z": 40,
+        "texture": "lavaleaf.png"
+      }
+    }
+  ],
+  "water": [
+    {
+      "x_max": 50,
+      "x_min": -50,
+      "y_max": 0,
+      "y_min": -20,
+      "z_max": 90,
+      "z_min": 50
+    },
+    {
+      "x_max": 30,
+      "x_min": -30,
+      "y_max": 20,
+      "y_min": 0,
+      "z_max": 10,
+      "z_min": -30
+    }
+  ]
+}

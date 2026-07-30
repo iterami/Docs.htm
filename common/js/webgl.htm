@@ -21,7 +21,8 @@
   <li><a href=#particle-properties>Particle Properties</a>
   <li><a href=#timer-properties>Timer Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
-  <li>Picking is limited to 255 entities at once.
+  <li><a href=#water-properties>Water Properties</a>
+  <li>Picking is limited to 255 different targets at once.
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
     <li><a href=entity.htm>entity.js</a>
@@ -226,6 +227,10 @@
     <td>webgl_textures_animated
     <td>{}
     <td>object
+  <tr>
+    <td>webgl_water
+    <td>[]
+    <td>array of objects
   <tr>
     <td>webgl_uris
     <td><textarea readonly>globalThis.uris || {
@@ -515,7 +520,7 @@
   <tr>
     <td>state
     <td>'air'
-    <td>string
+    <td>'air', 'ground', or 'water'
   <tr>
     <td>turn_speed
     <td>3
@@ -819,5 +824,35 @@
   <tr>
     <td>speed_max_forward
     <td>1
+    <td>number
+</table>
+<table id=water-properties>
+  <tr class=header>
+    <td>Water Properties
+    <td>Default
+    <td>Type
+  <tr>
+    <td>x_max
+    <td>
+    <td>number
+  <tr>
+    <td>x_min
+    <td>
+    <td>number
+  <tr>
+    <td>y_max
+    <td>
+    <td>number
+  <tr>
+    <td>y_min
+    <td>
+    <td>number
+  <tr>
+    <td>z_max
+    <td>
+    <td>number
+  <tr>
+    <td>z_min
+    <td>
     <td>number
 </table>
