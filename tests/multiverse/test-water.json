@@ -87,6 +87,7 @@
   ],
   "water": [
     {
+      "density": 100,
       "x_max": 50,
       "x_min": -50,
       "y_max": 0,
@@ -95,6 +96,7 @@
       "z_min": 50
     },
     {
+      "density": 100,
       "x_max": 30,
       "x_min": -30,
       "y_max": 20,
