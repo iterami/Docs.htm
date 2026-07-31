@@ -1,19 +1,19 @@
 'use strict';
 
 function debug_xp(){
-    if(!webgl_characters[webgl_character_id]){
+    if(!webgl_characters[webgl_player_id]){
         return;
     }
 
     webgl_stat_modify({
       'stat': 'level_xp',
-      'target': webgl_characters[webgl_character_id],
+      'target': webgl_characters[webgl_player_id],
       'value': Number(document.getElementById('debug_xp').value),
     });
 }
 
 function heal(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(!character
       || (character.life >= character.life_max
          && character.mana >= character.mana_max)
@@ -28,7 +28,7 @@ function heal(){
 }
 
 function item_create(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(!character){
         return;
     }
@@ -56,7 +56,7 @@ function item_create(){
 }
 
 function item_delete(id){
-    const inventory = webgl_characters[webgl_character_id].inventory;
+    const inventory = webgl_characters[webgl_player_id].inventory;
 
     if(!globalThis.confirm('Delete ' + inventory[id].id + '?')){
         return;
@@ -67,7 +67,7 @@ function item_delete(id){
 }
 
 function item_equip(id){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     const item = character.inventory[id];
     let slot = item.slot;
 
@@ -102,7 +102,7 @@ function item_pickup(id){
 }
 
 function item_unequip(slot){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     const item = character.equipment[slot];
     if(item === void 0){
         return;
@@ -128,7 +128,7 @@ function item_unequip(slot){
 
 function kill(id){
     if(webgl_characters[id].team !== 0
-      && webgl_characters[id].level >= webgl_characters[webgl_character_id].level - 10){
+      && webgl_characters[id].level >= webgl_characters[webgl_player_id].level - 10){
         webgl_stat_modify({
           'stat': 'level_xp',
           'target': webgl_characters[id],
@@ -149,14 +149,14 @@ function level_properties(){
 }
 
 function load_cave(id){
-    if(id !== webgl_character_id){
+    if(id !== webgl_player_id){
         return;
     }
 
     if(floor > 0){
         webgl_stat_modify({
           'stat': 'level_xp',
-          'target': webgl_characters[webgl_character_id],
+          'target': webgl_characters[webgl_player_id],
           'value': floor,
         });
     }
@@ -316,7 +316,7 @@ function load_town({
   target,
 } = {}){
     if(spawn === 1
-      && target !== webgl_character_id){
+      && target !== webgl_player_id){
         return;
     }
 
@@ -512,7 +512,7 @@ function new_game(){
       && !globalThis.confirm('Start a new adventure? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     floor = 0;
 
@@ -673,7 +673,7 @@ function repo_stat_modify(args){
 }
 
 function skill_select(id){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(!character){
         return;
     }
@@ -779,7 +779,7 @@ function stats_equipment(){
 }
 
 function talent_modify(talent){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(!character
       || character.talent_points <= 0){
         return;
@@ -793,7 +793,7 @@ function talent_modify(talent){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(!character){
         return;
     }

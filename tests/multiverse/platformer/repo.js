@@ -12,7 +12,7 @@ function collect({
 
     webgl_stat_modify({
       'stat': type,
-      'target': webgl_characters[webgl_character_id],
+      'target': webgl_characters[webgl_player_id],
       'value': value,
     });
 
@@ -427,7 +427,7 @@ function new_game(){
       && !globalThis.confirm('Start a new game? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     flags = {
       'skymap': {
@@ -525,7 +525,7 @@ function repo_stat_modify(){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     core_ui_update({
       'classname': true,
       'ids': {

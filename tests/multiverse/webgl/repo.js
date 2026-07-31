@@ -57,7 +57,7 @@ function debug_pick(cursor){
         return;
     }
 
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(character.life <= 0){
         return;
     }

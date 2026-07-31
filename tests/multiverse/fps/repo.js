@@ -7,14 +7,14 @@ function collect({
 } = {}){
     if(type === 'weapon'){
         weapon_equip({
-          'id': webgl_character_id,
+          'id': webgl_player_id,
           'weapon': value,
         });
 
     }else{
         webgl_stat_modify({
           'stat': type,
-          'target': webgl_characters[webgl_character_id],
+          'target': webgl_characters[webgl_player_id],
           'value': value,
         });
     }
@@ -196,7 +196,7 @@ function new_game(){
       && !globalThis.confirm('Start a new match? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     core_object_reset(weapons);
     Object.assign(
@@ -249,7 +249,7 @@ function repo_init(){
       'pointerbinds': {
         'contextmenu': function(){},
         'pointerdown': function(){
-            weapon_fire(webgl_character_id);
+            weapon_fire(webgl_player_id);
         },
         'pointermove': function(){
             webgl_controls_pointer();
@@ -277,7 +277,7 @@ function repo_logic(){
     core_ui_update({
       'classname': true,
       'ids': {
-        'reload': webgl_characters[webgl_character_id].reload,
+        'reload': webgl_characters[webgl_player_id].reload,
       },
     });
 }
@@ -310,7 +310,7 @@ function stats(){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     core_ui_update({
       'classname': true,
       'ids': {
@@ -344,7 +344,7 @@ function weapon_equip({
 }
 
 function weapon_fire(id){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     if(character.weapon.length === 0
       || character.ammo === 0
       || character.reload !== 0){

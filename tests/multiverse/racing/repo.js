@@ -349,14 +349,14 @@ function new_game(){
       && !globalThis.confirm('Start a new race? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     lap_max = 3;
     mark_max = 5;
     position_max = 0;
 
     load_testtrack();
-    racer_add(webgl_character_id);
+    racer_add(webgl_player_id);
     racer_add('test_racer');
     update_ui();
 }
@@ -365,7 +365,7 @@ function racer_add(id){
     position_max++;
 
     const properties = {};
-    if(id !== webgl_character_id){
+    if(id !== webgl_player_id){
         properties.automove = true;
         properties.keys = {
           'move_left': true,
@@ -465,7 +465,7 @@ function repo_init(){
 }
 
 function repo_logic(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     let speed = '-';
     let speed_max = '-';
     if(character.vehicle !== false){
@@ -526,7 +526,7 @@ function stats(){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_character_id];
+    const character = webgl_characters[webgl_player_id];
     core_ui_update({
       'classname': true,
       'ids': {

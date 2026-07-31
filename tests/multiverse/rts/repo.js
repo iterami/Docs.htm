@@ -1,7 +1,7 @@
 'use strict';
 
 function attack(character){
-    console.log(webgl_characters[webgl_character_id].selected, 'is attacking', character.id);
+    console.log(webgl_characters[webgl_player_id].selected, 'is attacking', character.id);
 }
 
 function build({
@@ -19,7 +19,7 @@ function build({
         return;
     }
 
-    if(id === webgl_character_id){
+    if(id === webgl_player_id){
         if(placeholder === true){
             placeholder_show(type);
             return;
@@ -94,7 +94,7 @@ function handle_picking(event){
     if(build_placeholder.length){
         if(button === 0){
             build({
-              'id': webgl_character_id,
+              'id': webgl_player_id,
               'type': build_placeholder,
             });
 
@@ -105,7 +105,7 @@ function handle_picking(event){
         return;
     }
 
-    const player = webgl_characters[webgl_character_id];
+    const player = webgl_characters[webgl_player_id];
     const selected = webgl_characters[player.selected];
     if(button === 2){
         if(!selected
@@ -377,7 +377,7 @@ function new_game(){
       && !globalThis.confirm('Start a new base? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     placeholder_hide();
     core_object_reset(tech);
@@ -399,6 +399,7 @@ function new_game(){
           'parent': core_elements.build,
           'properties': {
             'id': prefixed,
+            'class': 'hidden',
             'innerHTML': id + ' ' + properties.power + 'power ' + properties.time + 'time',
             'onclick': function(){
                 if(build_placeholder === id){
@@ -407,12 +408,11 @@ function new_game(){
                 }
 
                 build({
-                  'id': webgl_character_id,
+                  'id': webgl_player_id,
                   'placeholder': properties.type === 'building',
                   'type': id,
                 });
             },
-            'style': 'display:none',
             'type': 'button',
           },
           'store': prefixed,
@@ -609,7 +609,7 @@ function repo_init(){
 }
 
 function repo_logic(){
-    const player = webgl_characters[webgl_character_id];
+    const player = webgl_characters[webgl_player_id];
     const selected = webgl_characters[player.selected];
 
     if(selected?.team === player.id){
@@ -748,29 +748,29 @@ function repo_logic(){
 }
 
 function select(id){
-    const player = webgl_characters[webgl_character_id];
+    const player = webgl_characters[webgl_player_id];
     player.selected = id;
 
     if(player.selected === ''
       || webgl_characters[player.selected].team !== player.id){
         entity_entities._rts_placeholder_move_entity.draw = false;
         for(const id in tech){
-            core_elements['build_' + id].style.display = 'none';
+            core_elements['build_' + id].classList.add('hidden');
         }
 
     }else{
         const builds = tech[webgl_characters[player.selected].type].character.builds;
         for(const id in tech){
-            core_elements['build_' + id].style.display = builds.includes(id)
-              ? 'block'
-              : 'none';
+            if(builds.includes(id)){
+                core_elements['build_' + id].classList.remove('hidden');
+            }
         }
     }
 }
 
 function team_create({
   cpu = true,
-  id = webgl_character_id,
+  id = webgl_player_id,
   power = 0,
   x = 0,
   y = 0,

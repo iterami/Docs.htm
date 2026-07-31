@@ -10,13 +10,13 @@
   <li>Checks if picking can currently occur and stores it in "pixelbuffer.checked":<ul>
     <li>The core menu must be closed.
     <li>"webgl_properties.picking" must be greater than 0.
-    <li>The "webgl_character_id" character must be alive and their level must either be -1 if "webgl_properties.paused" is true, or &gt;=-1 otherwise.
+    <li>The "webgl_player_id" character must be alive and their level must either be -1 if "webgl_properties.paused" is true, or &gt;=-1 otherwise.
   </ul>
   <li>Uses the picking framebuffer and shader created during <a href=webgl_pick_init.htm>webgl_pick_init()</a>.
   <li>Asynchronously determines the color of the picked pixel and stores it in one of the available "webgl_pixelbuffers" objects. On the next logic frame after the color is determined, it is passed along with the "cursor" arg and other properties to <a href=webgl_pick_event.htm>webgl_pick_event(args)</a> for handling. The object can also be retrieved via <a href=webgl_pick_entity.htm>webgl_pick_entity(args)</a>.
   <li>Picking xy is equal to "globalThis.innerWidth / 2" and "globalThis.innerHeight / 2" if "webgl_properties.pointerlock" is true, or otherwise is equal to "core_pointer.x" and "core_pointer.y".
   <li>Entities with "picking_exclude" true cannot be picked and won't block entities behind them.
-  <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_character_id]" is checked.
+  <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_player_id]" is checked.
   <li>The "cursor" arg is passed along in the "pixelbuffer" object.
 </ul>
 <table>

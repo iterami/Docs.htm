@@ -94,7 +94,7 @@ function new_game(){
       && !globalThis.confirm('Start a new experience? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     load_hallway();
     webgl_character_init({

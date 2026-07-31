@@ -14,7 +14,7 @@ function choose(choice){
     }
     const path = choicelist[choices][choice];
     if(path.length){
-        webgl_characters[webgl_character_id].path_id = 'path_' + path;
+        webgl_characters[webgl_player_id].path_id = 'path_' + path;
     }
     choices++;
 
@@ -101,7 +101,7 @@ function new_game(){
       && !globalThis.confirm('Start a new story? Progress will be lost.')){
         return;
     }
-    webgl_character_id = '_me';
+    webgl_player_id = '_me';
 
     choices = 0;
 
