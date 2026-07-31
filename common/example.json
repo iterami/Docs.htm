@@ -259,7 +259,7 @@
   ],
   "water": [
     {
-      "density": 100,
+      "density": 0.01,
       "x_max": 99,
       "x_min": -99,
       "y_max": -10,
