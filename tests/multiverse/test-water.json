@@ -122,7 +122,7 @@
         "size_y": -50,
         "size_z": -100,
         "texture": "grid.png",
-        "vertex_colors": [0.2, 0.2, 0.2, 1]
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
       }
     },
     {
@@ -137,10 +137,7 @@
         "size_y": 50,
         "size_z": 40,
         "texture": "grid.png",
-        "vertex_colors": [0.2, 0.2, 0.2, 1],
-        "top": {
-          "vertex_colors": [0.5, 0.5, 0.5, 1]
-        }
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
       }
     },
     {
@@ -152,10 +149,7 @@
         "size_y": 10,
         "size_z": 40,
         "texture": "grid.png",
-        "vertex_colors": [0.2, 0.2, 0.2, 1],
-        "top": {
-          "vertex_colors": [0.5, 0.5, 0.5, 1]
-        }
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
       }
     },
     {
