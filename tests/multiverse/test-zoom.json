@@ -3,7 +3,6 @@
   "camera_zoom_max": 100,
   "camera_zoom_min": 10,
   "spawn": {
-    "camera_rotate_x": 30,
     "camera_zoom": 50,
     "position_y": 5
   },

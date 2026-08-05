@@ -2,7 +2,6 @@
   "title": "Vehicles Test",
   "picking": 2,
   "spawn": {
-    "camera_rotate_x": 30,
     "camera_zoom": 50,
     "position_y": 5,
     "position_z": 10

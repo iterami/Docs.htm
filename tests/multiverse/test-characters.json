@@ -2,7 +2,6 @@
   "title": "Characters Test",
   "gravity_damage": true,
   "spawn": {
-    "camera_rotate_x": 30,
     "position_y": 5
   },
   "y_min": -20,
