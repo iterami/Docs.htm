@@ -2,7 +2,7 @@
   "title": "Water Test",
   "spawn": {
     "position_y": 5,
-    "position_z": 25
+    "position_z": 75
   },
   "characters": [
     {
@@ -12,97 +12,203 @@
       "entities": [
         {
           "id": "base",
-          "attach_y": -0.001,
+          "attach_x": 50,
+          "attach_z": 75,
           "texture": "grid.png",
-          "texture_x": 10,
-          "texture_y": 10,
+          "texture_x": 30,
+          "texture_y": 5,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
+            150, 0, -25,
+            -150, 0, -25,
+            -150, 0, 25,
+            150, 0, 25
+          ]
+        },
+        {
+          "id": "entrance",
+          "attach_z": -75,
+          "texture": "grid.png",
+          "texture_x": 20,
+          "texture_y": 5,
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
+          "vertices": [
+            100, 0, -25,
+            -100, 0, -25,
+            -100, 0, 25,
+            100, 0, 25
+          ]
+        },
+        {
+          "id": "diving_board",
+          "attach_x": -75,
+          "attach_y": 85,
+          "texture": "grid.png",
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
+          "vertices": [
+            10, 0, -45,
+            -10, 0, -45,
+            -10, 0, 45,
+            10, 0, 45
+          ]
+        },
+        {
+          "id": "ramp",
+          "attach_x": 125,
+          "attach_y": -5,
+          "attach_z": 30,
+          "rotate_z": 30,
+          "texture": "grid.png",
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
+          "vertices": [
+            25, 0, -20,
+            -25, 0, -20,
+            -25, 0, 20,
+            25, 0, 20
+          ]
+        },
+        {
+          "id": "water_surface_top",
+          "alpha": 0.3,
+          "attach_y": -5,
+          "collision": false,
+          "texture": "lavaleaf.png",
+          "vertex_colors": [0, 0, 1, 1],
+          "vertices": [
+            200, 0, -50,
+            -200, 0, -50,
+            -200, 0, 50,
+            200, 0, 50
+          ]
+        },
+        {
+          "id": "water_surface_bottom",
+          "alpha": 0.3,
+          "attach_y": -5,
+          "collision": false,
+          "rotate_x": 180,
+          "texture": "lavaleaf.png",
+          "vertex_colors": [0, 0, 1, 1],
+          "texture_align": "10000111",
+          "vertices": [
+            200, 0, -50,
+            -200, 0, -50,
+            -200, 0, 50,
+            200, 0, 50
           ]
         }
       ]
+    },
+    {
+      "id": "floating_platform",
+      "collides": true,
+      "gravity": 1,
+      "level": 0,
+      "position_x": 50,
+      "position_y": 5,
+      "spawn": false
     }
   ],
   "prefabs": [
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "water0_inner",
-        "alpha": 0.4,
-        "collision": false,
-        "position_y": 50,
-        "position_z": -10,
-        "size_x": -60,
-        "size_y": -100,
-        "size_z": -40,
-        "texture": "lavaleaf.png"
+        "prefix": "pool_walls",
+        "position_y": -25,
+        "bottom": {
+          "exclude": true
+        },
+        "size_x": -400,
+        "size_y": -50,
+        "size_z": -100,
+        "texture": "grid.png",
+        "vertex_colors": [0.2, 0.2, 0.2, 1]
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "water0_outer",
-        "alpha": 0.4,
-        "collision": false,
-        "position_y": 50,
-        "position_z": -10,
-        "size_x": 60,
-        "size_y": 100,
+        "prefix": "pillar",
+        "position_y": -25,
+        "bottom": {
+          "exclude": true
+        },
+        "size_x": 20,
+        "size_y": 50,
         "size_z": 40,
-        "texture": "lavaleaf.png"
+        "texture": "grid.png",
+        "vertex_colors": [0.2, 0.2, 0.2, 1],
+        "top": {
+          "vertex_colors": [0.5, 0.5, 0.5, 1]
+        }
       }
     },
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "water1_inner",
-        "alpha": 0.2,
-        "collision": false,
-        "position_y": -50,
-        "position_z": 70,
-        "size_x": -100,
-        "size_y": -100,
-        "size_z": -40,
-        "texture": "lavaleaf.png"
-      }
-    },
-    {
-      "type": "webgl_primitive_cuboid",
-      "properties": {
-        "prefix": "water1_outer",
-        "alpha": 0.2,
-        "collision": false,
-        "position_y": -50,
-        "position_z": 70,
-        "size_x": 100,
-        "size_y": 100,
+        "prefix": "floating_platform",
+        "character": "floating_platform",
+        "size_x": 20,
+        "size_y": 10,
         "size_z": 40,
-        "texture": "lavaleaf.png"
+        "texture": "grid.png",
+        "vertex_colors": [0.2, 0.2, 0.2, 1],
+        "top": {
+          "vertex_colors": [0.5, 0.5, 0.5, 1]
+        }
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water_diving_inner",
+        "alpha": 0.3,
+        "collision": false,
+        "position_x": -75,
+        "position_y": 45,
+        "position_z": 50,
+        "size_x": -20,
+        "size_y": -100,
+        "size_z": -20,
+        "texture": "lavaleaf.png",
+        "vertex_colors": [0, 0, 1, 1]
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "water_diving_outer",
+        "alpha": 0.3,
+        "collision": false,
+        "position_x": -75,
+        "position_y": 45,
+        "position_z": 50,
+        "size_x": 20,
+        "size_y": 100,
+        "size_z": 20,
+        "texture": "lavaleaf.png",
+        "vertex_colors": [0, 0, 1, 1]
       }
     }
   ],
   "water": [
     {
-      "density": 0.01,
-      "x_max": 30,
-      "x_min": -30,
-      "y_max": 100,
-      "y_min": 0,
-      "z_max": 10,
-      "z_min": -30
+      "density": 0.05,
+      "x_max": -65,
+      "x_min": -85,
+      "y_max": 95,
+      "y_min": -5,
+      "z_max": 60,
+      "z_min": 40
     },
     {
       "density": 0.01,
-      "x_max": 50,
-      "x_min": -50,
-      "y_max": 0,
-      "y_min": -100,
-      "z_max": 90,
-      "z_min": 50
+      "x_max": 200,
+      "x_min": -200,
+      "y_max": -5,
+      "y_min": -50,
+      "z_max": 50,
+      "z_min": -50
     }
   ]
 }
