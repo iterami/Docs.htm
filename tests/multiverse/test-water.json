@@ -4,6 +4,21 @@
     "position_y": 5,
     "position_z": 75
   },
+  "paths": [
+    {
+      "id": "dunk",
+      "end": "loop",
+      "speed": 0.5,
+      "points": [
+        {
+          "position_y": -40
+        },
+        {
+          "position_y": 80
+        }
+      ]
+    }
+  ],
   "characters": [
     {
       "id": "test_water",
@@ -37,19 +52,6 @@
             -100, 0, -25,
             -100, 0, 25,
             100, 0, 25
-          ]
-        },
-        {
-          "id": "diving_board",
-          "attach_x": -75,
-          "attach_y": 85,
-          "texture": "grid.png",
-          "vertex_colors": [0.5, 0.5, 0.5, 1],
-          "vertices": [
-            10, 0, -45,
-            -10, 0, -45,
-            -10, 0, 45,
-            10, 0, 45
           ]
         },
         {
@@ -100,11 +102,20 @@
       ]
     },
     {
-      "id": "floating_platform",
+      "id": "floating",
       "collides": true,
       "gravity": 1,
       "level": 0,
       "position_x": 50,
+      "position_y": 5,
+      "spawn": false
+    },
+    {
+      "id": "path",
+      "collides": true,
+      "level": 0,
+      "path_id": "dunk",
+      "position_x": -50,
       "position_y": 5,
       "spawn": false
     }
@@ -113,7 +124,7 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "pool_walls",
+        "prefix": "pool",
         "position_y": -25,
         "bottom": {
           "exclude": true
@@ -143,8 +154,33 @@
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "floating_platform",
-        "character": "floating_platform",
+        "prefix": "diving",
+        "position_x": -75,
+        "position_y": 85,
+        "size_x": 20,
+        "size_y": 2,
+        "size_z": 80,
+        "texture": "grid.png",
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "floating",
+        "character": "floating",
+        "size_x": 20,
+        "size_y": 10,
+        "size_z": 40,
+        "texture": "grid.png",
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "path",
+        "character": "path",
         "size_x": 20,
         "size_y": 10,
         "size_z": 40,
