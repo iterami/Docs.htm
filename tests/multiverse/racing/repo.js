@@ -263,9 +263,7 @@ function load_testtrack(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_0',
-              'bottom': {
-                'exclude': true,
-              },
+              'bottom': false,
               'position_x': -83.3,
               'position_y': 49,
               'size_x': 20,
@@ -281,12 +279,8 @@ function load_testtrack(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_1',
-              'bottom': {
-                'exclude': true,
-              },
-              'left': {
-                'exclude': true,
-              },
+              'bottom': false,
+              'left': false,
               'position_x': 51.7,
               'position_y': 9,
               'position_z': 240,
@@ -303,9 +297,7 @@ function load_testtrack(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_2',
-              'bottom': {
-                'exclude': true,
-              },
+              'bottom': false,
               'position_x': 125,
               'position_y': 9,
               'size_x': 250,
@@ -321,12 +313,8 @@ function load_testtrack(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'wall_3',
-              'bottom': {
-                'exclude': true,
-              },
-              'left': {
-                'exclude': true,
-              },
+              'bottom': false,
+              'left': false,
               'position_x': 51.7,
               'position_y': 9,
               'position_z': -240,

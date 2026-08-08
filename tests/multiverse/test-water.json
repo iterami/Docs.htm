@@ -126,9 +126,7 @@
       "properties": {
         "prefix": "pool",
         "position_y": -25,
-        "bottom": {
-          "exclude": true
-        },
+        "bottom": false,
         "size_x": -400,
         "size_y": -50,
         "size_z": -100,
@@ -141,9 +139,7 @@
       "properties": {
         "prefix": "pillar",
         "position_y": -25,
-        "bottom": {
-          "exclude": true
-        },
+        "bottom": false,
         "size_x": 20,
         "size_y": 50,
         "size_z": 40,

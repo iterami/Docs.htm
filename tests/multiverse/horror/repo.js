@@ -27,9 +27,7 @@ function load_hallway(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'hallway_0',
-              'back': {
-                'exclude': true,
-              },
+              'back': false,
               'front': {
                 'texture': 'door.png',
               },
@@ -49,9 +47,7 @@ function load_hallway(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'hallway_1',
-              'left': {
-                'exclude': true,
-              },
+              'left': false,
               'position_x': 20,
               'position_y': 5,
               'position_z': -43,

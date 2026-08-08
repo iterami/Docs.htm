@@ -371,9 +371,7 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "start",
-        "bottom": {
-          "exclude": true
-        },
+        "bottom": false,
         "position_y": -10,
         "size_x": 100,
         "size_y": 20,

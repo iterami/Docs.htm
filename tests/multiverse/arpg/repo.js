@@ -295,9 +295,7 @@ function load_cave(id){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'cave',
-              'bottom': {
-                'exclude': true,
-              },
+              'bottom': false,
               'position_y': 25,
               'size_x': -cave_width,
               'size_y': -50,
@@ -465,9 +463,7 @@ function load_town({
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'town',
-              'bottom': {
-                'exclude': true,
-              },
+              'bottom': false,
               'position_x': 50,
               'position_y': 25,
               'position_z': -25,
@@ -742,9 +738,7 @@ function stats(team){
       'mana': 0,
       'mana_max': 0,
       'model': {
-        'bottom': {
-          'exclude': true,
-        },
+        'bottom': false,
       },
       'skill': '',
       'spawn': {

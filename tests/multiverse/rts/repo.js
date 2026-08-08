@@ -255,9 +255,7 @@ function load_testmap(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'obstacle',
-              'bottom': {
-                'exclude': true,
-              },
+              'bottom': false,
               'picking': true,
               'position_y': 5,
               'size_x': 20,
@@ -355,9 +353,7 @@ function make({
       ...prefab,
       'prefix': id,
       'character': id,
-      'bottom': {
-        'exclude': true
-      },
+      'bottom': false,
       'picking': true,
       'position_y': y + prefab.size_y / 2,
       'vertex_colors': player.team_color,
