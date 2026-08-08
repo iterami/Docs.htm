@@ -135,9 +135,6 @@
       "path_end": "",
       "path_id": "",
       "path_point": 0,
-      "scale_x": 1,
-      "scale_y": 1,
-      "scale_z": 1,
       "spawn": {
         "camera_rotate_x": 45
       },
@@ -200,9 +197,6 @@
           "rotate_x": 0,
           "rotate_y": 0,
           "rotate_z": 0,
-          "scale_x": 1,
-          "scale_y": 1,
-          "scale_z": 1,
           "texture": "gear.png",
           "texture_align": "11010010",
           "texture_x": 1,
