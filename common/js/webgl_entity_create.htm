@@ -7,7 +7,8 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_entity_create(args)
 <ul>
-  <li>Creates and attaches all entities in the "entities" arg.
+  <li>Creates entities which then init via <a href=webgl_entity_init.htm>webgl_entity_init(entity)</a>.
+  <li>Add created entities to their groups. If it's a "skybox" entity then the entity is removed from the "opaque" and "transparent" groups.
   <li>Entity properties can overwrite the default <a href=webgl.htm#entity-properties>entity properties</a>.
 </ul>
 <table>
