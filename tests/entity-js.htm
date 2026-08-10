@@ -26,7 +26,7 @@ function repo_init(){
           'todo': 'entity_create',
           'args': void 0,
           'expect': function(){
-              const id = entity_id_count - 1;
+              const id = String(entity_id_count - 1);
               return entity_entities[id].id === id;
           },
         },
@@ -43,7 +43,7 @@ function repo_init(){
           'todo': 'entity_create',
           'args': void 0,
           'expect': function(){
-              const id = entity_id_count - 1;
+              const id = String(entity_id_count - 1);
               return entity_entities[id].id === id;
           },
         },
@@ -58,8 +58,8 @@ function repo_init(){
           'todo': 'entity_group_add',
           'args': {
             'entities': [
-              0,
-              2,
+              '0',
+              '2',
               'test',
             ],
             'group': 'testgroup',
@@ -71,15 +71,34 @@ function repo_init(){
         {
           'todo': 'entity_group_modify',
           'args': {
-            'groups': [
-              'testgroup',
-            ],
+            'groups': ['testgroup'],
             'todo': function(entity){
                 entity.testproperty = 0;
             },
           },
           'expect': function(){
               return entity_entities.test.testproperty === 0;
+          },
+        },
+        {
+          'todo': 'entity_group_add',
+          'args': {
+            'entities': ['2'],
+            'group': 'newgroup',
+          },
+          'expect': function(){
+              return entity_groups._length.newgroup === 1;
+          },
+        },
+        {
+          'todo': 'entity_group_remove_all',
+          'args': {
+            'delete_empty': true,
+            'entities': ['2'],
+          },
+          'expect': function(){
+              return entity_groups._length.testgroup === 2
+                && entity_groups._length.newgroup === void 0;
           },
         },
       ],
