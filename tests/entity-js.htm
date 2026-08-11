@@ -27,7 +27,8 @@ function repo_init(){
           'args': void 0,
           'expect': function(){
               const id = String(entity_id_count - 1);
-              return entity_entities[id].id === id;
+              return entity_entities[id].id === id
+                && entity_id_count === 1;
           },
         },
         {
@@ -36,7 +37,8 @@ function repo_init(){
             'id': 'test',
           },
           'expect': function(){
-              return entity_entities.test.id === 'test';
+              return entity_entities.test.id === 'test'
+                && entity_id_count === 2;
           },
         },
         {
@@ -44,14 +46,16 @@ function repo_init(){
           'args': void 0,
           'expect': function(){
               const id = String(entity_id_count - 1);
-              return entity_entities[id].id === id;
+              return entity_entities[id].id === id
+                && entity_id_count === 3;
           },
         },
         {
           'todo': 'entity_group_create',
           'args': ['testgroup'],
           'expect': function(){
-              return entity_groups._length.testgroup === 0;
+              return entity_groups.testgroup !== void 0
+                && entity_groups._length.testgroup === 0;
           },
         },
         {
@@ -87,7 +91,8 @@ function repo_init(){
             'group': 'newgroup',
           },
           'expect': function(){
-              return entity_groups._length.newgroup === 1;
+              return entity_groups.newgroup !== void 0
+                && entity_groups._length.newgroup === 1;
           },
         },
         {
@@ -98,6 +103,7 @@ function repo_init(){
           },
           'expect': function(){
               return entity_groups._length.testgroup === 2
+                && entity_groups.newgroup === void 0
                 && entity_groups._length.newgroup === void 0;
           },
         },
