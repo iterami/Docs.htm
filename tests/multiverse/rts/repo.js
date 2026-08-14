@@ -509,9 +509,9 @@ function repo_init(){
       -3, 0.03, 3,
       3, 0.03, 3
     ],
-    "size_x": 6,
-    "size_y": 2,
-    "size_z": 6,
+    "size_x": 4,
+    "size_y": 8,
+    "size_z": 3,
     "texture": "grid.png"
   }
 },
@@ -556,7 +556,7 @@ function repo_init(){
       5, 0.01, 5
     ],
     "size_x": 10,
-    "size_y": 10,
+    "size_y": 5,
     "size_z": 10,
     "texture": "grid.png"
   }
@@ -578,9 +578,9 @@ function repo_init(){
       -4, 0.02, 4,
       4, 0.02, 4
     ],
-    "size_x": 8,
+    "size_x": 7,
     "size_y": 16,
-    "size_z": 8,
+    "size_z": 7,
     "texture": "grid.png"
   }
 }}`,
