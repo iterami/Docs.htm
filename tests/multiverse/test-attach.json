@@ -28,7 +28,7 @@
     {
       "id": "rotate_x",
       "spawn": {
-        "change_rotate_x": 5,
+        "change_rotate_x": 2,
         "position_x": -15,
         "position_z": -15
       },
@@ -55,13 +55,27 @@
             -2, 0, 2,
             2, 0, 2
           ]
+        },
+        {
+          "id": "double_x",
+          "attach_to": "attached_x",
+          "attach_type": "entity_entities",
+          "attach_x": 10,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
         }
       ]
     },
     {
       "id": "rotate_y",
       "spawn": {
-        "change_rotate_y": 5,
+        "change_rotate_y": 2,
         "position_z": -15
       },
       "entities": [
@@ -87,13 +101,27 @@
             -2, 0, 2,
             2, 0, 2
           ]
+        },
+        {
+          "id": "double_y",
+          "attach_to": "attached_y",
+          "attach_type": "entity_entities",
+          "attach_x": 10,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
         }
       ]
     },
     {
       "id": "rotate_z",
       "spawn": {
-        "change_rotate_z": 5,
+        "change_rotate_z": 2,
         "position_x": 15,
         "position_z": -15
       },
@@ -111,6 +139,20 @@
         },
         {
           "id": "attached_z",
+          "attach_x": 10,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 0, -2,
+            -2, 0, -2,
+            -2, 0, 2,
+            2, 0, 2
+          ]
+        },
+        {
+          "id": "double_z",
+          "attach_to": "attached_z",
+          "attach_type": "entity_entities",
           "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
