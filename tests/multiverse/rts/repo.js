@@ -594,7 +594,7 @@ function repo_init(){
         + '<table class=hidden id=selected_ui><tr><td id=type><td id=selected>'
         + '<tr><td><span id=speed></span> Speed<td><span id=life></span>/<span id=life_max></span> Life'
         + '<tr><td>Making<td><span id=making></span> <span id=making_time></span></table>'
-        + '<div id=build></div>'
+        + '<div id=build style="align-items:flex-start;display:flex;flex-direction:column"></div>'
         + '<div id=progress></div>',
       'ui_elements': [
         'build',
