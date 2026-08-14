@@ -160,7 +160,6 @@
           "id": "example_entity_0",
           "alpha": 1,
           "attach_to": "_me",
-          "attach_type": "webgl_characters",
           "attach_x": 0,
           "attach_y": -2,
           "attach_z": 0,

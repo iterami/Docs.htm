@@ -55,20 +55,6 @@
             -2, 0, 2,
             2, 0, 2
           ]
-        },
-        {
-          "id": "double_x",
-          "attach_to": "attached_x",
-          "attach_type": "entity_entities",
-          "attach_x": 10,
-          "collision": false,
-          "texture": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
         }
       ]
     },
@@ -92,20 +78,6 @@
         },
         {
           "id": "attached_y",
-          "attach_x": 10,
-          "collision": false,
-          "texture": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "double_y",
-          "attach_to": "attached_y",
-          "attach_type": "entity_entities",
           "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
@@ -139,20 +111,6 @@
         },
         {
           "id": "attached_z",
-          "attach_x": 10,
-          "collision": false,
-          "texture": "grid.png",
-          "vertices": [
-            2, 0, -2,
-            -2, 0, -2,
-            -2, 0, 2,
-            2, 0, 2
-          ]
-        },
-        {
-          "id": "double_z",
-          "attach_to": "attached_z",
-          "attach_type": "entity_entities",
           "attach_x": 10,
           "collision": false,
           "texture": "grid.png",
