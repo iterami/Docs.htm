@@ -725,6 +725,8 @@ function stats(team){
     return {
       'camera_zoom': 25,
       'collides': true,
+      'collide_bottom': 5,
+      'collide_top': 1,
       'controls': 'arpg',
       'drop_chance': 0,
       'drops': [],

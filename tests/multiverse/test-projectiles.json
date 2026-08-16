@@ -39,13 +39,28 @@
     },
     {
       "id": "projectile",
-      "model": {},
-      "spawn": false
+      "spawn": false,
+      "entities": [
+        {
+          "id": "projectile_body",
+          "billboard": true,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
+          ]
+        }
+      ]
     },
     {
       "id": "rotator",
       "automove": true,
       "change_rotate_y": -2,
+      "collide_bottom": 5,
+      "collide_top": 1,
       "collides": true,
       "controls": "rpg",
       "gravity": 1,
