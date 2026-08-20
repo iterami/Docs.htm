@@ -13,7 +13,6 @@
     <li><a href=../../tests/webgl-standalone.htm>Standalone</a>
   </ul>
   <li><a href=../json.htm>JSON Level Format</a>
-  <li><a href=#draw-modes>Draw Modes</a>
   <li><a href=#globals>Globals</a>
   <li><a href=#webgl-properties>WebGL_Properties</a>
   <li><a href=#character-properties>Character Properties</a>
@@ -112,24 +111,6 @@
   <li><a href=webgl_vertexattribarray_set.htm>webgl_vertexattribarray_set(args)</a>
   <li><a href=webgl_vertexcolorarray.htm>webgl_vertexcolorarray(args)</a>
 </ul>
-<table id=draw-modes>
-  <tr class=header>
-    <td>Draw Modes
-  <tr>
-    <td>LINES
-  <tr>
-    <td>LINE_LOOP
-  <tr>
-    <td>LINE_STRIP
-  <tr>
-    <td>POINTS
-  <tr>
-    <td>TRIANGLES
-  <tr>
-    <td>TRIANGLE_FAN
-  <tr>
-    <td>TRIANGLE_STRIP
-</table>
 <table id=globals>
   <tr class=header>
     <td>Globals
@@ -574,7 +555,15 @@
   <tr>
     <td>draw_mode
     <td>'TRIANGLE_FAN'
-    <td>string
+    <td><ul>
+      <li>LINES
+      <li>LINE_LOOP
+      <li>LINE_STRIP
+      <li>POINTS
+      <li>TRIANGLES
+      <li>TRIANGLE_FAN
+      <li>TRIANGLE_STRIP
+    </ul>
   <tr>
     <td>draw_range
     <td>false
