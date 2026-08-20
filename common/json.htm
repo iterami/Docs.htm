@@ -52,31 +52,6 @@
     "position_y": 10
   },
 
-  // Optional. Array of particle types to be created when the level is loaded.
-  "particles": [
-    {
-      // REQUIRED. The ID of this particle.
-      "id": "example_particle",
-
-      // Optional. False if the vertex position should just wrap upon reaching max/min,
-      //   or true if the vertex position wrap should be randomized instead.
-      "randomize": true,
-
-      // Optional. Vertex movement speed upon each axis.
-      "speed_x": 0,
-      "speed_y": 0,
-      "speed_z": 0,
-
-      // Optional. Maximum and minimum vertex position values before the vertex is wrapped.
-      "x_max": 100,
-      "x_min": -100,
-      "y_max": 100,
-      "y_min": -100,
-      "z_max": 100,
-      "z_min": -100
-    }
-  ],
-
   // Optional. Array of paths that characters can move along.
   "paths": [
     {
@@ -357,6 +332,35 @@
           // Optional. Alpha value for the vertices of this entity, between 0 and 1 inclusive.
           "alpha": 1,
 
+          // Optional. Area around this entity that contains particles and/or water effects.
+          "area": {
+            // Optional. The xyz speed multiplier that is added to characters within this area.
+            "current": 1,
+
+            // Optional. How quickly characters will float to the surface of this area.
+            "density": 0.01,
+
+            // Optional. If this entity will have its veritices modified to fill the area with particles.
+            "particle": false,
+
+            // Optional. If the particles should have their positions randomized when they wrap around
+            // to the other side of this area.
+            "randomize": true,
+
+            // Optional. The speed at which particles move along each axis.
+            "speed_x": 0,
+            "speed_y": 0,
+            "speed_z": 0,
+
+            // Optional. The bounds of this area.
+            "x_max": 100,
+            "x_min": -100,
+            "y_max": 100,
+            "y_min": -100,
+            "z_max": 100,
+            "z_min": -100
+          },
+
           // Optional. ID of character that this entity is attached to.
           // If none specified, then it will default to its character, which is "world_static" in this case.
           "attach_to": "_me",
@@ -436,9 +440,6 @@
           // Optional. If "light_range" is greater than 0, emit a light of a certain color within that range.
           "light_color": [1, 1, 1],
           "light_range": 0,
-
-          // Optional. If this entity should have its vertices modified based upon particle properties.
-          "particle": false,
 
           // Optional. If this entity can be selected via picking.
           // If true, "webgl_pick_id" will increment by 1 and be used as this entity's picking ID, up to 255.

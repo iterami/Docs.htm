@@ -86,6 +86,15 @@
         {
           "id": "water_surface_bottom",
           "alpha": 0.3,
+          "area": {
+            "density": 0.01,
+            "randomize": false,
+            "x_max": 200,
+            "x_min": -200,
+            "y_min": -45,
+            "z_max": 50,
+            "z_min": -50
+          },
           "attach_y": -5,
           "collision": false,
           "rotate_x": 180,
@@ -185,56 +194,80 @@
       }
     },
     {
-      "type": "webgl_primitive_cuboid",
+      "type": "webgl_primitive_area",
       "properties": {
-        "prefix": "water_diving_inner",
-        "alpha": 0.3,
-        "collision": false,
-        "position_x": -75,
-        "position_y": 45,
-        "position_z": 50,
-        "size_x": -20,
-        "size_y": -100,
-        "size_z": -20,
-        "texture": "lavaleaf.png",
-        "vertex_colors": [0, 0, 1, 1]
+        "area": {
+          "density": 0.05,
+          "particle": true,
+          "randomize": false,
+          "x_max": 25,
+          "y_max": 100,
+          "z_max": 20
+        },
+        "entities": [
+          {
+            "id": "water_diving",
+            "attach_x": -90,
+            "attach_y": -5,
+            "attach_z": 40,
+            "draw_mode": "POINTS",
+            "point_size": 150,
+            "vertex_colors": [0, 0, 1, 1],
+            "vertices": 1000
+          }
+        ]
       }
     },
     {
-      "type": "webgl_primitive_cuboid",
+      "type": "webgl_primitive_area",
       "properties": {
-        "prefix": "water_diving_outer",
-        "alpha": 0.3,
-        "collision": false,
-        "position_x": -75,
-        "position_y": 45,
-        "position_z": 50,
-        "size_x": 20,
-        "size_y": 100,
-        "size_z": 20,
-        "texture": "lavaleaf.png",
-        "vertex_colors": [0, 0, 1, 1]
+        "area": {
+          "current": 1,
+          "density": 0.05,
+          "particle": true,
+          "randomize": false,
+          "speed_x": -0.1,
+          "x_max": 95,
+          "y_max": 10,
+          "z_max": 20
+        },
+        "entities": [
+          {
+            "id": "water_current0",
+            "attach_x": -185,
+            "attach_z": 70,
+            "draw_mode": "POINTS",
+            "point_size": 150,
+            "vertex_colors": [0, 0, 1, 1],
+            "vertices": 1000
+          }
+        ]
       }
-    }
-  ],
-  "water": [
-    {
-      "density": 0.05,
-      "x_max": -65,
-      "x_min": -85,
-      "y_max": 95,
-      "y_min": -5,
-      "z_max": 60,
-      "z_min": 40
     },
     {
-      "density": 0.01,
-      "x_max": 200,
-      "x_min": -200,
-      "y_max": -5,
-      "y_min": -50,
-      "z_max": 50,
-      "z_min": -50
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "current": 1,
+          "density": 0.05,
+          "particle": true,
+          "randomize": false,
+          "speed_z": -0.1,
+          "x_max": 20,
+          "y_max": 10,
+          "z_max": 90
+        },
+        "entities": [
+          {
+            "id": "water_current1",
+            "attach_x": -200,
+            "draw_mode": "POINTS",
+            "point_size": 150,
+            "vertex_colors": [0, 0, 1, 1],
+            "vertices": 1000
+          }
+        ]
+      }
     }
   ]
 }

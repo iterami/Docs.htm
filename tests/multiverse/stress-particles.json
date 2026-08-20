@@ -27,28 +27,26 @@
   ],
   "prefabs": [
     {
-      "type": "webgl_primitive_particle",
+      "type": "webgl_primitive_area",
       "properties": {
-        "id": "storm",
-        "entities": [
-          {
-            "id": "storm",
-            "attach_y": 50,
-            "draw_mode": "POINTS",
-            "draw_range": 99,
-            "point_size": 150,
-            "vertex_repeat": 5e5
-          }
-        ],
-        "particle": {
+        "area": {
+          "particle": true,
           "speed_y": -1,
           "x_max": 50,
           "x_min": -50,
-          "y_max": 50,
-          "y_min": -50,
+          "y_max": 100,
           "z_max": 50,
           "z_min": -50
-        }
+        },
+        "entities": [
+          {
+            "id": "storm",
+            "draw_mode": "POINTS",
+            "draw_range": 99,
+            "point_size": 150,
+            "vertices": 5e5
+          }
+        ]
       }
     }
   ]

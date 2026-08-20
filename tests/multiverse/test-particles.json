@@ -27,30 +27,11 @@
   ],
   "prefabs": [
     {
-      "type": "webgl_primitive_particle",
+      "type": "webgl_primitive_area",
       "properties": {
-        "id": "rain",
-        "entities": [
-          {
-            "attach_x": -25,
-            "attach_y": 50,
-            "attach_z": 25,
-            "draw_mode": "POINTS",
-            "id": "rain_0",
-            "point_size": 150,
-            "vertex_repeat": 100
-          },
-          {
-            "attach_x": 25,
-            "attach_y": 50,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "id": "rain_1",
-            "point_size": 150,
-            "vertex_repeat": 100
-          }
-        ],
-        "particle": {
+        "area": {
+          "particle": true,
+          "randomize": false,
           "speed_y": -2,
           "x_max": 25,
           "x_min": -25,
@@ -58,34 +39,34 @@
           "y_min": -50,
           "z_max": 25,
           "z_min": -25
-        }
+        },
+        "entities": [
+          {
+            "id": "rain_0",
+            "attach_x": -25,
+            "attach_y": 50,
+            "attach_z": 25,
+            "draw_mode": "POINTS",
+            "point_size": 150,
+            "vertices": 100
+          },
+          {
+            "id": "rain_1",
+            "attach_x": 25,
+            "attach_y": 50,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "point_size": 150,
+            "vertices": 100
+          }
+        ]
       }
     },
     {
-      "type": "webgl_primitive_particle",
+      "type": "webgl_primitive_area",
       "properties": {
-        "id": "snow",
-        "entities": [
-          {
-            "attach_x": 25,
-            "attach_y": 25,
-            "attach_z": 25,
-            "draw_mode": "POINTS",
-            "id": "snow_0",
-            "point_size": 100,
-            "vertex_repeat": 200
-          },
-          {
-            "attach_x": -25,
-            "attach_y": 25,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "id": "snow_1",
-            "point_size": 100,
-            "vertex_repeat": 200
-          }
-        ],
-        "particle": {
+        "area": {
+          "particle": true,
           "randomize": false,
           "speed_x": 0.1,
           "speed_y": -0.1,
@@ -96,7 +77,27 @@
           "y_min": -25,
           "z_max": 25,
           "z_min": -25
-        }
+        },
+        "entities": [
+          {
+            "id": "snow_0",
+            "attach_x": 25,
+            "attach_y": 25,
+            "attach_z": 25,
+            "draw_mode": "POINTS",
+            "point_size": 100,
+            "vertices": 200
+          },
+          {
+            "id": "snow_1",
+            "attach_x": -25,
+            "attach_y": 25,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "point_size": 100,
+            "vertices": 200
+          }
+        ]
       }
     }
   ]

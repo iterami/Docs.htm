@@ -16,21 +16,6 @@
   "lock": {
     "position_y": 10
   },
-  "particles": [
-    {
-      "id": "example_particle",
-      "randomize": true,
-      "speed_x": 0,
-      "speed_y": 0,
-      "speed_z": 0,
-      "x_max": 100,
-      "x_min": -100,
-      "y_max": 100,
-      "y_min": -100,
-      "z_max": 100,
-      "z_min": -100
-    }
-  ],
   "paths": [
     {
       "id": "example_path",
@@ -159,6 +144,21 @@
         {
           "id": "example_entity_0",
           "alpha": 1,
+          "area": {
+            "current": 1,
+            "density": 0.01,
+            "particle": false,
+            "randomize": true,
+            "speed_x": 0,
+            "speed_y": 0,
+            "speed_z": 0,
+            "x_max": 100,
+            "x_min": -100,
+            "y_max": 100,
+            "y_min": -100,
+            "z_max": 100,
+            "z_min": -100
+          },
           "attach_to": "_me",
           "attach_x": 0,
           "attach_y": -2,
@@ -188,7 +188,6 @@
           ],
           "light_color": [1, 1, 1],
           "light_range": 0,
-          "particle": false,
           "picking": false,
           "picking_exclude": false,
           "picking_range": 0,

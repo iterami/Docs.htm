@@ -18,10 +18,9 @@
   <li><a href=#webgl-properties>WebGL_Properties</a>
   <li><a href=#character-properties>Character Properties</a>
   <li><a href=#entity-properties>Entity Properties</a>
-  <li><a href=#particle-properties>Particle Properties</a>
+  <li><a href=#area-properties>Area Properties</a>
   <li><a href=#timer-properties>Timer Properties</a>
   <li><a href=#vehicle-properties>Vehicle Properties</a>
-  <li><a href=#water-properties>Water Properties</a>
   <li>Picking is limited to 255 different targets at once.
   <li>Requires:<ul>
     <li><a href=core.htm>core.js</a>
@@ -77,7 +76,6 @@
   <li><a href=webgl_logic_entity.htm>webgl_logic_entity(entity)</a>
   <li><a href=webgl_logic_particle.htm>webgl_logic_particle(args)</a>
   <li><a href=webgl_model_create.htm>webgl_model_create(args)</a>
-  <li><a href=webgl_particle_create.htm>webgl_particle_create(particle)</a>
   <li><a href=webgl_path_move.htm>webgl_path_move(id)</a>
   <li><a href=webgl_path_use.htm>webgl_path_use(args)</a>
   <li><a href=webgl_pick.htm>webgl_pick(cursor)</a>
@@ -89,10 +87,10 @@
   <li><a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>
   <li><a href=webgl_prefab_remake.htm>webgl_prefab_remake(args)</a>
   <li><a href=webgl_prefab_repeat.htm>webgl_prefab_repeat(args)</a>
+  <li><a href=webgl_primitive_area.htm>webgl_primitive_area(args)</a>
   <li><a href=webgl_primitive_cuboid.htm>webgl_primitive_cuboid(args)</a>
   <li><a href=webgl_primitive_ellipsoid.htm>webgl_primitive_ellipsoid(args)</a>
   <li><a href=webgl_primitive_frustum.htm>webgl_primitive_frustum(args)</a>
-  <li><a href=webgl_primitive_particle.htm>webgl_primitive_particle(args)</a>
   <li><a href=webgl_primitive_projectile.htm>webgl_primitive_projectile(args)</a>
   <li><a href=webgl_primitive_stars.htm>webgl_primitive_stars(args)</a>
   <li><a href=webgl_primitive_terrain.htm>webgl_primitive_terrain(args)</a>
@@ -225,10 +223,6 @@
     <td>webgl_textures_animated
     <td>{}
     <td>object
-  <tr>
-    <td>webgl_water
-    <td>[]
-    <td>array of objects
   <tr>
     <td>webgl_uris
     <td><textarea readonly>globalThis.uris || {
@@ -530,6 +524,10 @@
     <td>1
     <td>number
   <tr>
+    <td>area
+    <td>false
+    <td>boolean false or object
+  <tr>
     <td>attach_to
     <td>''
     <td>string ID
@@ -605,10 +603,6 @@
     <td>[]
     <td>array of numbers
   <tr>
-    <td>particle
-    <td>false
-    <td>boolean false or string ID
-  <tr>
     <td>picking
     <td>false
     <td>boolean
@@ -673,11 +667,23 @@
     <td>true
     <td>boolean
 </table>
-<table id=particle-properties>
+<table id=area-properties>
   <tr class=header>
-    <td>Particle Properties
+    <td>Area Properties
     <td>Default
     <td>Type
+  <tr>
+    <td>current
+    <td>0
+    <td>number
+  <tr>
+    <td>density
+    <td>0
+    <td>number
+  <tr>
+    <td>particle
+    <td>false
+    <td>boolean
   <tr>
     <td>randomize
     <td>true
@@ -696,27 +702,27 @@
     <td>number
   <tr>
     <td>x_max
-    <td>100
+    <td>0
     <td>number
   <tr>
     <td>x_min
-    <td>-100
+    <td>0
     <td>number
   <tr>
     <td>y_max
-    <td>100
+    <td>0
     <td>number
   <tr>
     <td>y_min
-    <td>-100
+    <td>0
     <td>number
   <tr>
     <td>z_max
-    <td>100
+    <td>0
     <td>number
   <tr>
     <td>z_min
-    <td>-100
+    <td>0
     <td>number
 </table>
 <table id=timer-properties>
@@ -794,39 +800,5 @@
   <tr>
     <td>speed_max_forward
     <td>1
-    <td>number
-</table>
-<table id=water-properties>
-  <tr class=header>
-    <td>Water Properties
-    <td>Default
-    <td>Type
-  <tr>
-    <td>density
-    <td>
-    <td>number
-  <tr>
-    <td>x_max
-    <td>
-    <td>number
-  <tr>
-    <td>x_min
-    <td>
-    <td>number
-  <tr>
-    <td>y_max
-    <td>
-    <td>number
-  <tr>
-    <td>y_min
-    <td>
-    <td>number
-  <tr>
-    <td>z_max
-    <td>
-    <td>number
-  <tr>
-    <td>z_min
-    <td>
     <td>number
 </table>
