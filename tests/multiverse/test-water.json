@@ -88,7 +88,6 @@
           "alpha": 0.3,
           "area": {
             "density": 0.01,
-            "randomize": false,
             "x_max": 200,
             "x_min": -200,
             "y_min": -45,
@@ -198,8 +197,6 @@
       "properties": {
         "area": {
           "density": 0.05,
-          "particle": true,
-          "randomize": false,
           "x_max": 25,
           "y_max": 100,
           "z_max": 20
@@ -225,7 +222,6 @@
           "current": 1,
           "density": 0.05,
           "particle": true,
-          "randomize": false,
           "speed_x": -0.1,
           "x_max": 95,
           "y_max": 10,
@@ -251,7 +247,6 @@
           "current": 1,
           "density": 0.05,
           "particle": true,
-          "randomize": false,
           "speed_z": -0.1,
           "x_max": 20,
           "y_max": 10,

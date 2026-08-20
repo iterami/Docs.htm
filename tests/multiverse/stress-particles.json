@@ -31,6 +31,7 @@
       "properties": {
         "area": {
           "particle": true,
+          "randomize": true,
           "speed_y": -1,
           "x_max": 50,
           "x_min": -50,
