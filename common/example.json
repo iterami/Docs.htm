@@ -248,16 +248,5 @@
       "min": -100,
       "property": "position_z"
     }
-  ],
-  "water": [
-    {
-      "density": 0.01,
-      "x_max": 99,
-      "x_min": -99,
-      "y_max": -10,
-      "y_min": -99,
-      "z_max": 99,
-      "z_min": -99
-    }
   ]
 }

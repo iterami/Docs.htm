@@ -205,10 +205,13 @@
       // Optional. If this character should be used as the default character when creating entities, primitives, and prefabs.
       "base": false,
 
-      // Optional. If the camera is locked to the character's position.
+      // Optional. What this character's camera position is locked to, excluding zoom:
+      //   true = this character's position
+      //   false = nothing
+      //   string ID = another character's position
       "camera_lock": true,
 
-      // Optional. Current camera zoom value.  When 0, camera is in 1st person mode.
+      // Optional. Current camera zoom value. When 0, camera is in 1st person mode.
       "camera_zoom": 20,
 
       // Optional. The maximum distance that collision can occur.
@@ -571,19 +574,6 @@
 
       // REQUIRED. The property that will be modified.
       "property": "position_z"
-    }
-  ],
-
-  // Optional. Array of water objects, containing xyz range and water density.
-  "water": [
-    {
-      "density": 0.01,
-      "x_max": 99,
-      "x_min": -99,
-      "y_max": -10,
-      "y_min": -99,
-      "z_max": 99,
-      "z_min": -99
     }
   ]
 }</code>
