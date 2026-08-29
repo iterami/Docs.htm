@@ -33,30 +33,31 @@
           "particle": true,
           "randomize": true,
           "speed_y": -2,
-          "x_max": 25,
-          "x_min": -25,
+          "x_max": 10,
+          "x_min": -10,
           "y_max": 50,
           "y_min": -50,
-          "z_max": 25,
-          "z_min": -25
+          "z_max": 10,
+          "z_min": -10
         },
         "entities": [
           {
-            "id": "rain_0",
-            "attach_x": -25,
-            "attach_y": 50,
-            "attach_z": 25,
-            "draw_mode": "POINTS",
-            "point_size": 150,
-            "vertices": 100
-          },
-          {
-            "id": "rain_1",
-            "attach_x": 25,
+            "id": "rain",
+            "attach_x": -15,
             "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
-            "point_size": 150,
+            "point_size": 100,
+            "vertex_colors": [0, 0, 1, 1],
+            "vertices": 100
+          },
+          {
+            "id": "rain_random",
+            "attach_x": -35,
+            "attach_y": 50,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "point_size": 100,
             "vertices": 100
           }
         ]
@@ -68,33 +69,91 @@
         "area": {
           "particle": true,
           "randomize": true,
-          "speed_x": 0.1,
           "speed_y": -0.1,
-          "speed_z": 0.1,
-          "x_max": 25,
-          "x_min": -25,
-          "y_max": 25,
-          "y_min": -25,
-          "z_max": 25,
-          "z_min": -25
+          "x_max": 10,
+          "x_min": -10,
+          "y_max": 50,
+          "y_min": -50,
+          "z_max": 10,
+          "z_min": -10
         },
         "entities": [
           {
-            "id": "snow_0",
-            "attach_x": 25,
-            "attach_y": 25,
-            "attach_z": 25,
-            "draw_mode": "POINTS",
-            "point_size": 100,
-            "vertices": 200
-          },
-          {
-            "id": "snow_1",
-            "attach_x": -25,
-            "attach_y": 25,
+            "id": "snow",
+            "attach_x": 15,
+            "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
             "point_size": 100,
+            "vertex_colors": [1, 1, 1, 1],
+            "vertices": 200
+          },
+          {
+            "id": "snow_random",
+            "attach_x": 35,
+            "attach_y": 50,
+            "attach_z": -25,
+            "draw_mode": "POINTS",
+            "point_size": 100,
+            "vertices": 200
+          }
+        ]
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "particle": true,
+          "speed_x": -2,
+          "speed_y": -2,
+          "speed_z": -2,
+          "x_max": 20,
+          "x_min": -20,
+          "y_max": 50,
+          "y_min": -50,
+          "z_max": 20,
+          "z_min": -20
+        },
+        "entities": [
+          {
+            "id": "windy",
+            "attach_x": 30,
+            "attach_y": 50,
+            "attach_z": 30,
+            "draw_mode": "POINTS",
+            "point_size": 200,
+            "vertex_colors": [1, 1, 1, 1],
+            "vertices": 200
+          }
+        ]
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "particle": true,
+          "randomize": true,
+          "speed_x": -2,
+          "speed_y": -2,
+          "speed_z": -2,
+          "x_max": 20,
+          "x_min": -20,
+          "y_max": 50,
+          "y_min": -50,
+          "z_max": 20,
+          "z_min": -20
+        },
+        "entities": [
+          {
+            "id": "windy_random",
+            "attach_x": -30,
+            "attach_y": 50,
+            "attach_z": 30,
+            "draw_mode": "POINTS",
+            "point_size": 200,
+            "vertex_colors": [1, 1, 1, 1],
             "vertices": 200
           }
         ]
