@@ -35,8 +35,7 @@
           "speed_y": -2,
           "x_max": 10,
           "x_min": -10,
-          "y_max": 50,
-          "y_min": -50,
+          "y_max": 100,
           "z_max": 10,
           "z_min": -10
         },
@@ -44,7 +43,6 @@
           {
             "id": "rain",
             "attach_x": -15,
-            "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
             "point_size": 100,
@@ -53,8 +51,11 @@
           },
           {
             "id": "rain_random",
+            "area": {
+              "x_min": -30,
+              "y_max": 50
+            },
             "attach_x": -35,
-            "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
             "point_size": 100,
@@ -72,8 +73,7 @@
           "speed_y": -0.1,
           "x_max": 10,
           "x_min": -10,
-          "y_max": 50,
-          "y_min": -50,
+          "y_max": 100,
           "z_max": 10,
           "z_min": -10
         },
@@ -81,7 +81,6 @@
           {
             "id": "snow",
             "attach_x": 15,
-            "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
             "point_size": 100,
@@ -90,8 +89,11 @@
           },
           {
             "id": "snow_random",
+            "area": {
+              "x_max": 30,
+              "y_max": 50
+            },
             "attach_x": 35,
-            "attach_y": 50,
             "attach_z": -25,
             "draw_mode": "POINTS",
             "point_size": 100,
@@ -110,8 +112,7 @@
           "speed_z": -2,
           "x_max": 20,
           "x_min": -20,
-          "y_max": 50,
-          "y_min": -50,
+          "y_max": 100,
           "z_max": 20,
           "z_min": -20
         },
@@ -119,37 +120,18 @@
           {
             "id": "windy",
             "attach_x": 30,
-            "attach_y": 50,
             "attach_z": 30,
             "draw_mode": "POINTS",
             "point_size": 200,
             "vertex_colors": [1, 1, 1, 1],
             "vertices": 200
-          }
-        ]
-      }
-    },
-    {
-      "type": "webgl_primitive_area",
-      "properties": {
-        "area": {
-          "particle": true,
-          "randomize": true,
-          "speed_x": -2,
-          "speed_y": -2,
-          "speed_z": -2,
-          "x_max": 20,
-          "x_min": -20,
-          "y_max": 50,
-          "y_min": -50,
-          "z_max": 20,
-          "z_min": -20
-        },
-        "entities": [
+          },
           {
             "id": "windy_random",
+            "area": {
+              "randomize": true
+            },
             "attach_x": -30,
-            "attach_y": 50,
             "attach_z": 30,
             "draw_mode": "POINTS",
             "point_size": 200,
