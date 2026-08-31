@@ -39,14 +39,14 @@
           "z_max": 10,
           "z_min": -10
         },
+        "attach_z": -25,
+        "draw_mode": "POINTS",
+        "point_size": 100,
+        "vertex_colors": [0.5, 0.5, 1, 1],
         "entities": [
           {
             "id": "rain",
             "attach_x": -15,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "point_size": 100,
-            "vertex_colors": [0, 0, 1, 1],
             "vertices": 100
           },
           {
@@ -56,9 +56,6 @@
               "y_max": 50
             },
             "attach_x": -35,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "point_size": 100,
             "vertices": 100
           }
         ]
@@ -77,14 +74,14 @@
           "z_max": 10,
           "z_min": -10
         },
+        "attach_z": -25,
+        "draw_mode": "POINTS",
+        "point_size": 100,
+        "vertex_colors": [1, 1, 1, 1],
         "entities": [
           {
             "id": "snow",
             "attach_x": 15,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "point_size": 100,
-            "vertex_colors": [1, 1, 1, 1],
             "vertices": 200
           },
           {
@@ -94,9 +91,6 @@
               "y_max": 50
             },
             "attach_x": 35,
-            "attach_z": -25,
-            "draw_mode": "POINTS",
-            "point_size": 100,
             "vertices": 200
           }
         ]
@@ -116,14 +110,13 @@
           "z_max": 20,
           "z_min": -20
         },
+        "attach_z": 30,
+        "draw_mode": "POINTS",
+        "point_size": 200,
         "entities": [
           {
             "id": "windy",
             "attach_x": 30,
-            "attach_z": 30,
-            "draw_mode": "POINTS",
-            "point_size": 200,
-            "vertex_colors": [1, 1, 1, 1],
             "vertices": 200
           },
           {
@@ -132,10 +125,6 @@
               "randomize": true
             },
             "attach_x": -30,
-            "attach_z": 30,
-            "draw_mode": "POINTS",
-            "point_size": 200,
-            "vertex_colors": [1, 1, 1, 1],
             "vertices": 200
           }
         ]
