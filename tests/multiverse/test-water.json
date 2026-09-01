@@ -181,18 +181,6 @@
       }
     },
     {
-      "type": "webgl_primitive_cuboid",
-      "properties": {
-        "prefix": "path",
-        "character": "path",
-        "size_x": 20,
-        "size_y": 10,
-        "size_z": 40,
-        "texture": "grid.png",
-        "vertex_colors": [0.5, 0.5, 0.5, 1]
-      }
-    },
-    {
       "type": "webgl_primitive_area",
       "properties": {
         "area": {
@@ -208,7 +196,7 @@
             "attach_y": -5,
             "attach_z": 40,
             "draw_mode": "POINTS",
-            "point_size": 150,
+            "point_size": 200,
             "vertex_colors": [0, 0, 1, 1],
             "vertices": 1000
           }
@@ -225,7 +213,7 @@
           "y_max": 10
         },
         "draw_mode": "POINTS",
-        "point_size": 150,
+        "point_size": 200,
         "vertex_colors": [0, 0, 1, 1],
         "entities": [
           {
@@ -248,6 +236,55 @@
             },
             "attach_x": -200,
             "vertices": 1000
+          },
+          {
+            "id": "water_diving",
+            "area": {
+              "current": 0,
+              "particle": false,
+              "x_max": 25,
+              "y_max": 100,
+              "z_max": 20
+            },
+            "attach_x": -90,
+            "attach_y": -5,
+            "attach_z": 40,
+            "vertices": 1000
+          }
+        ]
+      }
+    },
+    {
+      "type": "webgl_primitive_cuboid",
+      "properties": {
+        "prefix": "path",
+        "character": "path",
+        "size_x": 20,
+        "size_y": 10,
+        "size_z": 40,
+        "texture": "grid.png",
+        "vertex_colors": [0.5, 0.5, 0.5, 1]
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "density": 0.1,
+          "x_max": 20,
+          "y_max": 10,
+          "z_max": 60
+        },
+        "character": "path",
+        "draw_mode": "POINTS",
+        "point_size": 200,
+        "vertex_colors": [0, 0, 1, 1],
+        "entities": [
+          {
+            "id": "water_elevator",
+            "attach_x": -10,
+            "attach_z": -75,
+            "vertices": 200
           }
         ]
       }
