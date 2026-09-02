@@ -1,0 +1,46 @@
+{
+  "title": "Primitive Area Test",
+  "spawn": {
+    "position_y": 5,
+    "position_z": 10
+  },
+  "characters": [
+    {
+      "id": "test_primitive_area",
+      "base": true,
+      "spawn": false,
+      "entities": [
+        {
+          "id": "base",
+          "texture": "grid.png",
+          "texture_x": 10,
+          "texture_y": 10,
+          "vertex_colors": [0.5, 0.5, 0.5, 1],
+          "vertices": [
+            50, 0, -50,
+            -50, 0, -50,
+            -50, 0, 50,
+            50, 0, 50
+          ]
+        }
+      ]
+    }
+  ],
+  "prefabs": [
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "prefix": "default"
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "prefix": "empty",
+        "entities": [
+          {}, {}, {}
+        ]
+      }
+    }
+  ]
+}
