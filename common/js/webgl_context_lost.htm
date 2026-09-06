@@ -7,7 +7,7 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_context_lost(event)
 <ul>
-  <li>Handles WebGL context loss.
+  <li>Pauses all timers and resets globalThis.webgl during WebGL context loss.
   <li>When context is restored, <a href=webgl_context_restored.htm>webgl_context_restored()</a> is called.
   <li>Context loss can be tested in the <a href=../../../MultiverseEditor.htm/index.htm>MultiverseEditor.htm</a> UI, or the following lines pasted into the browser console:
 <code>test = webgl.getExtension('WEBGL_lose_context');
