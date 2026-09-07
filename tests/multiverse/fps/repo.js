@@ -20,9 +20,7 @@ function collect({
     }
 
     audio_start('boop');
-    entity_remove({
-      'entities': [id],
-    });
+    webgl_entity_remove(id);
 }
 
 function level_properties(){

@@ -32,11 +32,9 @@
           "event_range": [20, 1e5, 20],
           "event_todo": [
             {
-              "todo": "entity_remove",
+              "todo": "webgl_entity_remove",
               "type": "function",
-              "value": {
-                "entities": ["cuboid"]
-              }
+              "value": "cuboid"
             }
           ],
           "texture": "grid.png",
@@ -54,11 +52,9 @@
           "event_range": 0,
           "event_todo": [
             {
-              "todo": "entity_remove",
+              "todo": "webgl_entity_remove",
               "type": "function",
-              "value": {
-                "entities": ["delete"]
-              }
+              "value": "delete"
             }
           ],
           "picking": true,
