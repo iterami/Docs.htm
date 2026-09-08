@@ -29,7 +29,7 @@
           "attach_x": -40,
           "attach_y": -9.99,
           "attach_z": -40,
-          "event_range": [20, 1e5, 20],
+          "event_range": [-10, 0, -10, 10, 1e5, 10],
           "event_todo": [
             {
               "todo": "webgl_entity_remove",
