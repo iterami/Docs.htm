@@ -329,7 +329,7 @@ function load_skymap(spawn){
                     'todo': 'webgl_character_hit',
                     'type': 'function',
                     'value': {
-                      'id': 'fireball_0',
+                      'id': '_character',
                       'target': '_target',
                       'xz': .3,
                       'y': .5

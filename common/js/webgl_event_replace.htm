@@ -8,8 +8,9 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_event_replace(args)
 <ul>
   <li>Called by <a href=webgl_event.htm>webgl_event(args)</a> to recursively replace strings in event objects before handling:<ul>
-    <li>'_self': replaced by the ID of the event parent.
-    <li>'_target': replaced by the ID of the event target.
+    <li>"_character": repalced by the ID of the event parent "attach_to" property, or ID if it doesn't exist.
+    <li>"_self": replaced by the ID of the event parent.
+    <li>"_target": replaced by the ID of the event target.
   </ul>
 </ul>
 <table>
