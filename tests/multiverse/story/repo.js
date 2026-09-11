@@ -129,12 +129,6 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': function(event){
-          if(webgl !== 0){
-              core_escape(true);
-              event.preventDefault();
-          }
-      },
       'events': {
         'choose_0': {
           'onclick': function(){

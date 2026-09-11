@@ -83,10 +83,6 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': function(event){
-          update(event);
-          event.preventDefault();
-      },
       'blur': function(event){
           update(event);
           update_keys();
@@ -157,6 +153,9 @@ function repo_init(){
         'keys',
         'totals',
       ],
+      'visibilitychange': function(event){
+          update(event);
+      },
     });
 
     update_keys();

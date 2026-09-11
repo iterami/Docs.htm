@@ -414,12 +414,6 @@ function repo_escape(){
 
 function repo_init(){
     core_repo_init({
-      'beforeunload': function(event){
-          if(webgl !== 0){
-              core_escape(true);
-              event.preventDefault();
-          }
-      },
       'events': {
         'new_game': {
           'onclick': new_game,
