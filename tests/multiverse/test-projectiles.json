@@ -9,48 +9,22 @@
     {
       "id": "test_projectiles",
       "base": true,
-      "spawn": false,
-      "entities": [
-        {
-          "id": "base",
-          "event_todo": [
-            {
-              "todo": "webgl_projectile",
-              "type": "function",
-              "value": {
-                "character": "_me",
-                "projectile": {}
-              }
-            }
-          ],
-          "picking": true,
-          "texture": "grid.png",
-          "texture_x": 10,
-          "texture_y": 10,
-          "vertex_colors": [0.5, 0.5, 0.5, 1],
-          "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
-          ]
-        }
-      ]
+      "spawn": false
     },
     {
-      "id": "projectile",
+      "id": "follow",
       "spawn": false,
       "entities": [
         {
-          "id": "projectile_body",
+          "id": "follow_body",
           "billboard": true,
           "collision": false,
           "texture": "grid.png",
           "vertices": [
-            2, 2, 0,
-            -2, 2, 0,
-            -2, -2, 0,
-            2, -2, 0
+            3, 3, 0,
+            -3, 3, 0,
+            -3, -3, 0,
+            3, -3, 0
           ]
         }
       ]
@@ -58,7 +32,7 @@
     {
       "id": "rotator",
       "automove": true,
-      "change_rotate_y": -2,
+      "change_rotate_y": -1,
       "collide_bottom": 5,
       "collide_top": 1,
       "collides": true,
@@ -68,18 +42,33 @@
       "model": {},
       "position_x": 10,
       "position_y": 5,
-      "spawn": false
+      "spawn": false,
+      "speed": 0.2
     }
   ],
   "prefabs": [
     {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "target",
-        "position_z": -75,
-        "size_x": 50,
-        "size_y": 50,
-        "size_z": 50
+        "prefix": "walls",
+        "event_todo": [
+          {
+            "todo": "webgl_projectile",
+            "type": "function",
+            "value": {
+              "character": "_me",
+              "projectile": {}
+            }
+          }
+        ],
+        "picking": true,
+        "position_y": 50,
+        "size_x": -200,
+        "size_y": -100,
+        "size_z": -200,
+        "texture": "grid.png",
+        "texture_x": 10,
+        "texture_y": 10
       }
     }
   ],
@@ -94,7 +83,7 @@
           "type": "function",
           "value": {
             "character": "rotator",
-            "projectile": "projectile"
+            "projectile": "follow"
           }
         }
       ]

@@ -100,7 +100,7 @@
               "todo": "webgl_character_hit",
               "type": "function",
               "value": {
-                "id": "character_hit",
+                "id": "_character",
                 "target": "_target",
                 "xz": 0.3,
                 "y": 0.5
@@ -133,7 +133,7 @@
               "todo": "webgl_character_hit",
               "type": "function",
               "value": {
-                "id": "dead_character_hit",
+                "id": "_character",
                 "target": "_target",
                 "xz": 0.3,
                 "y": 0.5

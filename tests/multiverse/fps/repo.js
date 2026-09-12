@@ -29,7 +29,7 @@ function level_properties(){
       'camera_zoom_max': 0,
       'pointerlock': true,
       'reticle': true,
-      'y_min': -100,
+      'y_min': -240,
     };
 }
 
@@ -151,6 +151,18 @@ function load_bridge(){
           },
         ],
         'prefabs': [
+          {
+            'type': 'webgl_primitive_cuboid',
+            'properties': {
+              'prefix': 'limits',
+              'size_x': -500,
+              'size_y': -500,
+              'size_z': -500,
+              'texture': 'grid.png',
+              'texture_x': 4,
+              'texture_y': 4,
+            },
+          },
           {
             'type': 'webgl_primitive_cuboid',
             'properties': {
@@ -302,18 +314,18 @@ function stats(){
 }
 
 function update_ui(){
-    const character = webgl_characters[webgl_player_id];
+    const player = webgl_characters[webgl_player_id];
     core_ui_update({
       'classname': true,
       'ids': {
-        'ammo': character.ammo,
-        'ammo_max': character.ammo_max,
-        'life': character.life,
-        'life_max': character.life_max,
-        'lives': character.lives,
-        'reload': character.reload,
-        'speed': character.speed,
-        'weapon': character.weapon,
+        'ammo': player.ammo,
+        'ammo_max': player.ammo_max,
+        'life': player.life,
+        'life_max': player.life_max,
+        'lives': player.lives,
+        'reload': player.reload,
+        'speed': player.speed,
+        'weapon': player.weapon,
       },
     });
 }
@@ -336,7 +348,7 @@ function weapon_equip({
 }
 
 function weapon_fire(id){
-    const character = webgl_characters[webgl_player_id];
+    const character = webgl_characters[id];
     if(character.weapon.length === 0
       || character.ammo === 0
       || character.reload !== 0){
@@ -345,6 +357,24 @@ function weapon_fire(id){
 
     character.reload = weapons[character.weapon].reload;
     character.ammo--;
+    webgl_projectile({
+      'character': id,
+      'projectile': {
+        'event_range': 5,
+        'event_todo': [
+          {
+            'todo': 'webgl_character_hit',
+            'type': 'function',
+            'value': {
+              'id': '_character',
+              'target': '_target',
+              'xz': .3,
+              'y': .5,
+            },
+          },
+        ],
+      },
+    });
     audio_start('boop');
     update_ui();
 }
