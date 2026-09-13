@@ -8,7 +8,8 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_primitive_projectile(args)
 <ul>
   <li>Fires a projectile that is created when <a href=webgl_projectile.htm>webgl_projectile(args)</a> does not specify a projectile ID.
-  <li>Position, rotation, and camera rotation are inherited from the character that fired the projectile.
+  <li>Thew new projectile character inherits position, rotation, and camera rotation from the character that fired the projectile, with movement being based on inherited "rotate_y" and "camera_rotate_x".
+  <li>Created projectile characters have their "controls" set to "projectile" which will remove the character on collision via <a href=webgl_character_remove.htm>webgl_character_remove(id)</a>.
   <li>Additional default args are handled by <a href=webgl_prefab_args.htm>webgl_prefab_args(args)</a>.
 </ul>
 <table>
