@@ -55,6 +55,45 @@ function build({
     });
 }
 
+function cancel(){
+    const player = webgl_characters[webgl_player_id];
+    const selected = webgl_characters[player.selected];
+
+    if(selected.time === 0){
+        return;
+    }
+
+    if(!selected.making){
+        select('');
+        player.power += tech[selected.type].character.power;
+        webgl_character_remove(selected.id);
+        return;
+    }
+
+    let maker = selected;
+    let making = webgl_characters[maker.making];
+    if(maker.id === making.id){
+        return;
+    }
+
+    if(!maker.made){
+        select('');
+        maker = webgl_characters[selected.making];
+        making = selected;
+    }
+
+    maker.making = '';
+    maker.time = 0;
+    if(tech[maker.type].character.type === 'unit'){
+        maker.destination_x = maker.position_x;
+        maker.destination_y = maker.position_y;
+        maker.destination_z = maker.position_z;
+    }
+
+    player.power += tech[making.type].character.power;
+    webgl_character_remove(making.id);
+}
+
 function distance_destination(character){
     return math_distance({
       'x0': character.position_x,
@@ -304,6 +343,7 @@ function load_testmap(){
 }
 
 function make({
+  made = false,
   power = 0,
   selected = '',
   team,
@@ -323,16 +363,18 @@ function make({
     }
 
     const id = team + '_' + player.ids++;
+    const unit = character.type === 'unit';
     webgl_character_init({
       'id': id,
       'collide_bottom': 0,
       'collide_xz': prefab.size_x / 2,
-      'collides': true,
+      'collides': unit,
       'controls': 'rpg',
-      'gravity': 1,
+      'gravity': unit ? 1 : 0,
       'level': 0,
       'life': time > 0 ? 1 : character.life_max,
       'lives': 1,
+      'made': made,
       'position_x': x,
       'position_y': y,
       'position_z': z,
@@ -342,9 +384,7 @@ function make({
       'destination_x': x,
       'destination_y': y,
       'destination_z': z,
-      'making': (time > 0 && character.type === 'unit')
-        ? id
-        : (selected ? selected.id : ''),
+      'making': (unit && time > 0) ? id : (selected ? selected.id : ''),
       'team': team,
       'time': time,
       'type': type,
@@ -363,6 +403,11 @@ function make({
 }
 
 function move(character){
+    if(character.speed === 0
+      && character.builds.length === 0){
+        return;
+    }
+
     character.destination_x = webgl_picked.x;
     character.destination_y = webgl_picked.y;
     character.destination_z = webgl_picked.z;
@@ -460,6 +505,9 @@ function repo_init(){
         'camera_reset': {
           'onclick': webgl_character_spawn,
         },
+        'cancel': {
+          'onclick': cancel,
+        },
         'new_game': {
           'onclick': new_game,
         },
@@ -483,102 +531,7 @@ function repo_init(){
       'storage': {
         'enemies': 3,
         'starting_power': 2000,
-        'tech_tree': `{"Builder": {
-  "character": {
-    "build_radius": 5,
-    "builds": [
-      "Factory",
-      "Generator",
-      "Tower"
-    ],
-    "life_max": 100,
-    "power": 100,
-    "speed": 0.2,
-    "time": 100,
-    "type": "unit"
-  },
-  "prefab": {
-    "placeholder": [
-      3, 0.03, -3,
-      -3, 0.03, -3,
-      -3, 0.03, 3,
-      3, 0.03, 3
-    ],
-    "size_x": 4,
-    "size_y": 8,
-    "size_z": 3,
-    "texture": "grid.png"
-  }
-},
-"Factory": {
-  "character": {
-    "build_radius": 20,
-    "builds": ["Builder"],
-    "life_max": 1000,
-    "power": 1000,
-    "speed": 0,
-    "time": 200,
-    "type": "building"
-  },
-  "prefab": {
-    "placeholder": [
-      10, 0.01, -10,
-      -10, 0.01, -10,
-      -10, 0.01, 10,
-      10, 0.01, 10
-    ],
-    "size_x": 20,
-    "size_y": 10,
-    "size_z": 20,
-    "texture": "grid.png"
-  }
-},
-"Generator": {
-  "character": {
-    "build_radius": 15,
-    "builds": [],
-    "life_max": 250,
-    "power": 100,
-    "speed": 0,
-    "time": 300,
-    "type": "building"
-  },
-  "prefab": {
-    "placeholder": [
-      5, 0.01, -5,
-      -5, 0.01, -5,
-      -5, 0.01, 5,
-      5, 0.01, 5
-    ],
-    "size_x": 10,
-    "size_y": 5,
-    "size_z": 10,
-    "texture": "grid.png"
-  }
-},
-"Tower": {
-  "character": {
-    "build_radius": 10,
-    "builds": [],
-    "life_max": 500,
-    "power": 250,
-    "speed": 0,
-    "time": 150,
-    "type": "building"
-  },
-  "prefab": {
-    "placeholder": [
-      4, 0.02, -4,
-      -4, 0.02, -4,
-      -4, 0.02, 4,
-      4, 0.02, 4
-    ],
-    "size_x": 7,
-    "size_y": 16,
-    "size_z": 7,
-    "texture": "grid.png"
-  }
-}}`,
+        'tech_tree': JSON.stringify(tech_tree(), void 0, 2),
       },
       'storage_controls': true,
       'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>CPU Enemies'
@@ -588,7 +541,7 @@ function repo_init(){
         + 'Power: <span id=power></span>, <span id=power_gain></span>/<span id=power_next></span>'
         + '<table class=hidden id=selected_ui><tr><td id=type><td id=selected>'
         + '<tr><td><span id=speed></span> Speed<td><span id=life></span>/<span id=life_max></span> Life'
-        + '<tr><td>Making<td><span id=making></span> <span id=making_time></span></table>'
+        + '<tr><td>Making<td><span id=making></span> <span id=making_time></span> <button id=cancel type=button>Cancel</button></table>'
         + '<div id=build style="align-items:flex-start;display:flex;flex-direction:column"></div>'
         + '<div id=progress></div>',
       'ui_elements': [
@@ -680,6 +633,7 @@ function repo_logic(){
 
                         making.making = '';
                         character.making = '';
+                        character.made = true;
                     }
                 }
             }
@@ -752,9 +706,7 @@ function select(id){
     }else{
         const builds = tech[webgl_characters[player.selected].type].character.builds;
         for(const id in tech){
-            if(builds.includes(id)){
-                core_elements['build_' + id].classList.remove('hidden');
-            }
+            core_elements['build_' + id].classList.toggle('hidden', !builds.includes(id));
         }
     }
 }
@@ -790,10 +742,113 @@ function team_create({
       }),
     });
     make({
+      'made': true,
       'team': id,
       'type': 'Builder',
       'x': x,
       'y': y,
       'z': z,
     });
+}
+
+function tech_tree(){
+    return {
+      'Builder': {
+        'character': {
+          'build_radius': 5,
+          'builds': [
+            'Factory',
+            'Generator',
+            'Tower',
+          ],
+          'life_max': 100,
+          'power': 100,
+          'speed': .2,
+          'time': 100,
+          'type': 'unit',
+        },
+        'prefab': {
+          'placeholder': [
+            3, .03, -3,
+            -3, .03, -3,
+            -3, .03, 3,
+            3, .03, 3,
+          ],
+          'size_x': 4,
+          'size_y': 8,
+          'size_z': 3,
+          'texture': 'grid.png',
+        },
+      },
+      'Factory': {
+        'character': {
+          'build_radius': 20,
+          'builds': ['Builder'],
+          'life_max': 1000,
+          'power': 1000,
+          'speed': 0,
+          'time': 200,
+          'type': 'building',
+        },
+        'prefab': {
+          'collision': false,
+          'placeholder': [
+            10, .01, -10,
+            -10, .01, -10,
+            -10, .01, 10,
+            10, .01, 10,
+          ],
+          'size_x': 20,
+          'size_y': 1,
+          'size_z': 20,
+          'texture': 'grid.png',
+        },
+      },
+      'Generator': {
+        'character': {
+          'build_radius': 15,
+          'builds': [],
+          'life_max': 250,
+          'power': 100,
+          'speed': 0,
+          'time': 300,
+          'type': 'building',
+        },
+        'prefab': {
+          'placeholder': [
+            5, .01, -5,
+            -5, .01, -5,
+            -5, .01, 5,
+            5, .01, 5,
+          ],
+          'size_x': 10,
+          'size_y': 5,
+          'size_z': 10,
+          'texture': 'grid.png',
+        },
+      },
+      'Tower': {
+        'character': {
+          'build_radius': 10,
+          'builds': [],
+          'life_max': 500,
+          'power': 250,
+          'speed': 0,
+          'time': 150,
+          'type': 'building',
+        },
+        'prefab': {
+          'placeholder': [
+            4, .02, -4,
+            -4, .02, -4,
+            -4, .02, 4,
+            4, .02, 4,
+          ],
+          'size_x': 7,
+          'size_y': 16,
+          'size_z': 7,
+          'texture': 'grid.png',
+        },
+      },
+    };
 }
