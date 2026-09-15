@@ -130,9 +130,11 @@ function handle_picking(event){
     }
 
     const button = event.button;
+    const button_left = button === 0;
+    const button_right = button === 2;
 
     if(build_placeholder.length){
-        if(button === 0){
+        if(button_left){
             build({
               'id': webgl_player_id,
               'type': build_placeholder,
@@ -147,7 +149,7 @@ function handle_picking(event){
 
     const player = webgl_characters[webgl_player_id];
     const selected = webgl_characters[player.selected];
-    if(button === 2){
+    if(button_right){
         if(!selected
           || selected.team !== player.id
           || selected.id === selected.making){
@@ -159,17 +161,17 @@ function handle_picking(event){
       'start': 2,
     });
     if(!pixelbuffer.picked){
-        if(button === 0){
+        if(button_left){
             select('');
         }
         return;
     }
     const character = webgl_characters[pixelbuffer.picked.attach_to];
 
-    if(button === 0){
+    if(button_left){
         select(character.team ? character.id : '');
 
-    }else if(button === 2){
+    }else if(button_right){
         if(selected.id === character.id){
             selected.destination_x = selected.position_x;
             selected.destination_y = selected.position_y;
@@ -264,6 +266,32 @@ function level_properties(){
 }
 
 function load_testmap(){
+    const spawn_properties = {
+      'power': Number(core_storage_data.starting_power),
+    };
+    const spawns = [
+      {
+        'x': -125,
+        'z': -125,
+      },
+      {
+        'x': 125,
+        'z': -125,
+      },
+      {
+        'x': -125,
+        'z': 125,
+      },
+      {
+        'x': 125,
+        'z': 125,
+      },
+    ];
+    const enemies = Math.min(
+      core_storage_data.enemies,
+      spawns.length
+    );
+
     webgl_level_load({
       'character': 0,
       'json': {
@@ -307,33 +335,12 @@ function load_testmap(){
       },
     });
 
-    const spawn_properties = {
-      'power': Number(core_storage_data.starting_power),
-    };
-    const spawns = [
-      {
-        'x': -125,
-        'z': -125,
-      },
-      {
-        'x': 125,
-        'z': -125,
-      },
-      {
-        'x': -125,
-        'z': 125,
-      },
-      {
-        'x': 125,
-        'z': 125,
-      },
-    ];
     team_create({
       ...spawn_properties,
       ...core_random_splice(spawns),
       'cpu': false,
     });
-    for(let team = 0; team < core_storage_data.enemies; team++){
+    for(let team = 0; team < enemies; team++){
         team_create({
           'id': 'Enemy' + team,
           ...spawn_properties,
@@ -439,7 +446,6 @@ function new_game(){
           'properties': {
             'id': prefixed,
             'class': 'hidden',
-            'innerHTML': id + ' ' + properties.power + 'power ' + properties.time + 'time',
             'onclick': function(){
                 if(build_placeholder === id){
                     placeholder_hide();
@@ -452,6 +458,7 @@ function new_game(){
                   'type': id,
                 });
             },
+            'textContent': id + ' ' + properties.power + 'power ' + properties.time + 'time',
             'type': 'button',
           },
           'store': prefixed,
@@ -530,7 +537,7 @@ function repo_init(){
         'tech_tree': JSON.stringify(tech_tree(), void 0, 2),
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input class=mini id=enemies max=3 min=0 step=1 type=number><td>CPU Enemies'
+      'storage_menu': '<table><tr><td><input class=mini id=enemies min=0 step=1 type=number><td>CPU Enemies'
         + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table><textarea id=tech_tree></textarea><br>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
@@ -762,7 +769,7 @@ function tech_tree(){
           'life_max': 100,
           'power': 100,
           'speed': .2,
-          'time': 100,
+          'time': 200,
           'type': 'unit',
         },
         'prefab': {
@@ -809,7 +816,7 @@ function tech_tree(){
           'life_max': 250,
           'power': 100,
           'speed': 0,
-          'time': 300,
+          'time': 250,
           'type': 'building',
         },
         'prefab': {
