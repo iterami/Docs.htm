@@ -59,7 +59,8 @@ function cancel(){
     const player = webgl_characters[webgl_player_id];
     const selected = webgl_characters[player.selected];
 
-    if(selected.time === 0){
+    if(selected.team !== player.id
+      || selected.time === 0){
         return;
     }
 
@@ -294,7 +295,6 @@ function load_testmap(){
             'type': 'webgl_primitive_cuboid',
             'properties': {
               'prefix': 'obstacle',
-              'bottom': false,
               'picking': true,
               'position_y': 5,
               'size_x': 20,
@@ -379,7 +379,6 @@ function make({
       'position_y': y,
       'position_z': z,
       'spawn': false,
-
       ...character,
       'destination_x': x,
       'destination_y': y,
@@ -393,7 +392,6 @@ function make({
       ...prefab,
       'prefix': id,
       'character': id,
-      'bottom': false,
       'picking': true,
       'position_y': y + prefab.size_y / 2,
       'vertex_colors': player.team_color,
@@ -477,7 +475,6 @@ function placeholder_hide(){
 function placeholder_show(id){
     const placeholder = entity_entities._rts_placeholder_build_entity;
     placeholder.vertices = tech[id].prefab.placeholder;
-
     webgl.bindVertexArray(placeholder.vao);
     webgl_buffer_set({
       'attribute': webgl_shaders.default.attributes.vertexPosition,
@@ -485,7 +482,6 @@ function placeholder_show(id){
       'data': placeholder.vertices,
       'size': 3,
     });
-
     build_placeholder = id;
     placeholder.draw = true;
 }
@@ -596,48 +592,50 @@ function repo_logic(){
 
         const properties = tech[character.type].character;
         if(properties.type === 'building'){
-            if(character.making
-              && character.time > 0){
-                const making = webgl_characters[character.making];
-                if(math_distance({
-                    'x0': character.position_x,
-                    'y0': character.position_y,
-                    'z0': character.position_z,
-                    'x1': making.position_x,
-                    'y1': making.position_y,
-                    'z1': making.position_z,
-                  }) < properties.build_radius){
-                    making.destination_x = making.position_x;
-                    making.destination_y = making.position_y;
-                    making.destination_z = making.position_z;
-
-                    character.life = Math.min(
-                      character.life + Math.ceil(properties.life_max / properties.time),
-                      character.life_max
-                    );
-                    character.time--;
-                    making.time--;
-
-                    if(character.time <= 0){
-                        if(character.type === 'Generator'){
-                            webgl_characters[character.team].generators++;
-                        }
-
-                        if(character.destination_x !== character.position_x
-                          || character.destination_y !== character.position_y
-                          || character.destination_z !== character.position_z){
-                            making.destination_x = character.destination_x;
-                            making.destination_y = character.destination_y;
-                            making.destination_z = character.destination_z;
-                        }
-
-                        making.making = '';
-                        character.making = '';
-                        character.made = true;
-                    }
-                }
+            if(character.time === 0){
+                continue;
             }
-            continue;
+
+            const making = webgl_characters[character.making];
+            if(math_distance({
+                'x0': character.position_x,
+                'y0': character.position_y,
+                'z0': character.position_z,
+                'x1': making.position_x,
+                'y1': making.position_y,
+                'z1': making.position_z,
+              }) > properties.build_radius){
+                continue;
+            }
+
+            making.destination_x = making.position_x;
+            making.destination_y = making.position_y;
+            making.destination_z = making.position_z;
+
+            character.life = Math.min(
+              character.life + Math.ceil(properties.life_max / properties.time),
+              character.life_max
+            );
+            character.time--;
+            making.time--;
+
+            if(character.time <= 0){
+                if(character.type === 'Generator'){
+                    webgl_characters[character.team].generators++;
+                }
+
+                if(character.destination_x !== character.position_x
+                  || character.destination_y !== character.position_y
+                  || character.destination_z !== character.position_z){
+                    making.destination_x = character.destination_x;
+                    making.destination_y = character.destination_y;
+                    making.destination_z = character.destination_z;
+                }
+
+                making.making = '';
+                character.making = '';
+                character.made = true;
+            }
         }
 
         if(distance_destination(character)){
@@ -720,9 +718,9 @@ function team_create({
   z = 0,
 } = {}){
     webgl_character_init({
-      'cpu': cpu,
       'camera_zoom': 50,
       'controls': 'rts',
+      'cpu': cpu,
       'generators': 0,
       'id': id,
       'ids': 0,
