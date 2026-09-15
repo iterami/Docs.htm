@@ -326,7 +326,7 @@ function make({
     webgl_character_init({
       'id': id,
       'collide_bottom': 0,
-      'collide_xy': prefab.size_x / 2,
+      'collide_xz': prefab.size_x / 2,
       'collides': true,
       'controls': 'rpg',
       'gravity': 1,
@@ -436,6 +436,7 @@ function placeholder_show(id){
     webgl.bindVertexArray(placeholder.vao);
     webgl_buffer_set({
       'attribute': webgl_shaders.default.attributes.vertexPosition,
+      'buffers': placeholder.buffers,
       'data': placeholder.vertices,
       'size': 3,
     });
