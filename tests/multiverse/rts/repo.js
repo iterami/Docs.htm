@@ -129,12 +129,11 @@ function handle_picking(event){
         return;
     }
 
-    const button = event.button;
-    const button_left = button === 0;
-    const button_right = button === 2;
+    const pointer_left = event.button === 0;
+    const pointer_right = event.button === 2;
 
     if(build_placeholder.length){
-        if(button_left){
+        if(pointer_left){
             build({
               'id': webgl_player_id,
               'type': build_placeholder,
@@ -149,7 +148,7 @@ function handle_picking(event){
 
     const player = webgl_characters[webgl_player_id];
     const selected = webgl_characters[player.selected];
-    if(button_right){
+    if(pointer_right){
         if(!selected
           || selected.team !== player.id
           || selected.id === selected.making){
@@ -161,17 +160,17 @@ function handle_picking(event){
       'start': 2,
     });
     if(!pixelbuffer.picked){
-        if(button_left){
+        if(pointer_left){
             select('');
         }
         return;
     }
     const character = webgl_characters[pixelbuffer.picked.attach_to];
 
-    if(button_left){
+    if(pointer_left){
         select(character.team ? character.id : '');
 
-    }else if(button_right){
+    }else if(pointer_right){
         if(selected.id === character.id){
             selected.destination_x = selected.position_x;
             selected.destination_y = selected.position_y;
@@ -287,8 +286,8 @@ function load_testmap(){
         'z': 125,
       },
     ];
-    const enemies = Math.min(
-      core_storage_data.enemies,
+    let cpu = Math.min(
+      core_storage_data.cpu,
       spawns.length
     );
 
@@ -335,14 +334,24 @@ function load_testmap(){
       },
     });
 
-    team_create({
-      ...spawn_properties,
-      ...core_random_splice(spawns),
-      'cpu': false,
-    });
-    for(let team = 0; team < enemies; team++){
+    if(core_storage_data.player){
         team_create({
-          'id': 'Enemy' + team,
+          ...spawn_properties,
+          ...core_random_splice(spawns),
+          'cpu': false,
+        });
+        cpu--;
+
+    }else{
+        team_create({
+          'builder': false,
+          'cpu': false,
+        });
+    }
+
+    for(let team = 0; team < cpu; team++){
+        team_create({
+          'id': 'CPU' + team,
           ...spawn_properties,
           ...core_random_splice(spawns),
         });
@@ -532,12 +541,14 @@ function repo_init(){
       },
       'root': '../../webgl-standalone.htm',
       'storage': {
-        'enemies': 3,
+        'cpu': 4,
+        'player': true,
         'starting_power': 2000,
         'tech_tree': JSON.stringify(tech_tree(), void 0, 2),
       },
       'storage_controls': true,
-      'storage_menu': '<table><tr><td><input class=mini id=enemies min=0 step=1 type=number><td>CPU Enemies'
+      'storage_menu': '<table><tr><td class=right><input id=player type=checkbox><td><label for=player>Player</label>'
+        + '<tr><td><input class=mini id=cpu min=0 step=1 type=number><td>Max CPUs'
         + '<tr><td><input class=mini id=starting_power step=any type=number><td>Starting Power</table><textarea id=tech_tree></textarea><br>',
       'title': 'Docs.htm',
       'ui': '<button id=camera_reset type=button>Reset Camera</button><br>'
@@ -545,11 +556,9 @@ function repo_init(){
         + '<table class=hidden id=selected_ui><tr><td id=type><td id=selected>'
         + '<tr><td><span id=speed></span> Speed<td><span id=life></span>/<span id=life_max></span> Life'
         + '<tr><td>Making<td><span id=making></span> <span id=making_time></span> <button id=cancel type=button>Cancel</button></table>'
-        + '<div id=build style="align-items:flex-start;display:flex;flex-direction:column"></div>'
-        + '<div id=progress></div>',
+        + '<div id=build style="align-items:flex-start;display:flex;flex-direction:column"></div>',
       'ui_elements': [
         'build',
-        'progress',
         'selected_ui',
       ],
     });
@@ -717,6 +726,7 @@ function select(id){
 }
 
 function team_create({
+  builder = true,
   cpu = true,
   id = webgl_player_id,
   power = 0,
@@ -746,14 +756,16 @@ function team_create({
         'vertexcount': 1,
       }),
     });
-    make({
-      'made': true,
-      'team': id,
-      'type': 'Builder',
-      'x': x,
-      'y': y,
-      'z': z,
-    });
+    if(builder){
+        make({
+          'made': true,
+          'team': id,
+          'type': 'Builder',
+          'x': x,
+          'y': y,
+          'z': z,
+        });
+    }
 }
 
 function tech_tree(){
