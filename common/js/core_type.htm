@@ -7,7 +7,8 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_type(variable)
 <ul>
-  <li>Returns the type of the supplied variable by returning its constructor name, or "undefined" for undefined or null variables.
+  <li>If a variable has a constructor, variable.constructor.name is returned.
+  <li>Otherwise, "undefined" is returned to simplify handling.
 </ul>
 <table>
   <tr class=header>
