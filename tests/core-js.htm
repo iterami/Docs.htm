@@ -476,6 +476,64 @@ function repo_init(){
           'args': new WeakSet(),
           'expect': 'weakset',
         },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': true,
+            'value': 'true',
+          },
+          'expect': true,
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': true,
+            'value': 'false',
+          },
+          'expect': false,
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': false,
+            'value': 'true',
+          },
+          'expect': true,
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': false,
+            'value': 'false',
+          },
+          'expect': false,
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': 123,
+            'value': '12345',
+          },
+          'expect': 12345,
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': 'a string',
+            'value': 123,
+          },
+          'expect': '123',
+        },
+        {
+          'todo': 'core_type_convert',
+          'args': {
+            'template': [],
+            'value': 'array',
+          },
+          'expect': function(result){
+              return core_type(result) === 'array';
+          },
+        },
       ],
     });
 }
