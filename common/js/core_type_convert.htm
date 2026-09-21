@@ -8,7 +8,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=core.htm>core.js</a>/core_type_convert(args)
 <ul>
   <li>Converts variable depending on template variable type in order:<ol>
-    <li>If the template type matches the value type, returns the value.
+    <li>If the template type matches the value type, or either the template or value have "undefined" type, returns the value.
     <li>If the template is a boolean, returns true if the value equals the string "true".
     <li>Otherwise returns the value coercered to the template type constructor, such as String(value).
   </ol>

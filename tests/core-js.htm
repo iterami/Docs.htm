@@ -395,71 +395,71 @@ function repo_init(){
         {
           'todo': 'core_type',
           'args': [1, 2, 3],
-          'expect': 'array',
+          'expect': 'Array',
         },
         {
           'todo': 'core_type',
           'args': false,
-          'expect': 'boolean',
+          'expect': 'Boolean',
         },
         {
           'todo': 'core_type',
           'args': true,
-          'expect': 'boolean',
+          'expect': 'Boolean',
         },
         {
           'todo': 'core_type',
           'args': new Date(),
-          'expect': 'date',
+          'expect': 'Date',
         },
         {
           'todo': 'core_type',
           'args': new Error(),
-          'expect': 'error',
+          'expect': 'Error',
         },
         {
           'todo': 'core_type',
           'args': new Event('click'),
-          'expect': 'event',
+          'expect': 'Event',
         },
         {
           'todo': 'core_type',
           'args': function(){
               return false;
           },
-          'expect': 'function',
+          'expect': 'Function',
         },
         {
           'todo': 'core_type',
           'args': new Map(),
-          'expect': 'map',
+          'expect': 'Map',
         },
         {
           'todo': 'core_type',
           'args': 7777,
-          'expect': 'number',
+          'expect': 'Number',
         },
         {
           'todo': 'core_type',
           'args': {
             'property': 'value',
           },
-          'expect': 'object',
+          'expect': 'Object',
         },
         {
           'todo': 'core_type',
           'args': new RegExp(),
-          'expect': 'regexp',
+          'expect': 'RegExp',
         },
         {
           'todo': 'core_type',
           'args': new Set(),
-          'expect': 'set',
+          'expect': 'Set',
         },
         {
           'todo': 'core_type',
           'args': 'text goes here',
-          'expect': 'string',
+          'expect': 'String',
         },
         {
           'todo': 'core_type',
@@ -469,12 +469,12 @@ function repo_init(){
         {
           'todo': 'core_type',
           'args': new WeakMap(),
-          'expect': 'weakmap',
+          'expect': 'WeakMap',
         },
         {
           'todo': 'core_type',
           'args': new WeakSet(),
-          'expect': 'weakset',
+          'expect': 'WeakSet',
         },
         {
           'todo': 'core_type_convert',
@@ -531,7 +531,7 @@ function repo_init(){
             'value': 'array',
           },
           'expect': function(result){
-              return core_type(result) === 'array';
+              return core_type(result) === 'Array';
           },
         },
       ],
