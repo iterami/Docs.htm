@@ -50,8 +50,8 @@ function update(){
     document.getElementById('parameters').innerHTML = parameters;
 }
 
-globalThis.onload = function(){
+globalThis.addEventListener('load', function(){
     document.getElementById('url').value = globalThis.location.href + '?parameter=value#hash';
     update();
-};
+}, {'once': true});
 </script>

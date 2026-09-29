@@ -327,7 +327,7 @@ function reset_rows(){
 
 let row_counter = 0;
 
-globalThis.onload = function(){
+globalThis.addEventListener('load', function(){
     let generated = '';
     for(let i = 0; i < 6; i++){
         generated += '<tr><td>' + i
@@ -337,6 +337,6 @@ globalThis.onload = function(){
           + '<td>' + (i % 2 ? 'column' : 'unsortable');
     }
     document.getElementById('generated').innerHTML = generated;
-}
+}, {'once': true});
 </script>
 <script src=../../common/js/tables.js></script>

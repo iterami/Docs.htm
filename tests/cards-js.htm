@@ -40,8 +40,8 @@ function update_deck(){
     document.getElementById('drawn').innerHTML = drawn;
 }
 
-globalThis.onload = function(){
+globalThis.addEventListener('load', function(){
     cards_new('test');
     update_deck();
-};
+}, {'once': true});
 </script>

@@ -83,7 +83,7 @@ function test_mediadevices(){
     });
 }
 
-globalThis.onload = function(){
+globalThis.addEventListener('load', function(){
     let css = 'CSS' in globalThis;
     if(css){
         css = CSS.supports('transform', 'rotate(90deg)');
@@ -129,7 +129,7 @@ globalThis.onload = function(){
     document.onpointerlockchange = pointerlock_update;
     document.onpointerlockerror = pointerlock_update;
     globalThis.onkeydown = pointerlock_exit;
-};
+}, {'once': true});
 </script>
 
 <script src=../../common/js/tables.js></script>

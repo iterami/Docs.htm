@@ -53,7 +53,7 @@
 </ul>
 
 <script>
-globalThis.onload = function(){
+globalThis.addEventListener('load', function(){
     const element = document.getElementById('service_worker_status');
 
     if('serviceWorker' in navigator){
@@ -68,5 +68,5 @@ globalThis.onload = function(){
     }else{
         element.textContent = 'Not Supported';
     }
-};
+}, {'once': true});
 </script>
