@@ -36,8 +36,8 @@
   // Optional. The maximum distance at which entities are drawn, or false for unlimited.
   "draw_range": 1000,
 
-  // Optional. Distance at which entites start getting obscurbed by the "clear_color"
-  //   until the end up being completely obscured. If "fog_end" is 0, no fog is computed.
+  // Optional. Distance at which entites start getting obscurbed by the <code>"clear_color"</code>
+  //   until the end up being completely obscured. If <code>"fog_end"</code> is 0, no fog is computed.
   "fog_end": 100,
   "fog_start": 0,
 
@@ -74,8 +74,7 @@
       // REQUIRED. Array of path points in order.
       "points": [
         {
-          // Optional. The distance from this point at which the
-          //   character is considered to be at the point.
+          // Optional. The distance from this point at which the character is considered to be at the point.
           "distance": 0,
 
           // Optional. Event handling when this point is reached.
@@ -83,7 +82,7 @@
           "event_limit": false,
           "event_todo": [],
 
-          // Optional. Point position relative to "0, 0, 0".
+          // Optional. Point position relative to <code>0,0,0</code>.
           // Leave absent to use current position of that axis.
           "position_x": 0,
           "position_y": 0,
@@ -111,7 +110,9 @@
   "paused": false,
 
   // Optional. What amount of picking this level allows.
-  // 0 = picking disabled, 1 = picking allowed when repo uses it, 2 = picking allowed and occurs every logic frame
+  //   0 = picking disabled
+  //   1 = picking allowed when repo uses it
+  //   2 = picking allowed and occurs every logic frame
   "picking": 2,
 
   // Optional. If this level will request the pointer remain locked to the canvas.
@@ -148,8 +149,7 @@
       // Optional. The duration of this timer in logic frames.
       "frames_max": 100,
 
-      // Optional. How many additional frames to randomly add on top of "frames_max"
-      //   during creation and repeat.
+      // Optional. How many additional frames to randomly add on top of <code>"frames_max"</code> during creation and repeat.
       "frames_random": 100,
 
       // Optional. How many times this timer should repeat after counting down to 0 frames.
@@ -187,7 +187,7 @@
   // Optional. Minimum character Y position before forced death and respawn.
   "y_min": -200,
 
-  // Optional. Array of groups to create, excluding automatically created groups such as "skybox".
+  // Optional. Array of groups to create, excluding automatically created groups such as <code>"skybox"</code>.
   "groups": [
     "example_group_0",
     "example_group_1"
@@ -261,7 +261,7 @@
       "model": {},
 
       // Optional. Optional object with values that NPC characters can use to control themselves.
-      // Object property labels match <a href=js/core.htm#pointer-properties>core.js pointer properties</a> stored in "globalThis.core_pointer".
+      // Object property labels match <a href=js/core.htm#pointer-properties>core.js pointer properties</a> stored in <code>globalThis.core_pointer</code>.
       "pointer": false,
 
       // Optional. Current assigned path or false, current path point target, and movement direction.
@@ -365,7 +365,7 @@
           },
 
           // Optional. ID of character that this entity is attached to.
-          // If none specified, then it will default to its character, which is "world_static" in this case.
+          // If none specified, then it will default to its character, which is <code>"world_static"</code> in this case.
           "attach_to": "_me",
 
           // Optional. Position offset relative to position of the entity/character attached to.
@@ -396,8 +396,7 @@
           // Optional. How the vertices should be drawn.
           "draw_mode": "TRIANGLE_FAN",
 
-          // Optional. The maximum distance at which this specific entity is drawn,
-          //   or false to use "webgl_properties.draw_range".
+          // Optional. The maximum distance at which this specific entity is drawn, or false to use <code>webgl_properties.draw_range</code>.
           "draw_range": 500,
 
           // Optional. The number of times this event should occur, or false for unlimited.<span id=events></span>
@@ -441,12 +440,12 @@
             }
           ],
 
-          // Optional. If "light_range" is greater than 0, emit a light of a certain color within that range.
+          // Optional. If <code>"light_range"</code> is greater than 0, emit a light of a certain color within that range.
           "light_color": [1, 1, 1],
           "light_range": 0,
 
           // Optional. If this entity can be selected via picking.
-          // If true, "webgl_pick_id" will increment by 1 and be used as this entity's picking ID, up to 255.
+          // If true, <code>webgl_pick_id</code> will increment by 1 and be used as this entity's picking ID, up to 255.
           "picking": false,
 
           // Optional. If this entity should be excluded and not drawn during picking.
@@ -456,7 +455,7 @@
           // If 0, picking range is unlimited.
           "picking_range": 0,
 
-          // Optional. The size of each point when this entity uses the "POINTS" draw mode.
+          // Optional. The size of each point when this entity uses the <code>"POINTS"</code> draw mode.
           "point_size": 0,
 
           // Optional. Rotation of entity in degrees between 0 inclusive and 360 exclusive.
@@ -467,7 +466,7 @@
           // Optional. ID of the texture to apply to this entity.
           // If the texture is not animated, only include the texture ID.
           // If the texture is animated, include movement after the texture ID separated by commas,
-          //   such as "gear.png,0.1,0.2", with the 1st number being X movement and the 2nd being Y movement.
+          //   such as <code>"gear.png,0.1,0.2"</code>, with the 1st number being X movement and the 2nd being Y movement.
           "texture": "gear.png",
 
           // Optional. Texture alignment string.
@@ -488,8 +487,7 @@
             0, 0, 1, 1
           ],
 
-          // REQUIRED. Array of numbers indicating the position of each vertex,
-          //   relative to the entity position.
+          // REQUIRED. Array of numbers indicating the position of each vertex, relative to the entity position.
           // Each row is: x, y, z
           "vertices": [
             10, 0, 10,
@@ -520,23 +518,19 @@
         // Optional. Prefix added to each created entity ID.
         "prefix": "example_cuboid",
 
-        // Optional. Properties applied to the -z face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the -z face, or false to prevent this face from being created.
         "back": {},
 
-        // Optional. Properties applied to the -y face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the -y face, or false to prevent this face from being created.
         "bottom": {},
 
         // Optional. Which character this cuboid should be attached to.
         "character": "world_static",
 
-        // Optional. Properties applied to the +z face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the +z face, or false to prevent this face from being created.
         "front": {},
 
-        // Optional. Properties applied to the -x face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the -x face, or false to prevent this face from being created.
         "left": {},
 
         // Optional. Position of the center of the cuboid relative to the parent character position.
@@ -544,8 +538,7 @@
         "position_y": 0,
         "position_z": 0,
 
-        // Optional. Properties applied to the +x face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the +x face, or false to prevent this face from being created.
         "right": {},
 
         // Optional. Size of the cuboid.
@@ -553,8 +546,7 @@
         "size_y": 1,
         "size_z": 1,
 
-        // Optional. Properties applied to the +y face.
-        // Set "exclude" to true to prevent this face from being created.
+        // Optional. Properties applied to the +y face, or false to prevent this face from being created.
         "top": {}
       }
     }

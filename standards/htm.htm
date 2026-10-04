@@ -7,29 +7,31 @@
 
 <a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/HTM Standards
 <ul>
-  <li>All pages must include:<code>&lt;!doctype html&gt;
+  <li>All pages must include:<br>
+<code>&lt;!doctype html&gt;
 &lt;html lang=en&gt;
 &lt;meta charset=utf-8&gt;
 &lt;meta content="width=device-width,initial-scale=1" name=viewport&gt;
 &lt;title&gt;A Title&lt;/title&gt;
 &lt;link href=a/css/file.css rel=stylesheet&gt;</code>
-  <li>If a page must disable mobile zooming, then use this meta tag instead:<code>&lt;meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport&gt;</code>
+  <li>If a page must disable mobile zooming, then use this meta tag instead:<br>
+<code>&lt;meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport&gt;</code>
   <li>Element IDs:<ul>
     <li>Must be able to be used in <a href=js.htm>JavaScript</a> dot notation.
-    <li>Must not include the element "tagName".
+    <li>Must not include the element <code>"tagName"</code>.
   </ul>
   <li>External links:<ul>
-    <li>Must include the "external" CSS class and "rel=noreferrer".
-    <li>Should not include optional filenames, such as "index.htm".
+    <li>Must include the <code>"external"</code> CSS class and <code>rel=noreferrer</code>.
+    <li>Should not include optional filenames, such as <code>index.htm</code>.
     <li>Includes all non-relative links.
   </ul>
   <li>Formatting standards can be ignored to avoid unnecessary whitespace rendering.
-  <li>Inputs must have a type, including "type=text".
-  <li>Inputs and textareas that contain text that the user should not modify must be "readonly".
-  <li>Internal links must include optional filenames, such as "index.htm", to improve local offline browsing.
+  <li>Inputs must have a type, including <code>type=text</code>.
+  <li>Inputs and textareas that contain text that the user should not modify must be <code>readonly</code>.
+  <li>Internal links must include optional filenames, such as <code>index.htm</code>, to improve local offline browsing.
   <li>Optional tags are excluded unless necessary:<ul>
-    <li>&lt;body&gt;&lt;/body&gt;, &lt;head&gt;&lt;/head&gt;, &lt;html&gt;&lt;/html&gt;, &lt;/li&gt;, &lt;/option&gt;, &lt;/tbody&gt;, &lt;/td&gt;, &lt;/thead&gt;, &lt;/tr&gt;
-    <li>&lt;tbody&gt; and &lt;thead&gt; are excluded unless the table contents will be controlled via JavaScript.
+    <li><code>&lt;body&gt;&lt;/body&gt;&lt;head&gt;&lt;/head&gt;&lt;/li&gt;&lt;/option&gt;&lt;/tbody&gt;&lt;/td&gt;&lt;/thead&gt;&lt;/tr&gt;</code>
+    <li><code>&lt;tbody&gt;&lt;/tbody&gt;&lt;thead&gt;&lt;/thead&gt;</code> are excluded unless the table contents will be controlled via JavaScript.
   </ul>
   <li>Search engine optimization and social media code should not be included.
 </ul>

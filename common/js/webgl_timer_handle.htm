@@ -7,10 +7,10 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_timer_handle(timer)
 <ul>
-  <li>If "timer" is active, then decreases remaining "timer.frames" by 1.
-  <li>If "timer.frames" &lt;=0:<ul>
-    <li>and "timer.repeat" is &gt;0, then handle "timer.event_repeat" events.
-    <li>and "timer.repeat" is &lt;=0, then handle "timer.event_end" events.
+  <li>If <code>"timer"</code> is active, then decreases remaining <code>"timer.frames"</code> by 1.
+  <li>If <code>"timer.frames"</code> &lt;=0:<ul>
+    <li>and <code>"timer.repeat"</code> is &gt;0, then handle <code>"timer.event_repeat"</code> events.
+    <li>and <code>"timer.repeat"</code> is &lt;=0, then handle <code>"timer.event_end"</code> events.
   </ul>
   <li>Events are handled by <a href=webgl_event.htm>webgl_event(args)</a>.
 </ul>

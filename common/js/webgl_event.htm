@@ -8,7 +8,7 @@
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_event(args)
 <ul>
   <li>Handles entity events that occur during collision, within a certain radius, or when the entity is picked.
-  <li>You can pass an array of event objects to the "parent" arg for events without "parent" or "target" objects.
+  <li>You can pass an array of event objects to the <code>"parent"</code> arg for events without <code>"parent"</code> or <code>"target"</code> objects.
   <li>Calls <a href=webgl_event_replace.htm>webgl_event_replace(modify, replace)</a> to recursively replace strings in event objects before handling.
 </ul>
 <table>
@@ -25,20 +25,20 @@
     <td>
     <td>character/entity object
 </table>
-The properties in each object within "event_todo" of the "parent" control what happens when the event occurs. Examples can be found in the <a href=../json.htm#events>JSON level format</a> and the <a href=../../tests/multiverse/test-events.json>test-events.json</a>:<ul>
+The properties in each object within <code>"event_todo"</code> of the <code>"parent"</code> control what happens when the event occurs. Examples can be found in the <a href=../json.htm#events>JSON level format</a> and the <a href=../../tests/multiverse/test-events.json>test-events.json</a>:<ul>
   <li>"limit": how many times this event occurs before it is skipped.
-  <li>"random_max" and "random_min": value range to randomly add to "value".
+  <li>"random_max" and "random_min": value range to randomly add to <code>"value"</code>.
   <li>"set": if modifying a stat or variable, either set its value to "value" or add it.
   <li>"stat": the specific character/entity property that will be modified.
-  <li>"todo": either the ID of the character/entity, the name of the function to call without (), or the name of the variable to modify.
+  <li>"todo": either the ID of the character/entity, the name of the function to call without <code>()</code>, or the name of the variable to modify.
   <li>"type": what is being called or modified when this event occurs:<ul>
-    <li>"character": modify the character with the "todo" ID.
-    <li>"entity": default, modify the entity with the "todo" ID.
-    <li>"function": call the function with the "todo" name and pass "value" as its args. For JSON levels:<ul>
-      <li>You can call <a href=webgl_json_function.htm>webgl_json_function(args)</a> to run complex functions that don't use variables, such as calling "globalThis.console.log('static text')", without using eval.
-      <li>If you need to pass variables to the called function, then currently you should use the "eval" function with a string "value", such as "console.log(webgl_character_count)".
+    <li>"character": modify the character with the <code>"todo"</code> ID.
+    <li>"entity": default, modify the entity with the <code>"todo"</code> ID.
+    <li>"function": call the function with the <code>"todo"</code> name and pass <code>"value"</code> as its args. For JSON levels:<ul>
+      <li>You can call <a href=webgl_json_function.htm>webgl_json_function(args)</a> to run complex functions that don't use variables, such as calling <code>globalThis.console.log('static text')</code>, without using eval.
+      <li>If you need to pass variables to the called function, then currently you should use the <code>"eval"</code> function with a string <code>"value"</code>, such as <code>"console.log(webgl_character_count)"</code>.
     </ul>
-    <li>"variable": modify the variable with the "todo" name.
+    <li>"variable": modify the variable with the <code>"todo"</code> name.
   </ul>
   <li>"value": the value to use to modify stats and variables, or the args that are passed to called functions.
 </ul>

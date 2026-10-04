@@ -7,17 +7,17 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_pick(cursor)
 <ul>
-  <li>Checks if picking can currently occur and stores it in "pixelbuffer.checked":<ul>
+  <li>Checks if picking can currently occur and stores it in <code>pixelbuffer.checked</code>:<ul>
     <li>The core menu must be closed.
-    <li>"webgl_properties.picking" must be greater than 0.
-    <li>The "webgl_player_id" character must be alive and their level must either be -1 if "webgl_properties.paused" is true, or &gt;=-1 otherwise.
+    <li><code>webgl_properties.picking</code> must be greater than 0.
+    <li>The <code>webgl_player_id</code> character must be alive and their level must either be -1 if <code>webgl_properties.paused</code> is true, or &gt;=-1 otherwise.
   </ul>
   <li>Uses the picking framebuffer and shader created during <a href=webgl_pick_init.htm>webgl_pick_init()</a>.
-  <li>Asynchronously determines the color of the picked pixel and stores it in one of the available "webgl_pixelbuffers" objects. On the next logic frame after the color is determined, it is passed along with the "cursor" arg and other properties to <a href=webgl_pick_event.htm>webgl_pick_event(args)</a> for handling. The object can also be retrieved via <a href=webgl_pick_entity.htm>webgl_pick_entity(args)</a>.
-  <li>Picking xy is equal to "globalThis.innerWidth / 2" and "globalThis.innerHeight / 2" if "webgl_properties.pointerlock" is true, or otherwise is equal to "core_pointer.x" and "core_pointer.y".
-  <li>Entities with "picking_exclude" true cannot be picked and won't block entities behind them.
-  <li>If the picked entity has "picking_range" &gt;0, then distance between the entity's position and the position of "webgl_characters[webgl_player_id]" is checked.
-  <li>The "cursor" arg is passed along in the "pixelbuffer" object.
+  <li>Asynchronously determines the color of the picked pixel and stores it in one of the available <code>webgl_pixelbuffers</code> objects. On the next logic frame after the color is determined, it is passed along with the <code>"cursor"</code> arg and other properties to <a href=webgl_pick_event.htm>webgl_pick_event(args)</a> for handling. The object can also be retrieved via <a href=webgl_pick_entity.htm>webgl_pick_entity(args)</a>.
+  <li>Picking xy is equal to <code>globalThis.innerWidth / 2</code> and <code>globalThis.innerHeight / 2</code> if <code>webgl_properties.pointerlock</code> is true, or otherwise is equal to <code>core_pointer.x</code> and <code>core_pointer.y</code>.
+  <li>Entities with <code>"picking_exclude"</code> true cannot be picked and won't block entities behind them.
+  <li>If the picked entity has <code>"picking_range"</code> &gt;0, then distance between the entity's position and the position of <code>webgl_characters[webgl_player_id]</code> is checked.
+  <li>The <code>"cursor"</code> arg is passed along in the <code>"pixelbuffer"</code> object.
 </ul>
 <table>
   <tr class=header>

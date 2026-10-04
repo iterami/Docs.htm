@@ -9,14 +9,14 @@
 <ul>
   <li>Calls <a href=webgl_init.htm>webgl_init()</a> if WebGL has not yet been set up.
   <li>Creates a level from a parsed <a href=../json.htm>JSON Level Format</a> file.
-  <li>The "base" arg contains properties and entities returned by <a href=webgl_level_unload.htm>webgl_level_unload(base)</a>.
-  <li>The "character" arg can have certain values:<ul>
+  <li>The <code>"base"</code> arg contains properties and entities returned by <a href=webgl_level_unload.htm>webgl_level_unload(base)</a>.
+  <li>The <code>"character"</code> arg can have certain values:<ul>
     <li>-1: create a new level -1 camera character instead of a previously created character.
     <li>0: use previously created character of at least level -1, or otherwise fail to load.
-    <li>1: use existing character in the level file with the same ID as "webgl_player_id", or set "webgl_player_id" to the first character in the file, or otherwise fail to load.
-    <li>object: delete current "webgl_characters[webgl_player_id]" and create a new character with the object properties.
+    <li>1: use existing character in the level file with the same ID as <code>webgl_player_id</code>, or set <code>webgl_player_id</code> to the first character in the file, or otherwise fail to load.
+    <li>object: delete current <code>webgl_characters[webgl_player_id]</code> and create a new character with the object properties.
   </ul>
-  <li>If the level requests "pointerlock" true and "picking" of 2, then a reticle element will be created and displayed.
+  <li>If the level requests <code>"pointerlock"</code> true and <code>"picking"</code> of 2, then a reticle element will be created and displayed.
   <li>Calls optional repo-specific <a href=repo_level_load.htm>repo_level_load()</a> function.
 </ul>
 <table>
