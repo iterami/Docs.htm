@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Repo ui_elements Tests</title>
+<link href=../../common/css/core.css rel=stylesheet>
+
+<a href=../../index.htm>iterami</a>/<a href=../index.htm>Docs.htm</a>/<a href=index.htm>Tests</a>/Repo ui_elements<br>
+<table>
+  <tr class=header>
+    <td>ID
+    <td>core_elements[id]
+  <tr>
+    <td id=existing_element>existing_element
+    <td id=existing_element_result>
+  <tr>
+    <td>fake_element
+    <td id=fake_element_result>
+  <tr>
+    <td>info_element
+    <td id=info_element_result>
+  <tr>
+    <td>move_up
+    <td id=move_up_result>
+  <tr>
+    <td>storage_element
+    <td id=storage_element_result>
+  <tr>
+    <td>tab_element
+    <td id=tab_element_result>
+  <tr>
+    <td>ui_element
+    <td id=ui_element_result>
+  <tr>
+    <td id=unadded_element>unadded_element
+    <td id=unadded_element_result>
+</table>
+
+<script src=../../common/js/core.js></script>
+<script>
+function repo_init(){
+    core_repo_init({
+      'info': '<div id=info_element>info_element</div>',
+      'root': 'index.htm',
+      'storage': {
+        'storage_element': 'storage_element',
+      },
+      'storage_controls': true,
+      'storage_menu': '<div id=storage_element></div>',
+      'tabs': {
+        'test': {
+          'content': '<div id=tab_element>tab_element</div>',
+          'group': 'test',
+          'label': 'Test Tab',
+        },
+      },
+      'title': 'Docs.htm',
+      'ui': '<div id=ui_element>ui_element</div>',
+      'ui_elements': [
+        'existing_element',
+        'info_element',
+        'storage_element',
+        'tab_element',
+        'ui_element',
+      ],
+    });
+
+    const elements = [
+      'existing_element',
+      'fake_element',
+      'info_element',
+      'move_up',
+      'storage_element',
+      'tab_element',
+      'ui_element',
+      'unadded_element',
+    ];
+    for(const id of elements){
+        document.getElementById(id + '_result').textContent = String(core_elements[id]);
+    }
+}
+</script>
