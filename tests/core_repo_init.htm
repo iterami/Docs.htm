@@ -40,6 +40,9 @@
 <script>
 function repo_init(){
     core_repo_init({
+      'blur': function(){
+          console.log('blur');
+      },
       'globals': {
         'test_global': 'test global value',
       },
@@ -61,10 +64,22 @@ function repo_init(){
         },
       },
       'info': '<div id=info_element></div>',
+      'keybinds': {
+        'KeyH': {
+          'down': function(){
+              console.log('H keydown');
+          },
+        },
+      },
       'link': '../common/js/core_repo_init.htm',
       'menu': true,
       'menu_block_events': false,
       'owner': 'Test Owner',
+      'pointerbinds': {
+        'pointerdown': function(){
+            console.log('pointerdown');
+        },
+      },
       'root': 'index.htm',
       'storage': {
         'storage_element': 'storage_element',
@@ -102,6 +117,10 @@ function repo_init(){
     for(const id of elements){
         document.getElementById(id + '_result').textContent = String(core_elements[id]);
     }
-    console.log(test_global, globalThis.test_global, window.test_global);
+    console.log(
+      test_global,
+      globalThis.test_global,
+      window.test_global
+    );
 }
 </script>
