@@ -11,7 +11,7 @@
     <td>ID
     <td>core_elements[id]
   <tr>
-    <td id=existing_element>existing_element
+    <td id=existing_element>
     <td id=existing_element_result>
   <tr>
     <td>fake_element
@@ -32,7 +32,7 @@
     <td>ui_element
     <td id=ui_element_result>
   <tr>
-    <td id=unadded_element>unadded_element
+    <td id=unadded_element>
     <td id=unadded_element_result>
 </table>
 
@@ -40,7 +40,31 @@
 <script>
 function repo_init(){
     core_repo_init({
-      'info': '<div id=info_element>info_element</div>',
+      'globals': {
+        'test_global': 'test global value',
+      },
+      'events': {
+        'existing_element': {
+          'textContent': 'existing_element',
+        },
+        'info_element': {
+          'textContent': 'info_element',
+        },
+        'tab_element': {
+          'textContent': 'tab_element',
+        },
+        'ui_element': {
+          'textContent': 'ui_element',
+        },
+        'unadded_element': {
+          'textContent': 'unadded_element',
+        },
+      },
+      'info': '<div id=info_element></div>',
+      'link': '../common/js/core_repo_init.htm',
+      'menu': true,
+      'menu_block_events': false,
+      'owner': 'Test Owner',
       'root': 'index.htm',
       'storage': {
         'storage_element': 'storage_element',
@@ -49,13 +73,13 @@ function repo_init(){
       'storage_menu': '<div id=storage_element></div>',
       'tabs': {
         'test': {
-          'content': '<div id=tab_element>tab_element</div>',
+          'content': '<div id=tab_element></div>',
           'group': 'test',
           'label': 'Test Tab',
         },
       },
-      'title': 'Docs.htm',
-      'ui': '<div id=ui_element>ui_element</div>',
+      'title': 'Test Title',
+      'ui': '<div id=ui_element></div>',
       'ui_elements': [
         'existing_element',
         'info_element',
@@ -78,5 +102,6 @@ function repo_init(){
     for(const id of elements){
         document.getElementById(id + '_result').textContent = String(core_elements[id]);
     }
+    console.log(test_global, globalThis.test_global, window.test_global);
 }
 </script>
