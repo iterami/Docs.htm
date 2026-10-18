@@ -310,33 +310,49 @@ function repo_init(){
           'todo': 'core_round',
           'args': {
             'decimals': 0,
-            'number': 123.456,
+            'number': 123.555,
           },
-          'expect': 123,
+          'expect': 124,
         },
         {
           'todo': 'core_round',
           'args': {
-            'decimals': 1,
-            'number': 123.456,
+            'decimals': 2,
+            'number': 123.555,
           },
-          'expect': 123.5,
+          'expect': 123.56,
         },
         {
           'todo': 'core_round',
           'args': {
             'decimals': 7,
-            'number': 123.456,
+            'number': 123.555,
           },
-          'expect': 123.456,
+          'expect': 123.555,
         },
         {
           'todo': 'core_round',
           'args': {
-            'decimals': 1,
-            'number': 1.234e23,
+            'decimals': 0,
+            'number': -123.555,
           },
-          'expect': 1.2e23,
+          'expect': -124,
+        },
+        {
+          'todo': 'core_round',
+          'args': {
+            'decimals': 2,
+            'number': -123.555,
+          },
+          'expect': -123.56,
+        },
+        {
+          'todo': 'core_round',
+          'args': {
+            'decimals': 7,
+            'number': -123.555,
+          },
+          'expect': -123.555,
         },
         {
           'todo': 'core_sort_numbers',
