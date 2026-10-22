@@ -2,9 +2,25 @@
   "title": "Paths Test",
   "spawn": {
     "position_y": 5,
-    "position_z": 10
+    "position_z": 20
   },
   "paths": [
+    {
+      "id": "path_collision",
+      "collision": false,
+      "end": "loop",
+      "speed": 0.5,
+      "points": [
+        {
+          "position_x": -10,
+          "position_y": 10,
+          "position_z": -10
+        },
+        {
+          "position_y": -10
+        }
+      ]
+    },
     {
       "id": "path_distance",
       "end": "loop",
@@ -294,6 +310,27 @@
             -50, 0, -50,
             -50, 0, 50,
             50, 0, 50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path_collision_user",
+      "collides": true,
+      "gravity": 1,
+      "level": 1,
+      "path_id": "path_collision",
+      "entities": [
+        {
+          "id": "path_collision_user_body",
+          "billboard": true,
+          "collision": false,
+          "texture": "grid.png",
+          "vertices": [
+            2, 2, 0,
+            -2, 2, 0,
+            -2, -2, 0,
+            2, -2, 0
           ]
         }
       ]
