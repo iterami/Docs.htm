@@ -31,15 +31,50 @@
       "properties": {
         "area": {
           "particle": true,
-          "randomize": true,
+          "speed_y": 0.2,
+          "x_max": 3,
+          "x_min": -3,
+          "y_max": 10,
+          "z_max": 3,
+          "z_min": -3
+        },
+        "attach_z": -40,
+        "draw_mode": "LINE_LOOP",
+        "point_size": 100,
+        "vertex_colors": [1, 0, 0, 1],
+        "entities": [
+          {
+            "id": "fire",
+            "vertices": 100
+          },
+          {
+            "id": "fire_random",
+            "area": {
+              "randomize": true,
+              "x_max": 13,
+              "y_max": 5,
+              "z_max": 13
+            },
+            "attach_x": 10,
+            "draw_mode": "TRIANGLES",
+            "vertices": 200
+          }
+        ]
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "particle": true,
           "speed_y": -2,
           "x_max": 10,
           "x_min": -10,
           "y_max": 100,
-          "z_max": 10,
-          "z_min": -10
+          "z_max": 15,
+          "z_min": -15
         },
-        "attach_z": -25,
+        "attach_z": -10,
         "draw_mode": "POINTS",
         "point_size": 100,
         "vertex_colors": [0.5, 0.5, 1, 1],
@@ -52,6 +87,7 @@
           {
             "id": "rain_random",
             "area": {
+              "randomize": true,
               "x_min": -30,
               "y_max": 50
             },
@@ -66,15 +102,14 @@
       "properties": {
         "area": {
           "particle": true,
-          "randomize": true,
           "speed_y": -0.1,
           "x_max": 10,
           "x_min": -10,
           "y_max": 100,
-          "z_max": 10,
-          "z_min": -10
+          "z_max": 15,
+          "z_min": -15
         },
-        "attach_z": -25,
+        "attach_z": -10,
         "draw_mode": "POINTS",
         "point_size": 100,
         "vertex_colors": [1, 1, 1, 1],
@@ -87,6 +122,7 @@
           {
             "id": "snow_random",
             "area": {
+              "randomize": true,
               "x_max": 30,
               "y_max": 50
             },
