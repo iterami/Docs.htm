@@ -1,8 +1,8 @@
 {
   "title": "Lighting Test",
-  "ambient_color": [0.5, 0.5, 0.5],
-  "fog_end": 100,
-  "fog_start": 100,
+  "ambient_color": [0.2, 0.2, 0.2],
+  "fog_end": 150,
+  "fog_start": 150,
   "paths": [
     {
       "id": "loop",
@@ -42,7 +42,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 0],
-          "light_range": 25,
+          "light_range": 35,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -66,7 +66,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 1],
-          "light_range": 25,
+          "light_range": 35,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -90,7 +90,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 1, 0],
-          "light_range": 25,
+          "light_range": 35,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -113,7 +113,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 0, 0],
-          "light_range": 25,
+          "light_range": 35,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -137,7 +137,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 1, 1],
-          "light_range": 25,
+          "light_range": 35,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
