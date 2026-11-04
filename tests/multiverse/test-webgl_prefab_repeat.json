@@ -1,6 +1,6 @@
 {
   "title": "Prefab Repeat Test",
-  "fog_end": 100,
+  "fog_end": 200,
   "spawn": {
     "position_y": 5,
     "position_z": 10
@@ -18,10 +18,10 @@
           "texture_y": 10,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
-            50, 0, -50,
-            -50, 0, -50,
-            -50, 0, 50,
-            50, 0, 50
+            99, 0, -99,
+            -99, 0, -99,
+            -99, 0, 99,
+            99, 0, 99
           ]
         }
       ]
