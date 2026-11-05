@@ -34,7 +34,6 @@
               "todo": "webgl_prefab_repeat",
               "type": "function",
               "value": {
-                "count": 1000,
                 "type": "webgl_primitive_area",
                 "properties": {
                   "area": {
@@ -48,7 +47,8 @@
                   "entities": [
                     {}
                   ]
-                }
+                },
+                "areas": [{"count": 1000}]
               }
             },
             {

@@ -35,11 +35,11 @@
               "type": "function",
               "value": {
                 "characters": true,
-                "count": 100,
                 "properties": {
                   "draw": false
                 },
-                "type": "webgl_primitive_cuboid"
+                "type": "webgl_primitive_cuboid",
+                "areas": [{"count": 100}]
               }
             },
             {

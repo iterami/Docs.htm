@@ -35,11 +35,11 @@
               "todo": "webgl_prefab_repeat",
               "type": "function",
               "value": {
-                "count": 1e4,
                 "type": "webgl_timer_add",
                 "properties": {
                   "frames_random": 100
-                }
+                },
+                "areas": [{"count": 1e4}]
               }
             },
             {
@@ -68,8 +68,8 @@
               "todo": "webgl_prefab_repeat",
               "type": "function",
               "value": {
-                "count": 1e4,
-                "type": "webgl_timer_add"
+                "type": "webgl_timer_add",
+                "areas": [{"count": 1e4}]
               }
             },
             {

@@ -31,9 +31,8 @@
     {
       "type": "webgl_prefab_repeat",
       "properties": {
-        "type": "prefabs_webgl_tree_2d",
         "prefix": "tree",
-        "count": 100,
+        "type": "prefabs_webgl_tree_2d",
         "properties": {
           "billboard": true,
           "height": 20,
@@ -41,10 +40,22 @@
           "width_base": 6,
           "width_leaf": 20
         },
-        "x_max": 100,
-        "x_min": -100,
-        "z_max": 100,
-        "z_min": -100
+        "areas": [
+          {
+            "count": 50,
+            "x_max": 100,
+            "x_min": -100,
+            "z_max": -25,
+            "z_min": -100
+          },
+          {
+            "count": 50,
+            "x_max": 100,
+            "x_min": -100,
+            "z_max": 100,
+            "z_min": 25
+          }
+        ]
       }
     }
   ]

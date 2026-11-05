@@ -35,7 +35,7 @@
               "type": "function",
               "value": {
                 "characters": true,
-                "count": 1000
+                "areas": [{"count": 1000}]
               }
             },
             {

@@ -7,7 +7,7 @@
 
 <a href=../../../index.htm>iterami</a>/<a href=../../index.htm>Docs.htm</a>/<a href=../htm.htm>common HTM Repos</a>/<a href=webgl.htm>webgl.js</a>/webgl_prefab_repeat(args)
 <ul>
-  <li>Prefab used to randomly place repeated copies of another prefab within an area.
+  <li>Prefab used to randomly place repeated copies of another prefab within any number of areas.
   <li>If the <code>"characters"</code> arg is not false, new characters will be created for each prefab and will inherit the specified properties.
   <li>You can repeat entities without using a prefab by setting the <code>"type"</code> arg to <code>"webgl_entity_create"</code> to pass the <code>"properties"</code> to <a href=webgl_entity_create.htm>webgl_entity_create(args)</a> as its args.
 </ul>
@@ -17,13 +17,17 @@
     <td>Default
     <td>Type
   <tr>
+    <td>areas
+    <td>
+    <td>array of area objects
+  <tr>
     <td>characters
     <td>false
     <td>boolean false or object
   <tr>
-    <td>count
-    <td>1
-    <td>number
+    <td>prefix
+    <td><code>entity_id_count</code>
+    <td>object
   <tr>
     <td>properties
     <td>{}
@@ -32,6 +36,16 @@
     <td>type
     <td>
     <td>string
+</table>
+<table>
+  <tr class=header>
+    <td>Area Object
+    <td>Default
+    <td>Type
+  <tr>
+    <td>count
+    <td>1
+    <td>number
   <tr>
     <td>x_max
     <td>0
