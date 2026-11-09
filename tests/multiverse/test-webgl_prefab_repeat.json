@@ -46,7 +46,10 @@
             "x_max": 100,
             "x_min": -100,
             "z_max": -25,
-            "z_min": -100
+            "z_min": -100,
+            "properties": {
+              "height_range": 99
+            }
           },
           {
             "count": 50,
