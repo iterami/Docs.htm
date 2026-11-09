@@ -43,9 +43,9 @@
         "areas": [
           {
             "count": 50,
-            "x_max": 100,
+            "x_max": -15,
             "x_min": -100,
-            "z_max": -25,
+            "z_max": 100,
             "z_min": -100,
             "properties": {
               "height_range": 99
@@ -54,9 +54,9 @@
           {
             "count": 50,
             "x_max": 100,
-            "x_min": -100,
+            "x_min": 15,
             "z_max": 100,
-            "z_min": 25
+            "z_min": -100
           }
         ]
       }
