@@ -3,8 +3,22 @@
   "fog_end": 200,
   "spawn": {
     "position_y": 5,
-    "position_z": 10
+    "position_z": 50
   },
+  "paths": [
+    {
+      "id": "move",
+      "end": "loop",
+      "points": [
+        {
+          "position_y": 10
+        },
+        {
+          "position_y": 0
+        }
+      ]
+    }
+  ],
   "characters": [
     {
       "id": "test_prefab_repeat",
@@ -31,7 +45,42 @@
     {
       "type": "webgl_prefab_repeat",
       "properties": {
-        "prefix": "tree",
+        "prefix": "characters",
+        "type": "prefabs_webgl_tree_2d",
+        "characters": {
+          "path_id": "move"
+        },
+        "properties": {
+          "billboard": true,
+          "height": 20,
+          "height_range": 20,
+          "width_base": 6,
+          "width_leaf": 20
+        },
+        "areas": [
+          {
+            "count": 20,
+            "properties": {
+              "height_range": 99
+            },
+            "x_max": -15,
+            "x_min": -100,
+            "z_min": -100
+          },
+          {
+            "characters": false,
+            "count": 20,
+            "x_max": -15,
+            "x_min": -100,
+            "z_max": 100
+          }
+        ]
+      }
+    },
+    {
+      "type": "webgl_prefab_repeat",
+      "properties": {
+        "prefix": "entities",
         "type": "prefabs_webgl_tree_2d",
         "properties": {
           "billboard": true,
@@ -42,21 +91,22 @@
         },
         "areas": [
           {
-            "count": 50,
-            "x_max": -15,
-            "x_min": -100,
-            "z_max": 100,
-            "z_min": -100,
+            "count": 20,
+            "characters": {
+              "path_id": "move"
+            },
             "properties": {
               "height_range": 99
-            }
-          },
-          {
-            "count": 50,
+            },
             "x_max": 100,
             "x_min": 15,
-            "z_max": 100,
             "z_min": -100
+          },
+          {
+            "count": 20,
+            "x_max": 100,
+            "x_min": 15,
+            "z_max": 100
           }
         ]
       }
