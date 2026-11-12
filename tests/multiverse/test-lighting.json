@@ -3,6 +3,9 @@
   "ambient_color": [0.2, 0.2, 0.2],
   "fog_end": 150,
   "fog_start": 150,
+  "spawn": {
+    "position_z": 50
+  },
   "paths": [
     {
       "id": "loop",
@@ -35,6 +38,8 @@
     {
       "id": "light_black",
       "path_id": "loop",
+      "position_x": 23,
+      "position_z": 23,
       "spawn": false,
       "entities": [
         {
@@ -42,7 +47,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 0],
-          "light_range": 35,
+          "light_range": 50,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -66,7 +71,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 1],
-          "light_range": 35,
+          "light_range": 50,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -90,7 +95,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 1, 0],
-          "light_range": 35,
+          "light_range": 50,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -113,7 +118,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 0, 0],
-          "light_range": 35,
+          "light_range": 50,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -137,7 +142,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 1, 1],
-          "light_range": 35,
+          "light_range": 50,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -151,9 +156,21 @@
   ],
   "prefabs": [
     {
+      "type": "webgl_primitive_ellipsoid",
+      "properties": {
+        "prefix": "skybox",
+        "groups": ["skybox"],
+        "radius_x": -5,
+        "radius_y": -5,
+        "radius_z": -5,
+        "slices_latitude": 4,
+        "slices_longitude": 2
+      }
+    },
+    {
       "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "cuboid",
+        "prefix": "walls",
         "bottom": {
           "collision": false
         },
@@ -166,15 +183,37 @@
       }
     },
     {
-      "type": "webgl_primitive_ellipsoid",
+      "type": "webgl_primitive_cuboid",
       "properties": {
-        "prefix": "skybox",
-        "groups": ["skybox"],
-        "radius_x": -5,
-        "radius_y": -5,
-        "radius_z": -5,
-        "slices_latitude": 4,
-        "slices_longitude": 2
+        "prefix": "cubiod",
+        "collision": false,
+        "size_x": 100,
+        "size_y": 5,
+        "size_z": 50
+      }
+    },
+    {
+      "type": "webgl_primitive_area",
+      "properties": {
+        "area": {
+          "particle": true,
+          "speed_y": -0.1,
+          "x_max": 100,
+          "x_min": -100,
+          "y_max": 10,
+          "y_min": -10,
+          "z_max": 100,
+          "z_min": -100
+        },
+        "draw_mode": "POINTS",
+        "point_size": 1000,
+        "vertex_colors": [1, 1, 1, 1],
+        "entities": [
+          {
+            "id": "snow",
+            "vertices": 50
+          }
+        ]
       }
     }
   ]
