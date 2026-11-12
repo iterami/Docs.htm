@@ -36,6 +36,11 @@
       "spawn": false
     },
     {
+      "id": "rotating",
+      "change_rotate_y": 1,
+      "spawn": false
+    },
+    {
       "id": "light_black",
       "path_id": "loop",
       "position_x": 23,
@@ -47,7 +52,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 0],
-          "light_range": 50,
+          "light_range": 60,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -71,7 +76,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 0, 1],
-          "light_range": 50,
+          "light_range": 60,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -95,7 +100,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [0, 1, 0],
-          "light_range": 50,
+          "light_range": 60,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -118,7 +123,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 0, 0],
-          "light_range": 50,
+          "light_range": 60,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -142,7 +147,7 @@
           "billboard": true,
           "collision": false,
           "light_color": [1, 1, 1],
-          "light_range": 50,
+          "light_range": 60,
           "vertex_colors": [0.5, 0.5, 0.5, 1],
           "vertices": [
             1, 1, -0,
@@ -186,6 +191,7 @@
       "type": "webgl_primitive_cuboid",
       "properties": {
         "prefix": "cubiod",
+        "character": "rotating",
         "collision": false,
         "size_x": 100,
         "size_y": 5,
@@ -205,6 +211,7 @@
           "z_max": 100,
           "z_min": -100
         },
+        "character": "rotating",
         "draw_mode": "POINTS",
         "point_size": 1000,
         "vertex_colors": [1, 1, 1, 1],
