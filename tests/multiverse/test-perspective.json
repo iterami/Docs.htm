@@ -1,5 +1,6 @@
 {
   "title": "Perspective Test",
+  "fov": 45,
   "spawn": {
     "position_y": 5,
     "position_z": 10,

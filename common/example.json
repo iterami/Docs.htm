@@ -10,6 +10,7 @@
   "draw_range": 1000,
   "fog_end": 100,
   "fog_start": 0,
+  "fov": 45,
   "gravity_acceleration": -0.05,
   "gravity_damage": false,
   "gravity_max": -2,
