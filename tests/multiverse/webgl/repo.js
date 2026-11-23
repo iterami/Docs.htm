@@ -299,6 +299,8 @@ function new_game(){
           {
             'id': 'stationary',
             'change_rotate_y': -1,
+            'collide_bottom': 5,
+            'collide_top': 1,
             'model': {},
             'position_x': 20,
             'position_y': 10,
