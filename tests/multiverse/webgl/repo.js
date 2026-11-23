@@ -432,9 +432,7 @@ function repo_init(){
         },
         'pointerdown': webgl_pick,
         'pointerup': function(){
-            const pixelbuffer = webgl_pick_entity({
-              'start': 2,
-            });
+            const pixelbuffer = webgl_pick_entity({'start': 2});
 
             core_ui_update({
               'ids': {
@@ -449,7 +447,7 @@ function repo_init(){
       'storage': {
         'debug_cursor': true,
         'debug_pick': true,
-        'picking': 1,
+        'picking': 2,
         'pointerlock': true,
         'pointerreticle': true,
         'timer': `{
@@ -484,23 +482,31 @@ function repo_init(){
 }
 
 function repo_logic(){
-    if(core_storage_data.debug_pick){
-        debug_pick(core_storage_data.debug_cursor);
-    }
+    if(core_storage_data.picking > 0){
+        if(core_storage_data.debug_pick){
+            debug_pick(core_storage_data.debug_cursor);
+        }
 
-    let pixelbuffers = '';
-    for(const id in webgl_pixelbuffers){
-        const pixelbuffer = webgl_pixelbuffers[id];
-        const sync = pixelbuffer.sync !== null;
-        pixelbuffers += id + ': ' + sync + ', ' + JSON.stringify(pixelbuffer.picked?.id) + '<br>';
+        let pixelbuffers = '';
+        for(const id in webgl_pixelbuffers){
+            const pixelbuffer = webgl_pixelbuffers[id];
+            const sync = pixelbuffer.sync !== null;
+            pixelbuffers += id + ': ' + sync + ', ' + JSON.stringify(pixelbuffer.picked?.id) + '<br>';
+        }
+        const pixelbuffers_all = webgl_pick_entity();
+        const pixelbuffers_01 = webgl_pick_entity({'end': 1});
+        const pixelbuffers_23 = webgl_pick_entity({'start': 2});
+        core_ui_update({
+          'ids': {
+            'entities': 'all: ' + (pixelbuffers_all === false ? false : JSON.stringify(pixelbuffers_all?.picked?.id))
+              + '<br>0-1: ' + (pixelbuffers_01 === false ? false : JSON.stringify(pixelbuffers_01?.picked?.id))
+              + '<br>2-3: ' + (pixelbuffers_23 === false ? false : JSON.stringify(pixelbuffers_23?.picked?.id)),
+            'pixelbuffers': pixelbuffers,
+          },
+          'todo': 'innerHTML',
+        });
     }
-    const pixelbuffers_all = webgl_pick_entity();
-    const pixelbuffers_01 = webgl_pick_entity({
-      'end': 1,
-    });
-    const pixelbuffers_23 = webgl_pick_entity({
-      'start': 2,
-    });
+    display_timers();
 
     const now = globalThis.performance.now();
     const logic_fps = Math.trunc(1000 / (now - fps_logic));
@@ -508,18 +514,12 @@ function repo_logic(){
 
     core_ui_update({
       'ids': {
-        'entities': 'all: ' + (pixelbuffers_all === false ? false : JSON.stringify(pixelbuffers_all?.picked?.id))
-          + '<br>0-1: ' + (pixelbuffers_01 === false ? false : JSON.stringify(pixelbuffers_01?.picked?.id))
-          + '<br>2-3: ' + (pixelbuffers_23 === false ? false : JSON.stringify(pixelbuffers_23?.picked?.id)),
         'fps_draw': fps_draw,
         'fps_logic': logic_fps,
         'picked_id': 'id: ' + webgl_picked.id,
         'picked_x': 'x: ' + webgl_picked.x,
         'picked_y': 'y: ' + webgl_picked.y,
         'picked_z': 'z: ' + webgl_picked.z,
-        'pixelbuffers': pixelbuffers,
       },
-      'todo': 'innerHTML',
     });
-    display_timers();
 }
