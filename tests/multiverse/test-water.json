@@ -99,7 +99,7 @@
           "rotate_x": 180,
           "texture": "lavaleaf.png",
           "vertex_colors": [0, 0, 1, 1],
-          "texture_align": "10000111",
+          "texture_align": "00101101",
           "vertices": [
             200, 0, -50,
             -200, 0, -50,

@@ -27,12 +27,12 @@
           ]
         },
         {
-          "id": "align_back",
+          "id": "align_default",
           "attach_y": 0.01,
           "attach_z": 30,
           "collision": false,
           "texture": "lavaleaf.png,.1",
-          "texture_align": "01001011",
+          "texture_align": "01111000",
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -41,27 +41,13 @@
           ]
         },
         {
-          "id": "align_forward",
-          "attach_y": 0.01,
-          "attach_z": 10,
-          "collision": false,
-          "texture": "lavaleaf.png,.1",
-          "texture_align": "10110100",
-          "vertices": [
-            5, 0, -5,
-            -5, 0, -5,
-            -5, 0, 5,
-            5, 0, 5
-          ]
-        },
-        {
-          "id": "align_left",
+          "id": "align_90",
           "attach_x": -10,
           "attach_y": 0.01,
           "attach_z": 20,
           "collision": false,
           "texture": "lavaleaf.png,.1",
-          "texture_align": "00101101",
+          "texture_align": "11100001",
           "vertices": [
             5, 0, -5,
             -5, 0, -5,
@@ -70,13 +56,27 @@
           ]
         },
         {
-          "id": "align_right",
+          "id": "align_180",
+          "attach_y": 0.01,
+          "attach_z": 10,
+          "collision": false,
+          "texture": "lavaleaf.png,.1",
+          "texture_align": "10000111",
+          "vertices": [
+            5, 0, -5,
+            -5, 0, -5,
+            -5, 0, 5,
+            5, 0, 5
+          ]
+        },
+        {
+          "id": "align_270",
           "attach_x": 10,
           "attach_y": 0.01,
           "attach_z": 20,
           "collision": false,
           "texture": "lavaleaf.png,.1",
-          "texture_align": "11010010",
+          "texture_align": "00011110",
           "vertices": [
             5, 0, -5,
             -5, 0, -5,

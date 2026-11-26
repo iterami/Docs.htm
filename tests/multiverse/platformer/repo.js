@@ -167,7 +167,7 @@ function load_skymap(spawn){
             },
           ],
           'texture': 'key.png',
-          'texture_align': '00101101',
+          'texture_align': '10000111',
           'vertex_colors': [1, 1, 1, 1],
           'vertices': [
             2, 2, -0,
@@ -258,7 +258,7 @@ function load_skymap(spawn){
                 ],
                 'rotate_z': 270,
                 'texture': 'door.png',
-                'texture_align': '10110100',
+                'texture_align': '00011110',
                 'vertex_colors': [1, 1, 1, 1],
                 'vertices': [
                   10, 0, -10,
